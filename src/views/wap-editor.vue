@@ -15,6 +15,7 @@ import editorHeader from '../cmps/editor/editor-header.vue'
 import editorNav from '../cmps/editor/editor-nav.vue'
 import editorToolBar from '../cmps/editor/editor-tool-bar.vue'
 import wapPreview from '../cmps/editor/wap-preview.vue'
+
 export default {
     name: 'wap-editor',
     data() {
