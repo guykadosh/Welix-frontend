@@ -202,7 +202,7 @@
       {
         "id": "wc06",
         "classes": ["omnifood-reviews", "flex"],
-        "type": "wap-reviews",
+        "type": "wap-container",
         "cmps": [
           {
             "id": "wc05",
