@@ -1,6 +1,6 @@
 <template>
-    <header class="editor-header">
-        <h1>Webix</h1>
+    <header class="editor-header flex items-center">
+        <h1>Welix</h1>
     </header>
 </template>
 
