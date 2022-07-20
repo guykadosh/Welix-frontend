@@ -95,7 +95,7 @@ export default {
               num: '',
               imgUrl: '',
               heading: 'Japanese Gyozas',
-              subheading: '',
+              subHeading: '',
               list: [
                 { icon: '', txt: '650 calories' },
                 { icon: '', txt: 'NutriScore ® 74' },
@@ -112,7 +112,7 @@ export default {
               num: '',
               imgUrl: '',
               heading: 'Avocado Salad',
-              subheading: '',
+              subHeading: '',
               list: [
                 { icon: '', txt: '400 calories' },
                 { icon: '', txt: 'NutriScore ® 92' },
@@ -126,7 +126,7 @@ export default {
             type: 'wap-list',
             heading: 'Works with any diet',
             info: {
-              'list-icon': '',
+              'listIcon': '',
               list: ['Vegeterian', 'Vegan', 'Pescatarian', 'Gluten-free', 'Lactose-free', 'Keto', 'Paleo', 'Low FODMAP', 'Kid-friendly'],
               link: '',
             },
@@ -145,7 +145,7 @@ export default {
           classes: ['omnifood-txt'],
           type: 'wap-txt',
           heading: "Once you try it, you can't go back",
-          subheading: "TESTIMONIALS",
+          subHeading: "TESTIMONIALS",
         },
         {
           id: 'wc08',
@@ -154,7 +154,7 @@ export default {
           info: {
             imgUrl: "",
             heading: 'Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.',
-            subheading: '— Dave Bryson',
+            subHeading: '— Dave Bryson',
           }
         },
         {
@@ -164,7 +164,7 @@ export default {
           info: {
             imgUrl: "",
             heading: "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
-            subheading: '— Ben Hadley',
+            subHeading: '— Ben Hadley',
           }
         },
         {
@@ -174,7 +174,7 @@ export default {
           info: {
             imgUrl: "",
             heading: "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
-            subheading: '— Steve Miller',
+            subHeading: '— Steve Miller',
           }
         },
         {
@@ -184,7 +184,7 @@ export default {
           info: {
             imgUrl: "",
             heading: "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
-            subheading: '— Hannah Smith',
+            subHeading: '— Hannah Smith',
           }
         },
         {
@@ -208,7 +208,7 @@ export default {
             type: 'wap-card',
             info: {
               heading: 'STARTER',
-              subheading: "per month. That's just 13$ per meal!",
+              subHeading: "per month. That's just 13$ per meal!",
               price: 399,
               list: [
                 { icon: '', txt: '1 meal per day' },
@@ -224,7 +224,7 @@ export default {
             type: 'wap-card',
             info: {
               heading: 'COMPLETE',
-              subheading: "per month. That's just 11$ per meal!",
+              subHeading: "per month. That's just 11$ per meal!",
               price: 649,
               list: [
                 { icon: '', txt: '2 meals per day' },
@@ -237,6 +237,34 @@ export default {
           }
         ]
       }
+    },
+    {
+      id: 'sc5878',
+      classes: [],
+      type: "wap-conatiner",
+      info: {
+        cmps: [
+          {
+            id: 'wc019',
+            classes: [],
+            type: 'wap-imgs',
+            imgs: ['woman.jpg'],
+          },
+          {
+            id: 'wc6258',
+            classes: [],
+            type: 'wap-form',
+            info: {
+              heading: 'Get your first meal for free!',
+              subHeading: "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!",
+              /* ADD FORM  */
+            }
+          }
+        ]
+      }
+    },
+    {
+      
     }
   ],
   isPublic: true,
