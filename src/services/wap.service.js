@@ -1,10 +1,7 @@
 import { storageService } from './storage.service.js'
 import { httpService } from './http.service'
-<<<<<<< HEAD
-=======
 import { utilService } from './util.service'
 import gWaps from '@/assets/JSON/wap.json' assert { type: 'json' }
->>>>>>> 9b12d8a51e70c2dbc7c82f3d886d3ed007c89989
 
 const KEY = 'wap_db'
 
