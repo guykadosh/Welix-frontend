@@ -44,9 +44,7 @@
           "nav": {
             "_id": "wc05",
             "type": "wap-nav",
-            "classes": [
-              "omnifood-nav"
-            ],
+            "classes": ["omnifood-nav"],
             "info": {
               "links": [
                 {
@@ -79,11 +77,7 @@
       {
         "id": "wc01",
         "type": "wap-hero",
-        "classes": [
-          "omnifood-hero",
-          "full",
-          "main-layout"
-        ],
+        "classes": ["omnifood-hero", "full", "main-layout"],
         "info": {
           "heading": {
             "title": "A healthy meal delivered to your door, every single day",
@@ -109,10 +103,7 @@
       },
       {
         "id": "wc04",
-        "classes": [
-          "omnifood-brand",
-          "flex"
-        ],
+        "classes": ["omnifood-brand"],
         "type": "wap-gallery",
         "info": {
           "title": "as featured in",
@@ -129,22 +120,16 @@
       {
         "id": "wc03",
         "type": "wap-container",
-        "classes": [
-          "omnifood-main",
-          "flex"
-        ],
+        "classes": ["omnifood-meals", "flex"],
         "info": {
           "cmps": [
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-card",
-                "flex"
-              ],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "num": "",
-                "imgUrl": "",
+                "imgUrl": "https://i.ibb.co/MC2ps95/meal-1.jpg",
                 "heading": "Japanese Gyozas",
                 "subHeading": "",
                 "list": [
@@ -166,10 +151,7 @@
             },
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-card",
-                "flex"
-              ],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -194,10 +176,7 @@
             },
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-list",
-                "flex"
-              ],
+              "classes": ["omnifood-meal-list", "flex"],
               "type": "wap-list",
               "heading": "Works with any diet",
               "info": {
@@ -222,26 +201,19 @@
       },
       {
         "id": "wc06",
-        "classes": [
-          "omnifood-reviews",
-          "flex"
-        ],
-        "type": "wap-reviews",
+        "classes": ["omnifood-reviews", "flex"],
+        "type": "wap-container",
         "cmps": [
           {
             "id": "wc05",
-            "classes": [
-              "omnifood-txt"
-            ],
-            "type": "wap-txt",
+            "classes": ["omnifood-txt"],
+            "type": "wap-text",
             "heading": "Once you try it, you can't go back",
             "subHeading": "TESTIMONIALS"
           },
           {
             "id": "wc08",
-            "classes": [
-              "omnifood-review"
-            ],
+            "classes": ["omnifood-review"],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -251,9 +223,7 @@
           },
           {
             "id": "wc015",
-            "classes": [
-              "omnifood-review"
-            ],
+            "classes": ["omnifood-review"],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -263,9 +233,7 @@
           },
           {
             "id": "wc017",
-            "classes": [
-              "omnifood-review"
-            ],
+            "classes": ["omnifood-review"],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -275,9 +243,7 @@
           },
           {
             "id": "wc018",
-            "classes": [
-              "omnifood-review"
-            ],
+            "classes": ["omnifood-review"],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -287,14 +253,9 @@
           },
           {
             "id": "wc019",
-            "classes": [
-              "omnifood-review-gallery"
-            ],
+            "classes": ["omnifood-review-gallery"],
             "type": "wap-imgs",
-            "imgs": [
-              "food1.jpg",
-              "food2.jpg......"
-            ]
+            "imgs": ["food1.jpg", "food2.jpg......"]
           }
         ]
       },
@@ -377,9 +338,7 @@
               "id": "wc019",
               "classes": [],
               "type": "wap-imgs",
-              "imgs": [
-                "woman.jpg"
-              ]
+              "imgs": ["woman.jpg"]
             },
             {
               "id": "wc6258",
