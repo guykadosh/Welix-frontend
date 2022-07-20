@@ -59,6 +59,7 @@
 .editor-main {
     width: 100vw;
     flex-grow: 1;
+
     .edit-tool-bar {
         // background-color: pink;
         // flex-basis: 30%;
@@ -67,10 +68,26 @@
             // background-color: blue;
             border-right: 1px solid rgba(128, 128, 128, 0.26);
             padding: em(10px);
+            padding-top: em(22px);
 
             li {
-                margin-block-end: em(10px);
-                cursor: pointer;
+                margin-block-end: em(28px);
+                border-radius: 50%;
+                padding: em(10px);
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: rgba(170, 0, 255, 0.14);
+                }
+
+                .icon {
+                    cursor: pointer;
+                    font-size: em(28px);
+                    color: rgb(40, 33, 33);
+                }
             }
 
         }
@@ -93,7 +110,7 @@
         margin: em(10px) em(30px);
         min-height: 100px;
         flex-grow: 1;
-        
+
         .smooth-dnd-container {
             height: 100%;
         }
