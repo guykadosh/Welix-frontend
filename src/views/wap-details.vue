@@ -9,7 +9,6 @@
 </template>
 <script>
 import { wapService } from '../services/wap.service'
-import wapHeader from '../cmps/waps/wap-header.vue'
 import WapHeader from '../cmps/waps/wap-header.vue'
 
 export default {

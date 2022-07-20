@@ -21,9 +21,7 @@ export default {
   components: {
     wapNav,
   },
-  created() {
-    console.log('hi?')
-  },
+  created() {},
   computed: {
     info() {
       return this.cmp.info
