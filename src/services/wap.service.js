@@ -1,6 +1,5 @@
 import { storageService } from './storage.service.js'
 import { httpService } from './http.service'
-import { Container } from 'vue3-smooth-dnd'
 
 const KEY = 'wap_db'
 

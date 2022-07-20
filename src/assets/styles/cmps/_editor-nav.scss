@@ -1,0 +1,41 @@
+.editor-nav {
+    width: 100vw;
+    padding: em(9px);
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.633);
+    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.084);
+
+    >* {
+        margin-inline-end: em(10px);
+    }
+
+    .page-nav {
+        border: none;
+        background-color: transparent;
+        flex-basis: 15%;
+        border-right: 1px solid;
+    }
+
+    .view-port-mode {
+        border-right: 1px solid;
+
+        button {
+            background-color: transparent;
+            border: none;
+            flex-basis: 10%;
+            margin-inline-end: em(5px);
+        }
+    }
+
+    .demo-site-domain {
+        flex-basis: 60%;
+        border-right: 1px solid;
+        // background-color: blue;
+        padding-right: em(20px);
+        div {
+            border-radius: em(20px);
+            padding: em(4px) em(20px);
+            background-color: rgba(128, 128, 128, 0.082);
+        }
+
+    }
+}
