@@ -19,6 +19,7 @@ import wapCard from '../cmps/waps/wap-card.vue'
 import wapContainer from '../cmps/waps/wap-container.vue'
 import wapReview from '../cmps/waps/wap-review.vue'
 import wapText from '../cmps/waps/wap-text.vue'
+import wapFooter from '../cmps/waps/wap-footer.vue'
 
 export default {
   name: 'wap-details',
@@ -31,6 +32,7 @@ export default {
     wapContainer,
     wapReview,
     wapText,
+    wapFooter,
   },
   data() {
     return {
