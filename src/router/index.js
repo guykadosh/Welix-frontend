@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import home from '../views/home.vue'
+import waps from '../views/waps.vue'
 import wapDetails from '../views/wap-details.vue'
-import wapEditor from '../views/wapEditor.vue'
+import wapEditor from '../views/wap-editor.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,12 +13,17 @@ const router = createRouter({
       component: home,
     },
     {
+      path: '/waps',
+      name: 'waps',
+      component: waps,
+    },
+    {
       path: '/wap/:wapId',
       name: 'wap-detials',
       component: wapDetails,
     },
     {
-      path: '/wap/editor',
+      path: '/wap/editor/:wapId',
       name: 'wap-editor',
       component: wapEditor,
     },
