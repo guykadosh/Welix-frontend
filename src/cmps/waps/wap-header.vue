@@ -1,6 +1,5 @@
 <template>
   <header class="wap-header" :class="cmp.classes">
-    <pre>{{ cmp }}</pre>
     <div class="header__inner flex justify-between items-center">
       <div class="logo-box" :style="info.logo.style">
         <img v-if="info.logo.img" :src="info.logo.img" />
