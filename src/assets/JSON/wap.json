@@ -203,61 +203,65 @@
         "id": "wc06",
         "classes": ["omnifood-reviews", "flex"],
         "type": "wap-container",
-        "cmps": [
-          {
-            "id": "wc05",
-            "classes": ["omnifood-txt"],
-            "type": "wap-text",
-            "heading": "Once you try it, you can't go back",
-            "subHeading": "TESTIMONIALS"
-          },
-          {
-            "id": "wc08",
-            "classes": ["omnifood-review"],
-            "type": "wap-review",
-            "info": {
-              "imgUrl": "",
-              "heading": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
-              "subHeading": "— Dave Bryson"
+        "info": {
+          "cmps": [
+            {
+              "id": "wc05",
+              "classes": ["omnifood-txt"],
+              "type": "wap-text",
+              "info": {
+                "heading": "Once you try it, you can't go back",
+                "subHeading": "TESTIMONIALS"
+              }
+            },
+            {
+              "id": "wc08",
+              "classes": ["omnifood-review"],
+              "type": "wap-review",
+              "info": {
+                "imgUrl": "",
+                "heading": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
+                "subHeading": "— Dave Bryson"
+              }
+            },
+            {
+              "id": "wc015",
+              "classes": ["omnifood-review"],
+              "type": "wap-review",
+              "info": {
+                "imgUrl": "",
+                "heading": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+                "subHeading": "— Ben Hadley"
+              }
+            },
+            {
+              "id": "wc017",
+              "classes": ["omnifood-review"],
+              "type": "wap-review",
+              "info": {
+                "imgUrl": "",
+                "heading": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+                "subHeading": "— Steve Miller"
+              }
+            },
+            {
+              "id": "wc018",
+              "classes": ["omnifood-review"],
+              "type": "wap-review",
+              "info": {
+                "imgUrl": "",
+                "heading": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+                "subheading": "— Hannah Smith"
+              }
+            },
+            {
+              "id": "wc019",
+              "classes": ["omnifood-review-gallery"],
+              "type": "wap-imgs",
+              "imgs": ["food1.jpg", "food2.jpg......"]
             }
-          },
-          {
-            "id": "wc015",
-            "classes": ["omnifood-review"],
-            "type": "wap-review",
-            "info": {
-              "imgUrl": "",
-              "heading": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
-              "subHeading": "— Ben Hadley"
-            }
-          },
-          {
-            "id": "wc017",
-            "classes": ["omnifood-review"],
-            "type": "wap-review",
-            "info": {
-              "imgUrl": "",
-              "heading": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
-              "subHeading": "— Steve Miller"
-            }
-          },
-          {
-            "id": "wc018",
-            "classes": ["omnifood-review"],
-            "type": "wap-review",
-            "info": {
-              "imgUrl": "",
-              "heading": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
-              "subheading": "— Hannah Smith"
-            }
-          },
-          {
-            "id": "wc019",
-            "classes": ["omnifood-review-gallery"],
-            "type": "wap-imgs",
-            "imgs": ["food1.jpg", "food2.jpg......"]
-          }
-        ]
+          ]
+        }
       },
       {
         "id": "wc0789",
