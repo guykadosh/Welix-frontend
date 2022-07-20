@@ -124,11 +124,11 @@ export default {
             id: 'wc04',
             classes: ['omnifood-list', 'flex'],
             type: 'wap-list',
-            heading: 'Works with any diet',
             info: {
+              heading: 'Works with any diet',
               'listIcon': '',
               list: ['Vegeterian', 'Vegan', 'Pescatarian', 'Gluten-free', 'Lactose-free', 'Keto', 'Paleo', 'Low FODMAP', 'Kid-friendly'],
-              link: '',
+              link: { title: 'See all recipes →', href: '/#' }
             },
             style: {},
           },
@@ -264,7 +264,7 @@ export default {
       }
     },
     {
-      
+
     }
   ],
   isPublic: true,
