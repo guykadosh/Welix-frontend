@@ -254,6 +254,20 @@
     }
   }
 
+  &-gallery {
+    .imgs-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.6rem;
+      padding: 1.6rem;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
   &-pricing {
     font-family: Rubik-Regular, sans-serif;
     grid-template-columns: repeat(2, 1fr);
