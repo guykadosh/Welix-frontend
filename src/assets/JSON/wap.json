@@ -120,12 +120,12 @@
       {
         "id": "wc03",
         "type": "wap-container",
-        "classes": ["omnifood-main", "flex"],
+        "classes": ["omnifood-meals", "flex"],
         "info": {
           "cmps": [
             {
               "id": "wc04",
-              "classes": ["omnifood-card", "flex"],
+              "classes": ["omnifood-meal", "flex"],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -151,7 +151,7 @@
             },
             {
               "id": "wc04",
-              "classes": ["omnifood-card", "flex"],
+              "classes": ["omnifood-meal", "flex"],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -176,7 +176,7 @@
             },
             {
               "id": "wc04",
-              "classes": ["omnifood-list", "flex"],
+              "classes": ["omnifood-meal-list", "flex"],
               "type": "wap-list",
               "heading": "Works with any diet",
               "info": {
