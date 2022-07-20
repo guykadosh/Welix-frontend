@@ -1,10 +1,12 @@
 <template>
-    <h1>wap-editor</h1>
-    <pre>{{ wap }}</pre>
+    <editor-header />
+    <editor-nav />
 </template>
 
 <script>
 import { wapService } from '../services/wap.service.js'
+import editorHeader from '../cmps/editor/editor-header.vue'
+import editorNav from '../cmps/editor/editor-nav.vue'
 export default {
     name: 'wap-editor',
     data() {
@@ -24,7 +26,8 @@ export default {
         catch (err) { console.log(err) }
     },
     components: {
-
+        editorHeader,
+        editorNav
     },
 }
 </script>
