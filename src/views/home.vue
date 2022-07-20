@@ -15,14 +15,14 @@
                     presence exactly the way you want.
                 </h5>
             </div>
-            <get-started-btn />
+            <!-- <get-started-btn /> -->
             <h5 class="hero-print">Try Wix. No credit card required.</h5>
         </div>
     </section>
 </template>
 
 <script>
-import getStartedBtn from '../components/misc/get-started-btn.vue'
+// import getStartedBtn from '../components/misc/get-started-btn.vue'
 export default {
     name: '',
     data() {
@@ -40,7 +40,7 @@ export default {
 
     },
     components: {
-        getStartedBtn
+        // getStartedBtn
     },
 }
 </script>
