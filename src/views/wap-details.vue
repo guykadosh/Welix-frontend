@@ -1,10 +1,12 @@
 <template>
   <!-- <pre>{{ wap }}</pre> -->
   <section v-if="wap" class="wap-details main-layout">
-    <component v-for="cmp in wap.cmps" :is="cmp.type" :cmp="cmp"></component>
-    <!-- <wap-header :cmp="wap.cmps[0]" /> -->
-
-    <!-- <component :is="wap.cmps[0].type" :cmp="wap.cmps[0]"></component> -->
+    <component
+      v-for="cmp in wap.cmps"
+      :is="cmp.type"
+      :cmp="cmp"
+      :key="cmp.id"
+    ></component>
   </section>
 </template>
 <script>
@@ -18,7 +20,14 @@ import wapContainer from '../cmps/waps/wap-container.vue'
 
 export default {
   name: 'wap-details',
-  components: { wapHeader, wapHero, wapGallery, wapList, wapCard, wapContainer },
+  components: {
+    wapHeader,
+    wapHero,
+    wapGallery,
+    wapList,
+    wapCard,
+    wapContainer,
+  },
   data() {
     return {
       wap: null,
