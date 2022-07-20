@@ -1,33 +1,30 @@
 <template>
   <!-- <pre>{{ wap }}</pre> -->
-  <section class="wap-details">
-    <component v-for="cmp in wap.cmps" :is="cmp.type"></component>
+  <section v-if="wap" class="wap-details">
+    <component v-for="cmp in wap.cmps" :is="cmp.type" :cmp="cmp"></component>
     <!-- <wap-header :cmp="wap.cmps[0]" /> -->
-    <pre>{{ wap.cmps[0].type }}</pre>
-    <component :is="wap.cmps[0].type" :cmp="wap.cmps[0]"></component>
+
+    <!-- <component :is="wap.cmps[0].type" :cmp="wap.cmps[0]"></component> -->
   </section>
 </template>
 <script>
 import { wapService } from '../services/wap.service'
-import WapHeader from '../cmps/waps/wap-header.vue'
+import wapHeader from '../cmps/waps/wap-header.vue'
 
 export default {
   name: 'wap-details',
-  components: [wapHeader],
+  components: { wapHeader },
   data() {
     return {
       wap: null,
     }
   },
-  created() {
-    console.log(this.$route)
+  async created() {
     const { wapId } = this.$route.params
-    console.log(wapId)
-    this.wap = wapService.getWapById(wapId)
-    console.log(this.wap)
-    console.log(this.wap.cmps[0])
+    const wap = await wapService.getById(wapId)
+    console.log(wap)
+    this.wap = wap
   },
-  components: { WapHeader },
 }
 </script>
 <style lang=""></style>

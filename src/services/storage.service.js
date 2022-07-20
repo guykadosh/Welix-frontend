@@ -8,14 +8,6 @@ export const storageService = {
   remove,
   postMany,
 }
-const KEY = 'wap_db'
-
-_loadWaps()
-
-function _loadWaps() {
-  var waps = JSON.parse(localStorage.getItem(KEY))
-  if (!waps) localStorage.setItem(KEY, wapJSON)
-}
 
 function query(entityType) {
   var entities = JSON.parse(localStorage.getItem(entityType)) || []
