@@ -325,6 +325,26 @@
   }
 
   &-footer {
+    font-family: Rubik-Regular, sans-serif;
+    padding: em(48px) 0;
+    border-top: 1px solid #eee;
+
+    .footer-inner {
+      h3 {
+        font-family: Rubik-Medium, sans-serif;
+      }
+
+      gap: rem(24px);
+      margin-block-end: rem(12px);
+      .row {
+        max-width: rem(250px);
+
+        p {
+          margin-block-end: rem(12px);
+        }
+      }
+    }
+
     .logo {
       height: em(18px);
     }
