@@ -1,11 +1,11 @@
 <template>
   <header class="wap-header" :class="cmp.classes">
+    <pre>{{ cmp }}</pre>
     <div class="header__inner flex justify-between items-center">
       <div class="logo-box" :style="info.logo.style">
         <img v-if="info.logo.img" :src="info.logo.img" />
         <h2 v-else>{{ info.logo.title }}</h2>
       </div>
-
       <wap-nav v-if="info.nav" :cmp="info.nav" />
     </div>
   </header>
@@ -22,7 +22,7 @@ export default {
     wapNav,
   },
   created() {
-    console.log('hi?')
+    console.log(this.cmp)
   },
   computed: {
     info() {
