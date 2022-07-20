@@ -1,4 +1,4 @@
-export default [{
+export default {
   _id: '5e28393890dd7201a06d4e44',
   name: 'Lukas Rudrof – Funktionales Webdesign, Webflow & SEO',
   imgUrl:
@@ -94,17 +94,16 @@ export default [{
             info: {
               num: '',
               imgUrl: '',
-              heading: '',
+              heading: 'Japanese Gyozas',
               subheading: '',
               list: [
-                { icon: '', txt: '' },
-                { icon: '', txt: '' },
-                { icon: '', txt: '' },
+                { icon: '', txt: '650 calories' },
+                { icon: '', txt: 'NutriScore ® 74' },
+                { icon: '', txt: '4.9 rating (537)' },
               ],
             },
             style: {},
           },
-          ,
           {
             id: 'wc04',
             classes: ['omnifood-card', 'flex'],
@@ -112,32 +111,133 @@ export default [{
             info: {
               num: '',
               imgUrl: '',
-              heading: '',
+              heading: 'Avocado Salad',
               subheading: '',
               list: [
-                { icon: '', txt: '' },
-                { icon: '', txt: '' },
-                { icon: '', txt: '' },
+                { icon: '', txt: '400 calories' },
+                { icon: '', txt: 'NutriScore ® 92' },
+                { icon: '', txt: '4.9 rating (441)' },
               ],
             },
-            style: {},
           },
           {
             id: 'wc04',
             classes: ['omnifood-list', 'flex'],
             type: 'wap-list',
+            heading: 'Works with any diet',
             info: {
               'list-icon': '',
-              list: ['Vegeterian', 'Vegan'],
+              list: ['Vegeterian', 'Vegan', 'Pescatarian', 'Gluten-free', 'Lactose-free', 'Keto', 'Paleo', 'Low FODMAP', 'Kid-friendly'],
               link: '',
             },
             style: {},
           },
-          ,
-        ],
-      },
-      style: {},
+        ]
+      }
     },
+    {
+      id: 'wc06',
+      classes: ['omnifood-reviews', 'flex'],
+      type: 'wap-reviews',
+      cmps: [
+        {
+          id: 'wc05',
+          classes: ['omnifood-txt'],
+          type: 'wap-txt',
+          heading: "Once you try it, you can't go back",
+          subheading: "TESTIMONIALS",
+        },
+        {
+          id: 'wc08',
+          classes: ['omnifood-review'],
+          type: 'wap-review',
+          info: {
+            imgUrl: "",
+            heading: 'Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.',
+            subheading: '— Dave Bryson',
+          }
+        },
+        {
+          id: 'wc015',
+          classes: ['omnifood-review'],
+          type: 'wap-review',
+          info: {
+            imgUrl: "",
+            heading: "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+            subheading: '— Ben Hadley',
+          }
+        },
+        {
+          id: 'wc017',
+          classes: ['omnifood-review'],
+          type: 'wap-review',
+          info: {
+            imgUrl: "",
+            heading: "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+            subheading: '— Steve Miller',
+          }
+        },
+        {
+          id: 'wc018',
+          classes: ['omnifood-review'],
+          type: 'wap-review',
+          info: {
+            imgUrl: "",
+            heading: "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+            subheading: '— Hannah Smith',
+          }
+        },
+        {
+          id: 'wc019',
+          classes: ['omnifood-review-gallery'],
+          type: 'wap-imgs',
+          imgs: ['food1.jpg', 'food2.jpg......'],
+
+        }
+      ]
+    },
+    {
+      id: 'wc0789',
+      type: 'wap-container',
+      classes: [],
+      info: {
+        cmps: [
+          {
+            id: 'wc695',
+            classes: [],
+            type: 'wap-card',
+            info: {
+              heading: 'STARTER',
+              subheading: "per month. That's just 13$ per meal!",
+              price: 399,
+              list: [
+                { icon: '', txt: '1 meal per day' },
+                { icon: '', txt: 'Order from 11am to 9pm' },
+                { icon: '', txt: 'Delivery is free' },
+              ],
+              btn: { label: 'Start Eating Well!', link: '#wc03' },
+            }
+          },
+          {
+            id: 'wc6956',
+            classes: [],
+            type: 'wap-card',
+            info: {
+              heading: 'COMPLETE',
+              subheading: "per month. That's just 11$ per meal!",
+              price: 649,
+              list: [
+                { icon: '', txt: '2 meals per day' },
+                { icon: '', txt: 'Order 24/7' },
+                { icon: '', txt: 'Delivery is free' },
+                { icon: '', txt: 'Get access to latest recipes' },
+              ],
+              btn: { label: 'Start Eating Well!', link: '#wc03' },
+            }
+          }
+        ]
+      }
+    }
   ],
   isPublic: true,
-}]
+}

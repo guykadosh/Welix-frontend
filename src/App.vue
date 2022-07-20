@@ -1,5 +1,8 @@
 <template>
+<<<<<<< HEAD
   <app-header/>
+=======
+>>>>>>> d209daa3157ab30caef292e69e965f7b2c37ec93
   <router-view />
 </template>
 
