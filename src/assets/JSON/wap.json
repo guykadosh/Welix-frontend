@@ -10,9 +10,18 @@
     },
     "usersData": {
       "contacts": [
-        { "email": "user@user.com", "msg": "Please send me stuff", "at": 123 }
+        {
+          "email": "user@user.com",
+          "msg": "Please send me stuff",
+          "at": 123
+        }
       ],
-      "signups": [{ "email": "user@user.com", "at": 123 }]
+      "signups": [
+        {
+          "email": "user@user.com",
+          "at": 123
+        }
+      ]
     },
     "theme": "vivid",
     "cmps": [
@@ -35,14 +44,31 @@
           "nav": {
             "_id": "wc05",
             "type": "wap-nav",
-            "classes": ["omnifood-nav"],
+            "classes": [
+              "omnifood-nav"
+            ],
             "info": {
               "links": [
-                { "title": "How it works", "href": "#how" },
-                { "title": "Meals", "href": "#meals" },
-                { "title": "Reviews", "href": "#reviews" },
-                { "title": "Pricing", "href": "#pricing" },
-                { "title": "Try for free", "href": "#cta" }
+                {
+                  "title": "How it works",
+                  "href": "#how"
+                },
+                {
+                  "title": "Meals",
+                  "href": "#meals"
+                },
+                {
+                  "title": "Reviews",
+                  "href": "#reviews"
+                },
+                {
+                  "title": "Pricing",
+                  "href": "#pricing"
+                },
+                {
+                  "title": "Try for free",
+                  "href": "#cta"
+                }
               ]
             },
             "style": {}
@@ -53,7 +79,11 @@
       {
         "id": "wc01",
         "type": "wap-hero",
-        "classes": ["omnifood-hero", "full", "main-layout"],
+        "classes": [
+          "omnifood-hero",
+          "full",
+          "main-layout"
+        ],
         "info": {
           "heading": {
             "title": "A healthy meal delivered to your door, every single day",
@@ -64,8 +94,14 @@
             "style": {}
           },
           "btns": [
-            { "label": "Start Eating Well!", "link": "#wc03" },
-            { "label": "Learn more", "link": "#wc03" }
+            {
+              "label": "Start Eating Well!",
+              "link": "#wc03"
+            },
+            {
+              "label": "Learn more",
+              "link": "#wc03"
+            }
           ],
           "imgUrl": "https://i.ibb.co/fdHvDFX/hero.webp"
         },
@@ -73,23 +109,38 @@
       },
       {
         "id": "wc04",
-        "classes": ["omnifood-brand", "flex"],
-        "type": "wap-imgs",
+        "classes": [
+          "omnifood-brand",
+          "flex"
+        ],
+        "type": "wap-gallery",
         "info": {
           "title": "as featured in",
-          "imgs": ["brandname1.jpg", "brandname2.jpg"]
+          "imgs": [
+            "https://i.ibb.co/CWHwXJw/business-insider.png",
+            "https://i.ibb.co/KW9hbd7/forbes.png",
+            "https://i.ibb.co/wCR7WHY/techcrunch.png",
+            "https://i.ibb.co/23ChyNd/the-new-york-times.png",
+            "https://i.ibb.co/fQqGqKv/usa-today.png"
+          ]
         },
         "style": {}
       },
       {
         "id": "wc03",
         "type": "wap-container",
+        "classes": [
+          "omnifood-main",
+          "flex"
+        ],
         "info": {
-          "classes": ["omnifood-main", "flex"],
           "cmps": [
             {
               "id": "wc04",
-              "classes": ["omnifood-card", "flex"],
+              "classes": [
+                "omnifood-card",
+                "flex"
+              ],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -97,16 +148,28 @@
                 "heading": "Japanese Gyozas",
                 "subHeading": "",
                 "list": [
-                  { "icon": "", "txt": "650 calories" },
-                  { "icon": "", "txt": "NutriScore ® 74" },
-                  { "icon": "", "txt": "4.9 rating (537)" }
+                  {
+                    "icon": "",
+                    "txt": "650 calories"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "NutriScore ® 74"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "4.9 rating (537)"
+                  }
                 ]
               },
               "style": {}
             },
             {
               "id": "wc04",
-              "classes": ["omnifood-card", "flex"],
+              "classes": [
+                "omnifood-card",
+                "flex"
+              ],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -114,15 +177,27 @@
                 "heading": "Avocado Salad",
                 "subHeading": "",
                 "list": [
-                  { "icon": "", "txt": "400 calories" },
-                  { "icon": "", "txt": "NutriScore ® 92" },
-                  { "icon": "", "txt": "4.9 rating (441)" }
+                  {
+                    "icon": "",
+                    "txt": "400 calories"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "NutriScore ® 92"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "4.9 rating (441)"
+                  }
                 ]
               }
             },
             {
               "id": "wc04",
-              "classes": ["omnifood-list", "flex"],
+              "classes": [
+                "omnifood-list",
+                "flex"
+              ],
               "type": "wap-list",
               "heading": "Works with any diet",
               "info": {
@@ -147,19 +222,26 @@
       },
       {
         "id": "wc06",
-        "classes": ["omnifood-reviews", "flex"],
+        "classes": [
+          "omnifood-reviews",
+          "flex"
+        ],
         "type": "wap-reviews",
         "cmps": [
           {
             "id": "wc05",
-            "classes": ["omnifood-txt"],
+            "classes": [
+              "omnifood-txt"
+            ],
             "type": "wap-txt",
             "heading": "Once you try it, you can't go back",
             "subHeading": "TESTIMONIALS"
           },
           {
             "id": "wc08",
-            "classes": ["omnifood-review"],
+            "classes": [
+              "omnifood-review"
+            ],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -169,7 +251,9 @@
           },
           {
             "id": "wc015",
-            "classes": ["omnifood-review"],
+            "classes": [
+              "omnifood-review"
+            ],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -179,7 +263,9 @@
           },
           {
             "id": "wc017",
-            "classes": ["omnifood-review"],
+            "classes": [
+              "omnifood-review"
+            ],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -189,7 +275,9 @@
           },
           {
             "id": "wc018",
-            "classes": ["omnifood-review"],
+            "classes": [
+              "omnifood-review"
+            ],
             "type": "wap-review",
             "info": {
               "imgUrl": "",
@@ -199,9 +287,14 @@
           },
           {
             "id": "wc019",
-            "classes": ["omnifood-review-gallery"],
+            "classes": [
+              "omnifood-review-gallery"
+            ],
             "type": "wap-imgs",
-            "imgs": ["food1.jpg", "food2.jpg......"]
+            "imgs": [
+              "food1.jpg",
+              "food2.jpg......"
+            ]
           }
         ]
       },
@@ -220,11 +313,23 @@
                 "subheading": "per month. That's just 13$ per meal!",
                 "price": 399,
                 "list": [
-                  { "icon": "", "txt": "1 meal per day" },
-                  { "icon": "", "txt": "Order from 11am to 9pm" },
-                  { "icon": "", "txt": "Delivery is free" }
+                  {
+                    "icon": "",
+                    "txt": "1 meal per day"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "Order from 11am to 9pm"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "Delivery is free"
+                  }
                 ],
-                "btn": { "label": "Start Eating Well!", "link": "#wc03" }
+                "btn": {
+                  "label": "Start Eating Well!",
+                  "link": "#wc03"
+                }
               }
             },
             {
@@ -236,12 +341,27 @@
                 "subheading": "per month. That's just 11$ per meal!",
                 "price": 649,
                 "list": [
-                  { "icon": "", "txt": "2 meals per day" },
-                  { "icon": "", "txt": "Order 24/7" },
-                  { "icon": "", "txt": "Delivery is free" },
-                  { "icon": "", "txt": "Get access to latest recipes" }
+                  {
+                    "icon": "",
+                    "txt": "2 meals per day"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "Order 24/7"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "Delivery is free"
+                  },
+                  {
+                    "icon": "",
+                    "txt": "Get access to latest recipes"
+                  }
                 ],
-                "btn": { "label": "Start Eating Well!", "link": "#wc03" }
+                "btn": {
+                  "label": "Start Eating Well!",
+                  "link": "#wc03"
+                }
               }
             }
           ]
@@ -257,7 +377,9 @@
               "id": "wc019",
               "classes": [],
               "type": "wap-imgs",
-              "imgs": ["woman.jpg"]
+              "imgs": [
+                "woman.jpg"
+              ]
             },
             {
               "id": "wc6258",

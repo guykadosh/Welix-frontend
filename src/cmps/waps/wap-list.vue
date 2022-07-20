@@ -1,8 +1,8 @@
 <template>
     <section v-if="cmp" class="wap-list" :class="cmp.classes">
         <h3>{{ info.heading }}</h3>
-        <ul>
-            <span>{{ info.listIcon }}</span>
+        <ul class="clean-list">
+            <span v-if="info.listIcon">{{ info.listIcon }}</span>
             <li v-for="li in info.list" :key="li">
                 {{ li }}
             </li>
