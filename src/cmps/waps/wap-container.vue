@@ -1,6 +1,7 @@
 <template>
     <section :class="cmp.classes">
-
+        <component v-for="currCmp in cmp.cmps" :is="currCmp.type" 
+        :cmp="currCmp"></component>
     </section>
 </template>
 
