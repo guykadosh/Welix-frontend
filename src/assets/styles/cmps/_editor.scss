@@ -1,3 +1,19 @@
+.wap-editor {
+    // background-color: brown;
+    height: 100vh;
+}
+
+.editor-header {
+    // background-color: blue;
+    padding: em(8px) em(20px);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+
+
+    .page-nav {
+        width: 200px;
+    }
+}
+
 .editor-nav {
     width: 100vw;
     padding: em(9px);
@@ -31,11 +47,42 @@
         border-right: 1px solid;
         // background-color: blue;
         padding-right: em(20px);
+
         div {
             border-radius: em(20px);
             padding: em(4px) em(20px);
             background-color: rgba(128, 128, 128, 0.082);
         }
 
+    }
+}
+
+
+.edit-tool-bar {
+    // background-color: pink;
+    flex-grow: 1;
+
+    .tool-bar-nav {
+        // background-color: blue;
+        border-right: 1px solid rgba(128, 128, 128, 0.26);
+        padding: em(10px);
+        li {
+            margin-block-end: em(10px);
+            cursor: pointer;
+        }
+
+    }
+
+    .tools {
+        // background-color: green;
+        padding: em(10px);
+        border-right: 1px solid rgba(128, 128, 128, 0.26);
+
+        .cmp-preview {
+            margin-block-end: em(10px);
+            border: 1px solid;
+            padding: rem(5px);
+            cursor: pointer;
+        }
     }
 }

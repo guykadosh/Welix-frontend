@@ -1,12 +1,16 @@
 <template>
-    <editor-header />
-    <editor-nav />
+    <section class="wap-editor flex flex-column">
+        <editor-header />
+        <editor-nav />
+        <editor-tool-bar v-if="wap" :cmps="wap.cmps" />
+    </section>
 </template>
 
 <script>
 import { wapService } from '../services/wap.service.js'
 import editorHeader from '../cmps/editor/editor-header.vue'
 import editorNav from '../cmps/editor/editor-nav.vue'
+import editorToolBar from '../cmps/editor/editor-tool-bar.vue'
 export default {
     name: 'wap-editor',
     data() {
@@ -27,7 +31,8 @@ export default {
     },
     components: {
         editorHeader,
-        editorNav
+        editorNav,
+        editorToolBar
     },
 }
 </script>
