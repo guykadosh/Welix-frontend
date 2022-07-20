@@ -10,13 +10,8 @@
 @import 'basic/spacing';
 @import 'basic/layout';
 
-// Components
-// @import 'cmps/home';
 
-.wap.vivid {
-  background-color: white;
-  color: green;
-  .wap-containter {
-    background-color: purple;
-  }
-}
+// Components
+@import './cmps/home';
+@import './cmps/app-header';
+

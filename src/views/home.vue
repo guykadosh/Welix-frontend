@@ -1,7 +1,13 @@
-<template lang="">
-  <div></div>
+<template>
+    <h1>Home Page</h1>
+    <router-link to="/waps">Pick Templates</router-link>
 </template>
+
 <script>
-export default {}
+export default {
+    name: 'home',
+}
 </script>
-<style lang=""></style>
+
+<style>
+</style>
