@@ -1,11 +1,14 @@
-.header-container {
-    position: absolute;
-    width: 100vw;
-    background-color: white;
-    padding: rem(5px) rem(24px);
-    height: rem(72px);
+.main-header {
+    margin-block-end: rem(36px);
+    background-color: rgb(227, 204, 204);
+    padding: rem(25px);
+   
     .header-logo {
         width: rem(70px);
         height: rem(32px);
     }
+    a{
+        color: #333;
+    }
+    
 }
