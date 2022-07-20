@@ -1,7 +1,7 @@
 <template>
     <div class="edit-tool-bar flex">
-        <editorToolBarNav @openEditor="openEditor"/>
-        <section class="tools">
+        <editorToolBarNav @openEditor="openEditor" />
+        <section class="tools" :class="isEditorOpen">
             <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy">
                 <Draggable v-for="item in items" :key="item.id">
                     <div class="cmp-preview" @click="addWapCmp(item.id)">
@@ -39,12 +39,13 @@ export default {
             return this.items[idx]
         },
         openEditor() {
-            console.log('open editor')
+            this.isEditor = !this.isEditor
+            console.log(this.isEditor)
         },
     },
     computed: {
-        isOpen() {
-            
+        isEditorOpen() {
+            return { open: this.isEditor }
         }
     },
     created() {

@@ -1,0 +1,48 @@
+.home-page {
+    .help-ukraine {
+        background-color: rgb(28, 40, 96);
+        height: rem(87px);
+
+        h3 {
+            font-size: rem(20px);
+            color: rgb(255, 255, 255);
+            font-weight: 200;
+            text-align: center;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .hero-container {
+        background-color: whitesmoke;
+        padding-top: rem(50px);
+
+        .hero {
+            // background-color: blueviolet;
+            max-width: rem(800px);
+
+            .hero-head {
+                text-align: center;
+                font-size: rem(96px);
+                margin-bottom: rem(20px);
+
+            }
+
+            .hero-sub {
+                padding: 0 rem(70px);
+                text-align: center;
+                // background-color: blue;
+                font-size: rem(20px);
+                font-weight: 100;
+                line-height: 1.8rem;
+                margin-bottom: rem(35px);
+            }
+        }
+
+        .hero-print {
+            font-weight: 100;
+        }
+    }
+}

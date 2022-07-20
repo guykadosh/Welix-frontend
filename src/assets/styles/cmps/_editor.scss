@@ -92,7 +92,8 @@
 
 .editor-main {
     width: 100vw;
-    flex-grow: 1;
+    flex-grow: 10;
+    overflow-y: hidden;
 
     .edit-tool-bar {
         background-color: whitesmoke;
@@ -103,6 +104,7 @@
             padding: em(10px);
             padding-top: em(22px);
             z-index: 20;
+            background-color: whitesmoke;
 
             li {
                 margin-block-end: em(28px);
@@ -132,7 +134,11 @@
             border-right: 1px solid rgba(128, 128, 128, 0.26);
             transform: translateX(-100%);
             position: fixed;
+            height: 100%;
             z-index: 1;
+            background-color: whitesmoke;
+            width: em(300px);
+            transition: transform .6s, box-shadow .6s;
 
             .cmp-preview {
                 margin-block-end: em(10px);
@@ -141,6 +147,10 @@
                 cursor: pointer;
             }
 
+            &.open {
+                position: relative;
+                transform: translateX(0);
+            }
 
         }
     }
@@ -149,9 +159,11 @@
         margin: em(10px) em(30px);
         min-height: 100px;
         flex-grow: 1;
+        overflow-y: scroll;
 
         .smooth-dnd-container {
             height: 100%;
         }
+
     }
 }
