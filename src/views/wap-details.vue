@@ -4,6 +4,8 @@
   </section>
 </template>
 <script>
+import { wapService } from '../services/wap.service'
+
 export default {
   data() {
     return {
@@ -12,6 +14,7 @@ export default {
   },
   created() {
     const { wapId } = this.$route.params
+
     // get wap from service
   },
 }
