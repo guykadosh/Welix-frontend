@@ -13,7 +13,7 @@ const router = createRouter({
       component: home,
     },
     {
-      path: '/waps',
+      path: '/template',
       name: 'waps',
       component: waps,
     },
