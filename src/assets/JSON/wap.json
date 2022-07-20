@@ -44,9 +44,7 @@
           "nav": {
             "_id": "wc05",
             "type": "wap-nav",
-            "classes": [
-              "omnifood-nav"
-            ],
+            "classes": ["omnifood-nav"],
             "info": {
               "links": [
                 {
@@ -79,11 +77,7 @@
       {
         "id": "wc01",
         "type": "wap-hero",
-        "classes": [
-          "omnifood-hero",
-          "full",
-          "main-layout"
-        ],
+        "classes": ["omnifood-hero", "full", "main-layout"],
         "info": {
           "heading": {
             "title": "A healthy meal delivered to your door, every single day",
@@ -109,9 +103,7 @@
       },
       {
         "id": "wc04",
-        "classes": [
-          "omnifood-brand"
-        ],
+        "classes": ["omnifood-brand"],
         "type": "wap-gallery",
         "info": {
           "title": "as featured in",
@@ -128,17 +120,12 @@
       {
         "id": "wc03",
         "type": "wap-container",
-        "classes": [
-          "omnifood-meals",
-          "flex"
-        ],
+        "classes": ["omnifood-meals", "flex"],
         "info": {
           "cmps": [
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-meal"
-              ],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -164,13 +151,11 @@
             },
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-meal"
-              ],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "num": "",
-                "imgUrl": "",
+                "imgUrl": "https://i.ibb.co/DC457TG/meal-2.jpg",
                 "heading": "Avocado Salad",
                 "subHeading": "",
                 "list": [
@@ -191,13 +176,10 @@
             },
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-meal-list",
-                "flex"
-              ],
+              "classes": ["omnifood-meal-list"],
               "type": "wap-list",
-              "heading": "Works with any diet",
               "info": {
+                "heading": "Works with any diet",
                 "listIcon": "",
                 "list": [
                   "Vegeterian",
@@ -219,18 +201,13 @@
       },
       {
         "id": "wc06",
-        "classes": [
-          "omnifood-reviews",
-          "flex"
-        ],
+        "classes": ["omnifood-reviews"],
         "type": "wap-container",
         "info": {
           "cmps": [
             {
               "id": "wc05",
-              "classes": [
-                "omnifood-txt"
-              ],
+              "classes": ["omnifood-txt"],
               "type": "wap-text",
               "info": {
                 "heading": "Once you try it, you can't go back",
@@ -239,64 +216,48 @@
             },
             {
               "id": "wc08",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
-                "imgUrl": "",
-                "heading": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
-                "subHeading": "— Dave Bryson"
+                "imgUrl": "https://i.ibb.co/LZKrsN9/steve.jpg",
+                "text": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
+                "author": "— Dave Bryson"
               }
             },
             {
               "id": "wc015",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
-                "imgUrl": "",
-                "heading": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
-                "subHeading": "— Ben Hadley"
+                "imgUrl": "https://i.ibb.co/YtHtPDY/ben.jpg",
+                "text": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+                "author": "— Ben Hadley"
               }
             },
             {
               "id": "wc017",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
-                "imgUrl": "",
-                "heading": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
-                "subHeading": "— Steve Miller"
+                "imgUrl": "https://i.ibb.co/jyR6djG/dave.jpg",
+                "text": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+                "author": "— Steve Miller"
               }
             },
             {
               "id": "wc018",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
-                "imgUrl": "",
-                "heading": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
-                "subheading": "— Hannah Smith"
+                "imgUrl": "https://i.ibb.co/FBVNq7c/hannah.jpg",
+                "text": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+                "author": "— Hannah Smith"
               }
-            },
-            {
-              "id": "wc019",
-              "classes": [
-                "omnifood-review-gallery"
-              ],
-              "type": "wap-imgs",
-              "imgs": [
-                "food1.jpg",
-                "food2.jpg......"
-              ]
             }
           ]
+        },
+        "style": {
+          "backgroundColor": "#fdf2e9"
         }
       },
       {
@@ -310,7 +271,7 @@
               "classes": [],
               "type": "wap-card",
               "info": {
-                "heading": "STARTER",
+                "heading": "starter",
                 "subheading": "per month. That's just 13$ per meal!",
                 "price": 399,
                 "list": [
@@ -338,7 +299,7 @@
               "classes": [],
               "type": "wap-card",
               "info": {
-                "heading": "COMPLETE",
+                "heading": "complete",
                 "subheading": "per month. That's just 11$ per meal!",
                 "price": 649,
                 "list": [
@@ -366,7 +327,8 @@
               }
             }
           ]
-        }
+        },
+        "style": {}
       },
       {
         "id": "sc5878",
@@ -378,9 +340,7 @@
               "id": "wc019",
               "classes": [],
               "type": "wap-imgs",
-              "imgs": [
-                "woman.jpg"
-              ]
+              "imgs": ["woman.jpg"]
             },
             {
               "id": "wc6258",

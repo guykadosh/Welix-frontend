@@ -58,9 +58,53 @@
       align-items: center;
 
       .text-box {
-        font-size: em(20px);
-        line-height: 1.6;
-        margin-bottom: 4.8rem;
+        .heading {
+          font-size: em(52px);
+          line-height: 1.05;
+          margin-bottom: em(24px);
+          font-weight: 700;
+          color: #333;
+          letter-spacing: -0.5px;
+        }
+
+        .sub-heading {
+          font-size: em(20px);
+          line-height: 1.6;
+          margin-bottom: em(24px);
+        }
+
+        .btn1,
+        .btn2 {
+          display: inline-block;
+          text-decoration: none;
+          font-size: em(18px);
+          font-weight: 500;
+          padding: em(10px) em(18px);
+          border-radius: 9px;
+          border: none;
+          cursor: pointer;
+          font-family: inherit;
+          transition: all 0.3s;
+        }
+        .btn1 {
+          background-color: #e67e22;
+          color: #fff;
+          margin-inline-end: rem(12px);
+
+          &:hover {
+            background-color: #cf711f;
+          }
+        }
+
+        .btn2 {
+          background-color: #fff;
+          color: #555;
+
+          &:hover {
+            background-color: #fdf2e9;
+            box-shadow: inset 0 0 0 3px #fff;
+          }
+        }
       }
 
       img {
@@ -70,6 +114,9 @@
   }
 
   &-brand {
+    font-family: Rubik-Regular, sans-serif;
+    padding: em(24px) 0;
+
     .title {
       font-size: em(14px);
       text-transform: uppercase;
@@ -82,7 +129,7 @@
 
     .imgs-container {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
 
       img {
         height: em(32px);
@@ -93,6 +140,7 @@
   }
 
   &-meals {
+    font-family: Rubik-Regular, sans-serif;
     padding: em(96px) 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -112,6 +160,23 @@
       box-shadow: 0 em(24px) em(48px) rgba(0, 0, 0, 0.06);
     }
 
+    &-list {
+      .heading {
+        font-weight: 700;
+        color: #333;
+        letter-spacing: -0.5px;
+        font-size: em(30px);
+        line-height: 1.2;
+        margin-bottom: em(24px);
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: em(16px);
+      }
+    }
     .card {
       &-content {
         padding: em(48px);
@@ -133,6 +198,56 @@
 
       &-img {
         width: 100%;
+      }
+    }
+  }
+
+  &-reviews {
+    font-family: Rubik-Regular, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: em(48px);
+    column-gap: em(80px);
+    padding: em(24px) 0;
+
+    .wap-text {
+      grid-column: 1 / -1;
+
+      .text1 {
+        display: block;
+        font-size: em(16px);
+        font-weight: 500;
+        color: #cf711f;
+        text-transform: uppercase;
+        margin-bottom: em(16px);
+        letter-spacing: 0.75px;
+      }
+
+      .text2 {
+        font-family: Rubik-Medium, sans-serif;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 500;
+      }
+    }
+
+    .wap-review {
+      img {
+        width: em(86px);
+        border-radius: 50%;
+        margin-bottom: em(12px);
+      }
+
+      &-text {
+        font-size: em(18px);
+        line-height: 1.8;
+        margin-bottom: em(16px);
+      }
+
+      &-author {
+        font-size: em(16px);
+        color: #6f6f6f;
       }
     }
   }
