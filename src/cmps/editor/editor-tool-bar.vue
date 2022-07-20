@@ -1,8 +1,29 @@
 <template>
     <div class="edit-tool-bar flex">
-        <editorToolBarNav @openEditor="openEditor" />
+        <editorToolBarNav @setTool="openTool" />
         <section class="tools" :class="isEditorOpen">
-            <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy">
+            <section v-if="tool === 'element'">
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+            </section>
+            <section v-if="tool === 'section'">
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+            </section>
+            <section v-if="tool === 'pages'">
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+                <div>Section</div>
+            </section>
+            <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy" v-if="tool === 'edit'">
                 <Draggable v-for="item in items" :key="item.id">
                     <div class="cmp-preview" @click="addWapCmp(item.id)">
                         <span>{{ item.type }}</span>
@@ -25,7 +46,8 @@ export default {
     data() {
         return {
             items: null,
-            isEditor: false,
+            isOpen: false,
+            tool: null,
         }
     },
     methods: {
@@ -38,14 +60,15 @@ export default {
         getChildPayload(idx) {
             return this.items[idx]
         },
-        openEditor() {
-            this.isEditor = !this.isEditor
-            console.log(this.isEditor)
+        openTool(type) {
+            console.log('hi', type)
+            this.tool = type
+            this.isOpen = !this.isOpen
         },
     },
     computed: {
         isEditorOpen() {
-            return { open: this.isEditor }
+            return { open: this.isOpen }
         }
     },
     created() {

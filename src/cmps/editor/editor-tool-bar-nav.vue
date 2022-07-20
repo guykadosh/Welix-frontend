@@ -1,6 +1,6 @@
 <template>
     <ul class="tool-bar-nav">
-        <li>
+        <li @click="setTool('element')">
             <a-tooltip placement="right">
                 <template #title>
                     <span>Add Elements</span>
@@ -8,7 +8,7 @@
                 <PlusCircleOutlined class="icon" />
             </a-tooltip>
         </li>
-        <li>
+        <li @click="setTool('section')">
             <a-tooltip placement="right">
                 <template #title>
                     <span>Add Section</span>
@@ -16,7 +16,7 @@
                 <PicCenterOutlined class="icon" />
             </a-tooltip>
         </li>
-        <li>
+        <li @click="setTool('pages')">
             <a-tooltip placement="right">
                 <template #title>
                     <span>Pages & Menue</span>
@@ -24,7 +24,7 @@
                 <FileTextOutlined class="icon" />
             </a-tooltip>
         </li>
-        <li @click="openEditor">
+        <li @click="setTool('edit')">
             <a-tooltip placement="right">
                 <template #title>
                     <span>Edit</span>
@@ -51,11 +51,11 @@ export default {
         EditOutlined
     },
     methods: {
-        openEditor() {
-            this.$emit('openEditor')
+        setTool(type) {
+            this.$emit('setTool', type)
         },
     },
-    emits: ['openEditor']
+    emits: ['setTool']
 }
 </script>
 
