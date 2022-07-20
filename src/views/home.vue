@@ -1,5 +1,6 @@
 <template>
     <section class="home-page main-layout">
+        <app-header></app-header>
         <div class="help-ukraine full flex align-center justify-center">
             <h3>Let's make an impcat together to stand
                 with the people of Ukraine.
@@ -23,6 +24,7 @@
 
 <script>
 // import getStartedBtn from '../components/misc/get-started-btn.vue'
+import appHeader from '../cmps/app/app-header.vue'
 export default {
     name: '',
     data() {
@@ -40,6 +42,7 @@ export default {
 
     },
     components: {
+        appHeader,
         // getStartedBtn
     },
 }
