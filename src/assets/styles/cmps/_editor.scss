@@ -1,6 +1,7 @@
 .wap-editor {
     // background-color: brown;
     height: 100vh;
+    z-index: 10;
 
     .editor-header {
         // background-color: blue;
@@ -19,6 +20,7 @@
     .editor-nav {
         width: 100vw;
         box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.084);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.26);
 
         >* {
             margin-inline-end: em(10px);
@@ -42,7 +44,7 @@
             .icon {
                 padding: em(3px);
                 border-radius: em(5px);
-                font-size: em(28px);
+                font-size: em(22px);
                 margin-inline-end: em(10px);
                 cursor: pointer;
 
@@ -79,10 +81,10 @@
             .icon {
                 padding: em(3px);
                 border-radius: em(5px);
-                font-size: em(22px);
+                font-size: em(20px);
                 margin-inline-end: em(10px);
                 cursor: pointer;
-                
+
             }
         }
     }
@@ -93,12 +95,14 @@
     flex-grow: 1;
 
     .edit-tool-bar {
+        background-color: whitesmoke;
 
         .tool-bar-nav {
 
             border-right: 1px solid rgba(128, 128, 128, 0.26);
             padding: em(10px);
             padding-top: em(22px);
+            z-index: 20;
 
             li {
                 margin-block-end: em(28px);
@@ -126,6 +130,9 @@
 
             padding: em(10px);
             border-right: 1px solid rgba(128, 128, 128, 0.26);
+            transform: translateX(-100%);
+            position: fixed;
+            z-index: 1;
 
             .cmp-preview {
                 margin-block-end: em(10px);
@@ -133,6 +140,8 @@
                 padding: rem(5px);
                 cursor: pointer;
             }
+
+
         }
     }
 

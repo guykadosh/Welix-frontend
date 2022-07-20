@@ -1,6 +1,6 @@
 <template>
     <div class="edit-tool-bar flex">
-        <editorToolBarNav />
+        <editorToolBarNav @openEditor="openEditor"/>
         <section class="tools">
             <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy">
                 <Draggable v-for="item in items" :key="item.id">
@@ -25,6 +25,7 @@ export default {
     data() {
         return {
             items: null,
+            isEditor: false,
         }
     },
     methods: {
@@ -37,9 +38,14 @@ export default {
         getChildPayload(idx) {
             return this.items[idx]
         },
+        openEditor() {
+            console.log('open editor')
+        },
     },
     computed: {
-
+        isOpen() {
+            
+        }
     },
     created() {
         this.items = JSON.parse(JSON.stringify(this.cmps))

@@ -1,7 +1,7 @@
 <template>
     <nav class="editor-nav flex">
         <div class="select-container">
-            <a-select ref="select" class="page-nav" value="1" bordered="false">
+            <a-select ref="select" class="page-nav" value="1">
                 <a-select-option value="1">Page: How it works</a-select-option>
                 <a-select-option value="2">Page: Meals</a-select-option>
                 <a-select-option value="3">Page: Reviews</a-select-option>
@@ -11,9 +11,9 @@
         <div class="view-port-mode flex items-center">
             <a-tooltip placement="bottom">
                 <template #title>
-                    <span>Switch to mobile</span>
+                    <span>Switch to desktop</span>
                 </template>
-                <mobile-outlined class="icon" />
+                <desktop-outlined class="icon" />
             </a-tooltip>
             <a-tooltip placement="bottom">
                 <template #title>
@@ -23,14 +23,14 @@
             </a-tooltip>
             <a-tooltip placement="bottom">
                 <template #title>
-                    <span>Switch to desktop</span>
+                    <span>Switch to mobile</span>
                 </template>
-                <desktop-outlined class="icon" />
+                <mobile-outlined class="icon" />
             </a-tooltip>
         </div>
         <div class="demo-site-domain flex flex-column justify-center">
             <div>
-                <lock-outlined class="icon"/>
+                <lock-outlined class="icon" />
                 <span class="http">https:</span><span>//welix.com/my-site</span>
             </div>
         </div>
@@ -58,8 +58,10 @@
 </template>
 
 <script>
-import { UndoOutlined, RedoOutlined, ZoomInOutlined, 
-DesktopOutlined, TabletOutlined, MobileOutlined, LockOutlined } from '@ant-design/icons-vue'
+import {
+    UndoOutlined, RedoOutlined, ZoomInOutlined,
+    DesktopOutlined, TabletOutlined, MobileOutlined, LockOutlined
+} from '@ant-design/icons-vue'
 export default {
     name: 'editor-nav',
     components: {
