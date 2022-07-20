@@ -68,4 +68,27 @@
       }
     }
   }
+
+  &-brand {
+    .title {
+      font-size: rem(14px);
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: rem(24px);
+      color: #888;
+    }
+
+    .imgs-container {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        height: rem(32px);
+        filter: brightness(0);
+        opacity: 50%;
+      }
+    }
+  }
 }
