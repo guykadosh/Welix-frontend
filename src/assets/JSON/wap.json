@@ -365,12 +365,25 @@
       },
       {
         "id": "sc5999",
-        "classes": [],
+        "classes": ["omnifood-footer"],
         "type": "wap-footer",
         "info": {
-          "adress": "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
-          "contact": "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890",
-          "hours": "24/7",
+          "logo": {
+            "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
+            "title": "",
+            "style": {}
+          },
+          "row1": {
+            "title": "Contact us",
+            "texts": [
+              "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
+              "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
+            ]
+          },
+          "row2": {
+            "title": "Account",
+            "texts": ["Create account", "Sign in", "iOS app", "Android app"]
+          },
           "copyright": "copyright © 2022 by Omnifood, Inc. All rights reserved."
         }
       }
