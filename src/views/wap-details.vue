@@ -1,7 +1,7 @@
 <template>
   <!-- <pre>{{ wap }}</pre> -->
   <section class="wap-details">
-    <!-- <component v-for="cmp in wap.cmps" :is="cmp.type"></component> -->
+    <component v-for="cmp in wap.cmps" :is="cmp.type"></component>
     <!-- <wap-header :cmp="wap.cmps[0]" /> -->
     <pre>{{ wap.cmps[0].type }}</pre>
     <component :is="wap.cmps[0].type" :cmp="wap.cmps[0]"></component>

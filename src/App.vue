@@ -1,8 +1,5 @@
 <template>
-<<<<<<< HEAD
-  <app-header/>
-=======
->>>>>>> d209daa3157ab30caef292e69e965f7b2c37ec93
+  <app-header />
   <router-view />
 </template>
 
@@ -20,6 +17,6 @@ export default {
   },
   components: {
     appHeader,
-  }
+  },
 }
 </script>
