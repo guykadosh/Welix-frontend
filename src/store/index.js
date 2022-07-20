@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import wapStore from './modules/wap.store'
 
 // create a store instance
 export const store = createStore({
@@ -7,7 +8,9 @@ export const store = createStore({
   getters: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {
+    wapStore,
+  },
 })
 
 export default store

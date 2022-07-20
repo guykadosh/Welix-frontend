@@ -1,4 +1,4 @@
-var wap = {
+export default {
   _id: '5e28393890dd7201a06d4e44',
   name: 'Lukas Rudrof – Funktionales Webdesign, Webflow & SEO',
   imgUrl:
@@ -17,7 +17,7 @@ var wap = {
   theme: 'vivid',
   cmps: [
     {
-      _id: 'wc02',
+      id: 'wc02',
       type: 'wap-header',
       classes: [
         'omnifood-header',
@@ -85,11 +85,11 @@ var wap = {
       id: 'wc03',
       type: 'wap-container',
       info: {
-        dir: 'row',
+        classes: ['omnifood-main', 'flex'],
         cmps: [
           {
             id: 'wc04',
-            classes: ['omnifood-brand', 'flex'],
+            classes: ['omnifood-card', 'flex'],
             type: 'wap-card',
             info: {
               num: '',
@@ -107,7 +107,7 @@ var wap = {
           ,
           {
             id: 'wc04',
-            classes: ['omnifood-brand', 'flex'],
+            classes: ['omnifood-card', 'flex'],
             type: 'wap-card',
             info: {
               num: '',
@@ -124,7 +124,7 @@ var wap = {
           },
           {
             id: 'wc04',
-            classes: ['omnifood-brand', 'flex'],
+            classes: ['omnifood-list', 'flex'],
             type: 'wap-list',
             info: {
               'list-icon': '',

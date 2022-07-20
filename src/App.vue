@@ -1,15 +1,28 @@
 <template>
-  <section class="main-layout">
-    <!-- <app-header /> -->
-    <router-view />
+  <section>
+    <pre>{{ showWaps }}</pre>
   </section>
 </template>
 
 <script>
 export default {
   name: 'app',
-  created() {},
+  data() {
+    return {
+
+    }
+  },
+  created() {
+    this.$store.dispatch({ type: 'loadWaps' })
+  },
+  computed: {
+      showWaps() {
+      return this.$store.getters.getWaps
+    }
+  },
   methods: {},
-  components: {},
+  components: {
+  
+  },
 }
 </script>
