@@ -17,6 +17,9 @@ import wapGallery from '../waps/wap-gallery.vue'
 import wapList from '../waps/wap-list.vue'
 import wapCard from '../waps/wap-card.vue'
 import wapContainer from '../waps/wap-container.vue'
+import wapFooter from '../waps/wap-footer.vue'
+import wapReview from '../waps/wap-review.vue'
+import wapText from '../waps/wap-text.vue'
 
 export default {
     name: '',
@@ -51,7 +54,10 @@ export default {
         wapGallery,
         wapList,
         wapCard,
-        wapContainer
+        wapContainer,
+        wapFooter,
+        wapText,
+        wapReview
     },
 }
 </script>

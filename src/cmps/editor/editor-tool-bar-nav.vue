@@ -24,7 +24,7 @@
                 <FileTextOutlined class="icon" />
             </a-tooltip>
         </li>
-        <li>
+        <li @click="openEditor">
             <a-tooltip placement="right">
                 <template #title>
                     <span>Edit</span>
@@ -50,6 +50,12 @@ export default {
         FileTextOutlined,
         EditOutlined
     },
+    methods: {
+        openEditor() {
+            this.$emit('openEditor')
+        },
+    },
+    emits: ['openEditor']
 }
 </script>
 
