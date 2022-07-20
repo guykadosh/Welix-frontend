@@ -3,6 +3,9 @@
     <img class="card-img" :src="info.imgUrl" />
     <div class="card-content">
       <h2 class="card-heading" v-if="info.heading">{{ info.heading }}</h2>
+      <p class="card-price" v-if="info.price">
+        $ <span>{{ info.price }}</span>
+      </p>
       <h3 class="card-subheading" v-if="info.subHeading">
         {{ info.subHeading }}
       </h3>
