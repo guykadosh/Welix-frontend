@@ -17,6 +17,8 @@ import wapGallery from '../cmps/waps/wap-gallery.vue'
 import wapList from '../cmps/waps/wap-list.vue'
 import wapCard from '../cmps/waps/wap-card.vue'
 import wapContainer from '../cmps/waps/wap-container.vue'
+import wapReview from '../cmps/waps/wap-review.vue'
+import wapText from '../cmps/waps/wap-text.vue'
 
 export default {
   name: 'wap-details',
@@ -27,6 +29,8 @@ export default {
     wapList,
     wapCard,
     wapContainer,
+    wapReview,
+    wapText,
   },
   data() {
     return {

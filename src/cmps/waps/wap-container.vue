@@ -10,6 +10,9 @@
 <script>
 import wapCard from './wap-card.vue'
 import wapList from './wap-list.vue'
+import wapReview from './wap-review.vue'
+import wapText from './wap-text.vue'
+
 export default {
     name: 'wap-container',
     props: {
@@ -18,6 +21,8 @@ export default {
     components: {
         wapCard,
         wapList,
+        wapReview,
+        wapText,
     },
     computed: {
         info() {
