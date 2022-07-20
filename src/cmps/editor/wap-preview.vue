@@ -1,8 +1,8 @@
 <template>
     <main class="wap-preview">
         <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)">
-            <Draggable v-for="cmp in cmps" :key="cmp.id">
-                <component :is="cmp.type" :cmp="cmp"/>
+            <Draggable v-for="item in items" :key="item.id">
+                <component :is="item.type" :cmp="item"/>
             </Draggable>
         </Container>
     </main>
@@ -37,7 +37,7 @@ export default {
 
     },
     created() {
-
+        this.items = JSON.parse(JSON.stringify(this.cmps))
     },
     components: {
         Container,

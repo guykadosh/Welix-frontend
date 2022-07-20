@@ -2,10 +2,13 @@
     <div class="edit-tool-bar flex">
 
         <ul class="tool-bar-nav">
-            <li>Elements</li>
+            <li>
+                <plus-circle-outlined />
+            </li>
             <li>Sections</li>
             <li>Editor</li>
         </ul>
+
 
         <section class="tools">
             <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy">
@@ -22,6 +25,7 @@
 <script>
 import { Container, Draggable } from 'vue3-smooth-dnd'
 import { applyDrag } from '@/services/dnd.utils/helpers.js'
+
 export default {
     name: 'edit-tool-bar',
     props: {
