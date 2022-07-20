@@ -11,10 +11,14 @@
 import { wapService } from '../services/wap.service'
 import wapHeader from '../cmps/waps/wap-header.vue'
 import wapHero from '../cmps/waps/wap-hero.vue'
+import wapGallery from '../cmps/waps/wap-gallery.vue'
+import wapList from '../cmps/waps/wap-list.vue'
+import wapCard from '../cmps/waps/wap-card.vue'
+import wapContainer from '../cmps/waps/wap-container.vue'
 
 export default {
   name: 'wap-details',
-  components: { wapHeader, wapHero },
+  components: { wapHeader, wapHero, wapGallery, wapList, wapCard, wapContainer },
   data() {
     return {
       wap: null,
