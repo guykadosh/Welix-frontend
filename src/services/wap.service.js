@@ -18,6 +18,7 @@ function getWaps() {
 }
 
 function getWapById(wapId) {
-    return storageService.get('wap', wapId)
+    return wap.find(w => w._id === wapId)
+    // return storageService.get('wap', wapId)
 }
 
