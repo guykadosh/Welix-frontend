@@ -47,6 +47,11 @@
                 font-size: em(22px);
                 margin-inline-end: em(10px);
                 cursor: pointer;
+                color: gray;
+
+                &:hover {
+                    color: rgb(22, 22, 22);
+                }
 
                 &:active {
                     background-color: rgba(20, 42, 243, 0.278);
@@ -64,6 +69,9 @@
             div {
                 .icon {
                     margin-inline-end: em(5px);
+                    color: gray;
+
+                    
                 }
 
                 border-radius: em(20px);
@@ -84,6 +92,11 @@
                 font-size: em(20px);
                 margin-inline-end: em(10px);
                 cursor: pointer;
+                color: gray;
+
+                &:hover {
+                    color: rgb(22, 22, 22);
+                }
 
             }
         }
@@ -122,8 +135,11 @@
                 .icon {
                     cursor: pointer;
                     font-size: em(28px);
-                    color: rgb(40, 33, 33);
+                    color: rgb(65, 60, 60);
+
+                    
                 }
+
             }
 
         }
