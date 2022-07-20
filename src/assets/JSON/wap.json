@@ -28,13 +28,14 @@
         ],
         "info": {
           "logo": {
-            "img": "",
-            "title": "OMNIFOOD",
+            "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
+            "title": "",
             "style": {}
           },
           "nav": {
             "_id": "wc05",
             "type": "wap-nav",
+            "classes": ["omnifood-nav"],
             "info": {
               "links": [
                 { "title": "How it works", "href": "#how" },
@@ -66,7 +67,7 @@
             { "label": "Start Eating Well!", "link": "#wc03" },
             { "label": "Learn more", "link": "#wc03" }
           ],
-          "imgUrl": "hero-img.jpg"
+          "imgUrl": "https://i.ibb.co/fdHvDFX/hero.webp"
         },
         "style": {}
       },

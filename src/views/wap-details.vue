@@ -1,6 +1,6 @@
 <template>
   <!-- <pre>{{ wap }}</pre> -->
-  <section v-if="wap" class="wap-details">
+  <section v-if="wap" class="wap-details main-layout">
     <component v-for="cmp in wap.cmps" :is="cmp.type" :cmp="cmp"></component>
     <!-- <wap-header :cmp="wap.cmps[0]" /> -->
 
@@ -10,10 +10,11 @@
 <script>
 import { wapService } from '../services/wap.service'
 import wapHeader from '../cmps/waps/wap-header.vue'
+import wapHero from '../cmps/waps/wap-hero.vue'
 
 export default {
   name: 'wap-details',
-  components: { wapHeader },
+  components: { wapHeader, wapHero },
   data() {
     return {
       wap: null,

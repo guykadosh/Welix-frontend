@@ -1,0 +1,41 @@
+.omnifood {
+  &-header {
+    background-color: #fdf2e9;
+    height: rem(96px);
+    position: relative;
+
+    .logo {
+      height: rem(22px);
+    }
+  }
+
+  &-nav {
+    .nav-link {
+      margin-inline-end: rem(20px);
+      font-weight: 500;
+      font-size: rem(18px);
+
+      a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          color: #cf711f;
+        }
+      }
+
+      transition: all 0.3s;
+    }
+
+    .nav-link:last-child {
+      padding: 1.2rem 2.5rem;
+      border-radius: 9px;
+      color: #fff;
+      background-color: #e67e22;
+
+      &:hover {
+        background-color: #cf711f;
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 <template>
   <header class="wap-header" :class="cmp.classes">
-    <div class="header__inner flex justify-between items-center">
+    <div class="wap-header__inner flex justify-between items-center">
       <div class="logo-box" :style="info.logo.style">
-        <img v-if="info.logo.img" :src="info.logo.img" />
-        <h2 v-else>{{ info.logo.title }}</h2>
+        <img v-if="info.logo.img" class="logo" :src="info.logo.img" />
+        <h2 v-else class="logo">{{ info.logo.title }}</h2>
       </div>
       <wap-nav v-if="info.nav" :cmp="info.nav" />
     </div>
