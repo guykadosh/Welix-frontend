@@ -1,4 +1,4 @@
-export default {
+export default [{
   _id: '5e28393890dd7201a06d4e44',
   name: 'Lukas Rudrof – Funktionales Webdesign, Webflow & SEO',
   imgUrl:
@@ -140,4 +140,4 @@ export default {
     },
   ],
   isPublic: true,
-}
+}]
