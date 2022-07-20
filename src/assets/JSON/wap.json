@@ -53,7 +53,7 @@
       {
         "id": "wc01",
         "type": "wap-hero",
-        "classes": ["omnifood-hero"],
+        "classes": ["omnifood-hero", "full", "main-layout"],
         "info": {
           "heading": {
             "title": "A healthy meal delivered to your door, every single day",

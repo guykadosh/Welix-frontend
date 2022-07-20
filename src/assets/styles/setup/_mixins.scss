@@ -75,49 +75,49 @@
 
 // Buttons
 
-@mixin btn(
-  $type: regular,
-  $bg: $primary-color,
-  $clr: $light-color1,
-  $padding: em(16px) em(22px),
-  $hover: darken($bg, 8%)
-) {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: $padding;
-  line-height: 1.25;
-  font-size: em(14px);
-  font-variation-settings: 'wght' 430;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+// @mixin btn(
+//   $type: regular,
+//   $bg: $primary-color,
+//   $clr: $light-color1,
+//   $padding: em(16px) em(22px),
+//   $hover: darken($bg, 8%)
+// ) {
+//   display: inline-flex;
+//   align-items: center;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   padding: $padding;
+//   line-height: 1.25;
+//   font-size: em(14px);
+//   font-variation-settings: 'wght' 430;
+//   border-radius: 6px;
+//   border: none;
+//   cursor: pointer;
 
-  transition: background-color 0.2s;
+//   transition: background-color 0.2s;
 
-  @if $type == regular {
-    background-color: $bg;
-    color: $clr;
-    &:hover {
-      background-color: $hover;
-    }
-  } @else if $type == dark {
-    background-color: $dark-color1;
-    color: $light-color1;
-    &:hover {
-      background-color: $primary-color;
-      color: $light-color1;
-    }
-  } @else if $type == light {
-    background-color: $light-color2;
-    color: $dark-color1;
-    &:hover {
-      background-color: $primary-color;
-      color: $light-color1;
-    }
-  }
-}
+//   @if $type == regular {
+//     background-color: $bg;
+//     color: $clr;
+//     &:hover {
+//       background-color: $hover;
+//     }
+//   } @else if $type == dark {
+//     background-color: $dark-color1;
+//     color: $light-color1;
+//     &:hover {
+//       background-color: $primary-color;
+//       color: $light-color1;
+//     }
+//   } @else if $type == light {
+//     background-color: $light-color2;
+//     color: $dark-color1;
+//     &:hover {
+//       background-color: $primary-color;
+//       color: $light-color1;
+//     }
+//   }
+// }
 
 // Type
 

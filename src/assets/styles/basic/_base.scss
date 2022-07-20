@@ -12,18 +12,18 @@ body {
   background-color: $light-color1;
 }
 
-.btn {
-  @include btn;
+// .btn {
+//   @include btn;
 
-  &-dark {
-    @include btn($type: dark);
-  }
+//   &-dark {
+//     @include btn($type: dark);
+//   }
 
-  &-dark-small {
-    @include btn($type: dark, $padding: rem(5px) rem(10px));
-  }
+//   &-dark-small {
+//     @include btn($type: dark, $padding: rem(5px) rem(10px));
+//   }
 
-  &-light {
-    @include btn($type: light);
-  }
-}
+//   &-light {
+//     @include btn($type: light);
+//   }
+// }

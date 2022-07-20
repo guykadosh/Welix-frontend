@@ -30,11 +30,39 @@
     .nav-link:last-child {
       padding: 1.2rem 2.5rem;
       border-radius: 9px;
-      color: #fff;
       background-color: #e67e22;
+
+      a {
+        color: #fff;
+      }
 
       &:hover {
         background-color: #cf711f;
+      }
+    }
+  }
+
+  &-hero {
+    background-color: #fdf2e9;
+    padding: 4.8rem 0 9.6rem 0;
+
+    .hero-inner {
+      // max-width: 130rem;
+      // margin: 0 auto;
+      padding: 0 3.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9.6rem;
+      align-items: center;
+
+      .text-box {
+        font-size: rem(20px);
+        line-height: 1.6;
+        margin-bottom: 4.8rem;
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
