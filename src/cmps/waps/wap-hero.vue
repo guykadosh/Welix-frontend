@@ -2,14 +2,18 @@
   <section v-if="cmp" class="wap-hero" :style="cmp.style" :class="cmp.classes">
     <div class="hero-inner">
       <div class="text-box">
-        <h1 :style="info.heading.style">
+        <h1 class="heading" :style="info.heading.style">
           {{ info.heading.title }}
         </h1>
-        <h2 :style="info.subHeading.style">
+        <h2 class="sub-heading" :style="info.subHeading.style">
           {{ info.subHeading.title }}
         </h2>
         <div class="btns">
-          <a class="btn" v-for="btn in info.btns" :href="btn.link">
+          <a
+            v-for="(btn, idx) in info.btns"
+            :class="'btn' + (idx + 1)"
+            :href="btn.link"
+          >
             {{ btn.label }}</a
           >
         </div>
