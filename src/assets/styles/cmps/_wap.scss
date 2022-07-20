@@ -1,0 +1,22 @@
+.img-container {
+    margin-top: 96px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: rem(25px);
+    grid-row-gap: rem(45px);
+    justify-items: center;
+
+    img {
+        aspect-ratio: 16/9;
+        display: block;
+        width: 25rem;
+        box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.08);
+        border-radius: rem(3px);
+    }
+    p{
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 15px;
+    }
+}
