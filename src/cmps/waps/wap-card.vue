@@ -1,6 +1,6 @@
 <template>
   <section v-if="cmp" class="wap-card" :class="cmp.classes">
-    <img :src="info.imgUrl" alt="card-img" />
+    <img class="card-img" :src="info.imgUrl" />
     <div class="card-content">
       <h2 class="card-heading" v-if="info.heading">{{ info.heading }}</h2>
       <h3 class="card-subheading" v-if="info.subHeading">

@@ -1,11 +1,11 @@
 .omnifood {
   &-header {
     background-color: #fdf2e9;
-    height: rem(96px);
+    height: em(96px);
     position: relative;
 
     .logo {
-      height: rem(22px);
+      height: em(22px);
     }
   }
 
@@ -13,7 +13,7 @@
     .nav-link {
       margin-inline-end: rem(20px);
       font-weight: 500;
-      font-size: rem(18px);
+      font-size: em(18px);
 
       a {
         font-family: Rubik-Bold, sans-serif;
@@ -29,7 +29,7 @@
     }
 
     .nav-link:last-child {
-      padding: 1.2rem 2.5rem;
+      padding: em(12px) em(25px);
       border-radius: 9px;
       background-color: #e67e22;
 
@@ -45,12 +45,12 @@
 
   &-hero {
     background-color: #fdf2e9;
-    padding: rem(48px) 0 rem(64px) 0;
+    padding: em(48px) 0 em(64px) 0;
     font-family: Rubik-Medium, sans-serif;
 
     .hero-inner {
-      // max-width: 130rem;
-      // margin: 0 auto;
+      max-width: em(1300px);
+      margin: 0 auto;
       padding: 0 3.2rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -58,7 +58,7 @@
       align-items: center;
 
       .text-box {
-        font-size: rem(20px);
+        font-size: em(20px);
         line-height: 1.6;
         margin-bottom: 4.8rem;
       }
@@ -71,7 +71,7 @@
 
   &-brand {
     .title {
-      font-size: rem(14px);
+      font-size: em(14px);
       text-transform: uppercase;
       letter-spacing: 0.75px;
       font-weight: 500;
@@ -85,7 +85,7 @@
       justify-content: space-around;
 
       img {
-        height: rem(32px);
+        height: em(32px);
         filter: brightness(0);
         opacity: 50%;
       }
@@ -93,37 +93,46 @@
   }
 
   &-meals {
-    padding: rem(96px) 0;
+    padding: em(96px) 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: em(1200px);
+    margin: 0 auto;
+    gap: rem(48px);
   }
 
   &-meal {
-    box-shadow: 0 rem(12px) rem(24px) rgba(0, 0, 0, 0.075);
+    box-shadow: 0 em(12px) em(24px) rgba(0, 0, 0, 0.075);
     border-radius: 11px;
     overflow: hidden;
     transition: all 0.4s;
 
     &:hover {
       transform: translateY(-1.2rem);
-      box-shadow: 0 rem(24px) rem(48px) rgba(0, 0, 0, 0.06);
+      box-shadow: 0 em(24px) em(48px) rgba(0, 0, 0, 0.06);
     }
 
     .card {
       &-content {
-        padding: rem(48px);
+        padding: em(48px);
         padding-top: rem(32px);
       }
 
       &-heading {
-        font-size: rem(24px);
+        font-size: em(24px);
         color: #333;
         font-weight: 600;
-        margin-bottom: rem(32px);
+        margin-bottom: em(32px);
       }
 
       &-list {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: em(2px);
+      }
+
+      &-img {
+        width: 100%;
       }
     }
   }
