@@ -202,6 +202,29 @@
     }
   }
 
+  &-txt {
+    grid-column: 1 / -1;
+    font-family: Rubik-Bold, sans-serif;
+
+    .text1 {
+      display: block;
+      font-size: em(16px);
+      font-weight: 500;
+      color: #cf711f;
+      text-transform: uppercase;
+      margin-bottom: em(16px);
+      letter-spacing: 0.75px;
+    }
+
+    .text2 {
+      font-family: Rubik-Medium, sans-serif;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+    }
+  }
+
   &-reviews {
     font-family: Rubik-Regular, sans-serif;
     display: grid;
@@ -209,28 +232,6 @@
     row-gap: em(48px);
     column-gap: em(80px);
     padding: em(24px) 0;
-
-    .wap-text {
-      grid-column: 1 / -1;
-
-      .text1 {
-        display: block;
-        font-size: em(16px);
-        font-weight: 500;
-        color: #cf711f;
-        text-transform: uppercase;
-        margin-bottom: em(16px);
-        letter-spacing: 0.75px;
-      }
-
-      .text2 {
-        font-family: Rubik-Medium, sans-serif;
-        margin-top: 0;
-        margin-bottom: 0.5em;
-        color: rgba(0, 0, 0, 0.85);
-        font-weight: 500;
-      }
-    }
 
     .wap-review {
       img {
@@ -248,6 +249,78 @@
       &-author {
         font-size: em(16px);
         color: #6f6f6f;
+      }
+    }
+  }
+
+  &-pricing {
+    font-family: Rubik-Regular, sans-serif;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    row-gap: em(36px);
+    column-gap: em(64px);
+    margin: 0 auto;
+    margin: em(48px) auto;
+
+    .card-heading {
+      color: #cf711f;
+      font-weight: 600;
+      font-size: em(18px);
+      text-transform: uppercase;
+      letter-spacing: 0.75;
+    }
+
+    .card-subheading {
+      font-size: em(16px);
+      line-height: 1.6;
+      color: #6f6f6f;
+      margin-block-end: em(24px);
+    }
+
+    .card-price {
+      font-size: em(36px);
+      font-weight: 600;
+      color: #333;
+      // margin-bottom: em(12px);
+
+      span {
+        font-size: em(36px);
+        font-weight: 500;
+        margin-right: em(4px);
+      }
+    }
+
+    &-starter,
+    &-complete {
+      border-radius: 11px;
+      width: 85%;
+    }
+
+    &-starter {
+      justify-self: end;
+      border: 2px solid #fdf2e9;
+      padding: em(64px);
+    }
+
+    &-complete {
+      background-color: #fdf2e9;
+      padding: em(60px);
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: 'Best value';
+        position: absolute;
+        top: 6%;
+        right: -14%;
+
+        text-transform: uppercase;
+        font-size: em(14px);
+        font-weight: 700;
+        color: #333;
+        background-color: #ffd43b;
+        padding: em(8px) em(8px);
+        transform: rotate(45deg);
       }
     }
   }

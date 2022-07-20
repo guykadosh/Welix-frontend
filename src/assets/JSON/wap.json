@@ -263,16 +263,25 @@
       {
         "id": "wc0789",
         "type": "wap-container",
-        "classes": [],
+        "classes": ["omnifood-pricing"],
         "info": {
           "cmps": [
             {
+              "id": "wc05",
+              "classes": ["omnifood-txt"],
+              "type": "wap-text",
+              "info": {
+                "heading": "pricing",
+                "subHeading": "Eating well without breaking the bank"
+              }
+            },
+            {
               "id": "wc695",
-              "classes": [],
+              "classes": ["omnifood-pricing-starter"],
               "type": "wap-card",
               "info": {
                 "heading": "starter",
-                "subheading": "per month. That's just 13$ per meal!",
+                "subHeading": "per month. That's just 13$ per meal!",
                 "price": 399,
                 "list": [
                   {
@@ -296,11 +305,11 @@
             },
             {
               "id": "wc6956",
-              "classes": [],
+              "classes": ["omnifood-pricing-complete"],
               "type": "wap-card",
               "info": {
                 "heading": "complete",
-                "subheading": "per month. That's just 11$ per meal!",
+                "subHeading": "per month. That's just 11$ per meal!",
                 "price": 649,
                 "list": [
                   {
