@@ -125,11 +125,11 @@
           "cmps": [
             {
               "id": "wc04",
-              "classes": ["omnifood-meal", "flex"],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "num": "",
-                "imgUrl": "",
+                "imgUrl": "https://i.ibb.co/MC2ps95/meal-1.jpg",
                 "heading": "Japanese Gyozas",
                 "subHeading": "",
                 "list": [
@@ -151,7 +151,7 @@
             },
             {
               "id": "wc04",
-              "classes": ["omnifood-meal", "flex"],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "num": "",
@@ -207,7 +207,7 @@
           {
             "id": "wc05",
             "classes": ["omnifood-txt"],
-            "type": "wap-txt",
+            "type": "wap-text",
             "heading": "Once you try it, you can't go back",
             "subHeading": "TESTIMONIALS"
           },

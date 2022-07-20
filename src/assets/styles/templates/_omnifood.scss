@@ -45,7 +45,7 @@
 
   &-hero {
     background-color: #fdf2e9;
-    padding: 4.8rem 0 9.6rem 0;
+    padding: rem(48px) 0 rem(64px) 0;
     font-family: Rubik-Medium, sans-serif;
 
     .hero-inner {
@@ -88,6 +88,42 @@
         height: rem(32px);
         filter: brightness(0);
         opacity: 50%;
+      }
+    }
+  }
+
+  &-meals {
+    padding: rem(96px) 0;
+  }
+
+  &-meal {
+    box-shadow: 0 rem(12px) rem(24px) rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: translateY(-1.2rem);
+      box-shadow: 0 rem(24px) rem(48px) rgba(0, 0, 0, 0.06);
+    }
+
+    .card {
+      &-content {
+        padding: rem(48px);
+        padding-top: rem(32px);
+      }
+
+      &-heading {
+        font-size: rem(24px);
+        color: #333;
+        font-weight: 600;
+        margin-bottom: rem(32px);
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
     }
   }
