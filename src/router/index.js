@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import home from '../views/home.vue'
 import wapDetails from '../views/wap-details.vue'
+import wapEditor from '../views/wapEditor.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/wap/:wapId',
       name: 'wap-detials',
       component: wapDetails,
+    },
+    {
+      path: '/wap/editor',
+      name: 'wap-editor',
+      component: wapEditor,
     },
   ],
 })

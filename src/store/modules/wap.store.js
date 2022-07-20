@@ -15,9 +15,12 @@ export default {
     },
   },
   actions: {
-    loadWaps({ commit }) {
-      const waps = wapService.getWaps()
-      commit({ type: 'setWaps', waps })
+    async loadWaps({ commit }) {
+      try {
+        const waps = await wapService.query()
+        console.log('store', waps)
+        commit({ type: 'setWaps', waps })
+      } catch (err) { console.log(err) }
     },
   },
 }

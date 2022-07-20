@@ -1,3 +1,5 @@
+import wapJSON from '../assets/JSON/wap.js'
+
 export const storageService = {
   query,
   get,
@@ -5,6 +7,14 @@ export const storageService = {
   put,
   remove,
   postMany,
+}
+const KEY = 'wap_db'
+
+_loadWaps()
+
+function _loadWaps() {
+  var waps = JSON.parse(localStorage.getItem(KEY))
+  if (!waps) localStorage.setItem(KEY, wapJSON)
 }
 
 function query(entityType) {

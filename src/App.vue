@@ -5,7 +5,12 @@
 <script>
 export default {
   name: 'app',
-  created() {
+  data() {
+    return {
+      wap: null,
+    }
+  },
+  async created() {
     this.$store.dispatch({ type: 'loadWaps' })
   },
 }
