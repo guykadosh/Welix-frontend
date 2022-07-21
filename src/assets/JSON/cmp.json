@@ -12,7 +12,7 @@
         "info": {
             "logo": {
                 "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-                "title": "",
+                "txt": "",
                 "style": {}
             },
             "nav": {
@@ -24,23 +24,23 @@
                 "info": {
                     "links": [
                         {
-                            "title": "How it works",
+                            "txt": "How it works",
                             "href": "#how"
                         },
                         {
-                            "title": "Meals",
+                            "txt": "Meals",
                             "href": "#meals"
                         },
                         {
-                            "title": "Reviews",
+                            "txt": "Reviews",
                             "href": "#reviews"
                         },
                         {
-                            "title": "Pricing",
+                            "txt": "Pricing",
                             "href": "#pricing"
                         },
                         {
-                            "title": "Try for free",
+                            "txt": "Try for free",
                             "href": "#cta"
                         }
                     ]
@@ -60,11 +60,11 @@
         ],
         "info": {
             "heading": {
-                "title": "A healthy meal delivered to your door, every single day",
+                "txt": "A healthy meal delivered to your door, every single day",
                 "style": {}
             },
             "subHeading": {
-                "title": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
+                "txt": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
                 "style": {}
             },
             "btns": [
@@ -88,7 +88,7 @@
         ],
         "type": "wap-gallery",
         "info": {
-            "title": "as featured in",
+            "txt": "as featured in",
             "imgs": [
                 "https://i.ibb.co/CWHwXJw/business-insider.png",
                 "https://i.ibb.co/KW9hbd7/forbes.png",
@@ -269,7 +269,7 @@
         ],
         "type": "wap-gallery",
         "info": {
-            "title": "",
+            "txt": "",
             "imgs": [
                 "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
                 "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
@@ -409,18 +409,18 @@
         "info": {
             "logo": {
                 "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-                "title": "",
+                "txt": "",
                 "style": {}
             },
             "row1": {
-                "title": "Contact us",
+                "txt": "Contact us",
                 "texts": [
                     "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
                     "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
                 ]
             },
             "row2": {
-                "title": "Account",
+                "txt": "Account",
                 "texts": [
                     "Create account",
                     "Sign in",
