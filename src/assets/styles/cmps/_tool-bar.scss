@@ -38,6 +38,15 @@
     transition: all 0.3s;
     background-color: #fff;
 
+    .el-editor-inner {
+      padding: rem(20px);
+      max-width: rem(275px);
+
+      div {
+        margin-block-end: rem(8px);
+      }
+    }
+
     &__header {
       border-top: #1971c2 5px solid;
       border-bottom: solid 1px #f1f3f5;
