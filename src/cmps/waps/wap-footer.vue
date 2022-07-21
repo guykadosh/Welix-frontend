@@ -1,9 +1,11 @@
 <template>
   <section v-if="cmp" class="wap-footer" :class="cmp.classes">
     <div class="footer-inner flex">
-      <div class="logo-box" :style="info.logo.style">
-        <img v-if="info.logo.img" class="logo" :src="info.logo.img" />
-        <h2 v-else class="logo">{{ info.logo.txt }}</h2>
+      <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
+        <img class="logo" :src="info.logoImg.url" />
+      </div>
+      <div v-else v-if="info.logoTxt">
+        <h2>{{ info.logoTxt.txt }}</h2>
       </div>
       <div class="row">
         <h3>{{ info.row1.txt }}</h3>

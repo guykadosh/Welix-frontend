@@ -5,7 +5,7 @@
       <span class="card-tag">{{ info.tag }}</span>
       <h2 class="card-heading" v-if="info.heading">{{ info.heading.txt }}</h2>
       <p class="card-price" v-if="info.price">
-        $ <span>{{ info.price }}</span>
+        $ <span>{{ info.price.txt }}</span>
       </p>
       <h3 class="card-subheading" v-if="info.subHeading">
         {{ info.subHeading.txt }}
