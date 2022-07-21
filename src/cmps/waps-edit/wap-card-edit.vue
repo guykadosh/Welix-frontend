@@ -1,6 +1,7 @@
 <template>
   <section v-if="cmp" class="wap-card" :class="cmp.classes">
     <img v-if="info.img" class="card-img" :src="info.img.url" />
+    <div class="card-img-container"></div>
     <div class="card-content">
       <span class="card-tag">{{ info.tag }}</span>
       <h2 class="card-heading" v-if="info.heading">{{ info.heading.txt }}</h2>

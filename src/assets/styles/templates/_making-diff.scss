@@ -51,9 +51,8 @@
     }
 
     &-card {
-        background-color: blue;
-        // margin-bottom: em(20px);
         display: flex;
+
 
         &.features {
             flex-direction: row-reverse;
@@ -79,15 +78,100 @@
             background-image: url("//images01.nicepage.com/c461c07a441a5d220e8feb1a/ce3fea61b6645235bfbbedef/450163PEY1K1616.jpg");
         }
 
+        &.features .card-content {
+            .card-tag {
+                color: #f6d427;
+            }
+
+            .card-btn {
+                border: 3px solid #f6d427;
+            }
+        }
+
+        &.digital .card-content {
+            .card-tag {
+                color: #ed92ae;
+            }
+
+            .card-btn {
+                border: 3px solid #ed92ae;
+            }
+        }
+
         .card-content {
+
             flex-basis: 50%;
-            padding: em(40px) em(80px);
+            padding: em(40px) em(160px);
 
             .card-tag {
-                font-family: Oswald-regular;
-                
+                font-family: 'Open Sans', sans-serif;
+                font-size: em(24px);
+                word-wrap: break-word;
+                text-transform: uppercase;
+                font-weight: 300;
+                color: #61d4e7;
             }
+
+            .card-heading {
+                font-family: Oswald-bold;
+                font-size: em(68px);
+                line-height: em(18px);
+            }
+
+            .card-subheading {
+                color: #404040c3;
+                font-family: Oswald-light;
+                font-size: em(22px);
+                margin-block-end: em(20px);
+            }
+
+            .card-btn {
+                border: 3px solid #61d4e7;
+                text-decoration: none;
+                color: #000000;
+                font-family: Oswald-regular;
+                font-size: em(36px);
+                padding: 0 em(15px) em(5px) em(15px);
+            }
+        }
+    }
+
+    &-card:last-of-type {
+        margin-block-end: em(150px);
+    }
+
+    &-txt {
+        // background-color: brown;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+
+        .text1 {
+            color: #ed92ae;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .text2 {
+            font-family: Oswald-bold;
+            font-size: em(72px);
+            max-width: em(150px);
 
         }
     }
+
+    &-gallery {
+        // width: 100vw;
+
+        .imgs-container {
+            // background-color: blue;
+            img {
+                max-width: em(200px);
+            }
+        }
+    }
+
+
 }
