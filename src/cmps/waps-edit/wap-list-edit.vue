@@ -7,7 +7,7 @@
         {{ li }}
       </li>
     </ul>
-    <a :href="info.link.href">{{ info.link.title }}</a>
+    <a :href="info.link.href">{{ info.link.txt }}</a>
   </section>
 </template>
 <script>

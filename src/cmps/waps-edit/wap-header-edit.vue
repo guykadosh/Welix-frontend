@@ -8,10 +8,14 @@
           class="logo"
           :src="info.logo.img"
           @click="select()"
-          
         />
-        <h2 v-else class="logo" contenteditable="true" @click="select(info.logo.title)">
-          {{ info.logo.title }}
+        <h2
+          v-else
+          class="logo"
+          contenteditable="true"
+          @click="select(info.logo.txt)"
+        >
+          {{ info.logo.txt }}
         </h2>
       </div>
       <wap-nav-edit v-if="info.nav" :cmp="info.nav" />
