@@ -38,7 +38,7 @@
         "info": {
           "logo": {
             "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-            "title": "",
+            "txt": "",
             "style": {}
           },
           "nav": {
@@ -48,23 +48,23 @@
             "info": {
               "links": [
                 {
-                  "title": "How it works",
+                  "txt": "How it works",
                   "href": "#how"
                 },
                 {
-                  "title": "Meals",
+                  "txt": "Meals",
                   "href": "#meals"
                 },
                 {
-                  "title": "Reviews",
+                  "txt": "Reviews",
                   "href": "#reviews"
                 },
                 {
-                  "title": "Pricing",
+                  "txt": "Pricing",
                   "href": "#pricing"
                 },
                 {
-                  "title": "Try for free",
+                  "txt": "Try for free",
                   "href": "#cta"
                 }
               ]
@@ -80,11 +80,11 @@
         "classes": ["omnifood-hero", "full", "main-layout"],
         "info": {
           "heading": {
-            "title": "A healthy meal delivered to your door, every single day",
+            "txt": "A healthy meal delivered to your door, every single day",
             "style": {}
           },
           "subHeading": {
-            "title": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
+            "txt": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
             "style": {}
           },
           "btns": [
@@ -106,7 +106,7 @@
         "classes": ["omnifood-brand"],
         "type": "wap-gallery",
         "info": {
-          "title": "as featured in",
+          "txt": "as featured in",
           "imgs": [
             "https://i.ibb.co/CWHwXJw/business-insider.png",
             "https://i.ibb.co/KW9hbd7/forbes.png",
@@ -265,7 +265,7 @@
         "classes": ["omnifood-gallery"],
         "type": "wap-gallery",
         "info": {
-          "title": "",
+          "txt": "",
           "imgs": [
             "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
             "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
@@ -393,18 +393,18 @@
         "info": {
           "logo": {
             "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-            "title": "",
+            "txt": "",
             "style": {}
           },
           "row1": {
-            "title": "Contact us",
+            "txt": "Contact us",
             "texts": [
               "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
               "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
             ]
           },
           "row2": {
-            "title": "Account",
+            "txt": "Account",
             "texts": ["Create account", "Sign in", "iOS app", "Android app"]
           },
           "copyright": "copyright © 2022 by Omnifood, Inc. All rights reserved."
@@ -452,7 +452,7 @@
         "info": {
           "logo": {
             "img": "",
-            "title": "Creative Studio",
+            "txt": "Creative Studio",
             "style": {}
           },
           "nav": {
@@ -462,23 +462,23 @@
             "info": {
               "links": [
                 {
-                  "title": "About us",
+                  "txt": "About us",
                   "href": "#about"
                 },
                 {
-                  "title": "Our features",
+                  "txt": "Our features",
                   "href": "#features"
                 },
                 {
-                  "title": "Digital studio",
+                  "txt": "Digital studio",
                   "href": "#studio"
                 },
                 {
-                  "title": "Portfolio",
+                  "txt": "Portfolio",
                   "href": "#portfolio"
                 },
                 {
-                  "title": "Contact us",
+                  "txt": "Contact us",
                   "href": "#cta"
                 }
               ]
@@ -494,11 +494,11 @@
         "classes": ["omnifood-hero", "full", "main-layout"],
         "info": {
           "heading": {
-            "title": "Creative Stories",
+            "txt": "Creative Stories",
             "style": {}
           },
           "subHeading": {
-            "title": "",
+            "txt": "",
             "style": {}
           },
           "btns": [],
@@ -521,20 +521,7 @@
                 "imgUrl": "",
                 "heading": "Time to Make a Difference",
                 "subHeading": "",
-                "list": [
-                  {
-                    "icon": "",
-                    "txt": "650 calories"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "NutriScore ® 74"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "4.9 rating (537)"
-                  }
-                ]
+                "list": []
               },
               "style": {}
             },
@@ -654,7 +641,7 @@
         "classes": ["omnifood-gallery"],
         "type": "wap-gallery",
         "info": {
-          "title": "",
+          "txt": "",
           "imgs": [
             "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
             "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
@@ -782,18 +769,18 @@
         "info": {
           "logo": {
             "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-            "title": "",
+            "txt": "",
             "style": {}
           },
           "row1": {
-            "title": "Contact us",
+            "txt": "Contact us",
             "texts": [
               "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
               "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
             ]
           },
           "row2": {
-            "title": "Account",
+            "txt": "Account",
             "texts": ["Create account", "Sign in", "iOS app", "Android app"]
           },
           "copyright": "copyright © 2022 by Omnifood, Inc. All rights reserved."

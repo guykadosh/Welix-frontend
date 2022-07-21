@@ -9,11 +9,12 @@
       <h3 class="card-subheading" v-if="info.subHeading">
         {{ info.subHeading }}
       </h3>
-      <ul class="card-list clean-list">
+      <ul class="card-list clean-list" v-if="info.list">
         <li v-for="line in info.list" :key="line">
           <span>{{ line.icon }}</span> <span>{{ line.txt }}</span>
         </li>
       </ul>
+      <button class="card-btn">{{info.btn.txt}}</button>
     </div>
   </section>
 </template>
