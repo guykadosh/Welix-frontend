@@ -4,9 +4,8 @@
     <div class="img-container">
       <div v-for="wap in waps">
         <div class="hover">
-          <router-link to="/wap/editor/5e28393890dd7201a06d4e44"
-            >Template 1
-          </router-link>
+          <a @click="wapToEdit(wap)">Edit</a>
+          <router-link :to="'/wap/' + wap._id">View</router-link>
           <img src="@/assets/img/ominfood.png" alt="" />
         </div>
         <p>Healthy food</p>
@@ -26,6 +25,12 @@ export default {
   computed: {
     waps() {
       return this.$store.getters.getWaps
+    },
+  },
+  methods: {
+    wapToEdit(wap) {
+      const wapToEdit = JSON.parse(JSON.stringify(wap))
+      this.$store.commit({ type: 'setCurrWap', wap: wapToEdit })
     },
   },
 }
