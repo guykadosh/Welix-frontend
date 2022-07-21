@@ -69,11 +69,11 @@
             },
             "btns": [
                 {
-                    "label": "Start Eating Well!",
+                    "txt": "Start Eating Well!",
                     "link": "#wc03"
                 },
                 {
-                    "label": "Learn more",
+                    "txt": "Learn more",
                     "link": "#wc03"
                 }
             ],
@@ -331,7 +331,7 @@
                             }
                         ],
                         "btn": {
-                            "label": "Start Eating Well!",
+                            "txt": "Start Eating Well!",
                             "link": "#wc03"
                         }
                     }
@@ -365,7 +365,7 @@
                             }
                         ],
                         "btn": {
-                            "label": "Start Eating Well!",
+                            "txt": "Start Eating Well!",
                             "link": "#wc03"
                         }
                     }
