@@ -5,7 +5,7 @@ Edit
     <editor-nav />
     <section class="editor-main flex">
       <editor-tool-bar v-if="wap" :cmps="cmps" />
-      <editor-wap :cmps="wap.cmps" v-if="wap" />
+      <editor-wap :wap="wap" v-if="wap" />
     </section>
   </section>
 </template>
