@@ -1,13 +1,13 @@
 <template>
   <section v-if="cmp" class="wap-list" :class="cmp.classes">
-    <h3 class="heading">{{ info.heading }}</h3>
+    <h3 class="heading">{{ info.heading.txt }}</h3>
     <ul class="clean-list">
       <span v-if="info.listIcon">{{ info.listIcon }}</span>
-      <li v-for="li in info.list" :key="li">
-        {{ li }}
+      <li v-for="txt in info.list.txt" :key="txt">
+        {{ txt }}
       </li>
     </ul>
-    <a :href="info.link.href">{{ info.link.txt }}</a>
+    <a v-if="info.link" :href="info.link.link">{{ info.link.txt }}</a>
   </section>
 </template>
 <script>
