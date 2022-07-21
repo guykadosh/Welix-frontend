@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <p>{{ info.copyright }}</p>
+    <p>{{ info.copyright.txt }}</p>
   </section>
 </template>
 <script>
