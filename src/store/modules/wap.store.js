@@ -20,12 +20,15 @@ export default {
     setCurrWap(state, { wap }) {
       state.currWap = wap
     },
+    updateCmp(state, { newCmp }) {
+      const idx = state.currWap.cmps.findIndex(cmp => cmp.id === newCmp.id)
+      state.currWap.cmps.splice(idx, 1, newCmp)
+    },
   },
   actions: {
     async loadWaps({ commit }) {
       try {
         const waps = await wapService.query()
-        console.log('store', waps)
         commit({ type: 'setWaps', waps })
       } catch (err) {
         console.log(err)

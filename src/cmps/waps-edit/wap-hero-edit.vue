@@ -10,7 +10,7 @@
           class="heading"
           :style="info.heading.style"
         >
-          {{ info.heading.title }}
+          {{ info.heading.txt }}
         </h1>
         <h2
           contenteditable="true"
@@ -20,16 +20,16 @@
           @input="changeTxt('subHeading')"
           @mousedown.stop
         >
-          {{ info.subHeading.title }}
+          {{ info.subHeading.txt }}
         </h2>
-        <div class="btns" contenteditable="true">
+        <div class="btns">
           <a
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
             :href="btn.link"
             contenteditable="true"
           >
-            {{ btn.label }}</a
+            {{ btn.txt }}</a
           >
         </div>
       </div>
@@ -49,7 +49,6 @@ export default {
     return {
       newInfo: {
         heading: '',
-        
       },
       cmpToEdit: null,
     }
@@ -61,12 +60,13 @@ export default {
   },
   methods: {
     changeTxt(ref) {
-      this.cmpToEdit.info[ref].title = this.$refs[ref].innerText
-      this.$store.dispatch({type: 'updateCmp', cmp: this.cmpToEdit})
+      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'updateCmp', newCmp })
     },
   },
   created() {
-      this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
+    this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
   },
 }
 </script>
