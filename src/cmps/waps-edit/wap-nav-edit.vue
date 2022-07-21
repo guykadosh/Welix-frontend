@@ -1,8 +1,15 @@
 <template>
   <ul class="nav-bar clean-list flex items-center" :class="cmp.classes">
-    <li v-for="(link, idx ) in cmp.info.links" class="nav-link" contenteditable="true" @click="select(link)"
-    ref="title" @input="changeTxt('title', idx)" @mousedown.stop>
-      <a >{{ link.title }}</a>
+    <li
+      v-for="(link, idx) in cmp.info.links"
+      class="nav-link"
+      contenteditable="true"
+      @click="select(link)"
+      ref="txt"
+      @input="changeTxt('txt', idx)"
+      @mousedown.stop
+    >
+      <a>{{ link.txt }}</a>
     </li>
   </ul>
 </template>
@@ -24,8 +31,8 @@ export default {
     changeTxt(ref, idx) {
       console.log()
       console.log(ref, idx)
-      this.cmpToEdit.info.links[idx].title = this.$refs[ref].innerText
-      // console.log(this.cmpToEdit.info.links[idx].title)
+      this.cmpToEdit.info.links[idx].txt = this.$refs[ref].innerText
+      // console.log(this.cmpToEdit.info.links[idx].txt)
       // this.$store.dispatch({ type: 'updateCmp', cmp: this.cmpToEdit })
     },
     created() {

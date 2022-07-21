@@ -1,6 +1,6 @@
 <template>
   <section v-if="cmp" class="wap-gallery" :class="cmp.classes">
-    <h3 class="title">{{ info.title }}</h3>
+    <h3 class="title">{{ info.txt }}</h3>
     <div class="imgs-container">
       <img v-for="img in info.imgs" :key="img" :src="img" alt="gallery-img" />
     </div>

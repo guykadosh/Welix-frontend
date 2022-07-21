@@ -3,10 +3,10 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1 class="heading" :style="info.heading.style">
-          {{ info.heading.title }}
+          {{ info.heading.txt }}
         </h1>
         <h2 class="sub-heading" :style="info.subHeading.style">
-          {{ info.subHeading.title }}
+          {{ info.subHeading.txt }}
         </h2>
         <div class="btns">
           <a
@@ -14,7 +14,7 @@
             :class="'btn' + (idx + 1)"
             :href="btn.link"
           >
-            {{ btn.label }}</a
+            {{ btn.txt }}</a
           >
         </div>
       </div>
