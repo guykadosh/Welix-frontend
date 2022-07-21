@@ -182,7 +182,8 @@
 
       @include for-small-layout {
         display: inline;
-        >*{
+
+        >* {
           margin: rem(15px);
         }
       }
@@ -199,20 +200,22 @@
     max-width: em(1200px);
     margin: 0 auto;
     gap: rem(48px);
-    @include for-mobile-layout{
+
+    @include for-mobile-layout {
       grid-template-columns: repeat(2, 1fr);
       max-width: em(800px);
       margin: 0 auto;
       gap: rem(25px);
-  
+
     }
-    @include for-small-layout{
+
+    @include for-small-layout {
       justify-content: center;
       grid-template-columns: repeat(1, 0.7fr);
       max-width: auto;
       margin: 0 auto;
       gap: rem(25px);
-  
+
     }
   }
 
@@ -303,6 +306,14 @@
     column-gap: em(80px);
     padding: em(24px) 0;
 
+    @include for-small-layout {
+      justify-content: center;
+      grid-template-columns: 1fr;
+      max-width: rem(250px);
+      margin: 0 auto;
+      gap: rem(25px);
+    }
+
     .wap-review {
       img {
         width: em(86px);
@@ -330,6 +341,13 @@
       gap: 1.6rem;
       padding-top: 2em;
 
+      @include for-small-layout {
+        justify-content: center;
+        grid-template-columns: repeat(2, 0.4fr);
+        margin: 0 auto;
+        gap: rem(15px);
+      }
+
       img {
         display: block;
         width: 100%;
@@ -345,6 +363,18 @@
     column-gap: em(64px);
     margin: 0 auto;
     margin: em(48px) auto;
+
+    @include for-small-layout {
+      justify-content: center;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      justify-self: center;
+      gap: rem(15px);
+
+      :first-child {
+        justify-self: center;
+      }
+    }
 
     .card-heading {
       color: #cf711f;
@@ -412,6 +442,11 @@
     font-family: Rubik-Regular, sans-serif;
     padding: em(48px) 35%;
     border-top: 1px solid #eee;
+
+    @include for-small-layout {
+      padding: 0;
+      justify-content: center;
+    }
 
     .footer-inner {
       h3 {
