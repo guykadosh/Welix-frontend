@@ -3,7 +3,7 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
-          @click="setEditable('txt', 'heading')"
+          @click="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
           ref="heading"
           @input="changeTxt('heading')"
@@ -14,6 +14,7 @@
           {{ info.heading.txt }}
         </h1>
         <h2
+          @click="setEditable(info.subHeading.type, 'subHeading')"
           contenteditable="true"
           class="sub-heading"
           :style="info.subHeading.style"
@@ -28,17 +29,26 @@
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
             :href="btn.link"
+            :style="btn.style"
+            @click="setEditable(btn.type, 'btns', idx)"
             contenteditable="true"
           >
             {{ btn.txt }}</a
           >
         </div>
       </div>
-      <img contenteditable="true" v-if="info.imgUrl" :src="info.imgUrl" />
+      <img
+        contenteditable="true"
+        v-if="info.img"
+        :src="info.img.url"
+        @click="setEditable(btn.type, 'img')"
+      />
     </div>
   </section>
 </template>
 <script>
+import { eventBus } from '../../services/event-bus.service'
+
 export default {
   name: 'wap-hero-edit',
   props: {
@@ -66,6 +76,11 @@ export default {
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
+      eventBus.emit('open-edit')
+      const el = { type, key, idx }
+      this.$store.commit({ type: 'setElToEdit', el })
+      const cmp = JSON.parse(JSON.stringify(this.cmp))
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
       // emit to open side-editor => txt-editor => style => cmp[key].style => cmp[key][idx].style = style
     },
   },

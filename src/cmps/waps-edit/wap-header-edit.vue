@@ -1,21 +1,12 @@
 <template>
   <header class="wap-header" :class="cmp.classes">
     <div class="wap-header__inner flex justify-between items-center">
-      <div class="logo-box" :style="info.logo.style">
-        <img
-          contenteditable="true"
-          v-if="info.logo.img"
-          class="logo"
-          :src="info.logo.img"
-          @click="select()"
-        />
-        <h2
-          v-else
-          class="logo"
-          contenteditable="true"
-          @click="select(info.logo.txt)"
-        >
-          {{ info.logo.txt }}
+      <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
+        <img contenteditable="true" class="logo" :src="info.logoImg.url" />
+      </div>
+      <div v-else :style="info.logoTxt.style">
+        <h2 class="logo" contenteditable="true">
+          {{ info.logoTxt.txt }}
         </h2>
       </div>
       <wap-nav-edit v-if="info.nav" :cmp="info.nav" />
