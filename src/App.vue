@@ -12,6 +12,7 @@ export default {
   },
   async created() {
     this.$store.dispatch({ type: 'loadWaps' })
+    this.$store.dispatch({ type: 'loadCmps' })
   },
 }
 </script>
