@@ -1,5 +1,3 @@
-import wapJSON from '../assets/JSON/wap.js'
-
 export const storageService = {
   query,
   get,
