@@ -22,7 +22,7 @@
         >
           {{ info.subHeading.txt }}
         </h2>
-        <div class="btns" contenteditable="true">
+        <div class="btns">
           <a
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
@@ -61,7 +61,8 @@ export default {
   methods: {
     changeTxt(ref) {
       this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
-      this.$store.commit({ type: 'updateCmp', newCmp: this.cmpToEdit })
+      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'updateCmp', newCmp })
     },
   },
   created() {

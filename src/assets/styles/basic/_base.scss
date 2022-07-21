@@ -12,12 +12,18 @@ body {
   background-color: $light-color1;
 }
 
-ul, p {
+ul,
+p {
   margin: 0;
 }
-a{
- text-decoration: none;
+a {
+  text-decoration: none;
 }
+
+.noHover {
+  pointer-events: none;
+}
+
 // .btn {
 //   @include btn;
 

@@ -4,7 +4,7 @@ Edit
     <editor-header />
     <editor-nav />
     <section class="editor-main flex">
-      <editor-tool-bar v-if="wap" :cmps="wap.cmps" />
+      <editor-tool-bar v-if="wap" :cmps="cmps" />
       <editor-wap :cmps="wap.cmps" v-if="wap" />
     </section>
   </section>
@@ -34,6 +34,9 @@ export default {
   computed: {
     wap() {
       return this.$store.getters.getCurrWap || wapService.getEmptyWap()
+    },
+    cmps() {
+      return this.$store.getters.getCmps
     },
   },
   created() {
