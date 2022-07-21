@@ -71,7 +71,7 @@
                     margin-inline-end: em(5px);
                     color: gray;
 
-                    
+
                 }
 
                 border-radius: em(20px);
@@ -104,12 +104,10 @@
 }
 
 .editor-main {
-    width: 100vw;
-    flex-grow: 10;
     overflow-y: hidden;
 
     .edit-tool-bar {
-        background-color: whitesmoke;
+        background-color: blue;
 
         .tool-bar-nav {
 
@@ -136,8 +134,6 @@
                     cursor: pointer;
                     font-size: em(28px);
                     color: rgb(65, 60, 60);
-
-                    
                 }
 
             }
@@ -154,7 +150,7 @@
             z-index: 1;
             background-color: whitesmoke;
             width: em(300px);
-            transition: transform .6s, box-shadow .6s;
+            transition: transform .3s, box-shadow .3s;
 
             .cmp-preview {
                 margin-block-end: em(10px);
@@ -164,8 +160,9 @@
             }
 
             &.open {
-                position: relative;
+                position: static;
                 transform: translateX(0);
+                transition: transform .3s, box-shadow .3s;
             }
 
         }

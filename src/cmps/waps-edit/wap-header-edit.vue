@@ -7,8 +7,9 @@
           v-if="info.logo.img"
           class="logo"
           :src="info.logo.img"
+          @click="select(info.logo)"
         />
-        <h2 v-else class="logo" contenteditable="true">
+        <h2 v-else class="logo" contenteditable="true" @click="select(info.logo.title)">
           {{ info.logo.title }}
         </h2>
       </div>
@@ -23,6 +24,11 @@ export default {
   name: 'wap-header-edit',
   props: {
     cmp: Object,
+  },
+  methods: {
+    select(element) {
+      console.log('element', element)
+    },
   },
   components: {
     wapNavEdit,
