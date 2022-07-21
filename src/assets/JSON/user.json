@@ -1,0 +1,17 @@
+[
+    {
+        "user": "denis",
+        "password": 123,
+        "waps": []
+    },
+    {
+        "user": "guy",
+        "password": 123,
+        "waps": []
+    },
+    {
+        "user": "yuval",
+        "password": 123,
+        "waps": []
+    }
+]
