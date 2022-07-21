@@ -3,6 +3,7 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
+          v-if="info.heading"
           @click="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
           ref="heading"
@@ -14,6 +15,7 @@
           {{ info.heading.txt }}
         </h1>
         <h2
+          v-if="info.subHeading"
           @click="setEditable(info.subHeading.type, 'subHeading')"
           contenteditable="true"
           class="sub-heading"
@@ -24,7 +26,7 @@
         >
           {{ info.subHeading.txt }}
         </h2>
-        <div class="btns">
+        <div class="btns"  v-if="info.btns">
           <a
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"

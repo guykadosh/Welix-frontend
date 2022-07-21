@@ -1,0 +1,90 @@
+.edit-tool-bar {
+  .tool-bar-nav {
+    border-right: 1px solid rgba(128, 128, 128, 0.26);
+    padding: em(10px);
+    padding-top: em(22px);
+    z-index: 20;
+    background-color: #fff;
+
+    li {
+      margin-block-end: em(28px);
+      border-radius: 50%;
+      padding: em(10px);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: rgba(170, 0, 255, 0.14);
+      }
+
+      .icon {
+        cursor: pointer;
+        font-size: em(28px);
+        color: rgb(65, 60, 60);
+      }
+    }
+  }
+
+  .tool-bar-actions {
+    border-right: 1px solid rgba(128, 128, 128, 0.26);
+    // transform: translateX(-100%);
+    // position: fixed;
+    // height: 100%;
+    // z-index: 1;
+    // background-color: #fff;
+    // width: em(300px);
+    // transition: transform 0.3s, box-shadow 0.3s;
+    width: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    // padding: 0px 10px 10px 10px;
+    transition: all 0.3s;
+    background-color: #fff;
+
+    &__header {
+      border-top: #1971c2 5px solid;
+      border-bottom: solid 1px #f1f3f5;
+      padding: rem(6px) rem(16px);
+    }
+
+    &__labels {
+      padding: em(15px) rem(24px);
+      background-color: #f7f8f8;
+      // justify-content: flex-start;
+
+      span {
+        margin-block-end: rem(8px);
+        padding: rem(5px);
+        cursor: pointer;
+
+        &:hover {
+          border-radius: rem(20px);
+          background-color: #74c1fc79;
+          color: #228be6;
+        }
+      }
+    }
+
+    &__options {
+      overflow-y: auto;
+      padding: em(15px) rem(24px);
+    }
+
+    .cmp-preview {
+      margin-block-end: em(10px);
+      border: 1px solid;
+      padding: rem(5px);
+      cursor: pointer;
+    }
+
+    &.open {
+      width: 100%;
+      width: rem(400px);
+      // position: static;
+      // transform: translateX(0);
+      // transition: transform 0.3s, box-shadow 0.3s;
+    }
+  }
+}

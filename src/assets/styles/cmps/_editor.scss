@@ -1,182 +1,117 @@
 .wap-editor {
-    // background-color: brown;
-    height: 100vh;
-    z-index: 10;
+  // background-color: brown;
+  height: 100vh;
+  z-index: 10;
 
-    .editor-header {
-        // background-color: blue;
-        padding: em(6px) em(20px);
-        border-bottom: 1px solid rgba(128, 128, 128, 0.26);
-
-        h1 {
-            margin: 0;
-        }
-
-        .page-nav {
-            width: 200px;
-        }
+  .editor-header {
+    // background-color: blue;
+    padding: em(6px) em(20px);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    background-color: #fff;
+    h1 {
+      margin: 0;
     }
 
-    .editor-nav {
-        width: 100vw;
-        box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.084);
-        border-bottom: 1px solid rgba(128, 128, 128, 0.26);
-
-        >* {
-            margin-inline-end: em(10px);
-        }
-
-        .select-container {
-            border-right: 1px solid rgba(128, 128, 128, 0.26);
-            padding: em(5px);
-
-            .ant-select-selector {
-                border: none;
-                background-color: transparent;
-                width: 200px;
-            }
-        }
-
-        .view-port-mode {
-            border-right: 1px solid rgba(128, 128, 128, 0.26);
-            padding: 0 em(10px);
-
-            .icon {
-                padding: em(3px);
-                border-radius: em(5px);
-                font-size: em(22px);
-                margin-inline-end: em(10px);
-                cursor: pointer;
-                color: gray;
-
-                &:hover {
-                    color: rgb(22, 22, 22);
-                }
-
-                &:active {
-                    background-color: rgba(20, 42, 243, 0.278);
-                }
-            }
-
-        }
-
-        .demo-site-domain {
-            flex-basis: 60%;
-            border-right: 1px solid;
-            padding-right: em(20px);
-            border-right: 1px solid rgba(128, 128, 128, 0.26);
-
-            div {
-                .icon {
-                    margin-inline-end: em(5px);
-                    color: gray;
-
-
-                }
-
-                border-radius: em(20px);
-                padding: em(4px) em(20px);
-                background-color: rgba(128, 128, 128, 0.082);
-
-                .http {
-                    color: green;
-                }
-            }
-
-        }
-
-        .actions {
-            .icon {
-                padding: em(3px);
-                border-radius: em(5px);
-                font-size: em(20px);
-                margin-inline-end: em(10px);
-                cursor: pointer;
-                color: gray;
-
-                &:hover {
-                    color: rgb(22, 22, 22);
-                }
-
-            }
-        }
+    .page-nav {
+      width: 200px;
     }
+  }
+
+  .editor-nav {
+    width: 100vw;
+    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.084);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    background-color: #fff;
+
+    > * {
+      margin-inline-end: em(10px);
+    }
+
+    .select-container {
+      border-right: 1px solid rgba(128, 128, 128, 0.26);
+      padding: em(5px);
+
+      .ant-select-selector {
+        border: none;
+        background-color: transparent;
+        width: 200px;
+      }
+    }
+
+    .view-port-mode {
+      border-right: 1px solid rgba(128, 128, 128, 0.26);
+      padding: 0 em(10px);
+
+      .icon {
+        padding: em(3px);
+        border-radius: em(5px);
+        font-size: em(22px);
+        margin-inline-end: em(10px);
+        cursor: pointer;
+        color: #868e96;
+
+        &:hover {
+          color: rgb(22, 22, 22);
+        }
+
+        &:active {
+          background-color: rgba(20, 42, 243, 0.278);
+        }
+      }
+    }
+
+    .demo-site-domain {
+      flex-basis: 60%;
+      border-right: 1px solid;
+      padding-right: em(20px);
+      border-right: 1px solid rgba(128, 128, 128, 0.26);
+
+      div {
+        .icon {
+          margin-inline-end: em(5px);
+          color: #adb5bd;
+        }
+
+        border-radius: em(20px);
+        padding: em(4px) em(20px);
+        background-color: rgba(128, 128, 128, 0.082);
+
+        .http {
+          color: #4263eb;
+        }
+      }
+    }
+
+    .actions {
+      .icon {
+        padding: em(3px);
+        border-radius: em(5px);
+        font-size: em(20px);
+        margin-inline-end: em(10px);
+        cursor: pointer;
+        color: #adb5bd;
+
+        &:hover {
+          color: rgb(22, 22, 22);
+        }
+      }
+    }
+  }
 }
 
 .editor-main {
-    overflow-y: hidden;
+  overflow-y: hidden;
+  transition: all 0.5s;
 
-    .edit-tool-bar {
-        background-color: blue;
+  .wap-preview {
+    margin: em(10px) em(30px);
+    min-height: 100px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    transition: all 0.7s;
 
-        .tool-bar-nav {
-
-            border-right: 1px solid rgba(128, 128, 128, 0.26);
-            padding: em(10px);
-            padding-top: em(22px);
-            z-index: 20;
-            background-color: whitesmoke;
-
-            li {
-                margin-block-end: em(28px);
-                border-radius: 50%;
-                padding: em(10px);
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &:hover {
-                    background-color: rgba(170, 0, 255, 0.14);
-                }
-
-                .icon {
-                    cursor: pointer;
-                    font-size: em(28px);
-                    color: rgb(65, 60, 60);
-                }
-
-            }
-
-        }
-
-        .tools {
-
-            padding: em(10px);
-            border-right: 1px solid rgba(128, 128, 128, 0.26);
-            transform: translateX(-100%);
-            position: fixed;
-            height: 100%;
-            z-index: 1;
-            background-color: whitesmoke;
-            width: em(300px);
-            transition: transform .3s, box-shadow .3s;
-
-            .cmp-preview {
-                margin-block-end: em(10px);
-                border: 1px solid;
-                padding: rem(5px);
-                cursor: pointer;
-            }
-
-            &.open {
-                position: static;
-                transform: translateX(0);
-                transition: transform .3s, box-shadow .3s;
-            }
-
-        }
+    .smooth-dnd-container {
+      height: 100%;
     }
-
-    .wap-preview {
-        margin: em(10px) em(30px);
-        min-height: 100px;
-        flex-grow: 1;
-        overflow-y: scroll;
-
-        .smooth-dnd-container {
-            height: 100%;
-        }
-
-    }
+  }
 }

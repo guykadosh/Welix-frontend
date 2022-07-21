@@ -1,434 +1,833 @@
 [
-    {
-        "id": "wc02",
-        "type": "wap-header",
-        "classes": [
-            "omnifood-header",
-            "flex",
-            "justify-between",
-            "full",
-            "main-layout"
-        ],
-        "info": {
-            "logo": {
-                "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-                "txt": "",
-                "style": {}
-            },
-            "nav": {
-                "_id": "wc05",
-                "type": "wap-nav",
-                "classes": [
-                    "omnifood-nav"
-                ],
-                "info": {
-                    "links": [
-                        {
-                            "txt": "How it works",
-                            "href": "#how"
-                        },
-                        {
-                            "txt": "Meals",
-                            "href": "#meals"
-                        },
-                        {
-                            "txt": "Reviews",
-                            "href": "#reviews"
-                        },
-                        {
-                            "txt": "Pricing",
-                            "href": "#pricing"
-                        },
-                        {
-                            "txt": "Try for free",
-                            "href": "#cta"
-                        }
-                    ]
-                },
-                "style": {}
-            }
-        },
+  {
+    "id": "wc02",
+    "type": "wap-header",
+    "classes": [
+      "omnifood-header",
+      "flex",
+      "justify-between",
+      "full",
+      "main-layout"
+    ],
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
         "style": {}
-    },
-    {
-        "id": "wc01",
-        "type": "wap-hero",
-        "classes": [
-            "omnifood-hero",
-            "full",
-            "main-layout"
-        ],
+      },
+      "nav": {
+        "_id": "wc05",
+        "type": "wap-nav",
+        "style": {},
+        "classes": ["omnifood-nav"],
         "info": {
+          "links": [
+            {
+              "type": "txt",
+              "txt": "How it works",
+              "link": "#how",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Meals",
+              "link": "#meals",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Reviews",
+              "link": "#reviews",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Pricing",
+              "link": "#pricing",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Try for free",
+              "link": "#cta",
+              "style": {}
+            }
+          ]
+        }
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc01",
+    "type": "wap-hero",
+    "classes": ["omnifood-hero", "full", "main-layout"],
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "A healthy meal delivered to your door, every single day",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
+        "style": {}
+      },
+      "btns": [
+        {
+          "type": "btn",
+          "txt": "Start Eating Well!",
+          "link": "#wc03",
+          "style": {}
+        },
+        {
+          "type": "btn",
+          "txt": "Learn more",
+          "link": "#wc03",
+          "style": {}
+        }
+      ],
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/fdHvDFX/hero.webp",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc04",
+    "classes": ["omnifood-brand"],
+    "type": "wap-gallery",
+    "info": {
+      "title": {
+        "type": "txt",
+        "txt": "as featured in",
+        "style": {}
+      },
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "https://i.ibb.co/CWHwXJw/business-insider.png",
+          "https://i.ibb.co/KW9hbd7/forbes.png",
+          "https://i.ibb.co/wCR7WHY/techcrunch.png",
+          "https://i.ibb.co/23ChyNd/the-new-york-times.png",
+          "https://i.ibb.co/fQqGqKv/usa-today.png"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc03",
+    "type": "wap-container",
+    "classes": ["omnifood-meals"],
+    "info": {
+      "cmps": [
+        {
+          "id": "wc04",
+          "classes": ["omnifood-meal"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/MC2ps95/meal-1.jpg",
+              "style": {}
+            },
             "heading": {
-                "txt": "A healthy meal delivered to your door, every single day",
-                "style": {}
+              "type": "txt",
+              "txt": "Japanese Gyozas",
+              "style": {}
             },
             "subHeading": {
-                "txt": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
-                "style": {}
+              "type": "txt",
+              "txt": "",
+              "style": {}
             },
-            "btns": [
-                {
-                    "txt": "Start Eating Well!",
-                    "link": "#wc03"
-                },
-                {
-                    "txt": "Learn more",
-                    "link": "#wc03"
-                }
-            ],
-            "imgUrl": "https://i.ibb.co/fdHvDFX/hero.webp"
+            "list": [
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "650 calories"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "NutriScore ® 74"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "4.9 rating (537)"
+              }
+            ]
+          },
+          "style": {}
         },
-        "style": {}
-    },
-    {
-        "id": "wc04",
-        "classes": [
-            "omnifood-brand"
-        ],
-        "type": "wap-gallery",
-        "info": {
-            "txt": "as featured in",
-            "imgs": [
-                "https://i.ibb.co/CWHwXJw/business-insider.png",
-                "https://i.ibb.co/KW9hbd7/forbes.png",
-                "https://i.ibb.co/wCR7WHY/techcrunch.png",
-                "https://i.ibb.co/23ChyNd/the-new-york-times.png",
-                "https://i.ibb.co/fQqGqKv/usa-today.png"
-            ]
-        },
-        "style": {}
-    },
-    {
-        "id": "wc03",
-        "type": "wap-container",
-        "classes": [
-            "omnifood-meals"
-        ],
-        "info": {
-            "cmps": [
-                {
-                    "id": "wc04",
-                    "classes": [
-                        "omnifood-meal"
-                    ],
-                    "type": "wap-card",
-                    "info": {
-                        "num": "",
-                        "imgUrl": "https://i.ibb.co/MC2ps95/meal-1.jpg",
-                        "heading": "Japanese Gyozas",
-                        "subHeading": "",
-                        "list": [
-                            {
-                                "icon": "",
-                                "txt": "650 calories"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "NutriScore ® 74"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "4.9 rating (537)"
-                            }
-                        ]
-                    },
-                    "style": {}
-                },
-                {
-                    "id": "wc04",
-                    "classes": [
-                        "omnifood-meal"
-                    ],
-                    "type": "wap-card",
-                    "info": {
-                        "num": "",
-                        "imgUrl": "https://i.ibb.co/DC457TG/meal-2.jpg",
-                        "heading": "Avocado Salad",
-                        "subHeading": "",
-                        "list": [
-                            {
-                                "icon": "",
-                                "txt": "400 calories"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "NutriScore ® 92"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "4.9 rating (441)"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "wc04",
-                    "classes": [
-                        "omnifood-meal-list"
-                    ],
-                    "type": "wap-list",
-                    "info": {
-                        "heading": "Works with any diet",
-                        "listIcon": "",
-                        "list": [
-                            "Vegeterian",
-                            "Vegan",
-                            "Pescatarian",
-                            "Gluten-free",
-                            "Lactose-free",
-                            "Keto",
-                            "Paleo",
-                            "Low FODMAP",
-                            "Kid-friendly"
-                        ],
-                        "link": ""
-                    },
-                    "style": {}
-                }
-            ]
-        }
-    },
-    {
-        "id": "wc05",
-        "classes": [
-            "omnifood-txt"
-        ],
-        "type": "wap-text",
-        "info": {
-            "heading": "Once you try it, you can't go back",
-            "subHeading": "TESTIMONIALS"
-        }
-    },
-    {
-        "id": "wc06",
-        "classes": [
-            "omnifood-reviews"
-        ],
-        "type": "wap-container",
-        "info": {
-            "cmps": [
-                {
-                    "id": "wc08",
-                    "classes": [
-                        "omnifood-review"
-                    ],
-                    "type": "wap-review",
-                    "info": {
-                        "imgUrl": "https://i.ibb.co/LZKrsN9/steve.jpg",
-                        "text": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
-                        "author": "— Dave Bryson"
-                    }
-                },
-                {
-                    "id": "wc015",
-                    "classes": [
-                        "omnifood-review"
-                    ],
-                    "type": "wap-review",
-                    "info": {
-                        "imgUrl": "https://i.ibb.co/YtHtPDY/ben.jpg",
-                        "text": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
-                        "author": "— Ben Hadley"
-                    }
-                },
-                {
-                    "id": "wc017",
-                    "classes": [
-                        "omnifood-review"
-                    ],
-                    "type": "wap-review",
-                    "info": {
-                        "imgUrl": "https://i.ibb.co/jyR6djG/dave.jpg",
-                        "text": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
-                        "author": "— Steve Miller"
-                    }
-                },
-                {
-                    "id": "wc018",
-                    "classes": [
-                        "omnifood-review"
-                    ],
-                    "type": "wap-review",
-                    "info": {
-                        "imgUrl": "https://i.ibb.co/FBVNq7c/hannah.jpg",
-                        "text": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
-                        "author": "— Hannah Smith"
-                    }
-                }
-            ]
-        },
-        "style": {
-            "backgroundColor": "#fdf2e9"
-        }
-    },
-    {
-        "id": "wc07845",
-        "classes": [
-            "omnifood-gallery"
-        ],
-        "type": "wap-gallery",
-        "info": {
-            "txt": "",
-            "imgs": [
-                "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
-                "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
-                "https://i.ibb.co/3ybXV5f/gallery-3.jpg",
-                "https://i.ibb.co/YQ36XsS/gallery-4.jpg",
-                "https://i.ibb.co/3r8ZjX1/gallery-5.jpg",
-                "https://i.ibb.co/WVjvs5f/gallery-6.jpg",
-                "https://i.ibb.co/9rbqDdp/gallery-7.jpg",
-                "https://i.ibb.co/DR2n2fF/gallery-8.jpg",
-                "https://i.ibb.co/M8sF393/gallery-9.jpg",
-                "https://i.ibb.co/SvF3V2g/gallery-10.jpg",
-                "https://i.ibb.co/gDFgz4V/gallery-11.jpg",
-                "https://i.ibb.co/JcqB8xv/gallery-12.jpg"
-            ]
-        },
-        "style": {}
-    },
-    {
-        "id": "wc05",
-        "classes": [
-            "omnifood-txt"
-        ],
-        "type": "wap-text",
-        "info": {
-            "heading": "pricing",
-            "subHeading": "Eating well without breaking the bank"
-        }
-    },
-    {
-        "id": "wc0789",
-        "type": "wap-container",
-        "classes": [
-            "omnifood-pricing"
-        ],
-        "info": {
-            "cmps": [
-                {
-                    "id": "wc695",
-                    "classes": [
-                        "omnifood-pricing-starter"
-                    ],
-                    "type": "wap-card",
-                    "info": {
-                        "heading": "starter",
-                        "subHeading": "per month. That's just 13$ per meal!",
-                        "price": 399,
-                        "list": [
-                            {
-                                "icon": "",
-                                "txt": "1 meal per day"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "Order from 11am to 9pm"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "Delivery is free"
-                            }
-                        ],
-                        "btn": {
-                            "txt": "Start Eating Well!",
-                            "link": "#wc03"
-                        }
-                    }
-                },
-                {
-                    "id": "wc6956",
-                    "classes": [
-                        "omnifood-pricing-complete"
-                    ],
-                    "type": "wap-card",
-                    "info": {
-                        "heading": "complete",
-                        "subHeading": "per month. That's just 11$ per meal!",
-                        "price": 649,
-                        "list": [
-                            {
-                                "icon": "",
-                                "txt": "2 meals per day"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "Order 24/7"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "Delivery is free"
-                            },
-                            {
-                                "icon": "",
-                                "txt": "Get access to latest recipes"
-                            }
-                        ],
-                        "btn": {
-                            "txt": "Start Eating Well!",
-                            "link": "#wc03"
-                        }
-                    }
-                }
-            ]
-        },
-        "style": {}
-    },
-    {
-        "id": "sc5878",
-        "classes": [],
-        "type": "wap-conatiner",
-        "info": {
-            "cmps": [
-                {
-                    "id": "wc019",
-                    "classes": [],
-                    "type": "wap-imgs",
-                    "imgs": [
-                        "woman.jpg"
-                    ]
-                },
-                {
-                    "id": "wc6258",
-                    "classes": [],
-                    "type": "wap-form",
-                    "info": {
-                        "heading": "Get your first meal for free!",
-                        "subHeading": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!"
-                    }
-                }
-            ]
-        }
-    },
-    {
-        "id": "sc5999",
-        "classes": [
-            "omnifood-footer"
-        ],
-        "type": "wap-footer",
-        "info": {
-            "logo": {
-                "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-                "txt": "",
-                "style": {}
+        {
+          "id": "wc04",
+          "classes": ["omnifood-meal"],
+          "style": {},
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/DC457TG/meal-2.jpg",
+              "style": {}
             },
-            "row1": {
-                "txt": "Contact us",
-                "texts": [
-                    "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
-                    "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
-                ]
+            "heading": {
+              "type": "txt",
+              "txt": "Avocado Salad",
+              "style": {}
             },
-            "row2": {
-                "txt": "Account",
-                "texts": [
-                    "Create account",
-                    "Sign in",
-                    "iOS app",
-                    "Android app"
-                ]
+            "list": [
+              {
+                "style": {},
+                "type": "txt",
+                "icon": "",
+                "txt": "400 calories"
+              },
+              {
+                "style": {},
+                "type": "txt",
+                "icon": "",
+                "txt": "NutriScore ® 92"
+              },
+              {
+                "style": {},
+                "type": "txt",
+                "icon": "",
+                "txt": "4.9 rating (441)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "wc04",
+          "classes": ["omnifood-meal-list"],
+          "type": "wap-list",
+          "info": {
+            "heading": {
+              "txt": "Works with any diet",
+              "type": "txt",
+              "style": {}
             },
-            "copyright": "copyright © 2022 by Omnifood, Inc. All rights reserved."
+            "list": {
+              "txt": [
+                "Vegeterian",
+                "Vegan",
+                "Pescatarian",
+                "Gluten-free",
+                "Lactose-free",
+                "Keto",
+                "Paleo",
+                "Low FODMAP",
+                "Kid-friendly"
+              ],
+              "type": "txt",
+              "style": {}
+            }
+          },
+          "style": {}
         }
+      ]
     }
+  },
+  {
+    "id": "wc05",
+    "classes": ["omnifood-txt"],
+    "type": "wap-text",
+    "info": {
+      "heading": {
+        "txt": "Once you try it, you can't go back",
+        "type": "txt",
+        "style": {}
+      },
+      "subHeading": {
+        "txt": "TESTIMONIALS",
+        "type": "txt",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc06",
+    "classes": ["omnifood-reviews"],
+    "type": "wap-container",
+    "info": {
+      "cmps": [
+        {
+          "id": "wc08",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/LZKrsN9/steve.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Dave Bryson",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wc015",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/YtHtPDY/ben.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Ben Hadley",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wc017",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/jyR6djG/dave.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Steve Miller",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wc018",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/FBVNq7c/hannah.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Hannah Smith",
+              "style": {}
+            }
+          }
+        }
+      ]
+    },
+    "style": {
+      "backgroundColor": "#fdf2e9"
+    }
+  },
+  {
+    "id": "wc07845",
+    "classes": ["omnifood-gallery"],
+    "type": "wap-gallery",
+    "info": {
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
+          "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
+          "https://i.ibb.co/3ybXV5f/gallery-3.jpg",
+          "https://i.ibb.co/YQ36XsS/gallery-4.jpg",
+          "https://i.ibb.co/3r8ZjX1/gallery-5.jpg",
+          "https://i.ibb.co/WVjvs5f/gallery-6.jpg",
+          "https://i.ibb.co/9rbqDdp/gallery-7.jpg",
+          "https://i.ibb.co/DR2n2fF/gallery-8.jpg",
+          "https://i.ibb.co/M8sF393/gallery-9.jpg",
+          "https://i.ibb.co/SvF3V2g/gallery-10.jpg",
+          "https://i.ibb.co/gDFgz4V/gallery-11.jpg",
+          "https://i.ibb.co/JcqB8xv/gallery-12.jpg"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc05",
+    "classes": ["omnifood-txt"],
+    "type": "wap-text",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "pricing",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "Eating well without breaking the bank",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc0789",
+    "type": "wap-container",
+    "classes": ["omnifood-pricing"],
+    "info": {
+      "cmps": [
+        {
+          "id": "wc695",
+          "classes": ["omnifood-pricing-starter"],
+          "type": "wap-card",
+          "info": {
+            "heading": {
+              "type": "txt",
+              "txt": "starter",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "per month. That's just 13$ per meal!",
+              "style": {}
+            },
+            "price": {
+              "type": "txt",
+              "txt": 399,
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "icon": "",
+                "txt": "1 meal per day",
+                "style": {}
+              },
+              {
+                "type": "txt",
+                "icon": "",
+                "txt": "Order from 11am to 9pm",
+                "style": {}
+              },
+              {
+                "type": "txt",
+                "icon": "",
+                "txt": "Delivery is free",
+                "style": {}
+              }
+            ],
+            "btn": {
+              "type": "btn",
+              "txt": "Start Eating Well!",
+              "link": "#wc03",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wc6956",
+          "classes": ["omnifood-pricing-complete"],
+          "type": "wap-card",
+          "info": {
+            "heading": {
+              "type": "txt",
+              "txt": "complete",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "per month. That's just 11$ per meal!",
+              "style": {}
+            },
+            "price": {
+              "type": "txt",
+              "txt": 649,
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "2 meals per day"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "Order 24/7"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "Delivery is free"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "Get access to latest recipes"
+              }
+            ],
+            "btn": {
+              "type": "btn",
+              "txt": "Start Eating Well!",
+              "link": "#wc03",
+              "style": {}
+            }
+          }
+        }
+      ]
+    },
+    "style": {}
+  },
+  {
+    "id": "sc5878",
+    "classes": [],
+    "type": "wap-conatiner",
+    "info": {
+      "cmps": [
+        {
+          "id": "wc019",
+          "classes": [],
+          "type": "wap-imgs",
+          "img": {
+            "type": "img",
+            "url": "woman.jpg",
+            "style": {}
+          }
+        },
+        {
+          "id": "wc6258",
+          "classes": [],
+          "type": "wap-form",
+          "info": {
+            "heading": {
+              "type": "txt",
+              "txt": "Get your first meal for free!",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!",
+              "style": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "sc5999",
+    "classes": ["omnifood-footer"],
+    "type": "wap-footer",
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
+        "style": {}
+      },
+      "row1": {
+        "type": "txt",
+        "txt": "Contact us",
+        "texts": [
+          "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
+          "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
+        ],
+        "style": {}
+      },
+      "row2": {
+        "type": "txt",
+        "txt": "Account",
+        "texts": ["Create account", "Sign in", "iOS app", "Android app"],
+        "style": {}
+      },
+      "copyright": {
+        "type": "txt",
+        "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc02",
+    "type": "wap-header",
+    "classes": [
+      "making-diff-header",
+      "flex",
+      "justify-between",
+      "full",
+      "main-layout"
+    ],
+    "info": {
+      "logoTxt": {
+        "type": "txt",
+        "txt": "Creative Studio",
+        "style": {}
+      },
+      "nav": {
+        "_id": "wph01",
+        "type": "wap-nav",
+        "classes": ["making-diff-nav"],
+        "info": {
+          "links": [
+            {
+              "type": "txt",
+              "txt": "About us",
+              "link": "#about",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Our features",
+              "link": "#features",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Digital studio",
+              "link": "#studio",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Portfolio",
+              "link": "#portfolio",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Contact us",
+              "link": "#cta",
+              "style": {}
+            }
+          ]
+        },
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc01",
+    "type": "wap-hero",
+    "classes": ["making-diff-hero", "full", "main-layout"],
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Creative Stories",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc03",
+    "type": "wap-container",
+    "classes": ["making-diff-cards", "full"],
+    "info": {
+      "cmps": [
+        {
+          "id": "wcc04",
+          "classes": ["making-diff-card about"],
+          "type": "wap-card",
+          "info": {
+            "tag": "about us",
+            "heading": {
+              "type": "txt",
+              "txt": "Time to Make a Difference",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Phasellus scelerisque arcu vestibulum tempor tempor. Donec vulputate leo et metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
+              "style": {}
+            },
+            "list": [],
+            "btn": {
+              "type": "btn",
+              "txt": "view more",
+              "link": "",
+              "style": {}
+            }
+          },
+          "style": {}
+        },
+        {
+          "id": "wcc05",
+          "classes": ["making-diff-card features"],
+          "type": "wap-card",
+          "info": {
+            "tag": "our features",
+            "num": "",
+            "img": "",
+            "heading": {
+              "type": "txt",
+              "txt": "Create YourVisual Style",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Maecenas non ipsum sollicitudin, sollicitudin ligula et, pharetra enim. Praesent rhoncus, lorem eget auctor finibus, turpis turpis feugiat orci, non porta nisi augue quis ligula. Pellentesque dictum nulla in massa ornare, porttitor",
+              "style": {}
+            },
+            "list": [],
+            "btn": {
+              "type": "txt",
+              "txt": "view more",
+              "link": "",
+              "style": {}
+            }
+          },
+          "style": {}
+        },
+        {
+          "id": "wcc06",
+          "classes": ["making-diff-card digital"],
+          "type": "wap-card",
+          "info": {
+            "tag": "digital studio",
+            "num": "",
+            "img": "",
+            "heading": {
+              "type": "txt",
+              "txt": "We develop Digital Strategies",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Our core clients are from the Europe countries metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
+              "style": {}
+            },
+            "list": [],
+            "btn": {
+              "type": "btn",
+              "txt": "view more",
+              "link": "",
+              "style": {}
+            }
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "wc07845",
+    "classes": ["making-diff-gallery"],
+    "type": "wap-gallery",
+    "info": {
+      "txt": "",
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/870ec8eaf40e581bba49b509/rtg.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/24573fb8241e546b92cc96eb/peeledbananaonbluebackground_232147931342.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/24573fb8241e546b92cc96eb/peeledbananaonbluebackground_232147931342.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/5f2dce200cf45460ad1b9023/316001P8RWRN65.jpg"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc05",
+    "classes": ["making-diff-txt"],
+    "type": "wap-text",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "portfilio",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "We are nominated to Agency of Year",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc07845",
+    "classes": ["making-diff-gallery"],
+    "type": "wap-gallery",
+    "info": {
+      "txt": "",
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/c42d596474a75ca1aeb4f52c/photo150185677743529877ed80a3dmin.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/a05e89dff8695d25b3045604/Untitled3min.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/2ebb201a959e5a6584fcd054/9.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/d4f239f0141d5a2d85976154/x.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/bc8cb7fa30995d42b5a51f1a/uigyjh.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/91944e8b55d95ba7ada7ee1c/Untitled5.jpg"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc0554",
+    "classes": ["wap-contact"],
+    "type": "wap-contact",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Contact Us",
+        "style": {}
+      },
+      "form": {
+        "type": "form",
+        "inputs": [
+          {
+            "type": "text",
+            "placeholder": "name"
+          },
+          {
+            "type": "email",
+            "placeholder": "email"
+          }
+        ],
+        "textarea": {
+          "placeholder": "Message"
+        },
+        "btn": {
+          "type": "submit",
+          "txt": "submit"
+        },
+        "style": {}
+      }
+    }
+  }
 ]

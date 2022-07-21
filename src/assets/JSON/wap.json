@@ -859,27 +859,6 @@
         }
       },
       {
-        "id": "wc07845",
-        "classes": [
-          "making-diff-gallery"
-        ],
-        "type": "wap-gallery",
-        "info": {
-          "txt": "",
-          "imgs": {
-            "type": "imgs",
-            "urls": [
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/870ec8eaf40e581bba49b509/rtg.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/24573fb8241e546b92cc96eb/peeledbananaonbluebackground_232147931342.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/24573fb8241e546b92cc96eb/peeledbananaonbluebackground_232147931342.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/5f2dce200cf45460ad1b9023/316001P8RWRN65.jpg"
-            ],
-            "style": {}
-          }
-        },
-        "style": {}
-      },
-      {
         "id": "wc05",
         "classes": [
           "making-diff-txt"
@@ -901,7 +880,7 @@
       {
         "id": "wc07845",
         "classes": [
-          "making-diff-gallery"
+          "making-diff-gallery", "full"
         ],
         "type": "wap-gallery",
         "info": {

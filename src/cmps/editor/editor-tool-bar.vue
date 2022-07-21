@@ -1,7 +1,10 @@
 <template>
   <div class="edit-tool-bar flex">
     <editorToolBarNav @setTool="openTool" />
-    <section class="tools" :class="isEditorOpen">
+    <section class="tool-bar-actions" :class="isEditorOpen">
+      <div class="tool-bar-actions__header">
+        <h2>Add Section</h2>
+      </div>
       <section v-if="tool === 'element'">
         <div>Element A</div>
         <div>Element B</div>
@@ -9,7 +12,7 @@
         <div>Element D</div>
         <div>Element E</div>
       </section>
-      <editorToolSections v-if="tool === 'section'" />
+      <editorToolSections v-if="tool === 'section'" :cmps="cmps" />
       <section v-if="tool === 'edit'">
         <el-editor />
       </section>
