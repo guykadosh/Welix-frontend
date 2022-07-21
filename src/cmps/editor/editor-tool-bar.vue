@@ -9,28 +9,7 @@
         <div>Element D</div>
         <div>Element E</div>
       </section>
-      <section class="flex" v-if="tool === 'section'">
-        <div class="types">
-          <div>Section A</div>
-          <div>Section B</div>
-          <div>Section C</div>
-          <div>Section D</div>
-          <div>Section F</div>
-        </div>
-
-        <Container
-          :get-child-payload="getChildPayload"
-          group-name="1"
-          @drop="onDrop($event)"
-          behaviour="copy"
-        >
-          <Draggable v-for="item in items" :key="item.id">
-            <div class="cmp-preview" @click="addWapCmp(item.id)">
-              <span>{{ item.type }}</span>
-            </div>
-          </Draggable>
-        </Container>
-      </section>
+      <editorToolSections v-if="tool === 'section'" />
       <section v-if="tool === 'edit'">
         <el-editor />
       </section>
@@ -44,6 +23,7 @@ import { applyDrag } from '@/services/dnd.utils/helpers.js'
 import { eventBus } from '../../services/event-bus.service'
 import editorToolBarNav from './editor-tool-bar-nav.vue'
 import elEditor from './el-editor.vue'
+import editorToolSections from './editor-tool-sections.vue'
 
 export default {
   name: 'edit-tool-bar',
@@ -103,6 +83,7 @@ export default {
     Draggable,
     editorToolBarNav,
     elEditor,
+    editorToolSections,
   },
 }
 </script>
