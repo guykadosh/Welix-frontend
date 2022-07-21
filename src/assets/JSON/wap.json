@@ -616,28 +616,36 @@
         ],
         "type": "wap-footer",
         "info": {
-          "img": {
+          "logoImg": {
             "type": "img",
             "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
             "style": {}
           },
           "row1": {
+            "type": "txt",
             "txt": "Contact us",
             "texts": [
               "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
               "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
-            ]
+            ],
+            "style": {}
           },
           "row2": {
+            "type": "txt",
             "txt": "Account",
             "texts": [
               "Create account",
               "Sign in",
               "iOS app",
               "Android app"
-            ]
+            ],
+            "style": {}
           },
-          "copyright": "copyright © 2022 by Omnifood, Inc. All rights reserved."
+          "copyright": {
+            "type": "txt",
+            "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
+            "style": {}
+          }
         }
       }
     ],
@@ -646,7 +654,11 @@
   {
     "_id": "5e28393890dd7201a06d4e55",
     "name": "Making a difference for food",
-    "imgUrl": "@/assets/img/ominfood.png",
+    "img": {
+      "type": "img",
+      "url": "@/assets/img/ominfood.png",
+      "style": {}
+    },
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995584",
       "fullname": "Lukas Rudrof",
@@ -680,8 +692,8 @@
           "main-layout"
         ],
         "info": {
-          "logo": {
-            "img": "",
+          "logoTxt": {
+            "type": "txt",
             "txt": "Creative Studio",
             "style": {}
           },
@@ -694,24 +706,34 @@
             "info": {
               "links": [
                 {
+                  "type": "txt",
                   "txt": "About us",
-                  "href": "#about"
+                  "link": "#about",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Our features",
-                  "href": "#features"
+                  "link": "#features",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Digital studio",
-                  "href": "#studio"
+                  "link": "#studio",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Portfolio",
-                  "href": "#portfolio"
+                  "link": "#portfolio",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Contact us",
-                  "href": "#cta"
+                  "link": "#cta",
+                  "style": {}
                 }
               ]
             },
@@ -730,15 +752,10 @@
         ],
         "info": {
           "heading": {
+            "type": "txt",
             "txt": "Creative Stories",
             "style": {}
-          },
-          "subHeading": {
-            "txt": "",
-            "style": {}
-          },
-          "btns": [],
-          "imgUrl": ""
+          }
         },
         "style": {}
       },
