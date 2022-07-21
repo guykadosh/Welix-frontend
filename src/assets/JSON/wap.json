@@ -36,42 +36,52 @@
           "main-layout"
         ],
         "info": {
-          "logo": {
-            "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-            "txt": "",
+          "logo-img": {
+            "type": "img",
+            "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
             "style": {}
           },
           "nav": {
             "_id": "wc05",
             "type": "wap-nav",
+            "style": {},
             "classes": [
               "omnifood-nav"
             ],
             "info": {
               "links": [
                 {
+                  "type": "txt",
                   "txt": "How it works",
-                  "href": "#how"
+                  "link": "#how",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Meals",
-                  "href": "#meals"
+                  "link": "#meals",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Reviews",
-                  "href": "#reviews"
+                  "link": "#reviews",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Pricing",
-                  "href": "#pricing"
+                  "link": "#pricing",
+                  "style": {}
                 },
                 {
+                  "type": "txt",
                   "txt": "Try for free",
-                  "href": "#cta"
+                  "link": "#cta",
+                  "style": {}
                 }
               ]
-            },
-            "style": {}
+            }
           }
         },
         "style": {}
@@ -109,7 +119,11 @@
               "style": {}
             }
           ],
-          "imgUrl": {"type": "img", "url": "https://i.ibb.co/fdHvDFX/hero.webp"}
+          "img": {
+            "type": "img",
+            "url": "https://i.ibb.co/fdHvDFX/hero.webp",
+            "style": {}
+          }
         },
         "style": {}
       },
@@ -120,14 +134,22 @@
         ],
         "type": "wap-gallery",
         "info": {
-          "txt": "as featured in",
-          "imgs": [
-            "https://i.ibb.co/CWHwXJw/business-insider.png",
-            "https://i.ibb.co/KW9hbd7/forbes.png",
-            "https://i.ibb.co/wCR7WHY/techcrunch.png",
-            "https://i.ibb.co/23ChyNd/the-new-york-times.png",
-            "https://i.ibb.co/fQqGqKv/usa-today.png"
-          ]
+          "title": {
+            "type": "txt",
+            "txt": "as featured in",
+            "style": {}
+          },
+          "imgs": {
+            "type": "imgs",
+            "urls": [
+              "https://i.ibb.co/CWHwXJw/business-insider.png",
+              "https://i.ibb.co/KW9hbd7/forbes.png",
+              "https://i.ibb.co/wCR7WHY/techcrunch.png",
+              "https://i.ibb.co/23ChyNd/the-new-york-times.png",
+              "https://i.ibb.co/fQqGqKv/usa-today.png"
+            ],
+            "style": {}
+          }
         },
         "style": {}
       },
@@ -146,20 +168,37 @@
               ],
               "type": "wap-card",
               "info": {
-                "num": "",
-                "imgUrl": "https://i.ibb.co/MC2ps95/meal-1.jpg",
-                "heading": "Japanese Gyozas",
-                "subHeading": "",
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/MC2ps95/meal-1.jpg",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Japanese Gyozas",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "",
+                  "style": {}
+                },
                 "list": [
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "650 calories"
                   },
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "NutriScore ® 74"
                   },
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "4.9 rating (537)"
                   }
@@ -172,22 +211,35 @@
               "classes": [
                 "omnifood-meal"
               ],
+              "style": {},
               "type": "wap-card",
               "info": {
-                "num": "",
-                "imgUrl": "https://i.ibb.co/DC457TG/meal-2.jpg",
-                "heading": "Avocado Salad",
-                "subHeading": "",
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/DC457TG/meal-2.jpg",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Avocado Salad",
+                  "style": {}
+                },
                 "list": [
                   {
+                    "style": {},
+                    "type": "txt",
                     "icon": "",
                     "txt": "400 calories"
                   },
                   {
+                    "style": {},
+                    "type": "txt",
                     "icon": "",
                     "txt": "NutriScore ® 92"
                   },
                   {
+                    "style": {},
+                    "type": "txt",
                     "icon": "",
                     "txt": "4.9 rating (441)"
                   }
@@ -201,20 +253,26 @@
               ],
               "type": "wap-list",
               "info": {
-                "heading": "Works with any diet",
-                "listIcon": "",
-                "list": [
-                  "Vegeterian",
-                  "Vegan",
-                  "Pescatarian",
-                  "Gluten-free",
-                  "Lactose-free",
-                  "Keto",
-                  "Paleo",
-                  "Low FODMAP",
-                  "Kid-friendly"
-                ],
-                "link": ""
+                "heading": {
+                  "txt": "Works with any diet",
+                  "type": "txt",
+                  "style": {}
+                },
+                "list": {
+                  "txt": [
+                    "Vegeterian",
+                    "Vegan",
+                    "Pescatarian",
+                    "Gluten-free",
+                    "Lactose-free",
+                    "Keto",
+                    "Paleo",
+                    "Low FODMAP",
+                    "Kid-friendly"
+                  ],
+                  "type": "txt",
+                  "style": {}
+                }
               },
               "style": {}
             }
@@ -228,8 +286,16 @@
         ],
         "type": "wap-text",
         "info": {
-          "heading": "Once you try it, you can't go back",
-          "subHeading": "TESTIMONIALS"
+          "heading": {
+            "txt": "Once you try it, you can't go back",
+            "type": "txt",
+            "style": {}
+          },
+          "subHeading": {
+            "txt": "TESTIMONIALS",
+            "type": "txt",
+            "style": {}
+          }
         }
       },
       {
@@ -247,9 +313,21 @@
               ],
               "type": "wap-review",
               "info": {
-                "imgUrl": "https://i.ibb.co/LZKrsN9/steve.jpg",
-                "text": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
-                "author": "— Dave Bryson"
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/LZKrsN9/steve.jpg",
+                  "style": {}
+                },
+                "text": {
+                  "type": "txt",
+                  "txt": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
+                  "style": {}
+                },
+                "author": {
+                  "type": "txt",
+                  "txt": "— Dave Bryson",
+                  "style": {}
+                }
               }
             },
             {
