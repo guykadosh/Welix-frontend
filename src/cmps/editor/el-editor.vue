@@ -4,20 +4,29 @@
 </template>
 <script>
 import elEditorTxt from './costum-editors/el-editor-txt.vue'
+import elEditorBtn from './costum-editors/el-editor-btn.vue'
 
 export default {
   components: {
     elEditorTxt,
+    elEditorBtn,
   },
   methods: {
-    updateCmp(style, link) {
+    updateCmp(style, link, url) {
+      const { key, idx } = this.el
+
       const cmp = JSON.parse(JSON.stringify(this.cmp))
+
       if (style) {
-        if (this.el.idx === null) {
-          cmp.info[this.el.key].style = style
+        if (idx === null) {
+          cmp.info[key].style = style
         } else {
-          cmp.info[this.el.key][idx].style = style
+          cmp.info[key][idx].style = style
         }
+      }
+
+      if (url) {
+        cmp.info[key].url = url
       }
 
       if (link) {
@@ -25,6 +34,7 @@ export default {
       }
 
       const newCmp = JSON.parse(JSON.stringify(cmp))
+
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
   },

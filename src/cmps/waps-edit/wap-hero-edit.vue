@@ -9,11 +9,12 @@
           @input="changeTxt('heading')"
           @mousedown.stop
           class="heading"
-          :style="headingStyle"
+          :style="info.heading.style"
         >
           {{ info.heading.txt }}
         </h1>
         <h2
+          @click="setEditable(info.subHeading.type, 'subHeading')"
           contenteditable="true"
           class="sub-heading"
           :style="info.subHeading.style"
@@ -28,13 +29,20 @@
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
             :href="btn.link"
+            :style="btn.style"
+            @click="setEditable(btn.type, 'btns', idx)"
             contenteditable="true"
           >
             {{ btn.txt }}</a
           >
         </div>
       </div>
-      <img contenteditable="true" v-if="info.imgUrl" :src="info.imgUrl.url" />
+      <img
+        contenteditable="true"
+        v-if="info.img"
+        :src="info.img.url"
+        @click="setEditable(btn.type, 'img')"
+      />
     </div>
   </section>
 </template>
@@ -59,9 +67,6 @@ export default {
   computed: {
     info() {
       return this.cmp.info
-    },
-    headingStyle() {
-      return this.cmp.info.heading.style
     },
   },
   methods: {
