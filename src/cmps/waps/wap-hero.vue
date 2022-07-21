@@ -5,10 +5,10 @@
         <h1 class="heading" :style="info.heading.style">
           {{ info.heading.txt }}
         </h1>
-        <h2 class="sub-heading" :style="info.subHeading.style">
+        <h2 class="sub-heading" v-if="info.subHeading" :style="info.subHeading.style">
           {{ info.subHeading.txt }}
         </h2>
-        <div class="btns">
+        <div class="btns" v-if="info.btns">
           <a
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
