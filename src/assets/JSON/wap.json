@@ -200,20 +200,20 @@
         }
       },
       {
+        "id": "wc05",
+        "classes": ["omnifood-txt"],
+        "type": "wap-text",
+        "info": {
+          "heading": "Once you try it, you can't go back",
+          "subHeading": "TESTIMONIALS"
+        }
+      },
+      {
         "id": "wc06",
         "classes": ["omnifood-reviews"],
         "type": "wap-container",
         "info": {
           "cmps": [
-            {
-              "id": "wc05",
-              "classes": ["omnifood-txt"],
-              "type": "wap-text",
-              "info": {
-                "heading": "Once you try it, you can't go back",
-                "subHeading": "TESTIMONIALS"
-              }
-            },
             {
               "id": "wc08",
               "classes": ["omnifood-review"],
