@@ -337,9 +337,21 @@
               ],
               "type": "wap-review",
               "info": {
-                "imgUrl": "https://i.ibb.co/YtHtPDY/ben.jpg",
-                "text": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
-                "author": "— Ben Hadley"
+                "img": {
+                  "type": "img",
+                  "url": "https: //i.ibb.co/YtHtPDY/ben.jpg",
+                  "style": {}
+                },
+                "text": {
+                  "type": "txt",
+                  "txt": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+                  "style": {}
+                },
+                "author": {
+                  "type": "txt",
+                  "txt": "— Ben Hadley",
+                  "style": {}
+                }
               }
             },
             {
@@ -349,9 +361,21 @@
               ],
               "type": "wap-review",
               "info": {
-                "imgUrl": "https://i.ibb.co/jyR6djG/dave.jpg",
-                "text": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
-                "author": "— Steve Miller"
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/jyR6djG/dave.jpg",
+                  "style": {}
+                },
+                "text": {
+                  "type": "txt",
+                  "txt": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+                  "style": {}
+                },
+                "author": {
+                  "type": "txt",
+                  "txt": "— Steve Miller",
+                  "style": {}
+                }
               }
             },
             {
@@ -361,9 +385,21 @@
               ],
               "type": "wap-review",
               "info": {
-                "imgUrl": "https://i.ibb.co/FBVNq7c/hannah.jpg",
-                "text": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
-                "author": "— Hannah Smith"
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/FBVNq7c/hannah.jpg",
+                  "style": {}
+                },
+                "text": {
+                  "type": "txt",
+                  "txt": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+                  "style": {}
+                },
+                "author": {
+                  "type": "txt",
+                  "txt": "— Hannah Smith",
+                  "style": {}
+                }
               }
             }
           ]
@@ -379,21 +415,24 @@
         ],
         "type": "wap-gallery",
         "info": {
-          "txt": "",
-          "imgs": [
-            "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
-            "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
-            "https://i.ibb.co/3ybXV5f/gallery-3.jpg",
-            "https://i.ibb.co/YQ36XsS/gallery-4.jpg",
-            "https://i.ibb.co/3r8ZjX1/gallery-5.jpg",
-            "https://i.ibb.co/WVjvs5f/gallery-6.jpg",
-            "https://i.ibb.co/9rbqDdp/gallery-7.jpg",
-            "https://i.ibb.co/DR2n2fF/gallery-8.jpg",
-            "https://i.ibb.co/M8sF393/gallery-9.jpg",
-            "https://i.ibb.co/SvF3V2g/gallery-10.jpg",
-            "https://i.ibb.co/gDFgz4V/gallery-11.jpg",
-            "https://i.ibb.co/JcqB8xv/gallery-12.jpg"
-          ]
+          "imgs": {
+            "type": "imgs",
+            "urls": [
+              "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
+              "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
+              "https://i.ibb.co/3ybXV5f/gallery-3.jpg",
+              "https://i.ibb.co/YQ36XsS/gallery-4.jpg",
+              "https://i.ibb.co/3r8ZjX1/gallery-5.jpg",
+              "https://i.ibb.co/WVjvs5f/gallery-6.jpg",
+              "https://i.ibb.co/9rbqDdp/gallery-7.jpg",
+              "https://i.ibb.co/DR2n2fF/gallery-8.jpg",
+              "https://i.ibb.co/M8sF393/gallery-9.jpg",
+              "https://i.ibb.co/SvF3V2g/gallery-10.jpg",
+              "https://i.ibb.co/gDFgz4V/gallery-11.jpg",
+              "https://i.ibb.co/JcqB8xv/gallery-12.jpg"
+            ],
+            "style": {}
+          }
         },
         "style": {}
       },
@@ -404,8 +443,16 @@
         ],
         "type": "wap-text",
         "info": {
-          "heading": "pricing",
-          "subHeading": "Eating well without breaking the bank"
+          "heading": {
+            "type": "txt",
+            "txt": "pricing",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "Eating well without breaking the bank",
+            "style": {}
+          }
         }
       },
       {
@@ -423,26 +470,46 @@
               ],
               "type": "wap-card",
               "info": {
-                "heading": "starter",
-                "subHeading": "per month. That's just 13$ per meal!",
-                "price": 399,
+                "heading": {
+                  "type": "txt",
+                  "txt": "starter",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "per month. That's just 13$ per meal!",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 399,
+                  "style": {}
+                },
                 "list": [
                   {
+                    "type": "txt",
                     "icon": "",
-                    "txt": "1 meal per day"
+                    "txt": "1 meal per day",
+                    "style": {}
                   },
                   {
+                    "type": "txt",
                     "icon": "",
-                    "txt": "Order from 11am to 9pm"
+                    "txt": "Order from 11am to 9pm",
+                    "style": {}
                   },
                   {
+                    "type": "txt",
                     "icon": "",
-                    "txt": "Delivery is free"
+                    "txt": "Delivery is free",
+                    "style": {}
                   }
                 ],
                 "btn": {
-                  "label": "Start Eating Well!",
-                  "link": "#wc03"
+                  "type": "btn",
+                  "txt": "Start Eating Well!",
+                  "link": "#wc03",
+                  "style": {}
                 }
               }
             },
@@ -453,30 +520,52 @@
               ],
               "type": "wap-card",
               "info": {
-                "heading": "complete",
-                "subHeading": "per month. That's just 11$ per meal!",
-                "price": 649,
+                "heading": {
+                  "type": "txt",
+                  "txt": "complete",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "per month. That's just 11$ per meal!",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 649,
+                  "style": {}
+                },
                 "list": [
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "2 meals per day"
                   },
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "Order 24/7"
                   },
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "Delivery is free"
                   },
                   {
+                    "type": "txt",
+                    "style": {},
                     "icon": "",
                     "txt": "Get access to latest recipes"
                   }
                 ],
                 "btn": {
-                  "label": "Start Eating Well!",
-                  "link": "#wc03"
+                  "type": "btn",
+                  "txt": "Start Eating Well!",
+                  "link": "#wc03",
+                  "style": {}
                 }
               }
             }
@@ -494,17 +583,27 @@
               "id": "wc019",
               "classes": [],
               "type": "wap-imgs",
-              "imgs": [
-                "woman.jpg"
-              ]
+              "img": {
+                "type": "img",
+                "url": "woman.jpg",
+                "style": {}
+              }
             },
             {
               "id": "wc6258",
               "classes": [],
               "type": "wap-form",
               "info": {
-                "heading": "Get your first meal for free!",
-                "subHeading": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!"
+                "heading": {
+                  "type": "txt",
+                  "txt": "Get your first meal for free!",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!",
+                  "style": {}
+                }
               }
             }
           ]
@@ -517,9 +616,9 @@
         ],
         "type": "wap-footer",
         "info": {
-          "logo": {
-            "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-            "txt": "",
+          "img": {
+            "type": "img",
+            "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
             "style": {}
           },
           "row1": {
