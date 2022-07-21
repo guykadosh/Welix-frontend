@@ -5,7 +5,6 @@
       group-name="2"
       @drop="onDrop($event)"
       :tag="{ value: 'div', props: { class: cmp.classes } }"
-      :orientation="'horizontal'"
       :auto-scroll-enabled="true"
     >
       <Draggable v-for="item in items" :key="item.id">
@@ -18,7 +17,7 @@
 <script>
 import { Container, Draggable } from 'vue3-smooth-dnd'
 import { applyDrag } from '@/services/dnd.utils/helpers.js'
-import wapCarEdit from './wap-card-edit.vue'
+import wapCardEdit from './wap-card-edit.vue'
 import wapListEdit from './wap-list-edit.vue'
 import wapReviewEdit from './wap-review-edit.vue'
 import wapTextEdit from './wap-text-edit.vue'
@@ -31,7 +30,7 @@ export default {
   components: {
     Container,
     Draggable,
-    wapCarEdit,
+    wapCardEdit,
     wapListEdit,
     wapReviewEdit,
     wapTextEdit,

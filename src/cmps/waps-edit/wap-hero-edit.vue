@@ -5,6 +5,7 @@
         <h1
           contenteditable="true"
           ref="heading"
+          @input="changeHeading"
           class="heading"
           :style="info.heading.style"
         >
@@ -38,17 +39,8 @@ export default {
   props: {
     cmp: Object,
   },
-  mounted() {
-    console.log(this.$refs.heading.innerText)
-  },
-  watch: {
-    '$refs.heading': {
-      handler(val) {
-        console.log(val)
-      },
-      deep: true,
-    },
-  },
+  mounted() {},
+  watch: {},
   data() {
     return {
       newInfo: {
@@ -59,6 +51,11 @@ export default {
   computed: {
     info() {
       return this.cmp.info
+    },
+  },
+  methods: {
+    changeHeading() {
+      console.log(this.$refs.heading.innerText)
     },
   },
 }
