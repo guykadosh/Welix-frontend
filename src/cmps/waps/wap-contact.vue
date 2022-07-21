@@ -1,10 +1,14 @@
 <template>
     <section :class="cmp.classes">
-        <h2 class="heading">{{ cmp.info.heading }}</h2>
-        <input class="contact-input" v-for="input in form.inputs" :type="input.type"
-            :placeholder="input.placeholder">
-        <textarea class="contact-textarea" :placeholder="form.textarea.placeholder" />
-        <button class="contact-submit" @click.prevent="">{{form.btn.txt}}</button>
+        <h2 class="heading">{{ cmp.info.heading.txt }}</h2>
+        <section class="form-container">
+            <form @submit.prevent class="contact-form">
+                <input class="contact-input" v-for="input in form.inputs" :type="input.type"
+                    :placeholder="input.placeholder">
+                <textarea class="contact-textarea" :placeholder="form.textarea.placeholder" />
+                <button class="contact-submit" @click.prevent="">{{ form.btn.txt }}</button>
+            </form>
+        </section>
     </section>
 </template>
 
