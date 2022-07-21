@@ -1,14 +1,22 @@
 <template>
-  <section class="flex">
+  <section class="flex sections">
     <div class="tool-bar-actions__labels flex flex-column">
-      <div class="tool-bar-actions__label" v-for="label in labels">
-        <span class="tool-bar-actions__label--text">
+      <div
+        class="tool-bar-actions__label"
+        v-for="label in labels"
+        :key="label.id"
+      >
+        <span
+          class="tool-bar-actions__label--text"
+          :class="{ selected: label.selected }"
+        >
           {{ label.title }}
         </span>
       </div>
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
+      <p class="tool-bar-actions__options--title">Headers</p>
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"
@@ -16,7 +24,7 @@
       >
         <Draggable v-for="cmp in cmps" :key="cmp.id">
           <div class="cmp-preview" @click="addWapCmp(cmp.id)">
-            <span>{{ cmp.type }}</span>
+            <img src="@/assets/img/omnifood-header.png" alt="" />
           </div>
         </Draggable>
       </Container>
@@ -33,13 +41,28 @@ export default {
   data() {
     return {
       labels: [
-        { title: 'Headers', type: 'wap-header' },
-        { title: 'Heros', type: 'wap-hero' },
-        { title: 'Contact', type: 'wap-contact' },
-        { title: 'Full Sections', type: 'wap-contact' },
-        { title: 'Testimonials', type: 'wap-review' },
-        { title: 'About', type: 'wap-footer' },
-        { title: 'Map', type: 'wap-map' },
+        { id: 'label01', title: 'Headers', type: 'wap-header', selected: true },
+        { id: 'label02', title: 'Heros', type: 'wap-hero', selected: false },
+        {
+          id: 'label03',
+          title: 'Contact',
+          type: 'wap-contact',
+          selected: false,
+        },
+        {
+          id: 'label04',
+          title: 'Full Sections',
+          type: 'wap-contact',
+          selected: false,
+        },
+        {
+          id: 'label05',
+          title: 'Testimonials',
+          type: 'wap-review',
+          selected: false,
+        },
+        { id: 'label06', title: 'About', type: 'wap-footer', selected: false },
+        { id: 'label07', title: 'Map', type: 'wap-map', selected: false },
       ],
     }
   },

@@ -1,6 +1,6 @@
 .edit-tool-bar {
   .tool-bar-nav {
-    border-right: 1px solid rgba(128, 128, 128, 0.26);
+    border-right: 1px solid $light-color3;
     padding: em(10px);
     padding-top: em(22px);
     z-index: 20;
@@ -16,7 +16,7 @@
       align-items: center;
 
       &:hover {
-        background-color: rgba(170, 0, 255, 0.14);
+        background-color: #74c1fc79;
       }
 
       .icon {
@@ -29,6 +29,7 @@
 
   .tool-bar-actions {
     border-bottom: solid 2px #f1f3f5;
+    border-right: 1px solid $light-color3;
 
     width: 0;
     overflow-y: hidden;
@@ -46,18 +47,16 @@
     }
 
     &__labels {
-      padding: em(15px) rem(24px);
+      padding: em(15px) rem(18px);
       background-color: #f7f8f8;
+      width: 40%;
       // justify-content: flex-start;
-
-      span {
-      }
     }
 
     &__label {
       margin-block-end: rem(12px);
       &--text {
-        padding: rem(5px) rem(10px);
+        padding: rem(5px) rem(8px);
         cursor: pointer;
 
         &:hover {
@@ -65,26 +64,45 @@
           background-color: #74c1fc79;
           color: #228be6;
         }
+
+        &.selected {
+          border-radius: rem(20px);
+          background-color: #74c1fc79;
+          color: #228be6;
+        }
       }
     }
+
     &__options {
       overflow-y: auto;
-      padding: em(15px) rem(24px);
+      padding: em(15px) rem(18px);
+
+      &--title {
+        padding: em(15px) 0;
+        border-bottom: 1px solid $light-color3;
+        margin-block-end: rem(14px);
+        font-weight: 600;
+      }
     }
 
     .cmp-preview {
-      margin-block-end: em(10px);
-      border: 1px solid;
-      padding: rem(5px);
+      margin-block-end: em(14px);
+      transition: transform 0.3s;
       cursor: pointer;
+
+      img {
+        width: 100%;
+        border-radius: 3px;
+      }
+
+      &:hover {
+        transform: translateY(rem(-3px));
+      }
     }
 
     &.open {
       width: 100%;
-      width: rem(400px);
-      // position: static;
-      // transform: translateX(0);
-      // transition: transform 0.3s, box-shadow 0.3s;
+      width: rem(500px);
     }
   }
 }

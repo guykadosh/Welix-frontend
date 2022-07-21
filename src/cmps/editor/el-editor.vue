@@ -1,5 +1,4 @@
 <template lang="">
-  <pre>{{ type }}</pre>
   <component :is="type" @edited="updateCmp"></component>
 </template>
 <script>
