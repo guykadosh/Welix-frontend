@@ -669,6 +669,7 @@
           "imgs": [
             "//images01.nicepage.com/c461c07a441a5d220e8feb1a/c42d596474a75ca1aeb4f52c/photo150185677743529877ed80a3dmin.jpg",
             "//images01.nicepage.com/c461c07a441a5d220e8feb1a/a05e89dff8695d25b3045604/Untitled3min.jpg",
+            "//images01.nicepage.com/c461c07a441a5d220e8feb1a/2ebb201a959e5a6584fcd054/9.jpg",
             "//images01.nicepage.com/c461c07a441a5d220e8feb1a/d4f239f0141d5a2d85976154/x.jpg",
             "//images01.nicepage.com/c461c07a441a5d220e8feb1a/bc8cb7fa30995d42b5a51f1a/uigyjh.jpg",
             "//images01.nicepage.com/c461c07a441a5d220e8feb1a/91944e8b55d95ba7ada7ee1c/Untitled5.jpg"
@@ -677,209 +678,32 @@
         "style": {}
       },
       {
-        "id": "wc06",
+        "id": "wc0554",
         "classes": [
-          "omnifood-reviews"
+          "wap-contact"
         ],
-        "type": "wap-container",
+        "type": "wap-contact",
         "info": {
-          "cmps": [
-            {
-              "id": "wc08",
-              "classes": [
-                "omnifood-review"
-              ],
-              "type": "wap-review",
-              "info": {
-                "imgUrl": "https://i.ibb.co/LZKrsN9/steve.jpg",
-                "text": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
-                "author": "— Dave Bryson"
+          "heading": "Contact Us",
+          "form": {
+            "inputs": [
+              {
+                "type": "text",
+                "placeholder": "name"
+              },
+              {
+                "type": "email",
+                "placeholder": "email"
               }
+            ],
+            "textarea": {
+              "placeholder": "Message"
             },
-            {
-              "id": "wc015",
-              "classes": [
-                "omnifood-review"
-              ],
-              "type": "wap-review",
-              "info": {
-                "imgUrl": "https://i.ibb.co/YtHtPDY/ben.jpg",
-                "text": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
-                "author": "— Ben Hadley"
-              }
-            },
-            {
-              "id": "wc017",
-              "classes": [
-                "omnifood-review"
-              ],
-              "type": "wap-review",
-              "info": {
-                "imgUrl": "https://i.ibb.co/jyR6djG/dave.jpg",
-                "text": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
-                "author": "— Steve Miller"
-              }
-            },
-            {
-              "id": "wc018",
-              "classes": [
-                "omnifood-review"
-              ],
-              "type": "wap-review",
-              "info": {
-                "imgUrl": "https://i.ibb.co/FBVNq7c/hannah.jpg",
-                "text": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
-                "author": "— Hannah Smith"
-              }
+            "btn": {
+              "type": "submit",
+              "txt": "submit"
             }
-          ]
-        },
-        "style": {
-          "backgroundColor": "#fdf2e9"
-        }
-      },
-      {
-        "id": "wc05",
-        "classes": [
-          "omnifood-txt"
-        ],
-        "type": "wap-text",
-        "info": {
-          "heading": "pricing",
-          "subHeading": "Eating well without breaking the bank"
-        }
-      },
-      {
-        "id": "wc0789",
-        "type": "wap-container",
-        "classes": [
-          "omnifood-pricing"
-        ],
-        "info": {
-          "cmps": [
-            {
-              "id": "wc695",
-              "classes": [
-                "omnifood-pricing-starter"
-              ],
-              "type": "wap-card",
-              "info": {
-                "heading": "starter",
-                "subHeading": "per month. That's just 13$ per meal!",
-                "price": 399,
-                "list": [
-                  {
-                    "icon": "",
-                    "txt": "1 meal per day"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "Order from 11am to 9pm"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "Delivery is free"
-                  }
-                ],
-                "btn": {
-                  "label": "Start Eating Well!",
-                  "link": "#wc03"
-                }
-              }
-            },
-            {
-              "id": "wc6956",
-              "classes": [
-                "omnifood-pricing-complete"
-              ],
-              "type": "wap-card",
-              "info": {
-                "heading": "complete",
-                "subHeading": "per month. That's just 11$ per meal!",
-                "price": 649,
-                "list": [
-                  {
-                    "icon": "",
-                    "txt": "2 meals per day"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "Order 24/7"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "Delivery is free"
-                  },
-                  {
-                    "icon": "",
-                    "txt": "Get access to latest recipes"
-                  }
-                ],
-                "btn": {
-                  "label": "Start Eating Well!",
-                  "link": "#wc03"
-                }
-              }
-            }
-          ]
-        },
-        "style": {}
-      },
-      {
-        "id": "sc5878",
-        "classes": [],
-        "type": "wap-conatiner",
-        "info": {
-          "cmps": [
-            {
-              "id": "wc019",
-              "classes": [],
-              "type": "wap-imgs",
-              "imgs": [
-                "woman.jpg"
-              ]
-            },
-            {
-              "id": "wc6258",
-              "classes": [],
-              "type": "wap-form",
-              "info": {
-                "heading": "Get your first meal for free!",
-                "subHeading": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "sc5999",
-        "classes": [
-          "omnifood-footer"
-        ],
-        "type": "wap-footer",
-        "info": {
-          "logo": {
-            "img": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
-            "txt": "",
-            "style": {}
-          },
-          "row1": {
-            "txt": "Contact us",
-            "texts": [
-              "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
-              "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
-            ]
-          },
-          "row2": {
-            "txt": "Account",
-            "texts": [
-              "Create account",
-              "Sign in",
-              "iOS app",
-              "Android app"
-            ]
-          },
-          "copyright": "copyright © 2022 by Omnifood, Inc. All rights reserved."
+          }
         }
       }
     ],
