@@ -2,6 +2,7 @@
   {
     "id": "wc02",
     "type": "wap-header",
+    "thumbmail": "@/assets/img/omnifood-header.png",
     "classes": [
       "omnifood-header",
       "flex",
@@ -60,6 +61,7 @@
   },
   {
     "id": "wc01",
+    "thumbmail": "@/assets/img/omnifood-hero.png",
     "type": "wap-hero",
     "classes": ["omnifood-hero", "full", "main-layout"],
     "info": {

@@ -1,9 +1,11 @@
 <template>
   <section class="flex">
     <div class="tool-bar-actions__labels flex flex-column">
-      <span class="tool-bar-actions__label" v-for="label in labels">
-        {{ label.title }}
-      </span>
+      <div class="tool-bar-actions__label" v-for="label in labels">
+        <span class="tool-bar-actions__label--text">
+          {{ label.title }}
+        </span>
+      </div>
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
