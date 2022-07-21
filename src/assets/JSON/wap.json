@@ -903,7 +903,7 @@
       {
         "id": "wc0554",
         "classes": [
-          "wap-contact"
+          "making-diff-contact", "full"
         ],
         "type": "wap-contact",
         "info": {
