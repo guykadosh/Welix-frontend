@@ -7,7 +7,8 @@
           v-if="info.logo.img"
           class="logo"
           :src="info.logo.img"
-          @click="select(info.logo)"
+          @click="select()"
+          
         />
         <h2 v-else class="logo" contenteditable="true" @click="select(info.logo.title)">
           {{ info.logo.title }}
