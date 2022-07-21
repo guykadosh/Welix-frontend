@@ -5,8 +5,8 @@
       group-name="1"
       @drop="onDrop($event)"
     >
-      <Draggable v-for="item in items" :key="item.id">
-        <component :is="item.type + '-edit'" :cmp="item" />
+      <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
+        <component :is="cmp.type + '-edit'" :cmp="cmp" />
       </Draggable>
     </Container>
   </main>
@@ -28,26 +28,23 @@ import wapTextEdit from '../waps-edit/wap-text-edit.vue'
 export default {
   name: '',
   props: {
-    cmps: Array,
+    wap: Object,
   },
   data() {
-    return {
-      items: [],
-    }
+    return {}
   },
   methods: {
     onDrop(dropRes) {
-      this.items = applyDrag(this.items, dropRes)
-      console.log('items', this.items)
+      let cmps = JSON.parse(JSON.stringify(this.wap.cmps))
+      cmps = applyDrag(cmps, dropRes)
+      this.$store.commit({ type: 'updateCmps', cmps })
     },
     getChildPayload(idx) {
-      return this.items[idx]
+      return this.wap.cmps[idx]
     },
   },
   computed: {},
-  created() {
-    this.items = JSON.parse(JSON.stringify(this.cmps))
-  },
+  created() {},
   components: {
     Container,
     Draggable,

@@ -3,13 +3,13 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
-          @click="setEditable('txt', 'heading')"
+          @click="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
           ref="heading"
           @input="changeTxt('heading')"
           @mousedown.stop
           class="heading"
-          :style="info.heading.style"
+          :style="headingStyle"
         >
           {{ info.heading.txt }}
         </h1>
@@ -34,11 +34,13 @@
           >
         </div>
       </div>
-      <img contenteditable="true" v-if="info.imgUrl" :src="info.imgUrl" />
+      <img contenteditable="true" v-if="info.imgUrl" :src="info.imgUrl.url" />
     </div>
   </section>
 </template>
 <script>
+import { eventBus } from '../../services/event-bus.service'
+
 export default {
   name: 'wap-hero-edit',
   props: {
@@ -58,6 +60,9 @@ export default {
     info() {
       return this.cmp.info
     },
+    headingStyle() {
+      return this.cmp.info.heading.style
+    },
   },
   methods: {
     changeTxt(ref) {
@@ -66,6 +71,11 @@ export default {
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
+      eventBus.emit('open-edit')
+      const el = { type, key, idx }
+      this.$store.commit({ type: 'setElToEdit', el })
+      const cmp = JSON.parse(JSON.stringify(this.cmp))
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
       // emit to open side-editor => txt-editor => style => cmp[key].style => cmp[key][idx].style = style
     },
   },

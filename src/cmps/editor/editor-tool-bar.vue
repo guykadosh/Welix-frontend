@@ -32,11 +32,7 @@
         </Container>
       </section>
       <section v-if="tool === 'edit'">
-        <div>page A</div>
-        <div>page B</div>
-        <div>page C</div>
-        <div>page D</div>
-        <div>page E</div>
+        <el-editor />
       </section>
     </section>
   </div>
@@ -45,7 +41,10 @@
 <script>
 import { Container, Draggable } from 'vue3-smooth-dnd'
 import { applyDrag } from '@/services/dnd.utils/helpers.js'
+import { eventBus } from '../../services/event-bus.service'
 import editorToolBarNav from './editor-tool-bar-nav.vue'
+import elEditor from './el-editor.vue'
+
 export default {
   name: 'edit-tool-bar',
   props: {
@@ -63,7 +62,11 @@ export default {
       console.log('add cmp', cmpId)
     },
     onDrop(dropRes) {
-      this.items = applyDrag(this.items, dropRes)
+      let cmps = JSON.parse(JSON.stringify(this.items))
+      cmps = applyDrag(cmps, dropRes)
+      this.$store.commit({ type: 'updateCmps', cmps })
+
+      //   this.items = applyDrag(this.items, dropRes)
     },
     getChildPayload(idx) {
       return this.items[idx]
@@ -81,6 +84,10 @@ export default {
       this.isOpen = !this.isOpen
       this.tool = type
     },
+    openElEdit() {
+      this.tool = 'edit'
+      this.isOpen = true
+    },
   },
   computed: {
     isEditorOpen() {
@@ -88,12 +95,14 @@ export default {
     },
   },
   created() {
+    eventBus.on('open-edit', this.openElEdit)
     this.items = JSON.parse(JSON.stringify(this.cmps))
   },
   components: {
     Container,
     Draggable,
     editorToolBarNav,
+    elEditor,
   },
 }
 </script>
