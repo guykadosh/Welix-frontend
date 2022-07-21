@@ -17,6 +17,10 @@
 //   font-family: 'Chewy';
 //   src: url('@/styles/fonts/Chewy/Chewy-Regular.ttf');
 // }
+
+
+
+// Rubik
 @font-face {
   font-family: 'Rubik-Regular';
   //   src: url('@/assets/styles/fonts/Rubik/Rubik-Regular.ttf');
@@ -36,4 +40,16 @@
 @font-face {
   font-family: 'Rubik-SemiBold';
   src: url('@/assets/fonts/Rubik/Rubik-SemiBold.ttf');
+}
+
+// Oswald
+
+@font-face {
+  font-family: 'Oswald-regular';
+  src: url('@/assets/fonts/Oswald/Oswald-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Oswald-bold';
+  src: url('@/assets/fonts/Oswald/Oswald-bold.ttf');
 }

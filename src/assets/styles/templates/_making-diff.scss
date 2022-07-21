@@ -1,0 +1,93 @@
+.making-diff {
+    &-header {
+        background-color: transparent;
+        position: absolute;
+        padding: em(10px);
+        width: 100vw;
+
+        .logo {
+            color: #ffffff;
+            font-family: Oswald-bold;
+            font-size: em(36px);
+            cursor: pointer;
+        }
+
+        .nav-bar {
+            display: flex;
+
+            .nav-link {
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    margin-inline-end: em(20px);
+                    font-family: Oswald-bold;
+                    font-size: em(20px);
+
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+
+    &-hero {
+        background-image: url("//images01.nicepage.com/c461c07a441a5d220e8feb1a/680a5c4bb828559da16b70e3/568min.jpg");
+        height: 100vh;
+        background-position: 50% 50%;
+        object-fit: cover;
+        vertical-align: middle;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .heading {
+            font-size: em(168px);
+            color: #ffffff;
+            font-family: Oswald-bold;
+            margin-top: em(18px)
+        }
+    }
+
+    &-card {
+        background-color: blue;
+        // margin-bottom: em(20px);
+        display: flex;
+
+        &.features {
+            flex-direction: row-reverse;
+        }
+
+        .card-img-container {
+            background-position: 50% 50%;
+            min-height: 530px;
+            flex-grow: 1;
+            flex-basis: 50%;
+            background-size: cover;
+        }
+
+        &.about .card-img-container {
+            background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/573d76233e095c80946d58c9/et.jpg');
+        }
+
+        &.features .card-img-container {
+            background-image: url("//images01.nicepage.com/c461c07a441a5d220e8feb1a/58c5811aa1435147bb4eb37f/45min.jpg");
+        }
+
+        &.digital .card-img-container {
+            background-image: url("//images01.nicepage.com/c461c07a441a5d220e8feb1a/ce3fea61b6645235bfbbedef/450163PEY1K1616.jpg");
+        }
+
+        .card-content {
+            flex-basis: 50%;
+            padding: em(40px) em(80px);
+
+            .card-tag {
+                font-family: Oswald-regular;
+                
+            }
+
+        }
+    }
+}

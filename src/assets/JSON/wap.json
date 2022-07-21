@@ -547,7 +547,7 @@
         "id": "wc01",
         "type": "wap-hero",
         "classes": [
-          "omnifood-hero",
+          "making-diff-hero",
           "full",
           "main-layout"
         ],
@@ -569,7 +569,7 @@
         "id": "wc03",
         "type": "wap-container",
         "classes": [
-          "making-diff-cards"
+          "making-diff-cards", "full"
         ],
         "info": {
           "cmps": [
@@ -616,7 +616,7 @@
             {
               "id": "wcc06",
               "classes": [
-                "making-diff-card about"
+                "making-diff-card digital"
               ],
               "type": "wap-card",
               "info": {
