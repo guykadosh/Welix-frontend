@@ -21,7 +21,7 @@ export default {
       state.currWap = wap
     },
     updateCmp(state, { newCmp }) {
-      const idx = state.currWap.cmps.findIndex(cmp => cmp._id === newCmp._id)
+      const idx = state.currWap.cmps.findIndex(cmp => cmp.id === newCmp.id)
       state.currWap.cmps.splice(idx, 1, newCmp)
     },
   },
