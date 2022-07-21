@@ -2,7 +2,7 @@
   {
     "_id": "5e28393890dd7201a06d4e44",
     "name": "Lukas Rudrof – Funktionales Webdesign, Webflow & SEO",
-    "imgUrl": "http://res.cloudinary.com/webify/image/upload/v1580021948/coffe_yi0yzf.png",
+    "imgUrl": "@/assets/img/ominfood.png",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995527",
       "fullname": "Lukas Rudrof",
