@@ -14,7 +14,7 @@
           <span>{{ line.icon }}</span> <span>{{ line.txt }}</span>
         </li>
       </ul>
-      <button class="card-btn">{{info.btn.txt}}</button>
+      <!-- <button class="card-btn">{{info.btn.txt}}</button> -->
     </div>
   </section>
 </template>
