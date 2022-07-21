@@ -120,7 +120,7 @@
       {
         "id": "wc03",
         "type": "wap-container",
-        "classes": ["omnifood-meals", "flex"],
+        "classes": ["omnifood-meals"],
         "info": {
           "cmps": [
             {
@@ -284,20 +284,20 @@
         "style": {}
       },
       {
+        "id": "wc05",
+        "classes": ["omnifood-txt"],
+        "type": "wap-text",
+        "info": {
+          "heading": "pricing",
+          "subHeading": "Eating well without breaking the bank"
+        }
+      },
+      {
         "id": "wc0789",
         "type": "wap-container",
         "classes": ["omnifood-pricing"],
         "info": {
           "cmps": [
-            {
-              "id": "wc05",
-              "classes": ["omnifood-txt"],
-              "type": "wap-text",
-              "info": {
-                "heading": "pricing",
-                "subHeading": "Eating well without breaking the bank"
-              }
-            },
             {
               "id": "wc695",
               "classes": ["omnifood-pricing-starter"],
