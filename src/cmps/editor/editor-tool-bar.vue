@@ -3,27 +3,28 @@
         <editorToolBarNav @setTool="openTool" />
         <section class="tools" :class="isEditorOpen">
             <section v-if="tool === 'element'">
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
+                <div>Element A</div>
+                <div>Element B</div>
+                <div>Element C</div>
+                <div>Element D</div>
+                <div>Element E</div>
             </section>
             <section v-if="tool === 'section'">
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
+                <div>Section A</div>
+                <div>Section B</div>
+                <div>Section C</div>
+                <div>Section D</div>
+                <div>Section F</div>
             </section>
             <section v-if="tool === 'pages'">
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
-                <div>Section</div>
+                <div>page A</div>
+                <div>page B</div>
+                <div>page C</div>
+                <div>page D</div>
+                <div>page E</div>
             </section>
-            <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy" v-if="tool === 'edit'">
+            <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" behaviour="copy"
+                v-if="tool === 'edit'">
                 <Draggable v-for="item in items" :key="item.id">
                     <div class="cmp-preview" @click="addWapCmp(item.id)">
                         <span>{{ item.type }}</span>
@@ -61,9 +62,17 @@ export default {
             return this.items[idx]
         },
         openTool(type) {
-            console.log('hi', type)
-            this.tool = type
+            if (this.tool === type && this.isOpen) {
+                this.isOpen = false
+                return
+            }
+            if (this.isOpen && this.tool !== type) {
+                this.tool = type
+                this.isOpen = true
+                return
+            }
             this.isOpen = !this.isOpen
+            this.tool = type
         },
     },
     computed: {
