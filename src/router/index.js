@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import home from '../views/home.vue'
-import waps from '../views/waps.vue'
+import wapList from '../views/wap-list.vue'
 import wapDetails from '../views/wap-details.vue'
 import wapEditor from '../views/wap-editor.vue'
 
@@ -14,8 +14,8 @@ const router = createRouter({
     },
     {
       path: '/template',
-      name: 'waps',
-      component: waps,
+      name: 'wap-list',
+      component: wapList,
     },
     {
       path: '/wap/:wapId',
