@@ -86,24 +86,30 @@
         ],
         "info": {
           "heading": {
+            "type": "txt",
             "txt": "A healthy meal delivered to your door, every single day",
             "style": {}
           },
           "subHeading": {
+            "type": "txt",
             "txt": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
             "style": {}
           },
           "btns": [
             {
+              "type": "btn",
               "txt": "Start Eating Well!",
-              "link": "#wc03"
+              "link": "#wc03",
+              "style": {}
             },
             {
+              "type": "btn",
               "txt": "Learn more",
-              "link": "#wc03"
+              "link": "#wc03",
+              "style": {}
             }
           ],
-          "imgUrl": "https://i.ibb.co/fdHvDFX/hero.webp"
+          "imgUrl": {"type": "img", "url": "https://i.ibb.co/fdHvDFX/hero.webp"}
         },
         "style": {}
       },
