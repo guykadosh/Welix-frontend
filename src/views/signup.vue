@@ -1,11 +1,12 @@
 <template>
+    <app-header />
     <section class="signup">
         <form @submit.prevent="signup" class="signup__form">
             <h2>Start designing for free</h2>
-            <input v-model="credentials.fullname" placeholder="Fullname*" />
-            <input v-model="credentials.username" placeholder="Username*"/>
-            <input v-model="credentials.email" type="email" placeholder="Email*"/>
-            <input v-model="credentials.password" type="password" placeholder="Password*" show-password />
+            <input v-model="credentials.fullname" placeholder="Fullname *" />
+            <input v-model="credentials.username" placeholder="Username *" />
+            <input v-model="credentials.email" type="email" placeholder="Email *" />
+            <input v-model="credentials.password" type="password" placeholder="Password *" show-password />
 
             <p @click="this.$router.push('/login')">Have an account?</p>
             <button class="signup__btn">
@@ -20,6 +21,7 @@
 </template>
 <script>
 import { userService } from '../services/user.service.js'
+import appHeader from '../cmps/app/app-header.vue'
 
 export default {
     name: 'signup',
@@ -40,12 +42,15 @@ export default {
             try {
                 console.log(this.credentials)
                 const credentials = JSON.parse(JSON.stringify(this.credentials))
-                if(credentials){
+                if (credentials) {
                     await this.$store.dispatch({ type: 'signup', credentials })
                     this.$router.push('/')
                 }
             } catch (err) { }
         },
     },
+    components: {
+        appHeader
+    }
 }
 </script>

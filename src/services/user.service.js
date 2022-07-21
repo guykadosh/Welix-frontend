@@ -1,4 +1,5 @@
 import { storageService } from './storage.service.js'
+import gUser from '@/assets/JSON/user.json' assert { type: 'user' }
 
 /* import { httpService } from './http.service' */
 /* import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service' */
