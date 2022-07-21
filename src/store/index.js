@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import wapStore from './modules/wap.store'
 import cmpStore from './modules/cmp.store'
+import userStore from './modules/user.store'
 
 // create a store instance
 export const store = createStore({
@@ -12,6 +13,7 @@ export const store = createStore({
   modules: {
     wapStore,
     cmpStore,
+    userStore,
   },
 })
 
