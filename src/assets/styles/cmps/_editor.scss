@@ -18,8 +18,8 @@
   }
 
   .editor-nav {
-    width: 100vw;
-    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.084);
+    // width: 100vw;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.026);
     border-bottom: 1px solid rgba(128, 128, 128, 0.26);
     background-color: #fff;
 
@@ -103,12 +103,14 @@
   overflow-y: hidden;
   transition: all 0.5s;
 
-  .wap-preview {
-    margin: em(10px) em(30px);
-    min-height: 100px;
+  .editor-wap-container {
+    margin: 0 em(64px);
+    min-height: em(100px);
     flex-grow: 1;
     overflow-y: scroll;
+    overflow-x: hidden;
     transition: all 0.7s;
+    background-color: #fff;
 
     .smooth-dnd-container {
       height: 100%;
