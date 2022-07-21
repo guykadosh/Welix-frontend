@@ -4,6 +4,8 @@
       <a :href="link.href">{{ link.txt }}</a>
     </li>
   </ul>
+  <span class="mobile-nav" style="display: none;">☰</span>
+
 </template>
 <script>
 export default {

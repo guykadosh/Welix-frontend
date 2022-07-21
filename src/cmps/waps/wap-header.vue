@@ -1,6 +1,6 @@
 <template>
   <header class="wap-header" :class="cmp.classes">
-    <div class="wap-header__inner flex justify-between items-center">
+    <div class=" wap-header__inner flex justify-between items-center">
       <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
         <img contenteditable="true" class="logo" :src="info.logoImg.url" />
       </div>
