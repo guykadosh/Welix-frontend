@@ -10,27 +10,30 @@
   }
 
   &-nav {
-    .nav-link {
-      margin-inline-end: rem(30px);
-      font-weight: 500;
-      font-size: em(18px);
+    .wap-nav {
 
-      &:last-child {
-        margin-inline-end: 0;
+      .nav-link {
+        margin-inline-end: rem(30px);
+        font-weight: 500;
+        font-size: em(18px);
 
+        &:last-child {
+          margin-inline-end: 0;
+          
       }
 
       a {
         font-family: Rubik-Bold, sans-serif;
         text-decoration: none;
         color: #333;
-
+        
         &:hover {
           color: #cf711f;
         }
-
+        
       }
-
+    }
+      
       transition: all 0.3s;
     }
 
