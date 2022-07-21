@@ -3,6 +3,7 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
+          v-if="info.heading"
           @click="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
           ref="heading"
