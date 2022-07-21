@@ -1,6 +1,6 @@
 <template lang="">
   <section class="el-editor-inner flex flex-column">
-    <div class="flex">
+    <div class="flex justify-between">
       <p>Font Family</p>
       <Select
         :options="fonts"
@@ -9,7 +9,7 @@
         defaultActiveFirstOption
       ></Select>
     </div>
-    <div class="flex">
+    <div class="flex justify-between">
       <p>Font Size</p>
       <Slider
         v-model:value="fontSize"
