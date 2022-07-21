@@ -28,19 +28,16 @@ import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
 export default {
   name: 'wap-editor',
   data() {
-    return {
-      wap: null,
-    }
+    return {}
   },
   methods: {},
-  computed: {},
-  async created() {
-    const { wapId } = this.$route.params
-    try {
-      this.wap = await wapService.getById(wapId)
-    } catch (err) {
-      console.log(err)
-    }
+  computed: {
+    wap() {
+      return this.$store.getters.getCurrWap || wapService.getEmptyWap()
+    },
+  },
+  created() {
+    console.log(this.wap)
   },
   components: {
     editorHeader,

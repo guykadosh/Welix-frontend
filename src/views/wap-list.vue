@@ -31,6 +31,8 @@ export default {
     wapToEdit(wap) {
       const wapToEdit = JSON.parse(JSON.stringify(wap))
       this.$store.commit({ type: 'setCurrWap', wap: wapToEdit })
+
+      this.$router.push('/wap/editor/')
     },
   },
 }
