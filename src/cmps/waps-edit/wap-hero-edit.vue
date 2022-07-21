@@ -3,6 +3,7 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
+          @click="setEditable('txt', 'heading')"
           contenteditable="true"
           ref="heading"
           @input="changeTxt('heading')"
@@ -63,6 +64,9 @@ export default {
       this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
       const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
       this.$store.commit({ type: 'updateCmp', newCmp })
+    },
+    setEditable(type, key, idx = null) {
+      // emit to open side-editor => txt-editor => style => cmp[key].style => cmp[key][idx].style = style
     },
   },
   created() {
