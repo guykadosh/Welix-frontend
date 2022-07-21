@@ -1,5 +1,5 @@
 <template>
-  <main class="wap-preview">
+  <main class="editor-wap-container main-layout">
     <Container
       :get-child-payload="getChildPayload"
       group-name="1"

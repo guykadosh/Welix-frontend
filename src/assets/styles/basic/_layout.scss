@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
-  > * {
+  >* {
     grid-column: 2;
   }
 
-  > *.full {
+  >*.full {
     grid-column: 1 / -1;
   }
 
@@ -21,4 +21,8 @@
   @include for-wide-layout {
     @include layoutGTC($break-wide);
   }
+}
+
+.waps-main-layout {
+  max-width: rem(1600px);
 }

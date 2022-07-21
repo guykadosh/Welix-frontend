@@ -1,14 +1,20 @@
 .main-header {
     margin-block-end: rem(36px);
-    background-color: rgb(227, 204, 204);
+    background-color: $light-color3;
     padding: rem(25px);
-   
+
     .header-logo {
         width: rem(70px);
         height: rem(32px);
+        justify-items: center;
     }
-    a{
-        color: #333;
+
+    a {
+        color: $dark-color4;
     }
-    
+
+    .main-header-nav {
+        width: rem(250px);
+    }
+
 }

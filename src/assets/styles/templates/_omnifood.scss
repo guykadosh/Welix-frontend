@@ -11,9 +11,14 @@
 
   &-nav {
     .nav-link {
-      margin-inline-end: rem(20px);
+      margin-inline-end: rem(30px);
       font-weight: 500;
       font-size: em(18px);
+
+      &:last-child {
+        margin-inline-end: 0;
+
+      }
 
       a {
         font-family: Rubik-Bold, sans-serif;
@@ -23,6 +28,7 @@
         &:hover {
           color: #cf711f;
         }
+
       }
 
       transition: all 0.3s;
@@ -41,6 +47,19 @@
         background-color: #cf711f;
       }
     }
+
+    @include for-mobile-layout {
+      display: none;
+    }
+
+    .mobile-nav {
+
+      //??
+      @include for-mobile-layout {
+        display: block;
+      }
+    }
+
   }
 
   &-hero {
@@ -56,6 +75,23 @@
       grid-template-columns: 1fr 1fr;
       gap: 9.6rem;
       align-items: center;
+
+      @include for-mobile-layout {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        max-width: 80%;
+        gap: 5rem;
+        justify-content: center;
+        padding: 0 0.5em;
+
+      }
+
+      @include for-small-layout {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        max-width: 90%;
+        gap: 5rem;
+      }
 
       .text-box {
         .heading {
@@ -87,6 +123,7 @@
           font-family: inherit;
           transition: all 0.3s;
         }
+
         .btn1 {
           background-color: #e67e22;
           color: #fff;
@@ -137,7 +174,21 @@
         filter: brightness(0);
         opacity: 50%;
       }
+
+      @include for-mobile-layout {
+        height: 2.4rem;
+        font-size: em(10px);
+      }
+
+      @include for-small-layout {
+        display: inline;
+        >*{
+          margin: rem(15px);
+        }
+      }
     }
+
+
   }
 
   &-meals {
@@ -148,6 +199,21 @@
     max-width: em(1200px);
     margin: 0 auto;
     gap: rem(48px);
+    @include for-mobile-layout{
+      grid-template-columns: repeat(2, 1fr);
+      max-width: em(800px);
+      margin: 0 auto;
+      gap: rem(25px);
+  
+    }
+    @include for-small-layout{
+      justify-content: center;
+      grid-template-columns: repeat(1, 0.7fr);
+      max-width: auto;
+      margin: 0 auto;
+      gap: rem(25px);
+  
+    }
   }
 
   &-meal {
@@ -178,6 +244,7 @@
         gap: em(16px);
       }
     }
+
     .card {
       &-content {
         padding: em(48px);
@@ -215,6 +282,7 @@
       text-transform: uppercase;
       margin-bottom: em(16px);
       letter-spacing: 0.75px;
+      margin-top: rem(25px);
     }
 
     .text2 {
@@ -223,6 +291,7 @@
       margin-bottom: 0.5em;
       color: rgba(0, 0, 0, 0.85);
       font-weight: 500;
+
     }
   }
 
@@ -259,7 +328,7 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 1.6rem;
-      padding: 1.6rem;
+      padding-top: 2em;
 
       img {
         display: block;
@@ -341,7 +410,7 @@
 
   &-footer {
     font-family: Rubik-Regular, sans-serif;
-    padding: em(48px) 0;
+    padding: em(48px) 35%;
     border-top: 1px solid #eee;
 
     .footer-inner {
@@ -351,6 +420,7 @@
 
       gap: rem(24px);
       margin-block-end: rem(12px);
+
       .row {
         max-width: rem(250px);
 
@@ -362,6 +432,8 @@
 
     .logo {
       height: em(18px);
+      margin-right: rem(15px);
+      margin-top: rem(5px);
     }
   }
 }

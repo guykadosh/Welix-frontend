@@ -14,6 +14,7 @@ $fifth-color: #fa5252;
 $dark-color1: #212529;
 $dark-color2: #343a40;
 $dark-color3: #495057;
+$dark-color4: #333;
 
 $light-color1: #f8f9fa;
 $light-color2: #f1f3f5;
@@ -21,11 +22,11 @@ $light-color3: #e9ecef;
 $light-color4: rgb(238, 238, 238);
 $light-color5: rgb(154, 154, 154);
 
-
 // LAYOUT
-$layoutPadding: 20px;
+$layoutPadding: 40px;
 
 // LAYOUT BREAKPOINTS
+$break-small: 700px;
 $break-narrow: 1200px;
 $break-normal: 1360px;
 $break-wide: 1920px;
