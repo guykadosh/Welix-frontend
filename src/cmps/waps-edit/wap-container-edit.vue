@@ -8,7 +8,7 @@
       :auto-scroll-enabled="true"
     >
       <Draggable v-for="item in items" :key="item.id">
-        <component :is="item.type + '-edit'" :cmp="item"> </component>
+        <component :is="item.type + '-edit'" :cmp="item"></component>
       </Draggable>
     </Container>
   </section>

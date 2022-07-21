@@ -5,7 +5,8 @@
         <h1
           contenteditable="true"
           ref="heading"
-          @input="changeHeading"
+          @input="changeTxt('heading')"
+          @mousedown.stop
           class="heading"
           :style="info.heading.style"
         >
@@ -15,6 +16,9 @@
           contenteditable="true"
           class="sub-heading"
           :style="info.subHeading.style"
+          ref="subHeading"
+          @input="changeTxt('subHeading')"
+          @mousedown.stop
         >
           {{ info.subHeading.title }}
         </h2>
@@ -45,7 +49,9 @@ export default {
     return {
       newInfo: {
         heading: '',
+        
       },
+      cmpToEdit: null,
     }
   },
   computed: {
@@ -54,9 +60,13 @@ export default {
     },
   },
   methods: {
-    changeHeading() {
-      console.log(this.$refs.heading.innerText)
+    changeTxt(ref) {
+      this.cmpToEdit.info[ref].title = this.$refs[ref].innerText
+      this.$store.dispatch({type: 'updateCmp', cmp: this.cmpToEdit})
     },
+  },
+  created() {
+      this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
   },
 }
 </script>

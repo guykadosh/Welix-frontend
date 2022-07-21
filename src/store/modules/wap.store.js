@@ -31,5 +31,12 @@ export default {
         console.log(err)
       }
     },
+    // async updateCmp({ commit, getters }, { cmp }) {
+    //   const wapId = getters.getCurrWapId
+    //   try {
+    //     const wap = await wapService.updateCmp(cmp, wapId)
+
+    //   }
+    // },
   },
 }
