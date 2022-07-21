@@ -12,6 +12,9 @@
         <li>
           <router-link to="/wap/editor/" >Editor</router-link>
         </li>
+        <li>
+          <router-link to="/login">Login</router-link>
+        </li>
       </ul>
     </div>
   </header>

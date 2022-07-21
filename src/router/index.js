@@ -3,6 +3,8 @@ import home from '../views/home.vue'
 import wapList from '../views/wap-list.vue'
 import wapDetails from '../views/wap-details.vue'
 import wapEditor from '../views/wap-editor.vue'
+import login from '../views/login.vue'
+import signup from '../views/signup.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -26,6 +28,16 @@ const router = createRouter({
       path: '/wap/editor/',
       name: 'wap-editor',
       component: wapEditor,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login,
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: signup,
     },
   ],
 })
