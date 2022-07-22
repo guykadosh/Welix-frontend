@@ -1,78 +1,270 @@
 .making-diff {
+<<<<<<< HEAD
 
     &-header {
         position: absolute;
         width: 100%;
         padding-top: rem(10px);
+=======
+  &-header {
+    position: absolute;
+    width: 100%;
+    padding-top: rem(10px);
+>>>>>>> 10b7dd83dafc7b3167365e57d95adc4684ec7e58
 
-        .logo {
+    .logo {
+      color: #ffffff;
+      font-family: Oswald-bold;
+      font-size: 4vw;
+      cursor: pointer;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+
+    .wap-nav {
+      .hamburger {
+        color: #ffffff;
+      }
+
+      .nav-bar {
+        .nav-link {
+          a {
+            text-decoration: none;
             color: #ffffff;
+            margin-inline-end: em(20px);
             font-family: Oswald-bold;
-            font-size: 4vw;
-            cursor: pointer;
+            font-size: em(20px);
 
             &:hover {
-                color: #000000;
+              color: #000000;
             }
+          }
         }
+      }
+    }
+  }
 
-        .wap-nav {
+  &-hero {
+    background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/680a5c4bb828559da16b70e3/568min.jpg');
+    height: 100vh;
+    background-position: 50% 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: em(15px);
 
-            .hamburger {
-                color: #ffffff;
-            }
-
-            .nav-bar {
-
-                .nav-link {
-                    a {
-                        text-decoration: none;
-                        color: #ffffff;
-                        margin-inline-end: em(20px);
-                        font-family: Oswald-bold;
-                        font-size: em(20px);
-
-                        &:hover {
-                            color: #000000;
-                        }
-                    }
-                }
-            }
-        }
+    @include for-medium-layout {
+      margin-bottom: 0;
     }
 
-    &-hero {
-        background-image: url("//images01.nicepage.com/c461c07a441a5d220e8feb1a/680a5c4bb828559da16b70e3/568min.jpg");
-        height: 100vh;
-        background-position: 50% 50%;
-        object-fit: cover;
-        vertical-align: middle;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: em(15px);
+    .heading {
+      text-align: center;
+      font-size: 10vw;
+      color: #ffffff;
+      font-family: Oswald-bold;
+      margin-top: em(18px);
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-block-end: em(10px);
+
+    // &.features {
+    //     flex-direction: column
+    // }
+
+    &:last-of-type {
+      margin-block-end: em(50px);
+    }
+
+    @include for-medium-layout {
+      flex-direction: row;
+      margin-block-end: 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &.features {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .card-img-container {
+      background-position: 50% 50%;
+      min-height: 530px;
+      flex-grow: 1;
+      flex-basis: 50%;
+      background-size: cover;
+    }
+
+    &.about .card-img-container {
+      background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/573d76233e095c80946d58c9/et.jpg');
+    }
+
+    &.features .card-img-container {
+      background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/58c5811aa1435147bb4eb37f/45min.jpg');
+    }
+
+    &.digital .card-img-container {
+      background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/ce3fea61b6645235bfbbedef/450163PEY1K1616.jpg');
+    }
+
+    &.features .card-content {
+      .card-tag {
+        color: #f6d427;
+      }
+
+      .card-btn {
+        border: 3px solid #f6d427;
+
+        &:hover {
+          color: #ffffff;
+          background-color: #f6d427;
+        }
+      }
+    }
+
+    &.digital .card-content {
+      .card-tag {
+        color: #ed92ae;
+      }
+
+      .card-btn {
+        border: 3px solid #ed92ae;
+
+        &:hover {
+          color: #ffffff;
+          background-color: #ed92ae;
+        }
+      }
+    }
+
+    .card-content {
+      flex-basis: 50%;
+      padding: 0 em(20px);
+      margin-block-end: em(30px);
+
+      @include for-medium-layout {
+        padding-top: em(30px);
+      }
+
+      .card-tag {
+        font-family: 'Open Sans', sans-serif;
+        font-size: em(24px);
+        word-wrap: break-word;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #61d4e7;
+      }
+
+      .card-heading {
+        font-family: Oswald-bold;
+        font-size: em(68px);
+        line-height: em(18px);
+        margin-block-end: em(16px);
+      }
+
+      .card-subheading {
+        color: #404040c3;
+        font-family: Oswald-light;
+        font-size: em(22px);
+        margin-block-end: em(20px);
+      }
+
+      .card-btn {
+        border: 3px solid #61d4e7;
+        text-decoration: none;
+        color: #000000;
+        font-family: Oswald-regular;
+        font-size: em(36px);
+        padding: 0 em(15px) em(5px) em(15px);
+
+        &:hover {
+          color: #ffffff;
+          background-color: #61d4e7;
+        }
+      }
+    }
+  }
+
+  &-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: em(50px);
+
+    .text1 {
+      color: #ed92ae;
+      text-transform: uppercase;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .text2 {
+      font-family: Oswald-bold;
+      font-size: 6vw;
+      max-width: em(150px);
+    }
+  }
+
+  &-gallery {
+    // max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: em(100px);
+
+    .imgs-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      @include for-medium-layout {
+        max-width: em(1100px);
+      }
+
+      img {
+        width: 100vw;
 
         @include for-medium-layout {
-
-            margin-bottom: 0;
-
+          max-height: 200px;
+          max-width: 300px;
         }
+      }
+    }
+  }
 
-        .heading {
-            text-align: center;
-            font-size: 10vw;
-            color: #ffffff;
-            font-family: Oswald-bold;
-            margin-top: em(18px)
-        }
+  &-contact {
+    background-color: pink;
+    background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/b90ecfa1c07b58719f32716e/39c1efee-0b29-cd09-8d79-44e25c04758c.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: em(50px);
+    object-fit: cover;
+    vertical-align: middle;
+    background-size: cover;
+
+    .heading {
+      text-align: center;
+      font-family: Oswald-bold;
+      color: #ffffff;
+      font-size: 14vw;
     }
 
-    &-card {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-block-end: em(10px);
+    .form-container {
+      min-width: 40%;
 
+<<<<<<< HEAD
         @include for-medium-layout {
 
             flex-direction: row;
@@ -190,13 +382,24 @@
     }
 
     &-txt {
+=======
+      .contact-form {
+>>>>>>> 10b7dd83dafc7b3167365e57d95adc4684ec7e58
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: em(50px);
+        // align-items: center;
+        padding: em(10px);
 
+        > * {
+          margin-block-end: em(20px);
+          padding: em(5px) em(10px);
+          border-radius: 3px;
+          background-color: transparent;
+          border: 4px solid #ffffff;
+          color: #ffffff;
+          outline: none;
 
+<<<<<<< HEAD
         .text1 {
             color: #ed92ae;
             text-transform: uppercase;
@@ -256,10 +459,16 @@
         .heading {
             text-align: center;
             font-family: Oswald-bold;
+=======
+          &::placeholder {
+>>>>>>> 10b7dd83dafc7b3167365e57d95adc4684ec7e58
             color: #ffffff;
-            font-size: 14vw;
+            font-family: Oswald-regular;
+            font-size: em(18px);
+          }
         }
 
+<<<<<<< HEAD
         .form-container {
             min-width: 40%;
 
@@ -297,6 +506,22 @@
                     cursor: pointer;
                 }
             }
+=======
+        textarea {
+          height: em(200px);
+>>>>>>> 10b7dd83dafc7b3167365e57d95adc4684ec7e58
         }
+
+        .contact-submit {
+          font-family: Oswald-bold;
+          font-size: em(24px);
+          background-color: #ffffff;
+          color: pink;
+          text-transform: uppercase;
+          // max-width: 50%;
+          cursor: pointer;
+        }
+      }
     }
+  }
 }

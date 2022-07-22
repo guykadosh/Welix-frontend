@@ -11,7 +11,6 @@
 
   &-nav {
     .wap-nav {
-
       .nav-link {
         margin-inline-end: rem(30px);
         font-weight: 500;
@@ -19,21 +18,19 @@
 
         &:last-child {
           margin-inline-end: 0;
-          
+        }
+
+        a {
+          font-family: Rubik-Bold, sans-serif;
+          text-decoration: none;
+          color: #333;
+
+          &:hover {
+            color: #cf711f;
+          }
+        }
       }
 
-      a {
-        font-family: Rubik-Bold, sans-serif;
-        text-decoration: none;
-        color: #333;
-        
-        &:hover {
-          color: #cf711f;
-        }
-        
-      }
-    }
-      
       transition: all 0.3s;
     }
 
@@ -56,13 +53,11 @@
     }
 
     .mobile-nav {
-
       //??
       @include for-mobile-layout {
         display: block;
       }
     }
-
   }
 
   &-hero {
@@ -86,7 +81,6 @@
         gap: 5rem;
         justify-content: center;
         padding: 0 0.5em;
-
       }
 
       @include for-small-layout {
@@ -170,55 +164,54 @@
 
     .imgs-container {
       display: flex;
-      justify-content: space-between;
 
       img {
-        height: em(32px);
+        width: 22%;
         filter: brightness(0);
         opacity: 50%;
-      }
 
-      @include for-mobile-layout {
-        height: 2.4rem;
-        font-size: em(10px);
+        &:not(:last-child) {
+          margin-inline-end: em(10px);
+        }
       }
 
       @include for-small-layout {
-        display: inline;
-
-        >* {
-          margin: rem(15px);
+        img {
+          // height: em(28px);
         }
       }
+
+      @include for-medium-layout {
+        img {
+          // height: em(36px);
+        }
+      }
+      @include for-mobile-layout {
+        // height: 2.4rem;
+      }
     }
-
-
   }
 
   &-meals {
+    max-width: auto;
     font-family: Rubik-Regular, sans-serif;
     padding: em(96px) 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: em(1200px);
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
     gap: rem(48px);
 
-    @include for-mobile-layout {
-      grid-template-columns: repeat(2, 1fr);
-      max-width: em(800px);
-      margin: 0 auto;
+    @include for-small-layout {
+      max-width: em(1200px);
+      grid-template-columns: repeat(1, 0.7fr);
       gap: rem(25px);
-
     }
 
-    @include for-small-layout {
-      justify-content: center;
-      grid-template-columns: repeat(1, 0.7fr);
-      max-width: auto;
-      margin: 0 auto;
+    @include for-medium-layout {
+      max-width: em(800px);
       gap: rem(25px);
-
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -297,7 +290,6 @@
       margin-bottom: 0.5em;
       color: rgba(0, 0, 0, 0.85);
       font-weight: 500;
-
     }
   }
 

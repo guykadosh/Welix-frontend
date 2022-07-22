@@ -17,6 +17,7 @@
 <script>
 import appHeader from '../cmps/app/app-header.vue'
 import { wapService } from '../services/wap.service'
+
 export default {
   name: 'waps',
   components: {
