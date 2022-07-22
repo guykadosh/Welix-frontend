@@ -2,9 +2,14 @@
     &-header {
         background-color: #5D21D1;
 
-        // .wap-header__inner {
-        //     // width: 100vw;
-        // }
+        .wap-header__inner {
+
+            .wap-nav .nav-bar .nav-link a {
+                color: $light-color;
+                font-family: Nunito-regular;
+                margin-inline-end: em(20px);
+            }
+        }
     }
 
     &-hero {
@@ -15,40 +20,65 @@
         width: 100vw;
         clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
         margin-top: em(-1px);
+        padding-top: em(162px);
 
         .hero-inner {
-            // background-color: brown;
             display: flex;
-            justify-content: start;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
 
             .text-box {
-                // background-color: yellow;
                 width: 50%;
+                padding-right: rem(41px);
 
                 .heading {
                     font-size: rem(48px);
                     color: $light-color;
+                    font-family: NotoSans-bold;
+                    line-height: em(18px);
+                    margin-block-end: em(8px);
                 }
 
                 .sub-heading {
                     margin-block-end: em(10px);
                     color: $light-color;
+                    font-size: em(22px);
+                    font-family: NotoSans-light;
+                    margin-block-end: rem(52px);
                 }
-                
+
                 .btns {
                     a {
                         background-color: rgb(43, 43, 172);
-                        padding: em(10px) em(30px);
+                        padding: em(16px) em(30px);
                         margin-inline-end: em(10px);
+                        font-family: Nunito-bold;
+                        color: #3AE2D3;
+                        font-size: em(16px);
+                        border-radius: em(10px);
+                        background-color: transparent;
+                        border: 1px solid #3AE2D3;
+
+                        .wap-details &:hover {
+                            background-color: #3AE2D3;
+                            color: #5D21D1;
+                        }
+
+                        .wap-details &:hover:not(:last-of-type) {
+                            background-color: transparent;
+                            color: #3AE2D3;
+                        }
+
+                        &:not(:last-child) {
+                            background-color: #3AE2D3;
+                            color: #5D21D1;
+                        }
                     }
                 }
-
             }
         }
-        // img {
-            
-        // }
     }
-}
 
+    
+
+}
