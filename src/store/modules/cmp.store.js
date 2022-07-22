@@ -1,17 +1,22 @@
-import { cmpService } from "../../services/cmp.service.js"
+import { cmpService } from '../../services/cmp.service.js'
 
 export default {
   state: {
     cmps: null,
+    filterBy: 'wap-header',
   },
   getters: {
-    getCmps({ cmps }) {
-      return cmps
+    getCmps({ cmps, filterBy }) {
+      const filteredCmps = cmps.filter(cmp => cmp.type === filterBy)
+      return filteredCmps
     },
   },
   mutations: {
     setCmps(state, { cmps }) {
       state.cmps = cmps
+    },
+    setFilter(state, { filterBy }) {
+      state.filterBy = filterBy
     },
   },
   actions: {
@@ -20,7 +25,9 @@ export default {
         const cmps = await cmpService.query()
         console.log('store', cmps)
         commit({ type: 'setCmps', cmps })
-      } catch (err) { console.log(err) }
+      } catch (err) {
+        console.log(err)
+      }
     },
   },
 }

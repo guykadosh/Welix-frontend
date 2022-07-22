@@ -5,17 +5,15 @@
     ref="container"
     :style="{ maxWidth: conMaxWidth + 'px' }"
   >
-    <div v-responsive>
-      <Container
-        :get-child-payload="getChildPayload"
-        group-name="1"
-        @drop="onDrop($event)"
-      >
-        <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
-          <component :is="cmp.type + '-edit'" :cmp="cmp" />
-        </Draggable>
-      </Container>
-    </div>
+    <Container
+      :get-child-payload="getChildPayload"
+      group-name="1"
+      @drop="onDrop($event)"
+    >
+      <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
+        <component :is="cmp.type + '-edit'" :cmp="cmp" />
+      </Draggable>
+    </Container>
   </main>
 </template>
 
@@ -58,16 +56,6 @@ export default {
     getChildPayload(idx) {
       return this.wap.cmps[idx]
     },
-  },
-  computed: {},
-  created() {
-    eventBus.on('resized', this.resize)
-  },
-  mounted() {
-    console.log(this.$refs)
-    new ResizeObserver(this.resized).observe(this.$refs.container)
-  },
-  methods: {
     resized() {
       const { offsetWidth } = this.$refs.container
       if (offsetWidth >= 700) this.responsiveClass = 'small'
@@ -82,6 +70,14 @@ export default {
       console.log('Hi?')
       this.conMaxWidth = size
     },
+  },
+  computed: {},
+  created() {
+    eventBus.on('resized', this.resize)
+  },
+  mounted() {
+    console.log(this.$refs)
+    new ResizeObserver(this.resized).observe(this.$refs.container)
   },
   components: {
     Container,

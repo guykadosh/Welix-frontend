@@ -1,14 +1,61 @@
 <template>
   <section v-if="cmp" class="wap-text" :class="cmp.classes">
-    <h2 contenteditable="true" class="text1">{{ info.heading.txt }}</h2>
-    <h2 contenteditable="true" class="text2">{{ info.subHeading.txt }}</h2>
+    <h2
+      contenteditable="true"
+      class="text1"
+      ref="heading"
+      :style="info.heading.style"
+      @click="setEditable(info.heading.type, 'heading')"
+      @input="changeTxt('heading')"
+      @mousedown.stop
+    >
+      {{ info.heading.txt }}
+    </h2>
+    <h2
+      contenteditable="true"
+      class="text2"
+      ref="subHeading"
+      :style="info.subHeading.style"
+      @click="setEditable(info.subHeading.type, 'subHeading')"
+      @input="changeTxt('subHeading')"
+      @mousedown.stop
+    >
+      {{ info.subHeading.txt }}
+    </h2>
   </section>
 </template>
 <script>
+import { eventBus } from '../../services/event-bus.service'
+
 export default {
   name: 'wap-text-edit',
   props: {
     cmp: Object,
+  },
+  data() {
+    return {
+      cmpToEdit: null,
+    }
+  },
+  created() {
+    this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
+  },
+  methods: {
+    changeTxt(ref) {
+      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'updateCmp', newCmp })
+    },
+    setEditable(type, key, idx = null) {
+      eventBus.emit('open-edit')
+      const el = { type, key, idx }
+      const cmp = JSON.parse(JSON.stringify(this.cmp))
+
+      this.$store.commit({ type: 'setElToEdit', el })
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
+
+      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
   },
   computed: {
     info() {

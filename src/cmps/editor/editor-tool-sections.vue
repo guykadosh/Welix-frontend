@@ -3,12 +3,13 @@
     <div class="tool-bar-actions__labels flex flex-column">
       <div
         class="tool-bar-actions__label"
-        v-for="label in labels"
+        v-for="(label, idx) in labels"
         :key="label.id"
       >
         <span
           class="tool-bar-actions__label-text"
           :class="{ selected: label.selected }"
+          @click="setFilter(label.type, idx)"
         >
           {{ label.title }}
         </span>
@@ -24,7 +25,8 @@
       >
         <Draggable v-for="cmp in cmps" :key="cmp.id">
           <div class="cmp-preview" @click="addWapCmp(cmp.id)">
-            <img src="@/assets/img/omnifood-header.png" alt="" />
+            <img v-if="cmp.thumbnail" :src="cmp.thumbnail" alt="" />
+            <img v-else src="@/assets/img/omnifood-header.png" alt="" />
           </div>
         </Draggable>
       </Container>
@@ -62,8 +64,10 @@ export default {
           selected: false,
         },
         { id: 'label06', title: 'About', type: 'wap-footer', selected: false },
-        { id: 'label07', title: 'Map', type: 'wap-map', selected: false },
+        { id: 'label07', title: 'Text', type: 'wap-text', selected: false },
+        { id: 'label08', title: 'Map', type: 'wap-map', selected: false },
       ],
+      filterBy: '',
     }
   },
   created() {
@@ -76,6 +80,12 @@ export default {
   methods: {
     getChildPayload(idx) {
       return this.cmps[idx]
+    },
+    setFilter(filterBy, idx) {
+      this.labels.forEach(label => (label.selected = false))
+      this.labels[idx].selected = true
+
+      this.$store.commit({ type: 'setFilter', filterBy })
     },
   },
 }
