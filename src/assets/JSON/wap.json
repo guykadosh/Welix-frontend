@@ -1,6 +1,388 @@
 [
   {
     "_id": "5e28393890dd7201a06d4e44",
+    "name": "betaa",
+    "imgUrl": "https://i.ibb.co/TtSsMvh/ominfood.png",
+    "type":"Business",
+    "createdBy": {
+      "_id": "5e26e0b718a0891d4c995527",
+      "fullname": "Lukas Rudrof",
+      "imgUrl": "img.jpg"
+    },
+    "usersData": {
+      "contacts": [
+        {
+          "email": "user@user.com",
+          "msg": "Please send me stuff",
+          "at": 123
+        }
+      ],
+      "signups": [
+        {
+          "email": "user@user.com",
+          "at": 123
+        }
+      ]
+    },
+    "theme": "vivid",
+    "cmps": [
+      {
+        "id": "wc02",
+        "type": "wap-header",
+        "classes": [
+          "betaa-header",
+          "flex",
+          "justify-between",
+          "full",
+          "main-layout"
+        ],
+        "info": {
+          "logoImg": {
+            "type": "img",
+            "url": "https://i.ibb.co/Nj1HXqh/Betaa-logo-White-footer.png",
+            "style": {}
+          },
+          "nav": {
+            "_id": "wc05",
+            "type": "wap-nav",
+            "style": {},
+            "classes": ["betaa-nav"],
+            "info": {
+              "links": [
+                {
+                  "type": "txt",
+                  "txt": "Portfolio",
+                  "link": "#portfolio",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Blog",
+                  "link": "#blog",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Shop",
+                  "link": "#shop",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Features",
+                  "link": "#features",
+                  "style": {}
+                }
+              ]
+            }
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wc01",
+        "type": "wap-hero",
+        "classes": ["betaa-hero", "full", "main-layout"],
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "Make your software better using the best solutions in one tool",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "Task tracking, customer support, and workflow management all wrapped up into one software tool your team and customers will love.",
+            "style": {}
+          },
+          "btns": [
+            {
+              "type": "btn",
+              "txt": "Start free trial",
+              "link": "#wc03",
+              "style": {}
+            },
+            {
+              "type": "btn",
+              "txt": "Learn more",
+              "link": "#wc03",
+              "style": {}
+            }
+          ],
+          "img": {
+            "type": "img",
+            "url": "https://i.ibb.co/pWKss5w/hero.png",
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wc03",
+        "type": "wap-container",
+        "classes": ["betaa"],
+        "info": {
+          "cmps": [
+            {
+              "id": "wc04",
+              "classes": ["betaa"],
+              "type": "wap-card",
+              "info": {
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/7bKWtCz/145.png",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Overview of your progress and tasks",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Some metrics play an essential role to measure the pulse of a company’s customer service efficiency, while others are more evaluating if a brand has a best approach.",
+                  "style": {}
+                },
+                "list": [
+                  {
+                    "type": "txt",
+                    "style": {},
+                    "icon": "https://i.ibb.co/gJwr1v3/cogwheel-4.png",
+                    "txt": "Task"
+                  },
+                  {
+                    "type": "txt",
+                    "style": {},
+                    "icon": "https://i.ibb.co/xfCNDGg/envelope-4.png",
+                    "txt": "Messaging"
+                  },
+                  {
+                    "type": "txt",
+                    "style": {},
+                    "icon": "https://i.ibb.co/hgRTZ96/growth-4.png",
+                    "txt": "Results"
+                  },
+                  {
+                    "type": "txt",
+                    "style": {},
+                    "icon": "https://i.ibb.co/NW4JM8g/task-4-1.png",
+                    "txt": "Support"
+                  }
+                ]
+              },
+              "style": {}
+            }
+          ]
+        }
+      },
+      {
+        "id": "wc05",
+        "classes": ["betaa-txt"],
+        "type": "wap-text",
+        "info": {
+          "tag": "basic features",
+          "heading": {
+            "type": "txt",
+            "txt": "Tool for every kind of business",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+            "style": {}
+          }
+        }
+      },
+      {
+        "id": "wc03",
+        "type": "wap-container",
+        "classes": ["betaa"],
+        "info": {
+          "cmps": [
+            {
+              "id": "wc04",
+              "classes": ["betaa"],
+              "type": "wap-card",
+              "info": {
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/mHtHp6b/Card-01.png",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Startups",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+                  "style": {}
+                },
+                "list": []
+              },
+              "style": {}
+            },
+            {
+              "id": "wc04",
+              "classes": ["betaa"],
+              "type": "wap-card",
+              "info": {
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/LSPP6s3/Card-02.png",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Entrepreneurs",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+                  "style": {}
+                },
+                "list": []
+              },
+              "style": {}
+            },
+            {
+              "id": "wc04",
+              "classes": ["betaa"],
+              "type": "wap-card",
+              "info": {
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/Lr1HMz4/Card-03.png",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Employees",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+                  "style": {}
+                },
+                "list": []
+              },
+              "style": {}
+            }
+          ]
+        }
+      },
+      {
+        "id": "wc08",
+        "classes": ["betaa-review"],
+        "type": "wap-review",
+        "info": {
+          "img": {
+            "type": "img",
+            "url": "https://i.ibb.co/1rWVn2F/Image.png",
+            "style": {}
+          },
+          "text": {
+            "type": "txt",
+            "txt": "\"It is really refreshing to work with this software which is truly helpful in the client’s preferences.\"",
+            "style": {}
+          },
+          "author": {
+            "type": "txt",
+            "txt": "Rebecca Calderon, ",
+            "txt2": "Head of marketing, Apple Inc.",
+            "style": {}
+          }
+        }
+      },
+      {
+        "id": "wc0554",
+        "classes": ["betaa-contact", "full"],
+        "type": "wap-contact",
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "Contact us",
+            "style": {}
+          },
+          "form": {
+            "type": "form",
+            "inputs": [
+              {
+                "type": "text",
+                "placeholder": "name"
+              },
+              {
+                "type": "email",
+                "placeholder": "email"
+              }
+            ],
+            "textarea": {
+              "placeholder": "Message"
+            },
+            "btn": {
+              "type": "submit",
+              "txt": "submit"
+            },
+            "style": {}
+          }
+        }
+      },
+      {
+        "id": "wc05",
+        "classes": ["betaa-txt"],
+        "type": "wap-text",
+        "info": {
+          "heading": {
+            "txt": "mprove your business and make your work easy",
+            "type": "txt",
+            "style": {}
+          },
+          "subHeading": {
+            "txt": "start free trial",
+            "type": "txt",
+            "style": {}
+          }
+        }
+      },
+      {
+        "id": "sc5999",
+        "classes": ["betaa-footer"],
+        "type": "wap-footer",
+        "info": {
+          "logoImg": {
+            "type": "img",
+            "url": "https://i.ibb.co/k9KJG2b/footer-Illustration.png",
+            "style": {}
+          },
+          "row1": {
+            "type": "txt",
+            "txt": "Contact us",
+            "texts": [
+              "2307 Beverley Rd, New York",
+              "office@betaa.com"
+            ],
+            "style": {}
+          },
+          "row2": {
+            "type": "txt",
+            "txt": "Account",
+            "texts": ["Create account", "Sign in", "iOS app", "Android app"],
+            "style": {}
+          },
+          "copyright": {
+            "type": "txt",
+            "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
+            "style": {}
+          }
+        }
+      }
+    ],
+    "isPublic": true
+  },
+  {
+    "_id": "5e28393890dd7201a06d4e44",
     "name": "omnifood",
     "imgUrl": "https://i.ibb.co/TtSsMvh/ominfood.png",
     "type":"Healthy food",
