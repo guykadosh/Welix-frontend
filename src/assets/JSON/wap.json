@@ -135,6 +135,7 @@
               "id": "wc0hgb54",
               "classes": [
                 "betaa-container",
+                "betaa-capabilities",
                 "betaa-layout"
               ],
               "type": "wap-card",
