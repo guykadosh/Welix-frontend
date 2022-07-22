@@ -6,28 +6,38 @@
         // display: none; // good
 
         .wap-header__inner {
-            
+
             .hamburger {
                 color: $light-color;
             }
+
             width: 100%;
+
             // justify-content: space-between;
             .wap-nav .nav-bar .nav-link a {
-                color: $light-color;
+                color: $dark-color4;
+
+                @include for-medium-layout {
+                    .wap-details & {
+                        color: $light-color;
+                    }
+                }
+
                 font-family: Nunito-regular;
                 margin-inline-end: em(20px);
             }
 
             .wap-nav {
+
                 // display: none;
                 // background-color: white;
                 .nav-bar {
                     background-color: $light-color;
-                    
+
                 }
             }
         }
-        
+
     }
 
     &-hero {
@@ -42,7 +52,7 @@
         margin-top: em(-1px);
         // padding-top: em(162px);
         padding-top: em(50px);
-        margin-bottom: em(200px);
+        margin-bottom: em(80px);
 
         padding-bottom: em(200px);
 
@@ -120,10 +130,17 @@
     &-container.betaa-capabilities {
         display: flex;
         max-width: 100vw;
-        // display: none;
-        
         justify-content: space-between;
         margin-bottom: em(40px);
+
+        @include for-medium-layout {
+            .wap-details & {
+                justify-content: center;
+
+            }
+        }
+
+
 
         .wap-card {
 
@@ -139,8 +156,13 @@
                 max-width: 90%;
                 max-height: rem(550px);
                 flex-basis: 50%;
-                margin-top: em(80px);
-                // display: none;
+
+                @include for-medium-layout {
+                    .wap-details & {
+                        margin-top: em(20px);
+                        margin-inline-end: em(10px);
+                    }
+                }
             }
 
             .card-content {
@@ -150,16 +172,37 @@
                 // max-width: 100vw;
                 padding: 0 em(10px);
 
+                // 
+                @include for-medium-layout {
+                    .wap-details & {
+                        // font-size: rem(36px);
+                        flex-basis: 50%;
+                        max-width: em(800px);
+                    }
+                }
+
                 .card-heading {
                     font-size: rem(41px);
                     line-height: rem(50px);
                     margin-block-end: rem(10px);
+
+                    @include for-medium-layout {
+                        .wap-details & {
+                            font-size: rem(36px);
+                        }
+                    }
                 }
 
                 .card-subheading {
                     font-size: rem(20px);
                     padding-bottom: rem(32px);
                     border-bottom: 1.5px solid $light-color5;
+
+                    @include for-medium-layout {
+                        .wap-details & {
+                            font-size: rem(16px);
+                        }
+                    }
                 }
 
                 .card-tag {
@@ -180,6 +223,14 @@
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: auto auto;
                     margin-top: rem(32px);
+
+                    @include for-medium-layout {
+                        .wap-details & {
+                            // font-size: rem(28px);
+                            margin-top: rem(10px);
+                        }
+                    }
+
                     font-size: rem(18px);
                     font-weight: 400;
                     grid-row-gap: 20px;
@@ -188,6 +239,7 @@
                         display: flex;
                         flex-direction: column-reverse;
                         align-items: center;
+
                         img {
                             width: 3rem;
                             margin: 15px;
@@ -209,6 +261,7 @@
         margin-bottom: em(40px);
 
         max-width: 100vw;
+
         .tag {
             text-align: center;
             background-color: #f7f4fd;
@@ -368,7 +421,7 @@
         // height: rem(368px);
         border-radius: 20px;
         margin-bottom: em(80px);
-        
+        margin: em(15px);
         padding: em(15px);
 
         img {
@@ -431,15 +484,18 @@
     &-footer {
         background-color: #5D21D1;
         clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
-        // display: none; // not good
+
         max-width: 100vw;
+
         .footer-inner {
             justify-content: space-between;
-            padding-top: em(20px);
+            // padding-top: em(20px);
+            padding-top: em(30px);
 
             img {
                 width: 100px;
             }
+
             .row {
                 padding: rem(20px);
                 display: flex;
@@ -463,6 +519,8 @@
             text-align: center;
             font-family: Nunito-light;
             color: $light-color;
+
+            font-size: rem(12px);
         }
 
     }
