@@ -4,11 +4,13 @@ import router from './router'
 import store from './store'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import { responsive } from './directives'
 
 import '@/assets/styles/styles.scss'
 
 const app = createApp(App)
 
+app.directive('responsive', responsive)
 app.use(router)
 app.use(store)
 app.use(Antd)

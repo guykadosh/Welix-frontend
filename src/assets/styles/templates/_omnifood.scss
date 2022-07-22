@@ -179,10 +179,16 @@
         }
       }
 
+      .small & {
+      }
+
       @include for-small-layout {
         img {
           // height: em(28px);
         }
+      }
+
+      .medium & {
       }
 
       @include for-medium-layout {

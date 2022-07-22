@@ -1,15 +1,11 @@
 <template>
-  <main class="editor-wap-container main-layout">
-    <!-- <iframe
-      v-if="loaded"
-      :src="iframe.src"
-      :style="iframe.style"
-      :height="iframe.style.height"
-      :width="iframe.style.width"
-      type="application/pdf"
-      frameborder="0"
-    ></iframe> -->
-    <div class="wap" ref="wap">
+  <main
+    class="editor-wap-container"
+    :class="responsiveClass"
+    ref="container"
+    :style="{ maxWidth: conMaxWidth + 'px' }"
+  >
+    <div v-responsive>
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"
@@ -36,6 +32,7 @@ import wapFooterEdit from '../waps-edit/wap-footer-edit.vue'
 import wapReviewEdit from '../waps-edit/wap-review-edit.vue'
 import wapTextEdit from '../waps-edit/wap-text-edit.vue'
 import wapContactEdit from '../waps-edit/wap-contact-edit.vue'
+import { eventBus } from '../../services/event-bus.service'
 
 export default {
   name: '',
@@ -44,14 +41,14 @@ export default {
   },
   data() {
     return {
-      iframe: {
-        src: window.location.href,
-        style: null,
-        wrapperStyle: null,
-      },
-      loaded: false,
+      conMaxWidth: 1300,
+      responsiveClass: '',
     }
   },
+  // directives: {
+  //   responsive: ResponsiveDirective,
+  // },
+  watch: {},
   methods: {
     onDrop(dropRes) {
       let cmps = JSON.parse(JSON.stringify(this.wap.cmps))
@@ -63,21 +60,28 @@ export default {
     },
   },
   computed: {},
+  created() {
+    eventBus.on('resized', this.resize)
+  },
   mounted() {
-    let wap = this.$refs.wap
-    this.iframe.style = {
-      position: 'absolute',
-      width: window.innerWidth,
-      height: window.innerHeight,
-      top: -wap.offsetTop + 'px',
-      left: -wap.offsetLeft + 'px',
-    }
-    this.iframe.wrapperStyle = {
-      overflow: 'hidden',
-      height: wap.clientHeight + 'px',
-      width: wap.clientWidth + 'px',
-    }
-    this.loaded = true
+    console.log(this.$refs)
+    new ResizeObserver(this.resized).observe(this.$refs.container)
+  },
+  methods: {
+    resized() {
+      const { offsetWidth } = this.$refs.container
+      if (offsetWidth >= 700) this.responsiveClass = 'small'
+      if (offsetWidth >= 840) this.responsiveClass = 'small medium'
+      if (offsetWidth >= 1024) this.responsiveClass = 'small medium narrow'
+      if (offsetWidth >= 1200)
+        this.responsiveClass = 'small medium narrow normal'
+      if (offsetWidth >= 1360)
+        this.responsiveClass = 'small medium narrow normal wide'
+    },
+    resize(size) {
+      console.log('Hi?')
+      this.conMaxWidth = size
+    },
   },
   components: {
     Container,
