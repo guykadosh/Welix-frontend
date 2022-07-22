@@ -1,7 +1,7 @@
 .betaa {
     &-header {
         background-color: #5D21D1;
-
+        width: 100vw;
         .wap-header__inner {
 
             .wap-nav .nav-bar .nav-link a {
@@ -169,7 +169,7 @@
 
     &-footer {
         background-color: #5D21D1;
-        clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
 
         .footer-inner {
             justify-content: space-between;
@@ -190,7 +190,6 @@
                     color: $light-color;
                 }
             }
-
         }
 
         .coffee {

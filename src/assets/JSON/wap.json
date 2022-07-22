@@ -299,32 +299,6 @@
         }
       },
       {
-        "id": "mfgnih987",
-        "classes": [
-          "betaa-review",
-          "betaa-layout"
-        ],
-        "type": "wap-review",
-        "info": {
-          "img": {
-            "type": "img",
-            "url": "https://i.ibb.co/1rWVn2F/Image.png",
-            "style": {}
-          },
-          "text": {
-            "type": "txt",
-            "txt": "\"It is really refreshing to work with this software which is truly helpful in the client’s preferences.\"",
-            "style": {}
-          },
-          "author": {
-            "type": "txt",
-            "txt": "Rebecca Calderon, ",
-            "txt2": "Head of marketing, Apple Inc.",
-            "style": {}
-          }
-        }
-      },
-      {
         "id": "wc0554njj",
         "classes": [
           "betaa-contact",
@@ -357,6 +331,32 @@
               "type": "submit",
               "txt": "submit"
             },
+            "style": {}
+          }
+        }
+      },
+      {
+        "id": "mfgnih987",
+        "classes": [
+          "betaa-review",
+          "betaa-layout"
+        ],
+        "type": "wap-review",
+        "info": {
+          "img": {
+            "type": "img",
+            "url": "https://i.ibb.co/1rWVn2F/Image.png",
+            "style": {}
+          },
+          "text": {
+            "type": "txt",
+            "txt": "\"It is really refreshing to work with this software which is truly helpful in the client’s preferences.\"",
+            "style": {}
+          },
+          "author": {
+            "type": "txt",
+            "txt": "Rebecca Calderon, ",
+            "txt2": "Head of marketing, Apple Inc.",
             "style": {}
           }
         }
