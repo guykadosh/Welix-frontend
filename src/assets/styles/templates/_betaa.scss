@@ -10,14 +10,13 @@
          max-width: rem(550px);
 
      }
->>>>>>> 93269a99f22bbc40fa8c9e1bc3540bc4acddeefe
 
      .card {
-        //  &-img {
-        //      border-radius: rem(20px);
-        //      width: 38rem;
+         &-img {
+             border-radius: rem(20px);
+             width: 38rem;
 
-        //  }
+         }
 
          &-content {
              display: flex;
