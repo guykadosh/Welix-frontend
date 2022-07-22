@@ -7,15 +7,13 @@ $secondary-color: #375aad;
 $secondary-color-dark: darken(#375aad, 8%);
 $secondary-color-light: lighten(#375aad, 10%);
 
-$third-color: #d03a5c;
-$forth-color: #f8cc2d;
-$fifth-color: #fa5252;
-
+$dark-color: #000000;
 $dark-color1: #212529;
 $dark-color2: #343a40;
 $dark-color3: #495057;
 $dark-color4: #333;
 
+$light-color: #ffffff;
 $light-color1: #f8f9fa;
 $light-color2: #f1f3f5;
 $light-color3: #e9ecef;
@@ -28,8 +26,8 @@ $layoutPadding: 40px;
 // LAYOUT BREAKPOINTS
 $break-small: 700px;
 $break-medium: 860px;
-$break-narrow: 1200px;
-$break-normal: 1360px;
+$break-narrow: 1024px;
+$break-normal: 1200px;
 $break-wide: 1920px;
 
 $padded-break-narrow: $break-narrow + $layoutPadding * 2;
