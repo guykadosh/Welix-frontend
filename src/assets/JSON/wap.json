@@ -2,7 +2,7 @@
   {
     "_id": "5e28393890dd7201a06d4e44",
     "name": "Lukas Rudrof  Funktionales Webdesign, Webflow & SEO",
-    "imgUrl": "@/assets/img/ominfood.png",
+    "imgUrl": "https://i.ibb.co/TtSsMvh/ominfood.png",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995527",
       "fullname": "Lukas Rudrof",
@@ -654,11 +654,7 @@
   {
     "_id": "5e28393890dd7201a06d4e55",
     "name": "Making a difference for food",
-    "img": {
-      "type": "img",
-      "url": "@/assets/img/ominfood.png",
-      "style": {}
-    },
+    "imgUrl": "https://i.ibb.co/Tmb35bv/creative.png",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995584",
       "fullname": "Lukas Rudrof",
@@ -763,7 +759,8 @@
         "id": "wc03",
         "type": "wap-container",
         "classes": [
-          "making-diff-cards", "full"
+          "making-diff-cards",
+          "full"
         ],
         "info": {
           "cmps": [
@@ -880,7 +877,8 @@
       {
         "id": "wc07845",
         "classes": [
-          "making-diff-gallery", "full"
+          "making-diff-gallery",
+          "full"
         ],
         "type": "wap-gallery",
         "info": {
@@ -903,7 +901,8 @@
       {
         "id": "wc0554",
         "classes": [
-          "making-diff-contact", "full"
+          "making-diff-contact",
+          "full"
         ],
         "type": "wap-contact",
         "info": {

@@ -1,13 +1,13 @@
 <template>
-  <section class="waps-container main-layout">
+  <section class="wap-list main-layout">
     <app-header></app-header>
-    <div class="img-container">
-      <div v-for="wap in waps">
+    <div class="wap-list-container">
+      <div v-for="wap in waps" :key="wap._id">
         <div class="hover">
           <a @click="wapToEdit(wap)">Edit</a>
           <router-link :to="'/wap/' + wap._id">View</router-link>
-          <img src="@/assets/img/ominfood.png" alt="" />
         </div>
+        <img :src="wap.imgUrl" alt="" />
         <p>Healthy food</p>
       </div>
     </div>
