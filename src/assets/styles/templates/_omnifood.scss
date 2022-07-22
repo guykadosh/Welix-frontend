@@ -11,7 +11,6 @@
 
   &-nav {
     .wap-nav {
-
       .nav-link {
         margin-inline-end: rem(30px);
         font-weight: 500;
@@ -19,21 +18,19 @@
 
         &:last-child {
           margin-inline-end: 0;
-          
+        }
+
+        a {
+          font-family: Rubik-Bold, sans-serif;
+          text-decoration: none;
+          color: #333;
+
+          &:hover {
+            color: #cf711f;
+          }
+        }
       }
 
-      a {
-        font-family: Rubik-Bold, sans-serif;
-        text-decoration: none;
-        color: #333;
-        
-        &:hover {
-          color: #cf711f;
-        }
-        
-      }
-    }
-      
       transition: all 0.3s;
     }
 
@@ -56,13 +53,11 @@
     }
 
     .mobile-nav {
-
       //??
       @include for-mobile-layout {
         display: block;
       }
     }
-
   }
 
   &-hero {
@@ -86,7 +81,6 @@
         gap: 5rem;
         justify-content: center;
         padding: 0 0.5em;
-
       }
 
       @include for-small-layout {
@@ -186,13 +180,11 @@
       @include for-small-layout {
         display: inline;
 
-        >* {
+        > * {
           margin: rem(15px);
         }
       }
     }
-
-
   }
 
   &-meals {
@@ -209,7 +201,6 @@
       max-width: em(800px);
       margin: 0 auto;
       gap: rem(25px);
-
     }
 
     @include for-small-layout {
@@ -218,7 +209,6 @@
       max-width: auto;
       margin: 0 auto;
       gap: rem(25px);
-
     }
   }
 
@@ -297,7 +287,6 @@
       margin-bottom: 0.5em;
       color: rgba(0, 0, 0, 0.85);
       font-weight: 500;
-
     }
   }
 
