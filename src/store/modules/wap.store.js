@@ -39,18 +39,25 @@ export default {
 
       let idx = cmps.findIndex(cmp => cmp.id === newCmp.id)
 
+      // -1 means the cmp lives inside a wap container
       if (idx === -1) {
-        idx = cmps
+        // find the the container
+        const wapContainer = cmps
           .filter(cmp => cmp.type === 'wap-container')
-          .findIndex(cmp => cmp.cmps.some(cmp => cmp.id === newCmp.id))
+          .find(cmp => cmp.info.cmps.some(cmp => cmp.id === newCmp.id))
 
-        innerIdx = cmps[idx].cmps.findIndex(cmp => cmp.id === newCmp.id)
-        cmps[idx].cmps.splice(innerIdx, 1, newCmp)
-        newCmp = cmps[idx]
+        // find the cmp idx
+        const innerIdx = wapContainer.info.cmps.findIndex(
+          cmp => cmp.id === newCmp.id
+        )
+
+        wapContainer.info.cmps.splice(innerIdx, 1, newCmp)
+        idx = cmps.findIndex(cmp => cmp.id === wapContainer.id)
+
+        state.currWap.cmps.splice(idx, 1, wapContainer)
+      } else {
+        state.currWap.cmps.splice(idx, 1, newCmp)
       }
-
-      state.currWap.cmps.splice(idx, 1, newCmp)
-      console.log(newCmp)
     },
     updateCmps(state, { cmps }) {
       state.currWap.cmps = cmps
