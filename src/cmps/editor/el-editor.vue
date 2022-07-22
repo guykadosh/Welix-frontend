@@ -1,18 +1,21 @@
 <template lang="">
-  <component :is="type" @edited="updateCmp"></component>
+  <component :is="type" @edited="updateCmp" :cmp="cmp"></component>
 </template>
 <script>
 import elEditorTxt from './costum-editors/el-editor-txt.vue'
 import elEditorBtn from './costum-editors/el-editor-btn.vue'
 import elEditorImg from './costum-editors/el-editor-img.vue'
+import elEditorImgs from './costum-editors/el-editor-imgs.vue'
+
 export default {
   components: {
     elEditorTxt,
     elEditorBtn,
     elEditorImg,
+    elEditorImgs,
   },
   methods: {
-    updateCmp({ style, link, url }) {
+    updateCmp({ style, link, url, urls }) {
       const { key, idx } = this.el
 
       const cmp = JSON.parse(JSON.stringify(this.cmp))
@@ -27,6 +30,10 @@ export default {
 
       if (url) {
         cmp.info[key].url = url
+      }
+
+      if (urls) {
+        cmp.info[key].urls = urls
       }
 
       if (link) {
