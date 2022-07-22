@@ -114,8 +114,9 @@
         }
     }
 
-    &-container {
+    &-container.betaa-features {
 
+        display: flex;
         .wap-card {
             background-color: #f1f3ff;
             display: flex;
