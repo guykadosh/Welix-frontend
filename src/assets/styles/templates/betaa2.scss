@@ -1,26 +1,20 @@
 .betaa {
     &-header {
-        // background-color: blue;
-        position: absolute;
-        top: 0;
-        left: 0;
-        // display: flex;
-        
+        background-color: #5D21D1;
 
-        .wap-header__inner {
-            // width: 100%;
-            background-color: yellow;
-        }
+        // .wap-header__inner {
+        //     // width: 100vw;
+        // }
     }
-
 
     &-hero {
         background-color: #5D21D1;
-        // background-image: url("https://i.ibb.co/pWKss5w/hero.png");
         height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
+        clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+        margin-top: em(-1px);
 
         .hero-inner {
             // background-color: brown;
@@ -52,9 +46,9 @@
 
             }
         }
-        img {
-            min-width: 100vw;
-        }
+        // img {
+            
+        // }
     }
 }
 
