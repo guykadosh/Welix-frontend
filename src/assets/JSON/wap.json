@@ -45,9 +45,7 @@
             "_id": "wc05",
             "type": "wap-nav",
             "style": {},
-            "classes": [
-              "omnifood-nav"
-            ],
+            "classes": ["omnifood-nav"],
             "info": {
               "links": [
                 {
@@ -89,11 +87,7 @@
       {
         "id": "wc01",
         "type": "wap-hero",
-        "classes": [
-          "omnifood-hero",
-          "full",
-          "main-layout"
-        ],
+        "classes": ["omnifood-hero", "full", "main-layout"],
         "info": {
           "heading": {
             "type": "txt",
@@ -129,9 +123,7 @@
       },
       {
         "id": "wc04",
-        "classes": [
-          "omnifood-brand"
-        ],
+        "classes": ["omnifood-brand"],
         "type": "wap-gallery",
         "info": {
           "title": {
@@ -156,16 +148,12 @@
       {
         "id": "wc03",
         "type": "wap-container",
-        "classes": [
-          "omnifood-meals"
-        ],
+        "classes": ["omnifood-meals"],
         "info": {
           "cmps": [
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-meal"
-              ],
+              "classes": ["omnifood-meal"],
               "type": "wap-card",
               "info": {
                 "img": {
@@ -208,9 +196,7 @@
             },
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-meal"
-              ],
+              "classes": ["omnifood-meal"],
               "style": {},
               "type": "wap-card",
               "info": {
@@ -248,9 +234,7 @@
             },
             {
               "id": "wc04",
-              "classes": [
-                "omnifood-meal-list"
-              ],
+              "classes": ["omnifood-meal-list"],
               "type": "wap-list",
               "info": {
                 "heading": {
@@ -281,9 +265,7 @@
       },
       {
         "id": "wc05",
-        "classes": [
-          "omnifood-txt"
-        ],
+        "classes": ["omnifood-txt"],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -300,17 +282,13 @@
       },
       {
         "id": "wc06",
-        "classes": [
-          "omnifood-reviews"
-        ],
+        "classes": ["omnifood-reviews"],
         "type": "wap-container",
         "info": {
           "cmps": [
             {
               "id": "wc08",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -332,9 +310,7 @@
             },
             {
               "id": "wc015",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -356,9 +332,7 @@
             },
             {
               "id": "wc017",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -380,9 +354,7 @@
             },
             {
               "id": "wc018",
-              "classes": [
-                "omnifood-review"
-              ],
+              "classes": ["omnifood-review"],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -410,9 +382,7 @@
       },
       {
         "id": "wc07845",
-        "classes": [
-          "omnifood-gallery"
-        ],
+        "classes": ["omnifood-gallery"],
         "type": "wap-gallery",
         "info": {
           "imgs": {
@@ -438,9 +408,7 @@
       },
       {
         "id": "wc05",
-        "classes": [
-          "omnifood-txt"
-        ],
+        "classes": ["omnifood-txt"],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -458,16 +426,12 @@
       {
         "id": "wc0789",
         "type": "wap-container",
-        "classes": [
-          "omnifood-pricing"
-        ],
+        "classes": ["omnifood-pricing"],
         "info": {
           "cmps": [
             {
               "id": "wc695",
-              "classes": [
-                "omnifood-pricing-starter"
-              ],
+              "classes": ["omnifood-pricing-starter"],
               "type": "wap-card",
               "info": {
                 "heading": {
@@ -515,9 +479,7 @@
             },
             {
               "id": "wc6956",
-              "classes": [
-                "omnifood-pricing-complete"
-              ],
+              "classes": ["omnifood-pricing-complete"],
               "type": "wap-card",
               "info": {
                 "heading": {
@@ -611,9 +573,7 @@
       },
       {
         "id": "sc5999",
-        "classes": [
-          "omnifood-footer"
-        ],
+        "classes": ["omnifood-footer"],
         "type": "wap-footer",
         "info": {
           "logoImg": {
@@ -633,12 +593,7 @@
           "row2": {
             "type": "txt",
             "txt": "Account",
-            "texts": [
-              "Create account",
-              "Sign in",
-              "iOS app",
-              "Android app"
-            ],
+            "texts": ["Create account", "Sign in", "iOS app", "Android app"],
             "style": {}
           },
           "copyright": {
@@ -700,9 +655,7 @@
           "nav": {
             "_id": "wph01",
             "type": "wap-nav",
-            "classes": [
-              "making-diff-nav"
-            ],
+            "classes": ["making-diff-nav"],
             "info": {
               "links": [
                 {
@@ -745,11 +698,7 @@
       {
         "id": "wc01",
         "type": "wap-hero",
-        "classes": [
-          "making-diff-hero",
-          "full",
-          "main-layout"
-        ],
+        "classes": ["making-diff-hero", "full", "main-layout"],
         "info": {
           "heading": {
             "type": "txt",
@@ -762,16 +711,12 @@
       {
         "id": "wc03",
         "type": "wap-container",
-        "classes": [
-          "making-diff-cards", "full"
-        ],
+        "classes": ["making-diff-cards", "full"],
         "info": {
           "cmps": [
             {
               "id": "wcc04",
-              "classes": [
-                "making-diff-card about"
-              ],
+              "classes": ["making-diff-card about"],
               "type": "wap-card",
               "info": {
                 "tag": "about us",
@@ -797,9 +742,7 @@
             },
             {
               "id": "wcc05",
-              "classes": [
-                "making-diff-card features"
-              ],
+              "classes": ["making-diff-card features"],
               "type": "wap-card",
               "info": {
                 "tag": "our features",
@@ -827,9 +770,7 @@
             },
             {
               "id": "wcc06",
-              "classes": [
-                "making-diff-card digital"
-              ],
+              "classes": ["making-diff-card digital"],
               "type": "wap-card",
               "info": {
                 "tag": "digital studio",
@@ -860,9 +801,7 @@
       },
       {
         "id": "wc05",
-        "classes": [
-          "making-diff-txt"
-        ],
+        "classes": ["making-diff-txt"],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -879,9 +818,7 @@
       },
       {
         "id": "wc07845",
-        "classes": [
-          "making-diff-gallery", "full"
-        ],
+        "classes": ["making-diff-gallery"],
         "type": "wap-gallery",
         "info": {
           "txt": "",
@@ -902,9 +839,7 @@
       },
       {
         "id": "wc0554",
-        "classes": [
-          "making-diff-contact", "full"
-        ],
+        "classes": ["making-diff-contact", "full"],
         "type": "wap-contact",
         "info": {
           "heading": {

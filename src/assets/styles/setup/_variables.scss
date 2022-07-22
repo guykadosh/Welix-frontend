@@ -26,8 +26,8 @@ $layoutPadding: 40px;
 // LAYOUT BREAKPOINTS
 $break-small: 700px;
 $break-medium: 860px;
-$break-narrow: 1200px;
-$break-normal: 1360px;
+$break-narrow: 1024px;
+$break-normal: 1200px;
 $break-wide: 1920px;
 
 $padded-break-narrow: $break-narrow + $layoutPadding * 2;
