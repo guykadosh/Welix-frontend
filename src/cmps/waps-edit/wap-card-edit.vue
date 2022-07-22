@@ -1,32 +1,116 @@
 <template>
   <section v-if="cmp" class="wap-card" :class="cmp.classes">
-    <img v-if="info.img" class="card-img" :src="info.img.url" />
+    <img
+      v-if="info.img"
+      class="card-img"
+      :src="info.img.url"
+      @click="setEditable(info.img.type, 'img')"
+    />
     <div class="card-img-container"></div>
     <div class="card-content">
-      <span class="card-tag" contenteditable="true">{{ info.tag }}</span>
-      <h2 class="card-heading" v-if="info.heading" contenteditable="true">{{ info.heading.txt }}</h2>
-      <p class="card-price" v-if="info.price" >
-        $ <span contenteditable="true">{{ info.price.txt }}</span>
+      <span
+        v-if="info.tag"
+        class="card-tag"
+        contenteditable="true"
+        :style="info.tag?.style"
+        ref="tag"
+        @click="setEditable(info.tag.type, 'tag')"
+        @input="changeTxt('tag')"
+        >{{ info.tag }}</span
+      >
+      <h2
+        class="card-heading"
+        v-if="info.heading"
+        :style="info.heading.style"
+        contenteditable="true"
+        ref="heading"
+        @click="setEditable(info.heading.type, 'heading')"
+        @input="changeTxt('heading')"
+      >
+        {{ info.heading.txt }}
+      </h2>
+      <p class="card-price" v-if="info.price" :style="info.price.style">
+        $
+        <span
+          contenteditable="true"
+          ref="price"
+          @click="setEditable(info.price.type, 'price')"
+          @input="changeTxt('price')"
+          >{{ info.price.txt }}</span
+        >
       </p>
-      <h3 class="card-subheading" v-if="info.subHeading" contenteditable="true">
+      <h3
+        class="card-subheading"
+        v-if="info.subHeading"
+        contenteditable="true"
+        :style="info.subHeading.style"
+        ref="subHeading"
+        @click="setEditable(info.subHeading.type, 'subHeading')"
+        @input="changeTxt('subHeading')"
+      >
         {{ info.subHeading.txt }}
       </h3>
       <ul class="card-list clean-list" v-if="info.list">
-        <li v-for="line in info.list" :key="line">
-          <span>{{ line.icon }}</span> <span contenteditable="true">{{ line.txt }}</span>
+        <li v-for="(line, idx) in info.list" :key="line" :style="line.style">
+          <span>{{ line.icon }}</span>
+          <span
+            contenteditable="true"
+            :ref="'line' + idx"
+            @click="setEditable(info.list[idx].type, 'list', idx)"
+            @input="changeTxt('list', idx, 'line' + idx)"
+            >{{ line.txt }}</span
+          >
         </li>
       </ul>
-      <a v-if="info.btn" class="card-btn" >{{
-        info.btn.txt
-      }}</a>
+      <a
+        v-if="info.btn"
+        class="card-btn"
+        ref="btn"
+        @click="setEditable(info.btn.type, 'btn')"
+        @input="changeTxt('btn')"
+      >
+        {{ info.btn.txt }}</a
+      >
     </div>
   </section>
 </template>
 <script>
+import { eventBus } from '../../services/event-bus.service'
+
 export default {
   name: 'wap-card-edit',
   props: {
     cmp: Object,
+  },
+  data() {
+    return {
+      cmpToEdit: null,
+    }
+  },
+  created() {
+    this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
+  },
+  methods: {
+    changeTxt(ref, idx = null, itemRef) {
+      if (idx === null) {
+        this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+      } else {
+        this.cmpToEdit.info[ref][idx].txt = this.$refs[itemRef][0].innerText
+      }
+
+      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'updateCmp', newCmp })
+    },
+    setEditable(type, key, idx = null) {
+      eventBus.emit('open-edit')
+      const el = { type, key, idx }
+      const cmp = JSON.parse(JSON.stringify(this.cmp))
+
+      this.$store.commit({ type: 'setElToEdit', el })
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
+
+      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
   },
   computed: {
     info() {

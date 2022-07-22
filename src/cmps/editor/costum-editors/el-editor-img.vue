@@ -36,7 +36,7 @@ export default {
     CloudUploadOutlined,
   },
   created() {
-    this.url = this.cmp.info.img.url
+    this.url = this.cmp.info.img?.url || this.cmp.info.logoImg.url
   },
   methods: {
     setUrl() {

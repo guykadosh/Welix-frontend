@@ -1,16 +1,23 @@
 <template>
   <section class="full main-layout" :style="cmp.style">
-    <Container
+    <!-- <Container
       :get-child-payload="getChildPayload"
       group-name="2"
       @drop="onDrop($event)"
       :tag="{ value: 'div', props: { class: cmp.classes } }"
       :auto-scroll-enabled="true"
-    >
-      <Draggable v-for="item in items" :key="item.id">
-        <component :is="item.type + '-edit'" :cmp="item"></component>
-      </Draggable>
-    </Container>
+    > -->
+    <!-- <Draggable v-for="item in items" :key="item.id"> -->
+    <div :class="cmp.classes">
+      <component
+        v-for="item in items"
+        :key="item.id"
+        :is="item.type + '-edit'"
+        :cmp="item"
+      ></component>
+    </div>
+    <!-- </Draggable>
+    </Container> -->
   </section>
 </template>
 
