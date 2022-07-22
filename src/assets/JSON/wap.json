@@ -134,11 +134,12 @@
             {
               "id": "wc0hgb54",
               "classes": [
-                "betaa-container"
-                ,"betaa-layout"
+                "betaa-container",
+                "betaa-layout"
               ],
               "type": "wap-card",
               "info": {
+                "tag": "CAPABILITIES",
                 "img": {
                   "type": "img",
                   "url": "https://i.ibb.co/7bKWtCz/145.png",
