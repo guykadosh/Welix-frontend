@@ -79,6 +79,74 @@
         }
     }
 
-    
+    &-txt {
+        // background-color: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 rem(235px);
 
+        .tag {
+            text-align: center;
+            background-color: #f7f4fd;
+            margin-top: rem(50px);
+            font-weight: 700;
+            font-size: rem(16px);
+            margin-bottom: rem(10px);
+            color: #763de7;
+            width: max-content;
+            padding: 0.8rem;
+            border-radius: rem(22px);
+            text-transform: uppercase;
+        }
+
+        .text1 {
+            text-align: center;
+            font-family: NotoSans-bold;
+            font-size: rem(36px);
+        }
+
+        .text2 {
+            text-align: center;
+            font-family: Nunito-light;
+            color: $dark-color5;
+        }
+    }
+
+    &-container.betaa-features {
+
+        display: flex;
+        .wap-card {
+            background-color: #f1f3ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: fit-content;
+            padding-top: rem(42px);
+            margin: 20px;
+            border-radius: rem(20px);
+            max-height: min-content;
+
+            .card-img {
+                max-width: 180px;
+                margin-block-end: rem(16px);
+            }
+
+            .card-content {
+                text-align: center;
+
+                .card-heading {
+                    font-size: rem(28px);
+                    margin-block-end: rem(5px);
+                }
+
+                .card-subheading {
+                    margin: 0;
+                    font-size: rem(18px);
+                    font-family: Nunito-light;
+                }
+            }
+        }
+    }
 }

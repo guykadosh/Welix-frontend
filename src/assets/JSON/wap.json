@@ -127,17 +127,13 @@
         "type": "wap-container",
         "classes": [
           "betaa",
+          "betaa-container",
+          "betaa-capabilities",
           "betaa-layout"
         ],
         "info": {
           "cmps": [
             {
-              "id": "wc0hgb54",
-              "classes": [
-                "betaa-container",
-                "betaa-capabilities",
-                "betaa-layout"
-              ],
               "type": "wap-card",
               "info": {
                 "tag": "CAPABILITIES",
@@ -213,7 +209,8 @@
         "id": "mukjyu6584",
         "type": "wap-container",
         "classes": [
-          "betaa",
+          "betaa-container",
+          "betaa-features",
           "betaa-layout"
         ],
         "info": {
