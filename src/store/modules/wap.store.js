@@ -35,7 +35,20 @@ export default {
       state.elToEdit = el
     },
     updateCmp(state, { newCmp }) {
-      const idx = state.currWap.cmps.findIndex(cmp => cmp.id === newCmp.id)
+      const { cmps } = state.currWap
+
+      let idx = cmps.findIndex(cmp => cmp.id === newCmp.id)
+
+      if (idx === -1) {
+        idx = cmps
+          .filter(cmp => cmp.type === 'wap-container')
+          .findIndex(cmp => cmp.cmps.some(cmp => cmp.id === newCmp.id))
+
+        innerIdx = cmps[idx].cmps.findIndex(cmp => cmp.id === newCmp.id)
+        cmps[idx].cmps.splice(innerIdx, 1, newCmp)
+        newCmp = cmps[idx]
+      }
+
       state.currWap.cmps.splice(idx, 1, newCmp)
       console.log(newCmp)
     },
