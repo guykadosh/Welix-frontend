@@ -2,13 +2,15 @@
   <section class="wap-list main-layout">
     <app-header></app-header>
     <div class="wap-list-container">
-      <div v-for="wap in waps" :key="wap._id">
-        <div class="hover">
-          <a @click="wapToEdit(wap)">Edit</a>
-          <router-link :to="'/wap/' + wap._id">View</router-link>
+      <div class="wap-preview" v-for="wap in waps" :key="wap._id">
+        <div class="wap-preview-img">
+          <div class="wap-preview-btns">
+            <a @click="wapToEdit(wap)">Edit</a>
+            <router-link :to="'/wap/' + wap._id">View</router-link>
+          </div>
+          <img :src="wap.imgUrl" alt="" />
         </div>
-        <img :src="wap.imgUrl" alt="" />
-        <p>{{wap.type}}</p>
+        <p>{{ wap.type }}</p>
       </div>
     </div>
   </section>
