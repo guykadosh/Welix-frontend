@@ -2,23 +2,29 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     .card {
         &-img {
             border-radius: rem(20px);
         }
-        &-content{
+
+        &-content {
             display: flex;
             flex-direction: column;
             padding-left: rem(45px);
         }
-        &-heading{
+
+        &-heading {
             margin-top: rem(25px);
             font-size: rem(41px);
         }
-        &-subheading{
+
+        &-subheading {
             font-size: rem(20px);
             margin-top: rem(18px);
- 
+            padding: rem(38px);
+            border-bottom: 1.5px solid $light-color5;
+
         }
     }
 }
