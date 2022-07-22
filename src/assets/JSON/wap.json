@@ -27,7 +27,7 @@
     "theme": "vivid",
     "cmps": [
       {
-        "id": "wc02",
+        "id": "fhngh1",
         "type": "wap-header",
         "classes": [
           "betaa-header",
@@ -82,7 +82,7 @@
         "style": {}
       },
       {
-        "id": "wc01",
+        "id": "gbfgg",
         "type": "wap-hero",
         "classes": [
           "betaa-hero",
@@ -116,14 +116,14 @@
           ],
           "img": {
             "type": "img",
-            "url": "https://i.ibb.co/pWKss5w/hero.png",
+            "url": "https://i.ibb.co/b3dbfTs/625d80b8b75698210e93919d-Top-Section-Illustration.png",
             "style": {}
           }
         },
         "style": {}
       },
       {
-        "id": "wc03",
+        "id": "jjyuh",
         "type": "wap-container",
         "classes": [
           "betaa",
@@ -132,7 +132,7 @@
         "info": {
           "cmps": [
             {
-              "id": "wc04",
+              "id": "wc0hgb54",
               "classes": [
                 "betaa-container"
                 ,"betaa-layout"
@@ -187,7 +187,7 @@
         }
       },
       {
-        "id": "wc05",
+        "id": "gbgty42",
         "classes": [
           "betaa-txt",
           "betaa-layout"
@@ -208,7 +208,7 @@
         }
       },
       {
-        "id": "wc03",
+        "id": "mukjyu6584",
         "type": "wap-container",
         "classes": [
           "betaa",
@@ -217,7 +217,7 @@
         "info": {
           "cmps": [
             {
-              "id": "wc04",
+              "id": "wc04gfbg21g",
               "classes": [
                 "betaa"
               ],
@@ -243,7 +243,7 @@
               "style": {}
             },
             {
-              "id": "wc04",
+              "id": "wc04hjjhvcb55",
               "classes": [
                 "betaa",
                 "betaa-layout"
@@ -270,7 +270,7 @@
               "style": {}
             },
             {
-              "id": "wc04",
+              "id": "mhn25212",
               "classes": [
                 "betaa",
                 "betaa-layout"
@@ -300,7 +300,7 @@
         }
       },
       {
-        "id": "wc08",
+        "id": "mfgnih987",
         "classes": [
           "betaa-review",
           "betaa-layout"
@@ -326,7 +326,7 @@
         }
       },
       {
-        "id": "wc0554",
+        "id": "wc0554njj",
         "classes": [
           "betaa-contact",
           "full",
@@ -363,7 +363,7 @@
         }
       },
       {
-        "id": "wc05",
+        "id": "wc05jjjj4",
         "classes": [
           "betaa-txt",
           "betaa-layout"
@@ -383,7 +383,7 @@
         }
       },
       {
-        "id": "sc5999",
+        "id": "sc599966",
         "classes": [
           "betaa-footer",
           "full",
@@ -454,7 +454,7 @@
     "theme": "vivid",
     "cmps": [
       {
-        "id": "wc02",
+        "id": "wc024355",
         "type": "wap-header",
         "classes": [
           "omnifood-header",
@@ -515,7 +515,7 @@
         "style": {}
       },
       {
-        "id": "wc01",
+        "id": "wc011525",
         "type": "wap-hero",
         "classes": [
           "omnifood-hero",
@@ -556,7 +556,7 @@
         "style": {}
       },
       {
-        "id": "wc04",
+        "id": "wc045678gfb",
         "classes": [
           "omnifood-brand"
         ],
@@ -582,7 +582,7 @@
         "style": {}
       },
       {
-        "id": "wc03",
+        "id": "wc03bhgfh63",
         "type": "wap-container",
         "classes": [
           "omnifood-meals"
@@ -590,7 +590,7 @@
         "info": {
           "cmps": [
             {
-              "id": "wc04",
+              "id": "bg622626",
               "classes": [
                 "omnifood-meal"
               ],
@@ -635,7 +635,7 @@
               "style": {}
             },
             {
-              "id": "wc04",
+              "id": "wc0bgh124",
               "classes": [
                 "omnifood-meal"
               ],
@@ -675,7 +675,7 @@
               }
             },
             {
-              "id": "wc04",
+              "id": "wc04dsvf145",
               "classes": [
                 "omnifood-meal-list"
               ],
@@ -708,7 +708,7 @@
         }
       },
       {
-        "id": "wc05",
+        "id": "wc05b2525f",
         "classes": [
           "omnifood-txt"
         ],
@@ -727,7 +727,7 @@
         }
       },
       {
-        "id": "wc06",
+        "id": "wc06d525g",
         "classes": [
           "omnifood-reviews"
         ],
@@ -759,7 +759,7 @@
               }
             },
             {
-              "id": "wc015",
+              "id": "wc01fv1625",
               "classes": [
                 "omnifood-review"
               ],
@@ -783,7 +783,7 @@
               }
             },
             {
-              "id": "wc017",
+              "id": "wc01fdv527",
               "classes": [
                 "omnifood-review"
               ],
@@ -807,7 +807,7 @@
               }
             },
             {
-              "id": "wc018",
+              "id": "wcfdc5018",
               "classes": [
                 "omnifood-review"
               ],
@@ -837,7 +837,7 @@
         }
       },
       {
-        "id": "wc07845",
+        "id": "wc0784cff5",
         "classes": [
           "omnifood-gallery"
         ],
@@ -865,7 +865,7 @@
         "style": {}
       },
       {
-        "id": "wc05",
+        "id": "wcfd5v205",
         "classes": [
           "omnifood-txt"
         ],
@@ -884,7 +884,7 @@
         }
       },
       {
-        "id": "wc0789",
+        "id": "wcff0789",
         "type": "wap-container",
         "classes": [
           "omnifood-pricing"
@@ -942,7 +942,7 @@
               }
             },
             {
-              "id": "wc6956",
+              "id": "wcfvfd6956",
               "classes": [
                 "omnifood-pricing-complete"
               ],
@@ -1002,7 +1002,7 @@
         "style": {}
       },
       {
-        "id": "sc5878",
+        "id": "sc587fff8",
         "classes": [],
         "type": "wap-conatiner",
         "info": {
@@ -1018,7 +1018,7 @@
               }
             },
             {
-              "id": "wc6258",
+              "id": "wc625gfv8",
               "classes": [],
               "type": "wap-form",
               "info": {
@@ -1038,7 +1038,7 @@
         }
       },
       {
-        "id": "sc5999",
+        "id": "sc599ffd9",
         "classes": [
           "omnifood-footer"
         ],
@@ -1107,7 +1107,7 @@
     "theme": "vivid",
     "cmps": [
       {
-        "id": "wc02",
+        "id": "wc02bg12g",
         "type": "wap-header",
         "classes": [
           "making-diff-header",
@@ -1168,7 +1168,7 @@
         "style": {}
       },
       {
-        "id": "wc01",
+        "id": "wcdfvgfb01",
         "type": "wap-hero",
         "classes": [
           "making-diff-hero",
@@ -1185,7 +1185,7 @@
         "style": {}
       },
       {
-        "id": "wc03",
+        "id": "wc03f15f252",
         "type": "wap-container",
         "classes": [
           "making-diff-cards",
@@ -1222,7 +1222,7 @@
               "style": {}
             },
             {
-              "id": "wcc05",
+              "id": "wccfvc1205",
               "classes": [
                 "making-diff-card features"
               ],
@@ -1252,7 +1252,7 @@
               "style": {}
             },
             {
-              "id": "wcc06",
+              "id": "wccg222206",
               "classes": [
                 "making-diff-card digital"
               ],
@@ -1285,7 +1285,7 @@
         }
       },
       {
-        "id": "wc05",
+        "id": "wc05bggb5225",
         "classes": [
           "making-diff-txt"
         ],
@@ -1304,7 +1304,7 @@
         }
       },
       {
-        "id": "wc07845",
+        "id": "wc078hg545",
         "classes": [
           "making-diff-gallery"
         ],
@@ -1327,7 +1327,7 @@
         "style": {}
       },
       {
-        "id": "wc0554",
+        "id": "wc055g524",
         "classes": [
           "making-diff-contact",
           "full"
