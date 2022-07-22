@@ -1,6 +1,6 @@
 Edit
 <template>
-  <section class="wap-editor flex flex-column">
+  <section class="editor flex flex-column">
     <editor-header />
     <editor-nav />
     <section class="editor-main flex">

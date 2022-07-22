@@ -1,14 +1,25 @@
 <template>
   <main class="editor-wap-container main-layout">
-    <Container
-      :get-child-payload="getChildPayload"
-      group-name="1"
-      @drop="onDrop($event)"
-    >
-      <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
-        <component :is="cmp.type + '-edit'" :cmp="cmp" />
-      </Draggable>
-    </Container>
+    <!-- <iframe
+      v-if="loaded"
+      :src="iframe.src"
+      :style="iframe.style"
+      :height="iframe.style.height"
+      :width="iframe.style.width"
+      type="application/pdf"
+      frameborder="0"
+    ></iframe> -->
+    <div class="wap" ref="wap">
+      <Container
+        :get-child-payload="getChildPayload"
+        group-name="1"
+        @drop="onDrop($event)"
+      >
+        <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
+          <component :is="cmp.type + '-edit'" :cmp="cmp" />
+        </Draggable>
+      </Container>
+    </div>
   </main>
 </template>
 
@@ -32,7 +43,14 @@ export default {
     wap: Object,
   },
   data() {
-    return {}
+    return {
+      iframe: {
+        src: window.location.href,
+        style: null,
+        wrapperStyle: null,
+      },
+      loaded: false,
+    }
   },
   methods: {
     onDrop(dropRes) {
@@ -45,7 +63,22 @@ export default {
     },
   },
   computed: {},
-  created() {},
+  mounted() {
+    let wap = this.$refs.wap
+    this.iframe.style = {
+      position: 'absolute',
+      width: window.innerWidth,
+      height: window.innerHeight,
+      top: -wap.offsetTop + 'px',
+      left: -wap.offsetLeft + 'px',
+    }
+    this.iframe.wrapperStyle = {
+      overflow: 'hidden',
+      height: wap.clientHeight + 'px',
+      width: wap.clientWidth + 'px',
+    }
+    this.loaded = true
+  },
   components: {
     Container,
     Draggable,
@@ -58,7 +91,7 @@ export default {
     wapFooterEdit,
     wapTextEdit,
     wapReviewEdit,
-    wapContactEdit
+    wapContactEdit,
   },
 }
 </script>

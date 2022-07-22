@@ -2,21 +2,21 @@
   <section class="el-editor-inner flex flex-column">
     <div class="flex justify-between">
       <p>Font Family</p>
-      <Select
+      <a-select
         :options="fonts"
         v-model:value="style.fontFamily"
         @change="setStyle"
         defaultActiveFirstOption
-      ></Select>
+      ></a-select>
     </div>
     <div class="flex justify-between">
       <p>Font Size</p>
-      <Slider
+      <a-slider
         v-model:value="fontSize"
         @change="setfontSize"
         :min="16"
         :max="82"
-      ></Slider>
+      ></a-slider>
     </div>
     <div>
       <p>Font color</p>
@@ -31,13 +31,10 @@
 </template>
 <script>
 import colorPicker from './color-picker.vue'
-import { Select, Slider } from 'ant-design-vue'
 
 export default {
   components: {
     colorPicker,
-    Select,
-    Slider,
   },
   data() {
     return {

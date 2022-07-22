@@ -1,5 +1,5 @@
 <template>
-  <div class="edit-tool-bar flex">
+  <div class="tool-bar flex">
     <editorToolBarNav @setTool="openTool" />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header">
@@ -13,9 +13,7 @@
         <div>Element E</div>
       </section>
       <editorToolSections v-if="tool === 'section'" :cmps="cmps" />
-      <section v-if="tool === 'edit'">
-        <el-editor />
-      </section>
+      <el-editor v-if="tool === 'edit'" />
     </section>
   </div>
 </template>
@@ -74,7 +72,10 @@ export default {
   },
   computed: {
     isEditorOpen() {
-      return { open: this.isOpen }
+      return {
+        'open-section': this.isOpen && this.tool === 'section',
+        'open-edit': this.isOpen && this.tool === 'edit',
+      }
     },
   },
   created() {

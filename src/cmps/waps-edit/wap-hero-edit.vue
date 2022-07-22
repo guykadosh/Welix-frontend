@@ -26,7 +26,7 @@
         >
           {{ info.subHeading.txt }}
         </h2>
-        <div class="btns"  v-if="info.btns">
+        <div class="btns" v-if="info.btns">
           <a
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
@@ -43,7 +43,7 @@
         contenteditable="true"
         v-if="info.img"
         :src="info.img.url"
-        @click="setEditable(btn.type, 'img')"
+        @click="setEditable(info.img.type, 'img')"
       />
     </div>
   </section>
@@ -83,7 +83,7 @@ export default {
       this.$store.commit({ type: 'setElToEdit', el })
       const cmp = JSON.parse(JSON.stringify(this.cmp))
       this.$store.commit({ type: 'setCmpToEdit', cmp })
-      // emit to open side-editor => txt-editor => style => cmp[key].style => cmp[key][idx].style = style
+      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
     },
   },
   created() {
