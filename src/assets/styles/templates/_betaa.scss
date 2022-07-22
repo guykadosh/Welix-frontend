@@ -3,18 +3,18 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: rem(120px);
-    max-width: 1200px;
     height: 38rem;
+    justify-items: center;
 
     .card-content {
-        max-width: rem(500px);
+        max-width: rem(550px);
 
     }
 
     .card {
         &-img {
             border-radius: rem(20px);
-            width: 35rem;
+            width: 40rem;
 
         }
 
@@ -24,7 +24,7 @@
         }
 
         &-heading {
-          /*   margin-top: rem(25px); */
+            /*   margin-top: rem(25px); */
             font-size: rem(41px);
         }
 
@@ -37,7 +37,15 @@
         }
 
         &-tag {
-            margin-top: rem(32px);
+            background-color: #f7f4fd;
+            margin-top: rem(25px);
+            font-weight: 700;
+            font-size: rem(16px);
+            margin-bottom: rem(10px);
+            color: #763de7;
+            width: max-content;
+            padding: 0.8rem;
+            border-radius: rem(22px)
         }
 
         &-list {
@@ -57,7 +65,7 @@
                 grid-column-gap: 20px;
 
                 img {
-                    width: 48px;
+                    width: 4rem;
                     margin: 15px;
 
                 }
