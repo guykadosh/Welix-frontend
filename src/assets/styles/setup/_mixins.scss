@@ -1,12 +1,18 @@
 /* Media queries Breakpoint mixins */
+@mixin for-mobile-layout {
+  @media (max-width: $break-narrow) { //1200
+    @content;
+  }
+}
+
 @mixin for-small-layout {
   @media (max-width: $break-small) { //700
     @content;
   }
 }
 
-@mixin for-mobile-layout {
-  @media (max-width: $break-narrow) { //1200
+@mixin for-medium-layout {
+  @media (min-width: $break-medium) { //840
     @content;
   }
 }

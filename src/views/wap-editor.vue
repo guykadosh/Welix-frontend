@@ -24,6 +24,7 @@ import wapReviewEdit from '../cmps/waps-edit/wap-review-edit.vue'
 import wapFooterEdit from '../cmps/waps-edit/wap-footer-edit.vue'
 import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
 import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
+import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
 
 export default {
   name: 'wap-editor',
@@ -55,6 +56,7 @@ export default {
     wapFooterEdit,
     wapCardEdit,
     wapContainerEdit,
+    wapContactEdit,
   },
 }
 </script>

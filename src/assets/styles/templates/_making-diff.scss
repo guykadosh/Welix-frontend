@@ -52,10 +52,10 @@
         align-items: center;
         margin-bottom: em(15px);
 
-        @include for-narrow-layout {
-            @media (min-width: $break-narrow) {
-                margin-bottom: 0;
-            }
+        @include for-medium-layout {
+
+            margin-bottom: 0;
+
         }
 
         .heading {
@@ -76,15 +76,15 @@
         //     flex-direction: column
         // }
 
-        @include for-narrow-layout {
-            @media (min-width: $break-narrow) {
-                flex-direction: row;
-                margin-bottom: 0;
+        @include for-medium-layout {
 
-                &.features {
-                    flex-direction: row-reverse;
-                }
+            flex-direction: row;
+            margin-bottom: 0;
+
+            &.features {
+                flex-direction: row-reverse;
             }
+
         }
 
         .card-img-container {
@@ -143,11 +143,12 @@
             padding: 0 em(20px);
             margin-block-end: em(30px);
 
-            @include for-narrow-layout {
-                @media (min-width: $break-narrow) {
-                    padding-top: em(30px);
-                }
+            @include for-medium-layout {
+
+                padding-top: em(30px);
+
             }
+
             .card-tag {
                 font-family: 'Open Sans', sans-serif;
                 font-size: em(24px);
@@ -227,24 +228,23 @@
             align-items: center;
             gap: 10px;
 
-            @include for-narrow-layout {
-                @media (min-width: $break-narrow) {
-                    max-width: em(1100px);
-                }
+            @include for-medium-layout {
+
+                max-width: em(1100px);
+
             }
-            
+
             img {
                 width: 100vw;
 
-                @include for-narrow-layout {
-                    @media (min-width: $break-narrow) {
-                        max-height: 200px;
-                        max-width: 300px;
-                    }
+                @include for-medium-layout {
+
+                    max-height: 200px;
+                    max-width: 300px;
+
                 }
             }
         }
-
 
     }
 
