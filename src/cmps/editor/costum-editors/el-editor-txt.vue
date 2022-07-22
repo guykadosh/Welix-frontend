@@ -1,6 +1,6 @@
 <template lang="">
   <section class="el-editor-inner flex flex-column">
-    <div class="flex justify-between">
+    <div class="box flex justify-between">
       <p>Font Family</p>
       <a-select
         :options="fonts"
@@ -9,7 +9,7 @@
         defaultActiveFirstOption
       ></a-select>
     </div>
-    <div class="flex justify-between">
+    <div class="box flex justify-between">
       <p>Font Size</p>
       <a-slider
         v-model:value="fontSize"
@@ -18,16 +18,23 @@
         :max="82"
       ></a-slider>
     </div>
-    <div>
-      <p>Font color</p>
+    <div class="box">
+      <p class="title">Font color</p>
       <color-picker @picked="setColor" />
     </div>
-    <div>
-      <p>Background color</p>
+    <div class="box">
+      <p class="title">Background color</p>
       <color-picker @picked="setBgColor" />
     </div>
+    <div class="box">
+      <p class="title">Make it linkable</p>
+      <a-input
+        v-model:value="link"
+        placeholder="Enter url"
+        @keyup.enter="setLink"
+      />
+    </div>
   </section>
-  <!-- <input type="color" v-model="style.color" @input="setStyle" /> -->
 </template>
 <script>
 import colorPicker from './color-picker.vue'
@@ -57,7 +64,10 @@ export default {
   },
   methods: {
     setStyle() {
-      this.$emit('edited', this.style)
+      this.$emit('edited', { style: this.style })
+    },
+    setLink() {
+      this.$emit('edited', { link: this.link })
     },
     setColor(color) {
       this.style.color = color

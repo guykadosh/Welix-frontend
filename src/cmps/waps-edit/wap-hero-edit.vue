@@ -16,11 +16,11 @@
         </h1>
         <h2
           v-if="info.subHeading"
-          @click="setEditable(info.subHeading.type, 'subHeading')"
           contenteditable="true"
           class="sub-heading"
-          :style="info.subHeading.style"
           ref="subHeading"
+          :style="info.subHeading.style"
+          @click="setEditable(info.subHeading.type, 'subHeading')"
           @input="changeTxt('subHeading')"
           @mousedown.stop
         >
@@ -80,9 +80,11 @@ export default {
     setEditable(type, key, idx = null) {
       eventBus.emit('open-edit')
       const el = { type, key, idx }
-      this.$store.commit({ type: 'setElToEdit', el })
       const cmp = JSON.parse(JSON.stringify(this.cmp))
+
+      this.$store.commit({ type: 'setElToEdit', el })
       this.$store.commit({ type: 'setCmpToEdit', cmp })
+
       // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
     },
   },

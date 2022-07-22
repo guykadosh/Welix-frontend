@@ -3,7 +3,7 @@
     <editorToolBarNav @setTool="openTool" />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header">
-        <h2>Add Section</h2>
+        <h2>{{ title }}</h2>
       </div>
       <section v-if="tool === 'element'">
         <div>Element A</div>
@@ -75,6 +75,14 @@ export default {
       return {
         'open-section': this.isOpen && this.tool === 'section',
         'open-edit': this.isOpen && this.tool === 'edit',
+      }
+    },
+    title() {
+      switch (this.tool) {
+        case 'section':
+          return 'Add Section'
+        case 'edit':
+          return 'Edit'
       }
     },
   },
