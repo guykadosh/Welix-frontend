@@ -7,7 +7,7 @@
         :key="label.id"
       >
         <span
-          class="tool-bar-actions__label--text"
+          class="tool-bar-actions__label-text"
           :class="{ selected: label.selected }"
         >
           {{ label.title }}
@@ -16,7 +16,7 @@
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
-      <p class="tool-bar-actions__options--title">Headers</p>
+      <p class="tool-bar-actions__options-title">Headers</p>
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"

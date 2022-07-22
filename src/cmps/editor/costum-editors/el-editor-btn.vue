@@ -1,19 +1,73 @@
-<template lang="">
-  <input type="color" v-model="style.color" @input="setStyle" />
+<template>
+  <section class="el-editor-inner flex flex-column">
+    <div class="flex justify-between">
+      <p>Font Family</p>
+      <a-select
+        :options="fonts"
+        v-model:value="style.fontFamily"
+        @change="setStyle"
+        defaultActiveFirstOption
+      ></a-select>
+    </div>
+    <div class="flex justify-between">
+      <p>Font Size</p>
+      <a-slider
+        v-model:value="fontSize"
+        @change="setfontSize"
+        :min="16"
+        :max="82"
+      ></a-slider>
+    </div>
+    <div>
+      <p>Font color</p>
+      <color-picker @picked="setColor" />
+    </div>
+    <div>
+      <p>Background color</p>
+      <color-picker @picked="setBgColor" />
+    </div>
+  </section>
+  <!-- <input type="color" v-model="style.color" @input="setStyle" /> -->
 </template>
 <script>
+import colorPicker from './color-picker.vue'
+
 export default {
+  components: {
+    colorPicker,
+  },
   data() {
     return {
       style: {
         color: '',
+        backgroundColor: '',
       },
+      fontSize: 32,
       link: '',
+      fonts: [
+        { value: '', label: 'Pick font' },
+        { value: 'Roboto-Regular', label: 'Roboto' },
+        { value: 'Impact', label: 'Impact' },
+        { value: 'Arial', label: 'Arial' },
+        { value: 'Rubik-Regula', label: 'Rubik' },
+      ],
     }
   },
   methods: {
     setStyle() {
       this.$emit('edited', this.style)
+    },
+    setColor(color) {
+      this.style.color = color
+      this.setStyle()
+    },
+    setBgColor(color) {
+      this.style.backgroundColor = color
+      this.setStyle()
+    },
+    setfontSize() {
+      this.style.fontSize = this.fontSize + 'px'
+      this.setStyle()
     },
   },
   computed: {
@@ -23,4 +77,11 @@ export default {
   },
 }
 </script>
-<style></style>
+<style scoped>
+.ant-slider {
+  width: 150px;
+}
+.ant-select {
+  width: 150px;
+}
+</style>
