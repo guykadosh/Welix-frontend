@@ -1,8 +1,9 @@
 [
   {
     "_id": "5e28393890dd7201a06d4e44",
-    "name": "Lukas Rudrof  Funktionales Webdesign, Webflow & SEO",
+    "name": "omnifood",
     "imgUrl": "https://i.ibb.co/TtSsMvh/ominfood.png",
+    "type":"Healthy food",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995527",
       "fullname": "Lukas Rudrof",
@@ -609,6 +610,7 @@
   {
     "_id": "5e28393890dd7201a06d4e55",
     "name": "Making a difference for food",
+    "type":"blog",
     "imgUrl": "https://i.ibb.co/Tmb35bv/creative.png",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995584",
