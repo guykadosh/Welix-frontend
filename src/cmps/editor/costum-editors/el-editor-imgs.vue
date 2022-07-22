@@ -1,13 +1,13 @@
 <template>
   <section class="el-editor-inner flex flex-column">
-    <div class="box">
+    <div v-for="(url, idx) in urls" class="box">
       <p class="title">Change image</p>
       <img :src="url" />
       <div class="flex justify-between items-center">
         <a-input
-          v-model:value="url"
-          @keyup.enter="setUrl"
-          placeholder="Enter url or upload"
+          v-model:value="urls[idx]"
+          @keyup.enter="setUrls"
+          :placeholder="url"
         />
         <a-upload
           v-model:file-list="fileList"
@@ -28,19 +28,20 @@ export default {
   },
   data() {
     return {
-      url: '',
+      urls: null,
       fileList: [],
     }
+  },
+  created() {
+    // console.log(this.cmp.info.imgs.urls)
+    this.urls = JSON.parse(JSON.stringify(this.cmp.info.imgs.urls))
   },
   components: {
     CloudUploadOutlined,
   },
-  created() {
-    this.url = this.cmp.info.img.url
-  },
   methods: {
-    setUrl() {
-      this.$emit('edited', { url: this.url })
+    setUrls() {
+      this.$emit('edited', { urls: this.urls })
     },
   },
 }
@@ -56,7 +57,7 @@ export default {
 }
 
 img {
-  width: 100px;
-  margin-bottom: 5px;
+  width: 75px;
+  margin-bottom: 3px;
 }
 </style>

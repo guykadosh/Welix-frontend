@@ -7,11 +7,13 @@
         :key="url"
         :src="url"
         alt="gallery-img"
+        @click="setEditable(info.imgs.type, 'imgs')"
       />
     </div>
   </section>
 </template>
 <script>
+import { eventBus } from '../../services/event-bus.service'
 export default {
   name: 'wap-gallery-edit',
   props: {
