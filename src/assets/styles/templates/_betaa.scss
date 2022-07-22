@@ -7,6 +7,9 @@
 
         .wap-header__inner {
             
+            .hamburger {
+                color: $light-color;
+            }
             width: 100%;
             // justify-content: space-between;
             .wap-nav .nav-bar .nav-link a {
@@ -38,8 +41,10 @@
         clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
         margin-top: em(-1px);
         // padding-top: em(162px);
-        padding-top: rem(50px);
+        padding-top: em(50px);
         margin-bottom: em(200px);
+
+        padding-bottom: em(200px);
 
         .hero-inner {
             display: flex;
