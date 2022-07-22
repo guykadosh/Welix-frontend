@@ -1,76 +1,34 @@
 <template>
   <section v-if="cmp" class="wap-card" :class="cmp.classes">
-    <img
-      v-if="info.img"
-      class="card-img"
-      :src="info.img.url"
-      @click="setEditable(info.img.type, 'img')"
-    />
+    <img v-if="info.img" class="card-img" :src="info.img.url" @click="setEditable(info.img.type, 'img')" />
     <div class="card-img-container"></div>
     <div class="card-content">
-      <span
-        v-if="info.tag"
-        class="card-tag"
-        contenteditable="true"
-        :style="info.tag?.style"
-        ref="tag"
-        @click="setEditable(info.tag.type, 'tag')"
-        @input="changeTxt('tag')"
-        >{{ info.tag }}</span
-      >
-      <h2
-        class="card-heading"
-        v-if="info.heading"
-        :style="info.heading.style"
-        contenteditable="true"
-        ref="heading"
-        @click="setEditable(info.heading.type, 'heading')"
-        @input="changeTxt('heading')"
-      >
+      <span v-if="info.tag" class="card-tag" contenteditable="true" :style="info.tag?.style" ref="tag"
+        @click="setEditable(info.tag.type, 'tag')" @input="changeTxt('tag')">{{ info.tag }}</span>
+      <h2 class="card-heading" v-if="info.heading" :style="info.heading.style" contenteditable="true" ref="heading"
+        @click="setEditable(info.heading.type, 'heading')" @input="changeTxt('heading')">
         {{ info.heading.txt }}
       </h2>
       <p class="card-price" v-if="info.price" :style="info.price.style">
         $
-        <span
-          contenteditable="true"
-          ref="price"
-          @click="setEditable(info.price.type, 'price')"
-          @input="changeTxt('price')"
-          >{{ info.price.txt }}</span
-        >
+        <span contenteditable="true" ref="price" @click="setEditable(info.price.type, 'price')"
+          @input="changeTxt('price')">{{ info.price.txt }}</span>
       </p>
-      <h3
-        class="card-subheading"
-        v-if="info.subHeading"
-        contenteditable="true"
-        :style="info.subHeading.style"
-        ref="subHeading"
-        @click="setEditable(info.subHeading.type, 'subHeading')"
-        @input="changeTxt('subHeading')"
-      >
+      <h3 class="card-subheading" v-if="info.subHeading" contenteditable="true" :style="info.subHeading.style"
+        ref="subHeading" @click="setEditable(info.subHeading.type, 'subHeading')" @input="changeTxt('subHeading')">
         {{ info.subHeading.txt }}
       </h3>
       <ul class="card-list clean-list" v-if="info.list">
         <li v-for="(line, idx) in info.list" :key="line" :style="line.style">
-          <span>{{ line.icon }}</span>
-          <span
-            contenteditable="true"
-            :ref="'line' + idx"
-            @click="setEditable(info.list[idx].type, 'list', idx)"
-            @input="changeTxt('list', idx, 'line' + idx)"
-            >{{ line.txt }}</span
-          >
+          <img :src="line.icon" srcset="">
+
+          <span contenteditable="true" :ref="'line' + idx" @click="setEditable(info.list[idx].type, 'list', idx)"
+            @input="changeTxt('list', idx, 'line' + idx)">{{ line.txt }}</span>
         </li>
       </ul>
-      <a
-        v-if="info.btn"
-        class="card-btn"
-        ref="btn"
-        @click="setEditable(info.btn.type, 'btn')"
-        @input="changeTxt('btn')"
-      >
-        {{ info.btn.txt }}</a
-      >
+      <a v-if="info.btn" class="card-btn" ref="btn" @click="setEditable(info.btn.type, 'btn')"
+        @input="changeTxt('btn')">
+        {{ info.btn.txt }}</a>
     </div>
   </section>
 </template>
