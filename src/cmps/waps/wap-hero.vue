@@ -18,7 +18,7 @@
           >
         </div>
       </div>
-      <img v-if="info.img" :src="info.img.url" />
+      <!-- <img v-if="info.img" :src="info.img.url" /> -->
     </div>
   </section>
 </template>
