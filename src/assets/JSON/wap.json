@@ -407,18 +407,13 @@
           },
           "row2": {
             "type": "txt",
-            "txt": "Account",
-            "texts": [
-              "Create account",
-              "Sign in",
-              "iOS app",
-              "Android app"
-            ],
+            "txt": "",
+            "texts": [],
             "style": {}
           },
           "copyright": {
             "type": "txt",
-            "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
+            "txt": "copyright © 2022 by BETAA, Inc. All rights reserved.",
             "style": {}
           }
         }
