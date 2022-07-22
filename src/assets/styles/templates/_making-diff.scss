@@ -1,4 +1,5 @@
 .making-diff {
+
     &-header {
         position: absolute;
         width: 100%;
@@ -72,10 +73,6 @@
         flex-direction: column-reverse;
         margin-block-end: em(10px);
 
-        // &.features {
-        //     flex-direction: column
-        // }
-
         @include for-medium-layout {
 
             flex-direction: row;
@@ -84,7 +81,6 @@
             &.features {
                 flex-direction: row-reverse;
             }
-
         }
 
         .card-img-container {
@@ -229,9 +225,7 @@
             gap: 10px;
 
             @include for-medium-layout {
-
                 max-width: em(1100px);
-
             }
 
             img {
@@ -272,7 +266,6 @@
             .contact-form {
                 display: flex;
                 flex-direction: column;
-                // align-items: center;
                 padding: em(10px);
 
                 >* {
@@ -301,7 +294,6 @@
                     background-color: #ffffff;
                     color: pink;
                     text-transform: uppercase;
-                    // max-width: 50%;
                     cursor: pointer;
                 }
             }
