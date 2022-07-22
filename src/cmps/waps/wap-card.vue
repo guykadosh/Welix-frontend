@@ -8,7 +8,6 @@
       <p class="card-price" v-if="info.price">
         $ <span>{{ info.price.txt }}</span>
       </p>
-      <!-- <span >{{info.tag}}</span> -->
       <h3 class="card-subheading" v-if="info.subHeading">
         {{ info.subHeading.txt }}
       </h3>
@@ -16,7 +15,7 @@
         <li v-for="line in info.list" :key="line">
           <img :src="line.icon" srcset="">
 
-          <!-- <span>{{ line.icon }}</span> --> <span>{{ line.txt }}</span>
+         <span>{{ line.txt }}</span>
         </li>
       </ul>
       <a v-if="info.btn" :href="info.btn.link" class="card-btn">{{
