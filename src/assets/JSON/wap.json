@@ -213,6 +213,7 @@
         "type": "wap-container",
         "classes": [
           "betaa",
+          "betaa-container",
           "betaa-layout"
         ],
         "info": {
