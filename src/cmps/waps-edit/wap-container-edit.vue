@@ -10,10 +10,10 @@
     <!-- <Draggable v-for="item in items" :key="item.id"> -->
     <div :class="cmp.classes">
       <component
-        v-for="item in items"
-        :key="item.id"
-        :is="item.type + '-edit'"
-        :cmp="item"
+        v-for="cmp in cmp.info.cmps"
+        :key="cmp.id"
+        :is="cmp.type + '-edit'"
+        :cmp="cmp"
       ></component>
     </div>
     <!-- </Draggable>
