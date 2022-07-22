@@ -1,6 +1,7 @@
 .wap-header {
 
     .wap-header__inner {
+
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -37,6 +38,7 @@
           transition: transform 0.5s;
   
           &.open {
+
             transform: translateX(0);
             transition: transform 0.5s;
           }
