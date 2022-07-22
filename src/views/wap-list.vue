@@ -8,7 +8,7 @@
           <router-link :to="'/wap/' + wap._id">View</router-link>
         </div>
         <img :src="wap.imgUrl" alt="" />
-        <p>Healthy food</p>
+        <p>{{wap.type}}</p>
       </div>
     </div>
   </section>
