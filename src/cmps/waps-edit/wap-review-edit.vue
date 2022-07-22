@@ -1,15 +1,68 @@
 <template>
   <section v-if="cmp" class="wap-review" :class="cmp.classes">
-    <img v-if="info.img" :src="info.img.url" alt="img-review" />
-    <p class="wap-review-text">{{ info.text.txt }}</p>
-    <p class="wap-review-author">{{ info.author.txt }}</p>
+    <img
+      v-if="info.img"
+      :src="info.img.url"
+      @click="setEditable(info.img.type, 'img')"
+      alt="img-review"
+      contenteditable="true"
+    />
+    <p
+      class="wap-review-text"
+      ref="text"
+      :style="info.text.style"
+      contenteditable="true"
+      @click="setEditable(info.text.type, 'text')"
+      @input="changeTxt('text')"
+      @mousedown.stop
+    >
+      {{ info.text.txt }}
+    </p>
+    <p
+      class="wap-review-author"
+      ref="author"
+      :style="info.author.style"
+      contenteditable="true"
+      @click="setEditable(info.author.type, 'author')"
+      @input="changeTxt('author')"
+      @mousedown.stop
+    >
+      {{ info.author.txt }}
+    </p>
   </section>
 </template>
 <script>
+import { eventBus } from '../../services/event-bus.service'
+
 export default {
   name: 'wap-review-edit',
   props: {
     cmp: Object,
+  },
+  data() {
+    return {
+      cmpToEdit: null,
+    }
+  },
+  created() {
+    this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
+  },
+  methods: {
+    changeTxt(ref) {
+      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'updateCmp', newCmp })
+    },
+    setEditable(type, key, idx = null) {
+      eventBus.emit('open-edit')
+      const el = { type, key, idx }
+      const cmp = JSON.parse(JSON.stringify(this.cmp))
+
+      this.$store.commit({ type: 'setElToEdit', el })
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
+
+      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
   },
   computed: {
     info() {

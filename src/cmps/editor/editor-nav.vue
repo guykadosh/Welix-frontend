@@ -31,7 +31,15 @@
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
         <lock-outlined class="icon" />
-        <span class="http">https:</span><span>//welix.com/my-site</span>
+        <span class="http">https:</span
+        ><span
+          >//welix.com/
+          <span
+            :style="{ backgroundColor: '#ffffff', display: 'inline-block' }"
+            contenteditable="true"
+            >my-site</span
+          ></span
+        >
       </div>
     </div>
     <div class="editor-nav-actions flex items-center">

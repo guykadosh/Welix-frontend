@@ -74,15 +74,15 @@ var wap = {
 // Support several themes for components (CSS only)
 // default FLEX is your friend, handle media proprtion correctly
 // Here are some components:
-// wap-header, wap-footer, wap-container
-// wap-gallery (photos: {url, title,txt})
-// wap-map (center,zoom,markers),
-// wap-video (url, iframe)
-// wap-social (socials)
-// wap-signup => wapService
+// wap-header-V, wap-footer-V -> make it editable, wap-container-V
+// wap-gallery-V (photos: {url, title,txt})
+// wap-map-TODO (center,zoom,markers),
+// wap-video-TODO (url, iframe)
+// wap-social- TODO (socials)
+// wap-signup - ? TODO => wapService
 // wap-chat
-// wap-contact-us => wapService
-// wap-navbar
+// wap-contact-us -make it editable + service => wapService
+// wap-navbar -V
 
 // Edit Mode, two options:
 // wap-header-edit  / wap-header

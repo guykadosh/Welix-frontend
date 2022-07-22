@@ -1,15 +1,356 @@
 [
   {
-    "id": "wc02",
+    "id": "fhngh1",
     "type": "wap-header",
-    "thumbmail": "@/assets/img/omnifood-header.png",
+    "classes": ["betaa-header", "full", "betaa-layout"],
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/Nj1HXqh/Betaa-logo-White-footer.png",
+        "style": {}
+      },
+      "nav": {
+        "_id": "wc05",
+        "type": "wap-nav",
+        "style": {},
+        "classes": ["betaa-nav"],
+        "info": {
+          "links": [
+            {
+              "type": "txt",
+              "txt": "Portfolio",
+              "link": "#portfolio",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Blog",
+              "link": "#blog",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Shop",
+              "link": "#shop",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Features",
+              "link": "#features",
+              "style": {}
+            }
+          ]
+        }
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "gbfgg",
+    "type": "wap-hero",
+    "classes": ["betaa-hero", "full", "betaa-layout"],
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Make your software better using the best solutions in one tool",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "Task tracking, customer support, and workflow management all wrapped up into one software tool your team and customers will love.",
+        "style": {}
+      },
+      "btns": [
+        {
+          "type": "btn",
+          "txt": "Start free trial",
+          "link": "#wc03",
+          "style": {}
+        },
+        {
+          "type": "btn",
+          "txt": "Learn more",
+          "link": "#wc03",
+          "style": {}
+        }
+      ],
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/b3dbfTs/625d80b8b75698210e93919d-Top-Section-Illustration.png",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "jjyuh",
+    "type": "wap-container",
     "classes": [
-      "omnifood-header",
-      "flex",
-      "justify-between",
-      "full",
-      "main-layout"
+      "betaa",
+      "betaa-container",
+      "betaa-capabilities",
+      "betaa-layout"
     ],
+    "info": {
+      "cmps": [
+        {
+          "type": "wap-card",
+          "info": {
+            "tag": "CAPABILITIES",
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/7bKWtCz/145.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Overview of your progress and tasks",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Some metrics play an essential role to measure the pulse of a company’s customer service efficiency, while others are more evaluating if a brand has a best approach.",
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/gJwr1v3/cogwheel-4.png",
+                "txt": "Task"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/xfCNDGg/envelope-4.png",
+                "txt": "Messaging"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/hgRTZ96/growth-4.png",
+                "txt": "Results"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/NW4JM8g/task-4-1.png",
+                "txt": "Support"
+              }
+            ]
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "gbgty42",
+    "classes": ["betaa-txt", "betaa-layout"],
+    "type": "wap-text",
+    "info": {
+      "tag": "basic features",
+      "heading": {
+        "type": "txt",
+        "txt": "Tool for every kind of business",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "mukjyu6584",
+    "type": "wap-container",
+    "classes": ["betaa-container", "betaa-features", "betaa-layout"],
+    "info": {
+      "cmps": [
+        {
+          "id": "wc04gfbg21g",
+          "classes": ["betaa"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/mHtHp6b/Card-01.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Startups",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+              "style": {}
+            },
+            "list": []
+          },
+          "style": {}
+        },
+        {
+          "id": "wc04hjjhvcb55",
+          "classes": ["betaa", "betaa-layout"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/LSPP6s3/Card-02.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Entrepreneurs",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+              "style": {}
+            },
+            "list": []
+          },
+          "style": {}
+        },
+        {
+          "id": "mhn25212",
+          "classes": ["betaa", "betaa-layout"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/Lr1HMz4/Card-03.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Employees",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+              "style": {}
+            },
+            "list": []
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "wc0554njj",
+    "classes": ["betaa-contact", "full", "betaa-layout"],
+    "type": "wap-contact",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Contact us",
+        "style": {}
+      },
+      "form": {
+        "type": "form",
+        "inputs": [
+          {
+            "type": "text",
+            "placeholder": "name"
+          },
+          {
+            "type": "email",
+            "placeholder": "email"
+          }
+        ],
+        "textarea": {
+          "placeholder": "Message"
+        },
+        "btn": {
+          "type": "submit",
+          "txt": "submit"
+        },
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "mfgnih987",
+    "classes": ["betaa-review", "betaa-layout"],
+    "type": "wap-review",
+    "info": {
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/1rWVn2F/Image.png",
+        "style": {}
+      },
+      "text": {
+        "type": "txt",
+        "txt": "\"It is really refreshing to work with this software which is truly helpful in the client’s preferences.\"",
+        "style": {}
+      },
+      "author": {
+        "type": "txt",
+        "txt": "Rebecca Calderon, ",
+        "txt2": "Head of marketing, Apple Inc.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc05jjjj4",
+    "classes": ["betaa-txt", "betaa-trial", "betaa-layout"],
+    "type": "wap-text",
+    "info": {
+      "heading": {
+        "txt": "Improve your business and make your work easy",
+        "type": "txt",
+        "style": {}
+      },
+      "subHeading": {
+        "txt": "Start free trial",
+        "type": "txt",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "sc599966",
+    "classes": ["betaa-footer", "full", "betaa-layout"],
+    "type": "wap-footer",
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/k9KJG2b/footer-Illustration.png",
+        "style": {}
+      },
+      "row1": {
+        "type": "txt",
+        "txt": "Contact us",
+        "texts": ["2307 Beverley Rd, New York", "office@betaa.com"],
+        "style": {}
+      },
+      "row2": {
+        "type": "txt",
+        "txt": "",
+        "texts": [],
+        "style": {}
+      },
+      "copyright": {
+        "type": "txt",
+        "txt": "copyright © 2022 by BETAA, Inc. All rights reserved.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc024355",
+    "type": "wap-header",
+    "classes": ["omnifood-header", "full", "main-layout"],
+    "thumbnail": "https://i.ibb.co/kxQv8Hs/omnifood-header.png",
     "info": {
       "logoImg": {
         "type": "img",
@@ -60,10 +401,10 @@
     "style": {}
   },
   {
-    "id": "wc01",
-    "thumbmail": "@/assets/img/omnifood-hero.png",
+    "id": "wc011525",
     "type": "wap-hero",
     "classes": ["omnifood-hero", "full", "main-layout"],
+    "thumbnail": "https://i.ibb.co/hfzwM9R/omnifood-hero.png",
     "info": {
       "heading": {
         "type": "txt",
@@ -98,8 +439,9 @@
     "style": {}
   },
   {
-    "id": "wc04",
+    "id": "wc045678gfb",
     "classes": ["omnifood-brand"],
+    "thumbnail": "https://i.ibb.co/NLKTYWw/omnifood-brands.png",
     "type": "wap-gallery",
     "info": {
       "title": {
@@ -122,13 +464,13 @@
     "style": {}
   },
   {
-    "id": "wc03",
+    "id": "wc03bhgfh63",
     "type": "wap-container",
     "classes": ["omnifood-meals"],
     "info": {
       "cmps": [
         {
-          "id": "wc04",
+          "id": "bg622626",
           "classes": ["omnifood-meal"],
           "type": "wap-card",
           "info": {
@@ -171,7 +513,7 @@
           "style": {}
         },
         {
-          "id": "wc04",
+          "id": "wc0bgh124",
           "classes": ["omnifood-meal"],
           "style": {},
           "type": "wap-card",
@@ -209,7 +551,7 @@
           }
         },
         {
-          "id": "wc04",
+          "id": "wc04dsvf145",
           "classes": ["omnifood-meal-list"],
           "type": "wap-list",
           "info": {
@@ -240,9 +582,10 @@
     }
   },
   {
-    "id": "wc05",
+    "id": "wc05b2525f",
     "classes": ["omnifood-txt"],
     "type": "wap-text",
+    "thumbnail": "https://i.ibb.co/D1N6wbR/omnifood-text.png",
     "info": {
       "heading": {
         "txt": "Once you try it, you can't go back",
@@ -257,9 +600,10 @@
     }
   },
   {
-    "id": "wc06",
+    "id": "wc06d525g",
     "classes": ["omnifood-reviews"],
     "type": "wap-container",
+    "thumbnail": "https://i.ibb.co/Wc5ptGv/omnifood-testimonials.png",
     "info": {
       "cmps": [
         {
@@ -285,7 +629,7 @@
           }
         },
         {
-          "id": "wc015",
+          "id": "wc01fv1625",
           "classes": ["omnifood-review"],
           "type": "wap-review",
           "info": {
@@ -307,7 +651,7 @@
           }
         },
         {
-          "id": "wc017",
+          "id": "wc01fdv527",
           "classes": ["omnifood-review"],
           "type": "wap-review",
           "info": {
@@ -329,7 +673,7 @@
           }
         },
         {
-          "id": "wc018",
+          "id": "wcfdc5018",
           "classes": ["omnifood-review"],
           "type": "wap-review",
           "info": {
@@ -357,8 +701,9 @@
     }
   },
   {
-    "id": "wc07845",
+    "id": "wc0784cff5",
     "classes": ["omnifood-gallery"],
+    "thumbnail": "https://i.ibb.co/k4PxffF/omnifood-gallery.png",
     "type": "wap-gallery",
     "info": {
       "imgs": {
@@ -383,9 +728,10 @@
     "style": {}
   },
   {
-    "id": "wc05",
+    "id": "wcfd5v205",
     "classes": ["omnifood-txt"],
     "type": "wap-text",
+    "thumbnail": "https://i.ibb.co/LhSdg7Z/omnifood-text2.png",
     "info": {
       "heading": {
         "type": "txt",
@@ -400,9 +746,10 @@
     }
   },
   {
-    "id": "wc0789",
+    "id": "wcff0789",
     "type": "wap-container",
     "classes": ["omnifood-pricing"],
+    "thumbnail": "https://i.ibb.co/68YqnqQ/omnifood-prices.png",
     "info": {
       "cmps": [
         {
@@ -454,7 +801,7 @@
           }
         },
         {
-          "id": "wc6956",
+          "id": "wcfvfd6956",
           "classes": ["omnifood-pricing-complete"],
           "type": "wap-card",
           "info": {
@@ -512,7 +859,7 @@
     "style": {}
   },
   {
-    "id": "sc5878",
+    "id": "sc587fff8",
     "classes": [],
     "type": "wap-conatiner",
     "info": {
@@ -528,7 +875,7 @@
           }
         },
         {
-          "id": "wc6258",
+          "id": "wc625gfv8",
           "classes": [],
           "type": "wap-form",
           "info": {
@@ -548,9 +895,10 @@
     }
   },
   {
-    "id": "sc5999",
+    "id": "sc599ffd9",
     "classes": ["omnifood-footer"],
     "type": "wap-footer",
+    "thumbnail": "https://i.ibb.co/nw77LRZ/omnifood-footer.png",
     "info": {
       "logoImg": {
         "type": "img",
@@ -580,7 +928,7 @@
     }
   },
   {
-    "id": "wc02",
+    "id": "wc02bg12g",
     "type": "wap-header",
     "classes": [
       "making-diff-header",
@@ -639,7 +987,7 @@
     "style": {}
   },
   {
-    "id": "wc01",
+    "id": "wcdfvgfb01",
     "type": "wap-hero",
     "classes": ["making-diff-hero", "full", "main-layout"],
     "info": {
@@ -652,7 +1000,7 @@
     "style": {}
   },
   {
-    "id": "wc03",
+    "id": "wc03f15f252",
     "type": "wap-container",
     "classes": ["making-diff-cards", "full"],
     "info": {
@@ -684,7 +1032,7 @@
           "style": {}
         },
         {
-          "id": "wcc05",
+          "id": "wccfvc1205",
           "classes": ["making-diff-card features"],
           "type": "wap-card",
           "info": {
@@ -712,7 +1060,7 @@
           "style": {}
         },
         {
-          "id": "wcc06",
+          "id": "wccg222206",
           "classes": ["making-diff-card digital"],
           "type": "wap-card",
           "info": {
@@ -743,26 +1091,7 @@
     }
   },
   {
-    "id": "wc07845",
-    "classes": ["making-diff-gallery"],
-    "type": "wap-gallery",
-    "info": {
-      "txt": "",
-      "imgs": {
-        "type": "imgs",
-        "urls": [
-          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/870ec8eaf40e581bba49b509/rtg.jpg",
-          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/24573fb8241e546b92cc96eb/peeledbananaonbluebackground_232147931342.jpg",
-          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/24573fb8241e546b92cc96eb/peeledbananaonbluebackground_232147931342.jpg",
-          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/5f2dce200cf45460ad1b9023/316001P8RWRN65.jpg"
-        ],
-        "style": {}
-      }
-    },
-    "style": {}
-  },
-  {
-    "id": "wc05",
+    "id": "wc05bggb5225",
     "classes": ["making-diff-txt"],
     "type": "wap-text",
     "info": {
@@ -779,7 +1108,7 @@
     }
   },
   {
-    "id": "wc07845",
+    "id": "wc078hg545",
     "classes": ["making-diff-gallery"],
     "type": "wap-gallery",
     "info": {
@@ -800,8 +1129,8 @@
     "style": {}
   },
   {
-    "id": "wc0554",
-    "classes": ["wap-contact"],
+    "id": "wc055g524",
+    "classes": ["making-diff-contact", "full"],
     "type": "wap-contact",
     "info": {
       "heading": {
