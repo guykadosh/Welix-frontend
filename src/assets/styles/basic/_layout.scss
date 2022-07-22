@@ -26,3 +26,18 @@
 .waps-main-layout {
   max-width: rem(1600px);
 }
+
+.betaa-layout {
+  display: grid;
+  grid-template-columns: $layoutBetaa 1fr $layoutBetaa;
+
+  >* {
+    grid-column: 2;
+  }
+
+  >*.full {
+    grid-column: 1 / -1;
+  }
+
+
+}

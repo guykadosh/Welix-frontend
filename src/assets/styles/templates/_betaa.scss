@@ -1,0 +1,24 @@
+.betaa-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .card {
+        &-img {
+            border-radius: rem(20px);
+        }
+        &-content{
+            display: flex;
+            flex-direction: column;
+            padding-left: rem(45px);
+        }
+        &-heading{
+            margin-top: rem(25px);
+            font-size: rem(41px);
+        }
+        &-subheading{
+            font-size: rem(20px);
+            margin-top: rem(18px);
+ 
+        }
+    }
+}
