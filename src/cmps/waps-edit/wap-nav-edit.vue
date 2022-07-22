@@ -1,43 +1,38 @@
 <template>
-  <ul class="nav-bar clean-list flex items-center" :class="cmp.classes">
-    <li
-      v-for="(link, idx) in cmp.info.links"
-      class="nav-link"
-      contenteditable="true"
-      @click="select(link)"
-      ref="txt"
-      @input="changeTxt('txt', idx)"
-      @mousedown.stop
-    >
-      <a>{{ link.txt }}</a>
-    </li>
-  </ul>
+  <section class="wap-nav">
+    <div class="screen full" @click="toggleMenu" v-if="isMenuOpen"></div>
+    <MenuOutlined class="hamburger" @click="toggleMenu" />
+    <ul class="nav-bar clean-list flex items-center" :class="isShown">
+      <li v-for="link in cmp.info.links" class="nav-link">
+        <a :href="link.href">{{ link.txt }}</a>
+      </li>
+    </ul>
+  </section>
 </template>
 <script>
+import { MenuOutlined } from '@ant-design/icons-vue'
 export default {
-  name: 'wap-nav-edit',
+  name: 'wap-nav',
   props: {
     cmp: Object,
   },
   data() {
     return {
-      currCmp: null,
+      isMenuOpen: false,
     }
   },
   methods: {
-    select(element) {
-      console.log('element', element)
-    },
-    changeTxt(ref, idx) {
-      console.log()
-      console.log(ref, idx)
-      this.cmpToEdit.info.links[idx].txt = this.$refs[ref].innerText
-      // console.log(this.cmpToEdit.info.links[idx].txt)
-      // this.$store.dispatch({ type: 'updateCmp', cmp: this.cmpToEdit })
-    },
-    created() {
-      this.currCmp = JSON.parse(JSON.stringify(this.cmp))
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
     },
   },
+  computed: {
+    isShown() {
+      return { open: this.isMenuOpen }
+    }
+  },
+  components: {
+    MenuOutlined,
+  }
 }
 </script>

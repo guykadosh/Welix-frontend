@@ -1,4 +1,5 @@
 .omnifood {
+
   &-header {
     background-color: #fdf2e9;
     height: em(96px);
@@ -7,56 +8,61 @@
     .logo {
       height: em(22px);
     }
-  }
 
-  &-nav {
     .wap-nav {
-      .nav-link {
-        margin-inline-end: rem(30px);
-        font-weight: 500;
-        font-size: em(18px);
 
-        &:last-child {
-          margin-inline-end: 0;
-        }
+      .hamburger {
+        color: $dark-color
+      }
 
-        a {
-          font-family: Rubik-Bold, sans-serif;
-          text-decoration: none;
-          color: #333;
+      .nav-bar {
 
-          &:hover {
-            color: #cf711f;
+        .nav-link {
+          margin-inline-end: rem(30px);
+          font-weight: 500;
+          font-size: em(18px);
+
+          &:last-child {
+            margin-inline-end: 0;
+          }
+
+          a {
+            font-family: Rubik-Bold, sans-serif;
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+              color: #cf711f;
+            }
           }
         }
       }
+    }
+  }
 
-      transition: all 0.3s;
+  .nav-link:last-child {
+    padding: em(12px) em(25px);
+    border-radius: 9px;
+    background-color: #e67e22;
+
+    a {
+      color: #fff;
     }
 
-    .nav-link:last-child {
-      padding: em(12px) em(25px);
-      border-radius: 9px;
-      background-color: #e67e22;
-
-      a {
-        color: #fff;
-      }
-
-      &:hover {
-        background-color: #cf711f;
-      }
+    &:hover {
+      background-color: #cf711f;
     }
+  }
 
+  @include for-mobile-layout {
+    display: none;
+  }
+
+  .mobile-nav {
+
+    //??
     @include for-mobile-layout {
-      display: none;
-    }
-
-    .mobile-nav {
-      //??
-      @include for-mobile-layout {
-        display: block;
-      }
+      display: block;
     }
   }
 
@@ -186,6 +192,7 @@
           // height: em(36px);
         }
       }
+
       @include for-mobile-layout {
         // height: 2.4rem;
       }
