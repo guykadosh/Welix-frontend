@@ -13,11 +13,12 @@
       </h3>
       <ul class="card-list clean-list" v-if="info.list">
         <li v-for="line in info.list" :key="line">
-          <span>{{ line.icon }}</span> <span>{{ line.txt }}</span>
+          <!-- <span>{{ line.icon }}</span> --> <span>{{ line.txt }}</span>
+          <img :src="line.icon" srcset="">
         </li>
       </ul>
       <a v-if="info.btn" :href="info.btn.link" class="card-btn">{{
-        info.btn.txt
+      info.btn.txt
       }}</a>
     </div>
   </section>
