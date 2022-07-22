@@ -1,30 +1,29 @@
 <template>
   <section class="el-editor-inner flex flex-column">
-    <div class="flex justify-between">
-      <p>Font Family</p>
-      <a-select
-        :options="fonts"
-        v-model:value="style.fontFamily"
-        @change="setStyle"
-        defaultActiveFirstOption
-      ></a-select>
-    </div>
-    <div class="flex justify-between">
-      <p>Font Size</p>
+    <div class="box flex justify-between">
+      <p class="title">Border Radius</p>
       <a-slider
-        v-model:value="fontSize"
-        @change="setfontSize"
-        :min="16"
-        :max="82"
+        v-model:value="borderRadius"
+        @change="setBorderRadius"
+        :min="3"
+        :max="100"
       ></a-slider>
     </div>
-    <div>
-      <p>Font color</p>
+    <div class="box">
+      <p class="title">Font color</p>
       <color-picker @picked="setColor" />
     </div>
-    <div>
-      <p>Background color</p>
+    <div class="box">
+      <p class="title">Background color</p>
       <color-picker @picked="setBgColor" />
+    </div>
+    <div class="box">
+      <p class="title">Make it linkable</p>
+      <a-input
+        v-model:value="link"
+        placeholder="Enter url"
+        @keyup.enter="setLink"
+      />
     </div>
   </section>
   <!-- <input type="color" v-model="style.color" @input="setStyle" /> -->
@@ -41,21 +40,18 @@ export default {
       style: {
         color: '',
         backgroundColor: '',
+        borderRadius: '',
       },
-      fontSize: 32,
+      borderRadius: 6,
       link: '',
-      fonts: [
-        { value: '', label: 'Pick font' },
-        { value: 'Roboto-Regular', label: 'Roboto' },
-        { value: 'Impact', label: 'Impact' },
-        { value: 'Arial', label: 'Arial' },
-        { value: 'Rubik-Regula', label: 'Rubik' },
-      ],
     }
   },
   methods: {
     setStyle() {
-      this.$emit('edited', this.style)
+      this.$emit('edited', { style: this.style })
+    },
+    setLink() {
+      this.$emit('edited', { link: this.link })
     },
     setColor(color) {
       this.style.color = color
@@ -65,8 +61,8 @@ export default {
       this.style.backgroundColor = color
       this.setStyle()
     },
-    setfontSize() {
-      this.style.fontSize = this.fontSize + 'px'
+    setBorderRadius() {
+      this.style.borderRadius = this.borderRadius + 'px'
       this.setStyle()
     },
   },

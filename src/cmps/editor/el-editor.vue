@@ -4,14 +4,15 @@
 <script>
 import elEditorTxt from './costum-editors/el-editor-txt.vue'
 import elEditorBtn from './costum-editors/el-editor-btn.vue'
-
+import elEditorImg from './costum-editors/el-editor-img.vue'
 export default {
   components: {
     elEditorTxt,
     elEditorBtn,
+    elEditorImg,
   },
   methods: {
-    updateCmp(style, link, url) {
+    updateCmp({ style, link, url }) {
       const { key, idx } = this.el
 
       const cmp = JSON.parse(JSON.stringify(this.cmp))

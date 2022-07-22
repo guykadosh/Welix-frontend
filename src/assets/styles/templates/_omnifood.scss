@@ -1,5 +1,4 @@
 .omnifood {
-
   &-header {
     background-color: #fdf2e9;
     height: em(96px);
@@ -10,9 +9,8 @@
     }
 
     .wap-nav {
-
       .hamburger {
-        color: $dark-color
+        color: $dark-color;
       }
 
       .nav-bar {
@@ -32,7 +30,7 @@
             text-decoration: none;
             color: #333;
 
-            &:hover {
+            .wap-details &:hover {
               color: #cf711f;
             }
           }
@@ -50,7 +48,7 @@
       color: #fff;
     }
 
-    &:hover {
+    .wap-details &:hover {
       background-color: #cf711f;
     }
   }
@@ -60,7 +58,6 @@
   }
 
   .mobile-nav {
-
     //??
     @include for-mobile-layout {
       display: block;
@@ -133,7 +130,7 @@
           color: #fff;
           margin-inline-end: rem(12px);
 
-          &:hover {
+          .wap-details &:hover {
             background-color: #cf711f;
           }
         }
@@ -142,7 +139,7 @@
           background-color: #fff;
           color: #555;
 
-          &:hover {
+          .wap-details &:hover {
             background-color: #fdf2e9;
             box-shadow: inset 0 0 0 3px #fff;
           }

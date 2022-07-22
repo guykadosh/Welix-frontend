@@ -40,6 +40,9 @@ iframe {
   pointer-events: none;
 }
 
+[contenteditable]:focus {
+  outline: 2px dashed $dark-color2;
+}
 // .btn {
 //   @include btn;
 

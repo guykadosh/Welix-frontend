@@ -1,11 +1,22 @@
 <template>
   <header class="wap-header" :class="cmp.classes">
     <div class="wap-header__inner flex justify-between items-center">
-      <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
+      <div
+        v-if="info.logoImg"
+        class="logo-box"
+        :style="info.logoImg.style"
+        @click="setEditable(info.logoImg.type, 'logoImg')"
+        ref="logoTxt"
+        @input="changeTxt('logoTxt')"
+      >
         <img contenteditable="true" class="logo" :src="info.logoImg.url" />
       </div>
       <div v-else :style="info.logoTxt.style">
-        <h2 class="logo" contenteditable="true">
+        <h2
+          class="logo"
+          contenteditable="true"
+          @click="setEditable(info.logoTxt.type, 'logoTxt')"
+        >
           {{ info.logoTxt.txt }}
         </h2>
       </div>
@@ -15,6 +26,7 @@
 </template>
 <script>
 import wapNavEdit from './wap-nav-edit.vue'
+import { eventBus } from '../../services/event-bus.service'
 
 export default {
   name: 'wap-header-edit',
@@ -29,8 +41,30 @@ export default {
   components: {
     wapNavEdit,
   },
+  data() {
+    return {
+      cmpToEdit: null,
+    }
+  },
   created() {
-    console.log(this.cmp)
+    this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
+  },
+  methods: {
+    changeTxt(ref) {
+      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'updateCmp', newCmp })
+    },
+    setEditable(type, key, idx = null) {
+      eventBus.emit('open-edit')
+      const el = { type, key, idx }
+      const cmp = JSON.parse(JSON.stringify(this.cmp))
+
+      this.$store.commit({ type: 'setElToEdit', el })
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
+
+      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
   },
   computed: {
     info() {

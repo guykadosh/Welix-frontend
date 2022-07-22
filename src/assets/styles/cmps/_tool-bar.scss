@@ -114,8 +114,12 @@
       max-width: rem(300px);
       margin: 0 auto;
 
-      div {
+      .box {
         margin-block-end: rem(8px);
+
+        .title {
+          margin-block-end: rem(5px);
+        }
       }
     }
   }
