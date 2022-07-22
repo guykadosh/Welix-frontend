@@ -1,5 +1,8 @@
 <template lang="">
-  <component :is="type" @edited="updateCmp" :cmp="cmp"></component>
+  <component v-if="type" :is="type" @edited="updateCmp" :cmp="cmp"></component>
+  <div v-else class="el-editor-inner">
+    <h2>Pick an element to edit</h2>
+  </div>
 </template>
 <script>
 import elEditorTxt from './costum-editors/el-editor-txt.vue'
@@ -45,10 +48,7 @@ export default {
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
   },
-  created() {
-    console.log(this.el)
-    console.log(this.cmp)
-  },
+  created() {},
   computed: {
     cmp() {
       return this.$store.getters.cmpToEdit
@@ -58,7 +58,7 @@ export default {
       return this.$store.getters.elToEdit
     },
     type() {
-      return 'el-editor-' + this.el.type
+      return this.el?.type ? 'el-editor-' + this.el.type : ''
     },
   },
 }

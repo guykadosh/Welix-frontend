@@ -9,19 +9,19 @@
       </a-select>
     </div>
     <div class="editor-nav-view-port flex items-center">
-      <a-tooltip placement="bottom">
+      <a-tooltip @click="resize(1300)" placement="bottom">
         <template #title>
           <span>Switch to desktop</span>
         </template>
         <desktop-outlined class="icon" />
       </a-tooltip>
-      <a-tooltip placement="bottom">
+      <a-tooltip @click="resize(800)" placement="bottom">
         <template #title>
           <span>Switch to tablet</span>
         </template>
         <tablet-outlined class="icon" />
       </a-tooltip>
-      <a-tooltip placement="bottom">
+      <a-tooltip @click="resize(420)" placement="bottom">
         <template #title>
           <span>Switch to mobile</span>
         </template>
@@ -67,6 +67,7 @@ import {
   MobileOutlined,
   LockOutlined,
 } from '@ant-design/icons-vue'
+import { eventBus } from '../../services/event-bus.service'
 
 export default {
   name: 'editor-nav',
@@ -78,6 +79,12 @@ export default {
     TabletOutlined,
     MobileOutlined,
     LockOutlined,
+  },
+  methods: {
+    resize(size) {
+      eventBus.emit('resized', size)
+      console.log('hi')
+    },
   },
 }
 </script>

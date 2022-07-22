@@ -1,5 +1,4 @@
 .making-diff {
-
   &-header {
     position: absolute;
     width: 100%;
@@ -20,7 +19,7 @@
       .hamburger {
         color: #ffffff;
       }
-      
+
       .nav-bar {
         background-color: blue;
         .nav-link {
@@ -52,7 +51,11 @@
     align-items: center;
     margin-bottom: em(15px);
 
-    @include for-medium-layout {
+    // @include for-medium-layout {
+    //   margin-bottom: 0;
+    // }
+
+    & .medium {
       margin-bottom: 0;
     }
 
@@ -78,7 +81,19 @@
       margin-block-end: em(50px);
     }
 
-    @include for-medium-layout {
+    // @include for-medium-layout {
+    //   flex-direction: row;
+    //   margin-block-end: 0;
+    //   &:last-of-type {
+    //     margin-bottom: 0;
+    //   }
+
+    //   &.features {
+    //     flex-direction: row-reverse;
+    //   }
+    // }
+
+    .medium & {
       flex-direction: row;
       margin-block-end: 0;
       &:last-of-type {
@@ -145,7 +160,11 @@
       padding: 0 em(20px);
       margin-block-end: em(30px);
 
-      @include for-medium-layout {
+      // @include for-medium-layout {
+      //   padding-top: em(30px);
+      // }
+
+      .medium & {
         padding-top: em(30px);
       }
 
@@ -222,14 +241,25 @@
       align-items: center;
       gap: 10px;
 
-      @include for-medium-layout {
+      // @include for-medium-layout {
+      //   max-width: em(1100px);
+      // }
+
+      .medium & {
         max-width: em(1100px);
       }
 
       img {
         width: 100vw;
 
-        @include for-medium-layout {
+        .wap-details & {
+          @include for-medium-layout {
+            max-height: 200px;
+            max-width: 300px;
+          }
+        }
+
+        .medium & {
           max-height: 200px;
           max-width: 300px;
         }
