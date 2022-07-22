@@ -39,5 +39,8 @@
     grid-column: 1 / -1;
   }
 
+  @include for-mobile-layout {
+    grid-template-columns:  1fr;
+  }
 
 }
