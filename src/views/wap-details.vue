@@ -1,6 +1,6 @@
 <template>
   <!-- <pre>{{ wap }}</pre> -->
-  <section v-if="wap" class="wap-details main-layout">
+  <section v-if="wap" class="wap-details">
     <component
       v-for="cmp in wap.cmps"
       :is="cmp.type"
