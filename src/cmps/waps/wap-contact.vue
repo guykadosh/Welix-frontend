@@ -6,7 +6,9 @@
                 <input class="contact-input" v-for="input in form.inputs" :type="input.type"
                     :placeholder="input.placeholder">
                 <textarea class="contact-textarea" :placeholder="form.textarea.placeholder" />
-                <button class="contact-submit" @click.prevent="">{{ form.btn.txt }}</button>
+                <div class="btn-container">
+                    <button class="contact-submit" @click.prevent="">{{ form.btn.txt }}</button>
+                </div>
             </form>
         </section>
     </section>

@@ -1,5 +1,5 @@
 <template>
-  <section class="full" :style="cmp.style">
+  <section :style="cmp.style">
     <div :class="cmp.classes">
       <component
         v-for="currCmp in info.cmps"

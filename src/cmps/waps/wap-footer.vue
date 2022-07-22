@@ -10,16 +10,16 @@
       <div class="row">
         <h3>{{ info.row1.txt }}</h3>
         <div class="flex flex-column"></div>
-        <p v-for="text in info.row1.texts">{{ text }}</p>
+        <p class="txt2" v-for="text in info.row1.texts">{{ text }}</p>
       </div>
-      <div class="row">
+      <div class="row" v-if="info.row2.txt">
         <h3>{{ info.row2.txt }}</h3>
         <div class="flex flex-column"></div>
         <p v-for="text in info.row2.texts">{{ text }}</p>
       </div>
     </div>
 
-    <p>{{ info.copyright.txt }}</p>
+    <p class="coffee">{{ info.copyright.txt }}</p>
   </section>
 </template>
 <script>

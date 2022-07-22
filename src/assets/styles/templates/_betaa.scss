@@ -1,82 +1,176 @@
-.betaa-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: rem(120px);
-    max-width: 1200px;
-    height: 38rem;
+.betaa {
+    &-container.betaa-capabilities {
+        display: flex;
+        justify-content: space-between;
 
-    .card-content {
-        max-width: rem(500px);
+        .wap-card {
 
-    }
-
-    .card {
-        &-img {
-            border-radius: rem(20px);
-            width: 35rem;
-
-        }
-
-        &-content {
             display: flex;
-            flex-direction: column;
-        }
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
 
-        &-heading {
-          /*   margin-top: rem(25px); */
-            font-size: rem(41px);
-        }
+            .card-img {
+                border-radius: rem(20px);
+                max-width: rem(550px);
+                max-height: rem(550px);
+                flex-basis: 50%;
+            }
 
-        &-subheading {
-            font-size: rem(20px);
-            margin-top: rem(18px);
-            padding-bottom: rem(32px);
-            border-bottom: 1.5px solid $light-color5;
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 50%;
 
-        }
 
-        &-tag {
-            margin-top: rem(32px);
-        }
-
-        &-list {
-            display: grid;
-            grid-auto-columns: 1fr;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            margin-top: rem(32px);
-            font-size: rem(18px);
-            font-weight: 400;
-            grid-row-gap: 20px;
-
-            li {
-                justify-content: center;
-                justify-items: stretch;
-                align-content: stretch;
-                grid-column-gap: 20px;
-
-                img {
-                    width: 48px;
-                    margin: 15px;
-
+                .card-heading {
+                    font-size: rem(41px);
+                    line-height: rem(50px);
+                    margin-block-end: rem(10px);
                 }
 
+                .card-subheading {
+                    font-size: rem(20px);
+                    padding-bottom: rem(32px);
+                    border-bottom: 1.5px solid $light-color5;
+                }
+
+                .card-tag {
+                    background-color: #f7f4fd;
+                    margin-top: rem(25px);
+                    font-weight: 700;
+                    font-size: rem(16px);
+                    margin-bottom: rem(10px);
+                    color: #763de7;
+                    width: max-content;
+                    padding: 0.8rem;
+                    border-radius: rem(22px)
+                }
+
+                .card-list {
+                    display: grid;
+                    grid-auto-columns: 1fr;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto;
+                    margin-top: rem(32px);
+                    font-size: rem(18px);
+                    font-weight: 400;
+                    grid-row-gap: 20px;
+
+                    li {
+                        justify-content: center;
+                        justify-items: stretch;
+                        align-content: stretch;
+
+                        img {
+                            width: 3rem;
+                            margin: 15px;
+                        }
+                    }
+                }
             }
         }
+    }
 
-        /*         &-list {
-            padding-top: rem(58px);
+    &-review {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: #f7f4fd;
+        width: rem(1170px);
+        height: rem(368px);
+        border-radius: 20px;
+
+        img {
+            height: 250px;
+            margin: 80px 60px 70px 60px;
+        }
+
+        .wap-review-texts {
+            padding-left: rem(25px);
+
+            .wap-review-text {
+                font-family: NotoSans-bold;
+                color: #040222;
+                font-size: 36px;
+                line-height: 1.3em;
+                font-weight: 700;
+                padding-bottom: rem(15px);
+            }
+
+            .wap-review-author {
+                font-family: NotoSans-regular;
+                font-size: rem(18px);
+            }
+
+            .wap-review-discription {
+                font-family: NotoSans-light;
+                font-size: rem(15px);
+
+            }
+        }
+    }
+
+    &-contact {
+        padding-top: 15rem;
+        background-color: #5D21D1;
+        clip-path: polygon(0 21%, 100% 7%, 100% 89%, 0% 100%);
+        justify-content: center;
+
+        h2 {
+            color: $light-color;
+            text-align: center;
+            font-size: rem(50px);
+            font-weight: 300;
+            padding-bottom: 0;
+            margin-bottom: rem(35px);
+        }
+
+        .form-container {
             display: flex;
-            flex-wrap: wrap;
-            font-size: rem(22px);
-            img{
-                width: 75px;
-                padding-right: rem(22px);
-                padding-left: rem(15px);
+            justify-content: center;
+            margin-bottom: rem(200px);
+
+            input,
+            textarea {
+                display: flex;
+                justify-items: center;
+                height: 4rem;
+                width: 35rem;
+                border-radius: em(5px);
+                margin-bottom: rem(15px);
+                outline-style: none;
+                background-color: #f3fafa;
+                font-size: rem(25px);
+                padding-inline-start: rem(15px);
+                border: none;
+                text-transform: capitalize;
+
+
             }
 
+            .btn-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    padding: em(9px) em(70px);
+                    font-size: em(19px);
+                    border-radius: em(10px);
+                    color: #3AE2D3;
+                    background-color: #5D21D1;
+                    border: 1px solid #3AE2D3;
+                    text-transform: capitalize;
+                    .wap-details &:hover {
+                        background-color: #3AE2D3;
+                        color: #5D21D1;
+                    }
+                }
+            }
+            textarea {
+                height: 7rem;
+                margin-bottom:rem(35px) ;
+            }
         }
- */
     }
 }
