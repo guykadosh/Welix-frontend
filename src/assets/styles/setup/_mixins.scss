@@ -1,6 +1,6 @@
 /* Media queries Breakpoint mixins */
 @mixin for-mobile-layout {
-  @media (max-width: $break-narrow) {
+  @media (max-width: $break-mobile) {
     //1200
     @content;
   }
