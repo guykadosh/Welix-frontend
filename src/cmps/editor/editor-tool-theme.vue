@@ -1,13 +1,22 @@
 <template>
   <section class="tool-bar-theme">
-    <h2></h2>
-    <div v-for="theme in themes" class="theme-preview" :style="{ backgroundColor: theme.mainBgc }"
-      @click="setTheme(theme)">
+    <div
+      v-for="theme in themes"
+      class="theme-preview"
+      :style="{ backgroundColor: theme.mainBgc }"
+      @click="setTheme(theme)"
+    >
       <div class="theme-preview-info">
-        <p class="theme-preview-info-header" :style="{ color: isDarkColor(theme.mainBgc) ? '#ffffff' : '#343a40' }">
+        <p
+          class="theme-preview-info-header"
+          :style="{ color: isDarkColor(theme.mainBgc) ? '#ffffff' : '#343a40' }"
+        >
           {{ theme.title }}
         </p>
-        <p class="theme-preview-info-desc" :style="{ color: isDarkColor(theme.mainBgc) ? '#e9ecef' : '#495057' }">
+        <p
+          class="theme-preview-info-desc"
+          :style="{ color: isDarkColor(theme.mainBgc) ? '#e9ecef' : '#495057' }"
+        >
           {{ theme.desc }}
         </p>
       </div>

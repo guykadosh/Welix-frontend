@@ -12,7 +12,12 @@
         @drop="onDrop($event)"
       >
         <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
-          <component :is="cmp.type + '-edit'" :cmp="cmp" />
+          <component
+            :is="cmp.type + '-edit'"
+            :cmp="cmp"
+            @changedTxt="changeTxt"
+            @updatedCmp="updateCmp"
+          />
         </Draggable>
       </Container>
     </div>
@@ -60,6 +65,7 @@ export default {
       return this.wap.cmps[idx]
     },
     resized() {
+      if (!this.$refs.container) return
       const { offsetWidth } = this.$refs.container
       if (offsetWidth < 700) this.responsiveClass = ''
       if (offsetWidth >= 700) this.responsiveClass = 'small'
@@ -73,13 +79,14 @@ export default {
     resize(size) {
       this.conMaxWidth = size
     },
+    changeTxt() {},
+    updateCmp() {},
   },
   computed: {},
   created() {
     eventBus.on('resized', this.resize)
   },
   mounted() {
-    console.log(this.$refs)
     new ResizeObserver(this.resized).observe(this.$refs.container)
   },
   components: {
@@ -95,7 +102,7 @@ export default {
     wapTextEdit,
     wapReviewEdit,
     wapContactEdit,
-    wapMapEdit
+    wapMapEdit,
   },
 }
 </script>
