@@ -473,16 +473,13 @@
 
       .wap-details & {
         @include for-small-layout {
-          max-width: 80%;
-          // grid-template-columns: repeat(2, 1fr);
-          // max-width: 60%;
-          // margin: 3em 2em;
-          // gap: 0;
+          max-width: 70%;
+          flex-direction: row;
         }
       }
 
       .normal & {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
         // margin: 3em 2em;
         // max-width: 60%;
         // margin: 0 auto;
