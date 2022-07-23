@@ -18,8 +18,7 @@
         <p v-for="text in info.row2.texts">{{ text }}</p>
       </div>
     </div>
-
-    <p class="coffee">{{ info.copyright.txt }}</p>
+      <p class="coffee">{{ info.copyright.txt }}</p>
   </section>
 </template>
 <script>
