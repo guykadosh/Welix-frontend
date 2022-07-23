@@ -68,7 +68,6 @@ export default {
         this.responsiveClass = 'small medium narrow normal wide'
     },
     resize(size) {
-      console.log('Hi?')
       this.conMaxWidth = size
     },
   },
