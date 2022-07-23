@@ -16,8 +16,14 @@
           background-color: $light-color;
           width: 40%;
 
-          @include for-medium-layout {
+          .medium & {
             background-color: transparent;
+          }
+
+          .wap-details & {
+            @include for-medium-layout {
+              background-color: transparent;
+            }
           }
 
           .nav-link {
@@ -27,8 +33,12 @@
               font-family: Nunito-regular;
               margin-inline-end: em(20px);
 
-              @include for-medium-layout {
-                .wap-details & {
+              .medium & {
+                color: $light-color;
+              }
+
+              .wap-details & {
+                @include for-medium-layout {
                   color: $light-color;
                 }
               }
@@ -58,15 +68,29 @@
       max-width: 100%;
       text-align: center;
 
-      @include for-narrow-layout {
+      .narrow & {
         flex-direction: row;
+      }
+
+      .wap-details & {
+
+        @include for-narrow-layout {
+          flex-direction: row;
+        }
       }
 
       img {
         max-width: 90%;
 
-        @include for-narrow-layout {
+        .narrow & {
           max-width: 50%;
+        }
+
+        .wap-details & {
+
+          @include for-narrow-layout {
+            max-width: 50%;
+          }
         }
       }
 
@@ -75,8 +99,15 @@
         padding: em(10px);
         margin-top: em(20px);
 
-        @include for-narrow-layout {
+        .narrow &{
           text-align: left;
+        }
+
+        .wap-details & {
+
+          @include for-narrow-layout {
+            text-align: left;
+          }
         }
 
         .heading {
@@ -136,8 +167,12 @@
       max-width: 100%;
       justify-content: space-between;
 
-      @include for-medium-layout {
-        .wap-details & {
+      .medium & {
+        justify-content: center;
+      }
+
+      .wap-details & {
+        @include for-medium-layout {
           justify-content: center;
         }
       }
@@ -149,9 +184,16 @@
         align-items: center;
         width: 100%;
 
-        @include for-narrow-layout {
+        .narrow & {
           flex-direction: row;
           gap: em(30px);
+        }
+
+        .wap-details & {
+          @include for-narrow-layout {
+            flex-direction: row;
+            gap: em(30px);
+          }
         }
 
         .card-img {
@@ -160,8 +202,13 @@
           max-height: rem(550px);
           flex-basis: 50%;
 
-          @include for-medium-layout {
-            .wap-details & {
+          .medium & {
+            margin-top: em(20px);
+            margin-inline-end: em(10px);
+          }
+
+          .wap-details & {
+            @include for-medium-layout {
               margin-top: em(20px);
               margin-inline-end: em(10px);
             }
@@ -173,16 +220,27 @@
           flex-direction: column;
           padding: 0 em(10px);
 
-          @include for-medium-layout {
-            .wap-details & {
+          .medium & {
+            flex-basis: 50%;
+            max-width: em(800px);
+          }
+
+          .narrow & {
+            height: 100%;
+            justify-content: space-between;
+          }
+
+          .wap-details & {
+
+            @include for-medium-layout {
               flex-basis: 50%;
               max-width: em(800px);
             }
-          }
 
-          @include for-narrow-layout {
-            height: 100%;
-            justify-content: space-between;
+            @include for-narrow-layout {
+              height: 100%;
+              justify-content: space-between;
+            }
           }
 
           .card-heading {
@@ -190,8 +248,12 @@
             line-height: rem(50px);
             margin-block-end: rem(10px);
 
-            @include for-medium-layout {
-              .wap-details & {
+            .medium & {
+              font-size: rem(36px);
+            }
+
+            .wap-details & {
+              @include for-medium-layout {
                 font-size: rem(36px);
               }
             }
@@ -202,8 +264,12 @@
             padding-bottom: rem(32px);
             border-bottom: 1.5px solid $light-color5;
 
-            @include for-medium-layout {
-              .wap-details & {
+            .medium & {
+              font-size: rem(16px);
+            }
+
+            .wap-details & {
+              @include for-medium-layout {
                 font-size: rem(16px);
               }
             }
@@ -232,11 +298,15 @@
             font-weight: 400;
             grid-row-gap: 20px;
 
-            @include for-medium-layout {
-              .wap-details & {
+            .medium & {
+              margin-top: rem(10px);
+              grid-row-gap: rem(10px);
+            }
+
+            .wap-details & {
+              @include for-medium-layout {
                 margin-top: rem(10px);
                 grid-row-gap: rem(10px);
-
               }
             }
 
@@ -245,8 +315,14 @@
               flex-direction: column-reverse;
               align-items: center;
 
-              @include for-narrow-layout {
+              .narrow & {
                 flex-direction: row;
+              }
+
+              .wap-details & {
+                @include for-narrow-layout {
+                  flex-direction: row;
+                }
               }
 
               img {
@@ -269,8 +345,14 @@
     margin-bottom: em(40px);
     max-width: 100%;
 
-    @include for-medium-layout {
+    .medium & {
       padding: 0 em(150px);
+    }
+
+    .wap-details & {
+      @include for-medium-layout {
+        padding: 0 em(150px);
+      }
     }
 
     .tag {
@@ -313,10 +395,18 @@
       max-width: 100%;
       gap: em(10px);
 
-      @include for-small-layout {
+      .small & {
         flex-direction: row;
         justify-content: space-between;
         max-width: none;
+      }
+
+      .wap-details & {
+        @include for-small-layout {
+          flex-direction: row;
+          justify-content: space-between;
+          max-width: none;
+        }
       }
 
       .wap-card {
@@ -328,28 +418,54 @@
         border-radius: rem(20px);
         max-height: min-content;
 
-        @include for-medium-layout {
+        .medium & {
           max-width: em(300px);
         }
 
-        @include for-narrow-layout {
+        .narrow & {
           max-width: em(500px);
         }
 
-        @include for-normal-layout {
+        .normal {
           padding: rem(42px);
+        }
+
+        .wap-details & {
+
+          @include for-medium-layout {
+            max-width: em(300px);
+          }
+
+          @include for-narrow-layout {
+            max-width: em(500px);
+          }
+
+          @include for-normal-layout {
+            padding: rem(42px);
+          }
         }
 
         .card-img {
           max-width: 180px;
           margin-block-end: rem(16px);
 
-          @include for-medium-layout {
+          .medium & {
             max-width: em(120px);
           }
 
-          @include for-normal-layout {
+          .normal & {
             max-width: em(200px);
+          }
+
+          .wap-details & {
+
+            @include for-medium-layout {
+              max-width: em(120px);
+            }
+
+            @include for-normal-layout {
+              max-width: em(200px);
+            }
           }
         }
 
@@ -455,21 +571,40 @@
       margin-bottom: em(80px);
       width: 100%;
 
-      @include for-medium-layout {
+      .medium & {
         margin-block-end: em(50px);
       }
 
-      @include for-narrow-layout {
+      .narrow & {
         flex-direction: row;
+      }
+
+      .wap-details & {
+
+        @include for-medium-layout {
+          margin-block-end: em(50px);
+        }
+
+        @include for-narrow-layout {
+          flex-direction: row;
+        }
       }
 
       img {
         width: 80%;
         max-width: em(300px);
 
-        @include for-medium-layout {
+        .medium & {
           max-width: em(300px);
           margin-block-end: em(20px);
+        }
+
+        .wap-details & {
+
+          @include for-medium-layout {
+            max-width: em(300px);
+            margin-block-end: em(20px);
+          }
         }
 
       }
@@ -478,8 +613,15 @@
 
         max-width: 100%;
 
-        @include for-medium-layout {
+        .medium & {
           padding: 0 em(50px);
+        }
+
+        .wap-details & {
+
+          @include for-medium-layout {
+            padding: 0 em(50px);
+          }
         }
 
         .wap-review-text {
@@ -513,15 +655,29 @@
       margin-bottom: rem(30px);
       line-height: rem(30px);
 
-      @include for-medium-layout {
+      .medium & {
         font-size: rem(44px);
         line-height: rem(50px);
         padding: 0 rem(50px);
       }
 
-      @include for-narrow-layout {
+      .narrow & {
         font-size: rem(64px);
         line-height: rem(72px);
+      }
+
+      .wap-details & {
+
+        @include for-medium-layout {
+          font-size: rem(44px);
+          line-height: rem(50px);
+          padding: 0 rem(50px);
+        }
+
+        @include for-narrow-layout {
+          font-size: rem(64px);
+          line-height: rem(72px);
+        }
       }
     }
 
@@ -541,18 +697,30 @@
     max-width: 100%;
 
     .footer-inner {
+      display: flex;
       justify-content: space-between;
       padding-top: em(30px);
 
       img {
         max-width: em(100px);
 
-        @include for-medium-layout {
-          max-width: em(300px);
+        .medium & {
+          max-width: em(300px)
         }
 
-        @include for-narrow-layout {
+        .narrow & {
           max-width: em(500px);
+        }
+
+        .wap-details & {
+
+          @include for-medium-layout {
+            max-width: em(300px);
+          }
+
+          @include for-narrow-layout {
+            max-width: em(500px);
+          }
         }
       }
 
@@ -567,8 +735,14 @@
           font-size: em(36px);
           color: $light-color;
 
-          @include for-narrow-layout {
+          .narrow & {
             font-size: em(76px);
+          }
+          .wap-details & {
+
+            @include for-narrow-layout {
+              font-size: em(76px);
+            }
           }
         }
 
