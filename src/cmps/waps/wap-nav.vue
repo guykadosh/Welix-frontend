@@ -2,7 +2,7 @@
   <section class="wap-nav">
     <div class="screen full" @click="toggleMenu" v-if="isMenuOpen"></div>
     <MenuOutlined class="hamburger" @click="toggleMenu" />
-    <ul class="nav-bar clean-list flex items-center" :class="isShown">
+    <ul class="nav-bar clean-list flex items-center space-between" :class="isShown">
       <li v-for="link in cmp.info.links" class="nav-link">
         <a :href="link.href">{{ link.txt }}</a>
       </li>

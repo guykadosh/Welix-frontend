@@ -11,11 +11,12 @@
     .wap-nav {
       .hamburger {
         color: $dark-color;
+
       }
 
       .nav-bar {
         background-color: $light-color;
-        // width: ;
+
         .nav-link {
           margin-inline-end: rem(30px);
           font-weight: 500;
@@ -31,7 +32,7 @@
             color: #333;
 
             .wap-details &:hover {
-              color: #cf711f;
+              color: #333;
             }
           }
         }
@@ -41,7 +42,6 @@
 
   .nav-link:last-child {
     padding: em(12px) em(25px);
-    border-radius: 9px;
     background-color: #e67e22;
 
     a {
@@ -57,37 +57,39 @@
     display: none;
   }
 
-  .mobile-nav {
-    //??
-    @include for-mobile-layout {
-      display: block;
-    }
-  }
-
   &-hero {
     background-color: #fdf2e9;
-    padding: em(48px) 0 em(64px) 0;
     font-family: Rubik-Medium, sans-serif;
+    padding: em(35px) 0 em(50px) 0;
+    /*  padding: em(48px) 0 em(64px) 0; */
 
     .hero-inner {
       max-width: em(1300px);
       margin: 0 auto;
-      padding: 0 3.2rem;
+      padding: 0 1rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9.6rem;
+      grid-template-columns: 1fr;
+
+      gap: 2.3rem;
       align-items: center;
 
-      @include for-mobile-layout {
-        grid-template-columns: 1fr;
+      /*       @include for-mobile-layout {
         margin: 0 auto;
         max-width: 80%;
         gap: 5rem;
         justify-content: center;
         padding: 0 0.5em;
       }
+ */
+      @include for-normal-layout {
+        //
+        grid-template-columns: 1fr 1fr;
+        gap: 9.6rem;
+
+      }
 
       @include for-small-layout {
+        //
         grid-template-columns: 1fr;
         margin: 0 auto;
         max-width: 90%;
@@ -96,7 +98,8 @@
 
       .text-box {
         .heading {
-          font-size: em(52px);
+          font-size: em(48px);
+          /* font-size: em(52px); */
           line-height: 1.05;
           margin-bottom: em(24px);
           font-weight: 700;
@@ -117,6 +120,7 @@
           text-decoration: none;
           font-size: em(18px);
           font-weight: 500;
+          margin-bottom: rem(15px);
           padding: em(10px) em(18px);
           border-radius: 9px;
           border: none;
@@ -154,11 +158,11 @@
 
   &-brand {
     font-family: Rubik-Regular, sans-serif;
-    padding: em(24px) 0;
+    padding: em(15px) em(15px);
 
     .title {
       font-size: em(14px);
-      text-transform: uppercase;
+      /* text-transform: uppercase; */
       letter-spacing: 0.75px;
       font-weight: 500;
       text-align: center;
@@ -167,29 +171,35 @@
     }
 
     .imgs-container {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      text-align: center;
 
       img {
-        width: 22%;
+        width: 45%;
         filter: brightness(0);
         opacity: 50%;
+
 
         &:not(:last-child) {
           margin-inline-end: em(10px);
         }
       }
 
-      .small & {
-      }
+      .small & {}
 
-      @include for-small-layout {
-        img {
-          // height: em(28px);
+      //.small .meduim .narrow
+
+      .wap-details & {
+        @include for-small-layout {
+          img {
+            // height: em(28px);
+          }
         }
+
       }
 
-      .medium & {
-      }
+      .medium & {}
 
       @include for-medium-layout {
         img {
@@ -206,10 +216,12 @@
   &-meals {
     max-width: auto;
     font-family: Rubik-Regular, sans-serif;
-    padding: em(96px) 0;
+    padding: em(60px) 0;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(1, 0.7fr);
+
     margin: 0 auto;
     gap: rem(48px);
 
