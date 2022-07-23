@@ -44,7 +44,7 @@ export default {
       }
 
       const newCmp = JSON.parse(JSON.stringify(cmp))
-
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
   },

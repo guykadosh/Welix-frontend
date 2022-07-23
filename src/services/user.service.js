@@ -1,12 +1,13 @@
 import { storageService } from './storage.service.js'
-import gUser from '@/assets/JSON/user.json' assert { type: 'user' }
+import { utilService } from './util.service.js'
+import gUser from '@/assets/JSON/user.json' assert { type: 'json' }
 
 /* import { httpService } from './http.service' */
 /* import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service' */
 /* import { showSuccessMsg } from '../services/event-bus.service' */
 
-const USER_KEY = 'userDB'
-
+const USER_KEY = 'user_db'
+const LOGGED_IN_USER = 'user'
 export const userService = {
   login,
   logout,
@@ -17,7 +18,7 @@ export const userService = {
   remove,
   update,
 }
-
+_createUsers()
 async function getUsers() {
   try {
     const users = await storageService.query(USER_KEY)
@@ -62,10 +63,12 @@ async function update(user) {
 }
 
 async function login(userCred) {
+  console.log('usercred', userCred);
   try {
     const users = await storageService.query(USER_KEY)
     const user = users.find(user => user.username === userCred.username)
-    if (user) return user
+    utilService.saveToStorage(LOGGED_IN_USER, user)
+    return user
   } catch (err) {
     console.log('Cannot login', err);
   }
@@ -106,3 +109,7 @@ function getLoggedInUser() {
   store.commit({ type: 'setWatchedUser', user })
 }
  */
+
+function _createUsers() {
+  utilService.saveToStorage(USER_KEY, gUser)
+}

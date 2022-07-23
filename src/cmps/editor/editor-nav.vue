@@ -31,19 +31,21 @@
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
         <lock-outlined class="icon" />
-        <span class="http">https:</span><span>//welix.com/
-          <span class="my-site"
-            contenteditable="true">my-site</span></span>
+        <span class="http">https:</span
+        ><span
+          >//welix.com/
+          <span class="my-site" contenteditable="true">my-site</span></span
+        >
       </div>
     </div>
     <div class="editor-nav-actions flex items-center">
-      <a-tooltip placement="bottom">
+      <a-tooltip @click="undo" placement="bottom">
         <template #title>
           <span>Undo</span>
         </template>
         <undo-outlined class="icon" />
       </a-tooltip>
-      <a-tooltip placement="bottom">
+      <a-tooltip @click="redo" placement="bottom">
         <template #title>
           <span>Redo</span>
         </template>
@@ -93,14 +95,18 @@ export default {
       eventBus.emit('resized', size)
       console.log('hi')
     },
+    undo() {
+      this.$store.commit({ type: 'undo' })
+    },
+    redo() {
+      console.log('Hi')
+      this.$store.commit({ type: 'redo' })
+    },
   },
   computed: {
-    isSelected() {
-
-    },
+    isSelected() {},
   },
 }
 </script>
 
-<style>
-</style>
+<style></style>

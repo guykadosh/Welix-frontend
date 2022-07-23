@@ -5,7 +5,7 @@
     <ul class="nav-bar clean-list flex items-center" :class="isShown">
       <li v-for="(link, idx) in cmp.info.links" ref="links" class="nav-link">
         <a
-        @mousedown.stop
+          @mousedown.stop
           contenteditable="true"
           @click="setEditable(link.type, 'links', idx)"
           @input="changeTxt('links', idx, 'link' + idx)"
@@ -40,13 +40,16 @@ export default {
       this.isMenuOpen = !this.isMenuOpen
     },
     changeTxt(ref, idx = null, itemRef) {
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
       if (idx === null) {
-        this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+        newCmp.info[ref].txt = this.$refs[ref].innerText
       } else {
-        this.cmpToEdit.info[ref][idx].txt = this.$refs[itemRef][0].innerText
+        newCmp.info[ref][idx].txt = this.$refs[itemRef][0].innerText
       }
 
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
