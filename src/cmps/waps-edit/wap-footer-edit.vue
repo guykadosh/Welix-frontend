@@ -15,7 +15,7 @@
       <div class="row">
         <h3>{{ info.row1.txt }}</h3>
         <div class="flex flex-column"></div>
-        <p v-for="text in info.row1.texts">{{ text }}</p>
+        <p class="txt2" v-for="text in info.row1.texts">{{ text }}</p>
       </div>
       <div class="row">
         <h3>{{ info.row2.txt }}</h3>
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <p>{{ info.copyright.txt }}</p>
+    <p class="coffee">{{ info.copyright.txt }}</p>
   </section>
 </template>
 <script>
