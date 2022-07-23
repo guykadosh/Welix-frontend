@@ -511,7 +511,7 @@
       },
       {
         "id": "wc045678gfb",
-        "classes": ["omnifood-brand"],
+        "classes": ["omnifood-brand","main-layout"],
         "type": "wap-gallery",
         "info": {
           "title": {
@@ -653,7 +653,7 @@
       },
       {
         "id": "wc05b2525f",
-        "classes": ["omnifood-txt"],
+        "classes": ["omnifood-txt","main-layout"],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -796,7 +796,7 @@
       },
       {
         "id": "wcfd5v205",
-        "classes": ["omnifood-txt"],
+        "classes": ["omnifood-txt","main-layout"],
         "type": "wap-text",
         "info": {
           "heading": {
