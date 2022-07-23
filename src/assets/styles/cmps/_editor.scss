@@ -117,9 +117,20 @@
     overflow-x: hidden;
     transition: all 0.7s;
     background-color: $light-color;
+    border-left: 1px solid $dark-color4;
 
+    .drag-here {
+      border: 4px dashed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: rem(100px);
+      
+      font-size: rem(36px);
+
+    }
     .smooth-dnd-container {
-      height: 100%;
+      min-height: 80vh;
     }
   }
 }

@@ -1,4 +1,3 @@
-Edit
 <template>
   <section class="editor flex flex-column">
     <editor-header />
@@ -35,13 +34,14 @@ export default {
   methods: {},
   computed: {
     wap() {
-      return this.$store.getters.getCurrWap || wapService.getEmptyWap()
+      return this.$store.getters.getCurrWap 
     },
     cmps() {
       return this.$store.getters.getCmps
     },
   },
   created() {
+    if (!this.wap) this.$store.commit({type: 'setCurrWap', wap: wapService.getEmptyWap()})
     console.log(this.wap)
   },
   components: {

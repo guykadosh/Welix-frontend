@@ -11,6 +11,7 @@
         group-name="1"
         @drop="onDrop($event)"
       >
+      <div v-if="!wap.cmps.length" class="drag-here"><h2>+ Drag here</h2></div>
         <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
           <component :is="cmp.type + '-edit'" :cmp="cmp" />
         </Draggable>
@@ -52,6 +53,7 @@ export default {
   watch: {},
   methods: {
     onDrop(dropRes) {
+      console.log('recieving')
       let cmps = JSON.parse(JSON.stringify(this.wap.cmps))
       cmps = applyDrag(cmps, dropRes)
       this.$store.commit({ type: 'updateCmps', cmps })
