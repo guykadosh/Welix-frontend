@@ -3,18 +3,19 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
+        @mousedown.stop
           v-if="info.heading"
           @click="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
           ref="heading"
           @input="changeTxt('heading')"
-          @mousedown.stop
           class="heading"
           :style="info.heading.style"
         >
           {{ info.heading.txt }}
         </h1>
         <h2
+        @mousedown.stop
           v-if="info.subHeading"
           contenteditable="true"
           class="sub-heading"
@@ -22,12 +23,12 @@
           :style="info.subHeading.style"
           @click="setEditable(info.subHeading.type, 'subHeading')"
           @input="changeTxt('subHeading')"
-          @mousedown.stop
         >
           {{ info.subHeading.txt }}
         </h2>
         <div class="btns" v-if="info.btns">
           <a
+          @mousedown.stop
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
             :href="btn.link"

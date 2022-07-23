@@ -5,6 +5,7 @@
     <ul class="nav-bar clean-list flex items-center" :class="isShown">
       <li v-for="(link, idx) in cmp.info.links" ref="links" class="nav-link">
         <a
+        @mousedown.stop
           contenteditable="true"
           @click="setEditable(link.type, 'links', idx)"
           @input="changeTxt('links', idx, 'link' + idx)"

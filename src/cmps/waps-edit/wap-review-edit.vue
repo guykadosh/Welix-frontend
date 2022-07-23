@@ -4,7 +4,7 @@
       <img v-if="info.img" :src="info.img.url" @click="setEditable(info.img.type, 'img')" alt="img-review"
         contenteditable="true" />
       <div class="wap-review-texts">
-        <p v-if="info.text" class="wap-review-text" ref="text" :style="info.text.style" contenteditable="true"
+        <p  v-if="info.text" class="wap-review-text" ref="text" :style="info.text.style" contenteditable="true"
           @click="setEditable(info.text.type, 'text')" @input="changeTxt('text')" @mousedown.stop>
           {{ info.text.txt }}
         </p>
