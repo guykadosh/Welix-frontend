@@ -1,0 +1,75 @@
+/* The device with borders */
+.tablet {
+  position: relative;
+
+  margin: rem(5px) auto;
+  border: rem(16px) $dark-color2 solid;
+  border-top-width: rem(60px);
+  border-bottom-width: rem(60px);
+  border-radius: rem(36px);
+
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   width: 60px;
+  //   height: 5px;
+  //   position: absolute;
+  //   top: -30px;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   background: #333;
+  //   border-radius: 10px;
+  // }
+
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   width: 35px;
+  //   height: 35px;
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: -65px;
+  //   transform: translate(-50%, -50%);
+  //   background: #333;
+  //   border-radius: 50%;
+  // }
+}
+
+.smartphone {
+  position: relative;
+  // width: 360px;
+  height: 800px;
+  margin: rem(24px) auto;
+  border: 16px $dark-color2 solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+  // z-index: -1;
+
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   width: 60px;
+  //   height: 5px;
+  //   position: absolute;
+  //   top: -30px;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   background: #333;
+  //   border-radius: 10px;
+  // }
+
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   width: 35px;
+  //   height: 35px;
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: -130px;
+  //   z-index: 10000;
+  //   transform: translate(-50%, -50%);
+  //   background: $light-color3;
+  //   border-radius: 50%;
+  // }
+}

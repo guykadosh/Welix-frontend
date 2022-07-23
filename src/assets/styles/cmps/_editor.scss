@@ -115,7 +115,7 @@
     flex-grow: 1;
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: all 0.7s;
+    transition: all 0.5s;
     background-color: $light-color;
     border-left: 1px solid $dark-color4;
 
@@ -125,9 +125,8 @@
       justify-content: center;
       align-items: center;
       padding: rem(100px);
-      
-      font-size: rem(36px);
 
+      font-size: rem(36px);
     }
     .smooth-dnd-container {
       min-height: 80vh;

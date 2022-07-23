@@ -1,7 +1,7 @@
 <template>
   <main
     class="editor-wap-container"
-    :class="responsiveClass"
+    :class="[responsiveClass, wrapper]"
     ref="container"
     :style="{ maxWidth: conMaxWidth + 'px' }"
   >
@@ -11,7 +11,9 @@
         group-name="1"
         @drop="onDrop($event)"
       >
-      <div v-if="!wap.cmps.length" class="drag-here"><h2>+ Drag here</h2></div>
+        <div v-if="!wap.cmps.length" class="drag-here">
+          <h2>+ Drag here</h2>
+        </div>
         <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
           <component
             :is="cmp.type + '-edit'"
@@ -84,7 +86,13 @@ export default {
     changeTxt() {},
     updateCmp() {},
   },
-  computed: {},
+  computed: {
+    wrapper() {
+      if (this.conMaxWidth === 420) return 'smartphone'
+      if (this.conMaxWidth === 800) return 'tablet'
+      return ''
+    },
+  },
   created() {
     eventBus.on('resized', this.resize)
   },
