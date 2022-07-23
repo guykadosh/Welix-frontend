@@ -5,6 +5,7 @@ export const storageService = {
   put,
   remove,
   postMany,
+  getUser
 }
 
 function query(entityType) {
@@ -16,6 +17,12 @@ function get(entityType, entityId) {
   console.log(entityId)
   return query(entityType).then(entities =>
     entities.find(entity => entity._id === entityId)
+  )
+}
+function getUser(entityType, entityUsername) {
+  console.log(entityUsername)
+  return query(entityType).then(entities =>
+    entities.find(entity => entity.username === entityUsername)
   )
 }
 

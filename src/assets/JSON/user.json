@@ -1,16 +1,16 @@
 [
     {
-        "user": "denis",
+        "username": "denis",
         "password": 123,
         "waps": []
     },
     {
-        "user": "guy",
+        "username": "guy",
         "password": 123,
         "waps": []
     },
     {
-        "user": "yuval",
+        "username": "yuval",
         "password": 123,
         "waps": []
     }
