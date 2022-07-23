@@ -2,7 +2,7 @@
   <header class="wap-header" :class="cmp.classes" :style="cmp.style">
     <div class="wap-header__inner flex justify-between items-center">
       <div
-      @mousedown.stop
+        @mousedown.stop
         v-if="info.logoImg"
         class="logo-box"
         :style="info.logoImg.style"
@@ -14,7 +14,7 @@
       </div>
       <div v-else>
         <h2
-        @mousedown.stop
+          @mousedown.stop
           :style="info.logoTxt.style"
           class="logo"
           contenteditable="true"
@@ -54,8 +54,11 @@ export default {
   },
   methods: {
     changeTxt(ref) {
-      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
+      newCmp.info[ref].txt = this.$refs[ref].innerText
+
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {

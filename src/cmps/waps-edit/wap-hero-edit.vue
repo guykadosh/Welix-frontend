@@ -3,7 +3,7 @@
     <div class="hero-inner">
       <div class="text-box">
         <h1
-        @mousedown.stop
+          @mousedown.stop
           v-if="info.heading"
           @click="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
@@ -15,7 +15,7 @@
           {{ info.heading.txt }}
         </h1>
         <h2
-        @mousedown.stop
+          @mousedown.stop
           v-if="info.subHeading"
           contenteditable="true"
           class="sub-heading"
@@ -28,7 +28,7 @@
         </h2>
         <div class="btns" v-if="info.btns">
           <a
-          @mousedown.stop
+            @mousedown.stop
             v-for="(btn, idx) in info.btns"
             :class="'btn' + (idx + 1)"
             :href="btn.link"
@@ -74,8 +74,11 @@ export default {
   },
   methods: {
     changeTxt(ref) {
-      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
+      newCmp.info[ref].txt = this.$refs[ref].innerText
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {

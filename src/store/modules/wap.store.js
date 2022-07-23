@@ -6,6 +6,8 @@ export default {
     currWap: null,
     cmpToEdit: null,
     elToEdit: null,
+    prevActions: [],
+    nextActions: [],
   },
   getters: {
     getWaps({ waps }) {
@@ -44,7 +46,7 @@ export default {
 
         for (const key in cmp.info) {
           if (!cmp.info[key].style) continue
-          console.log(key)
+
           cmp.info[key].style.color = color
         }
 
@@ -55,40 +57,89 @@ export default {
 
             for (const key in cmp.info) {
               if (!cmp.info[key].style) continue
-              console.log(key)
+
               cmp.info[key].style.color = color
             }
           })
         }
       })
     },
-    updateCmp(state, { newCmp }) {
+    updateCmp(state) {
       const { cmps } = state.currWap
 
-      let idx = cmps.findIndex(cmp => cmp.id === newCmp.id)
+      let idx = cmps.findIndex(cmp => cmp.id === state.cmpToEdit.id)
 
       // -1 means the cmp lives inside a wap container
       if (idx === -1) {
         // find the the container
         const wapContainer = cmps
           .filter(cmp => cmp.type === 'wap-container')
-          .find(cmp => cmp.info.cmps.some(cmp => cmp.id === newCmp.id))
+          .find(cmp => cmp.info.cmps.some(cmp => cmp.id === state.cmpToEdit.id))
 
         // find the cmp idx
         const innerIdx = wapContainer.info.cmps.findIndex(
-          cmp => cmp.id === newCmp.id
+          cmp => cmp.id === state.cmpToEdit.id
         )
 
-        wapContainer.info.cmps.splice(innerIdx, 1, newCmp)
+        wapContainer.info.cmps.splice(innerIdx, 1, state.cmpToEdit)
         idx = cmps.findIndex(cmp => cmp.id === wapContainer.id)
 
+        state.prevActions.push(state.currWap.cmps[idx])
         state.currWap.cmps.splice(idx, 1, wapContainer)
       } else {
-        state.currWap.cmps.splice(idx, 1, newCmp)
+        state.prevActions.push(state.currWap.cmps[idx])
+        state.currWap.cmps.splice(idx, 1, state.cmpToEdit)
       }
     },
+    // updateCmp(state, { newCmp }) {
+    //   const { cmps } = state.currWap
+
+    //   let idx = cmps.findIndex(cmp => cmp.id === newCmp.id)
+
+    //   // -1 means the cmp lives inside a wap container
+    //   if (idx === -1) {
+    //     // find the the container
+    //     const wapContainer = cmps
+    //       .filter(cmp => cmp.type === 'wap-container')
+    //       .find(cmp => cmp.info.cmps.some(cmp => cmp.id === newCmp.id))
+
+    //     // find the cmp idx
+    //     const innerIdx = wapContainer.info.cmps.findIndex(
+    //       cmp => cmp.id === newCmp.id
+    //     )
+
+    //     wapContainer.info.cmps.splice(innerIdx, 1, newCmp)
+    //     idx = cmps.findIndex(cmp => cmp.id === wapContainer.id)
+
+    //     state.prevActions.push(state.currWap.cmps[idx])
+    //     state.currWap.cmps.splice(idx, 1, wapContainer)
+    //   } else {
+    //     state.prevActions.push(state.currWap.cmps[idx])
+    //     state.currWap.cmps.splice(idx, 1, newCmp)
+    //   }
+    // },
     updateCmps(state, { cmps }) {
       state.currWap.cmps = cmps
+    },
+    undo(state) {
+      if (!state.prevActions.length) return
+
+      const { cmps } = state.currWap
+      const lastMove = state.prevActions.pop()
+
+      let idx = cmps.findIndex(cmp => cmp.id === lastMove.id)
+      state.nextActions.push(cmps[idx])
+      state.currWap.cmps.splice(idx, 1, lastMove)
+    },
+    redo(state) {
+      if (!state.nextActions.length) return
+      const { cmps } = state.currWap
+      const lastMove = state.nextActions.pop()
+
+      let idx = cmps.findIndex(cmp => cmp.id === lastMove.id)
+      state.prevActions.push(cmps[idx])
+
+      state.currWap.cmps.splice(idx, 1, lastMove)
     },
   },
   actions: {

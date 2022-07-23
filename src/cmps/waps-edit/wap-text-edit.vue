@@ -52,8 +52,12 @@ export default {
   },
   methods: {
     changeTxt(ref) {
-      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
+      newCmp.info[ref].txt = this.$refs[ref].innerText
+
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {

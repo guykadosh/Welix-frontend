@@ -9,7 +9,7 @@
     <div class="card-img-container"></div>
     <div class="card-content">
       <span
-      @mousedown.stop
+        @mousedown.stop
         v-if="info.tag"
         class="card-tag"
         contenteditable="true"
@@ -20,7 +20,7 @@
         >{{ info.tag.txt }}</span
       >
       <h2
-      @mousedown.stop
+        @mousedown.stop
         class="card-heading"
         v-if="info.heading"
         :style="info.heading.style"
@@ -31,9 +31,15 @@
       >
         {{ info.heading.txt }}
       </h2>
-      <p @mousedown.stop class="card-price" v-if="info.price" :style="info.price.style">
+      <p
+        @mousedown.stop
+        class="card-price"
+        v-if="info.price"
+        :style="info.price.style"
+      >
         $
-        <span @mousedown.stop
+        <span
+          @mousedown.stop
           contenteditable="true"
           ref="price"
           @click="setEditable(info.price.type, 'price')"
@@ -41,7 +47,8 @@
           >{{ info.price.txt }}</span
         >
       </p>
-      <h3 @mousedown.stop
+      <h3
+        @mousedown.stop
         class="card-subheading"
         v-if="info.subHeading"
         contenteditable="true"
@@ -56,7 +63,8 @@
         <li v-for="(line, idx) in info.list" :key="line" :style="line.style">
           <img :src="line.icon" srcset="" />
 
-          <span @mousedown.stop
+          <span
+            @mousedown.stop
             contenteditable="true"
             :ref="'line' + idx"
             @click="setEditable(info.list[idx].type, 'list', idx)"
@@ -65,7 +73,8 @@
           >
         </li>
       </ul>
-      <a @mousedown.stop
+      <a
+        @mousedown.stop
         v-if="info.btn"
         :style="info.btn.style"
         contenteditable="true"
@@ -97,13 +106,16 @@ export default {
   },
   methods: {
     changeTxt(ref, idx = null, itemRef) {
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
       if (idx === null) {
-        this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+        newCmp.info[ref].txt = this.$refs[ref].innerText
       } else {
-        this.cmpToEdit.info[ref][idx].txt = this.$refs[itemRef][0].innerText
+        newCmp.info[ref][idx].txt = this.$refs[itemRef][0].innerText
       }
 
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
