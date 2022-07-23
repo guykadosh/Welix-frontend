@@ -99,7 +99,7 @@
         padding: em(10px);
         margin-top: em(20px);
 
-        .narrow &{
+        .narrow & {
           text-align: left;
         }
 
@@ -542,7 +542,7 @@
           background-color: #5d21d1;
           border: 1px solid #3ae2d3;
           text-transform: capitalize;
-         
+
 
           .wap-details &:hover {
             background-color: #3ae2d3;
@@ -692,6 +692,21 @@
     }
   }
 
+  &-container.betaa-container-map {
+    .wap-container__inner {
+      background-color: blue;
+
+      display: flex;
+      justify-content: space-between;
+
+      .wap-list {
+        background-color: yellow;
+        width: em(300px);
+      }
+    }
+  }
+
+
   &-footer {
     background-color: #5d21d1;
     clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
@@ -740,6 +755,7 @@
           .narrow & {
             font-size: em(76px);
           }
+
           .wap-details & {
 
             @include for-narrow-layout {
