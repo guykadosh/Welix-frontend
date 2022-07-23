@@ -22,9 +22,6 @@
           font-weight: 500;
           font-size: em(18px);
 
-          &:last-child {
-            margin-inline-end: 0;
-          }
 
           a {
             font-family: Rubik-Bold, sans-serif;
@@ -35,6 +32,15 @@
               color: #333;
             }
           }
+
+          &:last-child {
+            margin-inline-end: 0;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9px;
+            color: #fff;
+            background-color: #e67e22;
+          }
+
         }
       }
     }
@@ -99,6 +105,17 @@
         .wap-details & {
           @include for-medium-layout {
             padding: 0 1rem;
+
+          }
+        }
+
+        .normal & {
+          padding: 0 4rem;
+        }
+
+        .wap-details & {
+          @include for-normal-layout {
+            padding: 0 4rem;
 
           }
         }
@@ -257,7 +274,7 @@
     .small & {
       grid-template-columns: repeat(2, 1fr);
       max-width: rem(600px);
-  }
+    }
 
     .wap-details & {
       @include for-small-layout {
@@ -279,13 +296,14 @@
         padding: 3rem 3.2rem;
       }
     }
+
     .narrow & {
-      max-width: 70rem;
+      max-width: 60rem;
     }
 
     .wap-details & {
       @include for-narrow-layout {
-        max-width: 70rem;
+        max-width: 60rem;
       }
     }
   }
@@ -416,12 +434,12 @@
       padding-top: 2em;
 
       .small & {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .wap-details & {
         @include for-small-layout {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
         }
       }
 
@@ -448,28 +466,35 @@
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     gap: rem(15px);
-    margin: em(48px) auto;
+    margin: em(48px) 0;
     display: grid;
     margin: 0 auto;
 
     .small & {
       grid-template-columns: repeat(2, 1fr);
-      margin: em(48px) auto;
+      margin: 3em 2em;
+      gap: 0;
+
     }
 
     .wap-details & {
       @include for-small-layout {
         grid-template-columns: repeat(2, 1fr);
-        margin: em(48px) auto;
+        margin: 3em 2em;
         gap: 0;
       }
     }
-    .medium & {
+
+    .normal & {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 3em 2em;
+      gap: 0;
+
     }
 
     .wap-details & {
-      @include for-medium-layout {
-        margin-left: 0;
+      @include for-normal-layout {
+        max-width: 60%;
       }
     }
 
@@ -500,20 +525,18 @@
       }
     }
 
+    .card-btn {
+      padding: 0.5rem 1.5rem;
+      border-radius: 9px;
+      color: #fff;
+      background-color: #e67e22;
+    }
+
     &-starter,
     &-complete {
       border-radius: 11px;
-      width: 70%;
+      width: 90%;
 
-      .small & {
-        width: 75%;
-      }
-
-      .wap-details & {
-        @include for-small-layout {
-          width: 75%;
-        }
-      }
       .narrow & {
         width: 60%;
       }
