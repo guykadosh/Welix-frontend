@@ -11,8 +11,9 @@
       >
         <img contenteditable="true" class="logo" :src="info.logoImg.url" />
       </div>
-      <div v-else :style="info.logoTxt.style">
+      <div v-else>
         <h2
+          :style="info.logoTxt.style"
           class="logo"
           contenteditable="true"
           @click="setEditable(info.logoTxt.type, 'logoTxt')"

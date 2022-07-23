@@ -3,18 +3,8 @@
     width: 100%;
     padding: 0 em(20px);
 
-    background-color: #ecd337;
-    background-color: #b58f1b;
-    background-color: #ecd540;
-    background-color: #eed43f;
-
-    background-image: linear-gradient(
-      to right bottom,
-      rgb(234, 212, 69),
-      #ebbf3b,
-      #ebc944,
-      #eed43f
-    );
+    background-color: #ffb300;
+    background-color: $dark-color1;
     .wap-header__inner {
       padding: rem(8px) 0;
     }
