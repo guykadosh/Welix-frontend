@@ -1,13 +1,17 @@
 .making-diff {
   &-header {
-    position: absolute;
+    // position: absolute;
     width: 100%;
-    padding-top: rem(10px);
-
+    // padding-top: rem(10px);
+    // background-image: linear-gradient(to right, #dec838, );
+    background-color: #ecd337;
+    .wap-header__inner {
+      padding: rem(10px) 0;
+    }
     .logo {
       color: #ffffff;
       font-family: Oswald-bold;
-      font-size: 4vw;
+      font-size: rem(24px);
       cursor: pointer;
 
       &:hover {
@@ -21,7 +25,8 @@
       }
 
       .nav-bar {
-        background-color: blue;
+        background-color: #ecd337;
+
         .nav-link {
           a {
             text-decoration: none;
@@ -41,7 +46,7 @@
 
   &-hero {
     background-image: url('//images01.nicepage.com/c461c07a441a5d220e8feb1a/680a5c4bb828559da16b70e3/568min.jpg');
-    height: 100vh;
+    height: 90vh;
     background-position: 50% 50%;
     object-fit: cover;
     vertical-align: middle;
@@ -61,10 +66,39 @@
 
     .heading {
       text-align: center;
-      font-size: 10vw;
-      color: #ffffff;
+      font-size: rem(48px);
+      color: $light-color;
       font-family: Oswald-bold;
-      margin-top: em(18px);
+
+      .small & {
+        font-size: rem(64px);
+      }
+
+      .wap-details & {
+        @include for-small-layout {
+          font-size: rem(64px);
+        }
+      }
+
+      .medium & {
+        font-size: rem(84px);
+      }
+
+      .wap-details & {
+        @include for-medium-layout {
+          font-size: rem(84px);
+        }
+      }
+
+      .narrow & {
+        font-size: em(96px);
+      }
+
+      .wap-details & {
+        @include for-narrow-layout {
+          font-size: em(96px);
+        }
+      }
     }
   }
 
