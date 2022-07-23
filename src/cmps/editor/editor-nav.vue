@@ -32,7 +32,7 @@
       <div>
         <lock-outlined class="icon" />
         <span class="http">https:</span><span>//welix.com/
-          <span :style="{ backgroundColor: '#ffffff', display: 'inline-block' }"
+          <span class="my-site"
             contenteditable="true">my-site</span></span>
       </div>
     </div>
