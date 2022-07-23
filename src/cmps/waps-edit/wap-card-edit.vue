@@ -9,6 +9,7 @@
     <div class="card-img-container"></div>
     <div class="card-content">
       <span
+      @mousedown.stop
         v-if="info.tag"
         class="card-tag"
         contenteditable="true"
@@ -19,6 +20,7 @@
         >{{ info.tag.txt }}</span
       >
       <h2
+      @mousedown.stop
         class="card-heading"
         v-if="info.heading"
         :style="info.heading.style"
@@ -29,9 +31,9 @@
       >
         {{ info.heading.txt }}
       </h2>
-      <p class="card-price" v-if="info.price" :style="info.price.style">
+      <p @mousedown.stop class="card-price" v-if="info.price" :style="info.price.style">
         $
-        <span
+        <span @mousedown.stop
           contenteditable="true"
           ref="price"
           @click="setEditable(info.price.type, 'price')"
@@ -39,7 +41,7 @@
           >{{ info.price.txt }}</span
         >
       </p>
-      <h3
+      <h3 @mousedown.stop
         class="card-subheading"
         v-if="info.subHeading"
         contenteditable="true"
@@ -54,7 +56,7 @@
         <li v-for="(line, idx) in info.list" :key="line" :style="line.style">
           <img :src="line.icon" srcset="" />
 
-          <span
+          <span @mousedown.stop
             contenteditable="true"
             :ref="'line' + idx"
             @click="setEditable(info.list[idx].type, 'list', idx)"
@@ -63,7 +65,7 @@
           >
         </li>
       </ul>
-      <a
+      <a @mousedown.stop
         v-if="info.btn"
         :style="info.btn.style"
         contenteditable="true"

@@ -5,7 +5,7 @@
     :class="cmp.classes"
     :style="cmp.style"
   >
-    <h3 class="title">{{ info.txt }}</h3>
+    <h3 @mousedown.stop class="title">{{ info.txt }}</h3>
     <div class="imgs-container">
       <img
         v-for="url in info.imgs.urls"
