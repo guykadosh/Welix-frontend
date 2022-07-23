@@ -694,13 +694,13 @@
 
   &-container.betaa-container-map {
     .wap-container__inner {
-      background-color: blue;
+      // background-color: blue;
 
       display: flex;
       justify-content: space-between;
 
       .wap-list {
-        background-color: yellow;
+        // background-color: yellow;
         width: em(300px);
       }
     }

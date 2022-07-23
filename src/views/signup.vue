@@ -2,7 +2,7 @@
     <app-header />
     <section class="signup">
         <form @submit.prevent="signup" class="signup__form">
-            <h2>Start designing for free</h2>
+            <h2>Sign up</h2>
             <input v-model="credentials.fullname" placeholder="Fullname *" />
             <input v-model="credentials.username" placeholder="Username *" />
             <input v-model="credentials.email" type="email" placeholder="Email *" />
@@ -38,10 +38,10 @@ export default {
     created() {
     },
     methods: {
-        signup: async function () {
+        async signup() {
+            const credentials = JSON.parse(JSON.stringify(this.credentials))
             try {
-                console.log(this.credentials)
-                const credentials = JSON.parse(JSON.stringify(this.credentials))
+                console.log('signing up', this.credentials)
                 if (credentials) {
                     await this.$store.dispatch({ type: 'signup', credentials })
                     this.$router.push('/')

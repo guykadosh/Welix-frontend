@@ -36,6 +36,7 @@ export default {
             } catch (err) {
                 console.log('cannot logout (store)', err);
             }
-        }
+        },
+        
     }
 }
