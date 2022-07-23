@@ -83,8 +83,9 @@ async function login(userCred) {
   //}
 }
 async function logout() {
+  console.log('service log out')
   try {
-    localStorage.removeItem(STORAGE_KEY)
+    await storageService.logout(LOGGED_IN_USER)
   } catch (err) {
     console.log('Cannot logout', err);
   }

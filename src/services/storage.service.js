@@ -5,7 +5,8 @@ export const storageService = {
   put,
   remove,
   postMany,
-  getUser
+  getUser,
+  logout
 }
 
 function query(entityType) {
@@ -24,6 +25,11 @@ function getUser(entityType, entityUsername) {
   return query(entityType).then(entities =>
     entities.find(entity => entity.username === entityUsername)
   )
+}
+
+function logout(key) {
+  localStorage.removeItem(key)
+  return Promise.resolve()
 }
 
 function post(entityType, newEntity) {

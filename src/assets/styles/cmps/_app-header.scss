@@ -3,10 +3,8 @@
   background-color: #96f2d7;
   padding: rem(25px);
 
-  .header-logo {
-    width: rem(70px);
-    height: rem(32px);
-    justify-items: center;
+  .main-header-logo {
+    cursor: pointer;
   }
 
   a {

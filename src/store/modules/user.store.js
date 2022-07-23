@@ -1,4 +1,4 @@
-import { userService } from '../../services/user.service'
+import { userService } from '../../services/user.service.js'
 
 
 export default {
@@ -6,7 +6,7 @@ export default {
         user: null
     },
     getters: {
-        user(state) {
+        getUser(state) {
             return state.user
         },
     },
@@ -14,28 +14,26 @@ export default {
         setUser(state, { user }) {
             state.user = user
         },
-        loggedOutUser(state) {
+        logout(state) {
             state.user = null
+            console.log('loggin out', state.user)
         }
-
     },
     actions: {
         async login({ commit }, { credentials }) {
             try {
                 const user = await userService.login(credentials)
                 commit({ type: 'setUser', user })
+                console.log('login', user)
                 return user
-            } catch (err) {
-                console.log('cannot Login (store)', err);
-            }
+            } catch (err) { console.log('cannot Login (store)', err) }
         },
         async logout({ commit }) {
             try {
-                await userService.setLogout()
-                commit({ type: 'loggedOutUser' })
-            } catch (err) {
-                console.log('cannot logout (store)', err);
-            }
+                console.log('store login out')
+                await userService.logout()
+                commit({ type: 'logout' })
+            } catch (err) { console.log('cannot logout (store)', err) }
         },
 
     }

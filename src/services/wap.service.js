@@ -50,6 +50,7 @@ function getEmptyWap(createdBy, name) {
   return {
     name: '',
     imgUrl: '',
+    type: '',
     createdBy,
     usersData: {
       contacts: [
