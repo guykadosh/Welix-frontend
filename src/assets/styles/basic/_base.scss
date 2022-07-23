@@ -28,6 +28,7 @@ html {
 
 body {
   overflow-x: hidden;
+  color: $dark-color1;
 }
 
 ul,
@@ -50,16 +51,10 @@ a {
   cursor: auto;
 }
 
-iframe {
-  width: 100%;
-}
-.noHover {
-  pointer-events: none;
-}
-
 [contenteditable]:focus {
   outline: 2px dashed $dark-color2;
 }
+
 // .btn {
 //   @include btn;
 

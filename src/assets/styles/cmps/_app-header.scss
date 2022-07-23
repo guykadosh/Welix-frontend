@@ -1,6 +1,6 @@
 .main-header {
   margin-block-end: rem(36px);
-  background-color: $light-color2;
+  background-color: #96f2d7;
   padding: rem(25px);
 
   .header-logo {
@@ -10,7 +10,8 @@
   }
 
   a {
-    color: $dark-color4;
+    color: $dark-color2;
+    font-weight: 500;
     cursor: pointer;
   }
 
