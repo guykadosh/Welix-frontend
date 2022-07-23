@@ -81,20 +81,6 @@
         padding: 0 0.5em;
       }
  */
-      @include for-normal-layout {
-        //
-        grid-template-columns: 1fr 1fr;
-        gap: 9.6rem;
-
-      }
-
-      @include for-small-layout {
-        //
-        grid-template-columns: 1fr;
-        margin: 0 auto;
-        max-width: 90%;
-        gap: 5rem;
-      }
 
       .text-box {
         .heading {
@@ -225,16 +211,20 @@
     margin: 0 auto;
     gap: rem(48px);
 
-    @include for-small-layout {
-      max-width: em(1200px);
-      grid-template-columns: repeat(1, 0.7fr);
-      gap: rem(25px);
-    }
-
-    @include for-medium-layout {
+    .medium & {
       max-width: em(800px);
       gap: rem(25px);
       grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .wap-details & {
+      @include for-medium-layout {
+        max-width: em(800px);
+        gap: rem(25px);
+        grid-template-columns: repeat(3, 1fr);
+      }
+
     }
   }
 
@@ -319,18 +309,11 @@
   &-reviews {
     font-family: Rubik-Regular, sans-serif;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     row-gap: em(48px);
-    column-gap: em(80px);
-    padding: em(24px) 0;
-
-    @include for-small-layout {
-      justify-content: center;
-      grid-template-columns: 1fr;
-      max-width: rem(250px);
-      margin: 0 auto;
-      gap: rem(25px);
-    }
+    /*  column-gap: em(80px); */
+    padding: em(24px) em(40px);
 
     .wap-review {
       img {
@@ -355,16 +338,13 @@
   &-gallery {
     .imgs-container {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1.6rem;
+      margin-bottom: em(25px);
+      /* grid-template-columns: repeat(6, 1fr); */
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 em(40px);
+      gap: 1.2rem;
       padding-top: 2em;
 
-      @include for-small-layout {
-        justify-content: center;
-        grid-template-columns: repeat(2, 0.4fr);
-        margin: 0 auto;
-        gap: rem(15px);
-      }
 
       img {
         display: block;
@@ -375,24 +355,17 @@
 
   &-pricing {
     font-family: Rubik-Regular, sans-serif;
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
-    row-gap: em(36px);
-    column-gap: em(64px);
-    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: rem(15px);
     margin: em(48px) auto;
-
-    @include for-small-layout {
-      justify-content: center;
-      grid-template-columns: repeat(1, 1fr);
-      justify-items: center;
-      justify-self: center;
-      gap: rem(15px);
-
-      :first-child {
-        justify-self: center;
-      }
-    }
+    display: grid;
+    /*  row-gap: em(36px); */
+    /*  column-gap: em(64px); */
+    margin: 0 auto;
+    /*  margin: em(48px) auto; */
+    /*     grid-template-columns: repeat(2, 1fr);
+ */
 
     .card-heading {
       color: #cf711f;
@@ -428,7 +401,6 @@
     }
 
     &-starter {
-      justify-self: end;
       border: 2px solid #fdf2e9;
       padding: em(64px);
     }
@@ -458,14 +430,14 @@
 
   &-footer {
     font-family: Rubik-Regular, sans-serif;
-    padding: em(48px) 35%;
+    padding: em(48px) em(40px);
     border-top: 1px solid #eee;
 
-    @include for-small-layout {
+    /*     @include for-small-layout {
       padding: 0;
       justify-content: center;
     }
-
+ */
     .footer-inner {
       h3 {
         font-family: Rubik-Medium, sans-serif;
@@ -480,6 +452,10 @@
         p {
           margin-block-end: rem(12px);
         }
+      }
+
+      h3 {
+        margin-top: em(25px);
       }
     }
 
