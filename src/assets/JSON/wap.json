@@ -4,6 +4,7 @@
     "name": "betaa",
     "imgUrl": "https://i.ibb.co/JRFx731/07-22-232936.png",
     "type": "Business",
+    "style": {},
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995bgfhghh527",
       "fullname": "Lukas Rudrof",
@@ -43,7 +44,7 @@
             "style": {}
           },
           "nav": {
-            "_id": "wc05",
+            "id": "wc05",
             "type": "wap-nav",
             "style": {},
             "classes": ["betaa-nav"],
@@ -202,7 +203,8 @@
             "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "mukjyu6584",
@@ -282,7 +284,8 @@
               },
               "style": {}
             }
-          ]
+          ],
+          "style": {}
         }
       },
       {
@@ -316,7 +319,8 @@
             },
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "mfgnih987",
@@ -343,7 +347,8 @@
             "txt": "Head of marketing, Apple Inc.",
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "wc05jjjj4",
@@ -360,7 +365,8 @@
             "type": "txt",
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "sc599966",
@@ -389,7 +395,8 @@
             "txt": "copyright © 2022 by BETAA, Inc. All rights reserved.",
             "style": {}
           }
-        }
+        },
+        "style": {}
       }
     ],
     "isPublic": true
@@ -399,6 +406,7 @@
     "name": "omnifood",
     "imgUrl": "https://i.ibb.co/7KPrFtX/nee.png",
     "type": "Healthy food",
+    "style": {},
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995527",
       "fullname": "Lukas Rudrof",
@@ -438,7 +446,7 @@
             "style": {}
           },
           "nav": {
-            "_id": "wc05",
+            "id": "wc05321",
             "type": "wap-nav",
             "style": {},
             "classes": ["omnifood-nav"],
@@ -657,7 +665,8 @@
               "style": {}
             }
           ]
-        }
+        },
+        "style": {}
       },
       {
         "id": "wc05b2525f",
@@ -674,7 +683,8 @@
             "type": "txt",
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "wc06d525g",
@@ -702,7 +712,8 @@
                   "txt": "— Dave Bryson",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             },
             {
               "id": "wc01fv1625",
@@ -724,7 +735,8 @@
                   "txt": "— Ben Hadley",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             },
             {
               "id": "wc01fdv527",
@@ -746,7 +758,8 @@
                   "txt": "— Steve Miller",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             },
             {
               "id": "wcfdc5018",
@@ -768,7 +781,8 @@
                   "txt": "— Hannah Smith",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             }
           ]
         },
@@ -817,7 +831,8 @@
             "txt": "Eating well without breaking the bank",
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "wcff0789",
@@ -871,7 +886,8 @@
                   "link": "#wc03",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             },
             {
               "id": "wcfvfd6956",
@@ -925,7 +941,8 @@
                   "link": "#wc03",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             }
           ]
         },
@@ -962,10 +979,12 @@
                   "txt": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!",
                   "style": {}
                 }
-              }
+              },
+              "style": {}
             }
           ]
-        }
+        },
+        "style": {}
       },
       {
         "id": "sc599ffd9",
@@ -997,7 +1016,8 @@
             "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
             "style": {}
           }
-        }
+        },
+        "style": {}
       }
     ],
     "isPublic": true
@@ -1006,6 +1026,7 @@
     "_id": "5e28393890dd7201a06d4e55",
     "name": "Making a difference for food",
     "type": "blog",
+    "style": {},
     "imgUrl": "https://i.ibb.co/Tmb35bv/creative.png",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995584",
@@ -1040,7 +1061,7 @@
             "style": {}
           },
           "nav": {
-            "_id": "wph01",
+            "id": "wph01",
             "type": "wap-nav",
             "classes": ["making-diff-nav"],
             "info": {
@@ -1196,7 +1217,8 @@
               "style": {}
             }
           ]
-        }
+        },
+        "style": {}
       },
       {
         "id": "wc05bggb5225",
@@ -1213,7 +1235,8 @@
             "txt": "We are nominated to Agency of Year",
             "style": {}
           }
-        }
+        },
+        "style": {}
       },
       {
         "id": "wc078hg545",
@@ -1267,7 +1290,8 @@
             },
             "style": {}
           }
-        }
+        },
+        "style": {}
       }
     ],
     "isPublic": true

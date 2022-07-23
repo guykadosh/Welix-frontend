@@ -34,6 +34,21 @@ export default {
     setElToEdit(state, { el }) {
       state.elToEdit = el
     },
+    setTheme(state, { theme }) {
+      const { mainBgc, cmpBgc, color } = theme
+      state.currWap.style.backgroundColor = mainBgc
+
+      state.currWap.cmps.forEach(cmp => {
+        console.log(cmp)
+        cmp.style.backgroundColor = cmpBgc
+        cmp.style.color = color
+
+        for (const key in cmp.info) {
+          if (!cmp.info[key].style) continue
+          cmp.info[key].style.color = color
+        }
+      })
+    },
     updateCmp(state, { newCmp }) {
       const { cmps } = state.currWap
 

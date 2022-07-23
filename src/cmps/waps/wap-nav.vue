@@ -1,8 +1,11 @@
 <template>
-  <section class="wap-nav">
+  <section class="wap-nav" :style="cmp.style">
     <div class="screen full" @click="toggleMenu" v-if="isMenuOpen"></div>
     <MenuOutlined class="hamburger" @click="toggleMenu" />
-    <ul class="nav-bar clean-list flex items-center space-between" :class="isShown">
+    <ul
+      class="nav-bar clean-list flex items-center space-between"
+      :class="isShown"
+    >
       <li v-for="link in cmp.info.links" class="nav-link">
         <a :href="link.href">{{ link.txt }}</a>
       </li>
@@ -29,10 +32,10 @@ export default {
   computed: {
     isShown() {
       return { open: this.isMenuOpen }
-    }
+    },
   },
   components: {
     MenuOutlined,
-  }
+  },
 }
 </script>

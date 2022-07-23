@@ -1,5 +1,5 @@
 <template>
-  <header class="wap-header" :class="cmp.classes">
+  <header class="wap-header" :class="cmp.classes" :style="cmp.style">
     <div class="wap-header__inner flex justify-between items-center">
       <div
         v-if="info.logoImg"

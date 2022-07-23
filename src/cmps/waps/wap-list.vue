@@ -1,5 +1,5 @@
 <template>
-  <section v-if="cmp" class="wap-list" :class="cmp.classes">
+  <section v-if="cmp" class="wap-list" :class="cmp.classes" :style="cmp.style">
     <h3 class="heading">{{ info.heading.txt }}</h3>
     <ul class="clean-list">
       <span v-if="info.listIcon">{{ info.listIcon }}</span>

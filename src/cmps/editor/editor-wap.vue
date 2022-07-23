@@ -5,15 +5,17 @@
     ref="container"
     :style="{ maxWidth: conMaxWidth + 'px' }"
   >
-    <Container
-      :get-child-payload="getChildPayload"
-      group-name="1"
-      @drop="onDrop($event)"
-    >
-      <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
-        <component :is="cmp.type + '-edit'" :cmp="cmp" />
-      </Draggable>
-    </Container>
+    <div class="wap-to-edit" :style="wap.style">
+      <Container
+        :get-child-payload="getChildPayload"
+        group-name="1"
+        @drop="onDrop($event)"
+      >
+        <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
+          <component :is="cmp.type + '-edit'" :cmp="cmp" />
+        </Draggable>
+      </Container>
+    </div>
   </main>
 </template>
 
