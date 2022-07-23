@@ -13,7 +13,10 @@
           <router-link to="/wap/editor/" >Editor</router-link>
         </li>
         <li>
-          <router-link to="/login">Login</router-link>
+          <router-link v-if="!isUser" to="/login">Login</router-link>
+        </li>
+        <li>
+          <router-link v-if="isUser" to="/" @click="logout">Logout</router-link>
         </li>
       </ul>
     </div>
@@ -21,6 +24,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    isUser() {
+      return this.$store.getters.getUser
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch({type: 'logout'})
+    }
+  }
+}
 </script>
 

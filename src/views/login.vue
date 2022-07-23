@@ -33,6 +33,7 @@ export default {
     async login() {
       try {
         const credentials = JSON.parse(JSON.stringify(this.credentials))
+        console.log('cred', credentials)
         const user = await this.$store.dispatch({ type: 'login', credentials })
         if (user) this.$router.push('/template')
       } catch (err) {
