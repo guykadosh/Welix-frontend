@@ -1,16 +1,15 @@
 .wap-list-container {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: rem(18px);
-  grid-row-gap: rem(45px);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: em(57px);
 
   .wap-preview {
     overflow-y: hidden;
 
     &-img {
       position: relative;
+      width: 100%;
     }
 
     &-btns {

@@ -9,6 +9,10 @@
       margin: 0;
     }
 
+    .link {
+      cursor: pointer;
+    }
+
     .page-nav {
       width: 200px;
     }
@@ -75,6 +79,10 @@
 
         .http {
           color: #4263eb;
+        }
+
+        .my-site {
+          color: rgb(204, 0, 255);
         }
       }
     }
