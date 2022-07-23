@@ -1,6 +1,6 @@
 <template>
-  <section :style="cmp.style">
-    <div :class="cmp.classes">
+  <section :style="cmp.style" :class="cmp.classes">
+    <div class="wap-container__inner">
       <component
         v-for="currCmp in info.cmps"
         :key="currCmp.id"
