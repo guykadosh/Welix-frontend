@@ -9,6 +9,10 @@
       margin: 0;
     }
 
+    .link {
+      cursor: pointer;
+    }
+
     .page-nav {
       width: 200px;
     }
@@ -79,7 +83,6 @@
 
         .my-site {
           color: rgb(204, 0, 255);
-          // font-weight: bold;
         }
       }
     }
