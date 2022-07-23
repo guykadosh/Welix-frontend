@@ -2,13 +2,8 @@
   &-header {
     width: 100%;
     padding: 0 em(20px);
-
-    // background-color: #ffb300;
-    // background-color: $dark-color1;
-    background-color: transparent;
-    height: 200px;
-    padding-bottom: 100px;
-    position: absolute;
+    background-color: #ffb300;
+    background-color: $dark-color1;
     .wap-header__inner {
       padding: rem(8px) 0;
     }
