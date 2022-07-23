@@ -20,16 +20,16 @@ export default {
 
     },
     actions: {
-        login: async ({ commit }, { credentials }) => {
+        async login({ commit }, { credentials }) {
             try {
-                const setUser = await userService.login(credentials)
-                commit({ type: 'setUser', user: setUser })
-                return setUser
+                const user = await userService.login(credentials)
+                commit({ type: 'setUser', user })
+                return user
             } catch (err) {
                 console.log('cannot Login (store)', err);
             }
         },
-        logout: async ({ commit }) => {
+        async logout({ commit }) {
             try {
                 await userService.setLogout()
                 commit({ type: 'loggedOutUser' })
@@ -37,6 +37,6 @@ export default {
                 console.log('cannot logout (store)', err);
             }
         },
-        
+
     }
 }
