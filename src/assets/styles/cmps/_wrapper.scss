@@ -1,8 +1,8 @@
 /* The device with borders */
 .tablet {
-  position: relative;
-
-  margin: rem(5px) auto;
+  position: relative; 
+  max-height: 85vh;
+  margin: rem(10px) auto;
   border: rem(16px) $dark-color2 solid;
   border-top-width: rem(60px);
   border-bottom-width: rem(60px);
@@ -38,8 +38,8 @@
 .smartphone {
   position: relative;
   // width: 360px;
-  height: 800px;
-  margin: rem(24px) auto;
+  height: 85vh;
+  margin: rem(12px) auto;
   border: 16px $dark-color2 solid;
   border-top-width: 60px;
   border-bottom-width: 60px;
