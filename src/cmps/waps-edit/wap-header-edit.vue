@@ -2,6 +2,7 @@
   <header class="wap-header" :class="cmp.classes" :style="cmp.style">
     <div class="wap-header__inner flex justify-between items-center">
       <div
+      @mousedown.stop
         v-if="info.logoImg"
         class="logo-box"
         :style="info.logoImg.style"
@@ -13,6 +14,7 @@
       </div>
       <div v-else>
         <h2
+        @mousedown.stop
           :style="info.logoTxt.style"
           class="logo"
           contenteditable="true"

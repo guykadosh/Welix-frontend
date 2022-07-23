@@ -1,6 +1,6 @@
 <template>
   <section v-if="cmp" class="wap-list" :class="cmp.classes" :style="cmp.style">
-    <h3 class="heading">{{ info.heading.txt }}</h3>
+    <h3 @mousedown.stop class="heading">{{ info.heading.txt }}</h3>
     <ul
       contenteditable="true"
       :style="info.list.style"
@@ -8,8 +8,9 @@
       @click="setEditable(info.list.type, 'list')"
     >
       <span v-if="info.listIcon">{{ info.listIcon }}</span>
-      <li v-for="(txt, idx) in info.list.txt" :key="txt">
+      <li @mousedown.stop v-for="(txt, idx) in info.list.txt" :key="txt">
         <span
+        @mousedown.stop
           contenteditable="true"
           :ref="'txt' + idx"
           @input="changeTxt('list', idx, 'txt' + idx)"
@@ -17,7 +18,7 @@
         >
       </li>
     </ul>
-    <a v-if="info.link" :href="info.link.link">{{ info.link.txt }}</a>
+    <a @mousedown.stop v-if="info.link" :href="info.link.link">{{ info.link.txt }}</a>
   </section>
 </template>
 <script>

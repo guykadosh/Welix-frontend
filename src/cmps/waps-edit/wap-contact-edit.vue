@@ -1,6 +1,6 @@
 <template>
   <section :class="cmp.classes" :style="cmp.style">
-    <h2 class="heading" contenteditable="true">{{ cmp.info.heading.txt }}</h2>
+    <h2 @mousedown.stop class="heading" contenteditable="true">{{ cmp.info.heading.txt }}</h2>
     <section class="form-container">
       <form @submit.prevent class="contact-form">
         <input class="contact-input" v-for="input in form.inputs" :type="input.type" :placeholder="input.placeholder"
@@ -8,7 +8,7 @@
         <textarea class="contact-textarea" :placeholder="form.textarea.placeholder" />
         <div class="btn-container">
 
-          <button class="contact-submit" @click.prevent="" disabled contenteditable="true">
+          <button @mousedown.stop class="contact-submit" @click.prevent="" disabled contenteditable="true">
             {{ form.btn.txt }}
           </button>
         </div>
