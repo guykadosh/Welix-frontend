@@ -8,7 +8,11 @@
       <p class="wap-review-author" :style="info.author.style">
         {{ info.author.txt }}
       </p>
-      <p class="wap-review-description" :style="info.role.style">
+      <p
+        v-if="info.role"
+        class="wap-review-description"
+        :style="info.role.style"
+      >
         {{ info.role.txt }}
       </p>
     </div>
