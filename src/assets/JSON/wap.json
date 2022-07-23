@@ -401,38 +401,6 @@
         "style": {}
       },
       {
-        "id": "wpm02225kjknggh",
-        "thumbnail": "",
-        "classes": [
-          "wap-map"
-        ],
-        "type": "wap-map",
-        "info": {
-          "markers": [
-            {
-              "position": {
-                "lat": 31.8102,
-                "lng": 34.6566
-              },
-              "name": "Ashdod",
-              "_id": "m101"
-            }
-          ],
-          "center": {
-            "lat": 31.8102,
-            "lng": 34.6566
-          },
-          "store-list": {
-            "heading": {
-              "type": "txt",
-              "txt": "Find us here",
-              "style": {}
-            },
-            "stores": []
-          }
-        }
-      },
-      {
         "id": "sc599966",
         "classes": [
           "betaa-footer",

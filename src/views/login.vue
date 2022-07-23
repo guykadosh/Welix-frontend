@@ -2,7 +2,7 @@
   <app-header />
   <section class="login">
     <form @submit.prevent="login" class="login__form">
-      <h2>Log Into My Account</h2>
+      <h2>Log in</h2>
       <input v-model="credentials.username" placeholder="Username" />
       <input v-model="credentials.password" type="password" placeholder="Password" show-password />
       <button class="login__btn">
