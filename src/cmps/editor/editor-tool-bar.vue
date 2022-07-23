@@ -1,19 +1,13 @@
 <template>
   <div class="tool-bar flex">
-    <editorToolBarNav @setTool="openTool" />
+    <editor-tool-bar-nav @setTool="openTool" />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header">
         <h2>{{ title }}</h2>
       </div>
-      <section v-if="tool === 'element'">
-        <div>Element A</div>
-        <div>Element B</div>
-        <div>Element C</div>
-        <div>Element D</div>
-        <div>Element E</div>
-      </section>
-      <editorToolSections v-if="tool === 'section'" :cmps="cmps" />
       <el-editor v-if="tool === 'edit'" />
+      <editor-tool-sections v-if="tool === 'section'" :cmps="cmps" />
+      <editor-tool-theme v-if="tool === 'theme'" />
     </section>
   </div>
 </template>
@@ -25,11 +19,20 @@ import { eventBus } from '../../services/event-bus.service'
 import editorToolBarNav from './editor-tool-bar-nav.vue'
 import elEditor from './el-editor.vue'
 import editorToolSections from './editor-tool-sections.vue'
+import editorToolTheme from './editor-tool-theme.vue'
 
 export default {
   name: 'edit-tool-bar',
   props: {
     cmps: Array,
+  },
+  components: {
+    Container,
+    Draggable,
+    editorToolBarNav,
+    elEditor,
+    editorToolSections,
+    editorToolTheme,
   },
   data() {
     return {
@@ -74,7 +77,9 @@ export default {
     isEditorOpen() {
       return {
         'open-section': this.isOpen && this.tool === 'section',
-        'open-edit': this.isOpen && this.tool === 'edit',
+        'open-edit':
+          (this.isOpen && this.tool === 'edit') ||
+          (this.isOpen && this.tool === 'theme'),
       }
     },
     title() {
@@ -83,19 +88,14 @@ export default {
           return 'Add Section'
         case 'edit':
           return 'Edit'
+        case 'theme':
+          return 'Pick a theme'
       }
     },
   },
   created() {
     eventBus.on('open-edit', this.openElEdit)
     this.items = JSON.parse(JSON.stringify(this.cmps))
-  },
-  components: {
-    Container,
-    Draggable,
-    editorToolBarNav,
-    elEditor,
-    editorToolSections,
   },
 }
 </script>

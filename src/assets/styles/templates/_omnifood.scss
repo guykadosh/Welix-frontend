@@ -61,7 +61,7 @@
     background-color: #fdf2e9;
     font-family: Rubik-Medium, sans-serif;
     padding: em(35px) 0 em(50px) 0;
-    /*  padding: em(48px) 0 em(64px) 0; */
+
 
     .hero-inner {
       max-width: em(1300px);
@@ -69,49 +69,58 @@
       padding: 0 1rem;
       display: grid;
       grid-template-columns: 1fr;
-
       gap: 2.3rem;
-      align-items: center;
 
-      /*       @include for-mobile-layout {
-        margin: 0 auto;
-        max-width: 80%;
-        gap: 5rem;
-        justify-content: center;
-        padding: 0 0.5em;
-      }
- */
-      @include for-normal-layout {
-        //
-        grid-template-columns: 1fr 1fr;
-        gap: 9.6rem;
-
-      }
-
-      @include for-small-layout {
-        //
-        grid-template-columns: 1fr;
-        margin: 0 auto;
-        max-width: 90%;
-        gap: 5rem;
-      }
 
       .text-box {
+
         .heading {
           font-size: em(48px);
-          /* font-size: em(52px); */
           line-height: 1.05;
           margin-bottom: em(24px);
           font-weight: 700;
           color: #333;
           letter-spacing: -0.5px;
+
+          .small {
+            margin-bottom: em(15px);
+          }
+
+          .wap-details & {
+            @include for-small-layout {
+              margin-bottom: em(15px);
+            }
+          }
         }
+
+        .medium & {
+          padding: 0 1rem;
+        }
+
+        .wap-details & {
+          @include for-medium-layout {
+            padding: 0 1rem;
+
+          }
+        }
+
 
         .sub-heading {
           font-family: Rubik-Regular, sans-serif;
           font-size: em(20px);
           line-height: 1.6;
           margin-bottom: em(24px);
+
+          .small & {
+            margin-bottom: em(40px);
+          }
+
+          .wap-details & {
+            @include for-small-layout {
+              margin-bottom: em(40px);
+            }
+          }
+
         }
 
         .btn1,
@@ -127,6 +136,17 @@
           cursor: pointer;
           font-family: inherit;
           transition: all 0.3s;
+
+          .medium & {
+            margin-bottom: 0;
+          }
+
+          .wap-details & {
+            @include for-medium-layout {
+              margin-bottom: 0;
+            }
+          }
+
         }
 
         .btn1 {
@@ -152,7 +172,44 @@
 
       img {
         width: 100%;
+
+        .small & {
+          width: 60%;
+          justify-self: center;
+
+        }
+
+        .wap-details & {
+          @include for-small-layout {
+            width: 60%;
+            justify-self: center;
+          }
+        }
+
+        .medium & {
+          width: 100%;
+          justify-self: center;
+
+        }
+
+        .wap-details & {
+          @include for-medium-layout {
+            width: 100%;
+            justify-self: center;
+          }
+        }
       }
+
+      .medium & {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .wap-details & {
+        @include for-medium-layout {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
     }
   }
 
@@ -185,31 +242,6 @@
           margin-inline-end: em(10px);
         }
       }
-
-      .small & {}
-
-      //.small .meduim .narrow
-
-      .wap-details & {
-        @include for-small-layout {
-          img {
-            // height: em(28px);
-          }
-        }
-
-      }
-
-      .medium & {}
-
-      @include for-medium-layout {
-        img {
-          // height: em(36px);
-        }
-      }
-
-      @include for-mobile-layout {
-        // height: 2.4rem;
-      }
     }
   }
 
@@ -219,22 +251,32 @@
     padding: em(60px) 0;
     display: grid;
     justify-content: center;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: repeat(1, 0.7fr);
-
+    grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
     gap: rem(48px);
 
-    @include for-small-layout {
-      max-width: em(1200px);
-      grid-template-columns: repeat(1, 0.7fr);
-      gap: rem(25px);
+    .small & {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 em(40px);
     }
 
-    @include for-medium-layout {
-      max-width: em(800px);
+    .wap-details & {
+      @include for-small-layout {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 em(40px);
+      }
+    }
+
+    .medium & {
       gap: rem(25px);
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wap-details & {
+      @include for-medium-layout {
+        gap: rem(25px);
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 
@@ -319,18 +361,9 @@
   &-reviews {
     font-family: Rubik-Regular, sans-serif;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     row-gap: em(48px);
-    column-gap: em(80px);
-    padding: em(24px) 0;
-
-    @include for-small-layout {
-      justify-content: center;
-      grid-template-columns: 1fr;
-      max-width: rem(250px);
-      margin: 0 auto;
-      gap: rem(25px);
-    }
+    padding: em(24px) em(40px);
 
     .wap-review {
       img {
@@ -350,47 +383,73 @@
         color: #6f6f6f;
       }
     }
+
+    .small & {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .wap-details & {
+      @include for-small-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
   }
 
   &-gallery {
     .imgs-container {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1.6rem;
+      margin-bottom: em(25px);
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 em(40px);
+      gap: 1.2rem;
       padding-top: 2em;
 
-      @include for-small-layout {
-        justify-content: center;
-        grid-template-columns: repeat(2, 0.4fr);
-        margin: 0 auto;
-        gap: rem(15px);
+      .small & {
+        grid-template-columns: repeat(3, 1fr);
       }
 
+      .wap-details & {
+        @include for-small-layout {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .medium & {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .wap-details & {
+        @include for-medium-layout {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
       img {
         display: block;
         width: 100%;
       }
     }
+
   }
 
   &-pricing {
     font-family: Rubik-Regular, sans-serif;
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
-    row-gap: em(36px);
-    column-gap: em(64px);
-    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: rem(15px);
     margin: em(48px) auto;
+    display: grid;
+    margin: 0 auto;
 
-    @include for-small-layout {
-      justify-content: center;
-      grid-template-columns: repeat(1, 1fr);
-      justify-items: center;
-      justify-self: center;
-      gap: rem(15px);
+    .small & {
+      grid-template-columns: repeat(2, 1fr);
+      margin: em(48px) auto;
+    }
 
-      :first-child {
-        justify-self: center;
+    .wap-details & {
+      @include for-small-layout {
+        grid-template-columns: repeat(2, 1fr);
+        margin: em(48px) auto;
       }
     }
 
@@ -428,7 +487,6 @@
     }
 
     &-starter {
-      justify-self: end;
       border: 2px solid #fdf2e9;
       padding: em(64px);
     }
@@ -458,27 +516,39 @@
 
   &-footer {
     font-family: Rubik-Regular, sans-serif;
-    padding: em(48px) 35%;
+    padding: em(48px) em(40px);
     border-top: 1px solid #eee;
 
-    @include for-small-layout {
-      padding: 0;
-      justify-content: center;
-    }
 
     .footer-inner {
       h3 {
         font-family: Rubik-Medium, sans-serif;
       }
 
-      gap: rem(24px);
       margin-block-end: rem(12px);
 
       .row {
         max-width: rem(250px);
 
         p {
-          margin-block-end: rem(12px);
+          margin-block-end: rem(8px);
+        }
+      }
+
+      h3 {
+        margin-top: em(25px);
+        margin-bottom: em(10px);
+      }
+
+      .small & {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .wap-details & {
+        @include for-small-layout {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
         }
       }
     }
@@ -489,4 +559,5 @@
       margin-top: rem(5px);
     }
   }
+
 }

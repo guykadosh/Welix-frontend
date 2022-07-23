@@ -130,7 +130,11 @@
             {
               "type": "wap-card",
               "info": {
-                "tag": "CAPABILITIES",
+                "tag": {
+                  "type": "txt",
+                  "txt": "CAPABILITIES",
+                  "style": {}
+                },
                 "img": {
                   "type": "img",
                   "url": "https://i.ibb.co/7bKWtCz/145.png",
@@ -183,7 +187,11 @@
         "classes": ["betaa-txt", "betaa-layout"],
         "type": "wap-text",
         "info": {
-          "tag": "basic features",
+          "tag": {
+            "type": "txt",
+            "txt": "basic features",
+            "style": {}
+          },
           "heading": {
             "type": "txt",
             "txt": "Tool for every kind of business",
@@ -389,7 +397,7 @@
   {
     "_id": "5e28393890dd7201a06d4e44",
     "name": "omnifood",
-    "imgUrl": "https://i.ibb.co/7KPrFtX/nee.png" ,
+    "imgUrl": "https://i.ibb.co/7KPrFtX/nee.png",
     "type": "Healthy food",
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995527",
@@ -511,7 +519,7 @@
       },
       {
         "id": "wc045678gfb",
-        "classes": ["omnifood-brand"],
+        "classes": ["omnifood-brand", "main-layout"],
         "type": "wap-gallery",
         "info": {
           "title": {
@@ -653,7 +661,7 @@
       },
       {
         "id": "wc05b2525f",
-        "classes": ["omnifood-txt"],
+        "classes": ["omnifood-txt", "main-layout"],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -796,7 +804,7 @@
       },
       {
         "id": "wcfd5v205",
-        "classes": ["omnifood-txt"],
+        "classes": ["omnifood-txt", "main-layout"],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -1024,13 +1032,7 @@
       {
         "id": "wc02bg12g",
         "type": "wap-header",
-        "classes": [
-          "making-diff-header",
-          "flex",
-          "justify-between",
-          "full",
-          "main-layout"
-        ],
+        "classes": ["making-diff-header"],
         "info": {
           "logoTxt": {
             "type": "txt",
@@ -1101,10 +1103,14 @@
           "cmps": [
             {
               "id": "wcc04",
-              "classes": ["making-diff-card about"],
+              "classes": ["making-diff-card", "about"],
               "type": "wap-card",
               "info": {
-                "tag": "about us",
+                "tag": {
+                  "type": "txt",
+                  "txt": "about us",
+                  "style": {}
+                },
                 "heading": {
                   "type": "txt",
                   "txt": "Time to Make a Difference",
@@ -1130,12 +1136,16 @@
               "classes": ["making-diff-card features"],
               "type": "wap-card",
               "info": {
-                "tag": "our features",
+                "tag": {
+                  "type": "txt",
+                  "txt": "our features",
+                  "style": {}
+                },
                 "num": "",
                 "img": "",
                 "heading": {
                   "type": "txt",
-                  "txt": "Create YourVisual Style",
+                  "txt": "Create Your Visual Style",
                   "style": {}
                 },
                 "subHeading": {
@@ -1158,7 +1168,11 @@
               "classes": ["making-diff-card digital"],
               "type": "wap-card",
               "info": {
-                "tag": "digital studio",
+                "tag": {
+                  "type": "txt",
+                  "txt": "digital studio",
+                  "style": {}
+                },
                 "num": "",
                 "img": "",
                 "heading": {

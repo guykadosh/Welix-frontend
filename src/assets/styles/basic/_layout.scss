@@ -30,11 +30,11 @@
 .betaa-layout {
   display: grid;
   grid-template-columns: 10px 1fr 10px;
-  
+
   >* {
     grid-column: 2;
   }
-  
+
   >*.full {
     grid-column: 1 / -1;
   }
@@ -49,6 +49,11 @@
     grid-template-columns: 120px 1fr 120px;
   }
 
+<<<<<<< HEAD
   
 
 }
+=======
+}
+
+>>>>>>> fe071c02d3ef416ecd34360f65c09b7b87562864

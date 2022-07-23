@@ -58,16 +58,16 @@ export default {
     },
     resized() {
       const { offsetWidth } = this.$refs.container
+      if (offsetWidth < 700) this.responsiveClass = ''
       if (offsetWidth >= 700) this.responsiveClass = 'small'
       if (offsetWidth >= 840) this.responsiveClass = 'small medium'
       if (offsetWidth >= 1024) this.responsiveClass = 'small medium narrow'
-      if (offsetWidth >= 1200)
+      if (offsetWidth >= 1300)
         this.responsiveClass = 'small medium narrow normal'
       if (offsetWidth >= 1360)
         this.responsiveClass = 'small medium narrow normal wide'
     },
     resize(size) {
-      console.log('Hi?')
       this.conMaxWidth = size
     },
   },

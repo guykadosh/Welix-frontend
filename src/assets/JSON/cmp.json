@@ -452,7 +452,7 @@
   },
   {
     "id": "wc045678gfb",
-    "classes": ["omnifood-brand"],
+    "classes": ["omnifood-brand", "main-layout"],
     "thumbnail": "https://i.ibb.co/NLKTYWw/omnifood-brands.png",
     "type": "wap-gallery",
     "info": {
@@ -595,7 +595,7 @@
   },
   {
     "id": "bg622626",
-    "classes": ["omnifood-meal"],
+    "classes": ["omnifood-meal", "main-layout"],
     "type": "wap-card",
     "info": {
       "img": {
@@ -638,7 +638,7 @@
   },
   {
     "id": "wc0bgh124",
-    "classes": ["omnifood-meal"],
+    "classes": ["omnifood-meal", "main-layout"],
     "style": {},
     "type": "wap-card",
     "info": {
@@ -676,7 +676,7 @@
   },
   {
     "id": "wc04dsvf145",
-    "classes": ["omnifood-meal-list"],
+    "classes": ["omnifood-meal-list", "main-layout"],
     "type": "wap-list",
     "info": {
       "heading": {
@@ -704,7 +704,7 @@
   },
   {
     "id": "wc05b2525f",
-    "classes": ["omnifood-txt"],
+    "classes": ["omnifood-txt", "main-layout"],
     "type": "wap-text",
     "thumbnail": "https://i.ibb.co/D1N6wbR/omnifood-text.png",
     "info": {
@@ -850,7 +850,7 @@
   },
   {
     "id": "wcfd5v205",
-    "classes": ["omnifood-txt"],
+    "classes": ["omnifood-txt", "main-layout"],
     "type": "wap-text",
     "thumbnail": "https://i.ibb.co/LhSdg7Z/omnifood-text2.png",
     "info": {
@@ -1164,7 +1164,7 @@
             "img": "",
             "heading": {
               "type": "txt",
-              "txt": "Create YourVisual Style",
+              "txt": "Create Your Visual Style",
               "style": {}
             },
             "subHeading": {

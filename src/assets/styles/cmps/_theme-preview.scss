@@ -1,0 +1,48 @@
+.theme-preview {
+  background-color: $light-color2;
+  margin: rem(15px) rem(20px);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 1px 0px $dark-color3;
+  border: 1px solid $dark-color3;
+  cursor: pointer;
+  &:hover {
+    background-color: $light-color4;
+  }
+
+  &-info {
+    padding: rem(16px) rem(18px);
+
+    &-header {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    &-desc {
+      color: $light-color5;
+      font-size: 0.8rem;
+    }
+  }
+
+  &-colors {
+    display: flex;
+    height: rem(15px);
+
+    & > *:first-child {
+      flex-basis: 50%;
+    }
+    & > *:last-child {
+      flex-basis: 50%;
+    }
+
+    // & > *:first-child {
+    //   flex-grow: 3;
+    // }
+    // & > *:nth-child(2) {
+    //   flex-grow: 2;
+    // }
+    // & > *:nth-child(3) {
+    //   flex-grow: 1;
+    // }
+  }
+}
