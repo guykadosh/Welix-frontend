@@ -13,33 +13,27 @@
         <template #title>
           <span>Switch to desktop</span>
         </template>
-        <desktop-outlined class="icon" />
+        <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" />
       </a-tooltip>
       <a-tooltip @click="resize(800)" placement="bottom">
         <template #title>
           <span>Switch to tablet</span>
         </template>
-        <tablet-outlined class="icon" />
+        <tablet-outlined class="icon" :class="{ active: viewMode === 800 }" />
       </a-tooltip>
       <a-tooltip @click="resize(420)" placement="bottom">
         <template #title>
           <span>Switch to mobile</span>
         </template>
-        <mobile-outlined class="icon" />
+        <mobile-outlined class="icon" :class="{ active: viewMode === 420 }" />
       </a-tooltip>
     </div>
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
         <lock-outlined class="icon" />
-        <span class="http">https:</span
-        ><span
-          >//welix.com/
-          <span
-            :style="{ backgroundColor: '#ffffff', display: 'inline-block' }"
-            contenteditable="true"
-            >my-site</span
-          ></span
-        >
+        <span class="http">https:</span><span>//welix.com/
+          <span :style="{ backgroundColor: '#ffffff', display: 'inline-block' }"
+            contenteditable="true">my-site</span></span>
       </div>
     </div>
     <div class="editor-nav-actions flex items-center">
@@ -88,13 +82,25 @@ export default {
     MobileOutlined,
     LockOutlined,
   },
+  data() {
+    return {
+      viewMode: 1300,
+    }
+  },
   methods: {
     resize(size) {
+      this.viewMode = size
       eventBus.emit('resized', size)
       console.log('hi')
+    },
+  },
+  computed: {
+    isSelected() {
+
     },
   },
 }
 </script>
 
-<style></style>
+<style>
+</style>

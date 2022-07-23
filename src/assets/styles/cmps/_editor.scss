@@ -39,7 +39,7 @@
       padding: 0 em(10px);
 
       .icon {
-        padding: em(3px);
+        padding: em(4px);
         border-radius: em(5px);
         font-size: em(22px);
         margin-inline-end: em(10px);
@@ -47,11 +47,12 @@
         color: #868e96;
 
         &:hover {
-          color: rgb(22, 22, 22);
+          color: $dark-color;
         }
 
-        &:active {
-          background-color: rgba(20, 42, 243, 0.278);
+        &.active {
+          background-color: rgba(20, 42, 243, 0.237);
+          color: $dark-color;
         }
       }
     }
