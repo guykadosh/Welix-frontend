@@ -26,7 +26,7 @@
 <script>
 // import getStartedBtn from '../components/misc/get-started-btn.vue'
 import appHeader from '../cmps/app/app-header.vue'
-import hero from '../cmps/home/hero.vue'
+import hero from '../cmps/app/hero.vue'
 export default {
   name: '',
   data() {
