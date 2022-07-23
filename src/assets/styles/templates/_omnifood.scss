@@ -94,14 +94,12 @@
         }
 
         .medium & {
-          padding: 0 5rem;
-          gap: 2.3rem;
-
+          padding: 0 1rem;
         }
 
         .wap-details & {
           @include for-medium-layout {
-            padding: 0 5rem;
+            padding: 0 1rem;
 
           }
         }
@@ -138,6 +136,17 @@
           cursor: pointer;
           font-family: inherit;
           transition: all 0.3s;
+
+          .medium & {
+            margin-bottom: 0;
+          }
+
+          .wap-details & {
+            @include for-medium-layout {
+              margin-bottom: 0;
+            }
+          }
+
         }
 
         .btn1 {
@@ -176,6 +185,19 @@
             justify-self: center;
           }
         }
+
+        .medium & {
+          width: 100%;
+          justify-self: center;
+
+        }
+
+        .wap-details & {
+          @include for-medium-layout {
+            width: 100%;
+            justify-self: center;
+          }
+        }
       }
 
       .medium & {
@@ -185,8 +207,6 @@
       .wap-details & {
         @include for-medium-layout {
           grid-template-columns: 1fr 1fr;
-          padding: 0;
-
         }
       }
 
@@ -231,43 +251,32 @@
     padding: em(60px) 0;
     display: grid;
     justify-content: center;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: repeat(1, 0.7fr);
-
+    grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
     gap: rem(48px);
 
     .small & {
       grid-template-columns: repeat(2, 1fr);
       margin: 0 em(40px);
-
-
     }
 
     .wap-details & {
       @include for-small-layout {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 em(40px);
-
-
       }
     }
 
-
     .medium & {
-      max-width: em(800px);
       gap: rem(25px);
       grid-template-columns: repeat(3, 1fr);
-
     }
 
     .wap-details & {
       @include for-medium-layout {
-        max-width: em(800px);
         gap: rem(25px);
         grid-template-columns: repeat(3, 1fr);
       }
-
     }
   }
 
@@ -354,7 +363,6 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: em(48px);
-    /*  column-gap: em(80px); */
     padding: em(24px) em(40px);
 
     .wap-review {
@@ -392,7 +400,6 @@
     .imgs-container {
       display: grid;
       margin-bottom: em(25px);
-      /* grid-template-columns: repeat(6, 1fr); */
       grid-template-columns: repeat(2, 1fr);
       padding: 0 em(40px);
       gap: 1.2rem;
@@ -408,7 +415,15 @@
         }
       }
 
+      .medium & {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
+      .wap-details & {
+        @include for-medium-layout {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
       img {
         display: block;
         width: 100%;
