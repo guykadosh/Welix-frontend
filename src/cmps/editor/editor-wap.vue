@@ -32,6 +32,7 @@ import wapFooterEdit from '../waps-edit/wap-footer-edit.vue'
 import wapReviewEdit from '../waps-edit/wap-review-edit.vue'
 import wapTextEdit from '../waps-edit/wap-text-edit.vue'
 import wapContactEdit from '../waps-edit/wap-contact-edit.vue'
+import wapMapEdit from '../waps-edit/wap-map-edit.vue'
 import { eventBus } from '../../services/event-bus.service'
 
 export default {
@@ -94,6 +95,7 @@ export default {
     wapTextEdit,
     wapReviewEdit,
     wapContactEdit,
+    wapMapEdit
   },
 }
 </script>

@@ -29,6 +29,7 @@ import wapCardEdit from './wap-card-edit.vue'
 import wapListEdit from './wap-list-edit.vue'
 import wapReviewEdit from './wap-review-edit.vue'
 import wapTextEdit from './wap-text-edit.vue'
+import wapMapEdit from './wap-map-edit.vue'
 
 export default {
   name: 'wap-container-edit',
@@ -42,6 +43,7 @@ export default {
     wapListEdit,
     wapReviewEdit,
     wapTextEdit,
+    wapMapEdit,
   },
   data() {
     return {

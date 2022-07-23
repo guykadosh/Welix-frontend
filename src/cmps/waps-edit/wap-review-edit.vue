@@ -1,19 +1,52 @@
 <template>
-  <section v-if="cmp" class="wap-review" :class="cmp.classes" :style="cmp.style">
+  <section
+    v-if="cmp"
+    class="wap-review"
+    :class="cmp.classes"
+    :style="cmp.style"
+  >
     <div class="wap-review__inner">
-      <img v-if="info.img" :src="info.img.url" @click="setEditable(info.img.type, 'img')" alt="img-review"
-        contenteditable="true" />
+      <img
+        v-if="info.img"
+        :src="info.img.url"
+        @click="setEditable(info.img.type, 'img')"
+        alt="img-review"
+        contenteditable="true"
+      />
       <div class="wap-review-texts">
-        <p  v-if="info.text" class="wap-review-text" ref="text" :style="info.text.style" contenteditable="true"
-          @click="setEditable(info.text.type, 'text')" @input="changeTxt('text')" @mousedown.stop>
+        <p
+          v-if="info.text"
+          class="wap-review-text"
+          ref="text"
+          :style="info.text.style"
+          contenteditable="true"
+          @click="setEditable(info.text.type, 'text')"
+          @input="changeTxt('text')"
+          @mousedown.stop
+        >
           {{ info.text.txt }}
         </p>
-        <p v-if="info.author" class="wap-review-author" ref="author" :style="info.author.style" contenteditable="true"
-          @click="setEditable(info.author.type, 'author')" @input="changeTxt('author')" @mousedown.stop>
+        <p
+          v-if="info.author"
+          class="wap-review-author"
+          ref="author"
+          :style="info.author.style"
+          contenteditable="true"
+          @click="setEditable(info.author.type, 'author')"
+          @input="changeTxt('author')"
+          @mousedown.stop
+        >
           {{ info.author.txt }}
         </p>
-        <p v-if="info.role" class="wap-review-description" :style="info.role.style" contenteditable="true"
-          @click="setEditable(info.role.type, 'role')" @input="changeTxt('role')" @mousedown.stop>
+        <p
+          v-if="info.role"
+          class="wap-review-description"
+          :style="info.role.style"
+          contenteditable="true"
+          @click="setEditable(info.role.type, 'role')"
+          @input="changeTxt('role')"
+          @mousedown.stop
+        >
           {{ info.role.txt }}
         </p>
       </div>
@@ -38,8 +71,12 @@ export default {
   },
   methods: {
     changeTxt(ref) {
-      this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
+      newCmp.info[ref].txt = this.$refs[ref].innerText
+
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {

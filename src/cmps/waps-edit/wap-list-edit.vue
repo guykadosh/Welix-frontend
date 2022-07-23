@@ -10,7 +10,7 @@
       <span v-if="info.listIcon">{{ info.listIcon }}</span>
       <li @mousedown.stop v-for="(txt, idx) in info.list.txt" :key="txt">
         <span
-        @mousedown.stop
+          @mousedown.stop
           contenteditable="true"
           :ref="'txt' + idx"
           @input="changeTxt('list', idx, 'txt' + idx)"
@@ -18,7 +18,9 @@
         >
       </li>
     </ul>
-    <a @mousedown.stop v-if="info.link" :href="info.link.link">{{ info.link.txt }}</a>
+    <a @mousedown.stop v-if="info.link" :href="info.link.link">{{
+      info.link.txt
+    }}</a>
   </section>
 </template>
 <script>
@@ -39,14 +41,16 @@ export default {
   },
   methods: {
     changeTxt(ref, idx = null, itemRef) {
+      const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
+      const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
+
       if (idx === null) {
-        this.cmpToEdit.info[ref].txt = this.$refs[ref].innerText
+        newCmp.info[ref].txt = this.$refs[ref].innerText
       } else {
-        this.cmpToEdit.info[ref].txt[idx].txt =
-          this.$refs[itemRef].txt[0].innerText
+        newCmp.info[ref].txt[idx].txt = this.$refs[itemRef].txt[0].innerText
       }
 
-      const newCmp = JSON.parse(JSON.stringify(this.cmpToEdit))
+      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
