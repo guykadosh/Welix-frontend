@@ -8,6 +8,15 @@
                 <PlusCircleOutlined class="icon" />
             </a-tooltip>
         </li> -->
+
+    <li @click="setTool('edit')">
+      <a-tooltip placement="right">
+        <template #title>
+          <span>Edit</span>
+        </template>
+        <EditOutlined class="icon" />
+      </a-tooltip>
+    </li>
     <li @click="setTool('section')">
       <a-tooltip placement="right">
         <template #title>
@@ -25,12 +34,13 @@
         <FileTextOutlined class="icon" />
       </a-tooltip>
     </li> -->
-    <li @click="setTool('edit')">
+
+    <li @click="setTool('theme')">
       <a-tooltip placement="right">
         <template #title>
-          <span>Edit</span>
+          <span>Themes</span>
         </template>
-        <EditOutlined class="icon" />
+        <BgColorsOutlined class="icon" />
       </a-tooltip>
     </li>
   </ul>
@@ -42,6 +52,8 @@ import {
   PicCenterOutlined,
   FileTextOutlined,
   EditOutlined,
+  HighlightOutlined,
+  BgColorsOutlined,
 } from '@ant-design/icons-vue'
 export default {
   name: '',
@@ -50,6 +62,8 @@ export default {
     PicCenterOutlined,
     FileTextOutlined,
     EditOutlined,
+    HighlightOutlined,
+    BgColorsOutlined,
   },
   methods: {
     setTool(type) {
