@@ -66,7 +66,6 @@
     .hero-inner {
       max-width: em(1300px);
       margin: 0 auto;
-      padding: 0 1rem;
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.3rem;
@@ -171,7 +170,7 @@
       }
 
       img {
-        width: 100%;
+        width: 95%;
 
         .small & {
           width: 60%;
@@ -251,31 +250,42 @@
     padding: em(60px) 0;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 300px);
     margin: 0 auto;
     gap: rem(48px);
 
     .small & {
       grid-template-columns: repeat(2, 1fr);
-      margin: 0 em(40px);
-    }
+      max-width: rem(600px);
+  }
 
     .wap-details & {
       @include for-small-layout {
         grid-template-columns: repeat(2, 1fr);
-        margin: 0 em(40px);
+        max-width: rem(600px);
       }
     }
 
     .medium & {
-      gap: rem(25px);
       grid-template-columns: repeat(3, 1fr);
+      max-width: 120rem;
+      padding: 3rem 3.2rem;
     }
 
     .wap-details & {
       @include for-medium-layout {
-        gap: rem(25px);
         grid-template-columns: repeat(3, 1fr);
+        max-width: 120rem;
+        padding: 3rem 3.2rem;
+      }
+    }
+    .narrow & {
+      max-width: 70rem;
+    }
+
+    .wap-details & {
+      @include for-narrow-layout {
+        max-width: 70rem;
       }
     }
   }
@@ -416,14 +426,15 @@
       }
 
       .medium & {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
       }
 
       .wap-details & {
         @include for-medium-layout {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(6, 1fr);
         }
       }
+
       img {
         display: block;
         width: 100%;
@@ -450,6 +461,15 @@
       @include for-small-layout {
         grid-template-columns: repeat(2, 1fr);
         margin: em(48px) auto;
+        gap: 0;
+      }
+    }
+    .medium & {
+    }
+
+    .wap-details & {
+      @include for-medium-layout {
+        margin-left: 0;
       }
     }
 
@@ -483,12 +503,33 @@
     &-starter,
     &-complete {
       border-radius: 11px;
-      width: 85%;
+      width: 70%;
+
+      .small & {
+        width: 75%;
+      }
+
+      .wap-details & {
+        @include for-small-layout {
+          width: 75%;
+        }
+      }
+      .narrow & {
+        width: 60%;
+      }
+
+      .wap-details & {
+        @include for-narrow-layout {
+          width: 60%;
+        }
+      }
+
     }
 
     &-starter {
       border: 2px solid #fdf2e9;
       padding: em(64px);
+
     }
 
     &-complete {
