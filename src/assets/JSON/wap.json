@@ -402,6 +402,280 @@
     "isPublic": true
   },
   {
+    "_id": "5e28393890dd7201a06d4e55",
+    "name": "Making a difference for food",
+    "type": "Blog",
+    "style": {},
+    "imgUrl": "https://i.ibb.co/Tmb35bv/creative.png",
+    "createdBy": {
+      "_id": "5e26e0b718a0891d4c995584",
+      "fullname": "Lukas Rudrof",
+      "imgUrl": "img.jpg"
+    },
+    "usersData": {
+      "contacts": [
+        {
+          "email": "user@user.com",
+          "msg": "Please send me stuff",
+          "at": 123
+        }
+      ],
+      "signups": [
+        {
+          "email": "user@user.com",
+          "at": 123
+        }
+      ]
+    },
+    "theme": "vivid",
+    "cmps": [
+      {
+        "id": "wc02bg12g",
+        "type": "wap-header",
+        "classes": ["making-diff-header"],
+        "info": {
+          "logoTxt": {
+            "type": "txt",
+            "txt": "Creative Studio",
+            "style": {}
+          },
+          "nav": {
+            "id": "wph01",
+            "type": "wap-nav",
+            "classes": ["making-diff-nav"],
+            "info": {
+              "links": [
+                {
+                  "type": "txt",
+                  "txt": "About us",
+                  "link": "#about",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Our features",
+                  "link": "#features",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Digital studio",
+                  "link": "#studio",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Portfolio",
+                  "link": "#portfolio",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Contact us",
+                  "link": "#cta",
+                  "style": {}
+                }
+              ]
+            },
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wcdfvgfb01",
+        "type": "wap-hero",
+        "classes": ["making-diff-hero", "full", "main-layout"],
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "Creative Stories",
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wc03f15f252",
+        "type": "wap-container",
+        "classes": ["making-diff-cards", "full"],
+        "info": {
+          "cmps": [
+            {
+              "id": "wcc04",
+              "classes": ["making-diff-card", "about"],
+              "type": "wap-card",
+              "info": {
+                "tag": {
+                  "type": "txt",
+                  "txt": "about us",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "Time to Make a Difference",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Phasellus scelerisque arcu vestibulum tempor tempor. Donec vulputate leo et metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
+                  "style": {}
+                },
+                "list": [],
+                "btn": {
+                  "type": "btn",
+                  "txt": "view more",
+                  "link": "",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wccfvc1205",
+              "classes": ["making-diff-card features"],
+              "type": "wap-card",
+              "info": {
+                "tag": {
+                  "type": "txt",
+                  "txt": "our features",
+                  "style": {}
+                },
+                "num": "",
+                "img": "",
+                "heading": {
+                  "type": "txt",
+                  "txt": "Create Your Visual Style",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Maecenas non ipsum sollicitudin, sollicitudin ligula et, pharetra enim. Praesent rhoncus, lorem eget auctor finibus, turpis turpis feugiat orci, non porta nisi augue quis ligula. Pellentesque dictum nulla in massa ornare, porttitor",
+                  "style": {}
+                },
+                "list": [],
+                "btn": {
+                  "type": "txt",
+                  "txt": "view more",
+                  "link": "",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wccg222206",
+              "classes": ["making-diff-card digital"],
+              "type": "wap-card",
+              "info": {
+                "tag": {
+                  "type": "txt",
+                  "txt": "digital studio",
+                  "style": {}
+                },
+                "num": "",
+                "img": "",
+                "heading": {
+                  "type": "txt",
+                  "txt": "We develop Digital Strategies",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Our core clients are from the Europe countries metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
+                  "style": {}
+                },
+                "list": [],
+                "btn": {
+                  "type": "btn",
+                  "txt": "view more",
+                  "link": "",
+                  "style": {}
+                }
+              },
+              "style": {}
+            }
+          ]
+        },
+        "style": {}
+      },
+      {
+        "id": "wc05bggb5225",
+        "classes": ["making-diff-txt"],
+        "type": "wap-text",
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "portfilio",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "We are nominated to Agency of Year",
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wc078hg545",
+        "classes": ["making-diff-gallery"],
+        "type": "wap-gallery",
+        "info": {
+          "txt": "",
+          "imgs": {
+            "type": "imgs",
+            "urls": [
+              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/c42d596474a75ca1aeb4f52c/photo150185677743529877ed80a3dmin.jpg",
+              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/a05e89dff8695d25b3045604/Untitled3min.jpg",
+              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/2ebb201a959e5a6584fcd054/9.jpg",
+              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/d4f239f0141d5a2d85976154/x.jpg",
+              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/bc8cb7fa30995d42b5a51f1a/uigyjh.jpg",
+              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/91944e8b55d95ba7ada7ee1c/Untitled5.jpg"
+            ],
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wc055g524",
+        "classes": ["making-diff-contact", "full"],
+        "type": "wap-contact",
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "Contact Us",
+            "style": {}
+          },
+          "form": {
+            "type": "form",
+            "inputs": [
+              {
+                "type": "text",
+                "placeholder": "name"
+              },
+              {
+                "type": "email",
+                "placeholder": "email"
+              }
+            ],
+            "textarea": {
+              "placeholder": "Message"
+            },
+            "btn": {
+              "type": "submit",
+              "txt": "submit"
+            },
+            "style": {}
+          }
+        },
+        "style": {}
+      }
+    ],
+    "isPublic": true
+  },
+  {
     "_id": "5e28393890dd7201a06d4e44",
     "name": "omnifood",
     "imgUrl": "https://i.ibb.co/7KPrFtX/nee.png",
@@ -1021,279 +1295,6 @@
       }
     ],
     "isPublic": true
-  },
-  {
-    "_id": "5e28393890dd7201a06d4e55",
-    "name": "Making a difference for food",
-    "type": "blog",
-    "style": {},
-    "imgUrl": "https://i.ibb.co/Tmb35bv/creative.png",
-    "createdBy": {
-      "_id": "5e26e0b718a0891d4c995584",
-      "fullname": "Lukas Rudrof",
-      "imgUrl": "img.jpg"
-    },
-    "usersData": {
-      "contacts": [
-        {
-          "email": "user@user.com",
-          "msg": "Please send me stuff",
-          "at": 123
-        }
-      ],
-      "signups": [
-        {
-          "email": "user@user.com",
-          "at": 123
-        }
-      ]
-    },
-    "theme": "vivid",
-    "cmps": [
-      {
-        "id": "wc02bg12g",
-        "type": "wap-header",
-        "classes": ["making-diff-header"],
-        "info": {
-          "logoTxt": {
-            "type": "txt",
-            "txt": "Creative Studio",
-            "style": {}
-          },
-          "nav": {
-            "id": "wph01",
-            "type": "wap-nav",
-            "classes": ["making-diff-nav"],
-            "info": {
-              "links": [
-                {
-                  "type": "txt",
-                  "txt": "About us",
-                  "link": "#about",
-                  "style": {}
-                },
-                {
-                  "type": "txt",
-                  "txt": "Our features",
-                  "link": "#features",
-                  "style": {}
-                },
-                {
-                  "type": "txt",
-                  "txt": "Digital studio",
-                  "link": "#studio",
-                  "style": {}
-                },
-                {
-                  "type": "txt",
-                  "txt": "Portfolio",
-                  "link": "#portfolio",
-                  "style": {}
-                },
-                {
-                  "type": "txt",
-                  "txt": "Contact us",
-                  "link": "#cta",
-                  "style": {}
-                }
-              ]
-            },
-            "style": {}
-          }
-        },
-        "style": {}
-      },
-      {
-        "id": "wcdfvgfb01",
-        "type": "wap-hero",
-        "classes": ["making-diff-hero", "full", "main-layout"],
-        "info": {
-          "heading": {
-            "type": "txt",
-            "txt": "Creative Stories",
-            "style": {}
-          }
-        },
-        "style": {}
-      },
-      {
-        "id": "wc03f15f252",
-        "type": "wap-container",
-        "classes": ["making-diff-cards", "full"],
-        "info": {
-          "cmps": [
-            {
-              "id": "wcc04",
-              "classes": ["making-diff-card", "about"],
-              "type": "wap-card",
-              "info": {
-                "tag": {
-                  "type": "txt",
-                  "txt": "about us",
-                  "style": {}
-                },
-                "heading": {
-                  "type": "txt",
-                  "txt": "Time to Make a Difference",
-                  "style": {}
-                },
-                "subHeading": {
-                  "type": "txt",
-                  "txt": "Phasellus scelerisque arcu vestibulum tempor tempor. Donec vulputate leo et metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
-                  "style": {}
-                },
-                "list": [],
-                "btn": {
-                  "type": "btn",
-                  "txt": "view more",
-                  "link": "",
-                  "style": {}
-                }
-              },
-              "style": {}
-            },
-            {
-              "id": "wccfvc1205",
-              "classes": ["making-diff-card features"],
-              "type": "wap-card",
-              "info": {
-                "tag": {
-                  "type": "txt",
-                  "txt": "our features",
-                  "style": {}
-                },
-                "num": "",
-                "img": "",
-                "heading": {
-                  "type": "txt",
-                  "txt": "Create Your Visual Style",
-                  "style": {}
-                },
-                "subHeading": {
-                  "type": "txt",
-                  "txt": "Maecenas non ipsum sollicitudin, sollicitudin ligula et, pharetra enim. Praesent rhoncus, lorem eget auctor finibus, turpis turpis feugiat orci, non porta nisi augue quis ligula. Pellentesque dictum nulla in massa ornare, porttitor",
-                  "style": {}
-                },
-                "list": [],
-                "btn": {
-                  "type": "txt",
-                  "txt": "view more",
-                  "link": "",
-                  "style": {}
-                }
-              },
-              "style": {}
-            },
-            {
-              "id": "wccg222206",
-              "classes": ["making-diff-card digital"],
-              "type": "wap-card",
-              "info": {
-                "tag": {
-                  "type": "txt",
-                  "txt": "digital studio",
-                  "style": {}
-                },
-                "num": "",
-                "img": "",
-                "heading": {
-                  "type": "txt",
-                  "txt": "We develop Digital Strategies",
-                  "style": {}
-                },
-                "subHeading": {
-                  "type": "txt",
-                  "txt": "Our core clients are from the Europe countries metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
-                  "style": {}
-                },
-                "list": [],
-                "btn": {
-                  "type": "btn",
-                  "txt": "view more",
-                  "link": "",
-                  "style": {}
-                }
-              },
-              "style": {}
-            }
-          ]
-        },
-        "style": {}
-      },
-      {
-        "id": "wc05bggb5225",
-        "classes": ["making-diff-txt"],
-        "type": "wap-text",
-        "info": {
-          "heading": {
-            "type": "txt",
-            "txt": "portfilio",
-            "style": {}
-          },
-          "subHeading": {
-            "type": "txt",
-            "txt": "We are nominated to Agency of Year",
-            "style": {}
-          }
-        },
-        "style": {}
-      },
-      {
-        "id": "wc078hg545",
-        "classes": ["making-diff-gallery"],
-        "type": "wap-gallery",
-        "info": {
-          "txt": "",
-          "imgs": {
-            "type": "imgs",
-            "urls": [
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/c42d596474a75ca1aeb4f52c/photo150185677743529877ed80a3dmin.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/a05e89dff8695d25b3045604/Untitled3min.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/2ebb201a959e5a6584fcd054/9.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/d4f239f0141d5a2d85976154/x.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/bc8cb7fa30995d42b5a51f1a/uigyjh.jpg",
-              "//images01.nicepage.com/c461c07a441a5d220e8feb1a/91944e8b55d95ba7ada7ee1c/Untitled5.jpg"
-            ],
-            "style": {}
-          }
-        },
-        "style": {}
-      },
-      {
-        "id": "wc055g524",
-        "classes": ["making-diff-contact", "full"],
-        "type": "wap-contact",
-        "info": {
-          "heading": {
-            "type": "txt",
-            "txt": "Contact Us",
-            "style": {}
-          },
-          "form": {
-            "type": "form",
-            "inputs": [
-              {
-                "type": "text",
-                "placeholder": "name"
-              },
-              {
-                "type": "email",
-                "placeholder": "email"
-              }
-            ],
-            "textarea": {
-              "placeholder": "Message"
-            },
-            "btn": {
-              "type": "submit",
-              "txt": "submit"
-            },
-            "style": {}
-          }
-        },
-        "style": {}
-      }
-    ],
-    "isPublic": true
   }
+  
 ]
