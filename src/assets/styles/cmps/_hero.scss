@@ -1,10 +1,12 @@
 .hero {
   margin-block-start: rem(64px);
-  // align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
   &-heading {
     font-size: rem(64px);
     line-height: 1.2;
-    margin-block-start: rem(64px);
+    // margin-block-start: rem(64px);
     margin-block-end: rem(24px);
   }
 
@@ -73,6 +75,6 @@
   }
 
   &-img {
-    width: 70%;
+    width: rem(800px);
   }
 }
