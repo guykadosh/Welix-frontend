@@ -2,6 +2,7 @@
   {
     "id": "fhngh1",
     "type": "wap-header",
+    "thumbnail": "https://i.ibb.co/VB0VdbR/betaa-header.jpg",
     "classes": ["betaa-header", "full", "betaa-layout"],
     "info": {
       "logoImg": {
@@ -86,7 +87,7 @@
   },
   {
     "id": "jjyuh",
-    "thumbnail": "https://i.ibb.co/XXTdh2s/25423.png",
+    "thumbnail": "https://i.ibb.co/8j9nd1J/betta-container.jpg",
     "type": "wap-container",
     "classes": [
       "betaa",
@@ -99,10 +100,14 @@
         {
           "type": "wap-card",
           "info": {
-            "tag": "CAPABILITIES",
+            "tag": {
+              "type": "txt",
+              "txt": "CAPABILITIES",
+              "style": {}
+            },
             "img": {
               "type": "img",
-              "url": "https://i.ibb.co/XXTdh2s/25423.png",
+              "url": "https://i.ibb.co/7bKWtCz/145.png",
               "style": {}
             },
             "heading": {
@@ -149,7 +154,7 @@
   },
   {
     "id": "gbgty42",
-    "thumbnail": "https://i.ibb.co/cwF060t/22-225501.png",
+    "thumbnail": "https://i.ibb.co/3Rp31dq/betaa-text1.jpg",
     "classes": ["betaa-txt", "betaa-layout"],
     "type": "wap-text",
     "info": {
@@ -168,7 +173,7 @@
   },
   {
     "id": "mukjyu6584",
-    "thumbnail": "https://i.ibb.co/cwF060t/22-225501.png",
+    "thumbnail": "https://i.ibb.co/Z1QpL79/betta-cards.jpg",
     "type": "wap-container",
     "classes": ["betaa-container", "betaa-features", "betaa-layout"],
     "info": {
@@ -477,6 +482,7 @@
   },
   {
     "id": "wc03bhgfh63",
+    "thumbnail": "https://i.ibb.co/yX6NM9N/omni-food-cards.jpg",
     "type": "wap-container",
     "classes": ["omnifood-meals"],
     "info": {
@@ -1051,7 +1057,7 @@
   {
     "id": "wc02bg12g",
     "type": "wap-header",
-    "thumbnail": "https://i.ibb.co/426HcXF/232435.png",
+    "thumbnail": "https://i.ibb.co/3RwTxd1/making-diff.jpg",
     "classes": [
       "making-diff-header",
       "flex",
@@ -1124,6 +1130,7 @@
   },
   {
     "id": "wc03f15f252",
+    "thumbnail": "https://i.ibb.co/YNc5ZLV/making-diff-card.jpg",
     "type": "wap-container",
     "classes": ["making-diff-cards", "full"],
     "info": {
@@ -1215,6 +1222,7 @@
   },
   {
     "id": "wc05bggb5225",
+    "thumbnail": "https://i.ibb.co/6vVH968/making-diff-text.jpg",
     "classes": ["making-diff-txt"],
     "type": "wap-text",
     "info": {
@@ -1253,6 +1261,7 @@
   },
   {
     "id": "wc055g524",
+    "thumbnail": "https://i.ibb.co/7nB3zZ0/making-diff-contact.jpg",
     "classes": ["making-diff-contact", "full"],
     "type": "wap-contact",
     "info": {
