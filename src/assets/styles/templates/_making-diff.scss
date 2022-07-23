@@ -313,6 +313,7 @@
 
   &-gallery {
     // max-width: 100vw;
+    // width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,7 +337,7 @@
       }
 
       img {
-        width: 100vw;
+        width: 100%;
 
         .wap-details & {
           @include for-medium-layout {
@@ -360,15 +361,36 @@
     flex-direction: column;
     align-items: center;
     padding: em(50px);
-    object-fit: cover;
+    // object-fit: cover;
+    // object-fit: fit;
     vertical-align: middle;
-    background-size: cover;
+    background-size: fit;
 
     .heading {
       text-align: center;
       font-family: Oswald-bold;
       color: #ffffff;
-      font-size: 14vw;
+      font-size: rem(42px);
+
+      .small & {
+        font-size: rem(60px);
+      }
+
+      .wap-details & {
+        @include for-small-layout {
+          font-size: rem(60px);
+        }
+      }
+
+      .medium & {
+        font-size: rem(72px);
+      }
+
+      .wap-details & {
+        @include for-medium-layout {
+          font-size: rem(60px);
+        }
+      }
     }
 
     .form-container {
