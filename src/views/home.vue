@@ -1,7 +1,8 @@
 <template>
-    <section class="home-page main-layout">
-        <app-header></app-header>
-        <div class="help-ukraine full flex align-center justify-center">
+  <section class="home-page main-layout">
+    <app-header></app-header>
+    <hero />
+    <!-- <div class="help-ukraine full flex align-center justify-center">
             <h3>Let's make an impcat together to stand
                 with the people of Ukraine.
                 <span>Show Support</span>
@@ -16,37 +17,29 @@
                     presence exactly the way you want.
                 </h5>
             </div>
-            <!-- <get-started-btn /> -->
+            <get-started-btn />
             <h5 class="hero-print">Try Wix. No credit card required.</h5>
-        </div>
-    </section>
+        </div> -->
+  </section>
 </template>
 
 <script>
 // import getStartedBtn from '../components/misc/get-started-btn.vue'
 import appHeader from '../cmps/app/app-header.vue'
+import hero from '../cmps/home/hero.vue'
 export default {
-    name: '',
-    data() {
-        return {
-
-        }
-    },
-    methods: {
-
-    },
-    computed: {
-
-    },
-    created() {
-
-    },
-    components: {
-        appHeader,
-        // getStartedBtn
-    },
+  name: '',
+  data() {
+    return {}
+  },
+  methods: {},
+  computed: {},
+  created() {},
+  components: {
+    appHeader,
+    hero,
+  },
 }
 </script>
 
-<style>
-</style>
+<style></style>
