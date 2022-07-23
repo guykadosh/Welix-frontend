@@ -1,5 +1,5 @@
 <template>
-  <section class="full main-layout" :style="cmp.style">
+  <section :style="cmp.style" :class="cmp.classes">
     <!-- <Container
       :get-child-payload="getChildPayload"
       group-name="2"
@@ -8,7 +8,8 @@
       :auto-scroll-enabled="true"
     > -->
     <!-- <Draggable v-for="item in items" :key="item.id"> -->
-    <div :class="cmp.classes">
+    
+    <div class="wap-container__inner">
       <component
         v-for="cmp in cmp.info.cmps"
         :key="cmp.id"

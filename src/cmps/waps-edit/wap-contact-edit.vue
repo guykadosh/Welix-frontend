@@ -3,26 +3,15 @@
     <h2 class="heading" contenteditable="true">{{ cmp.info.heading.txt }}</h2>
     <section class="form-container">
       <form @submit.prevent class="contact-form">
-        <input
-          class="contact-input"
-          v-for="input in form.inputs"
-          :type="input.type"
-          :placeholder="input.placeholder"
-          disabled
-          contenteditable="true"
-        />
-        <textarea
-          class="contact-textarea"
-          :placeholder="form.textarea.placeholder"
-        />
-        <button
-          class="contact-submit"
-          @click.prevent=""
-          disabled
-          contenteditable="true"
-        >
-          {{ form.btn.txt }}
-        </button>
+        <input class="contact-input" v-for="input in form.inputs" :type="input.type" :placeholder="input.placeholder"
+          disabled contenteditable="true" />
+        <textarea class="contact-textarea" :placeholder="form.textarea.placeholder" />
+        <div class="btn-container">
+
+          <button class="contact-submit" @click.prevent="" disabled contenteditable="true">
+            {{ form.btn.txt }}
+          </button>
+        </div>
       </form>
     </section>
   </section>
@@ -43,9 +32,10 @@ export default {
       return this.cmp.info.form
     },
   },
-  created() {},
+  created() { },
   components: {},
 }
 </script>
 
-<style></style>
+<style>
+</style>

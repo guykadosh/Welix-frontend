@@ -39,15 +39,27 @@
     grid-column: 1 / -1;
   }
 
-  @include for-medium-layout {
+  .medium & {
     grid-template-columns: 50px 1fr 50px;
-
   }
-  
-  @include for-normal-layout {
-    // grid-template-columns: $layoutBetaa 1fr $layoutBetaa;
+
+  .normal & {
     grid-template-columns: 120px 1fr 120px;
   }
 
-}
+  .wap-details & {
 
+    @include for-medium-layout {
+      grid-template-columns: 50px 1fr 50px;
+
+    }
+
+    @include for-normal-layout {
+      // grid-template-columns: $layoutBetaa 1fr $layoutBetaa;
+      grid-template-columns: 120px 1fr 120px;
+    }
+  }
+
+
+
+}
