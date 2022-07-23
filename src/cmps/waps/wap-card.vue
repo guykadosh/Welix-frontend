@@ -3,12 +3,20 @@
     <img v-if="info.img" class="card-img" :src="info.img.url" />
     <div class="card-img-container"></div>
     <div class="card-content">
-      <span class="card-tag" v-if="info.tag">{{ info.tag }}</span>
-      <h2 class="card-heading" v-if="info.heading">{{ info.heading.txt }}</h2>
-      <p class="card-price" v-if="info.price">
+      <span class="card-tag" v-if="info.tag" :style="info.tag.style">{{
+        info.tag.txt
+      }}</span>
+      <h2 class="card-heading" v-if="info.heading" :style="info.heading.style">
+        {{ info.heading.txt }}
+      </h2>
+      <p class="card-price" v-if="info.price" :style="info.price.style">
         $ <span>{{ info.price.txt }}</span>
       </p>
-      <h3 class="card-subheading" v-if="info.subHeading">
+      <h3
+        class="card-subheading"
+        v-if="info.subHeading"
+        :style="info.subHeading.style"
+      >
         {{ info.subHeading.txt }}
       </h3>
       <ul class="card-list clean-list" v-if="info.list.length">
