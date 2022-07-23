@@ -1,5 +1,10 @@
 <template>
-  <section v-if="cmp" class="wap-review" :class="cmp.classes">
+  <section
+    v-if="cmp"
+    class="wap-review"
+    :class="cmp.classes"
+    :style="cmp.style"
+  >
     <img v-if="info.img" :src="info.img.url" alt="img-review" />
     <div class="wap-review-texts">
       <p class="wap-review-text" :style="info.text.style">

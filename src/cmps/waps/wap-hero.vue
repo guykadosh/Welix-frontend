@@ -5,7 +5,11 @@
         <h1 class="heading" :style="info.heading.style">
           {{ info.heading.txt }}
         </h1>
-        <h2 class="sub-heading" v-if="info.subHeading" :style="info.subHeading.style">
+        <h2
+          class="sub-heading"
+          v-if="info.subHeading"
+          :style="info.subHeading.style"
+        >
           {{ info.subHeading.txt }}
         </h2>
         <div class="btns" v-if="info.btns">

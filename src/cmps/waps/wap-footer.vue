@@ -1,5 +1,10 @@
 <template>
-  <section v-if="cmp" class="wap-footer" :class="cmp.classes">
+  <section
+    v-if="cmp"
+    class="wap-footer"
+    :class="cmp.classes"
+    :style="cmp.style"
+  >
     <div class="footer-inner">
       <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
         <img class="logo" :src="info.logoImg.url" />
@@ -18,7 +23,7 @@
         <p v-for="text in info.row2.texts">{{ text }}</p>
       </div>
     </div>
-      <p class="coffee">{{ info.copyright.txt }}</p>
+    <p class="coffee">{{ info.copyright.txt }}</p>
   </section>
 </template>
 <script>

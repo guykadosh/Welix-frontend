@@ -1,5 +1,5 @@
 <template>
-  <section v-if="cmp" class="wap-text" :class="cmp.classes">
+  <section v-if="cmp" class="wap-text" :class="cmp.classes" :style="cmp.style">
     <span
       class="tag"
       v-if="info.tag"

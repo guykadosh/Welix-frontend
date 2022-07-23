@@ -5,6 +5,7 @@
       v-for="theme in themes"
       class="theme-preview"
       :style="{ backgroundColor: theme.mainBgc }"
+      @click="setTheme(theme)"
     >
       <div class="theme-preview-info">
         <p
@@ -65,6 +66,9 @@ export default {
     }
   },
   methods: {
+    setTheme(theme) {
+      this.$store.commit({ type: 'setTheme', theme })
+    },
     isDarkColor(c) {
       c = c.substring(1) // strip #
       const rgb = parseInt(c, 16) // convert rrggbb to decimal

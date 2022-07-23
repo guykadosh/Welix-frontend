@@ -1,5 +1,5 @@
 <template>
-  <section v-if="cmp" class="wap-card" :class="cmp.classes">
+  <section v-if="cmp" class="wap-card" :class="cmp.classes" :style="cmp.style">
     <img
       v-if="info.img"
       class="card-img"

@@ -1,6 +1,11 @@
 <template>
-  <section v-if="cmp" class="wap-footer" :class="cmp.classes">
-    <div class="footer-inner ">
+  <section
+    v-if="cmp"
+    class="wap-footer"
+    :class="cmp.classes"
+    :style="cmp.style"
+  >
+    <div class="footer-inner">
       <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
         <img class="logo" :src="info.logoImg.url" />
       </div>

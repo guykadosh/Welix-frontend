@@ -1,5 +1,10 @@
 <template>
-  <section v-if="cmp" class="wap-gallery" :class="cmp.classes">
+  <section
+    v-if="cmp"
+    class="wap-gallery"
+    :class="cmp.classes"
+    :style="cmp.style"
+  >
     <h3 class="title">{{ info.txt }}</h3>
     <div class="imgs-container">
       <img
