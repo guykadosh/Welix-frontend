@@ -91,7 +91,7 @@
     }
 
     &__options {
-      overflow-y: scroll;
+      overflow-y: auto;
       height: 85vh;
       padding: em(15px) rem(18px);
       width: 100%;
@@ -122,6 +122,8 @@
       padding: rem(18px);
       max-width: rem(300px);
       margin: 0 auto;
+      overflow-y: auto;
+      height: 85vh;
 
       .box {
         margin-block-end: rem(8px);

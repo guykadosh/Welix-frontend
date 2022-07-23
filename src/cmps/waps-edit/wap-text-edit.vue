@@ -1,10 +1,20 @@
 <template>
   <section v-if="cmp" class="wap-text" :class="cmp.classes">
+    <span
+      class="tag"
+      v-if="info.tag"
+      :style="info.tag.style"
+      ref="tag"
+      @click="setEditable(info.tag.type, 'tag')"
+      @input="changeTxt('tag')"
+      @mousedown.stop
+      >{{ info.tag.txt }}</span
+    >
     <h2
       contenteditable="true"
       class="text1"
-      ref="heading"
       :style="info.heading.style"
+      ref="heading"
       @click="setEditable(info.heading.type, 'heading')"
       @input="changeTxt('heading')"
       @mousedown.stop
