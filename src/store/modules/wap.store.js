@@ -39,13 +39,26 @@ export default {
       state.currWap.style.backgroundColor = mainBgc
 
       state.currWap.cmps.forEach(cmp => {
-        console.log(cmp)
         cmp.style.backgroundColor = cmpBgc
         cmp.style.color = color
 
         for (const key in cmp.info) {
           if (!cmp.info[key].style) continue
+          console.log(key)
           cmp.info[key].style.color = color
+        }
+
+        if (cmp.type === 'wap-container') {
+          cmp.info.cmps.forEach(cmp => {
+            cmp.style.backgroundColor = cmpBgc
+            cmp.style.color = color
+
+            for (const key in cmp.info) {
+              if (!cmp.info[key].style) continue
+              console.log(key)
+              cmp.info[key].style.color = color
+            }
+          })
         }
       })
     },
