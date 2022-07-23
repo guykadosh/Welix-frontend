@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
-  >* {
+  > * {
     grid-column: 2;
   }
 
-  >*.full {
+  > *.full {
     grid-column: 1 / -1;
   }
 
@@ -31,11 +31,11 @@
   display: grid;
   grid-template-columns: 10px 1fr 10px;
 
-  >* {
+  > * {
     grid-column: 2;
   }
 
-  >*.full {
+  > *.full {
     grid-column: 1 / -1;
   }
 
@@ -48,18 +48,13 @@
   }
 
   .wap-details & {
-
     @include for-medium-layout {
       grid-template-columns: 50px 1fr 50px;
-
     }
 
     @include for-normal-layout {
       // grid-template-columns: $layoutBetaa 1fr $layoutBetaa;
-      grid-template-columns: 120px 1fr 120px;
+      grid-template-columns: 1fr 1200px 1fr;
     }
   }
-
-
-
 }

@@ -1,23 +1,13 @@
 <template>
   <section class="tool-bar-theme">
     <h2></h2>
-    <div
-      v-for="theme in themes"
-      class="theme-preview"
-      :style="{ backgroundColor: theme.mainBgc }"
-      @click="setTheme(theme)"
-    >
+    <div v-for="theme in themes" class="theme-preview" :style="{ backgroundColor: theme.mainBgc }"
+      @click="setTheme(theme)">
       <div class="theme-preview-info">
-        <p
-          class="theme-preview-info-header"
-          :style="{ color: isDarkColor(theme.mainBgc) ? '#ffffff' : '#343a40' }"
-        >
+        <p class="theme-preview-info-header" :style="{ color: isDarkColor(theme.mainBgc) ? '#ffffff' : '#343a40' }">
           {{ theme.title }}
         </p>
-        <p
-          class="theme-preview-info-desc"
-          :style="{ color: isDarkColor(theme.mainBgc) ? '#e9ecef' : '#495057' }"
-        >
+        <p class="theme-preview-info-desc" :style="{ color: isDarkColor(theme.mainBgc) ? '#e9ecef' : '#495057' }">
           {{ theme.desc }}
         </p>
       </div>
@@ -42,11 +32,18 @@ export default {
           color: '',
         },
         {
-          title: 'Business',
-          desc: 'Nifty & sophisticated',
-          mainBgc: '#0c8599',
-          cmpBgc: '#eaf8f5',
-          color: '#45504e',
+          title: 'Calming',
+          desc: 'Calm & easy-going',
+          mainBgc: '#827397',
+          cmpBgc: '#C9BBCF',
+          color: '#635666',
+        },
+        {
+          title: 'Warm',
+          desc: 'Modern & pleasant',
+          mainBgc: ' rgb(198, 204, 202)',
+          cmpBgc: ' rgb(248, 244, 241)',
+          color: '#85603F',
         },
         {
           title: 'Vivid',
@@ -54,6 +51,20 @@ export default {
           mainBgc: '#dd857e',
           cmpBgc: '#dea4a0',
           color: '#f1d6d4',
+        },
+        {
+          title: 'Business',
+          desc: 'Nifty & sophisticated',
+          mainBgc: '#0c8599',
+          cmpBgc: 'rgb(255, 255, 255)',
+          color: '#45504e',
+        },
+        {
+          title: 'Retro Vibrant',
+          desc: 'Hip, mod & stylish',
+          mainBgc: 'rgba(11, 122, 157, 0.63)',
+          cmpBgc: 'rgb(248, 244, 241)',
+          color: 'rgba(235, 224, 121, 0.74)',
         },
         {
           title: 'Earthy',
