@@ -8,6 +8,7 @@
       contenteditable="true"
     />
     <p
+      v-if="info.text"
       class="wap-review-text"
       ref="text"
       :style="info.text.style"
@@ -19,6 +20,7 @@
       {{ info.text.txt }}
     </p>
     <p
+      v-if="info.author"
       class="wap-review-author"
       ref="author"
       :style="info.author.style"
@@ -28,6 +30,17 @@
       @mousedown.stop
     >
       {{ info.author.txt }}
+    </p>
+    <p
+      v-if="info.role"
+      class="wap-review-description"
+      :style="info.role.style"
+      contenteditable="true"
+      @click="setEditable(info.role.type, 'role')"
+      @input="changeTxt('role')"
+      @mousedown.stop
+    >
+      {{ info.role.txt }}
     </p>
   </section>
 </template>

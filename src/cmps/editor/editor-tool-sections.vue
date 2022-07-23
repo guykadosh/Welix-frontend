@@ -17,7 +17,7 @@
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
-      <p class="tool-bar-actions__options-title">Headers</p>
+      <p class="tool-bar-actions__options-title">{{ title }}</p>
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"
@@ -43,7 +43,13 @@ export default {
   data() {
     return {
       labels: [
-        { id: 'label01', title: 'Headers', type: 'wap-header', selected: true },
+        { id: 'label00', title: 'All', type: '', selected: true },
+        {
+          id: 'label01',
+          title: 'Headers',
+          type: 'wap-header',
+          selected: false,
+        },
         { id: 'label02', title: 'Heros', type: 'wap-hero', selected: false },
         {
           id: 'label03',
@@ -53,8 +59,8 @@ export default {
         },
         {
           id: 'label04',
-          title: 'Full Sections',
-          type: 'wap-contact',
+          title: 'Sections',
+          type: 'wap-container',
           selected: false,
         },
         {
@@ -65,7 +71,9 @@ export default {
         },
         { id: 'label06', title: 'About', type: 'wap-footer', selected: false },
         { id: 'label07', title: 'Text', type: 'wap-text', selected: false },
-        { id: 'label08', title: 'Map', type: 'wap-map', selected: false },
+        { id: 'label08', title: 'Cards', type: 'wap-card', selected: false },
+        { id: 'label09', title: 'List', type: 'wap-list', selected: false },
+        { id: 'label10', title: 'Map', type: 'wap-map', selected: false },
       ],
       filterBy: '',
     }
@@ -86,6 +94,11 @@ export default {
       this.labels[idx].selected = true
 
       this.$store.commit({ type: 'setFilter', filterBy })
+    },
+  },
+  computed: {
+    title() {
+      return this.labels.find(label => label.selected).title
     },
   },
 }

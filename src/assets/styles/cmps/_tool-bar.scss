@@ -58,12 +58,20 @@
     &__labels {
       padding: em(15px) rem(18px);
       background-color: #f7f8f8;
-      width: 40%;
+      width: rem(250px);
       // justify-content: flex-start;
     }
 
     &__label {
       margin-block-end: rem(12px);
+
+      &:first-child {
+        padding: em(15px) 0;
+        border-bottom: 1px solid $light-color3;
+        margin-block-end: rem(14px);
+        font-weight: 600;
+      }
+
       &-text {
         padding: rem(5px) rem(8px);
         cursor: pointer;
@@ -86,7 +94,7 @@
       overflow-y: scroll;
       height: 85vh;
       padding: em(15px) rem(18px);
-
+      width: 100%;
       &-title {
         padding: em(15px) 0;
         border-bottom: 1px solid $light-color3;

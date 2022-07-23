@@ -3,10 +3,12 @@ import { cmpService } from '../../services/cmp.service.js'
 export default {
   state: {
     cmps: null,
-    filterBy: 'wap-header',
+    filterBy: '',
   },
   getters: {
     getCmps({ cmps, filterBy }) {
+      if (!filterBy) return cmps
+
       const filteredCmps = cmps.filter(cmp => cmp.type === filterBy)
       return filteredCmps
     },
