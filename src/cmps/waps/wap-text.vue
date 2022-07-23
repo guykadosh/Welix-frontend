@@ -1,6 +1,8 @@
 <template>
   <section v-if="cmp" :class="cmp.classes">
-    <span class="tag" v-if="info.tag">{{info.tag}}</span>
+    <span class="tag" v-if="info.tag" :style="info.tag.style">{{
+      info.tag.txt
+    }}</span>
     <h2 class="text1">{{ info.heading.txt }}</h2>
     <h2 class="text2">{{ info.subHeading.txt }}</h2>
   </section>
