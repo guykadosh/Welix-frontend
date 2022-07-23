@@ -11,7 +11,6 @@
       }
 
       .wap-nav {
-
         .nav-bar {
           background-color: $light-color;
           width: 40%;
@@ -27,7 +26,6 @@
           }
 
           .nav-link {
-
             a {
               color: $dark-color4;
               font-family: Nunito-regular;
@@ -56,8 +54,17 @@
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
     margin-top: em(-1px);
     padding-top: em(50px);
-    margin-bottom: em(80px);
     padding-bottom: em(200px);
+
+    .medium & {
+      margin-bottom: em(80px);
+    }
+
+    .wap-details & {
+      @include for-medium-layout {
+        margin-bottom: em(80px);
+      }
+    }
 
     .hero-inner {
       display: flex;
@@ -73,7 +80,6 @@
       }
 
       .wap-details & {
-
         @include for-narrow-layout {
           flex-direction: row;
         }
@@ -87,7 +93,6 @@
         }
 
         .wap-details & {
-
           @include for-narrow-layout {
             max-width: 50%;
           }
@@ -104,7 +109,6 @@
         }
 
         .wap-details & {
-
           @include for-narrow-layout {
             text-align: left;
           }
@@ -141,11 +145,13 @@
             .wap-details &:hover {
               background-color: #3ae2d3;
               color: #5d21d1;
+              cursor: pointer;
             }
 
             .wap-details &:hover:not(:last-of-type) {
               background-color: transparent;
               color: #3ae2d3;
+              cursor: pointer;
             }
 
             &:not(:last-child) {
@@ -159,21 +165,20 @@
   }
 
   &-container.betaa-capabilities {
-    margin-bottom: em(40px);
-
     .wap-container__inner {
-
       display: flex;
       max-width: 100%;
       justify-content: space-between;
 
       .medium & {
         justify-content: center;
+        margin-bottom: em(40px);
       }
 
       .wap-details & {
         @include for-medium-layout {
           justify-content: center;
+          margin-bottom: em(40px);
         }
       }
 
@@ -200,7 +205,7 @@
           border-radius: rem(20px);
           max-width: 90%;
           max-height: rem(550px);
-          flex-basis: 50%;
+          // flex-basis: 50%;
 
           .medium & {
             margin-top: em(20px);
@@ -231,7 +236,6 @@
           }
 
           .wap-details & {
-
             @include for-medium-layout {
               flex-basis: 50%;
               max-width: em(800px);
@@ -385,13 +389,11 @@
   }
 
   &-container.betaa-features {
-
     .wap-container__inner {
-
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: em(100px);
+      margin-bottom: em(50px);
       max-width: 100%;
       gap: em(10px);
 
@@ -399,6 +401,7 @@
         flex-direction: row;
         justify-content: space-between;
         max-width: none;
+        margin-bottom: em(70px);
       }
 
       .wap-details & {
@@ -406,6 +409,7 @@
           flex-direction: row;
           justify-content: space-between;
           max-width: none;
+          margin-bottom: em(70px);
         }
       }
 
@@ -431,7 +435,6 @@
         }
 
         .wap-details & {
-
           @include for-medium-layout {
             max-width: em(300px);
           }
@@ -458,7 +461,6 @@
           }
 
           .wap-details & {
-
             @include for-medium-layout {
               max-width: em(120px);
             }
@@ -543,10 +545,10 @@
           border: 1px solid #3ae2d3;
           text-transform: capitalize;
 
-
           .wap-details &:hover {
             background-color: #3ae2d3;
             color: #5d21d1;
+            cursor: pointer;
           }
         }
       }
@@ -559,15 +561,13 @@
   }
 
   &-review {
-
     .wap-review__inner {
-
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       border-radius: 20px;
-      padding: em(15px);
+      padding: rem(24px);
       background-color: #f7f4fd;
       margin-bottom: em(80px);
       width: 100%;
@@ -581,7 +581,6 @@
       }
 
       .wap-details & {
-
         @include for-medium-layout {
           margin-block-end: em(50px);
         }
@@ -601,17 +600,14 @@
         }
 
         .wap-details & {
-
           @include for-medium-layout {
             max-width: em(300px);
             margin-block-end: em(20px);
           }
         }
-
       }
 
       .wap-review-texts {
-
         max-width: 100%;
 
         .medium & {
@@ -619,7 +615,6 @@
         }
 
         .wap-details & {
-
           @include for-medium-layout {
             padding: 0 em(50px);
           }
@@ -640,7 +635,7 @@
         }
 
         .wap-review-description {
-          font-family: NotoSans-light;
+          font-family: NotoSans-light, sans-serif;
           font-size: rem(15px);
         }
       }
@@ -668,7 +663,6 @@
       }
 
       .wap-details & {
-
         @include for-medium-layout {
           font-size: rem(44px);
           line-height: rem(50px);
@@ -678,6 +672,10 @@
         @include for-narrow-layout {
           font-size: rem(64px);
           line-height: rem(72px);
+        }
+
+        @include for-normal-layout {
+          padding: rem(10px) rem(70px);
         }
       }
     }
@@ -689,23 +687,13 @@
       color: $light-color;
       font-size: em(18px);
       border-radius: em(10px);
-    }
-  }
 
-  &-container.betaa-container-map {
-    .wap-container__inner {
-      background-color: blue;
-
-      display: flex;
-      justify-content: space-between;
-
-      .wap-list {
-        background-color: yellow;
-        width: em(300px);
+      .wap-details &:hover {
+        background-color: darken(#5d21d1, 5%);
+        cursor: pointer;
       }
     }
   }
-
 
   &-footer {
     background-color: #5d21d1;
@@ -722,7 +710,7 @@
         max-width: em(100px);
 
         .medium & {
-          max-width: em(300px)
+          max-width: em(300px);
         }
 
         .narrow & {
@@ -730,7 +718,6 @@
         }
 
         .wap-details & {
-
           @include for-medium-layout {
             max-width: em(300px);
           }
@@ -757,7 +744,6 @@
           }
 
           .wap-details & {
-
             @include for-narrow-layout {
               font-size: em(76px);
             }
