@@ -21,6 +21,7 @@ export default {
       if (idx !== -1) state.user.waps.splice(idx, 1, wap)
       else state.user.waps.push(wap)
       console.log(state.user)
+      userService.saveLocalUser(state.user)
     },
   },
   actions: {

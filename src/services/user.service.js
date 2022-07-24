@@ -17,6 +17,7 @@ export const userService = {
   getUsers,
   getById,
   remove,
+  saveLocalUser,
   update,
 }
 
@@ -27,7 +28,7 @@ async function getUsers() {
     const users = await storageService.query(USER_KEY)
     return users
   } catch (err) {
-    console.log('Cannot get users', err);
+    console.log('Cannot get users', err)
   }
   //return httpService.get(`user`)
 }
@@ -36,7 +37,7 @@ async function getById(userId) {
     const user = await storageService.get(USER_KEY, userId)
     return user
   } catch (err) {
-    console.log('Cannot find user', err);
+    console.log('Cannot find user', err)
   }
 
   //const user = await httpService.get(`user/${userId}`)
@@ -49,7 +50,7 @@ async function remove(userId) {
     const user = await storageService.remove(USER_KEY, userId)
     return user
   } catch (err) {
-    console.log('Cannot remove user', err);
+    console.log('Cannot remove user', err)
   }
   //return httpService.delete(`user/${userId}`)
 }
@@ -57,10 +58,10 @@ async function remove(userId) {
 async function update(user) {
   try {
     await storageService.put(USER_KEY, user)
-    if (getLoggedInUser()._id === user._id) _saveLocalUser(user)
+    if (getLoggedInUser()._id === user._id) saveLocalUser(user)
     return user
   } catch (err) {
-    console.log('Cannot update user', err);
+    console.log('Cannot update user', err)
   }
   //user = await httpService.put(`user/${user._id}`, user)
 }
@@ -86,8 +87,10 @@ async function login(userCred) {
     const users = await storageService.query(USER_KEY)
     console.log('users', users)
     const user = users.find(user => user.username === userCred.username)
-    return _saveLocalUser(user)
-  } catch (err) { throw err }
+    return saveLocalUser(user)
+  } catch (err) {
+    throw err
+  }
 
   // const user = await httpService.post('auth/login', userCred)
   // socketService.emit('set-user-socket', user._id)
@@ -98,7 +101,7 @@ async function signup(userCred) {
   const user = await storageService.post(USER_KEY, userCred)
   // const user = await httpService.post('auth/signup', userCred)
   // socketService.emit('set-user-socket', user._id)
-  return _saveLocalUser(user)
+  return saveLocalUser(user)
 }
 async function logout() {
   sessionStorage.removeItem(LOGGED_IN_USER)
@@ -141,7 +144,7 @@ function _createUsers() {
   utilService.saveToStorage(USER_KEY, gUser)
 }
 
-function _saveLocalUser(user) {
+function saveLocalUser(user) {
   sessionStorage.setItem(LOGGED_IN_USER, JSON.stringify(user))
   return user
 }
