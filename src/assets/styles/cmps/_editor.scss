@@ -120,7 +120,8 @@
     border-left: 1px solid $dark-color4;
 
     .drag-here {
-      border: 4px dashed;
+      border: 3px dashed rgba(20, 42, 243, 0.237);
+      color: rgba(20, 42, 243, 0.237);
       display: flex;
       justify-content: center;
       align-items: center;
