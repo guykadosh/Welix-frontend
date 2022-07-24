@@ -127,7 +127,7 @@ async function logout() {
 // }
 
 function getLoggedInUser() {
-  return JSON.parse(localStorage.getItem(LOGGED_IN_USER) || 'null')
+  return JSON.parse(sessionStorage.getItem(LOGGED_IN_USER) || 'null')
 }
 /* function onUserUpdate(user) {
   showSuccessMsg(
