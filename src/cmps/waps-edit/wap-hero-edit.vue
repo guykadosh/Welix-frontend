@@ -1,11 +1,17 @@
 <template>
-  <section v-if="cmp" class="wap-hero" :style="cmp.style" :class="cmp.classes">
+  <section
+    v-if="cmp"
+    class="wap-hero"
+    :style="cmp.style"
+    :class="cmp.classes"
+    @click="setEditable('cmp')"
+  >
     <div class="hero-inner">
       <div class="text-box">
         <h1
           @mousedown.stop
           v-if="info.heading"
-          @click="setEditable(info.heading.type, 'heading')"
+          @click.stop="setEditable(info.heading.type, 'heading')"
           contenteditable="true"
           ref="heading"
           @input="changeTxt('heading')"
@@ -21,7 +27,7 @@
           class="sub-heading"
           ref="subHeading"
           :style="info.subHeading.style"
-          @click="setEditable(info.subHeading.type, 'subHeading')"
+          @click.stop="setEditable(info.subHeading.type, 'subHeading')"
           @input="changeTxt('subHeading')"
         >
           {{ info.subHeading.txt }}
@@ -33,7 +39,7 @@
             :class="'btn' + (idx + 1)"
             :href="btn.link"
             :style="btn.style"
-            @click="setEditable(btn.type, 'btns', idx)"
+            @click.stop="setEditable(btn.type, 'btns', idx)"
             contenteditable="true"
           >
             {{ btn.txt }}</a
@@ -91,6 +97,7 @@ export default {
 
       // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
     },
+    setCmpEditable() {},
   },
   created() {
     this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))

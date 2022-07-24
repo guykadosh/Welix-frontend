@@ -7,8 +7,9 @@
         <a
           @mousedown.stop
           contenteditable="true"
-          @click="setEditable(link.type, 'links', idx)"
+          @click.stop="setEditable(link.type, 'links', idx)"
           @input="changeTxt('links', idx, 'link' + idx)"
+          :style="link.style"
           :ref="'link' + idx"
           href="link.href"
           >{{ link.txt }}

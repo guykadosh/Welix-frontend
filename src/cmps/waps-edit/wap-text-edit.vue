@@ -1,11 +1,17 @@
 <template>
-  <section v-if="cmp" class="wap-text" :class="cmp.classes" :style="cmp.style">
+  <section
+    v-if="cmp"
+    class="wap-text"
+    :class="cmp.classes"
+    :style="cmp.style"
+    @click="setEditable('cmp')"
+  >
     <span
       class="tag"
       v-if="info.tag"
       :style="info.tag.style"
       ref="tag"
-      @click="setEditable(info.tag.type, 'tag')"
+      @click.stop="setEditable(info.tag.type, 'tag')"
       @input="changeTxt('tag')"
       @mousedown.stop
       >{{ info.tag.txt }}</span
@@ -15,7 +21,7 @@
       class="text1"
       :style="info.heading.style"
       ref="heading"
-      @click="setEditable(info.heading.type, 'heading')"
+      @click.stop="setEditable(info.heading.type, 'heading')"
       @input="changeTxt('heading')"
       @mousedown.stop
     >
@@ -26,7 +32,7 @@
       class="text2"
       ref="subHeading"
       :style="info.subHeading.style"
-      @click="setEditable(info.subHeading.type, 'subHeading')"
+      @click.stop="setEditable(info.subHeading.type, 'subHeading')"
       @input="changeTxt('subHeading')"
       @mousedown.stop
     >

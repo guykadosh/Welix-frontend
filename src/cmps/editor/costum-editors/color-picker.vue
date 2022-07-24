@@ -4,7 +4,7 @@
       <bg-colors-outlined />
       <input
         v-model="color"
-        @input="changeColor"
+        @change="changeColor"
         style="display: none"
         type="color"
       />
