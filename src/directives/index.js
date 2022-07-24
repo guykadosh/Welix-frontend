@@ -1,4 +1,7 @@
-export const focusDirective = {
+export const focus = {
+  directive: {
+    focus
+  },
   mounted: el => {
     el.focus()
   },
