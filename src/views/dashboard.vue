@@ -1,6 +1,6 @@
 <template>
     <section class="dashboard-wrapper full dashboard-layout">
-        <app-header></app-header>
+        <app-header class="dashboard-layout"></app-header>
         <div class="dashboard-container flex" v-if="user">
             <dashboard-nav></dashboard-nav>
             <dashboard-main></dashboard-main>

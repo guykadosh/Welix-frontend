@@ -54,7 +54,11 @@
 
     @include for-normal-layout {
       // grid-template-columns: $layoutBetaa 1fr $layoutBetaa;
-      grid-template-columns: 1fr 1200px 1fr;
     }
   }
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 5px 1fr 1px;
 }

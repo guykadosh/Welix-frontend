@@ -1,6 +1,7 @@
 <template>
   <section class="wap-list main-layout">
-    <app-header  class="main-layout"></app-header>
+    <app-header class="main-layout"></app-header>
+    <h2 class="template-heading">Pick a template...</h2>
     <div class="wap-list-container">
       <div class="wap-preview" v-for="wap in waps" :key="wap._id">
         <div class="wap-preview-img">
