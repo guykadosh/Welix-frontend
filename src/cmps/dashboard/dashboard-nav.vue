@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard-nav dashboard-layout">
-        <ul class="clean-list flex flex-column" v-for="wap in user.waps" :key="wap._id">
-            <li>{{wap.type}}</li>
+        <ul class="clean-list flex flex-column">
+            <li @click="editWap(wap)" v-for="wap in user.waps" :key="wap._id">{{ wap.name }}</li>
         </ul>
     </div>
 </template>
@@ -15,6 +15,12 @@ export default {
     },
     created() {
         this.user = this.$store.getters.getUser
-    }
+    },
+    methods: {
+        editWap(wap) {
+            this.$store.commit({ type: 'setCurrWap', wap })
+            this.$router.push('wap/editor')
+        }
+    },
 }
 </script>
