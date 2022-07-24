@@ -1,0 +1,21 @@
+.dashboard-wrapper {
+    height: 100vh;
+
+    .main-header {
+        margin: 0;
+    }
+
+    .dashboard-container {
+        background-color: rgb(143, 168, 159);
+
+        .dashboard-nav {
+            background-color: rgb(40, 31, 21);
+            width: rem(200px);
+        }
+
+        .dashboard-main {
+            background-color: red;
+        }
+    }
+
+}
