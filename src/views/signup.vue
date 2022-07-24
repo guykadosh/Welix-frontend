@@ -3,10 +3,10 @@
     <section class="signup">
         <form @submit.prevent="signup" class="signup__form">
             <h2>Sign up</h2>
-            <input v-model="credentials.fullname" placeholder="Fullname *" />
-            <input v-model="credentials.username" placeholder="Username *" />
-            <input v-model="credentials.email" type="email" placeholder="Email *" />
-            <input v-model="credentials.password" type="password" placeholder="Password *" show-password />
+            <input v-model="credentials.fullname" placeholder="Fullname *" required autofocus />
+            <input v-model="credentials.username" placeholder="Username *" required />
+            <input v-model="credentials.email" type="email" placeholder="Email *" required/>
+            <input v-model="credentials.password" type="password" placeholder="Password *" required/>
 
             <p @click="this.$router.push('/login')">Have an account?</p>
             <button class="signup__btn">
@@ -19,10 +19,10 @@
         </form>
     </section>
 </template>
-<script>
-import { userService } from '../services/user.service.js'
-import appHeader from '../cmps/app/app-header.vue'
 
+<script>
+import appHeader from '../cmps/app/app-header.vue'
+import { notification } from 'ant-design-vue'
 export default {
     name: 'signup',
     data() {
@@ -36,17 +36,22 @@ export default {
         }
     },
     created() {
+        
     },
     methods: {
         async signup() {
-            const credentials = JSON.parse(JSON.stringify(this.credentials))
             try {
-                console.log('signing up', this.credentials)
-                if (credentials) {
-                    await this.$store.dispatch({ type: 'signup', credentials })
-                    this.$router.push('/')
-                }
-            } catch (err) { }
+                const credentials = JSON.parse(JSON.stringify(this.credentials))
+                await this.$store.dispatch({ type: 'signup', credentials })
+                this.$router.push('/')
+                notification['success']({
+                    message: `Welcome ${credentials.fullname}`,
+                })
+            } catch (err) {
+                notification['warning']({
+                    message: `Oops, something went wrong`,
+                })
+            }
         },
     },
     components: {

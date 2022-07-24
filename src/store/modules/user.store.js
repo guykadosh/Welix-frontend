@@ -1,6 +1,5 @@
 import { userService } from '../../services/user.service.js'
 
-
 export default {
     state: {
         user: null
@@ -16,7 +15,6 @@ export default {
         },
         logout(state) {
             state.user = null
-            console.log('loggin out', state.user)
         }
     },
     actions: {
@@ -24,22 +22,20 @@ export default {
             try {
                 const user = await userService.login(credentials)
                 commit({ type: 'setUser', user })
-                console.log('login', user)
                 return user
-            } catch (err) { console.log('cannot Login (store)', err) }
+            } catch (err) { throw err }
         },
         async logout({ commit }) {
             try {
-                console.log('store login out')
                 await userService.logout()
                 commit({ type: 'logout' })
-            } catch (err) { console.log('cannot logout (store)', err) }
+            } catch (err) { throw err }
         },
         async signup({ commit }, { credentials }) {
             try {
                 const user = await userService.signup(credentials)
                 commit({ type: 'setUser', user })
-            } catch (err) { console.log(err) }
+            } catch (err) { throw err }
         }
 
     }
