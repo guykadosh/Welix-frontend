@@ -6,6 +6,7 @@ import wapEditor from '../views/wap-editor.vue'
 import login from '../views/login.vue'
 import signup from '../views/signup.vue'
 import dashboard from '../views/dashboard.vue'
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
