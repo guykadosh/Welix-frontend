@@ -4,6 +4,7 @@
     class="wap-gallery"
     :class="cmp.classes"
     :style="cmp.style"
+    @click="setEditable('cmp')"
   >
     <h3 @mousedown.stop class="title">{{ info.txt }}</h3>
     <div class="imgs-container">
@@ -12,7 +13,7 @@
         :key="url"
         :src="url"
         alt="gallery-img"
-        @click="setEditable(info.imgs.type, 'imgs')"
+        @click.stop="setEditable(info.imgs.type, 'imgs')"
       />
     </div>
   </section>

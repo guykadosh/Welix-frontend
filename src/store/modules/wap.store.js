@@ -1,3 +1,4 @@
+import { utilService } from '../../services/util.service.js'
 import { wapService } from '../../services/wap.service.js'
 
 export default {
@@ -71,22 +72,30 @@ export default {
 
       // -1 means the cmp lives inside a wap container
       if (idx === -1) {
-        // find the the container
-        const wapContainer = cmps
-          .filter(cmp => cmp.type === 'wap-container')
-          .find(cmp => cmp.info.cmps.some(cmp => cmp.id === state.cmpToEdit.id))
+        // wap-nav is inside header if not stand alone
+        if (state.cmpToEdit.type === 'wap-nav') {
+          const wapHeader = cmps.find(cmp => cmp.type === 'wap-header')
+          wapHeader.info.nav = state.cmpToEdit
+        } else {
+          // find the the container
+          const wapContainer = cmps
+            .filter(cmp => cmp.type === 'wap-container')
+            .find(cmp =>
+              cmp.info.cmps.some(cmp => cmp.id === state.cmpToEdit.id)
+            )
 
-        // find the cmp idx
-        const innerIdx = wapContainer.info.cmps.findIndex(
-          cmp => cmp.id === state.cmpToEdit.id
-        )
+          // find the cmp idx
+          const innerIdx = wapContainer.info.cmps.findIndex(
+            cmp => cmp.id === state.cmpToEdit.id
+          )
 
-        const copy = JSON.parse(JSON.stringify(wapContainer))
-        idx = cmps.findIndex(cmp => cmp.id === wapContainer.id)
-        state.prevActions.push({ idx, cmp: copy })
+          const copy = JSON.parse(JSON.stringify(wapContainer))
+          idx = cmps.findIndex(cmp => cmp.id === wapContainer.id)
+          state.prevActions.push({ idx, cmp: copy })
 
-        wapContainer.info.cmps.splice(innerIdx, 1, state.cmpToEdit)
-        // state.currWap.cmps.splice(idx, 1, wapContainer)
+          wapContainer.info.cmps.splice(innerIdx, 1, state.cmpToEdit)
+          // state.currWap.cmps.splice(idx, 1, wapContainer)
+        }
       } else {
         state.prevActions.push({ idx, cmp: state.currWap.cmps[idx] })
         state.currWap.cmps.splice(idx, 1, state.cmpToEdit)
@@ -95,7 +104,23 @@ export default {
     updateCmps(state, { cmps }) {
       state.currWap.cmps = cmps
     },
-    removeCmp(state, { idx }) {},
+    removeCmp(state, { cmpId }) {
+      const idx = state.currWap.cmps.findIndex(cmp => cmp.id === cmpId)
+      state.prevActions.push({
+        idx,
+        cmp: state.currWap.cmps[idx],
+        action: 'removed',
+      })
+      state.currWap.cmps.splice(idx, 1)
+      state.cmpToEdit = null
+      state.elToEdit = null
+    },
+    duplicateCmp(state, { cmpId }) {
+      const idx = state.currWap.cmps.findIndex(cmp => cmp.id === cmpId)
+      const duplicatedCmp = JSON.parse(JSON.stringify(state.currWap.cmps[idx]))
+      duplicatedCmp.id = utilService.makeId()
+      state.currWap.cmps.splice(idx + 1, 0, duplicatedCmp)
+    },
     undo(state) {
       if (!state.prevActions.length) return
 
@@ -105,22 +130,28 @@ export default {
       let idx = cmps.findIndex(cmp => cmp.id === lastMove.cmp.id)
 
       if (idx === -1) {
-        state.currWap.cmps.splice(lastMove.idx, 1, lastMove.cmp)
+        idx = lastMove.idx
+        state.currWap.cmps.splice(idx, 0, lastMove.cmp)
       } else {
         state.currWap.cmps.splice(idx, 1, lastMove.cmp)
       }
 
-      state.nextActions.push(cmps[idx])
+      state.nextActions.push({ idx, cmp: cmps[idx], action: lastMove.action })
     },
     redo(state) {
       if (!state.nextActions.length) return
       const { cmps } = state.currWap
       const lastMove = state.nextActions.pop()
-
-      let idx = cmps.findIndex(cmp => cmp.id === lastMove.id)
-      state.prevActions.push(cmps[idx])
-
-      state.currWap.cmps.splice(idx, 1, lastMove)
+      let idx
+      if (lastMove.action === 'removed') {
+        idx = lastMove.idx
+        state.prevActions.push({ idx, cmp: cmps[idx], action: 'removed' })
+        state.currWap.cmps.splice(idx, 1)
+      } else {
+        idx = cmps.findIndex(cmp => cmp.id === lastMove.cmp.id)
+        state.prevActions.push({ idx, cmp: cmps[idx] })
+        state.currWap.cmps.splice(idx, 1, lastMove.cmp)
+      }
     },
   },
   actions: {

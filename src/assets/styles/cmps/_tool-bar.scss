@@ -125,6 +125,21 @@
       overflow-y: auto;
       height: 85vh;
 
+      .extra-tools {
+        font-size: rem(28px);
+        justify-content: center;
+        align-items: center;
+        padding-block-end: rem(12px);
+        margin-block-end: rem(8px);
+        border-bottom: 1px solid $light-color3;
+
+        .tool {
+          cursor: pointer;
+          &:first-child {
+            margin-inline-end: rem(12px);
+          }
+        }
+      }
       .box {
         margin-block-end: rem(8px);
 

@@ -1,12 +1,17 @@
 <template>
-  <header class="wap-header" :class="cmp.classes" :style="cmp.style">
+  <header
+    class="wap-header"
+    :class="cmp.classes"
+    :style="cmp.style"
+    @click="setEditable('cmp')"
+  >
     <div class="wap-header__inner flex justify-between items-center">
       <div
         @mousedown.stop
         v-if="info.logoImg"
         class="logo-box"
         :style="info.logoImg.style"
-        @click="setEditable(info.logoImg.type, 'logoImg')"
+        @click="setEditable.stop(info.logoImg.type, 'logoImg')"
         ref="logoTxt"
         @input="changeTxt('logoTxt')"
       >
@@ -18,7 +23,7 @@
           :style="info.logoTxt.style"
           class="logo"
           contenteditable="true"
-          @click="setEditable(info.logoTxt.type, 'logoTxt')"
+          @click.stop="setEditable(info.logoTxt.type, 'logoTxt')"
         >
           {{ info.logoTxt.txt }}
         </h2>

@@ -24,7 +24,7 @@
         behaviour="copy"
       >
         <Draggable v-for="cmp in cmps" :key="cmp.id">
-          <div class="cmp-preview" @click="addWapCmp(cmp.id)">
+          <div class="cmp-preview">
             <img v-if="cmp.thumbnail" :src="cmp.thumbnail" alt="" />
             <img v-else src="@/assets/img/omnifood-header.png" alt="" />
           </div>
