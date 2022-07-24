@@ -1,5 +1,4 @@
 .wap-list {
-
   .template-heading {
     text-align: center;
     font-size: em(48px);
@@ -13,6 +12,11 @@
     gap: em(57px);
     align-items: center;
     justify-items: center;
+
+    @include for-normal-layout {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
     .wap-preview {
       overflow-y: hidden;
@@ -96,5 +100,4 @@
       // margin-top: 15px;
     }
   }
-
 }

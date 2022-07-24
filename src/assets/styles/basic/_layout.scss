@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
-  >* {
+  > * {
     grid-column: 2;
   }
 
-  >*.full {
+  > *.full {
     grid-column: 1 / -1;
   }
 
@@ -31,11 +31,11 @@
   display: grid;
   grid-template-columns: 10px 1fr 10px;
 
-  >* {
+  > * {
     grid-column: 2;
   }
 
-  >*.full {
+  > *.full {
     grid-column: 1 / -1;
   }
 
@@ -61,13 +61,12 @@
 .dashboard-layout {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
- 
 
-  >* {
+  > * {
     grid-column: 2;
   }
 
-  >*.full {
+  > *.full {
     grid-column: 1 / -1;
   }
 }

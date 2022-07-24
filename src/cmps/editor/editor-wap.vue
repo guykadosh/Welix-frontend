@@ -50,7 +50,7 @@ export default {
   },
   data() {
     return {
-      conMaxWidth: 1300,
+      conMaxWidth: 1700,
       responsiveClass: '',
     }
   },
