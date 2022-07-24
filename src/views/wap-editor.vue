@@ -34,15 +34,19 @@ export default {
   methods: {},
   computed: {
     wap() {
-      return this.$store.getters.getCurrWap 
+      return this.$store.getters.getCurrWap
     },
     cmps() {
       return this.$store.getters.getCmps
     },
   },
   created() {
-    if (!this.wap) this.$store.commit({type: 'setCurrWap', wap: wapService.getEmptyWap()})
+    if (!this.wap)
+      this.$store.commit({ type: 'setCurrWap', wap: wapService.getEmptyWap() })
     console.log(this.wap)
+  },
+  unmounted() {
+    wapService.saveToSession(this.wap)
   },
   components: {
     editorHeader,
@@ -58,7 +62,7 @@ export default {
     wapCardEdit,
     wapContainerEdit,
     wapContactEdit,
-    wapMapEdit
+    wapMapEdit,
   },
 }
 </script>

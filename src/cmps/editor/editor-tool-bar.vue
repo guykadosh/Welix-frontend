@@ -22,6 +22,7 @@ import editorToolBarNav from './editor-tool-bar-nav.vue'
 import elEditor from './el-editor.vue'
 import editorToolSections from './editor-tool-sections.vue'
 import editorToolTheme from './editor-tool-theme.vue'
+import { notification } from 'ant-design-vue'
 
 export default {
   name: 'edit-tool-bar',
@@ -76,10 +77,26 @@ export default {
       this.tool = 'edit'
       this.isOpen = true
     },
-    saveWap() {
-      if (!this.user) return // signup / login form
-      // if(!this.wap.name) alert to user to enter a name with msg then return
-      this.$store.dispatch({ type: 'saveWap', isPublished: false })
+    async saveWap() {
+      if (!this.user) {
+        notification['error']({
+          message: `Login first`,
+        })
+        return // signup / login form
+      }
+      if (!this.wap.name) {
+        // alert to user to enter a name with msg then return
+        notification['error']({
+          message: `Please pick a name to your website first`,
+        })
+        eventBus.emit('name-focus')
+        return
+      }
+      await this.$store.dispatch({ type: 'saveWap', isPublished: false })
+      notification['success']({
+        message: `Site saved successfully`,
+      })
+      this.$router.push('/dashboard')
     },
     publishWap() {
       // if(!this.user) signup / login form

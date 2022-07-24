@@ -1,11 +1,9 @@
 <template>
-    <section class="dashboard-wrapper ">
-        <app-header class="dashboard-layout full"></app-header>
-        <div class="dashboard-container flex">
-            <div class=" flex" v-if="user">
-                <dashboard-nav></dashboard-nav>
-                <dashboard-main></dashboard-main>
-            </div>
+    <section class="dashboard-wrapper dashboard-layout">
+        <app-header class="dashboard-layout"></app-header>
+        <div class="dashboard-container full flex" v-if="user">
+            <dashboard-nav></dashboard-nav>
+            <dashboard-main></dashboard-main>
         </div>
     </section>
 </template>

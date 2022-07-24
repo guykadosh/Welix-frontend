@@ -11,6 +11,8 @@ export const wapService = {
   remove,
   save,
   getEmptyWap,
+  saveToSession,
+  getFromSession,
 }
 
 _createWaps()
@@ -44,6 +46,15 @@ async function save(wap) {
   //   return httpService.put(`wap/${wap._id}`, wap)
   // }
   // return httpService.post('wap', wap)
+}
+
+function saveToSession(wap) {
+  sessionStorage.setItem('currWap', JSON.stringify(wap))
+}
+
+function getFromSession() {
+  const wap = JSON.parse(sessionStorage.getItem('currWap'))
+  return wap
 }
 
 function getEmptyWap(createdBy, name) {

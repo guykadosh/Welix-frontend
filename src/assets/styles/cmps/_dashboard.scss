@@ -1,15 +1,18 @@
 .dashboard-wrapper {
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+    grid-template-rows: 83px 1fr;
+
     .main-header {
         margin: 0;
         /* grid-template-columns: 5px 1fr 5px; */
     }
-    
+
     .dashboard-container {
         height: 100%;
-        
+        // grid-row: 2 / -1;
+
+
+
         .dashboard-nav {
             /* grid-template-columns: 5px 1fr 5px; */
             background-color: #131720;
@@ -19,7 +22,10 @@
 
         .dashboard-main {
             flex-grow: 1;
+            background-color: $light-color;
         }
+
+
     }
 
 }

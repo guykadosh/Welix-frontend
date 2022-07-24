@@ -4,6 +4,7 @@
 
 <script>
 import { userService } from './services/user.service'
+import { wapService } from './services/wap.service'
 
 export default {
   name: 'app',
@@ -16,8 +17,9 @@ export default {
     this.$store.dispatch({ type: 'loadWaps' })
     this.$store.dispatch({ type: 'loadCmps' })
     const user = userService.getLoggedInUser()
-    console.log('user', user)
-    if (user) this.$store.commit({type: 'setUser', user})
+    if (user) this.$store.commit({ type: 'setUser', user })
+    const wap = wapService.getFromSession()
+    if (wap) this.$store.commit({ type: 'setCurrWap', wap })
   },
 }
 </script>
