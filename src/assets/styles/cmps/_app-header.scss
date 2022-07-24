@@ -1,15 +1,14 @@
 .main-header {
   margin-block-end: rem(36px);
-  background-color: #96f2d7;
   .header__inner {
     padding: rem(25px) 0;
     
-
     .main-header-logo {
       cursor: pointer;
     }
-
+    
     a {
+      // color: #96f2d7;
       color: $dark-color2;
       font-weight: 500;
       cursor: pointer;

@@ -10,17 +10,24 @@
     grid-column: 1 / -1;
   }
 
-  @include for-narrow-layout {
-    @include layoutGTC($break-narrow);
-  }
-
   @include for-normal-layout {
-    @include layoutGTC($break-normal);
+    grid-template-columns: 1fr $break-normal 1fr;
   }
 
   @include for-wide-layout {
-    @include layoutGTC($break-wide);
+    grid-template-columns: 1fr 1860px 1fr;
   }
+  // @include for-narrow-layout {
+  //   @include layoutGTC($break-narrow);
+  // }
+
+  // @include for-normal-layout {
+  //   @include layoutGTC($break-normal);
+  // }
+
+  // @include for-wide-layout {
+  //   @include layoutGTC($break-wide);
+  // }
 }
 
 .waps-main-layout {
@@ -53,7 +60,7 @@
     }
 
     @include for-normal-layout {
-      // grid-template-columns: $layoutBetaa 1fr $layoutBetaa;
+      grid-template-columns: 1fr 1280px 1fr
     }
   }
 }

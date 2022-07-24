@@ -6,8 +6,8 @@
         <router-link to="/template">Templates</router-link>
         <router-link to="/wap/editor/">Editor</router-link>
         <router-link v-if="!isUser" to="/login">Login</router-link>
-        <router-link v-if="isUser" to="/" @click="logout">Logout</router-link>
-        <router-link v-if="isUser" to="/dashboard">Dashboard</router-link>
+        <!-- <router-link v-if="isUser" to="/" @click="logout">Logout</router-link> -->
+        <router-link v-if="isUser" to="/dashboard">Backoffice</router-link>
       </div>
     </div>
   </header>
