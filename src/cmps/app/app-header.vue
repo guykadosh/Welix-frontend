@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { notification } from 'ant-design-vue'
 export default {
   computed: {
     isUser() {
@@ -21,8 +22,17 @@ export default {
     }
   },
   methods: {
-    logout() {
-      this.$store.dispatch({ type: 'logout' })
+    async logout() {
+      try {
+        this.$store.dispatch({ type: 'logout' })
+        notification['success']({
+          message: 'Logged out successfully',
+        })
+      } catch (err) {
+         notification['warning']({
+          message: `Oops, something went wrong`,
+        })
+      }
     }
   }
 }

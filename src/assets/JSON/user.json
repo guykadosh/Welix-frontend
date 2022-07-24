@@ -1,15 +1,18 @@
 [
     {
+        "fullname": "Denis Lit",
         "username": "denis",
         "password": 123,
         "waps": []
     },
     {
+        "fullname": "Guy Kadosh",
         "username": "guy",
         "password": 123,
         "waps": []
     },
     {
+        "fullname": "Yuval Shmukler",
         "username": "yuval",
         "password": 123,
         "waps": []

@@ -31,6 +31,7 @@
     font-size: 17px;
     color: $light-color1;
     font-weight: 600;
+    cursor: pointer;
 
     &:hover {
       background-color: $secondary-color-light
@@ -52,6 +53,7 @@
     margin-top: rem(12px);
     text-decoration: underline;
     font-size: rem(15px);
+    cursor: pointer;
   }
 
 }
