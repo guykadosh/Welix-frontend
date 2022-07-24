@@ -52,7 +52,7 @@ export default {
         notification['error']({
           message: `Wrong credentials`,
         })
-
+        console.log(err)
       }
     },
   },

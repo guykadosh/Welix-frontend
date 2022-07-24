@@ -83,7 +83,8 @@ async function update(user) {
 
 async function login(userCred) {
   try {
-    const users = await storageService.getUser(USER_KEY)
+    const users = await storageService.query(USER_KEY)
+    console.log('users', users)
     const user = users.find(user => user.username === userCred.username)
     return _saveLocalUser(user)
   } catch (err) { throw err }

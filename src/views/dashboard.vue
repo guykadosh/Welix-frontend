@@ -2,7 +2,6 @@
     <div class="dashboard-container" v-if="user">
         <h2>Welcome to your Dashboard, <span>{{user.username}}</span></h2>
         <dashboard-nav></dashboard-nav>
-
     </div>
 </template>
 <script>
