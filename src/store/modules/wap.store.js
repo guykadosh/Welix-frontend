@@ -12,7 +12,7 @@ export default {
   },
   getters: {
     getWaps({ waps }) {
-      return waps
+      return waps.filter(wap => wap.isPublic)
     },
     getCurrWap({ currWap }) {
       return currWap
@@ -36,6 +36,15 @@ export default {
     },
     setElToEdit(state, { el }) {
       state.elToEdit = el
+    },
+    saveWap(state, { wap }) {
+      const idx = state.waps.findIndex(currWap => currWap._id === wap._id)
+      if (idx !== -1) state.waps.splice(idx, 1, wap)
+      else state.waps.push(wap)
+    },
+    changeWapName(state, { name }) {
+      state.currWap.name = name
+      console.log(state.currWap.name)
     },
     setTheme(state, { theme }) {
       const { mainBgc, cmpBgc, color } = theme
@@ -159,6 +168,17 @@ export default {
       try {
         const waps = await wapService.query()
         commit({ type: 'setWaps', waps })
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async saveWap({ commit, getters }, { isPublished }) {
+      try {
+        const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
+        wap.isPublished = isPublished
+        const savedWap = await wapService.save(wap)
+        commit({ type: 'saveWap', wap: savedWap })
+        commit({ type: 'saveWapToUser', wap: savedWap })
       } catch (err) {
         console.log(err)
       }
