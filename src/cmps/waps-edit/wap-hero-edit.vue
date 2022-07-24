@@ -50,7 +50,7 @@
         contenteditable="true"
         v-if="info.img"
         :src="info.img.url"
-        @click="setEditable(info.img.type, 'img')"
+        @click.stop="setEditable(info.img.type, 'img')"
       />
     </div>
   </section>
