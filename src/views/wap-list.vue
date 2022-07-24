@@ -1,17 +1,23 @@
 <template>
-  <section class="wap-list main-layout">
+  <section class="wap-list">
     <app-header class="main-layout"></app-header>
-    <h2 class="template-heading">Pick a template...</h2>
-    <div class="wap-list-container">
-      <div class="wap-preview" v-for="wap in waps" :key="wap._id">
-        <div class="wap-preview-img">
-          <div class="wap-preview-btns">
-            <a @click="wapToEdit(wap)">Edit</a>
-            <router-link :to="'/wap/' + wap._id">View</router-link>
+
+    <div class="main-layout">
+      <h2 class="template-heading">Choose a template</h2>
+    </div>
+
+    <div class="wap-list__inner main-layout">
+      <div class="wap-list-container">
+        <div class="wap-preview" v-for="wap in waps" :key="wap._id">
+          <div class="wap-preview-img">
+            <div class="wap-preview-btns">
+              <a @click="wapToEdit(wap)">Edit</a>
+              <router-link :to="'/wap/' + wap._id">View</router-link>
+            </div>
+            <img :src="wap.imgUrl" alt="" />
           </div>
-          <img :src="wap.imgUrl" alt="" />
+          <p>{{ wap.type }}</p>
         </div>
-        <p>{{ wap.type }}</p>
       </div>
     </div>
   </section>

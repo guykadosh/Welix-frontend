@@ -11,15 +11,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: em(57px);
-    align-items: center;
-    justify-items: center;
 
     .wap-preview {
       overflow-y: hidden;
 
       &-img {
         position: relative;
-        width: 100%;
       }
 
       &-btns {
@@ -55,7 +52,6 @@
 
           &:hover {
             background-color: rgba(#4dabf7, 90%);
-            // color: #4dabf7;
             box-shadow: inset 2px #4dabf7;
           }
         }
@@ -91,9 +87,6 @@
       font-weight: 500;
       font-size: rem(18px);
       color: $dark-color3;
-      // margin: 0 auto;
-      // text-align: center;
-      // margin-top: 15px;
     }
   }
 

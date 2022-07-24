@@ -13,35 +13,35 @@
         <template #title>
           <span>Switch to desktop</span>
         </template>
-        <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" />
+        <div>
+          <font-awesome-icon icon="fa-light fa-display" :class="{ active: viewMode === 1300 }" class="icon" />
+        </div>
+        <!-- <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" /> -->
       </a-tooltip>
       <a-tooltip @click="resize(800)" placement="bottom">
         <template #title>
           <span>Switch to tablet</span>
         </template>
-        <tablet-outlined class="icon" :class="{ active: viewMode === 800 }" />
+        <div>
+          <font-awesome-icon icon="fa-light fa-tablet-screen" :class="{ active: viewMode === 800 }" class="icon" />
+        </div>
+        <!-- <tablet-outlined class="icon" :class="{ active: viewMode === 800 }" /> -->
       </a-tooltip>
       <a-tooltip @click="resize(420)" placement="bottom">
         <template #title>
           <span>Switch to mobile</span>
         </template>
-        <mobile-outlined class="icon" :class="{ active: viewMode === 420 }" />
+        <div>
+          <font-awesome-icon icon="fa-light fa-mobile" :class="{ active: viewMode === 420 }" class="icon" />
+        </div>
+        <!-- <mobile-outlined class="icon" :class="{ active: viewMode === 420 }" /> -->
       </a-tooltip>
     </div>
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
-        <lock-outlined class="icon" />
-        <span class="http">https:</span
-        ><span
-          >//welix.herokuapp.com/
-          <span
-            class="my-site"
-            contenteditable="true"
-            @input="debouceName"
-            ref="wapName"
-            >{{ siteName }}</span
-          ></span
-        >
+        <!-- <lock-outlined class="icon" /> -->
+        <span class="http">https:</span><span>//welix.herokuapp.com/
+          <span class="my-site" contenteditable="true" @input="debouceName" ref="wapName">{{ siteName }}</span></span>
       </div>
     </div>
     <div class="editor-nav-actions flex items-center">
@@ -49,19 +49,17 @@
         <template #title>
           <span>Undo</span>
         </template>
-        <undo-outlined class="icon" />
+        <div>
+          <font-awesome-icon icon="fa-light fa-share fa-flip-horizontal" class="icon fa-flip-horizontal" />
+        </div>
       </a-tooltip>
       <a-tooltip @click="redo" placement="bottom">
         <template #title>
           <span>Redo</span>
         </template>
-        <redo-outlined class="icon" />
-      </a-tooltip>
-      <a-tooltip placement="bottom">
-        <template #title>
-          <span>Zoom in</span>
-        </template>
-        <zoom-in-outlined class="icon" />
+        <div>
+          <font-awesome-icon icon="fa-light fa-share" class="icon" />
+        </div>
       </a-tooltip>
     </div>
   </nav>
@@ -136,4 +134,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+</style>

@@ -1,8 +1,9 @@
 .hero {
   margin-block-start: rem(64px);
-  max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
+
   &-heading {
     font-size: rem(64px);
     line-height: 1.2;
