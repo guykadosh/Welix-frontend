@@ -1,5 +1,5 @@
 <template>
-    <app-header />
+    <app-header class="main-layout"/>
     <section class="signup">
         <form @submit.prevent="signup" class="signup__form">
             <h2>Sign up</h2>
