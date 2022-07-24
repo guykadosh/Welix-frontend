@@ -35,6 +35,12 @@ export default {
                 commit({ type: 'logout' })
             } catch (err) { console.log('cannot logout (store)', err) }
         },
+        async signup({ commit }, { credentials }) {
+            try {
+                const user = await userService.signup(credentials)
+                commit({ type: 'setUser', user })
+            } catch (err) { console.log(err) }
+        }
 
     }
 }
