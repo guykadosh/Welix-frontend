@@ -11,7 +11,7 @@
         v-if="info.logoImg"
         class="logo-box"
         :style="info.logoImg.style"
-        @click="setEditable.stop(info.logoImg.type, 'logoImg')"
+        @click.stop="setEditable(info.logoImg.type, 'logoImg')"
         ref="logoTxt"
         @input="changeTxt('logoTxt')"
       >

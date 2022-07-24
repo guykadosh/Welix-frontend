@@ -6,14 +6,12 @@
           <span>Duplicate</span>
         </template>
         <copy-outlined />
-        <EditOutlined class="icon" />
       </a-tooltip>
       <a-tooltip class="tool" @click="removeCmp" placement="top">
         <template #title>
           <span>Delete</span>
         </template>
         <delete-outlined />
-        <EditOutlined class="icon" />
       </a-tooltip>
     </div>
 
@@ -27,6 +25,7 @@
 import colorPicker from './color-picker.vue'
 import { DeleteOutlined, CopyOutlined } from '@ant-design/icons-vue'
 export default {
+  name: 'el-editor-cmp',
   props: {
     cmp: Object,
   },
