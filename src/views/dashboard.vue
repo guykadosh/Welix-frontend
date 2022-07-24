@@ -1,5 +1,5 @@
 <template>
-    <section class="dashboard-wrapper flex flex-column">
+    <section class="dashboard-wrapper full dashboard-layout">
         <app-header></app-header>
         <div class="dashboard-container flex" v-if="user">
             <dashboard-nav></dashboard-nav>
