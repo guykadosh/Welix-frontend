@@ -1,21 +1,13 @@
 <template>
   <header class="main-header full main-layout">
     <div class="flex justify-between items-center ">
-      <h2 class="main-header-logo" @click="$router.push('/')" >Welix</h2>
-      <ul class="main-header-nav flex clean-list justify-between ">
-        <li>
-          <router-link to="/template">Templates</router-link>
-        </li>
-        <li>
-          <router-link to="/wap/editor/" >Editor</router-link>
-        </li>
-        <li>
-          <router-link v-if="!isUser" to="/login">Login</router-link>
-        </li>
-        <li>  
-          <router-link v-if="isUser" to="/" @click="logout">Logout</router-link>
-        </li>
-      </ul>
+      <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2>
+      <div class="main-header-nav flex clean-list justify-between ">
+        <router-link to="/template">Templates</router-link>
+        <router-link to="/wap/editor/">Editor</router-link>
+        <router-link v-if="!isUser" to="/login">Login</router-link>
+        <router-link v-if="isUser" to="/" @click="logout">Logout</router-link>
+      </div>
     </div>
   </header>
 </template>
@@ -29,7 +21,7 @@ export default {
   },
   methods: {
     logout() {
-      this.$store.dispatch({type: 'logout'})
+      this.$store.dispatch({ type: 'logout' })
     }
   }
 }
