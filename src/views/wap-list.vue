@@ -34,6 +34,11 @@ export default {
     wapToEdit(wap) {
       const wapToEdit = JSON.parse(JSON.stringify(wap))
       delete wapToEdit._id
+
+      wapToEdit.isPublic = false
+      wapToEdit.isPublished = false
+      wapToEdit.name = ''
+
       this.$store.commit({ type: 'setCurrWap', wap: wapToEdit })
 
       this.$router.push('/wap/editor/')

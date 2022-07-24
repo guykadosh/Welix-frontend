@@ -34,7 +34,13 @@
         <span class="http">https:</span
         ><span
           >//welix.herokuapp.com/
-          <span class="my-site" contenteditable="true">my-site</span></span
+          <span
+            class="my-site"
+            contenteditable="true"
+            @input="debouceName"
+            ref="wapName"
+            >my-site</span
+          ></span
         >
       </div>
     </div>
@@ -62,6 +68,8 @@
 </template>
 
 <script>
+import { debounce } from 'lodash'
+
 import {
   UndoOutlined,
   RedoOutlined,
@@ -89,6 +97,12 @@ export default {
       viewMode: 1300,
     }
   },
+  created() {
+    this.debouceName = debounce(this.changeWapName, 800)
+  },
+  mounted() {
+    this.$refs.wapName.focus()
+  },
   methods: {
     resize(size) {
       this.viewMode = size
@@ -101,6 +115,10 @@ export default {
     redo() {
       console.log('Hi')
       this.$store.commit({ type: 'redo' })
+    },
+    changeWapName() {
+      const name = this.$refs.wapName.innerText
+      this.$store.commit({ type: 'changeWapName', name })
     },
   },
   computed: {

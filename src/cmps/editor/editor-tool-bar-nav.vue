@@ -49,7 +49,7 @@
     </div>
     <div class="bottom">
       <ul>
-        <li @click="setTool('theme')">
+        <li @click="saveWap">
           <a-tooltip placement="right">
             <template #title>
               <span>Save</span>
@@ -74,6 +74,7 @@ import {
 } from '@ant-design/icons-vue'
 export default {
   name: '',
+  emits: ['saved'],
   components: {
     PlusCircleOutlined,
     PicCenterOutlined,
@@ -86,6 +87,9 @@ export default {
   methods: {
     setTool(type) {
       this.$emit('setTool', type)
+    },
+    saveWap() {
+      this.$emit('saved')
     },
   },
   emits: ['setTool'],

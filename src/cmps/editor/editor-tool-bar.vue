@@ -1,6 +1,6 @@
 <template>
   <div class="tool-bar flex">
-    <editor-tool-bar-nav @setTool="openTool" />
+    <editor-tool-bar-nav @saved="saveWap" @setTool="openTool" />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>
@@ -28,6 +28,7 @@ export default {
   props: {
     cmps: Array,
   },
+  emits: ['saved'],
   components: {
     Container,
     Draggable,
@@ -75,6 +76,16 @@ export default {
       this.tool = 'edit'
       this.isOpen = true
     },
+    saveWap() {
+      if (!this.user) return // signup / login form
+      // if(!this.wap.name) alert to user to enter a name with msg then return
+      this.$store.dispatch({ type: 'saveWap', isPublished: false })
+    },
+    publishWap() {
+      // if(!this.user) signup / login form
+      // if(!this.wap.name) to user user to enter a name then return
+      this.$store.dispatch({ type: 'saveWap', isPublished: true })
+    },
   },
   computed: {
     isEditorOpen() {
@@ -94,6 +105,12 @@ export default {
         case 'theme':
           return 'Pick a theme'
       }
+    },
+    user() {
+      return this.$store.getters.getUser
+    },
+    wap() {
+      return this.$store.getters.getCurrWap
     },
   },
   created() {
