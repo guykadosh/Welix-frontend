@@ -1,11 +1,17 @@
 <template>
-    <div class="dashboard-container" v-if="user">
-        <h2>Welcome to your Dashboard, <span>{{user.username}}</span></h2>
-        <dashboard-nav></dashboard-nav>
-    </div>
+    <section class="dashboard-wrapper full dashboard-layout">
+        <app-header></app-header>
+        <div class="dashboard-container flex" v-if="user">
+            <dashboard-nav></dashboard-nav>
+            <dashboard-main></dashboard-main>
+        </div>
+    </section>
 </template>
 <script>
 import dashboardNav from '../cmps/dashboard/dashboard-nav.vue'
+import appHeader from '../cmps/app/app-header.vue'
+import dashboardMain from '../cmps/dashboard/dashboard-main.vue'
+
 export default {
     name: "dashboard",
     data() {
@@ -16,8 +22,10 @@ export default {
     created() {
         this.user = this.$store.getters.getUser
     },
-    components:{
-        dashboardNav
+    components: {
+        dashboardNav,
+        appHeader,
+        dashboardMain
     }
 }
 </script>

@@ -1,19 +1,22 @@
 .main-header {
   margin-block-end: rem(36px);
   background-color: #96f2d7;
-  padding: rem(25px);
+  .header__inner {
+    padding: rem(25px) 0;
+    
 
-  .main-header-logo {
-    cursor: pointer;
-  }
+    .main-header-logo {
+      cursor: pointer;
+    }
 
-  a {
-    color: $dark-color2;
-    font-weight: 500;
-    cursor: pointer;
-  }
+    a {
+      color: $dark-color2;
+      font-weight: 500;
+      cursor: pointer;
+    }
 
-  .main-header-nav {
-    width: rem(250px);
+    .main-header-nav {
+      width: rem(250px);
+    }
   }
 }
