@@ -7,6 +7,7 @@
         <router-link to="/wap/editor/">Editor</router-link>
         <router-link v-if="!isUser" to="/login">Login</router-link>
         <router-link v-if="isUser" to="/" @click="logout">Logout</router-link>
+        <router-link v-if="isUser" to="/dashboard">Dashboard</router-link>
       </div>
     </div>
   </header>
