@@ -1,6 +1,6 @@
 <template>
-  <header class="main-header full main-layout">
-    <div class="flex justify-between items-center ">
+  <header class="main-header full">
+    <div class="flex justify-between items-center header__inner ">
       <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2>
       <div class="main-header-nav flex clean-list justify-between ">
         <router-link to="/template">Templates</router-link>

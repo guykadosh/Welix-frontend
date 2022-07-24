@@ -1,6 +1,6 @@
 <template>
   <section class="home-page main-layout">
-    <app-header></app-header>
+    <app-header class="main-layout"></app-header>
     <hero />
     <!-- <div class="help-ukraine full flex align-center justify-center">
             <h3>Let's make an impcat together to stand
