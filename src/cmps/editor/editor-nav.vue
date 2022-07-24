@@ -39,7 +39,7 @@
             contenteditable="true"
             @input="debouceName"
             ref="wapName"
-            >my-site</span
+            >{{ siteName }}</span
           ></span
         >
       </div>
@@ -102,6 +102,7 @@ export default {
   },
   mounted() {
     this.$refs.wapName.focus()
+    eventBus.on('name-focus', this.focusName)
   },
   methods: {
     resize(size) {
@@ -120,9 +121,17 @@ export default {
       const name = this.$refs.wapName.innerText
       this.$store.commit({ type: 'changeWapName', name })
     },
+    focusName() {
+      this.$refs.wapName.focus()
+    },
   },
   computed: {
-    isSelected() {},
+    wap() {
+      return this.$store.getters.getCurrWap
+    },
+    siteName() {
+      return this.wap?.name || 'my-site'
+    },
   },
 }
 </script>
