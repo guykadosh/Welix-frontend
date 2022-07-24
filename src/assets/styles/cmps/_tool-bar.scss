@@ -6,23 +6,26 @@
     z-index: 20;
     background-color: #fff;
 
-    li {
-      margin-block-end: em(28px);
-      border-radius: 50%;
-      padding: em(10px);
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .top,
+    .bottom {
+      li {
+        margin-block-end: em(28px);
+        border-radius: 50%;
+        padding: em(10px);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      &:hover {
-        background-color: #74c1fc79;
-      }
+        &:hover {
+          background-color: #74c1fc79;
+        }
 
-      .icon {
-        cursor: pointer;
-        font-size: em(28px);
-        color: rgb(65, 60, 60);
+        .icon {
+          cursor: pointer;
+          font-size: em(28px);
+          color: rgb(65, 60, 60);
+        }
       }
     }
   }
@@ -51,14 +54,23 @@
       border-top: #1971c2 5px solid;
       border-bottom: solid 1px #f1f3f5;
       padding: rem(6px) rem(16px);
-      font-size: rem(12px);
-      font-family: Roboto-Bold, sans-serif;
+      align-items: center;
+
+      h2 {
+        font-family: Roboto-Bold, sans-serif;
+      }
+      .close {
+        font-size: rem(12px);
+        cursor: pointer;
+        padding-bottom: (5px);
+      }
     }
 
     &__labels {
       padding: em(15px) rem(18px);
       background-color: #f7f8f8;
       width: rem(250px);
+
       // justify-content: flex-start;
     }
 
@@ -151,7 +163,8 @@
 
     .tool-bar-theme {
       overflow-y: auto;
-      height: 85vh;
+      height: 83vh;
+      // height: 100%;
     }
   }
 }

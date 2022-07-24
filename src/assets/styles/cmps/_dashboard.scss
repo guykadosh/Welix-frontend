@@ -1,0 +1,25 @@
+.dashboard-wrapper {
+    height: 100vh;
+
+    
+    .main-header {
+        margin: 0;
+        /* grid-template-columns: 5px 1fr 5px; */
+    }
+    
+    .dashboard-container {
+        height: 100%;
+        
+        .dashboard-nav {
+            /* grid-template-columns: 5px 1fr 5px; */
+            background-color: #131720;
+            width: rem(200px);
+            color: $light-color;
+        }
+
+        .dashboard-main {
+            flex-grow: 1;
+        }
+    }
+
+}

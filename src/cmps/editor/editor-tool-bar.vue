@@ -2,8 +2,9 @@
   <div class="tool-bar flex">
     <editor-tool-bar-nav @setTool="openTool" />
     <section class="tool-bar-actions" :class="isEditorOpen">
-      <div class="tool-bar-actions__header">
+      <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>
+        <p class="close" @click="isOpen = false"><close-outlined /></p>
       </div>
       <el-editor v-if="tool === 'edit'" />
       <editor-tool-sections v-if="tool === 'section'" :cmps="cmps" />
@@ -16,6 +17,7 @@
 import { Container, Draggable } from 'vue3-smooth-dnd'
 import { applyDrag } from '@/services/dnd.utils/helpers.js'
 import { eventBus } from '../../services/event-bus.service'
+import { CloseOutlined } from '@ant-design/icons-vue'
 import editorToolBarNav from './editor-tool-bar-nav.vue'
 import elEditor from './el-editor.vue'
 import editorToolSections from './editor-tool-sections.vue'
@@ -33,6 +35,7 @@ export default {
     elEditor,
     editorToolSections,
     editorToolTheme,
+    CloseOutlined,
   },
   data() {
     return {
