@@ -1,9 +1,10 @@
 .color-picker {
   display: grid;
-  max-width: rem(200px);
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.2rem;
-  padding: 0.3rem;
+  max-width: rem(272px);
+  grid-template-columns: repeat(auto-fit, minmax(26px, 1fr));
+  gap: 0.3rem;
+  // padding: 0.3rem;
+  margin-block-end: rem(12px);
 
   label {
     display: flex;

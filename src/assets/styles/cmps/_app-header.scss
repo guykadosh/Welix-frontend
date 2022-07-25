@@ -8,14 +8,14 @@
     }
     
     a {
-      // color: #96f2d7;
       color: $dark-color2;
       font-weight: 500;
       cursor: pointer;
     }
 
     .main-header-nav {
-      width: rem(250px);
+      width: rem(300px);
+      max-width: rem(300px);
     }
   }
 }

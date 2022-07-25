@@ -1,7 +1,7 @@
 <template lang="">
   <section class="el-editor-inner flex flex-column">
     <div class="box flex justify-between">
-      <p>Font Family</p>
+      <p class="title">Font Family</p>
       <a-select
         :options="fonts"
         v-model:value="style.fontFamily"
@@ -10,7 +10,7 @@
       ></a-select>
     </div>
     <div class="box flex justify-between">
-      <p>Font Size</p>
+      <p class="title">Font Size</p>
       <a-slider
         v-model:value="fontSize"
         @change="setfontSize"

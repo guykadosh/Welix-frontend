@@ -1,6 +1,6 @@
 [
   {
-    "_id": "5e28393890dd7201a06d4e4ghhhh4",
+    "oldid": "5e28393890dd7201a06d4e4ghhhh4",
     "name": "betaa",
     "imgUrl": "https://i.ibb.co/kHCLLdn/v4951.png",
     "type": "Software",
@@ -404,7 +404,7 @@
     "isPublic": true
   },
   {
-    "_id": "5e28393890dd7201a06d4e55",
+    "oldid": "5e28393890dd7201a06d4e55",
     "name": "Making a difference for food",
     "type": "Blog",
     "style": {},
@@ -679,7 +679,7 @@
     "isPublic": true
   },
   {
-    "_id": "5e28393890dd7201a06d4e44",
+    "oldid": "5e28393890dd7201a06d4e44",
     "name": "omnifood",
     "imgUrl": "https://i.ibb.co/7KPrFtX/nee.png",
     "type": "Healthy food",

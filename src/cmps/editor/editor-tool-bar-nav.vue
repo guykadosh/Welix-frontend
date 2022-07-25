@@ -2,7 +2,7 @@
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
       <ul>
-        <li @click="setTool('section')">
+        <li @click="setTool('section')" :class="{active: activeTool === 'section' && isToolOpen}">
           <a-tooltip placement="right">
             <template #title>
               <span>Add Section</span>
@@ -12,7 +12,7 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click="setTool('theme')">
+        <li @click="setTool('theme')" :class="{active: activeTool === 'theme' && isToolOpen}">
           <a-tooltip placement="right">
             <template #title>
               <span>Themes</span>
@@ -22,7 +22,7 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click="setTool('edit')">
+        <li @click="setTool('edit')" :class="{active: activeTool === 'edit' && isToolOpen}">
           <a-tooltip placement="right">
             <template #title>
               <span>Edit</span>
@@ -63,7 +63,15 @@ import {
 } from '@ant-design/icons-vue'
 export default {
   name: '',
+  props: {
+    isToolOpen: Boolean,
+  },
   emits: ['saved'],
+  data() {
+    return {
+      activeTool: null,
+    }
+  },
   components: {
     PlusCircleOutlined,
     PicCenterOutlined,
@@ -75,6 +83,7 @@ export default {
   },
   methods: {
     setTool(type) {
+      this.activeTool = type
       this.$emit('setTool', type)
     },
     saveWap() {
