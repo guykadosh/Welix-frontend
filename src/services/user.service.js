@@ -2,7 +2,7 @@ import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 import gUser from '@/assets/JSON/user.json' assert { type: 'json' }
 
-/* import { httpService } from './http.service' */
+import { httpService } from './http.service'
 /* import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service' */
 /* import { showSuccessMsg } from '../services/event-bus.service' */
 
@@ -24,46 +24,47 @@ export const userService = {
 _createUsers()
 
 async function getUsers() {
-  try {
-    const users = await storageService.query(USER_KEY)
-    return users
-  } catch (err) {
-    console.log('Cannot get users', err)
-  }
-  //return httpService.get(`user`)
+  // try {
+  //   const users = await storageService.query(USER_KEY)
+  //   return users
+  // } catch (err) {
+  //   console.log('Cannot get users', err)
+  // }
+  return httpService.get(`user`)
 }
 async function getById(userId) {
-  try {
-    const user = await storageService.get(USER_KEY, userId)
-    return user
-  } catch (err) {
-    console.log('Cannot find user', err)
-  }
+  // try {
+  //   const user = await storageService.get(USER_KEY, userId)
+  //   return user
+  // } catch (err) {
+  //   console.log('Cannot find user', err)
+  // }
 
-  //const user = await httpService.get(`user/${userId}`)
+  const user = await httpService.get(`user/${userId}`)
+  return user
   //socketService.emit(USER_KEY, userId)
   //socketService.off(USER_KEY, onUserUpdate)
   //socketService.on(USER_KEY, onUserUpdate)
 }
 async function remove(userId) {
-  try {
-    const user = await storageService.remove(USER_KEY, userId)
-    return user
-  } catch (err) {
-    console.log('Cannot remove user', err)
-  }
-  //return httpService.delete(`user/${userId}`)
+  // try {
+  //   const user = await storageService.remove(USER_KEY, userId)
+  //   return user
+  // } catch (err) {
+  //   console.log('Cannot remove user', err)
+  // }
+  return httpService.delete(`user/${userId}`)
 }
 
 async function update(user) {
-  try {
-    await storageService.put(USER_KEY, user)
-    if (getLoggedInUser()._id === user._id) saveLocalUser(user)
-    return user
-  } catch (err) {
-    console.log('Cannot update user', err)
-  }
-  //user = await httpService.put(`user/${user._id}`, user)
+  // try {
+  //   await storageService.put(USER_KEY, user)
+  //   if (getLoggedInUser()._id === user._id) saveLocalUser(user)
+  //   return user
+  // } catch (err) {
+  //   console.log('Cannot update user', err)
+  // }
+  user = await httpService.put(`user/${user._id}`, user)
 }
 
 // async function login(userCred) {
@@ -83,31 +84,32 @@ async function update(user) {
 // }
 
 async function login(userCred) {
-  try {
-    const users = await storageService.query(USER_KEY)
-    console.log('users', users)
-    const user = users.find(user => user.username === userCred.username)
-    return saveLocalUser(user)
-  } catch (err) {
-    throw err
-  }
+  // try {
+  //   const users = await storageService.query(USER_KEY)
+  //   console.log('users', users)
+  //   const user = users.find(user => user.username === userCred.username)
+  //   return saveLocalUser(user)
+  // } catch (err) {
+  //   throw err
+  // }
 
-  // const user = await httpService.post('auth/login', userCred)
+  const user = await httpService.post('auth/login', userCred)
+  return user
   // socketService.emit('set-user-socket', user._id)
 }
 
 async function signup(userCred) {
-  // userCred.score = 10000
-  const user = await storageService.post(USER_KEY, userCred)
-  // const user = await httpService.post('auth/signup', userCred)
+  // const user = await storageService.post(USER_KEY, userCred)
+  const user = await httpService.post('auth/signup', userCred)
   // socketService.emit('set-user-socket', user._id)
   return saveLocalUser(user)
 }
 async function logout() {
-  sessionStorage.removeItem(LOGGED_IN_USER)
+  // sessionStorage.removeItem(LOGGED_IN_USER)
   // socketService.emit('unset-user-socket')
-  // return await httpService.post('auth/logout')
+  return await httpService.post('auth/logout')
 }
+
 // async function logout() {
 //   console.log('service log out')
 //   try {

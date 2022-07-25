@@ -1,10 +1,16 @@
 <template>
   <div class="tool-bar flex">
-    <editor-tool-bar-nav @saved="saveWap" @setTool="openTool" :isToolOpen="isOpen" />
+    <editor-tool-bar-nav
+      @saved="saveWap"
+      @setTool="openTool"
+      :isToolOpen="isOpen"
+    />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>
-        <p class="close" @click="isOpen = false"><font-awesome-icon icon="fa-light fa-xmark-large" /></p>
+        <p class="close" @click="isOpen = false">
+          <font-awesome-icon icon="fa-light fa-xmark-large" />
+        </p>
       </div>
       <el-editor v-if="tool === 'edit'" />
       <editor-tool-sections v-if="tool === 'section'" :cmps="cmps" />
@@ -92,7 +98,18 @@ export default {
         eventBus.emit('name-focus')
         return
       }
-      await this.$store.dispatch({ type: 'saveWap', isPublished: false })
+
+      const wapToSave = JSON.parse(JSON.stringify(this.wap))
+      wapToSave.createdBy = {
+        _id: this.user._id,
+        fullname: this.user.fullname,
+      }
+
+      wapToSave.leads = []
+      console.log(wapToSave)
+      await this.$store.dispatch({ type: 'saveWap', wap: wapToSave })
+
+      eventBus.emit('wapSaved')
       notification['success']({
         message: `Site saved successfully`,
       })

@@ -116,6 +116,7 @@ export default {
   },
   created() {
     eventBus.on('resized', this.resize)
+    // eventBus.on('wapSaved', () => this.)
   },
   mounted() {
     new ResizeObserver(this.resized).observe(this.$refs.container)

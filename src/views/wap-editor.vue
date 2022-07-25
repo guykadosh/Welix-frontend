@@ -25,6 +25,7 @@ import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
 import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
 import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
 import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
+import { eventBus } from '../services/event-bus.service.js'
 
 export default {
   name: 'wap-editor',
@@ -33,7 +34,11 @@ export default {
       isSaved: false,
     }
   },
-  methods: {},
+  methods: {
+    wapSaved() {
+      this.isSaved = true
+    },
+  },
   computed: {
     wap() {
       return this.$store.getters.getCurrWap
@@ -43,10 +48,10 @@ export default {
     },
   },
   async created() {
+    eventBus.on('savedWap', this.wapSaved)
     try {
       const { wapId } = this.$route.params
 
-      console.log(wapId)
       if (wapId) {
         const wap = await wapService.getById(wapId)
         console.log(wap)
@@ -63,6 +68,18 @@ export default {
       }
     } catch (err) {}
   },
+  beforeRouteLeave(to, from, next) {
+    if (!this.isSaved) {
+      const answer = window.confirm(
+        'Do you really want to leave? you have unsaved changes!'
+      )
+      if (answer) {
+        next()
+      } else {
+        next(false)
+      }
+    }
+  },
   beforeUnmount() {
     if (!this.isSaved) {
       // show confirm msg to discard changes 'unsaved changes will be discareded...'
@@ -70,8 +87,9 @@ export default {
   },
   async unmounted() {
     // wapService.saveToSession(this.wap)
-    if (!isSaved && !this.wap.isSaved) {
+    if (!this.isSaved) {
       try {
+        console.log('hi?')
         await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
         this.$store.commit({
           type: 'setCurrWap',

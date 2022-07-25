@@ -43,6 +43,10 @@ export default {
     setElToEdit(state, { el }) {
       state.elToEdit = el
     },
+    removeWap(state, { wapId }) {
+      const idx = state.waps.findIndex(wap => wap.id === wapId)
+      state.waps.splice(idx, 1)
+    },
     saveWap(state, { wap }) {
       const idx = state.waps.findIndex(currWap => currWap._id === wap._id)
       if (idx !== -1) state.waps.splice(idx, 1, wap)
@@ -116,9 +120,10 @@ export default {
     },
   },
   actions: {
-    async loadWaps({ commit }) {
+    async loadWaps({ commit }, { filterBy }) {
       try {
-        const waps = await wapService.query()
+        if (!filterBy) filterBy = {}
+        const waps = await wapService.query(filterBy)
         commit({ type: 'setWaps', waps })
       } catch (err) {
         console.log(err)
@@ -134,6 +139,14 @@ export default {
         commit({ type: 'saveWap', wap: savedWap })
 
         return savedWap
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async removeWap({ commit }, payload) {
+      try {
+        await wapService.remove(payload.wapId)
+        commit(payload)
       } catch (err) {
         console.log(err)
       }
