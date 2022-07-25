@@ -4,7 +4,7 @@
     <div class="card-img-container"></div>
     <div class="card-content">
       <span class="card-tag" v-if="info.tag" :style="info.tag.style">{{
-        info.tag.txt
+          info.tag.txt
       }}</span>
       <h2 class="card-heading" v-if="info.heading" :style="info.heading.style">
         {{ info.heading.txt }}
@@ -12,24 +12,26 @@
       <p class="card-price" v-if="info.price" :style="info.price.style">
         $ <span>{{ info.price.txt }}</span>
       </p>
-      <h3
-        class="card-subheading"
-        v-if="info.subHeading"
-        :style="info.subHeading.style"
-      >
+      <h3 class="card-subheading" v-if="info.subHeading" :style="info.subHeading.style">
         {{ info.subHeading.txt }}
       </h3>
-      <ul class="card-list clean-list" v-if="info.list.length">
+      <ul class="card-list clean-list" v-if="info.list">
         <li v-for="line in info.list" :key="line">
           <img :src="line.icon" srcset="" />
 
           <span>{{ line.txt }}</span>
         </li>
       </ul>
+      <div v-if="info.icon">
+        <font-awesome-icon :icon="info.icon.link" class="card-icon" />
+      </div>
       <a v-if="info.btn" :href="info.btn.link" class="card-btn">
         {{ info.btn.txt }}
       </a>
     </div>
+    <p v-if="info.paragraph" :style="info.paragraph.style">
+    {{info.paragraph.txt}}
+    </p>
   </section>
 </template>
 <script>

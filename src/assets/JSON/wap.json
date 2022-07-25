@@ -737,8 +737,7 @@
           }
         },
         "style": {}
-      },
-      {}
+      }
     ],
     "isPublic": true
   },
@@ -1520,7 +1519,92 @@
         "style": {}
       },
       {
-        "id": "jjyugbgvh",
+        "id": "jj56y47244vh",
+        "style": {},
+        "type": "wap-container",
+        "classes": [
+          "design-container",
+          "design-layout"
+        ],
+        "info": {
+          "cmps": [
+            {
+              "id": "dgvf15615",
+              "classes": [
+                "design-priject-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "icon": {
+                  "type": "icon",
+                  "link": "fa-light fa-hands-holding-circle",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "PROJECTS",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+                  "style": {}
+                }
+              }
+            },
+            {
+              "id": "dgvf11115615",
+              "classes": [
+                "design-priject-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "icon": {
+                  "type": "icon",
+                  "link": "fa-light fa-gem",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "AWARDS",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+                  "style": {}
+                }
+              }
+            },
+            {
+              "id": "dgvf11115615",
+              "classes": [
+                "design-priject-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "icon": {
+                  "type": "icon",
+                  "link": "fa-light fa-people-group",
+                  "style": {}
+                },
+                "heading": {
+                  "type": "txt",
+                  "txt": "OUR TEAM",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+                  "style": {}
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "jjyug5888bgvh",
         "style": {},
         "type": "wap-container",
         "classes": [
@@ -1587,7 +1671,7 @@
         }
       },
       {
-        "id": "gbgty42",
+        "id": "gbgt4444y42",
         "classes": [
           "design-txt",
           "design-layout"
@@ -1606,6 +1690,99 @@
           }
         },
         "style": {}
+      },
+      {
+        "id": "gbgt1258y42",
+        "classes": [
+          "design-txt",
+          "design-layout"
+        ],
+        "type": "wap-text",
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "50+ Interior Design Ideas",
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "gbgt1258y42",
+        "classes": [
+          "design-txt",
+          "design-layout"
+        ],
+        "type": "wap-text",
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "Home & Apartment",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "The average home is created for a single family. If you think that buying a home in Pattaya is perhaps more your style, speak to us to learn more about each one of the available choices and forms of ownership. The last type is the raft house that’s built close to the coast or a river.",
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "wc078dddhg545",
+        "classes": [
+          "design-gallery"
+        ],
+        "type": "wap-gallery",
+        "info": {
+          "txt": "",
+          "imgs": {
+            "type": "imgs",
+            "urls": [
+              "https://i.ibb.co/FxZWxXb/sto-Thai-Style-Home-Wabi-Sabi-9.jpg",
+              "https://i.ibb.co/VC8hn7n/df1343a9fbce3638913c13c91259.jpg"
+            ],
+            "style": {}
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "j2f627244vh",
+        "style": {},
+        "type": "wap-container",
+        "classes": [
+          "design-container",
+          "design-layout"
+        ],
+        "info": {
+          "cmps": [
+            {
+              "id": "dgvf15615",
+              "classes": [
+                "design-priject-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "01",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Awesome Interiors",
+                  "style": {}
+                },
+                "paragraph": {
+                  "type": "txt",
+                  "txt": "Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.",
+                  "style": {}
+                }
+              }
+            }
+          ]
+        }
       }
     ],
     "isPublic": true
