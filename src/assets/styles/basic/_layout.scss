@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
-  > * {
+  >* {
     grid-column: 2;
   }
 
-  > *.full {
+  >*.full {
     grid-column: 1 / -1;
   }
 
@@ -17,6 +17,7 @@
   @include for-wide-layout {
     grid-template-columns: 1fr 1860px 1fr;
   }
+
   // @include for-narrow-layout {
   //   @include layoutGTC($break-narrow);
   // }
@@ -38,11 +39,11 @@
   display: grid;
   grid-template-columns: 10px 1fr 10px;
 
-  > * {
+  >* {
     grid-column: 2;
   }
 
-  > *.full {
+  >*.full {
     grid-column: 1 / -1;
   }
 
@@ -65,15 +66,68 @@
   }
 }
 
+.design-layout {
+  display: grid;
+  grid-template-columns:20px 1fr 20px;
+  background-color: aqua;
+  >* {
+    grid-column: 2;
+  }
+
+  >*.full {
+    grid-column: 1 / -1;
+  }
+
+/*   .medium & {
+    grid-template-columns: 1fr 1720px 1fr;
+  }
+
+  .normal & {
+    grid-template-columns: 1fr 1720px 1fr;
+  }
+ */
+  .wap-details & {
+    @include for-small-layout {
+      background-color: rgb(219, 106, 54);
+      grid-template-columns: 1fr 580px 1fr;
+      >* {
+        grid-column: 2;
+      }
+    }
+
+    @include for-medium-layout {
+      background-color: blueviolet;
+      grid-template-columns: 1fr 820px 1fr;
+    }
+
+    @include for-narrow-layout {
+      background-color: rgb(111, 236, 107);
+
+      grid-template-columns: 1fr 950px 1fr;
+    }
+
+    @include for-normal-layout {
+      background-color: rgb(236, 107, 180);
+      grid-template-columns: 1fr 1280px 1fr;
+    }
+
+    @include for-wide-layout {
+      background-color: #dddbd9;
+      grid-template-columns: 1fr 1420px 1fr;
+    }
+  }
+
+}
+
 .dashboard-layout {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
 
-  > * {
+  >* {
     grid-column: 2;
   }
 
-  > *.full {
+  >*.full {
     grid-column: 1 / -1;
   }
 }

@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="imgs-hero">
-        <div v-if="info.imgs" v-for="url in info.imgs.urls" :key="url">
+        <div v-if="info.imgs" v-for="(url,idx) in info.imgs.urls" :class="'img' + (idx + 1)" :key="url" >
           <img :src="url" alt="gallery-img" />
         </div>
       </div>
