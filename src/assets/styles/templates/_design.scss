@@ -1,0 +1,27 @@
+.design {
+
+    &-header {
+        height: 5rem;
+
+        .wap-nav {
+            a {
+                color: #332e29;
+                font-family: Oswald-regular;
+            }
+            :not(:last-child){
+                margin-right: 1rem;
+            }
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-family: Oswald-bold;
+            color: #332e29;
+            line-height: 1.2;
+        }
+
+    }
+    @include for-wide-layout {
+        ////background-color: rgb(199, 195, 195);
+    }
+
+}

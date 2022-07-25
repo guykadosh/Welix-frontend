@@ -1701,22 +1701,6 @@
         "info": {
           "heading": {
             "type": "txt",
-            "txt": "50+ Interior Design Ideas",
-            "style": {}
-          }
-        },
-        "style": {}
-      },
-      {
-        "id": "gbgt1258y42",
-        "classes": [
-          "design-txt",
-          "design-layout"
-        ],
-        "type": "wap-text",
-        "info": {
-          "heading": {
-            "type": "txt",
             "txt": "Home & Apartment",
             "style": {}
           },
@@ -1731,7 +1715,8 @@
       {
         "id": "wc078dddhg545",
         "classes": [
-          "design-gallery"
+          "design-gallery",
+          "design-layout"
         ],
         "type": "wap-gallery",
         "info": {
@@ -1779,6 +1764,105 @@
                   "txt": "Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.",
                   "style": {}
                 }
+              }
+            },
+            {
+              "id": "dgvf15615",
+              "classes": [
+                "design-priject-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "02",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Fresh and Creative",
+                  "style": {}
+                },
+                "paragraph": {
+                  "type": "txt",
+                  "txt": "Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.",
+                  "style": {}
+                }
+              }
+            },
+            {
+              "id": "ghgbvf5225",
+              "style": {},
+              "type": "wap-container",
+              "classes": [
+                "design-container",
+                "design-layout"
+              ],
+              "info": {
+                "cmps": [
+                  {
+                    "map": {
+                      "id": "wpmff02225",
+                      "classes": [
+                        "wap-map"
+                      ],
+                      "type": "wap-map",
+                      "info": {
+                        "markers": [
+                          {
+                            "position": {
+                              "lat": 31.8102,
+                              "lng": 34.6566
+                            },
+                            "name": "Ashdod",
+                            "_id": "m101"
+                          }
+                        ],
+                        "center": {
+                          "lat": 31.8102,
+                          "lng": 34.6566
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "wc0ff554njj",
+                    "classes": [
+                      "design-contact",
+                      "design-layout"
+                    ],
+                    "type": "wap-contact",
+                    "info": {
+                      "heading": {
+                        "type": "txt",
+                        "txt": "Contact us",
+                        "style": {}
+                      },
+                      "form": {
+                        "type": "form",
+                        "inputs": [
+                          {
+                            "type": "text",
+                            "placeholder": "name"
+                          },
+                          {
+                            "type": "email",
+                            "placeholder": "email"
+                          }
+                        ],
+                        "textarea": {
+                          "placeholder": "Message"
+                        },
+                        "btn": {
+                          "type": "submit",
+                          "txt": "submit"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "style": {}
+                  }
+                ]
               }
             }
           ]
