@@ -4,7 +4,7 @@
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>
-        <p class="close" @click="isOpen = false"><close-outlined /></p>
+        <p class="close" @click="isOpen = false"><font-awesome-icon icon="fa-light fa-xmark-large" /></p>
       </div>
       <el-editor v-if="tool === 'edit'" />
       <editor-tool-sections v-if="tool === 'section'" :cmps="cmps" />

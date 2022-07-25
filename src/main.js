@@ -8,12 +8,12 @@ import VueGoogleMaps from '@fawmi/vue-google-maps'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // import { faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare } from '@fortawesome/pro-thin-svg-icons'
-import { faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare, faFloppyDisk, faTrash, faCopy } from '@fortawesome/pro-light-svg-icons'
+import { faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare, faFloppyDisk, faTrash, faCopy, faLock, faArrowLeft, faXmarkLarge } from '@fortawesome/pro-light-svg-icons'
 
 import '@/assets/styles/styles.scss'
 
 const app = createApp(App)
-library.add(faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare, faFloppyDisk, faTrash, faCopy)
+library.add(faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare, faFloppyDisk, faTrash, faCopy, faLock, faArrowLeft, <faXmarkLarge></faXmarkLarge>)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router)

@@ -1,5 +1,17 @@
 <template>
-  <nav class="editor-nav flex">
+  <nav class="editor-nav flex items-center">
+
+    <div class="back">
+      <a-tooltip placement="bottom">
+        <router-link class="back-link" to="/template">
+          <font-awesome-icon icon="fa-light fa-arrow-left" />
+        </router-link>
+        <template #title>
+          <span>Go back</span>
+        </template>
+      </a-tooltip>
+    </div>
+
     <div class="editor-nav-select">
       <a-select ref="select" class="page-nav" value="1">
         <a-select-option value="1">Page: How it works</a-select-option>
@@ -14,11 +26,7 @@
           <span>Switch to desktop</span>
         </template>
         <div>
-          <font-awesome-icon
-            icon="fa-light fa-display"
-            :class="{ active: viewMode === 1300 }"
-            class="icon"
-          />
+          <font-awesome-icon icon="fa-light fa-display" :class="{ active: viewMode === 1300 }" class="icon" />
         </div>
         <!-- <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" /> -->
       </a-tooltip>
@@ -27,11 +35,7 @@
           <span>Switch to tablet</span>
         </template>
         <div>
-          <font-awesome-icon
-            icon="fa-light fa-tablet-screen"
-            :class="{ active: viewMode === 800 }"
-            class="icon"
-          />
+          <font-awesome-icon icon="fa-light fa-tablet-screen" :class="{ active: viewMode === 800 }" class="icon" />
         </div>
         <!-- <tablet-outlined class="icon" :class="{ active: viewMode === 800 }" /> -->
       </a-tooltip>
@@ -40,41 +44,27 @@
           <span>Switch to mobile</span>
         </template>
         <div>
-          <font-awesome-icon
-            icon="fa-light fa-mobile"
-            :class="{ active: viewMode === 420 }"
-            class="icon"
-          />
+          <font-awesome-icon icon="fa-light fa-mobile" :class="{ active: viewMode === 420 }" class="icon" />
         </div>
         <!-- <mobile-outlined class="icon" :class="{ active: viewMode === 420 }" /> -->
       </a-tooltip>
     </div>
+
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
-        <!-- <lock-outlined class="icon" /> -->
-        <span class="http">https:</span
-        ><span
-          >//welix.herokuapp.com/
-          <span
-            class="my-site"
-            contenteditable="true"
-            @input="debouceName"
-            ref="wapName"
-            >{{ siteName }}</span
-          ></span
-        >
+        <font-awesome-icon icon="fa-light fa-lock" class="icon" />
+        <span class="http">https:</span><span>//welix.herokuapp.com/
+          <span class="my-site" contenteditable="true" @input="debouceName" ref="wapName">{{ siteName }}</span></span>
       </div>
     </div>
+
     <div class="editor-nav-actions flex items-center">
       <a-tooltip @click="undo" placement="bottom">
         <template #title>
           <span>Undo</span>
         </template>
         <div>
-          <font-awesome-icon
-            icon="fa-light fa-share fa-flip-horizontal"
-            class="icon fa-flip-horizontal"
-          />
+          <font-awesome-icon icon="fa-light fa-share fa-flip-horizontal" class="icon fa-flip-horizontal" />
         </div>
       </a-tooltip>
       <a-tooltip @click="redo" placement="bottom">
@@ -174,4 +164,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+</style>
