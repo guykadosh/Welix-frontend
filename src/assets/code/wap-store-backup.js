@@ -26,9 +26,6 @@ export default {
     prevActions({ prevActions }) {
       return prevActions
     },
-    nextActions({ nextActions }) {
-      return nextActions
-    },
   },
   mutations: {
     setWaps(state, { waps }) {
@@ -51,19 +48,81 @@ export default {
     changeWapName(state, { name }) {
       state.currWap.name = name
     },
+    setTheme(state, { theme }) {
+      const { mainBgc, cmpBgc, color } = theme
+      state.currWap.style.backgroundColor = mainBgc
+
+      state.currWap.cmps.forEach(cmp => {
+        cmp.style.backgroundColor = cmpBgc
+        cmp.style.color = color
+
+        for (const key in cmp.info) {
+          if (!cmp.info[key].style) continue
+
+          cmp.info[key].style.color = color
+        }
+
+        if (cmp.type === 'wap-container') {
+          cmp.info.cmps.forEach(cmp => {
+            cmp.style.backgroundColor = cmpBgc
+            cmp.style.color = color
+
+            for (const key in cmp.info) {
+              if (!cmp.info[key].style) continue
+
+              cmp.info[key].style.color = color
+            }
+          })
+        }
+      })
+    },
     addCmp(state, { cmp, idx }) {
       if (idx) state.currWap.cmps.splice(idx, 0, cmp)
       else state.currWap.cmps.push(cmp)
     },
+    // updateCmp(state) {
+    //   const { cmps } = state.currWap
+
+    //   let idx = cmps.findIndex(cmp => cmp.id === state.cmpToEdit.id)
+
+    //   // -1 means the cmp lives inside a wap container
+    //   if (idx === -1) {
+    //     // wap-nav is inside header if not stand alone
+    //     if (state.cmpToEdit.type === 'wap-nav') {
+    //       const wapHeader = cmps.find(cmp => cmp.type === 'wap-header')
+    //       wapHeader.info.nav = state.cmpToEdit
+    //     } else {
+    //       // find the the container
+    //       const wapContainer = cmps
+    //         .filter(cmp => cmp.type === 'wap-container')
+    //         .find(cmp =>
+    //           cmp.info.cmps.some(cmp => cmp.id === state.cmpToEdit.id)
+    //         )
+
+    //       // find the cmp idx
+    //       const innerIdx = wapContainer.info.cmps.findIndex(
+    //         cmp => cmp.id === state.cmpToEdit.id
+    //       )
+
+    //       const copy = JSON.parse(JSON.stringify(wapContainer))
+    //       idx = cmps.findIndex(cmp => cmp.id === wapContainer.id)
+    //       state.prevActions.push({ idx, cmp: copy })
+
+    //       wapContainer.info.cmps.splice(innerIdx, 1, state.cmpToEdit)
+    //       // state.currWap.cmps.splice(idx, 1, wapContainer)
+    //     }
+    //   } else {
+    //     state.prevActions.push({ idx, cmp: state.currWap.cmps[idx] })
+    //     state.currWap.cmps.splice(idx, 1, state.cmpToEdit)
+    //   }
+    // },
     updateCmp(state, { idx }) {
+      // const idx = state.currWap.cmps.findIndex(currCmp => currCmp.id === cmp.id)
       const cmp = state.cmpToEdit
       state.currWap.cmps.splice(idx, 1, cmp)
     },
     pushAction(state, { prevState }) {
       state.prevActions.push(prevState)
-    },
-    pushNextAction(state, { prevState }) {
-      state.nextActions.push(prevState)
     },
     updateCmps(state, { cmps }) {
       state.currWap.cmps = cmps
@@ -79,38 +138,41 @@ export default {
       state.cmpToEdit = null
       state.elToEdit = null
     },
+    // duplicateCmp(state, { cmpId }) {
+    //   const idx = state.currWap.cmps.findIndex(cmp => cmp.id === cmpId)
+    //   const duplicatedCmp = JSON.parse(JSON.stringify(state.currWap.cmps[idx]))
+    //   duplicatedCmp.id = utilService.makeId()
+    //   state.currWap.cmps.splice(idx + 1, 0, duplicatedCmp)
+    // },
     undo(state) {
       if (!state.prevActions.length) return
 
       const { cmps } = state.currWap
-      const prevAction = state.prevActions.pop()
+      const lastMove = state.prevActions.pop()
 
-      console.log(prevAction)
-      let idx = cmps.findIndex(cmp => cmp.id === prevAction.cmp.id)
+      let idx = cmps.findIndex(cmp => cmp.id === lastMove.cmp.id)
 
       if (idx === -1) {
-        idx = prevAction.idx
-        state.currWap.cmps.splice(idx, 0, prevAction.cmp)
+        idx = lastMove.idx
+        state.currWap.cmps.splice(idx, 0, lastMove.cmp)
       } else {
-        state.currWap.cmps.splice(idx, 1, prevAction.cmp)
+        state.currWap.cmps.splice(idx, 1, lastMove.cmp)
       }
 
-      const cmp = JSON.parse(JSON.stringify(cmps[idx]))
-      state.nextActions.push({ idx, cmp, action: prevAction.action })
+      state.nextActions.push({ idx, cmp: cmps[idx], action: lastMove.action })
     },
     redo(state) {
       if (!state.nextActions.length) return
       const { cmps } = state.currWap
       const prevAction = state.nextActions.pop()
-
-      let idx = prevAction.idx
+      let idx
       if (prevAction.action === 'removed') {
-        // idx = prevAction.idx
+        idx = prevAction.idx
         state.prevActions.push({ idx, cmp: cmps[idx], action: 'removed' })
         state.currWap.cmps.splice(idx, 1)
       } else {
-        // idx = cmps.findIndex(cmp => cmp.id === prevAction.cmp.id)
-        state.prevActions.push({ idx, cmp: cmps[idx], action: 'updated' })
+        idx = cmps.findIndex(cmp => cmp.id === prevAction.cmp.id)
+        state.prevActions.push({ idx, cmp: cmps[idx] })
         state.currWap.cmps.splice(idx, 1, prevAction.cmp)
       }
     },
@@ -160,7 +222,6 @@ export default {
         const wapId = getters.getCurrWap._id
         commit(payload)
         const cmp = await wapService.removeCmp(wapId, payload.cmpId)
-        return cmp
       } catch (err) {
         console.log(err)
         throw new Error('could not remove section')
@@ -207,62 +268,19 @@ export default {
       }
     },
     async redo({ getters, dispatch, commit }) {
-      console.log(getters.nextActions)
       if (!getters.nextActions.length) return
 
-      const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
-      const { cmps } = wap
-      const prevAction = getters.nextActions[getters.nextActions.length - 1]
-      console.log(prevAction)
-
+      const { cmps } = state.getCurrWap
+      const prevAction = state.nextActions.pop()
       let idx
       if (prevAction.action === 'removed') {
         idx = prevAction.idx
-        wap.cmps.splice(idx, 1)
+        state.prevActions.push({ idx, cmp: cmps[idx], action: 'removed' })
+        state.currWap.cmps.splice(idx, 1)
       } else {
         idx = cmps.findIndex(cmp => cmp.id === prevAction.cmp.id)
-        wap.cmps.splice(idx, 1, prevAction.cmp)
-      }
-
-      commit({ type: 'redo' })
-      await dispatch({ type: 'saveWap', wap })
-    },
-    async setTheme({ commit, dispatch, getters }, { theme }) {
-      try {
-        const { mainBgc, cmpBgc, color } = theme
-        const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
-        console.log(wap)
-        wap.style.backgroundColor = mainBgc
-
-        wap.cmps.forEach(cmp => {
-          cmp.style.backgroundColor = cmpBgc
-          cmp.style.color = color
-
-          for (const key in cmp.info) {
-            if (!cmp.info[key].style) continue
-
-            cmp.info[key].style.color = color
-          }
-
-          if (cmp.type === 'wap-container') {
-            cmp.info.cmps.forEach(cmp => {
-              cmp.style.backgroundColor = cmpBgc
-              cmp.style.color = color
-
-              for (const key in cmp.info) {
-                if (!cmp.info[key].style) continue
-
-                cmp.info[key].style.color = color
-              }
-            })
-          }
-        })
-
-        commit({ type: 'setCurrWap', wap })
-        await dispatch({ type: 'saveWap', wap })
-      } catch (err) {
-        console.log(err)
-        throw new Error('could not update theme')
+        state.prevActions.push({ idx, cmp: cmps[idx] })
+        state.currWap.cmps.splice(idx, 1, prevAction.cmp)
       }
     },
   },

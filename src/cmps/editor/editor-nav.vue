@@ -14,7 +14,11 @@
           <span>Switch to desktop</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-display" :class="{ active: viewMode === 1300 }" class="icon" />
+          <font-awesome-icon
+            icon="fa-light fa-display"
+            :class="{ active: viewMode === 1300 }"
+            class="icon"
+          />
         </div>
         <!-- <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" /> -->
       </a-tooltip>
@@ -23,7 +27,11 @@
           <span>Switch to tablet</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-tablet-screen" :class="{ active: viewMode === 800 }" class="icon" />
+          <font-awesome-icon
+            icon="fa-light fa-tablet-screen"
+            :class="{ active: viewMode === 800 }"
+            class="icon"
+          />
         </div>
         <!-- <tablet-outlined class="icon" :class="{ active: viewMode === 800 }" /> -->
       </a-tooltip>
@@ -32,7 +40,11 @@
           <span>Switch to mobile</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-mobile" :class="{ active: viewMode === 420 }" class="icon" />
+          <font-awesome-icon
+            icon="fa-light fa-mobile"
+            :class="{ active: viewMode === 420 }"
+            class="icon"
+          />
         </div>
         <!-- <mobile-outlined class="icon" :class="{ active: viewMode === 420 }" /> -->
       </a-tooltip>
@@ -40,8 +52,17 @@
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
         <!-- <lock-outlined class="icon" /> -->
-        <span class="http">https:</span><span>//welix.herokuapp.com/
-          <span class="my-site" contenteditable="true" @input="debouceName" ref="wapName">{{ siteName }}</span></span>
+        <span class="http">https:</span
+        ><span
+          >//welix.herokuapp.com/
+          <span
+            class="my-site"
+            contenteditable="true"
+            @input="debouceName"
+            ref="wapName"
+            >{{ siteName }}</span
+          ></span
+        >
       </div>
     </div>
     <div class="editor-nav-actions flex items-center">
@@ -50,7 +71,10 @@
           <span>Undo</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-share fa-flip-horizontal" class="icon fa-flip-horizontal" />
+          <font-awesome-icon
+            icon="fa-light fa-share fa-flip-horizontal"
+            class="icon fa-flip-horizontal"
+          />
         </div>
       </a-tooltip>
       <a-tooltip @click="redo" placement="bottom">
@@ -78,6 +102,7 @@ import {
   LockOutlined,
 } from '@ant-design/icons-vue'
 import { eventBus } from '../../services/event-bus.service'
+import { notification } from 'ant-design-vue'
 
 export default {
   name: 'editor-nav',
@@ -108,11 +133,26 @@ export default {
       eventBus.emit('resized', size)
       console.log('hi')
     },
+    // async undo() {
+    //   try {
+    //     await this.$store.dispatch({ type: 'undo' })
+    //   } catch (err) {
+    //     console.log(err)
+    //     // notification['Somthing went wrong...']
+    //   }
+    // },
+    // async redo() {
+    //   try {
+    //     this.$store.dispatch({ type: 'redo' })
+    //   } catch (err) {
+    //     console.log(err)
+    //     // notification['Somthing went wrong...']
+    //   }
+    // },
     undo() {
       this.$store.commit({ type: 'undo' })
     },
     redo() {
-      console.log('Hi')
       this.$store.commit({ type: 'redo' })
     },
     changeWapName() {
@@ -134,5 +174,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

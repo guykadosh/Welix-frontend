@@ -13,6 +13,9 @@ export const wapService = {
   getEmptyWap,
   saveToSession,
   getFromSession,
+  getCurrState,
+  updateCmp,
+  removeCmp,
 }
 
 _createWaps()
@@ -48,6 +51,18 @@ async function save(wap) {
   // return httpService.post('wap', wap)
 }
 
+async function updateCmp(wapId, cmp) {
+  const body = { wapId, cmp }
+  return storageService.updateCmp(body)
+
+  // return httpService.put('wap/cmp/', wap)
+}
+
+async function removeCmp(wapId, cmpId) {
+  return storageService.removeCmp(wapId, cmpId)
+  // return httpService.put(`wap/cmp/${wapId}`, cmpId)
+}
+
 function saveToSession(wap) {
   sessionStorage.setItem('currWap', JSON.stringify(wap))
 }
@@ -55,6 +70,29 @@ function saveToSession(wap) {
 function getFromSession() {
   const wap = JSON.parse(sessionStorage.getItem('currWap'))
   return wap
+}
+
+function getCurrState(cmpToSave, wap, action) {
+  console.log(wap)
+  let idx = wap.cmps.findIndex(cmp => cmp.id === cmpToSave.id)
+
+  if (idx === -1) {
+    // wap-nav is inside header if not stand alone
+    if (cmpToSave.type === 'wap-nav') {
+      idx = wap.cmps.findIndex(cmp => cmp.type === 'wap-header')
+
+      return { idx, cmp: wap.cmps[idx], action }
+    } else {
+      // find the the container
+      idx = wap.cmps
+        .filter(cmp => cmp.type === 'wap-container')
+        .find(cmp => cmp.info.cmps.some(cmp => cmp.id === cmpToSave.id))
+
+      return { idx, cmp: wap.cmps[idx], action }
+    }
+  }
+
+  return { idx, cmp: wap.cmps[idx], action }
 }
 
 function getEmptyWap(createdBy, name) {
