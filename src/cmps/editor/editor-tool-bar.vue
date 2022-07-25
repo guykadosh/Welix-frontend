@@ -17,6 +17,12 @@
       <editor-tool-theme v-if="tool === 'theme'" />
     </section>
   </div>
+  <div>
+    <a-modal v-model:visible="visible" :ok-button-props="{ display: none }">
+      <login />
+      <template #footer></template>
+    </a-modal>
+  </div>
 </template>
 
 <script>
@@ -24,11 +30,12 @@ import { Container, Draggable } from 'vue3-smooth-dnd'
 import { applyDrag } from '@/services/dnd.utils/helpers.js'
 import { eventBus } from '../../services/event-bus.service'
 import { CloseOutlined } from '@ant-design/icons-vue'
+import { notification } from 'ant-design-vue'
 import editorToolBarNav from './editor-tool-bar-nav.vue'
 import elEditor from './el-editor.vue'
 import editorToolSections from './editor-tool-sections.vue'
 import editorToolTheme from './editor-tool-theme.vue'
-import { notification } from 'ant-design-vue'
+import login from '../app/login.vue'
 
 export default {
   name: 'edit-tool-bar',
@@ -44,15 +51,20 @@ export default {
     editorToolSections,
     editorToolTheme,
     CloseOutlined,
+    login,
   },
   data() {
     return {
       items: null,
       isOpen: false,
       tool: null,
+      visible: false,
     }
   },
   methods: {
+    showModal() {
+      this.visible = true
+    },
     addWapCmp(cmpId) {
       console.log('add cmp', cmpId)
     },
@@ -85,6 +97,7 @@ export default {
     },
     async saveWap() {
       if (!this.user) {
+        this.visible = true
         notification['error']({
           message: `Login first`,
         })

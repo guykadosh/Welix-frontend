@@ -1,33 +1,91 @@
 .tool-bar {
   position: relative;
 
-  .add-section-mobile {
+  &-nav__mobile {
     position: fixed;
     bottom: 0;
-    right: 15px;
-    padding: 20px;
-    z-index: 200;
+    right: 0;
+    z-index: 100;
 
-    .plus-icon-mobile {
-      font-size: 28px;
-      background-color: #228be6;
-      padding: 20px;
+    .mobile-tool-filter {
+      padding: 80px;
+      background-color: #b60e4c;
       border-radius: 50%;
-      color: $light-color;
-      box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+      position: fixed;
+      bottom: -35px;
+      right: -30px;
+      // padding: 20px;
+      z-index: 200;
+      // display: none;
+      transform: scale(0);
+      transition: transform 0.2s;
+      &.open {
+        // display: block;
+        transform: scale(100%);
+        @include for-medium-layout {
+          display: none;
+        }
+      }
+
+      @include for-medium-layout {
+        display: none;
+      }
+
+      .mobile-icon {
+        font-size: 28px;
+        background-color: rgb(22, 20, 28);
+        color: $light-color;
+        // outline: 1px solid;
+        border-radius: 50%;
+        padding: 5px 12px;
+      }
+
+      .mobile-icon.add {
+        position: fixed;
+        bottom: 43px;
+        right: 132px;
+        font-size: 26px;
+        padding: 5px 14px;
+      }
+
+      .mobile-icon.pallete {
+        position: fixed;
+        bottom: 106px;
+        right: 109px;
+      }
+
+      .mobile-icon.edit {
+        position: fixed;
+        bottom: 127px;
+        right: 37px;
+      }
     }
 
-    @include for-medium-layout {
-      display: none;
+    .add-section-mobile {
+      position: fixed;
+      bottom: 14px;
+      right: 26px;
+      z-index: 210;
+
+      .plus-icon-mobile {
+        font-size: 28px;
+        background-color: #230413;
+        padding: 16px;
+        border-radius: 50%;
+        color: $light-color;
+        outline: 1px solid $light-color;
+      }
+
+      @include for-medium-layout {
+        display: none;
+      }
     }
   }
 
   &-nav {
-
     display: none;
 
     @include for-medium-layout {
-
       display: flex;
       border-right: 1px solid $light-color3;
       padding: em(10px);
@@ -42,7 +100,7 @@
         li {
           margin-block-end: em(28px);
           border-radius: 50%;
-          padding: em(9px) em(10px) em(6px) em(10px);
+          padding: em(12px) em(10px) em(8px) em(10px);
           text-align: center;
 
           &:hover {
@@ -72,7 +130,6 @@
 
     background-color: #fff;
 
-
     // mobile
     position: absolute;
     bottom: 0;
@@ -101,7 +158,14 @@
     }
 
     &.open-edit {
-      width: rem(325px);
+      //mobile
+      width: 100vw;
+      height: rem(400px);
+
+      @include for-medium-layout {
+        width: rem(325px);
+        height: initial;
+      }
     }
 
     &__header {
@@ -174,7 +238,6 @@
           // background-color: #74c1fc79;
           color: #228be6;
           // font-weight: 600;
-
         }
       }
     }
@@ -231,12 +294,18 @@
 
     .el-editor-inner {
       // padding: rem(18px);
-      padding: rem(18px) em(30px) rem(18px) rem(4px);
-      max-width: rem(300px);
+      padding: rem(18px) em(98px) rem(18px) rem(18px);
+      // max-width: rem(300px);
       margin: 0 auto;
       overflow-y: auto;
-      height: 85vh;
+      height: 48vh;
+      // background-color: #251dc0;
 
+      @include for-medium-layout {
+        height: 85vh;
+        max-width: rem(300px);
+        padding: rem(18px) em(30px) rem(18px) rem(4px);
+      }
 
       .extra-tools {
         font-size: rem(28px);
@@ -257,12 +326,13 @@
 
       .box {
         margin-block-end: rem(8px);
+        max-width: 280px;
 
-        &:nth-of-type(1),
-        &:nth-of-type(2) {
-          display: flex;
-          align-items: center;
-        }
+        // &:nth-of-type(1),
+        // &:nth-of-type(2) {
+        //   display: flex;
+        //   align-items: center;
+        // }
 
         .ant-slider-track {
           background-color: #1971c2;
@@ -277,7 +347,7 @@
 
     .tool-bar-theme {
       overflow-y: auto;
-      height: 83vh;
+      height: 80vh;
       // height: 100%;
     }
   }

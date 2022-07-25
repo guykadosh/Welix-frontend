@@ -19,7 +19,7 @@
           <span>Switch to desktop</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-display" :class="{ active: viewMode === 1300 }" class="icon" />
+          <font-awesome-icon icon="fa-light fa-display" :class="{ active: viewMode === 1700 }" class="icon" />
         </div>
         <!-- <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" /> -->
       </a-tooltip>
@@ -100,7 +100,7 @@ export default {
   },
   data() {
     return {
-      viewMode: 1300,
+      viewMode: 1700,
     }
   },
   created() {
