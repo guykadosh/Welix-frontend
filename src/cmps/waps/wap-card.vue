@@ -3,6 +3,9 @@
     <img v-if="info.img" class="card-img" :src="info.img.url" />
     <div class="card-img-container"></div>
     <div class="card-content">
+      <div v-if="info.icon">
+        <font-awesome-icon :icon="info.icon.link" class="icon" />
+      </div>
       <span class="card-tag" v-if="info.tag" :style="info.tag.style">{{
           info.tag.txt
       }}</span>
@@ -22,9 +25,6 @@
           <span>{{ line.txt }}</span>
         </li>
       </ul>
-      <div v-if="info.icon">
-        <font-awesome-icon :icon="info.icon.link" class="card-icon" />
-      </div>
       <a v-if="info.btn" :href="info.btn.link" class="card-btn">
         {{ info.btn.txt }}
       </a>
