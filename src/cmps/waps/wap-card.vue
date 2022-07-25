@@ -18,6 +18,10 @@
       <h3 class="card-subheading" v-if="info.subHeading" :style="info.subHeading.style">
         {{ info.subHeading.txt }}
       </h3>
+      <p v-if="info.paragraph" :style="info.paragraph.style">
+        {{ info.paragraph.txt }}
+      </p>
+
       <ul class="card-list clean-list" v-if="info.list">
         <li v-for="line in info.list" :key="line">
           <img :src="line.icon" srcset="" />
@@ -29,9 +33,6 @@
         {{ info.btn.txt }}
       </a>
     </div>
-    <p v-if="info.paragraph" :style="info.paragraph.style">
-    {{info.paragraph.txt}}
-    </p>
   </section>
 </template>
 <script>
