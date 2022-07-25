@@ -1,6 +1,24 @@
 <template>
-  <div @click="setTool('section')" class="add-section-mobile">
-    <font-awesome-icon icon="fa-light fa-plus-large" class="plus-icon-mobile" />
+  <div class="tool-bar-nav__mobile">
+
+    <div class="add-section-mobile" @click="toggleMobileMenu">
+      <font-awesome-icon icon="fa-light fa-circle" class="plus-icon-mobile" />
+    </div>
+
+    <div class="mobile-tool-filter" :class="{ open: isMobileMenu }">
+      <div class="mobile-icon edit" @click="setTool('edit')">
+        <font-awesome-icon icon="fa-light fa-pen-to-square" />
+      </div>
+      <div class="mobile-icon pallete" @click="setTool('theme')">
+        <font-awesome-icon icon="fa-light fa-palette" />
+      </div>
+      <div class="mobile-icon add" @click="setTool('section')">
+        <font-awesome-icon icon="fa-light fa-plus" />
+      </div>
+    </div>
+
+
+
   </div>
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
@@ -73,6 +91,7 @@ export default {
   data() {
     return {
       activeTool: null,
+      isMobileMenu: false,
     }
   },
   components: {
@@ -86,12 +105,16 @@ export default {
   },
   methods: {
     setTool(type) {
-      this.activeTool = type
+      this.isMobileMenu = false,
+        this.activeTool = type
       this.$emit('setTool', type)
     },
     saveWap() {
       this.$emit('saved')
     },
+    toggleMobileMenu() {
+      this.isMobileMenu = !this.isMobileMenu
+    }
   },
   emits: ['setTool', 'saved'],
 }

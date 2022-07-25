@@ -7,12 +7,25 @@ import 'ant-design-vue/dist/antd.css'
 import VueGoogleMaps from '@fawmi/vue-google-maps'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare, faFloppyDisk, faTrash, faCopy, faGem, faHandsHoldingCircle, faPeopleGroup, faLock, faArrowLeft, faXmarkLarge, faPlusLarge } from '@fortawesome/pro-light-svg-icons'
+import {
+    faPenToSquare,
+    faPalette, faCirclePlus, faDisplay,
+    faMobile, faTabletScreen, faShare,
+    faFloppyDisk, faTrash, faCopy, faGem,
+    faHandsHoldingCircle, faPeopleGroup,
+    faLock, faArrowLeft, faXmarkLarge,
+    faPlusLarge, faCircle, faPlus
+} from '@fortawesome/pro-light-svg-icons'
 
 import '@/assets/styles/styles.scss'
 
 const app = createApp(App)
-library.add(faPenToSquare, faPalette, faCirclePlus, faDisplay, faMobile, faTabletScreen, faShare, faFloppyDisk, faTrash, faCopy, faGem, faHandsHoldingCircle, faPeopleGroup, faLock, faArrowLeft, faXmarkLarge, faPlusLarge)
+library.add(faPenToSquare, faPalette, faCirclePlus,
+    faDisplay, faMobile, faTabletScreen, faShare,
+    faFloppyDisk, faTrash, faCopy, faGem,
+    faHandsHoldingCircle, faPeopleGroup, faLock,
+    faArrowLeft, faXmarkLarge, faPlusLarge, faCircle, faPlus
+)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router)
