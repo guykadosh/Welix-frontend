@@ -183,6 +183,18 @@ export default {
         console.log(err)
       }
     },
+    async updateCmp({ getters, commit }) {
+      try {
+        const wapId = getters.currWap._id
+
+        const cmp = getters.cmpToEdit
+
+        const updatedCmp = await wapService.updateCmp(wapId, cmp)
+      } catch (err) {
+        console.log(err)
+        throw new Error('Could not update section')
+      }
+    },
     // async updateCmp({ commit, getters }, { cmp }) {
     //   const wapId = getters.getCurrWapId
     //   try {

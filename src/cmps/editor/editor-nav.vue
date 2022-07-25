@@ -9,7 +9,7 @@
       </a-select>
     </div>
     <div class="editor-nav-view-port flex items-center">
-      <a-tooltip @click="resize(1300)" placement="bottom">
+      <a-tooltip @click="resize(1700)" placement="bottom">
         <template #title>
           <span>Switch to desktop</span>
         </template>
