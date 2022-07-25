@@ -74,8 +74,8 @@
     }
 
     &__labels {
-      padding: em(15px);
-      padding: 0;
+      // padding: em(15px);
+      // padding: 0;
       background-color: #f7f8f8;
       // width: rem(250px);
 
@@ -85,10 +85,11 @@
     &__label {
       // margin-block-end: rem(10px);
       width: 150px;
-      
-      padding: rem(5px) em(10px);
+
+      padding: rem(10px) em(10px);
       border-left: 4px solid transparent;
-      
+      margin-block-end: em(8px);
+
       &.selected {
         border-color: #228be6;
         // border-bottom: 1px solid #228be638;
@@ -96,9 +97,9 @@
       }
 
       &:first-child {
-        padding: em(15px);
+        padding: em(18px) em(15px);
         border-bottom: 1px solid $light-color3;
-        margin-block-end: rem(14px);
+        margin-block-end: 0;
         font-weight: 600;
       }
 
@@ -119,7 +120,7 @@
           // background-color: #74c1fc79;
           color: #228be6;
           // font-weight: 600;
-          
+
         }
       }
     }
@@ -128,10 +129,11 @@
       overflow-y: auto;
       height: 85vh;
       padding: em(15px) rem(18px);
+      padding-top: 0;
       width: 100%;
 
       &-title {
-        padding: em(15px) 0;
+        padding: em(18px) 0;
         border-bottom: 1px solid $light-color3;
         margin-block-end: rem(14px);
         font-weight: 600;
@@ -142,11 +144,8 @@
       margin-block-end: em(14px);
       transition: transform 0.3s;
       cursor: pointer;
-
-      img {
-        width: 100%;
-        border-radius: 3px;
-      }
+      // transition: ease-in 0.1s;
+      // transition: height 0.1s;
 
       &:hover {
         transform: translateY(rem(-3px));
@@ -160,7 +159,7 @@
       margin: 0 auto;
       overflow-y: auto;
       height: 85vh;
-      
+
 
       .extra-tools {
         font-size: rem(28px);
@@ -181,10 +180,11 @@
 
       .box {
         margin-block-end: rem(8px);
-        
+
         .ant-slider-track {
           background-color: #1971c2;
         }
+
         .title {
           margin-block-end: rem(1px);
           min-width: 42%;
