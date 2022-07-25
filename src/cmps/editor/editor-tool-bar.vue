@@ -1,6 +1,6 @@
 <template>
   <div class="tool-bar flex">
-    <editor-tool-bar-nav @saved="saveWap" @setTool="openTool" />
+    <editor-tool-bar-nav @saved="saveWap" @setTool="openTool" :isToolOpen="isOpen" />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>

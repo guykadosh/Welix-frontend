@@ -11,7 +11,7 @@
       li {
         margin-block-end: em(28px);
         border-radius: 50%;
-        padding: em(10px);
+        padding: em(8px);
         text-align: center;
         display: flex;
         justify-content: center;
@@ -21,10 +21,16 @@
           background-color: #74c1fc79;
         }
 
+        &.active {
+          background-color: #74c1fc79;
+        }
+
         .icon {
           cursor: pointer;
           font-size: em(24px);
           color: rgb(63, 65, 60);
+
+
         }
       }
     }
@@ -59,6 +65,7 @@
       h2 {
         font-family: Roboto-Bold, sans-serif;
       }
+
       .close {
         font-size: rem(12px);
         cursor: pointer;
@@ -67,37 +74,52 @@
     }
 
     &__labels {
-      padding: em(15px) rem(18px);
+      padding: em(15px);
+      padding: 0;
       background-color: #f7f8f8;
-      width: rem(250px);
+      // width: rem(250px);
 
       // justify-content: flex-start;
     }
 
     &__label {
-      margin-block-end: rem(12px);
+      // margin-block-end: rem(10px);
+      width: 150px;
+      
+      padding: rem(5px) em(10px);
+      border-left: 4px solid transparent;
+      
+      &.selected {
+        border-color: #228be6;
+        // border-bottom: 1px solid #228be638;
+        // border-top: 1px solid #228be638;
+      }
 
       &:first-child {
-        padding: em(15px) 0;
+        padding: em(15px);
         border-bottom: 1px solid $light-color3;
         margin-block-end: rem(14px);
         font-weight: 600;
       }
 
       &-text {
-        padding: rem(5px) rem(8px);
+        display: block;
+        // padding: rem(5px) rem(8px);
         cursor: pointer;
+        min-width: 100%;
 
         &:hover {
-          border-radius: rem(20px);
-          background-color: #74c1fc79;
+          // border-radius: rem(20px);
+          // background-color: #74c1fc79;
           color: #228be6;
         }
 
         &.selected {
-          border-radius: rem(20px);
-          background-color: #74c1fc79;
+          // border-radius: rem(20px);
+          // background-color: #74c1fc79;
           color: #228be6;
+          // font-weight: 600;
+          
         }
       }
     }
@@ -107,6 +129,7 @@
       height: 85vh;
       padding: em(15px) rem(18px);
       width: 100%;
+
       &-title {
         padding: em(15px) 0;
         border-bottom: 1px solid $light-color3;
@@ -131,11 +154,13 @@
     }
 
     .el-editor-inner {
-      padding: rem(18px);
+      // padding: rem(18px);
+      padding: rem(18px) em(30px) rem(18px) rem(4px);
       max-width: rem(300px);
       margin: 0 auto;
       overflow-y: auto;
       height: 85vh;
+      
 
       .extra-tools {
         font-size: rem(28px);
@@ -147,16 +172,22 @@
 
         .tool {
           cursor: pointer;
+
           &:first-child {
             margin-inline-end: rem(12px);
           }
         }
       }
+
       .box {
         margin-block-end: rem(8px);
-
+        
+        .ant-slider-track {
+          background-color: #1971c2;
+        }
         .title {
-          margin-block-end: rem(5px);
+          margin-block-end: rem(1px);
+          min-width: 42%;
         }
       }
     }

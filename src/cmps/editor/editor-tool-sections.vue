@@ -1,28 +1,20 @@
 <template>
   <section class="flex sections">
     <div class="tool-bar-actions__labels flex flex-column">
-      <div
-        class="tool-bar-actions__label"
-        v-for="(label, idx) in labels"
-        :key="label.id"
+      <div class="tool-bar-actions__label flex items-center" v-for="(label, idx) in labels" :key="label.id"
+      :class="{ selected: label.selected }"
       >
-        <span
-          class="tool-bar-actions__label-text"
-          :class="{ selected: label.selected }"
-          @click="setFilter(label.type, idx)"
-        >
+        <span class="tool-bar-actions__label-text" :class="{ selected: label.selected }"
+          @click="setFilter(label.type, idx)">
           {{ label.title }}
         </span>
+        <!-- <span class="mark-active" :class="{ selected: label.selected }"></span> -->
       </div>
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
       <p class="tool-bar-actions__options-title">{{ title }}</p>
-      <Container
-        :get-child-payload="getChildPayload"
-        group-name="1"
-        behaviour="copy"
-      >
+      <Container :get-child-payload="getChildPayload" group-name="1" behaviour="copy">
         <Draggable v-for="cmp in cmps" :key="cmp.id">
           <div class="cmp-preview">
             <img v-if="cmp.thumbnail" :src="cmp.thumbnail" alt="" />
