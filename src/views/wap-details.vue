@@ -21,6 +21,7 @@ import wapReview from '../cmps/waps/wap-review.vue'
 import wapText from '../cmps/waps/wap-text.vue'
 import wapFooter from '../cmps/waps/wap-footer.vue'
 import wapContact from '../cmps/waps/wap-contact.vue'
+import wapMap from '../cmps/waps/wap-map.vue'
 
 export default {
   name: 'wap-details',
@@ -34,7 +35,8 @@ export default {
     wapReview,
     wapText,
     wapFooter,
-    wapContact
+    wapContact,
+    wapMap
   },
   data() {
     return {
