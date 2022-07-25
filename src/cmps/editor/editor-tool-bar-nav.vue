@@ -1,8 +1,11 @@
 <template>
+  <!-- <div @click="setTool('section')" >
+    <font-awesome-icon icon="fa-light fa-circle-plus" class="icon" />
+  </div> -->
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
       <ul>
-        <li @click="setTool('section')" :class="{active: activeTool === 'section' && isToolOpen}">
+        <li @click="setTool('section')" :class="{ active: activeTool === 'section' && isToolOpen }">
           <a-tooltip placement="right">
             <template #title>
               <span>Add Section</span>

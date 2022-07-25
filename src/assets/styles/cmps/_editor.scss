@@ -62,6 +62,7 @@
     }
 
     &-view-port {
+      // display: none;
       // border-right: 1px solid rgba(128, 128, 128, 0.26);
       padding: 0 em(10px);
       height: 100%;
@@ -115,7 +116,7 @@
 
     &-actions {
       // border-right: 1px solid rgba(128, 128, 128, 0.26);
-
+      // display: none;
       .icon {
         padding: em(3px);
         border-radius: em(5px);
