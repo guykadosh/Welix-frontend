@@ -1,20 +1,24 @@
 <template lang="">
-  <a-tabs v-model:activeKey="activeKey">
+  <a-tabs>
     <a-tab-pane key="1" tab="Login">
-      <form @submit.prevent="" class="login__form">
-        <h2>Log in</h2>
+      <form @submit.prevent="login" class="">
+        <h3 class="login-form-title">Login</h3>
+        <label for="" class="login-form-label">Username</label>
         <input
           v-model="credentials.username"
           placeholder="Username"
           autofocus
+          class="login-form-input"
         />
+        <label for="" class="login-form-label">Password</label>
         <input
           v-model="credentials.password"
           type="password"
           placeholder="Password"
           show-password
+          class="login-form-input"
         />
-        <button class="login__btn">
+        <button class="login-form-btn">
           <span>Login</span>
         </button>
       </form>
@@ -24,8 +28,7 @@
         <h2>Sign up</h2>
         <input
           v-model="credentials.fullname"
-          placeholder="Fullname *"
-          required
+          placeholder="Fullname"
           autofocus
         />
         <input
@@ -38,9 +41,9 @@
           v-model="credentials.password"
           type="password"
           placeholder="Password *"
+          required
         />
 
-        <p @click="this.$router.push('/login')">Have an account?</p>
         <button class="signup__btn">
           <span>Signup</span>
           <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -50,7 +53,6 @@
         </button>
       </form>
     </a-tab-pane>
-    a-tab-pane>
   </a-tabs>
 </template>
 <script>
@@ -67,6 +69,7 @@ export default {
   },
   methods: {
     login() {
+      console.log('Hi')
       this.$emit('login', this.credentials)
     },
     signup() {

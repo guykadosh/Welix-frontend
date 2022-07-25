@@ -138,6 +138,7 @@ export default {
         const savedWap = await wapService.save(wap)
         console.log(savedWap)
         commit({ type: 'saveWap', wap: savedWap })
+        commit({ type: 'setCurrWap', wap: savedWap })
 
         return savedWap
       } catch (err) {
