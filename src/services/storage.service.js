@@ -6,6 +6,8 @@ export const storageService = {
   remove,
   postMany,
   getUser,
+  updateCmp,
+  removeCmp,
 }
 
 function query(entityType) {
@@ -71,4 +73,59 @@ function _makeId(length = 5) {
     text += possible.charAt(Math.floor(Math.random() * possible.length))
   }
   return text
+}
+
+async function removeCmp(wapId, cmpId) {
+  const wap = await get('wap_db', wapId)
+  let idx = wap.cmps.findIndex(cmp => cmp.id === cmpId)
+
+  wap.cmps.splice(idx, 1)
+
+  return put('wap_db', wap)
+}
+
+async function updateCmp({ wapId, cmp }) {
+  try {
+    const wap = await get('wap_db', wapId)
+
+    let idx = wap.cmps.findIndex(currCmp => currCmp.id === cmp.id)
+    console.log(idx)
+    // -1 means the cmp lives inside a wap container
+    if (idx === -1) {
+      console.log('Hi?')
+      // wap-nav is inside header if not stand alone
+      if (cmp.type === 'wap-nav') {
+        const wapHeader = wap.cmps.find(
+          currCmp => currCmp.type === 'wap-header'
+        )
+        wapHeader.info.nav = cmp
+        idx = wap.cmps.findIndex(cmp => cmp.id === wapHeader.id)
+        cmp = wapHeader
+      } else {
+        // find the the container
+        const wapContainer = wap.cmps
+          .filter(currCmp => currCmp.type === 'wap-container')
+          .find(currCmp =>
+            currCmp.info.cmps.some(currCmp => currCmp.id === cmp.id)
+          )
+        // find the cmp idx
+        const innerIdx = wapContainer.info.cmps.findIndex(
+          cmp => cmp.id === cmp.id
+        )
+        wapContainer.info.cmps.splice(innerIdx, 1, cmp)
+        idx = wap.cmps.findIndex(cmp => cmp.id === wapContainer.id)
+        cmp = wapContainer
+        console.log(cmp)
+      }
+    }
+
+    wap.cmps.splice(idx, 1, cmp)
+
+    put('wap_db', wap)
+
+    return cmp
+  } catch (err) {
+    console.log(err)
+    throw err
+  }
 }

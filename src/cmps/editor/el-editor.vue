@@ -17,6 +17,7 @@ import elEditorBtn from './costum-editors/el-editor-btn.vue'
 import elEditorImg from './costum-editors/el-editor-img.vue'
 import elEditorImgs from './costum-editors/el-editor-imgs.vue'
 import elEditorCmp from './costum-editors/el-editor-cmp.vue'
+import { notification } from 'ant-design-vue'
 
 export default {
   components: {
@@ -27,44 +28,62 @@ export default {
     elEditorCmp,
   },
   methods: {
-    updateCmp({ style, link, url, urls }) {
-      const { key, idx } = this.el
+    async updateCmp({ style, link, url, urls }) {
+      try {
+        const { key, idx } = this.el
 
-      const cmp = JSON.parse(JSON.stringify(this.cmp))
+        const cmp = JSON.parse(JSON.stringify(this.cmp))
 
-      if (key) {
-        if (style) {
-          if (idx === null) {
-            cmp.info[key].style = style
-          } else {
-            cmp.info[key][idx].style = style
+        if (key) {
+          if (style) {
+            if (idx === null) {
+              cmp.info[key].style = style
+            } else {
+              cmp.info[key][idx].style = style
+            }
           }
+
+          if (url) {
+            cmp.info[key].url = url
+          }
+
+          if (urls) {
+            cmp.info[key].urls = urls
+          }
+
+          if (link) {
+            cmp.info[this.el.key].link = link
+          }
+        } else {
+          cmp.style = style
         }
 
-        if (url) {
-          cmp.info[key].url = url
-        }
-
-        if (urls) {
-          cmp.info[key].urls = urls
-        }
-
-        if (link) {
-          cmp.info[this.el.key].link = link
-        }
-      } else {
-        cmp.style = style
+        const newCmp = JSON.parse(JSON.stringify(cmp))
+        this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
+        await this.$store.dispatch({ type: 'updateCmp', newCmp })
+      } catch (err) {
+        notification['error']({
+          message: 'coudlt not update cmp',
+        })
       }
-
-      const newCmp = JSON.parse(JSON.stringify(cmp))
-      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
-      this.$store.commit({ type: 'updateCmp', newCmp })
     },
-    removeCmp() {
-      this.$store.commit({ type: 'removeCmp', cmpId: this.cmp.id })
+    async removeCmp() {
+      try {
+        await this.$store.dispatch({ type: 'removeCmp', cmpId: this.cmp.id })
+      } catch (err) {
+        notification['error']({
+          message: err,
+        })
+      }
     },
-    duplicateCmp() {
-      this.$store.commit({ type: 'duplicateCmp', cmpId: this.cmp.id })
+    async duplicateCmp() {
+      try {
+        await this.$store.dispatch({ type: 'duplicateCmp', cmpId: this.cmp.id })
+      } catch (err) {
+        notification['error']({
+          message: err,
+        })
+      }
     },
   },
   created() {},

@@ -38,16 +38,20 @@ export default {
     },
   },
   methods: {
-    wapToEdit(wap) {
+    async wapToEdit(wap) {
       const wapToEdit = JSON.parse(JSON.stringify(wap))
       delete wapToEdit._id
 
       wapToEdit.isPublic = false
       wapToEdit.isPublished = false
       wapToEdit.name = ''
-
-      this.$store.commit({ type: 'setCurrWap', wap: wapToEdit })
-
+      console.log(wapToEdit)
+      const savedWap = await this.$store.dispatch({
+        type: 'saveWap',
+        wap: wapToEdit,
+      })
+      console.log(savedWap)
+      this.$store.commit({ type: 'setCurrWap', wap: savedWap })
       this.$router.push('/wap/editor/')
     },
   },

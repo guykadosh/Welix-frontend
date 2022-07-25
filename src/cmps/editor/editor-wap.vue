@@ -1,5 +1,6 @@
 <template>
   <main
+    v-if="wap"
     class="editor-wap-container"
     :class="[responsiveClass, wrapper]"
     ref="container"

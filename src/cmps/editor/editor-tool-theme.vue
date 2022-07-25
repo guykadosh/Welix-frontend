@@ -86,8 +86,12 @@ export default {
     }
   },
   methods: {
-    setTheme(theme) {
-      this.$store.commit({ type: 'setTheme', theme })
+    async setTheme(theme) {
+      try {
+        await this.$store.dispatch({ type: 'setTheme', theme })
+      } catch (err) {
+        console.log(err)
+      }
     },
     isDarkColor(c) {
       c = c.substring(1) // strip #
