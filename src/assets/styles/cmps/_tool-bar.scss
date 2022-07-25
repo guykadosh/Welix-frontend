@@ -7,7 +7,7 @@
     right: 15px;
     padding: 20px;
     z-index: 200;
-    
+
     .plus-icon-mobile {
       font-size: 28px;
       background-color: #228be6;
@@ -66,38 +66,42 @@
   &-actions {
     border-bottom: solid 2px #f1f3f5;
     border-right: 1px solid $light-color3;
-    position: relative;
-    // transform: translateX(-100%);
-    // width: 0;
-
+    width: 0;
     overflow-y: hidden;
     overflow-x: hidden;
 
-    transition: all 0.3s;
     background-color: #fff;
 
 
-    // mobile 
+    // mobile
     position: absolute;
-    bottom: -300px;
+    bottom: 0;
+    // bottom: rem(-250px);
     left: 0;
-    z-index: 300;
+    z-index: 200;
     height: 0;
     width: 100vw;
-    
+    transition: all 0.3s;
+
+    @include for-medium-layout {
+      position: static;
+      height: initial;
+      width: 0;
+    }
+
     &.open-section {
-      min-width: 100vw;
-      height: 100%;
+      width: 100vw;
+      height: rem(400px);
+      transition: all 0.3s;
+
       @include for-medium-layout {
-        width: rem(500px);
+        width: rem(550px);
+        height: initial;
       }
     }
 
     &.open-edit {
       width: rem(325px);
-
-      @include for-medium-layout {
-      }
     }
 
     &__header {
@@ -121,9 +125,10 @@
       // padding: em(15px);
       // padding: 0;
       background-color: #f7f8f8;
-      // width: rem(150px);
+      // width: rem(250px);
 
       // justify-content: flex-start;
+
       display: none;
 
       @include for-medium-layout {
@@ -133,7 +138,7 @@
 
     &__label {
       // margin-block-end: rem(10px);
-      // width: 150px;
+      width: 200px;
 
       padding: rem(8px) em(10px);
       border-left: 4px solid transparent;
@@ -181,11 +186,31 @@
       padding-top: 0;
       width: 100%;
 
+      &-filter {
+        padding: em(8px) 0;
+        border-bottom: 1px solid $light-color3;
+        margin-block-end: rem(8px);
+
+        .select-filter {
+          width: 100%;
+        }
+
+        @include for-medium-layout {
+          display: none;
+        }
+      }
+
       &-title {
         padding: em(18px) 0;
         border-bottom: 1px solid $light-color3;
         margin-block-end: rem(14px);
         font-weight: 600;
+
+        display: none;
+
+        @include for-medium-layout {
+          display: flex;
+        }
       }
     }
 

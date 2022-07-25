@@ -12,9 +12,9 @@
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
-      <div class="select-options-filter">
-        <a-select ref="select" class="page-nav" :value="labels[0]" @select="showVal">
-          <a-select-option v-for="(label, idx) in labels" :key="label.id" :value="label.type">{{label.title}}</a-select-option>
+      <div class="tool-bar-actions__options-filter">
+        <a-select ref="select" class="select-filter" placeholder="All" @select="setSelectFilter">
+          <a-select-option v-for="(label, idx) in labels" :key="label.id" :value="idx">{{ label.title }}</a-select-option>
         </a-select>
       </div>
       <p class="tool-bar-actions__options-title">{{ title }}</p>
@@ -91,8 +91,9 @@ export default {
 
       this.$store.commit({ type: 'setFilter', filterBy })
     },
-    showVal(val) {
-      console.log(val)
+    setSelectFilter(idx) {
+      const { type } = this.labels[idx]
+      this.setFilter(type, idx)
     }
   },
   computed: {
