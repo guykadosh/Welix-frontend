@@ -16,11 +16,12 @@
       right: -30px;
       // padding: 20px;
       z-index: 200;
-      display: none;
-
+      // display: none;
+      transform: scale(0);
+      transition: transform 0.2s;
       &.open {
-        display: block;
-
+        // display: block;
+        transform: scale(100%);
         @include for-medium-layout {
           display: none;
         }
@@ -82,11 +83,9 @@
   }
 
   &-nav {
-
     display: none;
 
     @include for-medium-layout {
-
       display: flex;
       border-right: 1px solid $light-color3;
       padding: em(10px);
@@ -130,7 +129,6 @@
     overflow-x: hidden;
 
     background-color: #fff;
-
 
     // mobile
     position: absolute;
@@ -240,7 +238,6 @@
           // background-color: #74c1fc79;
           color: #228be6;
           // font-weight: 600;
-
         }
       }
     }
