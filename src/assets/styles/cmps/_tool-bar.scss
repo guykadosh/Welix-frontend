@@ -8,14 +8,12 @@
 
     .top,
     .bottom {
+     
       li {
         margin-block-end: em(28px);
         border-radius: 50%;
-        padding: em(8px);
+        padding: em(9px) em(10px) em(6px) em(10px);
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         &:hover {
           background-color: #74c1fc79;
@@ -29,8 +27,6 @@
           cursor: pointer;
           font-size: em(24px);
           color: rgb(63, 65, 60);
-
-
         }
       }
     }
