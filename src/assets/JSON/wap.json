@@ -1608,17 +1608,18 @@
         "style": {},
         "type": "wap-container",
         "classes": [
+          "design-plan-ideas",
           "design-container",
           "design-layout"
         ],
         "info": {
           "cmps": [
             {
-              "type": "wap-img",
+              "type": "wap-gallery",
               "info": {
-                "img": {
-                  "type": "img",
-                  "url": "https://i.ibb.co/sR5fBby/c.jpg",
+                "imgs": {
+                  "type": "imgs",
+                  "urls": "https://i.ibb.co/sR5fBby/c.jpg",
                   "style": {}
                 }
               },
@@ -1641,11 +1642,11 @@
               "style": {}
             },
             {
-              "type": "wap-img",
+              "type": "wap-gallery",
               "info": {
-                "img": {
-                  "type": "img",
-                  "url": "https://i.ibb.co/3NwVR7C/Interior-D3.jpg",
+                "imgs": {
+                  "type": "imgs",
+                  "urls": "https://i.ibb.co/3NwVR7C/Interior-D3.jpg",
                   "style": {}
                 }
               },
@@ -1673,8 +1674,10 @@
       {
         "id": "gbgt4444y42",
         "classes": [
-          "design-txt",
-          "design-layout"
+          "full",
+          "design-paragraph",
+          "design-layout",
+          "design-txt"
         ],
         "type": "wap-text",
         "info": {

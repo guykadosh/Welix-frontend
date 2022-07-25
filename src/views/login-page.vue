@@ -1,22 +1,26 @@
 <template>
-  <app-header class="main-layout"/>
+  <app-header class="main-layout" />
   <section class="login">
     <form @submit.prevent="login" class="login__form">
       <h2>Log in</h2>
-      <input v-model="credentials.username" placeholder="Username" autofocus/>
-      <input v-model="credentials.password" type="password" placeholder="Password" show-password />
+      <input v-model="credentials.username" placeholder="Username" autofocus />
+      <input
+        v-model="credentials.password"
+        type="password"
+        placeholder="Password"
+        show-password
+      />
       <button class="login__btn">
         <span>Login</span>
       </button>
-
-      <p @click="this.$router.push('/signup')">Don't have an account?</p>
     </form>
+    <p @click="this.$router.push('/signup')">Don't have an account?</p>
   </section>
 </template>
 <script>
 import { userService } from '../services/user.service.js'
-import appHeader from '../cmps/app/app-header.vue'
 import { notification } from 'ant-design-vue'
+import appHeader from '../cmps/app/app-header.vue'
 export default {
   name: 'login',
   data() {
@@ -42,6 +46,7 @@ export default {
       try {
         const credentials = JSON.parse(JSON.stringify(this.credentials))
         const user = await this.$store.dispatch({ type: 'login', credentials })
+
         if (user) {
           this.$router.push('/template')
           notification['success']({
@@ -58,6 +63,6 @@ export default {
   },
   components: {
     appHeader,
-  }
+  },
 }
 </script>
