@@ -529,6 +529,7 @@
         padding-inline-start: rem(15px);
         border: none;
         text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.567);
       }
 
       .btn-container {
@@ -543,7 +544,7 @@
           color: #3ae2d3;
           background-color: #5d21d1;
           border: 1px solid #3ae2d3;
-          text-transform: capitalize;
+          // text-transform: capitalize;
 
           .wap-details &:hover {
             background-color: #3ae2d3;

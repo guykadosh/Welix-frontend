@@ -9,7 +9,7 @@
 
     .mobile-tool-filter {
       padding: 80px;
-      background-color: #b60e4c;
+      background-color: #fefefe5e;
       border-radius: 50%;
       position: fixed;
       bottom: -35px;
@@ -19,9 +19,11 @@
       // display: none;
       transform: scale(0);
       transition: transform 0.2s;
+
       &.open {
         // display: block;
         transform: scale(100%);
+
         @include for-medium-layout {
           display: none;
         }
@@ -32,10 +34,10 @@
       }
 
       .mobile-icon {
-        font-size: 28px;
-        background-color: rgb(22, 20, 28);
-        color: $light-color;
-        // outline: 1px solid;
+        font-size: 21px;
+        background-color: rgb(246, 246, 246);
+        color: $dark-color1;
+        border: 1px solid;
         border-radius: 50%;
         padding: 5px 12px;
       }
@@ -44,8 +46,8 @@
         position: fixed;
         bottom: 43px;
         right: 132px;
-        font-size: 26px;
-        padding: 5px 14px;
+        font-size: 21px;
+        padding: 5px 12px;
       }
 
       .mobile-icon.pallete {
@@ -56,8 +58,9 @@
 
       .mobile-icon.edit {
         position: fixed;
-        bottom: 127px;
-        right: 37px;
+        bottom: 130px;
+        right: 44px;
+
       }
     }
 
@@ -69,11 +72,11 @@
 
       .plus-icon-mobile {
         font-size: 28px;
-        background-color: #230413;
+        background-color: $light-color;
         padding: 16px;
         border-radius: 50%;
-        color: $light-color;
-        outline: 1px solid $light-color;
+        color: $dark-color1;
+        border: 1px solid $dark-color;
       }
 
       @include for-medium-layout {

@@ -1,5 +1,5 @@
 <template>
-    <div class="map-container">
+    <div class="map-container" @click.stop="setEditable('map', 0)">
         <GMapMap class="map small" :center="cmp.info.center" :style="mapSize" :zoom="15" map-type-id="terrain"
             @mousedown.stop>
             <GMapCluster @mousedown.stop>
@@ -22,6 +22,17 @@ export default {
     created() {
         console.log('im map')
     },
+    methods: {
+        async setEditable(type, key, idx = null) {
+            
+            const el = { type, key, idx }
+            const cmp = JSON.parse(JSON.stringify(this.cmp))
+
+            this.$emit('picked', { cmp, el })
+
+            // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+        },
+    }
 }
 </script>
 
