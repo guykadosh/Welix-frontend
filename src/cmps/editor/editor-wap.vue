@@ -43,6 +43,8 @@ import wapReviewEdit from '../waps-edit/wap-review-edit.vue'
 import wapTextEdit from '../waps-edit/wap-text-edit.vue'
 import wapContactEdit from '../waps-edit/wap-contact-edit.vue'
 import wapMapEdit from '../waps-edit/wap-map-edit.vue'
+import { wapService } from '../../services/wap.service'
+import { notification } from 'ant-design-vue'
 
 export default {
   name: '',
@@ -60,11 +62,17 @@ export default {
   // },
   watch: {},
   methods: {
-    onDrop(dropRes) {
-      console.log('recieving')
-      let cmps = JSON.parse(JSON.stringify(this.wap.cmps))
-      cmps = applyDrag(cmps, dropRes)
-      this.$store.commit({ type: 'updateCmps', cmps })
+    async onDrop(dropRes) {
+      try {
+        console.log('recieving')
+        let cmps = JSON.parse(JSON.stringify(this.wap.cmps))
+        cmps = wapService.applyDrag(cmps, dropRes)
+        await this.$store.dispatch({ type: 'updateCmps', cmps })
+      } catch (err) {
+        notification['error']
+      }
+
+      // this.$store.commit({ type: 'updateCmps', cmps })
     },
     getChildPayload(idx) {
       return this.wap.cmps[idx]

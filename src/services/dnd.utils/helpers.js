@@ -10,7 +10,6 @@ export const applyDrag = (arr, dragResult) => {
 
   payload.id = utilService.makeId()
 
-  console.log(payload)
   if (removedIndex === null && addedIndex === null) return arr
   const result = [...arr]
   let itemToAdd = payload

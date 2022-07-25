@@ -1,7 +1,7 @@
-import { storageService } from './storage.service.js'
-import { httpService } from './http.service'
+// import { storageService } from './storage.service.js'
+// import gWaps from '@/assets/JSON/wap.json' assert { type: 'json' }
 import { utilService } from './util.service'
-import gWaps from '@/assets/JSON/wap.json' assert { type: 'json' }
+import { httpService } from './http.service'
 
 const KEY = 'wap_db'
 
@@ -16,51 +16,53 @@ export const wapService = {
   getCurrState,
   updateCmp,
   removeCmp,
+  applyDrag,
 }
 
-_createWaps()
+// _createWaps()
 
 async function query() {
-  return storageService.query(KEY)
-  // return await httpService.get('wap', query)
+  // return storageService.query(KEY)
+  return await httpService.get('wap', query)
 }
 
 async function getById(wapId) {
-  try {
-    const wap = await storageService.get(KEY, wapId)
-    return wap
-  } catch (err) {
-    console.log(err)
-    throw new Error('Cannot load wap')
-  }
-  // const wap = httpService.get(`wap/${wapId}`)
+  // try {
+  //   const wap = await storageService.get(KEY, wapId)
+  //   return wap
+  // } catch (err) {
+  //   console.log(err)
+  //   throw new Error('Cannot load wap')
+  // }
+  console.log(wapId)
+  return httpService.get(`wap/${wapId}`)
 }
 
 async function remove(wapId) {
-  return storageService.remove(KEY, wapId)
-  // httpService.delete(`wap/${wapId}`)
+  // return storageService.remove(KEY, wapId)
+  httpService.delete(`wap/${wapId}`)
 }
 
 async function save(wap) {
-  if (wap._id) return await storageService.put(KEY, wap)
-  return await storageService.post(KEY, wap)
+  // if (wap._id) return await storageService.put(KEY, wap)
+  // return await storageService.post(KEY, wap)
 
-  // if (wap._id) {
-  //   return httpService.put(`wap/${wap._id}`, wap)
-  // }
-  // return httpService.post('wap', wap)
+  if (wap._id) {
+    return httpService.put(`wap/${wap._id}`, wap)
+  }
+  return httpService.post('wap', wap)
 }
 
 async function updateCmp(wapId, cmp) {
   const body = { wapId, cmp }
-  return storageService.updateCmp(body)
-
-  // return httpService.put('wap/cmp/', wap)
+  console.log(body)
+  return httpService.put('wap/cmp', body)
+  // return storageService.updateCmp(body)
 }
 
 async function removeCmp(wapId, cmpId) {
-  return storageService.removeCmp(wapId, cmpId)
-  // return httpService.put(`wap/cmp/${wapId}`, cmpId)
+  // return storageService.removeCmp(wapId, cmpId)
+  return httpService.delete(`wap/cmp/${wapId}`, cmpId)
 }
 
 function saveToSession(wap) {
@@ -73,7 +75,6 @@ function getFromSession() {
 }
 
 function getCurrState(cmpToSave, wap, action) {
-  console.log(wap)
   let idx = wap.cmps.findIndex(cmp => cmp.id === cmpToSave.id)
 
   if (idx === -1) {
@@ -115,11 +116,34 @@ function getEmptyWap(createdBy, name) {
   }
 }
 
-function _createWaps() {
-  let waps = utilService.loadFromStorage(KEY)
-  if (!waps || !waps.length) {
-    waps = gWaps
-    utilService.saveToStorage(KEY, waps)
+function applyDrag(arr, dragResult) {
+  // console.log(arr, dragResult)
+  let { removedIndex, addedIndex, payload } = dragResult
+
+  payload = JSON.parse(JSON.stringify(payload))
+  delete payload._id
+  delete payload.id
+
+  payload.id = utilService.makeId()
+
+  if (removedIndex === null && addedIndex === null) return arr
+  const result = [...arr]
+  let itemToAdd = payload
+
+  if (removedIndex !== null) {
+    itemToAdd = result.splice(removedIndex, 1)[0]
   }
-  return waps
+  if (addedIndex !== null) {
+    result.splice(addedIndex, 0, itemToAdd)
+  }
+  return result
 }
+
+// function _createWaps() {
+//   let waps = utilService.loadFromStorage(KEY)
+//   if (!waps || !waps.length) {
+//     waps = gWaps
+//     utilService.saveToStorage(KEY, waps)
+//   }
+//   return waps
+// }

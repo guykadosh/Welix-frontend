@@ -12,7 +12,7 @@ export default {
   },
   getters: {
     getWaps({ waps }) {
-      return waps.filter(wap => wap.isPublic)
+      return waps
     },
     getCurrWap({ currWap }) {
       return currWap
@@ -86,7 +86,6 @@ export default {
       const { cmps } = state.currWap
       const prevAction = state.prevActions.pop()
 
-      console.log(prevAction)
       let idx = cmps.findIndex(cmp => cmp.id === prevAction.cmp.id)
 
       if (idx === -1) {
@@ -130,7 +129,7 @@ export default {
         // const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
         // wap.isPublished = isPublished
         // commit({ type: 'saveWapToUser', wap: savedWap })
-        // console.log(wap)
+
         const savedWap = await wapService.save(wap)
         commit({ type: 'saveWap', wap: savedWap })
 
@@ -139,13 +138,25 @@ export default {
         console.log(err)
       }
     },
+    updateCmps({ dispatch, getters, commit }, payload) {
+      try {
+        commit(payload)
+        const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
+        wap.cmps = payload.cmps
+
+        dispatch({ type: 'saveWap', wap })
+      } catch (err) {
+        console.log(err)
+        throw new Error('Coudnot add section')
+      }
+    },
     async updateCmp({ getters, commit }) {
       try {
         const wap = getters.getCurrWap
         const cmp = getters.cmpToEdit
 
         const prevState = wapService.getCurrState(cmp, wap, 'updated')
-        console.log(prevState)
+
         commit({ type: 'pushAction', prevState })
 
         const updatedCmp = await wapService.updateCmp(wap._id, cmp)
@@ -207,13 +218,11 @@ export default {
       }
     },
     async redo({ getters, dispatch, commit }) {
-      console.log(getters.nextActions)
       if (!getters.nextActions.length) return
 
       const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
       const { cmps } = wap
       const prevAction = getters.nextActions[getters.nextActions.length - 1]
-      console.log(prevAction)
 
       let idx
       if (prevAction.action === 'removed') {
@@ -231,7 +240,7 @@ export default {
       try {
         const { mainBgc, cmpBgc, color } = theme
         const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
-        console.log(wap)
+
         wap.style.backgroundColor = mainBgc
 
         wap.cmps.forEach(cmp => {

@@ -29,7 +29,9 @@ import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
 export default {
   name: 'wap-editor',
   data() {
-    return {}
+    return {
+      isSaved: false,
+    }
   },
   methods: {},
   computed: {
@@ -40,13 +42,45 @@ export default {
       return this.$store.getters.getCmps
     },
   },
-  created() {
-    if (!this.wap)
-      this.$store.commit({ type: 'setCurrWap', wap: wapService.getEmptyWap() })
-    console.log(this.wap)
+  async created() {
+    try {
+      const { wapId } = this.$route.params
+
+      console.log(wapId)
+      if (wapId) {
+        const wap = await wapService.getById(wapId)
+        console.log(wap)
+        this.$store.commit({
+          type: 'setCurrWap',
+          wap: wap,
+        })
+      } else {
+        if (!this.wap)
+          this.$store.commit({
+            type: 'setCurrWap',
+            wap: wapService.getEmptyWap(),
+          })
+      }
+    } catch (err) {}
   },
-  unmounted() {
-    wapService.saveToSession(this.wap)
+  beforeUnmount() {
+    if (!this.isSaved) {
+      // show confirm msg to discard changes 'unsaved changes will be discareded...'
+    }
+  },
+  async unmounted() {
+    // wapService.saveToSession(this.wap)
+    if (!isSaved && !this.wap.isSaved) {
+      try {
+        await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
+        this.$store.commit({
+          type: 'setCurrWap',
+          wap: wapService.getEmptyWap(),
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
   },
   components: {
     editorHeader,

@@ -26,7 +26,7 @@ const router = createRouter({
       component: wapDetails,
     },
     {
-      path: '/wap/editor',
+      path: '/wap/editor/:wapId?',
       name: 'wap-editor',
       component: wapEditor,
     },

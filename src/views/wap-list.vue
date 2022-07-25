@@ -43,16 +43,16 @@ export default {
       delete wapToEdit._id
 
       wapToEdit.isPublic = false
-      wapToEdit.isPublished = false
+      wapToEdit.isTemplate = false
       wapToEdit.name = ''
-      console.log(wapToEdit)
+
       const savedWap = await this.$store.dispatch({
         type: 'saveWap',
         wap: wapToEdit,
       })
-      console.log(savedWap)
+
       this.$store.commit({ type: 'setCurrWap', wap: savedWap })
-      this.$router.push('/wap/editor/')
+      this.$router.push(`/wap/editor/${savedWap._id}`)
     },
   },
 }
