@@ -1,6 +1,6 @@
 [
   {
-    "oldid": "5e28393890dd7201a06d4e4ghhhh4",
+    "_id": "5e28393890dd7201a06d4e4ghhhh4",
     "name": "betaa",
     "imgUrl": "https://i.ibb.co/kHCLLdn/v4951.png",
     "type": "Software",
@@ -47,7 +47,9 @@
             "id": "wc05",
             "type": "wap-nav",
             "style": {},
-            "classes": ["betaa-nav"],
+            "classes": [
+              "betaa-nav"
+            ],
             "info": {
               "links": [
                 {
@@ -83,7 +85,11 @@
       {
         "id": "gbfgg",
         "type": "wap-hero",
-        "classes": ["betaa-hero", "full", "betaa-layout"],
+        "classes": [
+          "betaa-hero",
+          "full",
+          "betaa-layout"
+        ],
         "info": {
           "heading": {
             "type": "txt",
@@ -186,7 +192,10 @@
       },
       {
         "id": "gbgty42",
-        "classes": ["betaa-txt", "betaa-layout"],
+        "classes": [
+          "betaa-txt",
+          "betaa-layout"
+        ],
         "type": "wap-text",
         "info": {
           "tag": {
@@ -210,12 +219,18 @@
       {
         "id": "mukjyu6584",
         "type": "wap-container",
-        "classes": ["betaa-container", "betaa-features", "betaa-layout"],
+        "classes": [
+          "betaa-container",
+          "betaa-features",
+          "betaa-layout"
+        ],
         "info": {
           "cmps": [
             {
               "id": "wc04gfbg21g",
-              "classes": ["betaa"],
+              "classes": [
+                "betaa"
+              ],
               "type": "wap-card",
               "info": {
                 "img": {
@@ -239,7 +254,10 @@
             },
             {
               "id": "wc04hjjhvcb55",
-              "classes": ["betaa", "betaa-layout"],
+              "classes": [
+                "betaa",
+                "betaa-layout"
+              ],
               "type": "wap-card",
               "info": {
                 "img": {
@@ -263,7 +281,10 @@
             },
             {
               "id": "mhn25212",
-              "classes": ["betaa", "betaa-layout"],
+              "classes": [
+                "betaa",
+                "betaa-layout"
+              ],
               "type": "wap-card",
               "info": {
                 "img": {
@@ -292,7 +313,11 @@
       },
       {
         "id": "wc0554njj",
-        "classes": ["betaa-contact", "full", "betaa-layout"],
+        "classes": [
+          "betaa-contact",
+          "full",
+          "betaa-layout"
+        ],
         "type": "wap-contact",
         "info": {
           "heading": {
@@ -326,7 +351,10 @@
       },
       {
         "id": "mfgnih987",
-        "classes": ["betaa-review", "betaa-layout"],
+        "classes": [
+          "betaa-review",
+          "betaa-layout"
+        ],
         "type": "wap-review",
         "info": {
           "img": {
@@ -354,7 +382,11 @@
       },
       {
         "id": "wc05jjjj4",
-        "classes": ["betaa-txt", "betaa-trial", "betaa-layout"],
+        "classes": [
+          "betaa-txt",
+          "betaa-trial",
+          "betaa-layout"
+        ],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -372,7 +404,11 @@
       },
       {
         "id": "sc599966",
-        "classes": ["betaa-footer", "full", "betaa-layout"],
+        "classes": [
+          "betaa-footer",
+          "full",
+          "betaa-layout"
+        ],
         "type": "wap-footer",
         "info": {
           "logoImg": {
@@ -383,7 +419,10 @@
           "row1": {
             "type": "txt",
             "txt": "Contact us",
-            "texts": ["2307 Beverley Rd, New York", "office@betaa.com"],
+            "texts": [
+              "2307 Beverley Rd, New York",
+              "office@betaa.com"
+            ],
             "style": {}
           },
           "row2": {
@@ -404,7 +443,7 @@
     "isPublic": true
   },
   {
-    "oldid": "5e28393890dd7201a06d4e55",
+    "_id": "5e28393890dd7201a06d4e55",
     "name": "Making a difference for food",
     "type": "Blog",
     "style": {},
@@ -434,7 +473,9 @@
       {
         "id": "wc02bg12g",
         "type": "wap-header",
-        "classes": ["making-diff-header"],
+        "classes": [
+          "making-diff-header"
+        ],
         "info": {
           "logoTxt": {
             "type": "txt",
@@ -444,7 +485,9 @@
           "nav": {
             "id": "wph01",
             "type": "wap-nav",
-            "classes": ["making-diff-nav"],
+            "classes": [
+              "making-diff-nav"
+            ],
             "info": {
               "links": [
                 {
@@ -487,7 +530,11 @@
       {
         "id": "wcdfvgfb01",
         "type": "wap-hero",
-        "classes": ["making-diff-hero", "full", "main-layout"],
+        "classes": [
+          "making-diff-hero",
+          "full",
+          "main-layout"
+        ],
         "info": {
           "heading": {
             "type": "txt",
@@ -500,12 +547,18 @@
       {
         "id": "wc03f15f252",
         "type": "wap-container",
-        "classes": ["making-diff-cards", "full"],
+        "classes": [
+          "making-diff-cards",
+          "full"
+        ],
         "info": {
           "cmps": [
             {
               "id": "wcc04",
-              "classes": ["making-diff-card", "about"],
+              "classes": [
+                "making-diff-card",
+                "about"
+              ],
               "type": "wap-card",
               "info": {
                 "tag": {
@@ -535,7 +588,9 @@
             },
             {
               "id": "wccfvc1205",
-              "classes": ["making-diff-card features"],
+              "classes": [
+                "making-diff-card features"
+              ],
               "type": "wap-card",
               "info": {
                 "tag": {
@@ -567,7 +622,9 @@
             },
             {
               "id": "wccg222206",
-              "classes": ["making-diff-card digital"],
+              "classes": [
+                "making-diff-card digital"
+              ],
               "type": "wap-card",
               "info": {
                 "tag": {
@@ -603,7 +660,9 @@
       },
       {
         "id": "wc05bggb5225",
-        "classes": ["making-diff-txt"],
+        "classes": [
+          "making-diff-txt"
+        ],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -621,7 +680,9 @@
       },
       {
         "id": "wc078hg545",
-        "classes": ["making-diff-gallery"],
+        "classes": [
+          "making-diff-gallery"
+        ],
         "type": "wap-gallery",
         "info": {
           "txt": "",
@@ -642,7 +703,10 @@
       },
       {
         "id": "wc055g524",
-        "classes": ["making-diff-contact", "full"],
+        "classes": [
+          "making-diff-contact",
+          "full"
+        ],
         "type": "wap-contact",
         "info": {
           "heading": {
@@ -679,7 +743,7 @@
     "isPublic": true
   },
   {
-    "oldid": "5e28393890dd7201a06d4e44",
+    "_id": "5e28393890dd7201a06d4e44",
     "name": "omnifood",
     "imgUrl": "https://i.ibb.co/7KPrFtX/nee.png",
     "type": "Healthy food",
@@ -726,7 +790,9 @@
             "id": "wc05321",
             "type": "wap-nav",
             "style": {},
-            "classes": ["omnifood-nav"],
+            "classes": [
+              "omnifood-nav"
+            ],
             "info": {
               "links": [
                 {
@@ -768,7 +834,11 @@
       {
         "id": "wc011525",
         "type": "wap-hero",
-        "classes": ["omnifood-hero", "full", "main-layout"],
+        "classes": [
+          "omnifood-hero",
+          "full",
+          "main-layout"
+        ],
         "info": {
           "heading": {
             "type": "txt",
@@ -804,7 +874,10 @@
       },
       {
         "id": "wc045678gfb",
-        "classes": ["omnifood-brand", "main-layout"],
+        "classes": [
+          "omnifood-brand",
+          "main-layout"
+        ],
         "type": "wap-gallery",
         "info": {
           "title": {
@@ -829,12 +902,16 @@
       {
         "id": "wc03bhgfh63",
         "type": "wap-container",
-        "classes": ["omnifood-meals"],
+        "classes": [
+          "omnifood-meals"
+        ],
         "info": {
           "cmps": [
             {
               "id": "bg622626",
-              "classes": ["omnifood-meal"],
+              "classes": [
+                "omnifood-meal"
+              ],
               "type": "wap-card",
               "info": {
                 "img": {
@@ -877,7 +954,9 @@
             },
             {
               "id": "wc0bgh124",
-              "classes": ["omnifood-meal"],
+              "classes": [
+                "omnifood-meal"
+              ],
               "style": {},
               "type": "wap-card",
               "info": {
@@ -915,7 +994,9 @@
             },
             {
               "id": "wc04dsvf145",
-              "classes": ["omnifood-meal-list"],
+              "classes": [
+                "omnifood-meal-list"
+              ],
               "type": "wap-list",
               "info": {
                 "heading": {
@@ -947,7 +1028,10 @@
       },
       {
         "id": "wc05b2525f",
-        "classes": ["omnifood-txt", "main-layout"],
+        "classes": [
+          "omnifood-txt",
+          "main-layout"
+        ],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -965,13 +1049,17 @@
       },
       {
         "id": "wc06d525g",
-        "classes": ["omnifood-reviews"],
+        "classes": [
+          "omnifood-reviews"
+        ],
         "type": "wap-container",
         "info": {
           "cmps": [
             {
               "id": "wc08",
-              "classes": ["omnifood-review"],
+              "classes": [
+                "omnifood-review"
+              ],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -994,7 +1082,9 @@
             },
             {
               "id": "wc01fv1625",
-              "classes": ["omnifood-review"],
+              "classes": [
+                "omnifood-review"
+              ],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -1017,7 +1107,9 @@
             },
             {
               "id": "wc01fdv527",
-              "classes": ["omnifood-review"],
+              "classes": [
+                "omnifood-review"
+              ],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -1040,7 +1132,9 @@
             },
             {
               "id": "wcfdc5018",
-              "classes": ["omnifood-review"],
+              "classes": [
+                "omnifood-review"
+              ],
               "type": "wap-review",
               "info": {
                 "img": {
@@ -1069,7 +1163,9 @@
       },
       {
         "id": "wc0784cff5",
-        "classes": ["omnifood-gallery"],
+        "classes": [
+          "omnifood-gallery"
+        ],
         "type": "wap-gallery",
         "info": {
           "imgs": {
@@ -1095,7 +1191,10 @@
       },
       {
         "id": "wcfd5v205",
-        "classes": ["omnifood-txt", "main-layout"],
+        "classes": [
+          "omnifood-txt",
+          "main-layout"
+        ],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -1114,12 +1213,16 @@
       {
         "id": "wcff0789",
         "type": "wap-container",
-        "classes": ["omnifood-pricing"],
+        "classes": [
+          "omnifood-pricing"
+        ],
         "info": {
           "cmps": [
             {
               "id": "wc695",
-              "classes": ["omnifood-pricing-starter"],
+              "classes": [
+                "omnifood-pricing-starter"
+              ],
               "type": "wap-card",
               "info": {
                 "heading": {
@@ -1168,7 +1271,9 @@
             },
             {
               "id": "wcfvfd6956",
-              "classes": ["omnifood-pricing-complete"],
+              "classes": [
+                "omnifood-pricing-complete"
+              ],
               "type": "wap-card",
               "info": {
                 "heading": {
@@ -1265,7 +1370,9 @@
       },
       {
         "id": "sc599ffd9",
-        "classes": ["omnifood-footer"],
+        "classes": [
+          "omnifood-footer"
+        ],
         "type": "wap-footer",
         "info": {
           "logoImg": {
@@ -1285,12 +1392,216 @@
           "row2": {
             "type": "txt",
             "txt": "Account",
-            "texts": ["Create account", "Sign in", "iOS app", "Android app"],
+            "texts": [
+              "Create account",
+              "Sign in",
+              "iOS app",
+              "Android app"
+            ],
             "style": {}
           },
           "copyright": {
             "type": "txt",
             "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
+            "style": {}
+          }
+        },
+        "style": {}
+      }
+    ],
+    "isPublic": true
+  },
+  {
+    "_id": "5e28393890dgggggg34ghhhh4",
+    "name": "design",
+    "imgUrl": "https://i.ibb.co/fN9VYz4/2022-07-232724.png",
+    "type": "Design",
+    "style": {},
+    "createdBy": {
+      "_id": "5e26e0b718a0891d4c995bgfhgvv34",
+      "fullname": "yuval sf",
+      "imgUrl": "img.jpg"
+    },
+    "usersData": {
+      "contacts": [
+        {
+          "email": "user@user.com",
+          "msg": "Please send me stuff",
+          "at": 123
+        }
+      ],
+      "signups": [
+        {
+          "email": "user@user.com",
+          "at": 123
+        }
+      ]
+    },
+    "theme": "vivid",
+    "cmps": [
+      {
+        "id": "fhnddgh1",
+        "type": "wap-header",
+        "classes": [
+          "design-header",
+          "flex",
+          "justify-between",
+          "full",
+          "design-layout"
+        ],
+        "info": {
+          "logoTxt": {
+            "type": "txt",
+            "txt": "DESIGN",
+            "style": {}
+          },
+          "nav": {
+            "id": "wc057152444",
+            "type": "wap-nav",
+            "style": {},
+            "classes": [
+              "design-nav"
+            ],
+            "info": {
+              "links": [
+                {
+                  "type": "txt",
+                  "txt": "About us",
+                  "link": "#aboutUs",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Blog",
+                  "link": "#blog",
+                  "style": {}
+                },
+                {
+                  "type": "txt",
+                  "txt": "Contact us",
+                  "link": "#contactUs",
+                  "style": {}
+                }
+              ]
+            }
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "gbf557gg",
+        "type": "wap-hero",
+        "classes": [
+          "design-hero",
+          "full",
+          "design-layout"
+        ],
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "Thai Style Home Wabi Sabi",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "The home is surrounded by a landscaped garden and there are lots of different neighbours in the area.  The average home is created for a single family.",
+            "style": {}
+          },
+          "imgs": {
+            "type": "imgs",
+            "urls": [
+              "https://i.ibb.co/20JbB9d/09197.jpg",
+              "https://i.ibb.co/wCWd2pR/94.jpg",
+              "https://i.ibb.co/s33JMxw/78689472ffa6.jpg",
+              "https://i.ibb.co/MDK0v6q/03.jpg"
+            ]
+          }
+        },
+        "style": {}
+      },
+      {
+        "id": "jjyugbgvh",
+        "style": {},
+        "type": "wap-container",
+        "classes": [
+          "design-container",
+          "design-layout"
+        ],
+        "info": {
+          "cmps": [
+            {
+              "type": "wap-img",
+              "info": {
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/sR5fBby/c.jpg",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "type": "wap-txt",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Design ideas",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "The average home is created for a single family. If you think that buying a home in Pattaya is perhaps more your style, speak to us to learn more about....",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "type": "wap-img",
+              "info": {
+                "img": {
+                  "type": "img",
+                  "url": "https://i.ibb.co/3NwVR7C/Interior-D3.jpg",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "type": "wap-txt",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "House Plans",
+                  "style": {}
+                },
+                "subHeading": {
+                  "type": "txt",
+                  "txt": "Walking Street Hotels If you’re searching for a guest friendly hotel you’ll discover that virtually every one of the hotels, guesthouses and apartments near...",
+                  "style": {}
+                }
+              },
+              "style": {}
+            }
+          ]
+        }
+      },
+      {
+        "id": "gbgty42",
+        "classes": [
+          "design-txt",
+          "design-layout"
+        ],
+        "type": "wap-text",
+        "info": {
+          "heading": {
+            "type": "txt",
+            "txt": "New ideas to life",
+            "style": {}
+          },
+          "subHeading": {
+            "type": "txt",
+            "txt": "Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.",
             "style": {}
           }
         },

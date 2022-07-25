@@ -5,13 +5,13 @@
         <template #title>
           <span>Duplicate</span>
         </template>
-        <copy-outlined />
+        <font-awesome-icon icon="fa-light fa-copy" />
       </a-tooltip>
       <a-tooltip class="tool" @click="removeCmp" placement="top">
         <template #title>
           <span>Delete</span>
         </template>
-        <delete-outlined />
+        <font-awesome-icon icon="fa-light fa-trash" />
       </a-tooltip>
     </div>
 
