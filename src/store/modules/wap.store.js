@@ -55,8 +55,9 @@ export default {
       if (idx) state.currWap.cmps.splice(idx, 0, cmp)
       else state.currWap.cmps.push(cmp)
     },
-    updateCmp(state, { idx }) {
-      const cmp = state.cmpToEdit
+    updateCmp(state, { cmp }) {
+      // const cmp = state.cmpToEdit
+      const idx = state.currWap.cmps.findIndex(currCmp => currCmp.id === cmp.id)
       state.currWap.cmps.splice(idx, 1, cmp)
     },
     pushAction(state, { prevState }) {
@@ -141,15 +142,14 @@ export default {
     async updateCmp({ getters, commit }) {
       try {
         const wap = getters.getCurrWap
-        console.log(wap)
         const cmp = getters.cmpToEdit
 
         const prevState = wapService.getCurrState(cmp, wap, 'updated')
-
-        commit({ type: 'updateCmp', idx: prevState.idx })
+        console.log(prevState)
         commit({ type: 'pushAction', prevState })
 
         const updatedCmp = await wapService.updateCmp(wap._id, cmp)
+        commit({ type: 'updateCmp', cmp: updatedCmp })
       } catch (err) {
         console.log(err)
         throw new Error('Could not update section')

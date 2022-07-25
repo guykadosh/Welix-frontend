@@ -16,6 +16,7 @@
         :is="cmp.type + '-edit'"
         :cmp="cmp"
         @click.stop
+        @picked="emitPicked"
       ></component>
     </div>
     <!-- </Draggable>
@@ -64,14 +65,18 @@ export default {
       return this.items[idx]
     },
     setEditable(type, key, idx = null) {
-      eventBus.emit('open-edit')
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
-      this.$store.commit({ type: 'setElToEdit', el })
-      this.$store.commit({ type: 'setCmpToEdit', cmp })
+      this.$emit('picked', { cmp, el })
+      // eventBus.emit('open-edit')
+      // this.$store.commit({ type: 'setElToEdit', el })
+      // this.$store.commit({ type: 'setCmpToEdit', cmp })
 
       // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
+    emitPicked(ev) {
+      this.$emit('picked', ev)
     },
   },
   computed: {

@@ -50,16 +50,19 @@ export default {
         newCmp.info[ref][idx].txt = this.$refs[itemRef][0].innerText
       }
 
-      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
-      this.$store.commit({ type: 'updateCmp', newCmp })
+      this.$emit('changedTxt', newCmp)
+
+      // this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
+      // this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
       eventBus.emit('open-edit')
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
-      this.$store.commit({ type: 'setElToEdit', el })
-      this.$store.commit({ type: 'setCmpToEdit', cmp })
+      this.$emit('picked', { cmp, el })
+      // this.$store.commit({ type: 'setElToEdit', el })
+      // this.$store.commit({ type: 'setCmpToEdit', cmp })
     },
   },
   computed: {

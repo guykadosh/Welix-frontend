@@ -84,11 +84,13 @@ function getCurrState(cmpToSave, wap, action) {
       return { idx, cmp: wap.cmps[idx], action }
     } else {
       // find the the container
-      idx = wap.cmps
+      const wapContainer = wap.cmps
         .filter(cmp => cmp.type === 'wap-container')
         .find(cmp => cmp.info.cmps.some(cmp => cmp.id === cmpToSave.id))
 
-      return { idx, cmp: wap.cmps[idx], action }
+      idx = wap.cmps.findIndex(cmp => cmp.id === wapContainer.id)
+
+      return { idx, cmp: wapContainer, action }
     }
   }
 

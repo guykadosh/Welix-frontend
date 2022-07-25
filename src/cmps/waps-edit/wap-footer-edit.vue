@@ -1,5 +1,10 @@
 <template>
-  <section v-if="cmp" class="wap-footer" :class="cmp.classes" :style="cmp.style">
+  <section
+    v-if="cmp"
+    class="wap-footer"
+    :class="cmp.classes"
+    :style="cmp.style"
+  >
     <div class="footer-inner">
       <div v-if="info.logoImg" class="logo-box" :style="info.logoImg.style">
         <img class="logo" :src="info.logoImg.url" />
@@ -8,19 +13,42 @@
         <h2 contenteditable="true">{{ info.logoTxt.txt }}</h2>
       </div>
       <div class="row">
-        <h3 contenteditable="true" @mousedown.stop @click.stop="setEditable(info.row1.type, 'txt')"
-          @input="changeTxt('row1')" ref="row1" :style="info.row1.style">{{ info.row1.txt }}</h3>
+        <h3
+          contenteditable="true"
+          @mousedown.stop
+          @click.stop="setEditable(info.row1.type, 'row1')"
+          @input="changeTxt('row1')"
+          ref="row1"
+          :style="info.row1.style"
+        >
+          {{ info.row1.txt }}
+        </h3>
         <div class="flex flex-column"></div>
-        <p @mousedown.stop class="txt2" v-for="text in info.row1.texts" contenteditable="true">{{ text }}</p>
+        <p
+          @mousedown.stop
+          class="txt2"
+          v-for="text in info.row1.texts"
+          contenteditable="true"
+        >
+          {{ text }}
+        </p>
       </div>
       <div class="row">
         <h3 contenteditable="true" @mousedown.stop>{{ info.row2.txt }}</h3>
         <div class="flex flex-column"></div>
-        <p contenteditable="true" @mousedown.stop v-for="text in info.row2.texts">{{ text }}</p>
+        <p
+          contenteditable="true"
+          @mousedown.stop
+          v-for="text in info.row2.texts"
+        >
+          {{ text }}
+        </p>
       </div>
     </div>
 
-    <p contenteditable="true" @mousedown.stop class="coffee">{{ info.copyright.txt }}</p>
+    <p contenteditable="true" @mousedown.stop class="coffee">
+      {{ info.copyright.txt }}
+    </p>
   </section>
 </template>
 <script>
@@ -44,25 +72,26 @@ export default {
     },
   },
   methods: {
-    changeTxt(ref) {
+    changeTxt(ref, idx = null, itemRef) {
       const cmpToEdit = this.$store.getters.cmpToEdit || this.cmpToEdit
       const newCmp = JSON.parse(JSON.stringify(cmpToEdit))
 
-      newCmp.info[ref].txt = this.$refs[ref].innerText
-      this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
-      this.$store.commit({ type: 'updateCmp', newCmp })
+      if (idx === null) {
+        newCmp.info[ref].txt = this.$refs[ref].innerText
+      } else {
+        newCmp.info[ref].txt[idx].txt = this.$refs[itemRef].txt[0].innerText
+      }
+
+      this.$emit('changedTxt', newCmp)
     },
     setEditable(type, key, idx = null) {
-      eventBus.emit('open-edit')
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
-      this.$store.commit({ type: 'setElToEdit', el })
-      this.$store.commit({ type: 'setCmpToEdit', cmp })
-
-      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+      this.$emit('picked', { cmp, el })
+      // eventBus.emit('open-edit')
     },
-    setCmpEditable() { },
+    setCmpEditable() {},
   },
   created() {
     this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))

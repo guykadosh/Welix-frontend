@@ -20,7 +20,7 @@
             :is="cmp.type + '-edit'"
             :cmp="cmp"
             @changedTxt="changeTxt"
-            @updatedCmp="updateCmp"
+            @picked="setCmpToEdit"
           />
         </Draggable>
       </Container>
@@ -31,6 +31,7 @@
 <script>
 import { Container, Draggable } from 'vue3-smooth-dnd'
 import { applyDrag } from '@/services/dnd.utils/helpers.js'
+import { eventBus } from '../../services/event-bus.service'
 import wapHeaderEdit from '../waps-edit/wap-header-edit.vue'
 import wapHeroEdit from '../waps-edit/wap-hero-edit.vue'
 import wapGalleryEdit from '../waps-edit/wap-gallery-edit.vue'
@@ -42,7 +43,6 @@ import wapReviewEdit from '../waps-edit/wap-review-edit.vue'
 import wapTextEdit from '../waps-edit/wap-text-edit.vue'
 import wapContactEdit from '../waps-edit/wap-contact-edit.vue'
 import wapMapEdit from '../waps-edit/wap-map-edit.vue'
-import { eventBus } from '../../services/event-bus.service'
 
 export default {
   name: '',
@@ -84,8 +84,20 @@ export default {
     resize(size) {
       this.conMaxWidth = size
     },
-    changeTxt() {},
-    updateCmp() {},
+    async changeTxt(cmp) {
+      try {
+        this.$store.commit({ type: 'setCmpToEdit', cmp })
+        await this.$store.dispatch({ type: 'updateCmp' })
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    setCmpToEdit({ el, cmp }) {
+      console.log(el)
+      eventBus.emit('open-edit')
+      this.$store.commit({ type: 'setElToEdit', el })
+      this.$store.commit({ type: 'setCmpToEdit', cmp })
+    },
   },
   computed: {
     wrapper() {
