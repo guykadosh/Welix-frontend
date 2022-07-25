@@ -1,5 +1,5 @@
 <template>
-  <section v-if="cmp" class="wap-hero" :style="cmp.style" :class="cmp.classes" @click="setEditable('cmp')">
+  <section v-if="cmp" class="wap-hero" :style="cmp.style" :class="cmp.classes" @click.stop="setEditable('cmp')">
     <div class="hero-inner">
       <div class="text-box">
         <h1 @mousedown.stop v-if="info.heading" @click.stop="setEditable(info.heading.type, 'heading')"

@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     updateCmp({ style, link, url, urls }) {
+      debugger
       const { key, idx } = this.el
 
       const cmp = JSON.parse(JSON.stringify(this.cmp))
@@ -56,6 +57,7 @@ export default {
         cmp.style = style
       }
 
+      
       const newCmp = JSON.parse(JSON.stringify(cmp))
       this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
       this.$store.commit({ type: 'updateCmp', newCmp })

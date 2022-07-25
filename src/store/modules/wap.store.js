@@ -76,7 +76,6 @@ export default {
     },
     updateCmp(state) {
       const { cmps } = state.currWap
-
       let idx = cmps.findIndex(cmp => cmp.id === state.cmpToEdit.id)
 
       // -1 means the cmp lives inside a wap container
