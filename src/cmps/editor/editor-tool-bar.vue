@@ -18,8 +18,8 @@
     </section>
   </div>
   <div>
-    <a-modal v-model:visible="visible" :ok-button-props="{ display: none }">
-      <login />
+    <a-modal wrapClassName="login-form" v-model:visible="visible">
+      <login @login="login" @signup="signup" />
       <template #footer></template>
     </a-modal>
   </div>
@@ -96,24 +96,21 @@ export default {
       this.isOpen = true
     },
     async saveWap() {
-      if (!this.user) {
-        this.visible = true
-        notification['error']({
-          message: `Login first`,
-        })
-        // signup / login form
-      }
       if (!this.wap.name) {
-        // alert to user to enter a name with msg then return
         notification['error']({
           message: `Please pick a name to your website first`,
         })
-        eventBus.emit('name-focus')
+        this.$emit('nameFocus')
         return
       }
 
+      if (!this.user) {
+        this.visible = true
+        return
+      }
+      this.$emit('wapSaved')
+      // eventBus.emit('wapSaved')
       const wapToSave = JSON.parse(JSON.stringify(this.wap))
-      eventBus.emit('wapSaved')
       wapToSave.createdBy = {
         _id: this.user._id,
         fullname: this.user.fullname,
@@ -128,6 +125,41 @@ export default {
         message: `Site saved successfully`,
       })
       this.$router.push('/dashboard')
+    },
+    async login(credentials) {
+      try {
+        credentials = JSON.parse(JSON.stringify(credentials))
+        const user = await this.$store.dispatch({ type: 'login', credentials })
+
+        if (user) {
+          this.saveWap()
+          notification['success']({
+            message: `Welcome ${user.fullname}`,
+          })
+        }
+      } catch (err) {
+        console.log(err)
+        notification['error']({
+          message: `Wrong credentials`,
+        })
+      }
+    },
+    async signup(credentials) {
+      try {
+        const user = await this.$store.dispatch({ type: 'signup', credentials })
+
+        if (user) {
+          this.saveWap()
+          notification['success']({
+            message: `Welcome ${user.fullname}`,
+          })
+        }
+      } catch (err) {
+        console.log(err)
+        notification['error']({
+          message: `Cannot signup`,
+        })
+      }
     },
     publishWap() {
       // if(!this.user) signup / login form

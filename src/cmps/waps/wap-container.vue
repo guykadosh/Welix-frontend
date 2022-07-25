@@ -17,6 +17,8 @@ import wapCard from './wap-card.vue'
 import wapList from './wap-list.vue'
 import wapReview from './wap-review.vue'
 import wapText from './wap-text.vue'
+import wapGallery from './wap-gallery.vue'
+import wapMap from './wap-map.vue'
 
 export default {
   name: 'wap-container',
@@ -28,6 +30,8 @@ export default {
     wapList,
     wapReview,
     wapText,
+    wapGallery,
+    wapMap
   },
   computed: {
     info() {

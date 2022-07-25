@@ -1,8 +1,8 @@
 <template>
   <header class="main-header full">
-    <div class="flex justify-between items-center header__inner ">
+    <div class="flex justify-between items-center header__inner">
       <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2>
-      <div class="main-header-nav flex clean-list justify-between ">
+      <div class="main-header-nav flex clean-list justify-end">
         <router-link to="/template">Templates</router-link>
         <router-link to="/wap/editor/">Editor</router-link>
         <router-link v-if="!isUser" to="/login">Login</router-link>
@@ -19,7 +19,7 @@ export default {
   computed: {
     isUser() {
       return this.$store.getters.getUser
-    }
+    },
   },
   methods: {
     async logout() {
@@ -29,12 +29,11 @@ export default {
           message: 'Logged out successfully',
         })
       } catch (err) {
-         notification['warning']({
+        notification['warning']({
           message: `Oops, something went wrong`,
         })
       }
-    }
-  }
+    },
+  },
 }
 </script>
-

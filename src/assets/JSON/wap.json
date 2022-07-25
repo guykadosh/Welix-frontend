@@ -1531,7 +1531,7 @@
             {
               "id": "dgvf15615",
               "classes": [
-                "design-priject-card"
+                "design-project-card"
               ],
               "type": "wap-card",
               "info": {
@@ -1555,7 +1555,7 @@
             {
               "id": "dgvf11115615",
               "classes": [
-                "design-priject-card"
+                "design-project-card"
               ],
               "type": "wap-card",
               "info": {
@@ -1579,7 +1579,7 @@
             {
               "id": "dgvf11115615",
               "classes": [
-                "design-priject-card"
+                "design-project-card"
               ],
               "type": "wap-card",
               "info": {
@@ -1619,14 +1619,16 @@
               "info": {
                 "imgs": {
                   "type": "imgs",
-                  "urls": "https://i.ibb.co/sR5fBby/c.jpg",
+                  "urls": [
+                    "https://i.ibb.co/sR5fBby/c.jpg"
+                  ],
                   "style": {}
                 }
               },
               "style": {}
             },
             {
-              "type": "wap-txt",
+              "type": "wap-text",
               "info": {
                 "heading": {
                   "type": "txt",
@@ -1646,14 +1648,16 @@
               "info": {
                 "imgs": {
                   "type": "imgs",
-                  "urls": "https://i.ibb.co/3NwVR7C/Interior-D3.jpg",
+                  "urls": [
+                    "https://i.ibb.co/3NwVR7C/Interior-D3.jpg"
+                  ],
                   "style": {}
                 }
               },
               "style": {}
             },
             {
-              "type": "wap-txt",
+              "type": "wap-text",
               "info": {
                 "heading": {
                   "type": "txt",
@@ -1772,7 +1776,7 @@
             {
               "id": "dgvf15615",
               "classes": [
-                "design-priject-card"
+                "design-project-card"
               ],
               "type": "wap-card",
               "info": {
@@ -1792,85 +1796,86 @@
                   "style": {}
                 }
               }
+            }
+          ]
+        }
+      },
+      {
+        "id": "ghgbvf5225",
+        "style": {},
+        "type": "wap-container",
+        "classes": [
+          "design-container",
+          "design-layout"
+        ],
+        "info": {
+          "cmps": [
+            {
+              "map": {
+                "id": "wpmff02225",
+                "classes": [
+                  "wap-map"
+                ],
+                "type": "wap-map",
+                "info": {
+                  "markers": [
+                    {
+                      "position": {
+                        "lat": 31.8102,
+                        "lng": 34.6566
+                      },
+                      "name": "Ashdod",
+                      "_id": "m101"
+                    }
+                  ],
+                  "center": {
+                    "lat": 31.8102,
+                    "lng": 34.6566
+                  }
+                }
+              }
             },
             {
-              "id": "ghgbvf5225",
-              "style": {},
-              "type": "wap-container",
+              "id": "wc0ff554njj",
               "classes": [
-                "design-container",
+                "design-contact",
                 "design-layout"
               ],
+              "type": "wap-contact",
               "info": {
-                "cmps": [
-                  {
-                    "map": {
-                      "id": "wpmff02225",
-                      "classes": [
-                        "wap-map"
-                      ],
-                      "type": "wap-map",
-                      "info": {
-                        "markers": [
-                          {
-                            "position": {
-                              "lat": 31.8102,
-                              "lng": 34.6566
-                            },
-                            "name": "Ashdod",
-                            "_id": "m101"
-                          }
-                        ],
-                        "center": {
-                          "lat": 31.8102,
-                          "lng": 34.6566
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "id": "wc0ff554njj",
-                    "classes": [
-                      "design-contact",
-                      "design-layout"
-                    ],
-                    "type": "wap-contact",
-                    "info": {
-                      "heading": {
-                        "type": "txt",
-                        "txt": "Contact us",
-                        "style": {}
-                      },
-                      "form": {
-                        "type": "form",
-                        "inputs": [
-                          {
-                            "type": "text",
-                            "placeholder": "name"
-                          },
-                          {
-                            "type": "email",
-                            "placeholder": "email"
-                          }
-                        ],
-                        "textarea": {
-                          "placeholder": "Message"
-                        },
-                        "btn": {
-                          "type": "submit",
-                          "txt": "submit"
-                        },
-                        "style": {}
-                      }
+                "heading": {
+                  "type": "txt",
+                  "txt": "Contact us",
+                  "style": {}
+                },
+                "form": {
+                  "type": "form",
+                  "inputs": [
+                    {
+                      "type": "text",
+                      "placeholder": "name"
                     },
-                    "style": {}
-                  }
-                ]
-              }
+                    {
+                      "type": "email",
+                      "placeholder": "email"
+                    }
+                  ],
+                  "textarea": {
+                    "placeholder": "Message"
+                  },
+                  "btn": {
+                    "type": "submit",
+                    "txt": "submit"
+                  },
+                  "style": {}
+                }
+              },
+              "style": {}
             }
           ]
         }
       }
+
     ],
     "isPublic": true
   }

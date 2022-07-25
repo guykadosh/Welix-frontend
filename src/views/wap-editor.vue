@@ -3,7 +3,7 @@
     <editor-header />
     <editor-nav />
     <section class="editor-main flex">
-      <editor-tool-bar v-if="wap" :cmps="cmps" />
+      <editor-tool-bar v-if="wap" :cmps="cmps" @wapSaved="wapSaved" />
       <editor-wap :wap="wap" v-if="wap" />
     </section>
   </section>
@@ -38,6 +38,7 @@ export default {
   },
   methods: {
     wapSaved() {
+      console.log('Hi?')
       this.isSaved = true
       console.log(this.isSaved)
     },
@@ -89,6 +90,8 @@ export default {
         },
         class: 'test',
       })
+    } else {
+      next()
     }
   },
   beforeUnmount() {
@@ -97,19 +100,19 @@ export default {
     }
   },
   async unmounted() {
-    // wapService.saveToSession(this.wap)
-    // if (!this.isSaved && !this.wap.isSaved) {
-    //   try {
-    //     console.log('hi?')
-    //     await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
-    //     this.$store.commit({
-    //       type: 'setCurrWap',
-    //       wap: wapService.getEmptyWap(),
-    //     })
-    //   } catch (err) {
-    //     console.log(err)
-    //   }
-    // }
+    wapService.saveToSession(this.wap)
+    if (!this.isSaved && !this.wap.isSaved) {
+      try {
+        console.log('hi?')
+        await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
+        this.$store.commit({
+          type: 'setCurrWap',
+          wap: wapService.getEmptyWap(),
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
   },
   components: {
     editorHeader,
