@@ -2,8 +2,7 @@
   <section class="flex sections">
     <div class="tool-bar-actions__labels flex flex-column">
       <div class="tool-bar-actions__label flex items-center" v-for="(label, idx) in labels" :key="label.id"
-      :class="{ selected: label.selected }"
-      >
+        :class="{ selected: label.selected }">
         <span class="tool-bar-actions__label-text" :class="{ selected: label.selected }"
           @click="setFilter(label.type, idx)">
           {{ label.title }}
@@ -13,6 +12,11 @@
     </div>
 
     <div class="tool-bar-actions__options flex flex-column">
+      <div class="select-options-filter">
+        <a-select ref="select" class="page-nav" :value="labels[0]" @select="showVal">
+          <a-select-option v-for="(label, idx) in labels" :key="label.id" :value="label.type">{{label.title}}</a-select-option>
+        </a-select>
+      </div>
       <p class="tool-bar-actions__options-title">{{ title }}</p>
       <Container :get-child-payload="getChildPayload" group-name="1" behaviour="copy">
         <Draggable v-for="cmp in cmps" :key="cmp.id">
@@ -87,6 +91,9 @@ export default {
 
       this.$store.commit({ type: 'setFilter', filterBy })
     },
+    showVal(val) {
+      console.log(val)
+    }
   },
   computed: {
     title() {

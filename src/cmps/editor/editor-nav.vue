@@ -12,14 +12,7 @@
       </a-tooltip>
     </div>
 
-    <div class="editor-nav-select">
-      <a-select ref="select" class="page-nav" value="1">
-        <a-select-option value="1">Page: How it works</a-select-option>
-        <a-select-option value="2">Page: Meals</a-select-option>
-        <a-select-option value="3">Page: Reviews</a-select-option>
-        <a-select-option value="4">Page :Pricing</a-select-option>
-      </a-select>
-    </div>
+    
     <div class="editor-nav-view-port flex items-center">
       <a-tooltip @click="resize(1700)" placement="bottom">
         <template #title>
