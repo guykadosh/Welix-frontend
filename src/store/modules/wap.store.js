@@ -50,7 +50,7 @@ export default {
     saveWap(state, { wap }) {
       const idx = state.waps.findIndex(currWap => currWap._id === wap._id)
       if (idx !== -1) state.waps.splice(idx, 1, wap)
-      else state.waps.push(wap)
+      // else state.waps.push(wap)
     },
     changeWapName(state, { name }) {
       state.currWap.name = name
@@ -136,6 +136,7 @@ export default {
         // commit({ type: 'saveWapToUser', wap: savedWap })
 
         const savedWap = await wapService.save(wap)
+        console.log(savedWap)
         commit({ type: 'saveWap', wap: savedWap })
 
         return savedWap

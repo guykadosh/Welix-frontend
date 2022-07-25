@@ -88,7 +88,7 @@ export default {
         notification['error']({
           message: `Login first`,
         })
-        return // signup / login form
+        // signup / login form
       }
       if (!this.wap.name) {
         // alert to user to enter a name with msg then return
@@ -100,16 +100,17 @@ export default {
       }
 
       const wapToSave = JSON.parse(JSON.stringify(this.wap))
+      eventBus.emit('wapSaved')
       wapToSave.createdBy = {
         _id: this.user._id,
         fullname: this.user.fullname,
       }
-
+      wapToSave.isSaved = true
       wapToSave.leads = []
+
       console.log(wapToSave)
       await this.$store.dispatch({ type: 'saveWap', wap: wapToSave })
 
-      eventBus.emit('wapSaved')
       notification['success']({
         message: `Site saved successfully`,
       })

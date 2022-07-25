@@ -13,9 +13,8 @@
       <button class="login__btn">
         <span>Login</span>
       </button>
-
-      <p @click="this.$router.push('/signup')">Don't have an account?</p>
     </form>
+    <p @click="this.$router.push('/signup')">Don't have an account?</p>
   </section>
 </template>
 <script>

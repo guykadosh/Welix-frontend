@@ -3,8 +3,8 @@ import home from '../views/home.vue'
 import wapList from '../views/wap-list.vue'
 import wapDetails from '../views/wap-details.vue'
 import wapEditor from '../views/wap-editor.vue'
-import login from '../views/login.vue'
-import signup from '../views/signup.vue'
+import loginPage from '../views/login-page.vue'
+import signupPage from '../views/signup-page.vue'
 import dashboard from '../views/dashboard.vue'
 
 const router = createRouter({
@@ -33,12 +33,12 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: login,
+      component: loginPage,
     },
     {
       path: '/signup',
       name: 'signup',
-      component: signup,
+      component: signupPage,
     },
     {
       path: '/dashboard',

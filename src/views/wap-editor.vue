@@ -25,8 +25,10 @@ import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
 import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
 import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
 import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
+import { createVNode } from 'vue'
 import { eventBus } from '../services/event-bus.service.js'
-
+import { Modal } from 'ant-design-vue'
+import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
 export default {
   name: 'wap-editor',
   data() {
@@ -37,6 +39,7 @@ export default {
   methods: {
     wapSaved() {
       this.isSaved = true
+      console.log(this.isSaved)
     },
   },
   computed: {
@@ -70,14 +73,22 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     if (!this.isSaved) {
-      const answer = window.confirm(
-        'Do you really want to leave? you have unsaved changes!'
-      )
-      if (answer) {
-        next()
-      } else {
-        next(false)
-      }
+      Modal.confirm({
+        title: 'Are you sure you want to leave?',
+        icon: createVNode(ExclamationCircleOutlined),
+        content: createVNode(
+          'div',
+          { style: 'color:red;' },
+          'Unsaved changes will be discarded'
+        ),
+        onOk() {
+          next()
+        },
+        onCancel() {
+          next(false)
+        },
+        class: 'test',
+      })
     }
   },
   beforeUnmount() {
@@ -87,18 +98,18 @@ export default {
   },
   async unmounted() {
     // wapService.saveToSession(this.wap)
-    if (!this.isSaved) {
-      try {
-        console.log('hi?')
-        await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
-        this.$store.commit({
-          type: 'setCurrWap',
-          wap: wapService.getEmptyWap(),
-        })
-      } catch (err) {
-        console.log(err)
-      }
-    }
+    // if (!this.isSaved && !this.wap.isSaved) {
+    //   try {
+    //     console.log('hi?')
+    //     await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
+    //     this.$store.commit({
+    //       type: 'setCurrWap',
+    //       wap: wapService.getEmptyWap(),
+    //     })
+    //   } catch (err) {
+    //     console.log(err)
+    //   }
+    // }
   },
   components: {
     editorHeader,
@@ -115,6 +126,7 @@ export default {
     wapContainerEdit,
     wapContactEdit,
     wapMapEdit,
+    ExclamationCircleOutlined,
   },
 }
 </script>
