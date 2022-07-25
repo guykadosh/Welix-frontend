@@ -89,17 +89,18 @@ async function updateCmp({ wapId, cmp }) {
     const wap = await get('wap_db', wapId)
 
     let idx = wap.cmps.findIndex(currCmp => currCmp.id === cmp.id)
-    console.log(idx)
+
     // -1 means the cmp lives inside a wap container
     if (idx === -1) {
-      console.log('Hi?')
       // wap-nav is inside header if not stand alone
       if (cmp.type === 'wap-nav') {
+        console.log('Hi?')
         const wapHeader = wap.cmps.find(
           currCmp => currCmp.type === 'wap-header'
         )
         wapHeader.info.nav = cmp
         idx = wap.cmps.findIndex(cmp => cmp.id === wapHeader.id)
+        console.log(idx)
         cmp = wapHeader
       } else {
         // find the the container
