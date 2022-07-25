@@ -14,7 +14,7 @@ export default {
     }
   },
   async created() {
-    this.$store.dispatch({ type: 'loadWaps' })
+    this.$store.dispatch({ type: 'loadWaps', filterBy: { isTemplate: true } })
     this.$store.dispatch({ type: 'loadCmps' })
     const user = userService.getLoggedInUser()
     if (user) this.$store.commit({ type: 'setUser', user })

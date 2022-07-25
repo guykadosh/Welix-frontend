@@ -21,9 +21,9 @@ export const wapService = {
 
 // _createWaps()
 
-async function query() {
+async function query(filterBy) {
   // return storageService.query(KEY)
-  return await httpService.get('wap', query)
+  return await httpService.get('wap', filterBy)
 }
 
 async function getById(wapId) {

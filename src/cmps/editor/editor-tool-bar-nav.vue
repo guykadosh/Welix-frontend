@@ -5,7 +5,10 @@
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
       <ul class="clean-list">
-        <li @click="setTool('section')" :class="{ active: activeTool === 'section' && isToolOpen }">
+        <li
+          @click="setTool('section')"
+          :class="{ active: activeTool === 'section' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Add Section</span>
@@ -15,7 +18,10 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click="setTool('theme')" :class="{ active: activeTool === 'theme' && isToolOpen }">
+        <li
+          @click="setTool('theme')"
+          :class="{ active: activeTool === 'theme' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Themes</span>
@@ -25,13 +31,19 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click="setTool('edit')" :class="{ active: activeTool === 'edit' && isToolOpen }">
+        <li
+          @click="setTool('edit')"
+          :class="{ active: activeTool === 'edit' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Edit</span>
             </template>
             <div>
-              <font-awesome-icon icon="fa-light fa-pen-to-square" class="icon" />
+              <font-awesome-icon
+                icon="fa-light fa-pen-to-square"
+                class="icon"
+              />
             </div>
           </a-tooltip>
         </li>
@@ -46,6 +58,26 @@
             </template>
             <div>
               <font-awesome-icon icon="fa-light fa-floppy-disk" class="icon" />
+            </div>
+          </a-tooltip>
+        </li>
+        <li>
+          <a-tooltip placement="right">
+            <template #title>
+              <span>Work together</span>
+            </template>
+            <div>
+              <font-awesome-icon icon="fa-light fa-people-group" class="icon" />
+            </div>
+          </a-tooltip>
+        </li>
+        <li>
+          <a-tooltip placement="right">
+            <template #title>
+              <span>Publish site</span>
+            </template>
+            <div>
+              <font-awesome-icon class="icon" icon="fa-light fa-airplay" />
             </div>
           </a-tooltip>
         </li>
@@ -97,5 +129,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>
