@@ -1,6 +1,7 @@
 <template>
   <section class="home-page">
-    <div class="top-wrapper">
+    <!-- <div class="bg-cover"></div> -->
+    <div class="top-wrapper full main-layout ">
       <app-header />
       <hero />
     </div>
