@@ -39,21 +39,21 @@
 // Oswald
 
 @font-face {
-  font-family: 'Oswald-regular';
+  font-family: Oswald-regular;
   src: url('@/assets/fonts/Oswald/Oswald-regular.ttf');
 }
 
 @font-face {
-  font-family: 'Oswald-bold';
+  font-family: Oswald-bold;
   src: url('@/assets/fonts/Oswald/Oswald-bold.ttf');
 }
 
 @font-face {
-  font-family: 'Oswald-light';
+  font-family: Oswald-light;
   src: url('@/assets/fonts/Oswald/Oswald-light.ttf');
 }
 @font-face {
-  font-family: 'Oswald-extra-light';
+  font-family: Oswald-extra-light;
   src: url('@/assets/fonts/Oswald/Oswald-ExtraLight.ttf');
 }
 
@@ -90,4 +90,10 @@
 @font-face {
   font-family: NotoSans-light;
   src: url(@/assets/fonts/Noto_Sans/NotoSans-Light.ttf);
+}
+
+// Clarkson 
+@font-face {
+  font-family: clarkson;
+  src: url(@/assets/fonts/clarkson/ClarksonScript-Regular.otf);
 }
