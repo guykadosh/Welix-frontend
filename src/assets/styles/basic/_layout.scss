@@ -68,8 +68,9 @@
 
 .design-layout {
   display: grid;
+  background-color: #dddbd9;
+
   grid-template-columns:20px 1fr 20px;
-  background-color: aqua;
   >* {
     grid-column: 2;
   }
@@ -88,7 +89,6 @@
  */
   .wap-details & {
     @include for-small-layout {
-      background-color: rgb(219, 106, 54);
       grid-template-columns: 1fr 580px 1fr;
       >* {
         grid-column: 2;
@@ -96,23 +96,20 @@
     }
 
     @include for-medium-layout {
-      background-color: blueviolet;
       grid-template-columns: 1fr 820px 1fr;
     }
 
     @include for-narrow-layout {
-      background-color: rgb(111, 236, 107);
 
       grid-template-columns: 1fr 950px 1fr;
     }
 
     @include for-normal-layout {
-      background-color: rgb(236, 107, 180);
-      grid-template-columns: 1fr 1280px 1fr;
+      grid-template-columns: 1fr 1150px 1fr;
     }
 
     @include for-wide-layout {
-      background-color: #dddbd9;
+
       grid-template-columns: 1fr 1000px 1fr;
     }
   }
