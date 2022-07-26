@@ -5,6 +5,11 @@
     <section class="editor-main flex">
       <editor-tool-bar v-if="wap" :cmps="cmps" @wapSaved="wapSaved" />
       <editor-wap :wap="wap" v-if="wap" />
+      <div
+        v-for="pointer in pointers"
+        class="pointer"
+        :style="pointer.style"
+      ></div>
     </section>
   </section>
 </template>
@@ -25,7 +30,7 @@ import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
 import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
 import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
 import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
-import { createVNode } from 'vue'
+import { createVNode, h } from 'vue'
 import { eventBus } from '../services/event-bus.service.js'
 import { Modal } from 'ant-design-vue'
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
@@ -33,16 +38,40 @@ import {
   socketService,
   SOCKET_EMIT_SET_TOPIC,
   SOCKET_EVENT_CMP_UPDATED,
+  SOCKET_EVENT_WAP_UPDATED,
+  SOCKET_EVENT_CMP_REMOVED,
 } from '../services/socket.service.js'
+import { utilService } from '../services/util.service.js'
+// import { h } from 'vue'
+
 export default {
   name: 'wap-editor',
   data() {
     return {
       isSaved: false,
+      pointers: [],
     }
   },
   async created() {
+    document.addEventListener('mousemove', this.handleMouseMove)
     socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
+    socketService.on(SOCKET_EVENT_WAP_UPDATED, this.setCurrWap)
+    socketService.on(SOCKET_EVENT_CMP_REMOVED, this.removeCmp)
+    socketService.on('all_mouse_activity', pointer => {
+      const idx = this.pointers.findIndex(p => p.id === pointer.id)
+      if (idx === -1) {
+        pointer.style.backgroundColor = utilService.getRandomColor()
+        this.pointers.push(pointer)
+      } else {
+        pointer.style.backgroundColor = this.pointers[idx].style.backgroundColor
+        // pointer.style.backgroundColor = utilService.getRandomColor()
+        this.pointers[idx] = pointer
+      }
+      console.log(this.pointers)
+      // this.pointers[0] = { pos: data.pos }
+      // this.pointer =
+      // console.log(pointer)
+    })
     // eventBus.on('savedWap', this.wapSaved)
     try {
       const { wapId } = this.$route.params
@@ -64,16 +93,37 @@ export default {
       }
     } catch (err) {}
   },
-
+  // render() {
+  //   return h('div', {
+  //     class: 'pointer',
+  //     style: { height: '50px', width: '50px', backgroundColor: 'red' },
+  //   })
+  // },
   methods: {
     wapSaved() {
-      console.log('Hi?')
       this.isSaved = true
       console.log(this.isSaved)
     },
     updateCmp(cmp) {
       console.log(cmp)
       this.$store.commit({ type: 'updateCmp', cmp })
+    },
+    setCurrWap(wap) {
+      console.log('Hi')
+      console.log(wap)
+      this.$store.commit({ type: 'setCurrWap', wap })
+    },
+    removeCmp(cmpId) {
+      console.log(cmpId)
+      this.$store.commit({ type: 'removeCmp', cmpId })
+    },
+    handleMouseMove(ev) {
+      // console.log(ev.clientX, ev.clientY)
+      socketService.emit('mouse_activity', {
+        x: ev.clientX,
+        y: ev.clientY,
+        username: this.user?.username || 'guest',
+      })
     },
   },
   computed: {
@@ -82,6 +132,9 @@ export default {
     },
     cmps() {
       return this.$store.getters.getCmps
+    },
+    user() {
+      return this.$store.getters.getUser
     },
   },
   beforeRouteLeave(to, from, next) {
@@ -112,6 +165,7 @@ export default {
     }
   },
   async unmounted() {
+    document.removeEventListener('mousemove', this.handleMouseMove)
     wapService.saveToSession(this.wap)
     if (!this.isSaved && !this.wap.isSaved) {
       try {
@@ -146,4 +200,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.pointer {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+  z-index: 3;
+}
+</style>

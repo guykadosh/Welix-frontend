@@ -1,6 +1,5 @@
 <template>
   <nav class="editor-nav flex items-center">
-
     <div class="back">
       <a-tooltip placement="bottom">
         <router-link class="back-link" to="/template">
@@ -12,14 +11,17 @@
       </a-tooltip>
     </div>
 
-    
     <div class="editor-nav-view-port flex items-center">
       <a-tooltip @click="resize(1700)" placement="bottom">
         <template #title>
           <span>Switch to desktop</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-display" :class="{ active: viewMode === 1700 }" class="icon" />
+          <font-awesome-icon
+            icon="fa-light fa-display"
+            :class="{ active: viewMode === 1700 }"
+            class="icon"
+          />
         </div>
         <!-- <desktop-outlined class="icon" :class="{ active: viewMode === 1300 }" /> -->
       </a-tooltip>
@@ -28,7 +30,11 @@
           <span>Switch to tablet</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-tablet-screen" :class="{ active: viewMode === 800 }" class="icon" />
+          <font-awesome-icon
+            icon="fa-light fa-tablet-screen"
+            :class="{ active: viewMode === 800 }"
+            class="icon"
+          />
         </div>
         <!-- <tablet-outlined class="icon" :class="{ active: viewMode === 800 }" /> -->
       </a-tooltip>
@@ -37,7 +43,11 @@
           <span>Switch to mobile</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-mobile" :class="{ active: viewMode === 420 }" class="icon" />
+          <font-awesome-icon
+            icon="fa-light fa-mobile"
+            :class="{ active: viewMode === 420 }"
+            class="icon"
+          />
         </div>
         <!-- <mobile-outlined class="icon" :class="{ active: viewMode === 420 }" /> -->
       </a-tooltip>
@@ -46,8 +56,17 @@
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
         <font-awesome-icon icon="fa-light fa-lock" class="icon" />
-        <span class="http">https:</span><span>//welix.herokuapp.com/
-          <span class="my-site" contenteditable="true" @input="debouceName" ref="wapName">{{ siteName }}</span></span>
+        <span class="http">https:</span
+        ><span
+          >//welix.herokuapp.com/
+          <span
+            class="my-site"
+            contenteditable="true"
+            @input="debouceName"
+            ref="wapName"
+            >{{ siteName }}</span
+          ></span
+        >
       </div>
     </div>
 
@@ -57,7 +76,10 @@
           <span>Undo</span>
         </template>
         <div>
-          <font-awesome-icon icon="fa-light fa-share fa-flip-horizontal" class="icon fa-flip-horizontal" />
+          <font-awesome-icon
+            icon="fa-light fa-share fa-flip-horizontal"
+            class="icon fa-flip-horizontal"
+          />
         </div>
       </a-tooltip>
       <a-tooltip @click="redo" placement="bottom">
@@ -116,28 +138,28 @@ export default {
       eventBus.emit('resized', size)
       console.log('hi')
     },
-    // async undo() {
-    //   try {
-    //     await this.$store.dispatch({ type: 'undo' })
-    //   } catch (err) {
-    //     console.log(err)
-    //     // notification['Somthing went wrong...']
-    //   }
-    // },
-    // async redo() {
-    //   try {
-    //     this.$store.dispatch({ type: 'redo' })
-    //   } catch (err) {
-    //     console.log(err)
-    //     // notification['Somthing went wrong...']
-    //   }
-    // },
-    undo() {
-      this.$store.commit({ type: 'undo' })
+    async undo() {
+      try {
+        await this.$store.dispatch({ type: 'undo' })
+      } catch (err) {
+        console.log(err)
+        // notification['Somthing went wrong...']
+      }
     },
-    redo() {
-      this.$store.commit({ type: 'redo' })
+    async redo() {
+      try {
+        this.$store.dispatch({ type: 'redo' })
+      } catch (err) {
+        console.log(err)
+        // notification['Somthing went wrong...']
+      }
     },
+    // undo() {
+    //   this.$store.commit({ type: 'undo' })
+    // },
+    // redo() {
+    //   this.$store.commit({ type: 'redo' })
+    // },
     changeWapName() {
       const name = this.$refs.wapName.innerText
       this.$store.commit({ type: 'changeWapName', name })
@@ -157,5 +179,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

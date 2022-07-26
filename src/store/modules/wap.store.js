@@ -75,6 +75,7 @@ export default {
     },
     removeCmp(state, { cmpId }) {
       const idx = state.currWap.cmps.findIndex(cmp => cmp.id === cmpId)
+      // console.log(state.currWap.cmps[idx])
       state.prevActions.push({
         idx,
         cmp: state.currWap.cmps[idx],
@@ -184,8 +185,9 @@ export default {
     async removeCmp({ getters, commit }, payload) {
       try {
         const wapId = getters.getCurrWap._id
-        commit(payload)
+
         const cmp = await wapService.removeCmp(wapId, payload.cmpId)
+        commit(payload)
         return cmp
       } catch (err) {
         console.log(err)
@@ -214,7 +216,7 @@ export default {
         const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
         const { cmps } = wap
         const prevAction = getters.prevActions[getters.prevActions.length - 1]
-
+        console.log(prevAction)
         let idx = cmps.findIndex(cmp => cmp.id === prevAction.cmp.id)
 
         if (idx === -1) {
@@ -224,8 +226,9 @@ export default {
           wap.cmps.splice(idx, 1, prevAction.cmp)
         }
 
-        commit({ type: 'undo' })
+        console.log(wap)
         await dispatch({ type: 'saveWap', wap })
+        commit({ type: 'undo' })
       } catch (err) {
         console.log(err)
 

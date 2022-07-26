@@ -62,7 +62,8 @@ async function updateCmp(wapId, cmp) {
 
 async function removeCmp(wapId, cmpId) {
   // return storageService.removeCmp(wapId, cmpId)
-  return httpService.delete(`wap/cmp/${wapId}`, cmpId)
+  console.log(wapId, cmpId)
+  return httpService.delete(`wap/cmp/${wapId}`, { cmpId })
 }
 
 function saveToSession(wap) {
