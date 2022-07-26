@@ -37,16 +37,17 @@ export default {
     },
     async logout({ commit }) {
       try {
-        await userService.logout()
         commit({ type: 'logout' })
+        await userService.logout()
       } catch (err) {
         throw err
       }
     },
-    async signup({ commit }, { credentials }) {
+    async signup({ commit, dispatch }, { credentials }) {
       try {
         const user = await userService.signup(credentials)
-        commit({ type: 'setUser', user })
+        await dispatch({ type: 'login', user })
+        // commit({ type: 'setUser', user })
       } catch (err) {
         throw err
       }

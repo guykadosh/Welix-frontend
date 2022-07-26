@@ -6,10 +6,18 @@
       <editor-tool-bar v-if="wap" :cmps="cmps" @wapSaved="wapSaved" />
       <editor-wap :wap="wap" v-if="wap" />
       <div
+        class="pointer-container flex flex-column"
+        :style="pointer.pos"
         v-for="pointer in pointers"
-        class="pointer"
-        :style="pointer.style"
-      ></div>
+      >
+        <span
+          class="pointer"
+          :style="{ backgroundColor: pointer.color }"
+        ></span>
+        <span class="pointer-text" :style="{ color: pointer.color }">
+          {{ pointer.name }}
+        </span>
+      </div>
     </section>
   </section>
 </template>
@@ -20,18 +28,18 @@ import editorHeader from '../cmps/editor/editor-header.vue'
 import editorNav from '../cmps/editor/editor-nav.vue'
 import editorToolBar from '../cmps/editor/editor-tool-bar.vue'
 import editorWap from '../cmps/editor/editor-wap.vue'
-import wapGalleryEdit from '../cmps/waps-edit/wap-gallery-edit.vue'
-import wapListEdit from '../cmps/waps-edit/wap-list-edit.vue'
-import wapNavEdit from '../cmps/waps-edit/wap-nav-edit.vue'
-import wapTextEdit from '../cmps/waps-edit/wap-text-edit.vue'
-import wapReviewEdit from '../cmps/waps-edit/wap-review-edit.vue'
-import wapFooterEdit from '../cmps/waps-edit/wap-footer-edit.vue'
-import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
-import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
-import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
-import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
-import { createVNode, h } from 'vue'
-import { eventBus } from '../services/event-bus.service.js'
+// import wapGalleryEdit from '../cmps/waps-edit/wap-gallery-edit.vue'
+// import wapListEdit from '../cmps/waps-edit/wap-list-edit.vue'
+// import wapNavEdit from '../cmps/waps-edit/wap-nav-edit.vue'
+// import wapTextEdit from '../cmps/waps-edit/wap-text-edit.vue'
+// import wapReviewEdit from '../cmps/waps-edit/wap-review-edit.vue'
+// import wapFooterEdit from '../cmps/waps-edit/wap-footer-edit.vue'
+// import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
+// import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
+// import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
+// import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
+// import { eventBus } from '../services/event-bus.service.js'
+import { createVNode } from 'vue'
 import { Modal } from 'ant-design-vue'
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
 import {
@@ -42,7 +50,6 @@ import {
   SOCKET_EVENT_CMP_REMOVED,
 } from '../services/socket.service.js'
 import { utilService } from '../services/util.service.js'
-// import { h } from 'vue'
 
 export default {
   name: 'wap-editor',
@@ -53,6 +60,13 @@ export default {
     }
   },
   async created() {
+    if (!this.user) {
+      await this.$store.dispatch({
+        type: 'signup',
+        credentials: { username: 'guest', password: '' },
+      })
+    }
+
     document.addEventListener('mousemove', this.handleMouseMove)
     socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
     socketService.on(SOCKET_EVENT_WAP_UPDATED, this.setCurrWap)
@@ -60,19 +74,15 @@ export default {
     socketService.on('all_mouse_activity', pointer => {
       const idx = this.pointers.findIndex(p => p.id === pointer.id)
       if (idx === -1) {
-        pointer.style.backgroundColor = utilService.getRandomColor()
+        pointer.color = utilService.getRandomColor()
         this.pointers.push(pointer)
+        console.log(pointer)
       } else {
-        pointer.style.backgroundColor = this.pointers[idx].style.backgroundColor
-        // pointer.style.backgroundColor = utilService.getRandomColor()
+        pointer.color = this.pointers[idx].color
         this.pointers[idx] = pointer
       }
-      console.log(this.pointers)
-      // this.pointers[0] = { pos: data.pos }
-      // this.pointer =
-      // console.log(pointer)
     })
-    // eventBus.on('savedWap', this.wapSaved)
+
     try {
       const { wapId } = this.$route.params
       socketService.emit(SOCKET_EMIT_SET_TOPIC, wapId)
@@ -91,14 +101,10 @@ export default {
             wap: wapService.getEmptyWap(),
           })
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err)
+    }
   },
-  // render() {
-  //   return h('div', {
-  //     class: 'pointer',
-  //     style: { height: '50px', width: '50px', backgroundColor: 'red' },
-  //   })
-  // },
   methods: {
     wapSaved() {
       this.isSaved = true
@@ -118,7 +124,6 @@ export default {
       this.$store.commit({ type: 'removeCmp', cmpId })
     },
     handleMouseMove(ev) {
-      // console.log(ev.clientX, ev.clientY)
       socketService.emit('mouse_activity', {
         x: ev.clientX,
         y: ev.clientY,
@@ -165,7 +170,6 @@ export default {
     }
   },
   async unmounted() {
-    document.removeEventListener('mousemove', this.handleMouseMove)
     wapService.saveToSession(this.wap)
     if (!this.isSaved && !this.wap.isSaved) {
       try {
@@ -179,33 +183,56 @@ export default {
         console.log(err)
       }
     }
+
+    socketService.off(SOCKET_EVENT_CMP_UPDATED)
+    socketService.off(SOCKET_EVENT_WAP_UPDATED)
+    socketService.off(SOCKET_EVENT_CMP_REMOVED)
+    socketService.off('all_mouse_activity')
+    document.removeEventListener('mousemove', this.handleMouseMove)
   },
   components: {
     editorHeader,
     editorNav,
     editorToolBar,
     editorWap,
-    wapGalleryEdit,
-    wapListEdit,
-    wapNavEdit,
-    wapTextEdit,
-    wapReviewEdit,
-    wapFooterEdit,
-    wapCardEdit,
-    wapContainerEdit,
-    wapContactEdit,
-    wapMapEdit,
+    // wapGalleryEdit,
+    // wapListEdit,
+    // wapNavEdit,
+    // wapTextEdit,
+    // wapReviewEdit,
+    // wapFooterEdit,
+    // wapCardEdit,
+    // wapContainerEdit,
+    // wapContactEdit,
+    // wapMapEdit,
     ExclamationCircleOutlined,
   },
 }
 </script>
 
 <style>
-.pointer {
+.pointer-container {
   position: absolute;
+}
+
+.pointer {
   width: 25px;
   height: 25px;
-  background-color: blue;
+  /* background-color: blue; */
+  clip-path: polygon(
+    100% 45%,
+    65% 58%,
+    100% 93%,
+    93% 100%,
+    57% 66%,
+    44% 100%,
+    0 0
+  );
   z-index: 3;
+}
+
+.pointer-text {
+  font-weight: 500;
+  font-family: Roboto-medium;
 }
 </style>
