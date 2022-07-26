@@ -42,7 +42,7 @@ export default {
   props: {
     cmps: Array,
   },
-  emits: ['saved'],
+  emits: ['saved', 'wapSaved'],
   components: {
     Container,
     Draggable,

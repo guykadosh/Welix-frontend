@@ -29,6 +29,11 @@ import { createVNode } from 'vue'
 import { eventBus } from '../services/event-bus.service.js'
 import { Modal } from 'ant-design-vue'
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
+import {
+  socketService,
+  SOCKET_EMIT_SET_TOPIC,
+  SOCKET_EVENT_CMP_UPDATED,
+} from '../services/socket.service.js'
 export default {
   name: 'wap-editor',
   data() {
@@ -36,25 +41,12 @@ export default {
       isSaved: false,
     }
   },
-  methods: {
-    wapSaved() {
-      console.log('Hi?')
-      this.isSaved = true
-      console.log(this.isSaved)
-    },
-  },
-  computed: {
-    wap() {
-      return this.$store.getters.getCurrWap
-    },
-    cmps() {
-      return this.$store.getters.getCmps
-    },
-  },
   async created() {
-    eventBus.on('savedWap', this.wapSaved)
+    socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
+    // eventBus.on('savedWap', this.wapSaved)
     try {
       const { wapId } = this.$route.params
+      socketService.emit(SOCKET_EMIT_SET_TOPIC, wapId)
 
       if (wapId) {
         const wap = await wapService.getById(wapId)
@@ -71,6 +63,26 @@ export default {
           })
       }
     } catch (err) {}
+  },
+
+  methods: {
+    wapSaved() {
+      console.log('Hi?')
+      this.isSaved = true
+      console.log(this.isSaved)
+    },
+    updateCmp(cmp) {
+      console.log(cmp)
+      this.$store.commit({ type: 'updateCmp', cmp })
+    },
+  },
+  computed: {
+    wap() {
+      return this.$store.getters.getCurrWap
+    },
+    cmps() {
+      return this.$store.getters.getCmps
+    },
   },
   beforeRouteLeave(to, from, next) {
     if (!this.isSaved) {
