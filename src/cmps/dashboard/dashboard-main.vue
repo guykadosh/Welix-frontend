@@ -1,8 +1,10 @@
 <template>
   <div class="dashboard-main">
-    <h2>
-      Welcome to your Dashboard, <span>{{ user.username }}</span>
-    </h2>
+    <div class="dashboard-main-header">
+      <h2 class="title">
+        <span>{{ user.fullname }}'s</span> Backoffice
+      </h2>
+    </div>
   </div>
 </template>
 <script>
@@ -11,6 +13,7 @@ export default {
   name: 'dashboard-main',
   props: {
     user: Object,
+    waps: Array,
   },
   data() {
     return {}

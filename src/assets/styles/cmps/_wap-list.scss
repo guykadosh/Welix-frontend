@@ -6,14 +6,23 @@
   }
 
   .wap-list-container {
-    width: 100%;
+    max-width: rem(400px);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: em(57px);
+    grid-template-columns: repeat(auto-fill, rem(350px));
+    gap: em(36px);
 
+    margin: 0 auto;
+
+    @include for-small-layout {
+      grid-template-columns: repeat(auto-fill, rem(400px));
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    @include for-medium-layout {
+      max-width: 900px;
+    }
     @include for-normal-layout {
       max-width: 1300px;
-      margin: 0 auto;
     }
 
     .wap-preview {
@@ -81,10 +90,10 @@
     img {
       aspect-ratio: 16/9;
       display: block;
-      width: 25rem;
+      width: 100%;
       box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.08);
       border-radius: rem(9px);
-      margin-block-end: rem(10px);
+      // margin-block-end: rem(10px);
     }
 
     p {

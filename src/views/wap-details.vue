@@ -36,7 +36,7 @@ export default {
     wapText,
     wapFooter,
     wapContact,
-    wapMap
+    wapMap,
   },
   data() {
     return {
@@ -46,9 +46,11 @@ export default {
   async created() {
     const { wapId } = this.$route.params
     const wap = await wapService.getById(wapId)
-    console.log(wap)
+
     this.wap = wap
+    const wapName = wap.name.replaceAll(' ', '-')
+
+    history.replaceState({}, null, wapName)
   },
 }
 </script>
-

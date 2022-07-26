@@ -3,7 +3,7 @@ import { utilService } from './util.service.js'
 import gUser from '@/assets/JSON/user.json' assert { type: 'json' }
 
 import { httpService } from './http.service'
-/* import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service' */
+import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
 /* import { showSuccessMsg } from '../services/event-bus.service' */
 
 const USER_KEY = 'user_db'
@@ -13,7 +13,7 @@ export const userService = {
   login,
   logout,
   signup,
-  getLoggedInUser,
+  getLoggedinUser,
   getUsers,
   getById,
   remove,
@@ -95,7 +95,7 @@ async function login(userCred) {
 
   const user = await httpService.post('auth/login', userCred)
   return user
-  // socketService.emit('set-user-socket', user._id)
+  socketService.emit('set-user-socket', user._id)
 }
 
 async function signup(userCred) {
@@ -131,7 +131,7 @@ async function logout() {
 //socketService.login(user._id)
 // }
 
-function getLoggedInUser() {
+function getLoggedinUser() {
   return JSON.parse(sessionStorage.getItem(LOGGED_IN_USER) || 'null')
 }
 /* function onUserUpdate(user) {

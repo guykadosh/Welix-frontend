@@ -3,7 +3,7 @@
     <editor-header />
     <editor-nav />
     <section class="editor-main flex">
-      <editor-tool-bar v-if="wap" :cmps="cmps" />
+      <editor-tool-bar v-if="wap" :cmps="cmps" @wapSaved="wapSaved" />
       <editor-wap :wap="wap" v-if="wap" />
     </section>
   </section>
@@ -29,6 +29,11 @@ import { createVNode } from 'vue'
 import { eventBus } from '../services/event-bus.service.js'
 import { Modal } from 'ant-design-vue'
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
+import {
+  socketService,
+  SOCKET_EMIT_SET_TOPIC,
+  SOCKET_EVENT_CMP_UPDATED,
+} from '../services/socket.service.js'
 export default {
   name: 'wap-editor',
   data() {
@@ -36,24 +41,12 @@ export default {
       isSaved: false,
     }
   },
-  methods: {
-    wapSaved() {
-      this.isSaved = true
-      console.log(this.isSaved)
-    },
-  },
-  computed: {
-    wap() {
-      return this.$store.getters.getCurrWap
-    },
-    cmps() {
-      return this.$store.getters.getCmps
-    },
-  },
   async created() {
-    eventBus.on('savedWap', this.wapSaved)
+    socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
+    // eventBus.on('savedWap', this.wapSaved)
     try {
       const { wapId } = this.$route.params
+      socketService.emit(SOCKET_EMIT_SET_TOPIC, wapId)
 
       if (wapId) {
         const wap = await wapService.getById(wapId)
@@ -70,6 +63,26 @@ export default {
           })
       }
     } catch (err) {}
+  },
+
+  methods: {
+    wapSaved() {
+      console.log('Hi?')
+      this.isSaved = true
+      console.log(this.isSaved)
+    },
+    updateCmp(cmp) {
+      console.log(cmp)
+      this.$store.commit({ type: 'updateCmp', cmp })
+    },
+  },
+  computed: {
+    wap() {
+      return this.$store.getters.getCurrWap
+    },
+    cmps() {
+      return this.$store.getters.getCmps
+    },
   },
   beforeRouteLeave(to, from, next) {
     if (!this.isSaved) {
@@ -89,6 +102,8 @@ export default {
         },
         class: 'test',
       })
+    } else {
+      next()
     }
   },
   beforeUnmount() {
@@ -97,19 +112,19 @@ export default {
     }
   },
   async unmounted() {
-    // wapService.saveToSession(this.wap)
-    // if (!this.isSaved && !this.wap.isSaved) {
-    //   try {
-    //     console.log('hi?')
-    //     await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
-    //     this.$store.commit({
-    //       type: 'setCurrWap',
-    //       wap: wapService.getEmptyWap(),
-    //     })
-    //   } catch (err) {
-    //     console.log(err)
-    //   }
-    // }
+    wapService.saveToSession(this.wap)
+    if (!this.isSaved && !this.wap.isSaved) {
+      try {
+        console.log('hi?')
+        await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
+        this.$store.commit({
+          type: 'setCurrWap',
+          wap: wapService.getEmptyWap(),
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
   },
   components: {
     editorHeader,

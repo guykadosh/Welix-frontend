@@ -17,6 +17,7 @@ import elEditorBtn from './costum-editors/el-editor-btn.vue'
 import elEditorImg from './costum-editors/el-editor-img.vue'
 import elEditorImgs from './costum-editors/el-editor-imgs.vue'
 import elEditorCmp from './costum-editors/el-editor-cmp.vue'
+import elEditorMap from './costum-editors/el-editor-map.vue'
 import { notification } from 'ant-design-vue'
 
 export default {
@@ -26,6 +27,7 @@ export default {
     elEditorImg,
     elEditorImgs,
     elEditorCmp,
+    elEditorMap
   },
   methods: {
     async updateCmp({ style, link, url, urls }) {
