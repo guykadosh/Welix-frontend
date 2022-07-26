@@ -1,6 +1,7 @@
 <template>
   <section class="home-page main-layout">
     <app-header class="main-layout"></app-header>
+    <h2>Home</h2>
     <hero />
   </section>
 </template>
