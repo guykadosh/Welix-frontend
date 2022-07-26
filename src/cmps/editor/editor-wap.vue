@@ -29,9 +29,6 @@
 </template>
 
 <script>
-import { Container, Draggable } from 'vue3-smooth-dnd'
-import { applyDrag } from '@/services/dnd.utils/helpers.js'
-import { eventBus } from '../../services/event-bus.service'
 import wapHeaderEdit from '../waps-edit/wap-header-edit.vue'
 import wapHeroEdit from '../waps-edit/wap-hero-edit.vue'
 import wapGalleryEdit from '../waps-edit/wap-gallery-edit.vue'
@@ -45,6 +42,8 @@ import wapContactEdit from '../waps-edit/wap-contact-edit.vue'
 import wapMapEdit from '../waps-edit/wap-map-edit.vue'
 import { wapService } from '../../services/wap.service'
 import { notification } from 'ant-design-vue'
+import { Container, Draggable } from 'vue3-smooth-dnd'
+import { eventBus } from '../../services/event-bus.service'
 
 export default {
   name: '',

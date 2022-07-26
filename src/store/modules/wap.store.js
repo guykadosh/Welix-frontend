@@ -154,13 +154,14 @@ export default {
         console.log(err)
       }
     },
-    updateCmps({ dispatch, getters, commit }, payload) {
+    async updateCmps({ dispatch, getters, commit }, payload) {
       try {
         commit(payload)
         const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
         wap.cmps = payload.cmps
 
-        dispatch({ type: 'saveWap', wap })
+        const savedWap = await dispatch({ type: 'saveWap', wap })
+        commit({ type: 'setCurrWap', wap: savedWap })
       } catch (err) {
         console.log(err)
         throw new Error('Coudnot add section')

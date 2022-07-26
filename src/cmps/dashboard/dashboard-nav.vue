@@ -12,6 +12,7 @@
       </li>
     </ul>
   </div>
+  <span @click="logout">Logout</span>
 </template>
 <script>
 import { wapService } from '../../services/wap.service'
@@ -32,6 +33,13 @@ export default {
     editWap(wap) {
       this.$store.commit({ type: 'setCurrWap', wap })
       this.$router.push('wap/editor')
+    },
+    async logout() {
+      try {
+        await this.$store.dispatch({ type: 'logout' })
+      } catch (err) {
+        console.log(err)
+      }
     },
   },
   computed: {},

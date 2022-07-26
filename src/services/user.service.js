@@ -103,7 +103,8 @@ async function signup(userCred) {
   // const user = await storageService.post(USER_KEY, userCred)
   const user = await httpService.post('auth/signup', userCred)
   // socketService.emit('set-user-socket', user._id)
-  return saveLocalUser(user)
+  saveLocalUser(user)
+  return user
 }
 async function logout() {
   // sessionStorage.removeItem(LOGGED_IN_USER)
