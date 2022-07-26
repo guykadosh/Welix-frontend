@@ -7,6 +7,7 @@
                 color: #332e29;
                 font-family: Oswald-regular;
             }
+
             :not(:last-child) {
                 margin-right: 1rem;
             }
@@ -40,6 +41,8 @@
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
+
             }
 
             .img1,
@@ -79,7 +82,7 @@
                     margin-top: rem(35px);
                     font-size: 1rem;
                     font-family: Oswald-extra-light;
-                    font-weight: lighter;
+                    font-weight: unset;
                 }
             }
         }
@@ -93,6 +96,8 @@
     &-container {
         .wap-container__inner {
             display: flex;
+            justify-content: space-between;
+            gap: rem(10px);
 
             .card-content {
                 background-color: $light-color;
@@ -100,11 +105,9 @@
                 padding: rem(35px);
                 text-align: center;
                 margin-bottom: rem(40px);
-                margin-right: rem(18px);
-/*                 :not(:last-child){
 
-                }
- */                .icon {
+
+                .icon {
                     height: rem(35px);
                     width: rem(35px);
                     margin-bottom: rem(15px);
@@ -115,6 +118,7 @@
                         font-family: Oswald-bold;
                         margin-bottom: rem(15px);
                     }
+
                     &-subheading {
                         font-family: Oswald-extra-light;
                         font-weight: lighter;
@@ -141,14 +145,127 @@
             text-align: center;
             font-weight: lighter;
             font-size: rem(20px);
-
         }
     }
 
     &-plan-ideas.design-container {
-        background-color: rgb(147, 181, 170);
+        .wap-container__inner {
+            gap: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+            height: rem(490px);
+            margin-bottom: rem(350px);
+            grid-template-areas:
+                "img1  design-ideas-txt"
+                " design-house-txt img2";
+
+            img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+
+            }
+
+            .img1 {
+                grid-area: img1;
+
+            }
+
+            .img2 {
+                grid-area: img2;
+
+            }
+
+            .design-ideas-txt {
+                grid-area: design-ideas-txt;
+                padding: rem(75px);
+                text-align: center;
+                background-color: #332e29;
+                color: $light-color;
+                font-family: Oswald-extra-light;
+                font-weight: lighter;
+
+            }
+
+            .design-house-txt {
+                grid-area: design-house-txt;
+                padding: rem(75px);
+                text-align: center;
+                background-color: $light-color;
+                font-family: Oswald-extra-light;
+                font-weight: lighter;
+
+            }
+        }
     }
-    &-gallery.imgs-container{
-        background-color: #332e29;
+
+    &-home {
+        text-align: center;
+        padding-top: rem(45px);
+
+        .text1 {
+            font-family: Oswald-bold;
+            margin-bottom: rem(25px);
+            font-size: rem(45px);
+        }
+
+        .text2 {
+            font-family: Oswald-extra-light;
+            font-weight: lighter;
+            margin-bottom: rem(25px);
+        }
+    }
+
+    &-home-gallery {
+        .imgs-container {
+            margin-bottom: rem(45px);
+            display: flex;
+            gap: rem(10px);
+            justify-content: center;
+            max-height: rem(450px);
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .img1{
+                width: rem(550px);
+            }
+            .img2{
+                width: rem(550px);
+            }
+        }
+    }
+
+    &-cards {
+        .wap-container__inner {
+
+            .design-project-card.wap-card {
+                margin-bottom: rem(50px);
+                height: rem(350px);
+                width: rem(600px);
+                padding: rem(5px);
+                background-color: $light-color;
+
+                .card {
+                    &-heading {
+                        font-size: rem(45px);
+                        text-align: left;
+                    }
+
+                    &-subheading {
+                        font-size: rem(30px);
+                        margin-bottom: rem(25px);
+                    }
+                }
+
+                p {
+                    font-size: rem(15px);
+                }
+            }
+
+        }
+
     }
 }

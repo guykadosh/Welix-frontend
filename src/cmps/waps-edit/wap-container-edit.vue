@@ -33,7 +33,7 @@ import wapListEdit from './wap-list-edit.vue'
 import wapReviewEdit from './wap-review-edit.vue'
 import wapTextEdit from './wap-text-edit.vue'
 import wapMapEdit from './wap-map-edit.vue'
-
+import wapContactEditVue from './wap-contact-edit.vue'
 export default {
   name: 'wap-container-edit',
   props: {
@@ -47,6 +47,7 @@ export default {
     wapReviewEdit,
     wapTextEdit,
     wapMapEdit,
+    wapContactEditVue
   },
   data() {
     return {

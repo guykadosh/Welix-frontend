@@ -7,7 +7,7 @@
   >
     <h3 class="title">{{ info.txt }}</h3>
     <div class="imgs-container">
-      <div v-for="url in info.imgs.urls" :key="url">
+      <div v-for="(url,idx) in info.imgs.urls" :key="url" :class="'img' + (idx + 1)">
         <img :src="url" alt="gallery-img" />
       </div>
     </div>

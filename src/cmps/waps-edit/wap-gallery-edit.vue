@@ -1,20 +1,9 @@
 <template>
-  <section
-    v-if="cmp"
-    class="wap-gallery"
-    :class="cmp.classes"
-    :style="cmp.style"
-    @click="setEditable('cmp')"
-  >
+  <section v-if="cmp" class="wap-gallery" :class="cmp.classes" :style="cmp.style" @click="setEditable('cmp')">
     <h3 @mousedown.stop class="title">{{ info.txt }}</h3>
     <div class="imgs-container">
-      <img
-        v-for="url in info.imgs.urls"
-        :key="url"
-        :src="url"
-        alt="gallery-img"
-        @click.stop="setEditable(info.imgs.type, 'imgs')"
-      />
+      <img v-for="(url, idx) in info.imgs.urls" :key="url" :class="'img' + (idx + 1)" :src="url" alt="gallery-img"
+        @click.stop="setEditable(info.imgs.type, 'imgs')" />
     </div>
   </section>
 </template>
