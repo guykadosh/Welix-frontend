@@ -10,14 +10,8 @@
     <!-- <Draggable v-for="item in items" :key="item.id"> -->
 
     <div class="wap-container__inner">
-      <component
-        v-for="cmp in cmp.info.cmps"
-        :key="cmp.id"
-        :is="cmp.type + '-edit'"
-        :cmp="cmp"
-        @click.stop
-        @picked="emitPicked"
-      ></component>
+      <component v-for="cmp in cmp.info.cmps" :key="cmp.id" :is="cmp.type + '-edit'" :cmp="cmp" @click.stop
+        @picked="emitPicked"></component>
     </div>
     <!-- </Draggable>
     </Container> -->
@@ -33,8 +27,8 @@ import wapListEdit from './wap-list-edit.vue'
 import wapReviewEdit from './wap-review-edit.vue'
 import wapTextEdit from './wap-text-edit.vue'
 import wapMapEdit from './wap-map-edit.vue'
-import wapContactEditVue from './wap-contact-edit.vue'
-import wapGalleryEditVue from './wap-gallery-edit.vue'
+import wapContactEdit from './wap-contact-edit.vue'
+import wapGalleryEdit from './wap-gallery-edit.vue'
 export default {
   name: 'wap-container-edit',
   props: {
@@ -48,8 +42,8 @@ export default {
     wapReviewEdit,
     wapTextEdit,
     wapMapEdit,
-    wapContactEditVue,
-    wapGalleryEditVue
+    wapContactEdit,
+    wapGalleryEdit
   },
   data() {
     return {

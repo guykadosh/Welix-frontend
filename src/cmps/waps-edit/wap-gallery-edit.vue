@@ -1,10 +1,18 @@
 <template>
   <section v-if="cmp" class="wap-gallery" :class="cmp.classes" :style="cmp.style" @click="setEditable('cmp')">
     <h3 @mousedown.stop class="title">{{ info.txt }}</h3>
-    <div class="imgs-container">
-      <img v-for="(url, idx) in info.imgs.urls" :key="url" :class="'img' + (idx + 1)" :src="url" alt="gallery-img"
+<!--     <div class="imgs-container">
+      <img v-for="(url, idx) in info.imgs.urls" :key="url" :class="'img' + (idx + 1)" 
         @click.stop="setEditable(info.imgs.type, 'imgs')" />
+      <img :src="url" alt="gallery-img" />
     </div>
+ -->    <div class="imgs-container">
+      <div v-for="(url,idx) in info.imgs.urls" :key="url" :class="'img' + (idx + 1)">
+        <img :src="url" alt="gallery-img"  @click.stop="setEditable(info.imgs.type, 'imgs')" />
+      </div>
+    </div>
+
+
   </section>
 </template>
 <script>
@@ -32,6 +40,9 @@ export default {
     info() {
       return this.cmp.info
     },
+  },
+  created() {
+    console.log('im here')
   },
 }
 </script>
