@@ -94,8 +94,9 @@ async function login(userCred) {
   // }
 
   const user = await httpService.post('auth/login', userCred)
-  return user
   socketService.emit('set-user-socket', user._id)
+  saveLocalUser(user)
+  return user
 }
 
 async function signup(userCred) {
