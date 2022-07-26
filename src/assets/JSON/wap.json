@@ -1616,8 +1616,10 @@
           "cmps": [
             {
               "type": "wap-gallery",
-              "classes":["design-gallery","design-house-plans"],
-
+              "classes": [
+                "design-gallery",
+                "design-house-plans"
+              ],
               "info": {
                 "imgs": {
                   "type": "imgs",
@@ -1631,7 +1633,11 @@
             },
             {
               "type": "wap-text",
-              "classes": ["wap-text","wap-design","design-ideas-txt"],
+              "classes": [
+                "wap-text",
+                "wap-design",
+                "design-ideas-txt"
+              ],
               "info": {
                 "heading": {
                   "type": "txt",
@@ -1648,7 +1654,10 @@
             },
             {
               "type": "wap-gallery",
-              "classes":["design-gallery","design-ideas"],
+              "classes": [
+                "design-gallery",
+                "design-ideas"
+              ],
               "info": {
                 "imgs": {
                   "type": "imgs",
@@ -1662,7 +1671,11 @@
             },
             {
               "type": "wap-text",
-              "classes": ["wap-text","wap-design","design-house"],
+              "classes": [
+                "wap-text",
+                "wap-design",
+                "design-house"
+              ],
               "info": {
                 "heading": {
                   "type": "txt",
@@ -1819,27 +1832,25 @@
         "info": {
           "cmps": [
             {
-              "map": {
-                "id": "wpmff02225",
-                "classes": [
-                  "wap-map"
-                ],
-                "type": "wap-map",
-                "info": {
-                  "markers": [
-                    {
-                      "position": {
-                        "lat": 31.8102,
-                        "lng": 34.6566
-                      },
-                      "name": "Ashdod",
-                      "_id": "m101"
-                    }
-                  ],
-                  "center": {
-                    "lat": 31.8102,
-                    "lng": 34.6566
+              "id": "wpmff02225",
+              "classes": [
+                "wap-map"
+              ],
+              "type": "wap-map",
+              "info": {
+                "markers": [
+                  {
+                    "position": {
+                      "lat": 31.8102,
+                      "lng": 34.6566
+                    },
+                    "name": "Ashdod",
+                    "_id": "m101"
                   }
+                ],
+                "center": {
+                  "lat": 31.8102,
+                  "lng": 34.6566
                 }
               }
             },
