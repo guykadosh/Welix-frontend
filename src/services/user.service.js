@@ -1,6 +1,6 @@
 import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
-import gUser from '@/assets/JSON/user.json' assert { type: 'json' }
+// import gUser from '@/assets/JSON/user.json' assert { type: 'json' }
 
 import { httpService } from './http.service'
 import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
@@ -21,7 +21,7 @@ export const userService = {
   update,
 }
 
-_createUsers()
+// _createUsers()
 
 async function getUsers() {
   // try {
@@ -145,9 +145,9 @@ function getLoggedinUser() {
 }
  */
 
-function _createUsers() {
-  utilService.saveToStorage(USER_KEY, gUser)
-}
+// function _createUsers() {
+//   utilService.saveToStorage(USER_KEY, gUser)
+// }
 
 function saveLocalUser(user) {
   sessionStorage.setItem(LOGGED_IN_USER, JSON.stringify(user))
