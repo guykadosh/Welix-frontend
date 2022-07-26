@@ -1,48 +1,156 @@
 .home-page {
-    .help-ukraine {
-        background-color: rgb(28, 40, 96);
-        height: rem(87px);
 
-        h3 {
-            font-size: rem(20px);
-            color: rgb(255, 255, 255);
-            font-weight: 200;
-            text-align: center;
+    .top-wrapper {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("https://static1.squarespace.com/static/ta/5ae0ba5445776e1de31f1a8d/406/assets/images/homepage/06_STILL_LIFE_265_V3_Master_OP2.jpg?format=2500w");
+        object-fit: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: 0 38%;
+        background-size: cover;
+    }
 
-            span {
-                text-decoration: underline;
+    .header__inner {
+        padding: em(50px) 0;
+        z-index: 10;
+
+        .main-header-logo {
+            font-size: em(36px);
+            font-family: Nunito-regular;
+        }
+
+        .header-link {
+            text-decoration: none;
+            font-family: Nunito-bold;
+            text-transform: uppercase;
+            color: $dark-color;
+            font-size: em(16px);
+            letter-spacing: em(1.3px);
+            padding: em(24px) em(38px);
+            cursor: pointer;
+        }
+
+        .link-signup {
+            border: 1px solid $dark-color;
+
+            &:hover {
+                background-color: $dark-color;
+                color: $light-color;
+            }
+        }
+
+    }
+
+    .main-hero {
+
+        .hero__inner {
+            position: relative;
+            display: flex;
+            justify-content: start;
+            z-index: 10;
+            padding-top: em(60px);
+
+            .text-box {
+                width: em(440px);
+                font-family: Nunito-bold;
+
+                .hero-heading {
+                    line-height: em(14px);
+                    margin-block-end: em(10px);
+                }
+
+                .hero-subheading {
+                    font-size: em(18px);
+                    color: rgb(138, 135, 135);
+                    margin-block-end: em(52px);
+                }
+
+                .hero-btn {
+                    text-decoration: none;
+                    font-family: Nunito-bold;
+                    text-transform: uppercase;
+                    color: $dark-color;
+                    font-size: em(16px);
+                    letter-spacing: em(1.3px);
+                    padding: em(24px) em(38px);
+                    border: 1px solid $dark-color;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $dark-color;
+                        color: $light-color;
+                    }
+                }
+
+                .learn-more {
+                    font-family: Nunito-bold;
+                    text-transform: uppercase;
+                    color: $dark-color;
+                    font-size: em(16px);
+                    letter-spacing: em(1.3px);
+                    padding: em(24px) em(38px);
+                    cursor: pointer;
+                }
             }
         }
     }
 
-    .hero-container {
-        background-color: rgb(245, 245, 245);
-        padding-top: rem(50px);
+    .editor-preview {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(5, 5, 5, 0.827);
 
-        .hero {
-            // background-color: blueviolet;
-            max-width: rem(800px);
+        &__inner {
+            transform-style: preserve-3d;
+            position: relative;
+            display: flex;
+            justify-content: end;
+            align-items: center;
 
-            .hero-head {
-                text-align: center;
-                font-size: rem(96px);
-                margin-bottom: rem(20px);
+            .imgs-wrapper {
+                position: relative;
 
+                .img {
+                    position: fixed;
+                    top: 10%;
+                    left: -35%;
+                    box-shadow: -1px 1px 10px 5px #000;
+                    max-width: 1200px;
+                }
+                .img1 {
+                    transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+                    z-index: 100;
+                }
+                .img2 {
+                    transform: perspective(1300px) rotateY(20deg) translateZ(350px) scale(0.5);
+                    z-index: 80;
+                }
+                .img3 {
+                    transform: perspective(1300px) rotateY(20deg) translateZ(300px) scale(0.5);
+                    z-index: 60;
+                }
+                .img4 {
+                    transform: perspective(1300px) rotateY(20deg) translateZ(250px) scale(0.5);
+                    z-index: 40;
+                }
             }
 
-            .hero-sub {
-                padding: 0 rem(70px);
-                text-align: center;
-                // background-color: blue;
-                font-size: rem(20px);
-                font-weight: 100;
-                line-height: 1.8rem;
-                margin-bottom: rem(35px);
-            }
-        }
+            .list-wrapper {
+                // background-color: yellow;
+                padding-left: 100px;
+                max-width: 500px;
 
-        .hero-print {
-            font-weight: 100;
+                li {
+                    font-family: Nunito-regular;
+                    text-transform: uppercase;
+                    color: $light-color;
+                    font-size: em(28px);
+                    letter-spacing: em(1.3px);
+                    padding: em(24px) em(38px);
+                }
+
+            }
         }
     }
 }
