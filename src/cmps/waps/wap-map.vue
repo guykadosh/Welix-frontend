@@ -16,7 +16,7 @@ export default {
     props: { cmp: Object },
     computed: {
         mapSize() {
-            return { width: 500 + 'px', height: 350 + 'px' }
+            return { width: 500 + 'px', height: 450 + 'px' }
         }
     },
     created() {

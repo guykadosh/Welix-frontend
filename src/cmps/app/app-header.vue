@@ -1,14 +1,23 @@
 <template>
-  <header class="main-header full">
-    <div class="flex justify-between items-center header__inner">
-      <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2>
-      <div class="main-header-nav flex clean-list justify-end">
-        <router-link to="/template">Templates</router-link>
-        <router-link to="/wap/editor/">Editor</router-link>
-        <router-link v-if="!isUser" to="/login">Login</router-link>
-        <!-- <router-link v-if="isUser" to="/" @click="logout">Logout</router-link> -->
-        <router-link v-if="isUser" to="/dashboard">Backoffice</router-link>
-      </div>
+  <header class="main-header main-layout full">
+     
+    <div class="header__inner flex justify-between items-center">
+
+      <section class="logo-wrapper">
+        <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2>
+      </section>
+
+      <section class="nav-wrapper">
+        <router-link class="header-link link-mid" to="/template">Templates</router-link>
+        <router-link class="header-link link-mid" to="/wap/editor/">Editor</router-link>
+      </section>
+
+      <section class="login-wrapper">
+        <router-link class="header-link link-dashboard" v-if="isUser" to="/dashboard">backoffice</router-link>
+        <router-link class="header-link link-login" v-if="!isUser" to="/login">log in</router-link>
+        <router-link class="header-link link-signup" v-if="!isUser" to="/login">sign up</router-link>
+      </section>
+
     </div>
   </header>
 </template>
