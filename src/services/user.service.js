@@ -94,8 +94,9 @@ async function login(userCred) {
   // }
 
   const user = await httpService.post('auth/login', userCred)
-  return user
   socketService.emit('set-user-socket', user._id)
+  saveLocalUser(user)
+  return user
 }
 
 async function signup(userCred) {
@@ -134,6 +135,7 @@ async function logout() {
 function getLoggedinUser() {
   return JSON.parse(sessionStorage.getItem(LOGGED_IN_USER) || 'null')
 }
+
 /* function onUserUpdate(user) {
   showSuccessMsg(
     `This user ${user.fullname} just got updated from socket, new score: ${user.score}`

@@ -32,7 +32,7 @@ export default {
     }
   },
   created() {
-    const user = userService.getLoggedInUser()
+    const user = userService.getLoggedinUser()
     if (user) {
       this.$store.commit({ type: 'setUser', user })
       this.$router.push('/template')

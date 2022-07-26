@@ -27,7 +27,8 @@ async function getById(cmpId) {
   //   console.log(err)
   //   throw new Error('Cannot load cmp')
   // }
-  const cmp = httpService.get(`cmp/${cmpId}`)
+
+  return httpService.get(`cmp/${cmpId}`)
 }
 
 async function remove(cmpId) {
