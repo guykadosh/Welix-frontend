@@ -1616,6 +1616,8 @@
           "cmps": [
             {
               "type": "wap-gallery",
+              "classes":["design-gallery","design-house-plans"],
+
               "info": {
                 "imgs": {
                   "type": "imgs",
@@ -1629,6 +1631,7 @@
             },
             {
               "type": "wap-text",
+              "classes": ["wap-text","wap-design","design-ideas-txt"],
               "info": {
                 "heading": {
                   "type": "txt",
@@ -1645,6 +1648,7 @@
             },
             {
               "type": "wap-gallery",
+              "classes":["design-gallery","design-ideas"],
               "info": {
                 "imgs": {
                   "type": "imgs",
@@ -1658,6 +1662,7 @@
             },
             {
               "type": "wap-text",
+              "classes": ["wap-text","wap-design","design-house"],
               "info": {
                 "heading": {
                   "type": "txt",
@@ -1701,6 +1706,7 @@
       {
         "id": "gbgt1258y42",
         "classes": [
+          "design-home",
           "design-txt",
           "design-layout"
         ],
@@ -1722,6 +1728,7 @@
       {
         "id": "wc078dddhg545",
         "classes": [
+          "design-home-gallery",
           "design-gallery",
           "design-layout"
         ],
@@ -1744,6 +1751,7 @@
         "style": {},
         "type": "wap-container",
         "classes": [
+          "design-cards",
           "design-container",
           "design-layout"
         ],
@@ -1752,7 +1760,7 @@
             {
               "id": "dgvf15615",
               "classes": [
-                "design-priject-card"
+                "design-project-card"
               ],
               "type": "wap-card",
               "info": {
@@ -1875,7 +1883,6 @@
           ]
         }
       }
-
     ],
     "isPublic": true
   }

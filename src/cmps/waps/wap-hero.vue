@@ -13,11 +13,11 @@
             {{ btn.txt }}</a>
         </div>
       </div>
-
       <div v-if="info.imgs" v-for="(url, idx) in info.imgs.urls" :class="'img' + (idx + 1)" :key="url">
         <img :src="url" alt="gallery-img" />
 
       </div>
+
       <img v-if="info.img" :src="info.img.url" />
     </div>
   </section>

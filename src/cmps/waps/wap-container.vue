@@ -19,11 +19,14 @@ import wapReview from './wap-review.vue'
 import wapText from './wap-text.vue'
 import wapGallery from './wap-gallery.vue'
 import wapMap from './wap-map.vue'
-
+import wapContact from './wap-contact.vue'
 export default {
   name: 'wap-container',
   props: {
     cmp: Object,
+  },
+  created() {
+    console.log("cmps",this.cmp)
   },
   components: {
     wapCard,
@@ -31,7 +34,8 @@ export default {
     wapReview,
     wapText,
     wapGallery,
-    wapMap
+    wapMap,
+    wapContact
   },
   computed: {
     info() {
