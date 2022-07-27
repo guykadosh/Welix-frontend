@@ -1,3 +1,4 @@
+import { socketService } from '../../services/socket.service.js'
 import { utilService } from '../../services/util.service.js'
 import { wapService } from '../../services/wap.service.js'
 
@@ -140,11 +141,18 @@ export default {
         console.log(savedWap)
         commit({ type: 'saveWap', wap: savedWap })
         commit({ type: 'setCurrWap', wap: savedWap })
+        socketService.emit('wap-updated', savedWap)
 
         return savedWap
       } catch (err) {
         console.log(err)
       }
+    },
+    async changeWapName({ commit, dispatch, getters }, payload) {
+      const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
+      wap.name = payload.name
+      const savedWap = await dispatch({ type: 'saveWap', wap })
+      commit({ type: 'setCurrWap', wap: savedWap })
     },
     async removeWap({ commit }, payload) {
       try {
@@ -178,6 +186,7 @@ export default {
 
         const updatedCmp = await wapService.updateCmp(wap._id, cmp)
         commit({ type: 'updateCmp', cmp: updatedCmp })
+        socketService.emit('cmp-updated', updatedCmp)
       } catch (err) {
         console.log(err)
         throw new Error('Could not update section')

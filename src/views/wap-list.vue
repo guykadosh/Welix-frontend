@@ -12,7 +12,8 @@
           <div class="wap-preview-img">
             <div class="wap-preview-btns">
               <a @click="wapToEdit(wap)">Edit</a>
-              <router-link :to="'/wap/' + wap._id">View</router-link>
+              <!-- <router-link :to="'/wap/' + wap._id">View</router-link> -->
+              <a @click="wapPreview(wap._id)">View</a>
             </div>
             <img :src="wap.imgUrl" alt="" />
           </div>
@@ -52,7 +53,15 @@ export default {
       })
 
       this.$store.commit({ type: 'setCurrWap', wap: savedWap })
+
       this.$router.push(`/wap/editor/${savedWap._id}`)
+    },
+    wapPreview(wapId) {
+      let routeData = this.$router.resolve({
+        name: 'wap-details',
+        params: { wapId },
+      })
+      window.open(routeData.href, '_blank')
     },
   },
 }

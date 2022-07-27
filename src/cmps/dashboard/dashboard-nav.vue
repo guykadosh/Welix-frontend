@@ -11,8 +11,8 @@
         {{ wap.name }}
       </li>
     </ul>
+    <span @click="logout">Logout</span>
   </div>
-  <span @click="logout">Logout</span>
 </template>
 <script>
 import { wapService } from '../../services/wap.service'
@@ -37,6 +37,7 @@ export default {
     async logout() {
       try {
         await this.$store.dispatch({ type: 'logout' })
+        this.$router.push('/')
       } catch (err) {
         console.log(err)
       }

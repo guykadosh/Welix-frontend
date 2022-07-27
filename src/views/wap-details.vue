@@ -1,5 +1,4 @@
 <template>
-  <!-- <pre>{{ wap }}</pre> -->
   <section v-if="wap" class="wap-details">
     <component
       v-for="cmp in wap.cmps"
@@ -48,6 +47,7 @@ export default {
     const wap = await wapService.getById(wapId)
 
     this.wap = wap
+    console.log(wap)
     const wapName = wap.name.replaceAll(' ', '-')
 
     history.replaceState({}, null, wapName)

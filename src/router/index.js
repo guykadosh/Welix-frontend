@@ -22,7 +22,7 @@ const router = createRouter({
     },
     {
       path: '/wap/:wapId',
-      name: 'wap-detials',
+      name: 'wap-details',
       component: wapDetails,
     },
     {

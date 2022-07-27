@@ -39,6 +39,7 @@ export default {
     return {
       style: {
         color: '',
+        borderColor: '',
         backgroundColor: '',
         borderRadius: '',
       },
@@ -55,6 +56,7 @@ export default {
     },
     setColor(color) {
       this.style.color = color
+      this.style.borderColor = color
       this.setStyle()
     },
     setBgColor(color) {
