@@ -67,6 +67,7 @@
             >{{ siteName }}</span
           ></span
         >
+        <span class="preview-site" @click="previewSite">Preview site →</span>
       </div>
     </div>
 
@@ -136,7 +137,6 @@ export default {
     resize(size) {
       this.viewMode = size
       eventBus.emit('resized', size)
-      console.log('hi')
     },
     async undo() {
       try {
@@ -154,15 +154,29 @@ export default {
         // notification['Somthing went wrong...']
       }
     },
-    // undo() {
-    //   this.$store.commit({ type: 'undo' })
-    // },
-    // redo() {
-    //   this.$store.commit({ type: 'redo' })
-    // },
-    changeWapName() {
-      const name = this.$refs.wapName.innerText
-      this.$store.commit({ type: 'changeWapName', name })
+    async changeWapName() {
+      try {
+        const name = this.$refs.wapName.innerText
+        this.$store.dispatch({ type: 'changeWapName', name })
+      } catch (err) {
+        console.log(err)
+        // TODO: msg to user
+      }
+    },
+    previewSite() {
+      if (!this.wap.name) {
+        notification['error']({
+          message: `Please pick a name to your website first`,
+        })
+        this.focusName
+        return
+      }
+
+      let routeData = this.$router.resolve({
+        name: 'wap-details',
+        params: { wapId: this.wap._id },
+      })
+      window.open(routeData.href, '_blank')
     },
     focusName() {
       this.$refs.wapName.focus()

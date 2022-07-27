@@ -23,33 +23,26 @@
 </template>
 
 <script>
+// Services
 import { wapService } from '../services/wap.service.js'
+import { utilService } from '../services/util.service.js'
+import {
+  socketService,
+  SOCKET_EMIT_SET_EDITOR,
+  SOCKET_EVENT_CMP_UPDATED,
+  SOCKET_EVENT_WAP_UPDATED,
+  SOCKET_EVENT_CMP_REMOVED,
+  SOCKET_EVENT_MOUSE_ACTIVITY,
+} from '../services/socket.service.js'
+// Libraries
+import { createVNode } from 'vue'
+import { Modal } from 'ant-design-vue'
+import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
+// Cmps
 import editorHeader from '../cmps/editor/editor-header.vue'
 import editorNav from '../cmps/editor/editor-nav.vue'
 import editorToolBar from '../cmps/editor/editor-tool-bar.vue'
 import editorWap from '../cmps/editor/editor-wap.vue'
-// import wapGalleryEdit from '../cmps/waps-edit/wap-gallery-edit.vue'
-// import wapListEdit from '../cmps/waps-edit/wap-list-edit.vue'
-// import wapNavEdit from '../cmps/waps-edit/wap-nav-edit.vue'
-// import wapTextEdit from '../cmps/waps-edit/wap-text-edit.vue'
-// import wapReviewEdit from '../cmps/waps-edit/wap-review-edit.vue'
-// import wapFooterEdit from '../cmps/waps-edit/wap-footer-edit.vue'
-// import wapCardEdit from '../cmps/waps-edit/wap-card-edit.vue'
-// import wapContainerEdit from '../cmps/waps-edit/wap-container-edit.vue'
-// import wapContactEdit from '../cmps/waps-edit/wap-contact-edit.vue'
-// import wapMapEdit from '../cmps/waps-edit/wap-map-edit.vue'
-// import { eventBus } from '../services/event-bus.service.js'
-import { createVNode } from 'vue'
-import { Modal } from 'ant-design-vue'
-import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
-import {
-  socketService,
-  SOCKET_EMIT_SET_TOPIC,
-  SOCKET_EVENT_CMP_UPDATED,
-  SOCKET_EVENT_WAP_UPDATED,
-  SOCKET_EVENT_CMP_REMOVED,
-} from '../services/socket.service.js'
-import { utilService } from '../services/util.service.js'
 
 export default {
   name: 'wap-editor',
@@ -60,36 +53,18 @@ export default {
     }
   },
   async created() {
-    if (!this.user) {
-      await this.$store.dispatch({
-        type: 'signup',
-        credentials: { username: 'guest', password: '' },
-      })
-    }
-
     document.addEventListener('mousemove', this.handleMouseMove)
+    socketService.on(SOCKET_EVENT_MOUSE_ACTIVITY, this.handleMouseSocket)
     socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
     socketService.on(SOCKET_EVENT_WAP_UPDATED, this.setCurrWap)
     socketService.on(SOCKET_EVENT_CMP_REMOVED, this.removeCmp)
-    socketService.on('all_mouse_activity', pointer => {
-      const idx = this.pointers.findIndex(p => p.id === pointer.id)
-      if (idx === -1) {
-        pointer.color = utilService.getRandomColor()
-        this.pointers.push(pointer)
-        console.log(pointer)
-      } else {
-        pointer.color = this.pointers[idx].color
-        this.pointers[idx] = pointer
-      }
-    })
 
     try {
       const { wapId } = this.$route.params
-      socketService.emit(SOCKET_EMIT_SET_TOPIC, wapId)
+      socketService.emit(SOCKET_EMIT_SET_EDITOR, wapId)
 
       if (wapId) {
         const wap = await wapService.getById(wapId)
-        console.log(wap)
         this.$store.commit({
           type: 'setCurrWap',
           wap: wap,
@@ -108,19 +83,14 @@ export default {
   methods: {
     wapSaved() {
       this.isSaved = true
-      console.log(this.isSaved)
     },
     updateCmp(cmp) {
-      console.log(cmp)
       this.$store.commit({ type: 'updateCmp', cmp })
     },
     setCurrWap(wap) {
-      console.log('Hi')
-      console.log(wap)
       this.$store.commit({ type: 'setCurrWap', wap })
     },
     removeCmp(cmpId) {
-      console.log(cmpId)
       this.$store.commit({ type: 'removeCmp', cmpId })
     },
     handleMouseMove(ev) {
@@ -129,6 +99,17 @@ export default {
         y: ev.clientY,
         username: this.user?.username || 'guest',
       })
+    },
+    handleMouseSocket(pointer) {
+      const idx = this.pointers.findIndex(p => p.id === pointer.id)
+      if (idx === -1) {
+        pointer.color = utilService.getRandomColor()
+        this.pointers.push(pointer)
+        console.log(pointer)
+      } else {
+        pointer.color = this.pointers[idx].color
+        this.pointers[idx] = pointer
+      }
     },
   },
   computed: {
@@ -164,16 +145,10 @@ export default {
       next()
     }
   },
-  beforeUnmount() {
-    if (!this.isSaved) {
-      // show confirm msg to discard changes 'unsaved changes will be discareded...'
-    }
-  },
   async unmounted() {
     wapService.saveToSession(this.wap)
     if (!this.isSaved && !this.wap.isSaved) {
       try {
-        console.log('hi?')
         await this.$store.dispatch({ type: 'removeWap', wapId: this.wap._id })
         this.$store.commit({
           type: 'setCurrWap',
@@ -184,27 +159,17 @@ export default {
       }
     }
 
+    document.removeEventListener('mousemove', this.handleMouseMove)
     socketService.off(SOCKET_EVENT_CMP_UPDATED)
     socketService.off(SOCKET_EVENT_WAP_UPDATED)
     socketService.off(SOCKET_EVENT_CMP_REMOVED)
-    socketService.off('all_mouse_activity')
-    document.removeEventListener('mousemove', this.handleMouseMove)
+    socketService.off(SOCKET_EVENT_MOUSE_ACTIVITY)
   },
   components: {
     editorHeader,
     editorNav,
     editorToolBar,
     editorWap,
-    // wapGalleryEdit,
-    // wapListEdit,
-    // wapNavEdit,
-    // wapTextEdit,
-    // wapReviewEdit,
-    // wapFooterEdit,
-    // wapCardEdit,
-    // wapContainerEdit,
-    // wapContactEdit,
-    // wapMapEdit,
     ExclamationCircleOutlined,
   },
 }

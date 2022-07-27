@@ -1,0 +1,1320 @@
+[
+  {
+    "id": "fhngh1",
+    "type": "wap-header",
+    "thumbnail": "https://i.ibb.co/VB0VdbR/betaa-header.jpg",
+    "classes": ["betaa-header", "full", "betaa-layout"],
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/Nj1HXqh/Betaa-logo-White-footer.png",
+        "style": {}
+      },
+      "nav": {
+        "_id": "wc05",
+        "type": "wap-nav",
+        "style": {},
+        "classes": ["betaa-nav"],
+        "info": {
+          "links": [
+            {
+              "type": "txt",
+              "txt": "Portfolio",
+              "link": "#portfolio",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Blog",
+              "link": "#blog",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Shop",
+              "link": "#shop",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Features",
+              "link": "#features",
+              "style": {}
+            }
+          ]
+        }
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "gbfgg",
+    "type": "wap-hero",
+    "thumbnail": "https://i.ibb.co/sjMhHNf/hero.png",
+    "classes": ["betaa-hero", "full", "betaa-layout"],
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Make your software better using the best solutions in one tool",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "Task tracking, customer support, and workflow management all wrapped up into one software tool your team and customers will love.",
+        "style": {}
+      },
+      "btns": [
+        {
+          "type": "btn",
+          "txt": "Start free trial",
+          "link": "#wc03",
+          "style": {}
+        },
+        {
+          "type": "btn",
+          "txt": "Learn more",
+          "link": "#wc03",
+          "style": {}
+        }
+      ],
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/b3dbfTs/625d80b8b75698210e93919d-Top-Section-Illustration.png",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "jjyuh",
+    "thumbnail": "https://i.ibb.co/8j9nd1J/betta-container.jpg",
+    "type": "wap-container",
+    "classes": [
+      "betaa",
+      "betaa-container",
+      "betaa-capabilities",
+      "betaa-layout"
+    ],
+    "style": {},
+    "info": {
+      "cmps": [
+        {
+          "type": "wap-card",
+          "info": {
+            "tag": {
+              "type": "txt",
+              "txt": "CAPABILITIES",
+              "style": {}
+            },
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/7bKWtCz/145.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Overview of your progress and tasks",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Some metrics play an essential role to measure the pulse of a company’s customer service efficiency, while others are more evaluating if a brand has a best approach.",
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/gJwr1v3/cogwheel-4.png",
+                "txt": "Task"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/xfCNDGg/envelope-4.png",
+                "txt": "Messaging"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/hgRTZ96/growth-4.png",
+                "txt": "Results"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "https://i.ibb.co/NW4JM8g/task-4-1.png",
+                "txt": "Support"
+              }
+            ]
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "gbgty42",
+    "thumbnail": "https://i.ibb.co/3Rp31dq/betaa-text1.jpg",
+    "classes": ["betaa-txt", "betaa-layout"],
+    "type": "wap-text",
+    "info": {
+      "tag": "basic features",
+      "heading": {
+        "type": "txt",
+        "txt": "Tool for every kind of business",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "mukjyu6584",
+    "thumbnail": "https://i.ibb.co/Z1QpL79/betta-cards.jpg",
+    "type": "wap-container",
+    "classes": ["betaa-container", "betaa-features", "betaa-layout"],
+    "style": {},
+    "info": {
+      "cmps": [
+        {
+          "id": "wc04gfbg21g",
+          "classes": ["betaa"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/mHtHp6b/Card-01.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Startups",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+              "style": {}
+            },
+            "list": []
+          },
+          "style": {}
+        },
+        {
+          "id": "wc04hjjhvcb55",
+          "classes": ["betaa", "betaa-layout"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/LSPP6s3/Card-02.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Entrepreneurs",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+              "style": {}
+            },
+            "list": []
+          },
+          "style": {}
+        },
+        {
+          "id": "mhn25212",
+          "classes": ["betaa", "betaa-layout"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/Lr1HMz4/Card-03.png",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Employees",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit minus.",
+              "style": {}
+            },
+            "list": []
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "wc0554njj",
+    "classes": ["betaa-contact", "full", "betaa-layout"],
+    "thumbnail": "https://i.ibb.co/02PKMdD/2-07-22-225541.png",
+    "type": "wap-contact",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Contact us",
+        "style": {}
+      },
+      "form": {
+        "type": "form",
+        "inputs": [
+          {
+            "type": "text",
+            "placeholder": "name"
+          },
+          {
+            "type": "email",
+            "placeholder": "email"
+          }
+        ],
+        "textarea": {
+          "placeholder": "Message"
+        },
+        "btn": {
+          "type": "submit",
+          "txt": "submit"
+        },
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "mfgnih987",
+    "classes": ["betaa-review", "betaa-layout"],
+    "thumbnail": "https://i.ibb.co/Khxqhxb/22-07-22-225658.png",
+    "type": "wap-review",
+    "info": {
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/1rWVn2F/Image.png",
+        "style": {}
+      },
+      "text": {
+        "type": "txt",
+        "txt": "\"It is really refreshing to work with this software which is truly helpful in the client’s preferences.\"",
+        "style": {}
+      },
+      "author": {
+        "type": "txt",
+        "txt": "Rebecca Calderon, ",
+        "style": {}
+      },
+      "role": {
+        "type": "txt",
+        "txt": "Head of marketing, Apple Inc.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc05jjjj4",
+    "classes": ["betaa-txt", "betaa-trial", "betaa-layout"],
+    "thumbnail": "https://i.ibb.co/dk7WY1g/2022-0png.png",
+    "type": "wap-text",
+    "info": {
+      "heading": {
+        "txt": "Improve your business and make your work easy",
+        "type": "txt",
+        "style": {}
+      },
+      "subHeading": {
+        "txt": "Start free trial",
+        "type": "txt",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "sc599966",
+    "classes": ["betaa-footer", "full", "betaa-layout"],
+    "thumbnail": "https://i.ibb.co/Zh66cKS/22-07-22-225731.png",
+    "type": "wap-footer",
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/k9KJG2b/footer-Illustration.png",
+        "style": {}
+      },
+      "row1": {
+        "type": "txt",
+        "txt": "Contact us",
+        "texts": ["2307 Beverley Rd, New York", "office@betaa.com"],
+        "style": {}
+      },
+      "row2": {
+        "type": "txt",
+        "txt": "",
+        "texts": [],
+        "style": {}
+      },
+      "copyright": {
+        "type": "txt",
+        "txt": "copyright © 2022 by BETAA, Inc. All rights reserved.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc024355",
+    "type": "wap-header",
+    "classes": ["omnifood-header", "full", "main-layout"],
+    "thumbnail": "https://i.ibb.co/kxQv8Hs/omnifood-header.png",
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
+        "style": {}
+      },
+      "nav": {
+        "_id": "wc05",
+        "type": "wap-nav",
+        "style": {},
+        "classes": ["omnifood-nav"],
+        "info": {
+          "links": [
+            {
+              "type": "txt",
+              "txt": "How it works",
+              "link": "#how",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Meals",
+              "link": "#meals",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Reviews",
+              "link": "#reviews",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Pricing",
+              "link": "#pricing",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Try for free",
+              "link": "#cta",
+              "style": {}
+            }
+          ]
+        }
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc011525",
+    "type": "wap-hero",
+    "classes": ["omnifood-hero", "full", "main-layout"],
+    "thumbnail": "https://i.ibb.co/hfzwM9R/omnifood-hero.png",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "A healthy meal delivered to your door, every single day",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
+        "style": {}
+      },
+      "btns": [
+        {
+          "type": "btn",
+          "txt": "Start Eating Well!",
+          "link": "#wc03",
+          "style": {}
+        },
+        {
+          "type": "btn",
+          "txt": "Learn more",
+          "link": "#wc03",
+          "style": {}
+        }
+      ],
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/fdHvDFX/hero.webp",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc045678gfb",
+    "classes": ["omnifood-brand", "main-layout"],
+    "thumbnail": "https://i.ibb.co/NLKTYWw/omnifood-brands.png",
+    "type": "wap-gallery",
+    "info": {
+      "title": {
+        "type": "txt",
+        "txt": "as featured in",
+        "style": {}
+      },
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "https://i.ibb.co/CWHwXJw/business-insider.png",
+          "https://i.ibb.co/KW9hbd7/forbes.png",
+          "https://i.ibb.co/wCR7WHY/techcrunch.png",
+          "https://i.ibb.co/23ChyNd/the-new-york-times.png",
+          "https://i.ibb.co/fQqGqKv/usa-today.png"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc03bhgfh63",
+    "thumbnail": "https://i.ibb.co/yX6NM9N/omni-food-cards.jpg",
+    "type": "wap-container",
+    "classes": ["omnifood-meals"],
+    "info": {
+      "cmps": [
+        {
+          "id": "bg622626",
+          "classes": ["omnifood-meal"],
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/MC2ps95/meal-1.jpg",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Japanese Gyozas",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "",
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "650 calories"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "NutriScore ® 74"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "4.9 rating (537)"
+              }
+            ]
+          },
+          "style": {}
+        },
+        {
+          "id": "wc0bgh124",
+          "classes": ["omnifood-meal"],
+          "style": {},
+          "type": "wap-card",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/DC457TG/meal-2.jpg",
+              "style": {}
+            },
+            "heading": {
+              "type": "txt",
+              "txt": "Avocado Salad",
+              "style": {}
+            },
+            "list": [
+              {
+                "style": {},
+                "type": "txt",
+                "icon": "",
+                "txt": "400 calories"
+              },
+              {
+                "style": {},
+                "type": "txt",
+                "icon": "",
+                "txt": "NutriScore ® 92"
+              },
+              {
+                "style": {},
+                "type": "txt",
+                "icon": "",
+                "txt": "4.9 rating (441)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "wc04dsvf145",
+          "classes": ["omnifood-meal-list"],
+          "type": "wap-list",
+          "info": {
+            "heading": {
+              "txt": "Works with any diet",
+              "type": "txt",
+              "style": {}
+            },
+            "list": {
+              "txt": [
+                "Vegeterian",
+                "Vegan",
+                "Pescatarian",
+                "Gluten-free",
+                "Lactose-free",
+                "Keto",
+                "Paleo",
+                "Low FODMAP",
+                "Kid-friendly"
+              ],
+              "type": "txt",
+              "style": {}
+            }
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "bg622626",
+    "classes": ["omnifood-meal", "main-layout"],
+    "type": "wap-card",
+    "info": {
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/MC2ps95/meal-1.jpg",
+        "style": {}
+      },
+      "heading": {
+        "type": "txt",
+        "txt": "Japanese Gyozas",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "",
+        "style": {}
+      },
+      "list": [
+        {
+          "type": "txt",
+          "style": {},
+          "icon": "",
+          "txt": "650 calories"
+        },
+        {
+          "type": "txt",
+          "style": {},
+          "icon": "",
+          "txt": "NutriScore ® 74"
+        },
+        {
+          "type": "txt",
+          "style": {},
+          "icon": "",
+          "txt": "4.9 rating (537)"
+        }
+      ]
+    },
+    "style": {}
+  },
+  {
+    "id": "wc0bgh124",
+    "classes": ["omnifood-meal", "main-layout"],
+    "style": {},
+    "type": "wap-card",
+    "info": {
+      "img": {
+        "type": "img",
+        "url": "https://i.ibb.co/DC457TG/meal-2.jpg",
+        "style": {}
+      },
+      "heading": {
+        "type": "txt",
+        "txt": "Avocado Salad",
+        "style": {}
+      },
+      "list": [
+        {
+          "style": {},
+          "type": "txt",
+          "icon": "",
+          "txt": "400 calories"
+        },
+        {
+          "style": {},
+          "type": "txt",
+          "icon": "",
+          "txt": "NutriScore ® 92"
+        },
+        {
+          "style": {},
+          "type": "txt",
+          "icon": "",
+          "txt": "4.9 rating (441)"
+        }
+      ]
+    }
+  },
+  {
+    "id": "wc04dsvf145",
+    "classes": ["omnifood-meal-list", "main-layout"],
+    "type": "wap-list",
+    "info": {
+      "heading": {
+        "txt": "Works with any diet",
+        "type": "txt",
+        "style": {}
+      },
+      "list": {
+        "txt": [
+          "Vegeterian",
+          "Vegan",
+          "Pescatarian",
+          "Gluten-free",
+          "Lactose-free",
+          "Keto",
+          "Paleo",
+          "Low FODMAP",
+          "Kid-friendly"
+        ],
+        "type": "txt",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc05b2525f",
+    "classes": ["omnifood-txt", "main-layout"],
+    "type": "wap-text",
+    "thumbnail": "https://i.ibb.co/D1N6wbR/omnifood-text.png",
+    "info": {
+      "heading": {
+        "txt": "Once you try it, you can't go back",
+        "type": "txt",
+        "style": {}
+      },
+      "subHeading": {
+        "txt": "TESTIMONIALS",
+        "type": "txt",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc06d525g",
+    "classes": ["omnifood-reviews"],
+    "type": "wap-container",
+    "thumbnail": "https://i.ibb.co/Wc5ptGv/omnifood-testimonials.png",
+    "info": {
+      "cmps": [
+        {
+          "id": "wc08",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/LZKrsN9/steve.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Dave Bryson",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wc01fv1625",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/YtHtPDY/ben.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Ben Hadley",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wc01fdv527",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/jyR6djG/dave.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Steve Miller",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wcfdc5018",
+          "classes": ["omnifood-review"],
+          "type": "wap-review",
+          "info": {
+            "img": {
+              "type": "img",
+              "url": "https://i.ibb.co/FBVNq7c/hannah.jpg",
+              "style": {}
+            },
+            "text": {
+              "type": "txt",
+              "txt": "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+              "style": {}
+            },
+            "author": {
+              "type": "txt",
+              "txt": "— Hannah Smith",
+              "style": {}
+            }
+          }
+        }
+      ]
+    },
+    "style": {
+      "backgroundColor": "#fdf2e9"
+    }
+  },
+  {
+    "id": "wc0784cff5",
+    "classes": ["omnifood-gallery"],
+    "thumbnail": "https://i.ibb.co/k4PxffF/omnifood-gallery.png",
+    "type": "wap-gallery",
+    "info": {
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "https://i.ibb.co/k5FgxFB/gallery-1.jpg",
+          "https://i.ibb.co/gjkYPbW/gallery-2.jpg",
+          "https://i.ibb.co/3ybXV5f/gallery-3.jpg",
+          "https://i.ibb.co/YQ36XsS/gallery-4.jpg",
+          "https://i.ibb.co/3r8ZjX1/gallery-5.jpg",
+          "https://i.ibb.co/WVjvs5f/gallery-6.jpg",
+          "https://i.ibb.co/9rbqDdp/gallery-7.jpg",
+          "https://i.ibb.co/DR2n2fF/gallery-8.jpg",
+          "https://i.ibb.co/M8sF393/gallery-9.jpg",
+          "https://i.ibb.co/SvF3V2g/gallery-10.jpg",
+          "https://i.ibb.co/gDFgz4V/gallery-11.jpg",
+          "https://i.ibb.co/JcqB8xv/gallery-12.jpg"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wcfd5v205",
+    "classes": ["omnifood-txt", "main-layout"],
+    "type": "wap-text",
+    "thumbnail": "https://i.ibb.co/LhSdg7Z/omnifood-text2.png",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "pricing",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "Eating well without breaking the bank",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wcff0789",
+    "type": "wap-container",
+    "classes": ["omnifood-pricing"],
+    "thumbnail": "https://i.ibb.co/68YqnqQ/omnifood-prices.png",
+    "info": {
+      "cmps": [
+        {
+          "id": "wc695",
+          "classes": ["omnifood-pricing-starter"],
+          "type": "wap-card",
+          "info": {
+            "heading": {
+              "type": "txt",
+              "txt": "starter",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "per month. That's just 13$ per meal!",
+              "style": {}
+            },
+            "price": {
+              "type": "txt",
+              "txt": 399,
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "icon": "",
+                "txt": "1 meal per day",
+                "style": {}
+              },
+              {
+                "type": "txt",
+                "icon": "",
+                "txt": "Order from 11am to 9pm",
+                "style": {}
+              },
+              {
+                "type": "txt",
+                "icon": "",
+                "txt": "Delivery is free",
+                "style": {}
+              }
+            ],
+            "btn": {
+              "type": "btn",
+              "txt": "Start Eating Well!",
+              "link": "#wc03",
+              "style": {}
+            }
+          }
+        },
+        {
+          "id": "wcfvfd6956",
+          "classes": ["omnifood-pricing-complete"],
+          "type": "wap-card",
+          "info": {
+            "heading": {
+              "type": "txt",
+              "txt": "complete",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "per month. That's just 11$ per meal!",
+              "style": {}
+            },
+            "price": {
+              "type": "txt",
+              "txt": 649,
+              "style": {}
+            },
+            "list": [
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "2 meals per day"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "Order 24/7"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "Delivery is free"
+              },
+              {
+                "type": "txt",
+                "style": {},
+                "icon": "",
+                "txt": "Get access to latest recipes"
+              }
+            ],
+            "btn": {
+              "type": "btn",
+              "txt": "Start Eating Well!",
+              "link": "#wc03",
+              "style": {}
+            }
+          }
+        }
+      ]
+    },
+    "style": {}
+  },
+  {
+    "id": "sc587fff8",
+    "classes": [],
+    "type": "wap-conatiner",
+    "info": {
+      "cmps": [
+        {
+          "id": "wc019",
+          "classes": [],
+          "type": "wap-imgs",
+          "img": {
+            "type": "img",
+            "url": "woman.jpg",
+            "style": {}
+          }
+        },
+        {
+          "id": "wc625gfv8",
+          "classes": [],
+          "type": "wap-form",
+          "info": {
+            "heading": {
+              "type": "txt",
+              "txt": "Get your first meal for free!",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!",
+              "style": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "sc599ffd9",
+    "classes": ["omnifood-footer"],
+    "type": "wap-footer",
+    "thumbnail": "https://i.ibb.co/nw77LRZ/omnifood-footer.png",
+    "info": {
+      "logoImg": {
+        "type": "img",
+        "url": "https://i.ibb.co/sg23sYt/omnifood-logo.png",
+        "style": {}
+      },
+      "row1": {
+        "type": "txt",
+        "txt": "Contact us",
+        "texts": [
+          "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
+          "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
+        ],
+        "style": {}
+      },
+      "row2": {
+        "type": "txt",
+        "txt": "Account",
+        "texts": ["Create account", "Sign in", "iOS app", "Android app"],
+        "style": {}
+      },
+      "copyright": {
+        "type": "txt",
+        "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc02bg12g",
+    "type": "wap-header",
+    "thumbnail": "https://i.ibb.co/3RwTxd1/making-diff.jpg",
+    "classes": [
+      "making-diff-header",
+      "flex",
+      "justify-between",
+      "full",
+      "main-layout"
+    ],
+    "info": {
+      "logoTxt": {
+        "type": "txt",
+        "txt": "Creative Studio",
+        "style": {}
+      },
+      "nav": {
+        "_id": "wph01",
+        "type": "wap-nav",
+        "classes": ["making-diff-nav"],
+        "info": {
+          "links": [
+            {
+              "type": "txt",
+              "txt": "About us",
+              "link": "#about",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Our features",
+              "link": "#features",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Digital studio",
+              "link": "#studio",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Portfolio",
+              "link": "#portfolio",
+              "style": {}
+            },
+            {
+              "type": "txt",
+              "txt": "Contact us",
+              "link": "#cta",
+              "style": {}
+            }
+          ]
+        },
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "thumbnail": "https://i.ibb.co/4gDxf1Q/232343.png",
+    "id": "wcdfvgfb01",
+    "type": "wap-hero",
+    "classes": ["making-diff-hero", "full", "main-layout"],
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Creative Stories",
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc03f15f252",
+    "thumbnail": "https://i.ibb.co/YNc5ZLV/making-diff-card.jpg",
+    "type": "wap-container",
+    "classes": ["making-diff-cards", "full"],
+    "info": {
+      "cmps": [
+        {
+          "id": "wcc04",
+          "classes": ["making-diff-card about"],
+          "type": "wap-card",
+          "info": {
+            "tag": "about us",
+            "heading": {
+              "type": "txt",
+              "txt": "Time to Make a Difference",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Phasellus scelerisque arcu vestibulum tempor tempor. Donec vulputate leo et metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
+              "style": {}
+            },
+            "list": [],
+            "btn": {
+              "type": "btn",
+              "txt": "view more",
+              "link": "",
+              "style": {}
+            }
+          },
+          "style": {}
+        },
+        {
+          "id": "wccfvc1205",
+          "classes": ["making-diff-card features"],
+          "type": "wap-card",
+          "info": {
+            "tag": "our features",
+            "num": "",
+            "img": "",
+            "heading": {
+              "type": "txt",
+              "txt": "Create Your Visual Style",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Maecenas non ipsum sollicitudin, sollicitudin ligula et, pharetra enim. Praesent rhoncus, lorem eget auctor finibus, turpis turpis feugiat orci, non porta nisi augue quis ligula. Pellentesque dictum nulla in massa ornare, porttitor",
+              "style": {}
+            },
+            "list": [],
+            "btn": {
+              "type": "txt",
+              "txt": "view more",
+              "link": "",
+              "style": {}
+            }
+          },
+          "style": {}
+        },
+        {
+          "id": "wccg222206",
+          "classes": ["making-diff-card digital"],
+          "type": "wap-card",
+          "info": {
+            "tag": "digital studio",
+            "num": "",
+            "img": "",
+            "heading": {
+              "type": "txt",
+              "txt": "We develop Digital Strategies",
+              "style": {}
+            },
+            "subHeading": {
+              "type": "txt",
+              "txt": "Our core clients are from the Europe countries metus hendrerit bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. In scelerisque nisl nec ornare euismod.",
+              "style": {}
+            },
+            "list": [],
+            "btn": {
+              "type": "btn",
+              "txt": "view more",
+              "link": "",
+              "style": {}
+            }
+          },
+          "style": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "wc05bggb5225",
+    "thumbnail": "https://i.ibb.co/6vVH968/making-diff-text.jpg",
+    "classes": ["making-diff-txt"],
+    "type": "wap-text",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "portfilio",
+        "style": {}
+      },
+      "subHeading": {
+        "type": "txt",
+        "txt": "We are nominated to Agency of Year",
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wc078hg545",
+    "classes": ["making-diff-gallery"],
+    "type": "wap-gallery",
+    "info": {
+      "txt": "",
+      "imgs": {
+        "type": "imgs",
+        "urls": [
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/c42d596474a75ca1aeb4f52c/photo150185677743529877ed80a3dmin.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/a05e89dff8695d25b3045604/Untitled3min.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/2ebb201a959e5a6584fcd054/9.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/d4f239f0141d5a2d85976154/x.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/bc8cb7fa30995d42b5a51f1a/uigyjh.jpg",
+          "//images01.nicepage.com/c461c07a441a5d220e8feb1a/91944e8b55d95ba7ada7ee1c/Untitled5.jpg"
+        ],
+        "style": {}
+      }
+    },
+    "style": {}
+  },
+  {
+    "id": "wc055g524",
+    "thumbnail": "https://i.ibb.co/7nB3zZ0/making-diff-contact.jpg",
+    "classes": ["making-diff-contact", "full"],
+    "type": "wap-contact",
+    "info": {
+      "heading": {
+        "type": "txt",
+        "txt": "Contact Us",
+        "style": {}
+      },
+      "form": {
+        "type": "form",
+        "inputs": [
+          {
+            "type": "text",
+            "placeholder": "name"
+          },
+          {
+            "type": "email",
+            "placeholder": "email"
+          }
+        ],
+        "textarea": {
+          "placeholder": "Message"
+        },
+        "btn": {
+          "type": "submit",
+          "txt": "submit"
+        },
+        "style": {}
+      }
+    }
+  },
+  {
+    "id": "wpm02225",
+    "thumbnail": "",
+    "classes": ["wap-map"],
+    "type": "wap-map",
+    "info": {
+      "markers": [
+        {
+          "position": {
+            "lat": 31.8102,
+            "lng": 34.6566
+          },
+          "name": "Ashdod",
+          "_id": "m101"
+        }
+      ],
+      "center": {
+        "lat": 31.8102,
+        "lng": 34.6566
+      }
+    }
+  }
+]
