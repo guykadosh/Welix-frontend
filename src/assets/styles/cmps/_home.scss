@@ -33,6 +33,10 @@
             letter-spacing: em(1.3px);
             padding: em(24px) em(38px);
             cursor: pointer;
+
+            &.link-dashboard {
+                padding-right: 0;
+            }
         }
 
         .link-signup {
@@ -74,13 +78,13 @@
                     text-decoration: none;
                     font-family: Nunito-bold;
                     text-transform: uppercase;
-                    color: $light-color;
                     font-size: em(16px);
                     letter-spacing: em(1.3px);
                     padding: em(24px) em(38px);
                     cursor: pointer;
                     background-color: #be123c;
                     border: 1px solid #be123c;
+                    color: $light-color;
 
                     &:hover {
                         background-color: #fff;
@@ -131,6 +135,7 @@
             .list-wrapper {
 
                 grid-area: list;
+                min-width: max-content;
 
                 li {
                     text-align: right;
@@ -145,7 +150,6 @@
                     &.active {
                         font-weight: 700;
                         color: $light-color;
-                        text-shadow: rgba(252, 252, 252, 0.701);
                     }
                 }
             }
