@@ -192,47 +192,77 @@
                 "style": {}
             },
             {
-                "id": "wcd4654%%%j",
+                "id": "ffvfg1b51g55",
                 "classes": [
-                    "cake-contact",
+                    "full",
+                    "cake-container",
                     "cake-layout"
                 ],
-                "type": "wap-contact",
+                "type": "wap-container",
                 "info": {
-                    "heading": {
-                        "type": "txt",
-                        "txt": "Contact me",
-                        "style": {}
-                    },
-                    "subHeading": {
-                        "type": "txt",
-                        "txt": "123-456-7890  |  INFO@MYSITE.COM",
-                        "style": {}
-                      },
-            
-                    "form": {
-                        "type": "form",
-                        "inputs": [
-                            {
-                                "type": "text",
-                                "placeholder": "name"
+                    "cmps": [
+                        {
+                            "id": "wcd4654%%%j",
+                            "classes": [
+                                "cake-contact",
+                                "cake-layout"
+                            ],
+                            "type": "wap-contact",
+                            "info": {
+                                "heading": {
+                                    "type": "txt",
+                                    "txt": "Contact me",
+                                    "style": {}
+                                },
+                                "subHeading": {
+                                    "type": "txt",
+                                    "txt": "123-456-7890   |   INFO@MYSITE.COM",
+                                    "style": {}
+                                },
+                                "form": {
+                                    "type": "form",
+                                    "inputs": [
+                                        {
+                                            "type": "text",
+                                            "placeholder": "name"
+                                        },
+                                        {
+                                            "type": "email",
+                                            "placeholder": "email"
+                                        }
+                                    ],
+                                    "textarea": {
+                                        "placeholder": "Message"
+                                    },
+                                    "btn": {
+                                        "type": "submit",
+                                        "txt": "submit"
+                                    },
+                                    "style": {}
+                                }
                             },
-                            {
-                                "type": "email",
-                                "placeholder": "email"
+                            "style": {}
+                        },
+                        {
+                            "id": "fdv1515",
+                            "classes": [
+                                "cake-footer-picture",
+                                "cake-layout"
+                            ],
+                            "type": "wap-gallery",
+                            "info": {
+                                "imgs": {
+                                    "type": "imgs",
+                                    "urls": [
+                                        [
+                                            "https://i.ibb.co/cvzZr9F/courtney-cook-le7-D9-QFi-Pr8-unsplash.jpg"
+                                        ]
+                                    ]
+                                }
                             }
-                        ],
-                        "textarea": {
-                            "placeholder": "Message"
-                        },
-                        "btn": {
-                            "type": "submit",
-                            "txt": "submit"
-                        },
-                        "style": {}
-                    }
-                },
-                "style": {}
+                        }
+                    ]
+                }
             }
         ]
     }

@@ -1,9 +1,10 @@
 .cake {
     &-header {
         background-color: rgb(255 255 255);
-        padding: rem(35px) 0;
         font-family: Oswald-light;
         letter-spacing: 2px;
+        padding: rem(35px) 0;
+
     }
 
     &-nav {
@@ -25,31 +26,88 @@
 
     &-hero {
         .hero-inner {
-            margin-bottom: rem(19px);
-            display: flex;
-            flex-wrap: wrap;
-            gap: rem(20px);
+            justify-items: center;
+
+            .medium & {
+                margin-bottom: rem(25px);
+                display: flex;
+                flex-wrap: wrap;
+                gap: rem(20px);
+
+            }
+
+            @include for-medium-layout {
+
+                margin-bottom: rem(25px);
+                display: flex;
+                flex-wrap: wrap;
+                gap: rem(20px);
+            }
+
 
             img {
-                display: flex;
-                width: 480px;
-                height: 800px;
-                object-fit: fill;
+                width: rem(378px);
+                height: rem(500px);
+                margin-bottom: rem(25px);
+                object-fit: cover;
+                object-position: 50% 50%;
+                /* object-fit:cover; */
+
+                .medium & {
+                    width: rem(480px);
+                    height: rem(800px);
+                    object-fit: fill;
+
+                }
+
+                .wap-details & {
+                    @include for-medium-layout {
+                        width: rem(480px);
+                        object-fit: fill;
+                        height: rem(800px);
+                    }
+
+                }
+
             }
 
             .img1 {
-                order: -1;
+                .medium & {
+                    order: 1;
+                }
+
+                @include for-medium-layout {
+                    order: 1;
+                }
+
             }
 
             .text-box {
+                order: 0;
+
                 font-family: Oswald-light;
                 background-color: rgb(247 233 228);
-                width: 470px;
                 font-size: rem(35px);
-                padding: rem(120px);
+              /*   width: rem(370px); */
+                height: rem(500px);
                 text-align: center;
-                height: 800px;
-                order: 0;
+                order: 1;
+                padding: rem(35px);
+                margin-bottom: rem(25px);
+
+                .medium & {
+                    height: rem(800px);
+                    width: rem(470px);
+                    padding: rem(120px);
+                }
+
+                .wap-details & {
+                    @include for-medium-layout {
+                        height: rem(800px);
+                        width: rem(470px);
+                        padding: rem(120px);
+                    }
+                }
 
                 h1 {
                     margin-bottom: rem(75px);
@@ -67,13 +125,15 @@
                 }
             }
         }
+
     }
 
     &-txt-about {
         margin-bottom: rem(25px);
         letter-spacing: rem(2px);
-        font-size: rem(18px);
-        background-color: rgba(220, 215, 213, 0.701);
+        font-size: rem(22px);
+        background-image: linear-gradient(56deg, #ffffff 46.67%, #f7e9e4 46.67%, #f7e9e4 50%, #ffffff 50%, #ffffff 96.67%, #f7e9e4 96.67%, #f7e9e4 100%);
+        background-size: 72.37px 107.30px;
         padding: rem(60px);
         text-align: center;
         font-family: Oswald-light;
@@ -97,12 +157,13 @@
     &-txt-follow {
         padding: rem(55px);
         text-align: center;
-        font-size: rem(25px);
+        font-size: rem(35px);
 
         font-family: Oswald-light;
     }
 
     &-gallery-options {
+
         .imgs-container {
             margin-bottom: rem(55px);
             //add cake-layout
@@ -120,15 +181,86 @@
 
     }
 
-    &-contact {
+    &-container {
+        background-color: #f7e9e4;
+
+        .wap-container__inner {
+            display: flex;
+            flex-direction: row;
+
+            .cake-contact {
+                font-family: Oswald-light;
+
+                padding: rem(65px);
+                justify-items: center;
+
+                .heading {
+                    font-family: Oswald-light;
+                    font-size: rem(45px);
+                    margin-bottom: rem(35px);
+                }
+
+                .sub-heading {
+                    margin-bottom: rem(55px);
+                    font-size: rem(23px);
+                    letter-spacing: 2px;
+                }
+
+                .form-container {
+                    .contact-form {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        input,
+                        textarea {
+                            outline-style: none;
+                            cursor: pointer;
+                            font-size: rem(20px);
+                            margin-bottom: rem(35px);
+                            width: rem(550px);
+                            background-color: unset;
+                            border: none;
+                            border-bottom: 1px solid $dark-color;
+                        }
+                    }
+
+                    .contact-submit {
+                        width: rem(550px);
+                        height: rem(40px);
+                        background-color: $dark-color1;
+                        color: $light-color;
+                        font-size: rem(23px);
+                    }
+                }
+
+
+            }
+
+            img {
+                width: rem(350px);
+            }
+        }
+
+    }
+
+    /*     &-contact {
+        font-family: Oswald-light;
+
         padding: rem(65px);
         justify-items: center;
-        background-color: rgb(247 233 228);
+        background-color: #f7e9e4;
 
         .heading {
             font-family: Oswald-light;
             font-size: rem(45px);
             margin-bottom: rem(35px);
+        }
+
+        .sub-heading {
+            margin-bottom: rem(55px);
+            font-size: rem(23px);
+            letter-spacing: 2px;
         }
 
         .form-container {
@@ -139,6 +271,8 @@
 
                 input,
                 textarea {
+                    outline-style: none;
+                    cursor: pointer;
                     font-size: rem(20px);
                     margin-bottom: rem(35px);
                     width: rem(550px);
@@ -147,6 +281,15 @@
                     border-bottom: 1px solid $dark-color;
                 }
             }
+
+            .contact-submit {
+                width: rem(550px);
+                height: rem(40px);
+                background-color: $dark-color1;
+                color: $light-color;
+                font-size: rem(23px);
+            }
         }
     }
+ */
 }
