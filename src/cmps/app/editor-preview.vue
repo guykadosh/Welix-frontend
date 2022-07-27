@@ -1,23 +1,24 @@
 <template>
-    <div class="editor-preview main-layout full" @mouseenter="onPreview" @mouseleave="onPreview"
-       >
+    <div class="editor-preview main-layout full" @mouseenter="onPreview" @mouseleave="onPreview">
         <div class="editor-preview__inner">
 
-            <section class="imgs-wrapper">
-                <img src="../../assets/img/prev1.png" class="img" :class="imgs[0].pos" />
-                <img src="../../assets/img/prev2.png" class="img" :class="imgs[1].pos" />
-                <img src="../../assets/img/prev3.png" class="img" :class="imgs[2].pos" />
-                <img src="../../assets/img/prev4.png" class="img" :class="imgs[3].pos" />
-            </section>
+            <div class="editor-preview__inner__container">
+                <section class="imgs-wrapper">
+                    <img src="../../assets/img/prev1.png" class="img" :class="imgs[0].pos" />
+                    <img src="../../assets/img/prev2.png" class="img" :class="imgs[1].pos" />
+                    <img src="../../assets/img/prev3.png" class="img" :class="imgs[2].pos" />
+                    <img src="../../assets/img/prev4.png" class="img" :class="imgs[3].pos" />
+                </section>
 
-            <section class="list-wrapper" @wheel.prevent="scrollToPos">
-                <ul class="clean-list">
-                    <li @click="setImgPos(0)" :class="{ active: this.currImg === 0 }">Choose Template</li>
-                    <li @click="setImgPos(1)" :class="{ active: this.currImg === 1 }">Edit Your Website</li>
-                    <li @click="setImgPos(2)" :class="{ active: this.currImg === 2 }">Check how it is on all devices</li>
-                    <li @click="setImgPos(3)" :class="{ active: this.currImg === 3 }">Save and publish your site</li>
-                </ul>
-            </section>
+                <section class="list-wrapper" @wheel.prevent="scrollToPos">
+                    <ul class="clean-list">
+                        <li @click="setImgPos(0)" :class="{ active: this.currImg === 0 }">Choose a template</li>
+                        <li @click="setImgPos(1)" :class="{ active: this.currImg === 1 }">Costumize your site</li>
+                        <li @click="setImgPos(2)" :class="{ active: this.currImg === 2 }">Check on all devices</li>
+                        <li @click="setImgPos(3)" :class="{ active: this.currImg === 3 }">Publish your site</li>
+                    </ul>
+                </section>
+            </div>
 
         </div>
     </div>

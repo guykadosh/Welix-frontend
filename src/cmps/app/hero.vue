@@ -1,6 +1,6 @@
 <template >
   <section class="main-hero main-layout full">
-   
+
     <div class="hero__inner">
 
       <div class="text-box">
@@ -19,7 +19,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    x: Number,
+    y: Number
+  },
+}
 </script>
 <style >
 </style>
