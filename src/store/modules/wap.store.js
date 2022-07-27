@@ -132,6 +132,7 @@ export default {
       }
     },
     async loadWap({ commit }, { wapId }) {
+      console.log(wapId)
       const wap = await wapService.getById(wapId)
       commit({
         type: 'setCurrWap',

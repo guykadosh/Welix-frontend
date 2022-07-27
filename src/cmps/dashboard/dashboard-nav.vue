@@ -1,17 +1,19 @@
 <template>
-  <div class="dashboard-nav">
-    <h2 class="title">My Sites</h2>
-    <ul v-if="waps" class="clean-list flex flex-column">
-      <li
-        class="site-name"
-        v-for="(wap, idx) in waps"
-        @click="showWap(idx)"
-        :key="wap._id"
-      >
-        {{ wap.name }}
-      </li>
-    </ul>
-    <span @click="logout">Logout</span>
+  <div class="dashboard-nav flex flex-column justify-between">
+    <div>
+      <h2 class="title">My Sites</h2>
+      <ul v-if="waps" class="clean-list flex flex-column">
+        <li
+          class="site-name"
+          v-for="(wap, idx) in waps"
+          @click="showWap(idx)"
+          :key="wap._id"
+        >
+          {{ wap.name }}
+        </li>
+      </ul>
+    </div>
+    <span class="logout" @click="logout">Logout</span>
   </div>
 </template>
 <script>

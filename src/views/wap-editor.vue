@@ -64,7 +64,8 @@ export default {
       socketService.emit(SOCKET_EMIT_SET_EDITOR, wapId)
 
       if (wapId) {
-        await this.$store.dispatch('loadWap', wapId)
+        console.log(wapId)
+        await this.$store.dispatch({ type: 'loadWap', wapId })
       } else {
         if (!this.wap)
           this.$store.commit({

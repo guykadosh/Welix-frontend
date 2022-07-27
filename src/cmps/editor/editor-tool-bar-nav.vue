@@ -17,14 +17,14 @@
         <font-awesome-icon icon="fa-light fa-plus" />
       </div>
     </div>
-
-
-
   </div>
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
       <ul class="clean-list">
-        <li @click="setTool('section')" :class="{ active: activeTool === 'section' && isToolOpen }">
+        <li
+          @click="setTool('section')"
+          :class="{ active: activeTool === 'section' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Add Section</span>
@@ -34,7 +34,10 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click="setTool('theme')" :class="{ active: activeTool === 'theme' && isToolOpen }">
+        <li
+          @click="setTool('theme')"
+          :class="{ active: activeTool === 'theme' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Themes</span>
@@ -44,13 +47,19 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click="setTool('edit')" :class="{ active: activeTool === 'edit' && isToolOpen }">
+        <li
+          @click="setTool('edit')"
+          :class="{ active: activeTool === 'edit' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Edit</span>
             </template>
             <div>
-              <font-awesome-icon icon="fa-light fa-pen-to-square" class="icon" />
+              <font-awesome-icon
+                icon="fa-light fa-pen-to-square"
+                class="icon"
+              />
             </div>
           </a-tooltip>
         </li>
@@ -69,7 +78,7 @@
           </a-tooltip>
         </li>
         <li>
-          <a-tooltip placement="right">
+          <a-tooltip @click="copyUrl" placement="right">
             <template #title>
               <span>Work together</span>
             </template>
@@ -102,7 +111,9 @@ import {
   HighlightOutlined,
   BgColorsOutlined,
   SaveOutlined,
+  CopyrightOutlined,
 } from '@ant-design/icons-vue'
+import { notification } from 'ant-design-vue'
 export default {
   name: '',
   props: {
@@ -126,8 +137,7 @@ export default {
   },
   methods: {
     setTool(type) {
-      this.isMobileMenu = false,
-        this.activeTool = type
+      ;(this.isMobileMenu = false), (this.activeTool = type)
       this.$emit('setTool', type)
     },
     saveWap() {
@@ -135,11 +145,17 @@ export default {
     },
     toggleMobileMenu() {
       this.isMobileMenu = !this.isMobileMenu
-    }
+    },
+    copyUrl() {
+      console.log('Hi?')
+      navigator.clipboard.writeText(window.location.href)
+      notification['success']({
+        message: `Url copied! send it to work together`,
+      })
+    },
   },
   emits: ['setTool', 'saved'],
 }
 </script>
 
-<style>
-</style>
+<style></style>

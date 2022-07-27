@@ -1,9 +1,9 @@
 <template>
-  <BarChart :chartData="data" />
+  <LineChart :chartData="data" />
 </template>
 
 <script lang="ts">
-import { BarChart } from 'vue-chart-3'
+import { LineChart } from 'vue-chart-3'
 import { Chart, registerables } from 'chart.js'
 
 Chart.register(...registerables)
@@ -14,6 +14,6 @@ export default {
     data: Object,
   },
 
-  components: { BarChart },
+  components: { LineChart },
 }
 </script>
