@@ -1,10 +1,17 @@
 <template>
   <section class="flex sections">
     <div class="tool-bar-actions__labels flex flex-column">
-      <div class="tool-bar-actions__label flex items-center" v-for="(label, idx) in labels" :key="label.id"
-        :class="{ selected: label.selected }">
-        <span class="tool-bar-actions__label-text" :class="{ selected: label.selected }"
-          @click="setFilter(label.type, idx)">
+      <div
+        class="tool-bar-actions__label flex items-center"
+        v-for="(label, idx) in labels"
+        :key="label.id"
+        :class="{ selected: label.selected }"
+      >
+        <span
+          class="tool-bar-actions__label-text"
+          :class="{ selected: label.selected }"
+          @click="setFilter(label.type, idx)"
+        >
           {{ label.title }}
         </span>
         <!-- <span class="mark-active" :class="{ selected: label.selected }"></span> -->
@@ -13,12 +20,26 @@
 
     <div class="tool-bar-actions__options flex flex-column">
       <div class="tool-bar-actions__options-filter">
-        <a-select ref="select" class="select-filter" placeholder="All" @select="setSelectFilter">
-          <a-select-option v-for="(label, idx) in labels" :key="label.id" :value="idx">{{ label.title }}</a-select-option>
+        <a-select
+          ref="select"
+          class="select-filter"
+          placeholder="All"
+          @select="setSelectFilter"
+        >
+          <a-select-option
+            v-for="(label, idx) in labels"
+            :key="label.id"
+            :value="idx"
+            >{{ label.title }}</a-select-option
+          >
         </a-select>
       </div>
       <p class="tool-bar-actions__options-title">{{ title }}</p>
-      <Container :get-child-payload="getChildPayload" group-name="1" behaviour="copy">
+      <Container
+        :get-child-payload="getChildPayload"
+        group-name="1"
+        behaviour="copy"
+      >
         <Draggable v-for="cmp in cmps" :key="cmp.id">
           <div class="cmp-preview">
             <img v-if="cmp.thumbnail" :src="cmp.thumbnail" alt="" />
@@ -39,12 +60,12 @@ export default {
   data() {
     return {
       labels: [
-        { id: 'label00', title: 'All', type: '', selected: true },
+        { id: 'label00', title: 'All', type: '', selected: false },
         {
           id: 'label01',
           title: 'Headers',
           type: 'wap-header',
-          selected: false,
+          selected: true,
         },
         { id: 'label02', title: 'Heros', type: 'wap-hero', selected: false },
         {
@@ -94,7 +115,7 @@ export default {
     setSelectFilter(idx) {
       const { type } = this.labels[idx]
       this.setFilter(type, idx)
-    }
+    },
   },
   computed: {
     title() {
