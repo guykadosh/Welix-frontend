@@ -23,9 +23,15 @@
 
       <h2>Traffic</h2>
       <Chart :data="weeklyData" />
+
+      <div class="flex">
+        <!-- <compose-mail /> -->
+        <!-- <div> -->
+
+        <!-- </div> -->
+      </div>
     </div>
   </div>
-  <!-- <compose-mail /> -->
 </template>
 <script>
 import { userService } from '../../services/user.service'

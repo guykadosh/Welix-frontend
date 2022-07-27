@@ -189,7 +189,7 @@ export default {
     44% 100%,
     0 0
   );
-  z-index: 3;
+  z-index: 100;
 }
 
 .pointer-text {

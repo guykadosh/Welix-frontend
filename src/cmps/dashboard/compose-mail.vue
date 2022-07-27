@@ -31,12 +31,12 @@ export default {}
 <style>
 .compose-email {
   background-color: #fff;
-  position: fixed;
+  position: relative;
   /* bottom: -50%; */
   /* right: -50%; */
   bottom: 0;
   right: 0;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   width: 28rem;
   height: 28rem;
   /* width: 100%; */
@@ -45,13 +45,14 @@ export default {}
   border-radius: 8px;
   z-index: 1000;
   outline: 1px solid #f8f9fa79;
+  margin-inline-end: 30px;
 }
 
 .compose-email.expanded {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* position: fixed; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   z-index: 120;
   width: 40rem;
   height: 30rem;
@@ -134,7 +135,7 @@ textarea {
   color: whitesmoke;
   background-color: #be123c;
   cursor: pointer;
-  position: fixed;
+  /* position: fixed; */
   bottom: 5%;
   right: 5%;
 }
