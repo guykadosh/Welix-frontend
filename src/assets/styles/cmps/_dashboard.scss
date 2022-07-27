@@ -26,35 +26,86 @@
         padding-left: rem(8px);
       }
 
-      .site-name {
+      .site-name,
+      .logout {
         font-size: rem(16px);
         padding: rem(5px) 0;
         border-radius: 3px;
         cursor: pointer;
         padding-left: rem(8px);
-        &:hover {
-          background-color: rgba($light-color1, 30%);
-          border-left: solid 3px $light-color2;
-        }
+      }
+
+      .logout:hover {
+        color: $light-color2;
+      }
+
+      .site-name:hover {
+        background-color: rgba($light-color1, 30%);
+        border-left: solid 3px $light-color2;
       }
     }
 
     .dashboard-main {
       flex-grow: 1;
-
+      // padding: rem(15px);
       background-color: $light-color;
       &-header {
-        background-color: #131720;
+        // background-color: #131720;
         width: 100%;
-        border: 2px solid #131720;
+        // border: 2px solid #131720;
         border-left: none;
-        border-bottom-right-radius: rem(50px);
+        border-bottom: 1px solid $light-color4;
+        // border-bottom-right-radius: rem(50px);
         .title {
           font-size: rem(28px);
           font-family: Reboto-Bold, sans-serif;
-          padding: rem(6px) rem(15px);
+          padding: rem(7px) rem(27px);
           // padding-bottom: rem(7px);
-          color: $light-color1;
+          // color: $light-color1;
+        }
+      }
+
+      &__inner {
+        padding: rem(15px) rem(28px);
+        .top {
+          margin-block-end: rem(28px);
+          .site-name {
+            color: #be123c;
+            font-size: rem(32px);
+          }
+
+          .dash-btn {
+            display: inline-block;
+            width: rem(100px);
+
+            font-weight: 500;
+            padding: rem(8px) rem(12px);
+            cursor: pointer;
+            border-radius: 9px;
+            text-align: center;
+            border: 1px solid #be123c;
+
+            &:first-child {
+              background-color: #fff;
+              color: #be123c;
+
+              &:hover {
+                background-color: #be123c;
+                color: $light-color;
+              }
+            }
+
+            &:last-child {
+              margin-inline-start: rem(10px);
+              background-color: #be123c;
+              color: $light-color;
+
+              &:hover {
+                background-color: #fff;
+                color: #be123c;
+              }
+            }
+          }
         }
       }
     }

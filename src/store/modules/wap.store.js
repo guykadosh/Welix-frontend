@@ -131,6 +131,14 @@ export default {
         console.log(err)
       }
     },
+    async loadWap({ commit }, { wapId }) {
+      console.log(wapId)
+      const wap = await wapService.getById(wapId)
+      commit({
+        type: 'setCurrWap',
+        wap: wap,
+      })
+    },
     async saveWap({ commit, getters }, { wap }) {
       try {
         // const wap = JSON.parse(JSON.stringify(getters.getCurrWap))

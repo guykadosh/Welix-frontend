@@ -1,45 +1,19 @@
 <template>
-  <section
-    v-if="cmp"
-    class="wap-text"
-    :style="cmp.style"
-    :class="[...cmp.classes, selected]"
-    v-click-outside="unselect"
-    @click="setEditable('cmp')"
-  >
-    <span
-      class="tag"
-      v-if="info.tag"
-      :style="info.tag.style"
-      ref="tag"
-      @click.stop="setEditable(info.tag.type, 'tag')"
-      @input="changeTxt('tag')"
-      @mousedown.stop
-      >{{ info.tag.txt }}</span
-    >
-    <h2
-      contenteditable="true"
-      class="text1"
-      :style="info.heading.style"
-      ref="heading"
-      @click.stop="setEditable(info.heading.type, 'heading')"
-      @input="changeTxt('heading')"
-      @mousedown.stop
-    >
-      {{ info.heading.txt }}
-    </h2>
-    <h2
-      v-if="info.subHeading"
-      contenteditable="true"
-      class="text2"
-      ref="subHeading"
-      :style="info.subHeading.style"
-      @click.stop="setEditable(info.subHeading.type, 'subHeading')"
-      @input="changeTxt('subHeading')"
-      @mousedown.stop
-    >
-      {{ info.subHeading.txt }}
-    </h2>
+  <section v-if="cmp" class="wap-text" :style="cmp.style" :class="[...cmp.classes, selected]" v-click-outside="unselect"
+    @click="setEditable('cmp')">
+    <section class="__inner">
+      <span class="tag" v-if="info.tag" :style="info.tag.style" ref="tag"
+        @click.stop="setEditable(info.tag.type, 'tag')" @input="changeTxt('tag')" @mousedown.stop>{{ info.tag.txt
+        }}</span>
+      <h2 contenteditable="true" class="text1" :style="info.heading.style" ref="heading"
+        @click.stop="setEditable(info.heading.type, 'heading')" @input="changeTxt('heading')" @mousedown.stop>
+        {{ info.heading.txt }}
+      </h2>
+      <h2 v-if="info.subHeading" contenteditable="true" class="text2" ref="subHeading" :style="info.subHeading.style"
+        @click.stop="setEditable(info.subHeading.type, 'subHeading')" @input="changeTxt('subHeading')" @mousedown.stop>
+        {{ info.subHeading.txt }}
+      </h2>
+    </section>
   </section>
 </template>
 <script>

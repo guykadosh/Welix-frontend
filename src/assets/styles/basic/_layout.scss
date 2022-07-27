@@ -175,10 +175,7 @@
 
 .cake-layout {
   display: grid;
-  background-color: gray;
-  grid-template-columns: 10px 1fr 10
-    /*  */
-    px;
+  grid-template-columns: 10px 1fr 10px;
 
   >* {
     grid-column: 2;
@@ -216,32 +213,28 @@
 
   .wap-details & {
     @include for-small-layout {
-      background-color: cornflowerblue;
       grid-template-columns: 1fr 520px 1fr;
-
+      
       >* {
         grid-column: 2;
       }
     }
-
+    
     @include for-medium-layout {
-      background-color: rgb(209, 57, 57);
       grid-template-columns: 1fr 820px 1fr;
     }
-
+    
     @include for-narrow-layout {
-      background-color: aquamarine;
-      grid-template-columns: 1fr 960px 1fr;
+      grid-template-columns: 1fr 1000px 1fr;
     }
 
     @include for-normal-layout {
-      background-color: aliceblue;
       grid-template-columns: 1fr 1260px 1fr;
+
     }
 
     @include for-wide-layout {
-      background-color: pink;
-      grid-template-columns: 1fr 1470px 1fr;
+      grid-template-columns: 1fr 1320px 1fr;
     }
   }
 

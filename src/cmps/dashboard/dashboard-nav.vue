@@ -1,17 +1,19 @@
 <template>
-  <div class="dashboard-nav">
-    <h2 class="title">My Sites</h2>
-    <ul v-if="waps" class="clean-list flex flex-column">
-      <li
-        class="site-name"
-        @click="editWap(wap)"
-        v-for="wap in waps"
-        :key="wap._id"
-      >
-        {{ wap.name }}
-      </li>
-    </ul>
-    <span @click="logout">Logout</span>
+  <div class="dashboard-nav flex flex-column justify-between">
+    <div>
+      <h2 class="title">My Sites</h2>
+      <ul v-if="waps" class="clean-list flex flex-column">
+        <li
+          class="site-name"
+          v-for="(wap, idx) in waps"
+          @click="showWap(idx)"
+          :key="wap._id"
+        >
+          {{ wap.name }}
+        </li>
+      </ul>
+    </div>
+    <span class="logout" @click="logout">Logout</span>
   </div>
 </template>
 <script>
@@ -30,10 +32,6 @@ export default {
   },
   async created() {},
   methods: {
-    editWap(wap) {
-      this.$store.commit({ type: 'setCurrWap', wap })
-      this.$router.push('wap/editor')
-    },
     async logout() {
       try {
         await this.$store.dispatch({ type: 'logout' })
@@ -41,6 +39,9 @@ export default {
       } catch (err) {
         console.log(err)
       }
+    },
+    showWap(idx) {
+      this.$emit('picked', idx)
     },
   },
   computed: {},
