@@ -1,5 +1,5 @@
 <template>
-  <section class="wap-nav" :style="cmp.style">
+  <section class="wap-nav" :class="cmp.classes" :style="cmp.style">
     <div class="screen full" @click="toggleMenu" v-if="isMenuOpen"></div>
     <MenuOutlined class="hamburger" @click="toggleMenu" />
     <ul class="nav-bar clean-list flex items-center" :class="isShown">

@@ -1,5 +1,152 @@
-.cake{
+.cake {
     &-header {
-        background-color: red;
+        background-color: rgb(255 255 255);
+        padding: rem(35px) 0;
+        font-family: Oswald-light;
+        letter-spacing: 2px;
+    }
+
+    &-nav {
+        a {
+
+            font-family: Oswald-light;
+            color: $dark-color;
+            display: inline-block;
+        }
+
+        li {
+            &:not(:last-child) {
+
+                margin-right: rem(25px);
+            }
+
+        }
+    }
+
+    &-hero {
+        .hero-inner {
+            margin-bottom: rem(19px);
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(20px);
+
+            img {
+                display: flex;
+                width: 480px;
+                height: 800px;
+                object-fit: fill;
+            }
+
+            .img1 {
+                order: -1;
+            }
+
+            .text-box {
+                font-family: Oswald-light;
+                background-color: rgb(247 233 228);
+                width: 470px;
+                font-size: rem(35px);
+                padding: rem(120px);
+                text-align: center;
+                height: 800px;
+                order: 0;
+
+                h1 {
+                    margin-bottom: rem(75px);
+                    margin-top: rem(65px);
+                }
+
+                .btn1 {
+                    font-weight: 700;
+                    color: $dark-color;
+                    background-color: $light-color;
+                    padding: rem(15px);
+                    border-radius: rem(15px);
+
+
+                }
+            }
+        }
+    }
+
+    &-txt-about {
+        margin-bottom: rem(25px);
+        letter-spacing: rem(2px);
+        font-size: rem(18px);
+        background-color: rgba(220, 215, 213, 0.701);
+        padding: rem(60px);
+        text-align: center;
+        font-family: Oswald-light;
+
+    }
+
+    &-gallery-about {
+        .imgs-container {
+            gap: rem(20px);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        img {
+            width: rem(725px);
+            height: rem(570px);
+            object-fit: cover;
+        }
+    }
+
+    &-txt-follow {
+        padding: rem(55px);
+        text-align: center;
+        font-size: rem(25px);
+
+        font-family: Oswald-light;
+    }
+
+    &-gallery-options {
+        .imgs-container {
+            margin-bottom: rem(55px);
+            //add cake-layout
+            gap: rem(5px);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                width: 179px;
+                height: rem(179px);
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    &-contact {
+        padding: rem(65px);
+        justify-items: center;
+        background-color: rgb(247 233 228);
+
+        .heading {
+            font-family: Oswald-light;
+            font-size: rem(45px);
+            margin-bottom: rem(35px);
+        }
+
+        .form-container {
+            .contact-form {
+
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea {
+                    font-size: rem(20px);
+                    margin-bottom: rem(35px);
+                    width: rem(550px);
+                    background-color: unset;
+                    border: none;
+                    border-bottom: 1px solid $dark-color;
+                }
+            }
+        }
     }
 }

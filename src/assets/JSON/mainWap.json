@@ -133,7 +133,8 @@
             {
                 "id": "wc078hg545",
                 "classes": [
-                    "cake-gallery-about"
+                    "cake-gallery-about",
+                    "cake-layout"
                 ],
                 "type": "wap-gallery",
                 "info": {
@@ -168,7 +169,8 @@
             {
                 "id": "wc0$$4868g5",
                 "classes": [
-                    "cake-gallery-options"
+                    "cake-gallery-options",
+                    "cake-layout"
                 ],
                 "type": "wap-gallery",
                 "info": {
@@ -176,7 +178,7 @@
                         "type": "imgs",
                         "urls": [
                             "https://i.ibb.co/GT1bmxw/01.jpg",
-                            "https://i.ibb.co/BBykc7N/02.jpg" ,
+                            "https://i.ibb.co/BBykc7N/02.jpg",
                             "https://i.ibb.co/bJMW30p/2e2aa872-mv2.webp",
                             "https://i.ibb.co/ZfHhXzx/05.jpg",
                             "https://i.ibb.co/mhtFTkG/e1c78c-2.webp",
@@ -192,41 +194,46 @@
             {
                 "id": "wcd4654%%%j",
                 "classes": [
-                  "cake-contact",
-                  "cake-layout"
+                    "cake-contact",
+                    "cake-layout"
                 ],
                 "type": "wap-contact",
                 "info": {
-                  "heading": {
-                    "type": "txt",
-                    "txt": "Contact me",
-                    "style": {}
-                  },
-                  "form": {
-                    "type": "form",
-                    "inputs": [
-                      {
-                        "type": "text",
-                        "placeholder": "name"
+                    "heading": {
+                        "type": "txt",
+                        "txt": "Contact me",
+                        "style": {}
+                    },
+                    "subHeading": {
+                        "type": "txt",
+                        "txt": "123-456-7890  |  INFO@MYSITE.COM",
+                        "style": {}
                       },
-                      {
-                        "type": "email",
-                        "placeholder": "email"
-                      }
-                    ],
-                    "textarea": {
-                      "placeholder": "Message"
-                    },
-                    "btn": {
-                      "type": "submit",
-                      "txt": "submit"
-                    },
-                    "style": {}
-                  }
+            
+                    "form": {
+                        "type": "form",
+                        "inputs": [
+                            {
+                                "type": "text",
+                                "placeholder": "name"
+                            },
+                            {
+                                "type": "email",
+                                "placeholder": "email"
+                            }
+                        ],
+                        "textarea": {
+                            "placeholder": "Message"
+                        },
+                        "btn": {
+                            "type": "submit",
+                            "txt": "submit"
+                        },
+                        "style": {}
+                    }
                 },
                 "style": {}
-              }
-  
+            }
         ]
     }
 ]

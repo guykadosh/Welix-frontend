@@ -1,6 +1,7 @@
 <template>
   <section :class="cmp.classes" :style="cmp.style">
     <h2 class="heading">{{ cmp.info.heading.txt }}</h2>
+    <h3 v-if="cmp.info.subHeading" class="sub-heading">{{cmp.info.subHeading.txt }}</h3>
     <section class="form-container">
       <form @submit.prevent class="contact-form">
         <input
