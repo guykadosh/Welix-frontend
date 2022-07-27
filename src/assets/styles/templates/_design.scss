@@ -1,9 +1,10 @@
 .design {
     &-header {
-        height: 5rem;
+        height: 6rem;
 
         .wap-nav {
             a {
+                font-size: 1rem;
                 color: #332e29;
                 font-family: Oswald-regular;
             }
@@ -11,11 +12,10 @@
             :not(:last-child) {
                 margin-right: 1rem;
             }
-
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-family: Oswald-bold;
             color: #332e29;
             line-height: 1.2;
@@ -26,13 +26,14 @@
         justify-items: center;
 
         .hero-inner {
+
             .medium & {
                 height: rem(550px);
                 background-color: $light-color;
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
                 grid-template-rows: 1fr 1fr 1fr;
-                height: rem(490px);
+                height: rem(580px);
                 margin-bottom: rem(45px);
                 grid-template-areas:
                     "img4 img4 img4 text-box text-box text-box"
@@ -42,7 +43,7 @@
                 .img1,
                 .img2,
                 .img {
-                    height: rem(210px);
+                    height: 100%;
                 }
 
                 img {
@@ -75,7 +76,7 @@
 
                 .text-box {
                     color: #332e29;
-                    padding: rem(45px);
+                    padding: rem(68px);
 
                     .heading {
                         font-size: 2rem;
@@ -90,65 +91,87 @@
 
             }
 
-            @include for-medium-layout {
-                height: rem(550px);
-                background-color: $light-color;
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: 1fr 1fr 1fr;
-                height: rem(490px);
-                margin-bottom: rem(45px);
-                grid-template-areas:
-                    "img4 img4 img4 text-box text-box text-box"
-                    "img4 img4 img4 text-box text-box text-box"
-                    "img4 img4 img4 img1 img2 img3";
+            .wap-details & {
+                @include for-medium-layout {
+                    background-color: $light-color;
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-template-rows: 1fr 1fr 1fr;
+                    height: rem(580px);
+                    margin-bottom: rem(45px);
+                    grid-template-areas:
+                        "img4 img4 img4 text-box text-box text-box"
+                        "img4 img4 img4 text-box text-box text-box"
+                        "img4 img4 img4 img1 img2 img3";
+
+                    .img1,
+                    .img2,
+                    .img {
+                        height: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .img1 {
+                        grid-area: img1;
+                    }
+
+                    .img2 {
+                        grid-area: img2;
+                    }
+
+                    .img3 {
+                        grid-area: img3;
+                    }
+
+                    .img4 {
+                        grid-area: img4;
+                        object-fit: contain;
+                    }
+
+                    .text-box {
+                        grid-area: text-box;
+                    }
+
+                    .text-box {
+                        color: #332e29;
+                        padding: rem(55px);
+
+                        .heading {
+                            font-size: 2rem;
+                            margin-bottom: rem(35px);
+                            font-family: Oswald-bold;
+                        }
+
+                        .sub-heading {
+                            font-size: rem(20px);
+                        }
+                    }
+
+                }
+            }
+
+            .wide & {
 
                 .img1,
                 .img2,
-                .img {
-                    height: rem(210px);
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-
-                }
-
-                .img1 {
-                    grid-area: img1;
-                }
-
-                .img2 {
-                    grid-area: img2;
-                }
-
                 .img3 {
-                    grid-area: img3;
+                    height: rem(250px);
                 }
+            }
 
-                .img4 {
-                    grid-area: img4;
-                    object-fit: contain;
-                }
+            .wap-details & {
+                @include for-wide-layout {
 
-                .text-box {
-                    grid-area: text-box;
-                }
+                    .img1,
+                    .img2,
+                    .img3 {
+                        height: rem(250px);
 
-                .text-box {
-                    color: #332e29;
-                    padding: rem(45px);
-
-                    .heading {
-                        font-size: 2rem;
-                        margin-bottom: rem(35px);
-                        font-family: Oswald-bold;
-                    }
-
-                    .sub-heading {
-                        font-size: rem(20px);
                     }
                 }
             }
@@ -175,9 +198,28 @@
 
         img {
             width: 100%;
-            height: 550px;
+            height: rem(650px);
+            object-fit: cover;
+            margin-bottom: rem(35px);
         }
 
+        .img1 {
+            display: none;
+        }
+
+        .medium & {
+            .img1 {
+                display: block;
+            }
+        }
+
+        .wap-details & {
+            @include for-medium-layout {
+                .img1 {
+                    display: block;
+                }
+            }
+        }
     }
 
     &-container {
@@ -194,11 +236,12 @@
                 justify-content: space-between;
             }
 
-            @include for-medium-layout {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
+            .wap-details & {
+                @include for-medium-layout {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
             }
 
             .card-content {
@@ -209,8 +252,8 @@
                 margin-bottom: rem(40px);
 
                 .icon {
-                    height: rem(35px);
-                    width: rem(35px);
+                    height: rem(40px);
+                    width: rem(40px);
                     margin-bottom: rem(15px);
                 }
 
@@ -221,6 +264,7 @@
                     }
 
                     &-subheading {
+                        font-size: rem(19px);
                         font-family: Oswald-extra-light;
                         font-weight: lighter;
                     }
@@ -233,17 +277,12 @@
 
     &-paragraph.design-layout.design-txt {
         background-color: $light-color;
-        padding: rem(110px);
+        padding: 6.25rem 1rem;
 
         .text1 {
             font-family: Oswald-bold;
             text-align: center;
             font-size: rem(45px);
-            margin-bottom: rem(15px);
-            @include for-medium-layout {
-                margin-bottom: rem(0px);
-
-            }
 
         }
 
@@ -252,11 +291,12 @@
             text-align: center;
             font-weight: lighter;
             font-size: rem(20px);
+
         }
     }
 
     &-plan-ideas.design-container {
-        @include for-medium-layout {
+        .medium & {
             .wap-container__inner {
                 gap: 0;
                 display: grid;
@@ -271,27 +311,69 @@
 
                 .img1 {
                     grid-area: img1;
-
                 }
 
                 .img2 {
                     grid-area: img2;
-
                 }
 
-                h2 {
+                .text1 {
+                    font-family: Oswald-bold;
                     font-weight: 100;
+                    margin-bottom: rem(25px);
+                }
+
+                .text2 {
+                    font-family: Oswald-extra-light;
+                    font-weight: lighter;
                 }
 
                 img {
-                    height: 380px;
-
+                    height: rem(380px);
+                    object-fit: cover;
                 }
             }
-            .design-house-txt {
-                margin-bottom: 0;
-            }
+        }
 
+        .wap-details & {
+            @include for-medium-layout {
+                .wap-container__inner {
+                    gap: 0;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 1fr 1fr;
+                    height: rem(490px);
+                    margin-bottom: rem(350px);
+                    grid-template-areas:
+                        "img1  design-ideas-txt"
+                        " design-house-txt img2";
+
+
+                    .img1 {
+                        grid-area: img1;
+                    }
+
+                    .img2 {
+                        grid-area: img2;
+                    }
+
+                    .text1 {
+                        font-family: Oswald-bold;
+                        font-weight: 100;
+                        margin-bottom: rem(25px);
+                    }
+
+                    .text2 {
+                        font-family: Oswald-extra-light;
+                        font-weight: lighter;
+                    }
+
+                    img {
+                        height: rem(400px);
+                        object-fit: cover;
+                    }
+                }
+            }
         }
 
         .design-ideas-txt {
@@ -310,7 +392,6 @@
 
         .design-house-txt {
             margin-bottom: rem(25px);
-
             grid-area: design-house-txt;
             padding: rem(75px);
             text-align: center;
@@ -318,12 +399,25 @@
             font-family: Oswald-extra-light;
             font-weight: lighter;
 
+            .medium & {
+                margin-bottom: rem(0px);
+
+            }
+
+            .wap-details & {
+                @include for-medium-layout {
+                    margin-bottom: rem(0px);
+
+                }
+            }
+
             .text1 {
                 font-size: rem(35px);
             }
 
         }
-        img{
+
+        img {
             width: 100%;
         }
     }
@@ -347,63 +441,103 @@
 
     &-home-gallery {
         .imgs-container {
-            margin-bottom: rem(45px);
-            display: flex;
-            gap: rem(10px);
-            justify-content: center;
-            max-height: rem(450px);
-
             img {
                 width: 100%;
-                height: 100%;
+                height: 550px;
+                margin-bottom: rem(15px);
                 object-fit: cover;
+
+            }
+        }
+
+        .medium & {
+            .imgs-container {
+                display: flex;
+                gap: rem(10px);
+                justify-content: center;
+                max-height: rem(400px);
+                margin-bottom: rem(10px);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .img1 {
+                    width: rem(550px);
+                }
+
+                .img2 {
+                    width: rem(550px);
+                }
             }
 
-            .img1 {
-                width: rem(550px);
+        }
+
+
+        .wap-details & {
+            @include for-medium-layout {
+                .imgs-container {
+                    /*   margin-bottom: rem(45px); */
+                    display: flex;
+                    gap: rem(10px);
+                    justify-content: center;
+                    max-height: rem(400px);
+                    margin-bottom: rem(10px);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .img1 {
+                        width: rem(550px);
+                    }
+
+                    .img2 {
+                        width: rem(550px);
+                    }
+                }
             }
 
-            .img2 {
-                width: rem(550px);
-            }
         }
     }
 
     &-cards {
         .wap-container__inner {
-            .normal & {
-                justify-content: center;
-            }
-
-            @include for-normal-layout {
-                justify-content: center;
-            }
+            margin-top: 0;
 
             .design-project-card.wap-card {
-                margin-bottom: rem(50px);
-                height: rem(350px);
-                width: rem(600px);
-                padding: rem(5px);
+                margin-bottom: rem(21px);
                 background-color: $light-color;
-
-                .medium & {
-                    height: rem(450px);
-                }
-
-                @include for-medium-layout {
-                    height: rem(450px);
-                }
-
+                height: rem(450px);
 
                 .normal & {
-                    width: rem(550px);
+                    width: rem(650px);
                     height: rem(380px);
 
                 }
 
-                @include for-normal-layout {
-                    width: rem(550px);
-                    height: rem(380px);
+                .wap-details & {
+                    @include for-normal-layout {
+                        width: rem(550px);
+                        height: rem(380px);
+                    }
+                }
+
+                .medium & {
+                    width: rem(650px);
+                    height: rem(100px);
+
+                }
+
+                .wap-details & {
+                    @include for-medium-layout {
+                        width: rem(550px);
+                        height: rem(410px);
+                    }
                 }
 
                 .card {
@@ -426,20 +560,12 @@
     }
 
     &-footer.design-container {
-        padding: rem(85px);
-        height: rem(600px);
+        /*  padding: rem(85px); */
+        /*   height: rem(600px); */
+        justify-items: center;
         background-color: #332e29;
-
-        .wap-container__inner {
-            .normal & {
-                justify-content: center;
-            }
-
-            @include for-normal-layout {
-                justify-content: center;
-            }
-        }
-
+          padding: rem(25px);
+        /* margin-top: rem(175px); */
     }
 
     &-contact.design-layout {
@@ -450,26 +576,23 @@
         flex-direction: column;
         color: $light-color;
         border: 2px solid $light-color;
-        width: rem(450px);
+        width: rem(500px);
+        height: rem(450px);
 
-        .narrow & {
-            width: rem(380px);
-        }
-
-        @include for-narrow-layout {
-            width: rem(380px);
+/*         .small & {
+            width: rem(650px);
+            height: rem(100px);
 
         }
 
-        /*         .medium & {
-            width: rem(380px);
-        }
-
-        @include for-medium-layout {
-            width: rem(380px);
-
+        .wap-details & {
+            @include for-small-layout {
+                width: rem(600px);
+                height: rem(410px);
+            }
         }
  */
+
         input,
         textarea {
             width: rem(350px);
@@ -480,15 +603,17 @@
             font-size: rem(25px);
             padding: rem(15px);
 
-            .narrow & {
-                width: rem(320px);
+
+            /*             .narrow & {
+                width: rem(350px);
             }
+            .wap-details & {
+                @include for-narrow-layout {
+                    width: rem(350px);
 
-            @include for-narrow-layout {
-                width: rem(320px);
-
+                }
             }
-
+ */
         }
 
         textarea {
