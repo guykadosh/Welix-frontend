@@ -21,7 +21,6 @@
                     <img src="../../assets/img/prev4.png" class="img" :class="imgs[3].pos" />
                 </section>
             </div>
-
         </div>
     </div>
 </template>
@@ -76,15 +75,6 @@ export default {
             }
             this.setImgPos(this.currImg)
         }
-    },
-    computed: {
-
-    },
-    created() {
-
-    },
-    components: {
-
     },
 }
 </script>
