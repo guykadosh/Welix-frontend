@@ -1,5 +1,11 @@
 <template>
-  <section v-if="cmp" class="wap-list" :class="cmp.classes" :style="cmp.style">
+  <section
+    v-if="cmp"
+    class="wap-list"
+    :class="[...cmp.classes, selected]"
+    v-click-outside="unselect"
+    :style="cmp.style"
+  >
     <h3 @mousedown.stop class="heading">{{ info.heading.txt }}</h3>
     <ul
       contenteditable="true"
@@ -34,6 +40,7 @@ export default {
   data() {
     return {
       cmpToEdit: null,
+      isSelected: false,
     }
   },
   created() {
@@ -51,26 +58,24 @@ export default {
       }
 
       this.$emit('changedTxt', newCmp)
-
-      // this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
-      // this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
-      console.log(type, key)
+      if (type === 'cmp') this.isSelected = true
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
       this.$emit('picked', { cmp, el })
-      // eventBus.emit('open-edit')
-      // this.$store.commit({ type: 'setElToEdit', el })
-      // this.$store.commit({ type: 'setCmpToEdit', cmp })
-
-      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
+    unselect() {
+      this.isSelected = false
     },
   },
   computed: {
     info() {
       return this.cmp.info
+    },
+    selected() {
+      return { selected: this.isSelected }
     },
   },
 }

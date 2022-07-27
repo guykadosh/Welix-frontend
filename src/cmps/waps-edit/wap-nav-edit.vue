@@ -69,6 +69,9 @@ export default {
     isShown() {
       return { open: this.isMenuOpen }
     },
+    selected() {
+      return { selected: this.isSelected }
+    },
   },
   components: {
     MenuOutlined,

@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import { clickOutsideDirective } from './directives'
 import VueGoogleMaps from '@fawmi/vue-google-maps'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -15,13 +16,26 @@ import {
   // faHandsHoldingCircle, faPeopleGroup,
   // faLock, faArrowLeft, faXmarkLarge,
   // faPlusLarge, faCircle, faPlus
-  faPenToSquare, 
-  faPalette,faCirclePlus,faDisplay,
-  faMobile,faTabletScreen,faShare,
-  faFloppyDisk,faTrash,faCopy,faGem,
-  faHandsHoldingCircle,faPeopleGroup,
-  faLock,faArrowLeft,faXmarkLarge,
-  faPlusLarge,faAirplay,faCircle, faPlus
+  faPenToSquare,
+  faPalette,
+  faCirclePlus,
+  faDisplay,
+  faMobile,
+  faTabletScreen,
+  faShare,
+  faFloppyDisk,
+  faTrash,
+  faCopy,
+  faGem,
+  faHandsHoldingCircle,
+  faPeopleGroup,
+  faLock,
+  faArrowLeft,
+  faXmarkLarge,
+  faPlusLarge,
+  faAirplay,
+  faCircle,
+  faPlus,
 } from '@fortawesome/pro-light-svg-icons'
 
 import '@/assets/styles/styles.scss'
@@ -32,22 +46,38 @@ const app = createApp(App)
 //   faFloppyDisk, faTrash, faCopy, faGem,
 //   faHandsHoldingCircle, faPeopleGroup, faLock,
 //   faArrowLeft, faXmarkLarge, faPlusLarge, faCircle, faPlus
-library.add( faPenToSquare, 
-  faPalette,faCirclePlus,faDisplay,
-  faMobile,faTabletScreen,faShare,
-  faFloppyDisk,faTrash,faCopy,faGem,
-  faHandsHoldingCircle,faPeopleGroup,
-  faLock,faArrowLeft,faXmarkLarge,
-  faPlusLarge,faAirplay,faCircle, faPlus
-  )
+library.add(
+  faPenToSquare,
+  faPalette,
+  faCirclePlus,
+  faDisplay,
+  faMobile,
+  faTabletScreen,
+  faShare,
+  faFloppyDisk,
+  faTrash,
+  faCopy,
+  faGem,
+  faHandsHoldingCircle,
+  faPeopleGroup,
+  faLock,
+  faArrowLeft,
+  faXmarkLarge,
+  faPlusLarge,
+  faAirplay,
+  faCircle,
+  faPlus
+)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router)
 app.use(store)
 app.use(Antd)
 
+app.directive('click-outside', clickOutsideDirective)
+
 app.use(VueGoogleMaps, {
-    load: { key: 'AIzaSyB2LvYaoUdowiLafGevBgmTajpfYiEAj4o' },
-  })
+  load: { key: 'AIzaSyB2LvYaoUdowiLafGevBgmTajpfYiEAj4o' },
+})
 
 app.mount('#app')

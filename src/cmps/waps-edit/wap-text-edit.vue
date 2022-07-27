@@ -2,8 +2,9 @@
   <section
     v-if="cmp"
     class="wap-text"
-    :class="cmp.classes"
     :style="cmp.style"
+    :class="[...cmp.classes, selected]"
+    v-click-outside="unselect"
     @click="setEditable('cmp')"
   >
     <span
@@ -42,6 +43,7 @@
   </section>
 </template>
 <script>
+import { isGloballyWhitelisted } from '@vue/shared'
 import { eventBus } from '../../services/event-bus.service'
 
 export default {
@@ -52,6 +54,7 @@ export default {
   data() {
     return {
       cmpToEdit: null,
+      isSelected: false,
     }
   },
   created() {
@@ -69,20 +72,22 @@ export default {
       // this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
+      if (type === 'cmp') this.isSelected = true
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
       this.$emit('picked', { cmp, el })
-      // eventBus.emit('open-edit')
-      // this.$store.commit({ type: 'setElToEdit', el })
-      // this.$store.commit({ type: 'setCmpToEdit', cmp })
-
-      // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
+    },
+    unselect() {
+      this.isSelected = false
     },
   },
   computed: {
     info() {
       return this.cmp.info
+    },
+    selected() {
+      return { selected: this.isSelected }
     },
   },
 }

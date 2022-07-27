@@ -4,7 +4,8 @@
     class="wap-hero"
     :style="cmp.style"
     :class="[...cmp.classes, selected]"
-    @click.stop="setEditable('cmp')"
+    v-click-outside="unselect"
+    @click="setEditable('cmp')"
   >
     <div class="hero-inner">
       <div class="text-box">
@@ -112,15 +113,13 @@ export default {
 
       // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
     },
-    setCmpEditable() {},
+    unselect() {
+      this.isSelected = false
+    },
   },
   created() {
     this.cmpToEdit = JSON.parse(JSON.stringify(this.cmp))
   },
 }
 </script>
-<style>
-.selected {
-  border: dashed 3px #000;
-}
-</style>
+<style></style>

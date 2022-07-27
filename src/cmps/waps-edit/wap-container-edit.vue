@@ -1,5 +1,10 @@
 <template>
-  <section :style="cmp.style" :class="cmp.classes" @click="setEditable('cmp')">
+  <section
+    :style="cmp.style"
+    :class="[...cmp.classes, selected]"
+    v-click-outside="unselect"
+    @click="setEditable('cmp')"
+  >
     <!-- <Container
       :get-child-payload="getChildPayload"
       group-name="2"
@@ -10,8 +15,13 @@
     <!-- <Draggable v-for="item in items" :key="item.id"> -->
 
     <div class="wap-container__inner">
-      <component v-for="cmp in cmp.info.cmps" :key="cmp.id" :is="cmp.type + '-edit'" :cmp="cmp" @click.stop
-        @picked="emitPicked"></component>
+      <component
+        v-for="cmp in cmp.info.cmps"
+        :key="cmp.id"
+        :is="cmp.type + '-edit'"
+        :cmp="cmp"
+        @picked="emitPicked"
+      ></component>
     </div>
     <!-- </Draggable>
     </Container> -->
@@ -43,11 +53,12 @@ export default {
     wapTextEdit,
     wapMapEdit,
     wapContactEdit,
-    wapGalleryEdit
+    wapGalleryEdit,
   },
   data() {
     return {
       items: null,
+      isSelected: false,
     }
   },
   created() {
@@ -62,6 +73,7 @@ export default {
       return this.items[idx]
     },
     setEditable(type, key, idx = null) {
+      if (type === 'cmp') this.isSelected = true
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
@@ -75,10 +87,16 @@ export default {
     emitPicked(ev) {
       this.$emit('picked', ev)
     },
+    unselect() {
+      this.isSelected = false
+    },
   },
   computed: {
     info() {
       return this.cmp.info
+    },
+    selected() {
+      return { selected: this.isSelected }
     },
   },
 }
