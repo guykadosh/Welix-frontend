@@ -4,6 +4,7 @@
       v-for="cmp in wap.cmps"
       :is="cmp.type"
       :cmp="cmp"
+      :wap="wap"
       :key="cmp.id"
     ></component>
   </section>

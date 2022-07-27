@@ -6,11 +6,13 @@
         v-if="userWaps"
         :user="user"
         :waps="userWaps"
+        @picked="setWapIdx"
       ></dashboard-nav>
       <dashboard-main
         v-if="userWaps"
         :user="user"
         :waps="userWaps"
+        :wapIdx="wapIdx"
       ></dashboard-main>
     </div>
   </section>
@@ -27,6 +29,7 @@ export default {
   data() {
     return {
       userWaps: null,
+      wapIdx: 0,
     }
   },
   async created() {
@@ -35,8 +38,13 @@ export default {
       if (waps) this.userWaps = waps
     } catch (err) {
       console.log(err)
-      notification['error']
+      // notification['error']
     }
+  },
+  methods: {
+    setWapIdx(idx) {
+      this.wapIdx = idx
+    },
   },
   computed: {
     user() {

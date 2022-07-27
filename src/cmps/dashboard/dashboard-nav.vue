@@ -4,8 +4,8 @@
     <ul v-if="waps" class="clean-list flex flex-column">
       <li
         class="site-name"
-        @click="editWap(wap)"
-        v-for="wap in waps"
+        v-for="(wap, idx) in waps"
+        @click="showWap(idx)"
         :key="wap._id"
       >
         {{ wap.name }}
@@ -30,10 +30,6 @@ export default {
   },
   async created() {},
   methods: {
-    editWap(wap) {
-      this.$store.commit({ type: 'setCurrWap', wap })
-      this.$router.push('wap/editor')
-    },
     async logout() {
       try {
         await this.$store.dispatch({ type: 'logout' })
@@ -41,6 +37,9 @@ export default {
       } catch (err) {
         console.log(err)
       }
+    },
+    showWap(idx) {
+      this.$emit('picked', idx)
     },
   },
   computed: {},
