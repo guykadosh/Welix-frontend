@@ -172,7 +172,7 @@ export default {
         return
       }
 
-      let routeData = this.$router.resolve({
+      const routeData = this.$router.resolve({
         name: 'wap-details',
         params: { wapId: this.wap._id },
       })

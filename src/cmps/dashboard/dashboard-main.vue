@@ -5,8 +5,13 @@
         <span>{{ user.fullname }}'s</span> Backoffice
       </h2>
     </div>
-    <button @click="viewWap(wapId)">View Site</button>
-    <button @click="editWap(this.waps[wapIdx])">Edit Site</button>
+
+    <div class="btns">
+      <button @click="viewWap(this.waps[wapIdx]._id)">View Site</button>
+      <button @click="editWap(this.waps[wapIdx])">Edit Site</button>
+    </div>
+
+    <h2>Site Leads</h2>
     <a-table :columns="columns" :data-source="contacts" size="small" />
   </div>
 </template>
@@ -48,7 +53,13 @@ export default {
       this.$store.commit({ type: 'setCurrWap', wap })
       this.$router.push('wap/editor')
     },
-    viewWap(wapId) {},
+    viewWap(wapId) {
+      const routeData = this.$router.resolve({
+        name: 'wap-details',
+        params: { wapId },
+      })
+      window.open(routeData.href, '_blank')
+    },
   },
   computed: {
     contacts() {

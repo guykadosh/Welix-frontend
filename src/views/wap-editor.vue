@@ -64,11 +64,7 @@ export default {
       socketService.emit(SOCKET_EMIT_SET_EDITOR, wapId)
 
       if (wapId) {
-        const wap = await wapService.getById(wapId)
-        this.$store.commit({
-          type: 'setCurrWap',
-          wap: wap,
-        })
+        await this.$store.dispatch('loadWap', wapId)
       } else {
         if (!this.wap)
           this.$store.commit({
@@ -105,7 +101,6 @@ export default {
       if (idx === -1) {
         pointer.color = utilService.getRandomColor()
         this.pointers.push(pointer)
-        console.log(pointer)
       } else {
         pointer.color = this.pointers[idx].color
         this.pointers[idx] = pointer
