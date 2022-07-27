@@ -3,7 +3,7 @@ import { cmpService } from '../../services/cmp.service.js'
 export default {
   state: {
     cmps: null,
-    filterBy: '',
+    filterBy: 'wap-header',
   },
   getters: {
     getCmps({ cmps, filterBy }) {
