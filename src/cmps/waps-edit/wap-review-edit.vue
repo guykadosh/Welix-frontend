@@ -2,8 +2,10 @@
   <section
     v-if="cmp"
     class="wap-review"
-    :class="cmp.classes"
     :style="cmp.style"
+    :class="[...cmp.classes, selected]"
+    v-click-outside="unselect"
+    @click="setEditable('cmp')"
   >
     <div class="wap-review__inner">
       <img
@@ -64,6 +66,7 @@ export default {
   data() {
     return {
       cmpToEdit: null,
+      isSelected: false,
     }
   },
   created() {
@@ -81,6 +84,7 @@ export default {
       // this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
+      if (type === 'cmp') this.isSelected = true
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
@@ -91,10 +95,16 @@ export default {
 
       // emit to open side-editor => txt-editor => style => cmp[key].style || cmp[key][idx].style = style
     },
+    unselect() {
+      this.isSelected = false
+    },
   },
   computed: {
     info() {
       return this.cmp.info
+    },
+    selected() {
+      return { selected: this.isSelected }
     },
   },
 }

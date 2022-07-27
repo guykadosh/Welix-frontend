@@ -1,7 +1,4 @@
-export const focus = {
-  directive: {
-    focus
-  },
+export const focusDirective = {
   mounted: el => {
     el.focus()
   },
@@ -97,9 +94,7 @@ export const clickOutsideDirective = {
         )
       ) {
         cb()
-        console.log('outside')
       } else {
-        console.log('inside')
       }
     }
     setTimeout(() => {

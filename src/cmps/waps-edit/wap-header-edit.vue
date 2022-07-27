@@ -1,8 +1,9 @@
 <template>
   <header
     class="wap-header"
-    :class="cmp.classes"
     :style="cmp.style"
+    :class="[...cmp.classes, selected]"
+    v-click-outside="unselect"
     @click="setEditable('cmp')"
   >
     <div class="wap-header__inner flex justify-between items-center">
@@ -52,6 +53,7 @@ export default {
   data() {
     return {
       cmpToEdit: null,
+      isSelected: false,
     }
   },
   created() {
@@ -69,6 +71,7 @@ export default {
       // this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
+      if (type === 'cmp') this.isSelected = true
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))
 
@@ -83,10 +86,16 @@ export default {
     emitPicked(ev) {
       this.$emit('picked', ev)
     },
+    unselect() {
+      this.isSelected = false
+    },
   },
   computed: {
     info() {
       return this.cmp.info
+    },
+    selected() {
+      return { selected: this.isSelected }
     },
   },
 }

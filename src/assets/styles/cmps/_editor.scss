@@ -167,6 +167,10 @@
     background-color: $light-color;
     border-left: 1px solid $light-color3;
 
+    .selected {
+      border: dashed 3px #000;
+    }
+
     .drag-here {
       border: 3px dashed rgba(20, 42, 243, 0.237);
       color: rgba(20, 42, 243, 0.237);
