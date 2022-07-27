@@ -186,26 +186,27 @@
   .wap-details & {
     @include for-small-layout {
       grid-template-columns: 1fr 520px 1fr;
-
+      
       >* {
         grid-column: 2;
       }
     }
-
+    
     @include for-medium-layout {
       grid-template-columns: 1fr 820px 1fr;
     }
-
+    
     @include for-narrow-layout {
-      grid-template-columns: 1fr 960px 1fr;
+      grid-template-columns: 1fr 1000px 1fr;
     }
 
     @include for-normal-layout {
       grid-template-columns: 1fr 1260px 1fr;
+
     }
 
     @include for-wide-layout {
-      grid-template-columns: 1fr 1440px 1fr;
+      grid-template-columns: 1fr 1320px 1fr;
     }
   }
 
