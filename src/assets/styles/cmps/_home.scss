@@ -17,7 +17,6 @@
     }
 
     .header__inner {
-        // padding: em(20px) 0;
         z-index: 10;
 
         .main-header-logo {
@@ -44,7 +43,6 @@
                 color: $light-color;
             }
         }
-
     }
 
     .main-hero {
@@ -80,7 +78,6 @@
                     font-size: em(16px);
                     letter-spacing: em(1.3px);
                     padding: em(24px) em(38px);
-                    // border: 1px solid $dark-color;
                     cursor: pointer;
                     background-color: #be123c;
                     border: 1px solid #be123c;
@@ -107,94 +104,70 @@
     .editor-preview {
         height: 100vh;
         width: 100vw;
-        // padding-top: rem(10px);
         background-color: $dark-color1;
- 
+        background-image: url("https://res.cloudinary.com/duvwxwtot/image/upload/v1658906310/sprint%204/section2.2_ai13hr.jpg");
+
         &__inner {
             transform-style: preserve-3d;
             position: relative;
-            display: flex;
-            // justify-content: center;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 2fr 3fr;
+            grid-template-areas:
+                "h h"
+                "img list";
 
-            // max-height: 500px;
+            .heading {
+                grid-area: h;
 
-            justify-content: space-between;
+                .intro {
+                    color: $light-color;
+                    font-family: Nunito-regular;
+                    font-size: em(52px);
+                    margin-top: em(16px);
+                }
+            }
 
+            .list-wrapper {
 
-            &__container {
+                grid-area: list;
+
+                li {
+                    text-align: right;
+                    font-family: Nunito-regular;
+                    text-transform: uppercase;
+                    color: rgba(128, 128, 128, 0.564);
+                    font-size: em(18px);
+                    letter-spacing: em(1.3px);
+                    margin-block-end: em(24px);
+                    cursor: pointer;
+
+                    &.active {
+                        font-weight: 700;
+                        color: $light-color;
+                        text-shadow: rgba(252, 252, 252, 0.701);
+                    }
+                }
+            }
+
+            .img-container {
+                grid-area: img;
                 width: 100%;
-                // height: 50%;
                 display: flex;
                 justify-content: end;
-                align-items: center;
+                align-items: flex-start;
 
                 .imgs-wrapper {
-                    // display: none;
-                    position: fixed;
-                    // display: none;
-                    // display: flex;
-                    // justify-content: start;
-                    // align-items: flex-start;
-                    // width: 40%;
+                    position: absolute;
                     width: 50%;
-                    height: 100%;
-                    top: 19%;
+                    top: 20%;
                     left: -27.5%;
 
                     .img {
-
-                        width: 100%;
-                        margin-block-end: rem(10px);
-                    }
-
-                    @include for-narrow-layout {}
-
-                    .img {
                         position: fixed;
-                        // top: 40%;
-                        // left: -46%;
                         box-shadow: -1px 1px 10px 5px #000;
-                        // max-width: 100%;
-                        // max-width: 1200px;
                         transition: transform 0.3s;
-
-                        max-width: 1200px;
-                        // top: 0;
-                        // left: 0;
-                        // top: 15%;
-                        // left: -27.5%;
-
-                        // @include for-small-layout {
-                        //     top: 24%;
-                        //     left: -42%;
-                        //     max-width: 900px;
-
-                        // }
-
-                        // @include for-medium-layout {
-                        //     max-width: 900px;
-                        //     left: -35.5%;
-                        //     top: 40%;
-                        // }
-
-                        // @include for-narrow-layout {
-                        //     max-width: 900px;
-                        //     top: 24%;
-                        //     left: -29.5%;
-                        // }
-
-                        // @include for-normal-layout {
-                        //     top: 8%;
-                        //     left: -28.5%;
-                        //     max-width: 1200px;
-                        // }
-
-                        // @include for-wide-layout {
-                        //     top: 8%;
-                        //     left: -27.5%;
-                        //     max-width: 1350px;
-                        // }
+                        max-width: 100%;
                     }
 
                     .pos1 {
@@ -216,55 +189,8 @@
                         transform: perspective(1300px) rotateY(20deg) translateZ(250px) scale(0.5);
                         z-index: 40;
                     }
-
-
                 }
             }
-
-            .list-wrapper {
-                // background-color: yellow;
-                padding-left: 100px;
-                padding-top: 80px;
-                // max-width: 550px;
-                text-align: right;
-                // flex-basis: 50%;
-                // height: 500px;
-                // display: none;
-
-                // height: 50%;
-                width: 50%;
-
-                li {
-                    font-family: Nunito-regular;
-                    text-transform: uppercase;
-                    color: rgba(128, 128, 128, 0.564);
-                    font-size: em(18px);
-                    letter-spacing: em(1.3px);
-                    margin-block-end: em(24px);
-                    cursor: pointer;
-
-                    &.active {
-                        font-weight: 700;
-                        // font-size: em(30px);
-                        color: $light-color;
-                        text-shadow: rgba(252, 252, 252, 0.701);
-                    }
-                }
-
-            }
-        }
-    }
-
-    .waps-carousel {
-        width: 100vw;
-        height: 100vh;
-
-        &__inner {
-            width: 100%;
-            height: 100%;
-            background-color: blue;
-            
-            
         }
     }
 }

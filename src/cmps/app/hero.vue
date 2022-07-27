@@ -12,8 +12,6 @@
         <a class="learn-more">Learn more</a>
       </div>
 
-      <!-- <img class="hero-img" src="@/assets/img/hero-gif1.gif" alt="" /> -->
-
     </div>
   </section>
 </template>
