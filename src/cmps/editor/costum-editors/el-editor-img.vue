@@ -9,18 +9,14 @@
           @keyup.enter="setUrl"
           placeholder="Enter url or upload"
         />
-        <a-upload
-          v-model:file-list="fileList"
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-        >
-          <CloudUploadOutlined class="icon" />
-        </a-upload>
+        <ImgUpload @uploaded="setUrl" />
       </div>
     </div>
   </section>
 </template>
 <script>
 import { CloudUploadOutlined } from '@ant-design/icons-vue'
+import ImgUpload from './img-upload.vue'
 
 export default {
   props: {
@@ -34,12 +30,14 @@ export default {
   },
   components: {
     CloudUploadOutlined,
+    ImgUpload,
   },
   created() {
     this.url = this.cmp.info.img?.url || this.cmp.info.logoImg.url
   },
   methods: {
-    setUrl() {
+    setUrl(url) {
+      if (typeof url === 'string') this.url = url
       this.$emit('edited', { url: this.url })
     },
   },

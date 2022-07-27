@@ -9,18 +9,14 @@
           @keyup.enter="setUrls"
           :placeholder="url"
         />
-        <a-upload
-          v-model:file-list="fileList"
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-        >
-          <CloudUploadOutlined class="icon" />
-        </a-upload>
+        <img-upload @uploaded="setUrl($event, idx)" />
       </div>
     </div>
   </section>
 </template>
 <script>
 import { CloudUploadOutlined } from '@ant-design/icons-vue'
+import ImgUpload from './img-upload.vue'
 
 export default {
   props: {
@@ -29,7 +25,6 @@ export default {
   data() {
     return {
       urls: null,
-      fileList: [],
     }
   },
   created() {
@@ -38,10 +33,15 @@ export default {
   },
   components: {
     CloudUploadOutlined,
+    ImgUpload,
   },
   methods: {
     setUrls() {
       this.$emit('edited', { urls: this.urls })
+    },
+    setUrl(url, idx) {
+      this.urls[idx] = url
+      this.setUrls()
     },
   },
 }
