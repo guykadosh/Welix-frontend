@@ -4,12 +4,10 @@
         font-family: Oswald-light;
         letter-spacing: 2px;
         padding: rem(35px) 0;
-
     }
 
     &-nav {
         a {
-
             font-family: Oswald-light;
             color: $dark-color;
             display: inline-block;
@@ -17,97 +15,42 @@
 
         li {
             &:not(:last-child) {
-
                 margin-right: rem(25px);
             }
-
         }
     }
 
     &-hero {
+        width: 100%;
+        margin-block-end: rem(20px);
+
         .hero-inner {
-            justify-items: center;
-
-            .medium & {
-                margin-bottom: rem(25px);
-                display: flex;
-                flex-wrap: wrap;
-                gap: rem(20px);
-
-            }
-
-            @include for-medium-layout {
-
-                margin-bottom: rem(25px);
-                display: flex;
-                flex-wrap: wrap;
-                gap: rem(20px);
-            }
-
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: rem(15px);
+            max-height: 50vh;
+            overflow-y: hidden;
 
             img {
-                width: rem(378px);
-                height: rem(500px);
-                margin-bottom: rem(25px);
+                width: 100%;
                 object-fit: cover;
                 object-position: 50% 50%;
-                /* object-fit:cover; */
-
-                .medium & {
-                    width: rem(480px);
-                    height: rem(800px);
-                    object-fit: fill;
-
-                }
-
-                .wap-details & {
-                    @include for-medium-layout {
-                        width: rem(480px);
-                        object-fit: fill;
-                        height: rem(800px);
-                    }
-
-                }
-
+                max-height: 680px;
             }
 
             .img1 {
-                .medium & {
-                    order: 1;
-                }
-
-                @include for-medium-layout {
-                    order: 1;
-                }
-
+                order: 1;
             }
 
             .text-box {
                 order: 0;
-
                 font-family: Oswald-light;
                 background-color: rgb(247 233 228);
                 font-size: rem(35px);
-              /*   width: rem(370px); */
-                height: rem(500px);
+                height: 100%;
                 text-align: center;
                 order: 1;
                 padding: rem(35px);
-                margin-bottom: rem(25px);
-
-                .medium & {
-                    height: rem(800px);
-                    width: rem(470px);
-                    padding: rem(120px);
-                }
-
-                .wap-details & {
-                    @include for-medium-layout {
-                        height: rem(800px);
-                        width: rem(470px);
-                        padding: rem(120px);
-                    }
-                }
 
                 h1 {
                     margin-bottom: rem(75px);
@@ -120,36 +63,44 @@
                     background-color: $light-color;
                     padding: rem(15px);
                     border-radius: rem(15px);
-
-
                 }
             }
         }
-
     }
 
     &-txt-about {
-        margin-bottom: rem(25px);
-        letter-spacing: rem(2px);
-        font-size: rem(22px);
-        background-image: linear-gradient(56deg, #ffffff 46.67%, #f7e9e4 46.67%, #f7e9e4 50%, #ffffff 50%, #ffffff 96.67%, #f7e9e4 96.67%, #f7e9e4 100%);
-        background-size: 72.37px 107.30px;
-        padding: rem(60px);
-        text-align: center;
-        font-family: Oswald-light;
 
+        .__inner {
+            background-color: blue;
+            margin-bottom: rem(25px);
+            letter-spacing: rem(2px);
+            font-size: rem(22px);
+            background-image: linear-gradient(56deg, #ffffff 46.67%, #f7e9e4 46.67%, #f7e9e4 50%, #ffffff 50%, #ffffff 96.67%, #f7e9e4 96.67%, #f7e9e4 100%);
+            background-size: 72.37px 107.30px;
+            padding: rem(60px);
+            text-align: center;
+            font-family: Oswald-light;
+        }
     }
 
     &-gallery-about {
+
         .imgs-container {
-            gap: rem(20px);
             display: flex;
-            flex-wrap: wrap;
+            gap: rem(20px);
+        }
+
+        .img1 {
+            width: 50%;
+        }
+
+        .img2 {
+            width: 50%;
         }
 
         img {
-            width: rem(725px);
-            height: rem(570px);
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
     }
@@ -158,23 +109,21 @@
         padding: rem(55px);
         text-align: center;
         font-size: rem(35px);
-
         font-family: Oswald-light;
     }
 
     &-gallery-options {
 
         .imgs-container {
-            margin-bottom: rem(55px);
-            //add cake-layout
-            gap: rem(5px);
+            // margin-bottom: rem(55px);
+            gap: rem(6px);
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            // justify-content: center;
 
             img {
-                width: 179px;
-                height: rem(179px);
+                width: rem(200px);
+                height: rem(200px);
                 object-fit: cover;
             }
         }
@@ -233,8 +182,6 @@
                         font-size: rem(23px);
                     }
                 }
-
-
             }
 
             img {
