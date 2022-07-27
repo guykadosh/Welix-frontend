@@ -105,7 +105,8 @@
   display: grid;
   background-color: #dddbd9;
 
-  grid-template-columns:20px 1fr 20px;
+  grid-template-columns: 20px 1fr 20px;
+
   >* {
     grid-column: 2;
   }
@@ -117,6 +118,7 @@
   .wap-details & {
     @include for-small-layout {
       grid-template-columns: 1fr 580px 1fr;
+
       >* {
         grid-column: 2;
       }
@@ -142,10 +144,12 @@
   }
 
 }
+
 .cake-layout {
   display: grid;
+  background-color: gray;
+  grid-template-columns: 10px 1fr 10px;
 
-  grid-template-columns:20px 1fr 20px;
   >* {
     grid-column: 2;
   }
@@ -154,28 +158,59 @@
     grid-column: 1 / -1;
   }
 
+  .small & {
+    grid-template-columns: 1fr 520px 1fr;
+
+    >* {
+      grid-column: 2;
+    }
+
+  }
+
+  .medium & {
+    grid-template-columns: 1fr 820px 1fr;
+  }
+
+  .narrow & {
+    grid-template-columns: 1fr 960px 1fr;
+
+  }
+
+  .normal & {
+    grid-template-columns: 1fr 1260px 1fr;
+  }
+
+  .wide & {
+    grid-template-columns: 1fr 1470px 1fr;
+  }
+
   .wap-details & {
     @include for-small-layout {
+      background-color: cornflowerblue;
       grid-template-columns: 1fr 520px 1fr;
+
       >* {
         grid-column: 2;
       }
     }
 
     @include for-medium-layout {
+      background-color: rgb(209, 57, 57);
       grid-template-columns: 1fr 820px 1fr;
     }
 
     @include for-narrow-layout {
-
+      background-color: aquamarine;
       grid-template-columns: 1fr 960px 1fr;
     }
 
     @include for-normal-layout {
+      background-color: aliceblue;
       grid-template-columns: 1fr 1260px 1fr;
     }
 
     @include for-wide-layout {
+      /* background-color: pink; */
       grid-template-columns: 1fr 1470px 1fr;
     }
   }
