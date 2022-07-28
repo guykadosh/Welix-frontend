@@ -220,28 +220,6 @@
               "style": {}
             },
             {
-              "id": "wpmff02225111",
-              "classes": ["wap-map"],
-              "type": "wap-map",
-              "style": { "width": "400px", "height": "500px" },
-              "info": {
-                "markers": [
-                  {
-                    "position": {
-                      "lat": 31.8102,
-                      "lng": 34.6566
-                    },
-                    "name": "Ashdod",
-                    "_id": "m101"
-                  }
-                ],
-                "center": {
-                  "lat": 31.8102,
-                  "lng": 34.6566
-                }
-              }
-            },
-            {
               "id": "wc04dsvf145",
               "classes": ["cake-list"],
               "type": "wap-list",
