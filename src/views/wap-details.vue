@@ -1,5 +1,5 @@
 <template>
-  <section v-if="wap" class="wap-details">
+  <section v-if="wap" class="wap-details" :class="wapClass">
     <component
       v-for="cmp in wap.cmps"
       :is="cmp.type"
@@ -52,6 +52,11 @@ export default {
     const wapName = wap.name.replaceAll(' ', '-')
 
     history.replaceState({}, null, wapName)
+  },
+  computed: {
+    wapClass() {
+      return this.wap?.class || ''
+    },
   },
 }
 </script>

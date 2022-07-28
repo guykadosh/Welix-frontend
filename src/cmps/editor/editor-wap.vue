@@ -6,7 +6,7 @@
     :class="[responsiveClass, wrapper]"
     :style="{ maxWidth: conMaxWidth + 'px' }"
   >
-    <div class="wap-to-edit" :style="wap.style">
+    <div class="wap-to-edit" :style="wap.style" :class="WapClass">
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"
@@ -82,12 +82,12 @@ export default {
     resized() {
       if (!this.$refs.container) return
       const { offsetWidth } = this.$refs.container
-      if (offsetWidth < 700) this.responsiveClass = ''
-      if (offsetWidth >= 700) this.responsiveClass = this.small
-      if (offsetWidth >= 840) this.responsiveClass = this.medium
+      if (offsetWidth < 620) this.responsiveClass = ''
+      if (offsetWidth >= 620) this.responsiveClass = this.small
+      if (offsetWidth >= 860) this.responsiveClass = this.medium
       if (offsetWidth >= 1024) this.responsiveClass = this.narrow
       if (offsetWidth >= 1300) this.responsiveClass = this.normal
-      if (offsetWidth >= 1360) this.responsiveClass = this.wide
+      if (offsetWidth >= 1500) this.responsiveClass = this.wide
     },
     resize(size) {
       this.conMaxWidth = size
