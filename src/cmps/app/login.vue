@@ -6,18 +6,16 @@
         class="login-modal flex flex-column items-center"
       >
         <h3 class="login-form-title">Login</h3>
-        <!-- <label for="" class="login-form-label">Username</label> -->
         <input
           v-model="credentials.username"
-          placeholder="Username"
+          placeholder="Username "
           autofocus
           class="login-form-input"
         />
-        <!-- <label for="" class="login-form-label">Password</label> -->
         <input
           v-model="credentials.password"
           type="password"
-          placeholder="Password"
+          placeholder="Password "
           show-password
           class="login-form-input"
         />
@@ -34,19 +32,19 @@
         <h2>Sign up</h2>
         <input
           v-model="credentials.fullname"
-          placeholder="Fullname"
+          placeholder="Fullname "
           autofocus
         />
         <input
           v-model="credentials.username"
-          placeholder="Username *"
+          placeholder="Username "
           required
         />
-        <input v-model="credentials.email" type="email" placeholder="Email" />
+        <input v-model="credentials.email" type="email" placeholder="Email " />
         <input
           v-model="credentials.password"
           type="password"
-          placeholder="Password *"
+          placeholder="Password "
           required
         />
 
