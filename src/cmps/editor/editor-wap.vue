@@ -122,7 +122,7 @@ export default {
       return [...this.medium, 'narrow']
     },
     normal() {
-      return [...this.narrow, 'narrow']
+      return [...this.narrow, 'normal']
     },
     wide() {
       return [...this.normal, 'wide']
