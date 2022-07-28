@@ -1,20 +1,21 @@
 <template>
-  <app-header class="main-layout" />
-  <section class="login">
-    <form @submit.prevent="login" class="login__form">
-      <h2>Log in</h2>
-      <input v-model="credentials.username" placeholder="Username" autofocus />
-      <input
-        v-model="credentials.password"
-        type="password"
-        placeholder="Password"
-        show-password
-      />
-      <button class="login__btn">
-        <span>Login</span>
-      </button>
-    </form>
-    <p @click="this.$router.push('/signup')">Don't have an account?</p>
+  <section class="login main-layout">
+    <app-header />
+
+    <section class="login-wrapper main-layout">
+      <div class="login-wrapper__inner">
+
+        <form @submit.prevent="login" class="login__form">
+          <h2>Log in</h2>
+          <input v-model="credentials.username" placeholder="Username" autofocus />
+          <input v-model="credentials.password" type="password" placeholder="Password" show-password />
+          <button class="login__btn">
+            <span>Login</span>
+          </button>
+        </form>
+        <p @click="this.$router.push('/signup')">Don't have an account?</p>
+      </div>
+    </section>
   </section>
 </template>
 <script>

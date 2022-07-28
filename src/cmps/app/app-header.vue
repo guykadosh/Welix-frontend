@@ -30,7 +30,7 @@
         <router-link class="header-link link-login" v-if="!isUser" to="/login"
           >log in</router-link
         >
-        <router-link class="header-link link-signup" v-if="!isUser" to="/login"
+        <router-link class="header-link link-signup" v-if="!isUser" to="/signup"
           >sign up</router-link
         >
       </section>
