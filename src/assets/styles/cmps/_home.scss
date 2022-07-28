@@ -130,6 +130,10 @@
                     opacity: 1;
                 }
 
+                @include for-wide-layout {
+                    margin-top: -50px;
+                }
+
                 li {
                     text-align: right;
                     font-family: Nunito-regular;
@@ -224,7 +228,7 @@
 
                     .img4 {
                         height: 200px;
-                        
+
                         @include for-medium-layout {
                             height: 320px;
                         }
