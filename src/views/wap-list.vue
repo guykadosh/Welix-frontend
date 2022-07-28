@@ -1,30 +1,33 @@
 <template>
-  <section class="wap-list main-layout">
+  <section class="wap-list">
     <app-header />
     <Loading />
-    <div class="wap-list__inner">
-      <div class="headings">
-        <h2 class="template-heading">
-          Pick one of our professionally designed website templates
-        </h2>
-        <h3 class="template-subheading">
-          Or express your inner creativity and start from blank
-        </h3>
-      </div>
+    <section class="wap-list__wrapper main-layout">
 
-      <div class="wap-list-container">
-        <div class="wap-preview" v-for="wap in waps" :key="wap._id">
-          <div class="wap-preview-img">
-            <div class="wap-preview-btns">
-              <a @click="wapToEdit(wap)">Edit</a>
-              <a @click="wapPreview(wap._id)">View</a>
+      <div class="wap-list__inner">
+        <div class="headings">
+          <h2 class="template-heading">
+            Pick one of our professionally designed website templates
+          </h2>
+          <h3 class="template-subheading">
+            Or express your inner creativity and start from blank
+          </h3>
+        </div>
+
+        <div class="wap-list-container">
+          <div class="wap-preview" v-for="wap in waps" :key="wap._id">
+            <div class="wap-preview-img">
+              <div class="wap-preview-btns">
+                <a @click="wapToEdit(wap)">Edit</a>
+                <a @click="wapPreview(wap._id)">View</a>
+              </div>
+              <img :src="wap.imgUrl" alt="" />
             </div>
-            <img :src="wap.imgUrl" alt="" />
+            <p>{{ wap.type }}</p>
           </div>
-          <p>{{ wap.type }}</p>
         </div>
       </div>
-    </div>
+    </section>
   </section>
 </template>
 

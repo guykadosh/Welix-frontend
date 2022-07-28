@@ -2,6 +2,12 @@
   &-header {
     background-color: #5d21d1;
     width: 100%;
+    padding-top: rem(15px);
+
+    .logo {
+      width: 8rem;
+      cursor: pointer;
+    }
 
     .wap-header__inner {
       width: 100%;
@@ -492,7 +498,7 @@
   &-contact {
     display: flex;
     flex-direction: column;
-    padding-top: 15rem;
+    padding-top: 10rem;
     background-color: #5d21d1;
     clip-path: polygon(0 14%, 100% 0, 100% 86%, 0% 100%);
     justify-content: center;
@@ -503,7 +509,7 @@
     h2 {
       color: $light-color;
       text-align: center;
-      font-size: rem(50px);
+      font-size: rem(65px);
       font-weight: 300;
       padding-bottom: 0;
       margin-bottom: rem(35px);
@@ -518,13 +524,13 @@
 
       input,
       textarea {
+        height: rem(45px);
         display: flex;
         justify-items: center;
-        width: 100%;
+        width: rem(560px);
         border-radius: em(5px);
         margin-bottom: rem(15px);
         outline-style: none;
-        background-color: #f3fafa;
         font-size: rem(25px);
         padding-inline-start: rem(15px);
         border: none;
@@ -555,7 +561,7 @@
       }
 
       textarea {
-        height: 7rem;
+        height: 9rem;
         margin-bottom: rem(35px);
       }
     }

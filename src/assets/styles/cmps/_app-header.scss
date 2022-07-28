@@ -2,3 +2,46 @@
   width: rem(235px);
   cursor: pointer;
 }
+.main-header {
+  .header__inner {
+    z-index: 10;
+    height: rem(100px);
+
+    .logo-wrapper {
+      .logo {
+        text-align: left;
+        width: rem(200px);
+        cursor: pointer;
+      }
+    }
+
+    // .main-header-logo {
+    //   font-size: em(36px);
+    //   font-family: Nunito-regular;
+    // }
+
+    .header-link {
+      text-decoration: none;
+      font-family: Nunito-bold;
+      text-transform: uppercase;
+      color: $dark-color;
+      font-size: em(16px);
+      letter-spacing: em(1.3px);
+      padding: em(24px) em(38px);
+      cursor: pointer;
+
+      &.link-dashboard {
+        padding-right: 0;
+      }
+    }
+
+    .link-signup {
+      border: 1px solid $dark-color;
+
+      &:hover {
+        background-color: $dark-color;
+        color: $light-color;
+      }
+    }
+  }
+}

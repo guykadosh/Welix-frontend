@@ -1,4 +1,5 @@
 .home-page {
+    
     .bg-cover {
         background-image: url("https://res.cloudinary.com/duvwxwtot/image/upload/v1658896492/sprint%204/bg2_filgcm.svg");
         width: 100vw;
@@ -16,39 +17,6 @@
         height: 100vh;
     }
 
-    .header__inner {
-        z-index: 10;
-
-        .main-header-logo {
-            font-size: em(36px);
-            font-family: Nunito-regular;
-        }
-
-        .header-link {
-            text-decoration: none;
-            font-family: Nunito-bold;
-            text-transform: uppercase;
-            color: $dark-color;
-            font-size: em(16px);
-            letter-spacing: em(1.3px);
-            padding: em(24px) em(38px);
-            cursor: pointer;
-
-            &.link-dashboard {
-                padding-right: 0;
-            }
-        }
-
-        .link-signup {
-            border: 1px solid $dark-color;
-
-            &:hover {
-                background-color: $dark-color;
-                color: $light-color;
-            }
-        }
-    }
-
     .main-hero {
 
         .hero__inner {
@@ -56,7 +24,7 @@
             display: flex;
             justify-content: start;
             z-index: 10;
-            padding-top: em(60px);
+            // padding-top: em(60px);
 
             .text-box {
                 width: em(820px);
