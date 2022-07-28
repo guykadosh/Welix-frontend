@@ -30,7 +30,7 @@
 
                 button {
                     font-family: Nunito-regular;
-                    background-color: #be123c;
+                    background-color: $primary-color;
                     margin-top: 1.5rem;
                     padding: 0.8rem 0.8rem;
                     border: none;
@@ -38,11 +38,11 @@
                     color: $light-color1;
                     font-weight: 600;
                     cursor: pointer;
-                    border: 1px solid #be123c;
+                    border: 1px solid $primary-color;
 
                     &:hover {
                         background-color: #fff;
-                        color: #be123c;
+                        color: $primary-color;
                     }
                 }
 

@@ -56,9 +56,9 @@
     <div class="editor-nav-site-domain flex flex-column justify-center">
       <div>
         <font-awesome-icon icon="fa-light fa-lock" class="icon" />
-        <span class="http">https:</span
+        <span class="http">https://</span
         ><span
-          >//welix.herokuapp.com/
+          ><span class="heroku-url">welix.herokuapp.com/</span>
           <span
             class="my-site"
             contenteditable="true"
