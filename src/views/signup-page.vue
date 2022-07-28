@@ -7,8 +7,8 @@
 
         <form @submit.prevent="signup" class="signup__form">
           <h2>Sign up</h2>
-          <input v-model="credentials.fullname" placeholder="Fullname *" autofocus />
-          <input v-model="credentials.username" placeholder="Username *" required />
+          <input v-model="credentials.fullname" placeholder="Fullname " autofocus />
+          <input v-model="credentials.username" placeholder="Username " required />
           <input v-model="credentials.email" type="email" placeholder="Email" />
           <input v-model="credentials.password" type="password" placeholder="Password" />
 

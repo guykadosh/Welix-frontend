@@ -1,4 +1,5 @@
 .design {
+
     &-header {
         height: 6rem;
 
@@ -519,8 +520,8 @@
                     height: rem(380px);
 
                 }
-                .wide
-                .wap-details & {
+
+                .wide .wap-details & {
                     @include for-normal-layout {
                         width: rem(550px);
                         height: rem(380px);
@@ -564,7 +565,7 @@
         /*   height: rem(600px); */
         justify-items: center;
         background-color: #332e29;
-          padding: rem(25px);
+        padding: rem(25px);
         /* margin-top: rem(175px); */
     }
 
@@ -579,7 +580,7 @@
         width: rem(500px);
         height: rem(450px);
 
-/*         .small & {
+        /*         .small & {
             width: rem(650px);
             height: rem(100px);
 
