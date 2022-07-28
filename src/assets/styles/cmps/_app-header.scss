@@ -1,18 +1,20 @@
-.logo {
-  width: rem(200px);
-  cursor: pointer;
-}
-
-
 .main-header {
   .header__inner {
     z-index: 10;
     height: rem(100px);
 
-    .main-header-logo {
-      font-size: em(36px);
-      font-family: Nunito-regular;
+    .logo-wrapper {
+      .logo {
+        text-align: left;
+        width: rem(200px);
+        cursor: pointer;
+      }
     }
+
+    // .main-header-logo {
+    //   font-size: em(36px);
+    //   font-family: Nunito-regular;
+    // }
 
     .header-link {
       text-decoration: none;
