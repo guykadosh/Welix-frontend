@@ -1,7 +1,6 @@
 .wap-list {
   height: 100vh;
   width: 100vw;
-
   &__inner {
     margin-top: em(50px);
     width: 100%;
@@ -84,7 +83,7 @@
             border: 1px solid #be123c;
 
             &:hover {
-              background-color:#c7234ced;
+              background-color: #be123ded;
               color: $light-color;
             }
           }
@@ -101,7 +100,7 @@
         display: block;
         width: 100%;
         box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.08);
-        border-radius: rem(9px);
+        /*  border-radius: rem(9px); */
         // margin-block-end: rem(10px);
       }
 
