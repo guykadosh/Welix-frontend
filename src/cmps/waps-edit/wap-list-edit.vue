@@ -1,7 +1,7 @@
 <template>
   <section
     v-if="cmp"
-    class="wap-list"
+    class="wap-list-cmp"
     :class="[...cmp.classes, selected]"
     v-click-outside="unselect"
     :style="cmp.style"

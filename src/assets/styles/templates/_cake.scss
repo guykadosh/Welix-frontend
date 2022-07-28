@@ -189,12 +189,12 @@
           font-size: rem(28px);
         }
 
-        .narrow & {
-          font-size: rem(36px);
-        }
-
         .normal & {
           font-size: rem(64px);
+        }
+
+        .narrow & {
+          font-size: rem(36px);
         }
 
         .wap-details & {
@@ -228,7 +228,7 @@
           }
 
           .normal & {
-            font-size: rem(62px);
+            font-size: rem(52px);
             margin-bottom: rem(124px);
             margin-top: rem(64px);
           }
@@ -243,7 +243,7 @@
             }
 
             @include for-normal-layout {
-              font-size: rem(62px);
+              font-size: rem(52px);
               margin-bottom: rem(124px);
               margin-top: rem(64px);
             }
@@ -509,16 +509,19 @@
     // background-size: 200%;
     padding: rem(36px);
 
+    .medium & {
+      //   background-size: contain;
+    }
+
     .wap-container__inner {
       font-family: Oswald-light, sans-serif;
 
       display: flex;
       //   flex-direction: column-reverse;
 
-      .normal & {
+      .medium & {
         display: flex;
-        // flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
       }
 
       .wap-details & {
@@ -555,6 +558,10 @@
             display: flex;
           }
         }
+      }
+
+      .map-container {
+        display: none;
       }
 
       .cake-footer-picture {
