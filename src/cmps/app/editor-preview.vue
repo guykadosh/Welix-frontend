@@ -26,10 +26,10 @@
 
             <div class="img-container">
                 <section class="imgs-wrapper">
-                    <img src="../../assets/img/prev1.png" class="img" :class="imgs[0].pos" />
-                    <img src="../../assets/img/prev3.png" class="img" :class="imgs[1].pos" />
-                    <img src="../../assets/img/prev4.png" class="img" :class="imgs[2].pos" />
-                    <img src="../../assets/img/prev4.png" class="img" :class="imgs[3].pos" />
+                    <img src="../../assets/img/pic1.png" class="img" :class="imgs[0].pos" />
+                    <img src="../../assets/img/pic2.png" class="img" :class="imgs[1].pos" />
+                    <img src="../../assets/img/pic3.png" class="img" :class="imgs[2].pos" />
+                    <img src="../../assets/img/pic5.png" class="img img4" :class="imgs[3].pos" />
                 </section>
             </div>
         </div>
