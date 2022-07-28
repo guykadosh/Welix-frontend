@@ -213,10 +213,28 @@
                         box-shadow: -1px 1px 10px 5px #000;
                         transition: transform 0.3s;
                         max-width: 450px;
+                        // max-height: 600px;
+
 
                         @include for-medium-layout {
                             max-width: 100%;
                             width: 100%;
+                        }
+                    }
+
+                    .img4 {
+                        height: 200px;
+                        
+                        @include for-medium-layout {
+                            height: 320px;
+                        }
+
+                        @include for-narrow-layout {
+                            height: 450px;
+                        }
+
+                        @include for-normal-layout {
+                            height: 570px;
                         }
                     }
 
