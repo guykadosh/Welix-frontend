@@ -28,22 +28,13 @@
             overflow-x: hidden;
             overflow-y: hidden;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: rem(15px);
 
             .small & {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: rem(15px);
-                max-height: 35vh;
-            }
-
-            .medium & {
-                max-height: 60vh;
-            }
-
-            .narrow & {
-                max-height: 80vh;
             }
 
             .wap-details & {
@@ -52,50 +43,35 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     gap: rem(15px);
-                    max-height: 35vh;
-                }
-
-                @include for-medium-layout {
-                    max-height: 60vh;
-                }
-
-                @include for-narrow-layout {
-                    max-height: 80vh;
                 }
             }
 
             img {
-                // width: 600px;
-                width: 100vw;
+                width: 100%;
+                height: 100%;
                 object-position: 0% 50%;
-                object-fit: cover;
-                max-height: 65vh;
+                object-fit: contain;
 
                 .small & {
+                    object-fit: cover;
                     width: 100%;
-                    max-height: 320px;
                 }
 
                 .medium & {
                     object-fit: cover;
-                    max-height: 680px;
                 }
 
                 .wap-details & {
 
                     @include for-small-layout {
-                        width: 100%;
-                        max-height: 320px;
-                    }
-
-                    @include for-medium-layout {
                         object-fit: cover;
-                        max-height: 680px;
+                        width: 100%;
                     }
                 }
             }
 
             .img1 {
+                height: 100%;
 
                 .small & {
                     order: 1;
@@ -109,43 +85,26 @@
                 }
             }
 
-            .img2 {
-                margin-bottom: rem(0px);
-
-                .small {
-                    margin-bottom: 0;
-                }
-
-                .wap-details & {
-
-                    @include for-small-layout {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-
             .text-box {
+
                 order: 0;
                 font-family: Oswald-light;
                 background-color: rgb(247 233 228);
-                font-size: rem(28px);
+                // font-size: rem(28px);
                 height: 100%;
                 text-align: center;
                 order: 1;
                 padding: rem(8px);
-                width: 100vw;
+                width: 100%;
                 padding-bottom: rem(35px);
 
                 .small & {
-                    padding-bottom: 0;
-                    margin-top: -50px;
                     padding: rem(18px);
                     font-size: rem(16px);
                     width: initial;
                 }
 
                 .medium & {
-                    margin-top: 0;
                     padding: rem(35px);
                     font-size: rem(28px);
                 }
@@ -154,18 +113,19 @@
                     font-size: rem(35px);
                 }
 
+                .normal & {
+                    font-size: rem(64px);
+                }
+
                 .wap-details & {
 
                     @include for-small-layout {
-                        padding-bottom: 0;
-                        margin-top: -50px;
                         padding: rem(18px);
                         font-size: rem(16px);
                         width: initial;
                     }
 
                     @include for-medium-layout {
-                        margin-top: 0;
                         padding: rem(35px);
                         font-size: rem(28px);
                     }
@@ -177,26 +137,47 @@
 
                 h1 {
                     margin-bottom: rem(35px);
-                    margin-top: rem(65px);
-
-                    .small {
+                    font-size: rem(39px);
+                    .small & {
                         margin-bottom: rem(75px);
+                        font-size: rem(28px);
                     }
 
+                    .narrow & {
+                        font-size: rem(68px);
+                    }
+                    
+                    .normal & {
+                        font-size: rem(64px);
+                    }
+                    
                     .wap-details & {
-
+                        
                         @include for-small-layout {
                             margin-bottom: rem(75px);
+                        }
+                        
+                        @include for-narrow-layout {
+                            font-size: rem(68px);
+                        }
+
+                        @include for-normal-layout {
+                            font-size: rem(62px);
                         }
                     }
                 }
 
                 .btn1 {
+                    display: block;
                     font-weight: 700;
                     color: $dark-color;
                     background-color: $light-color;
                     padding: rem(15px);
-                    border-radius: rem(15px);
+                    width: 100%;
+                    // min-width: rem(120px);
+                    border: 1px solid $dark-color;
+
+                    // border-radius: rem(15px);
                 }
             }
         }
@@ -297,7 +278,6 @@
         margin-block-end: rem(50px);
 
         .imgs-container {
-            // margin-bottom: rem(55px);
             display: flex;
             flex-direction: column;
 
@@ -319,12 +299,13 @@
                 gap: rem(11px);
             }
 
+            .wide & {
+                gap: rem(11px);
+            }
+
             .wap-details & {
 
                 @include for-small-layout {
-                    flex-direction: row;
-                    gap: rem(4px);
-                    flex-wrap: wrap;
                     flex-direction: row;
                     gap: rem(4px);
                     flex-wrap: wrap;
@@ -343,10 +324,8 @@
                 }
             }
 
-            // justify-content: center;
-
             img {
-                width: 100vw;
+                width: 100%;
                 height: 400px;
                 object-fit: cover;
                 margin-bottom: rem(15px);
@@ -368,8 +347,13 @@
                 }
 
                 .normal & {
-                    width: rem(155px);
-                    height: rem(155px);
+                    width: rem(147.8px);
+                    height: rem(147.8px);
+                }
+
+                .wide & {
+                    width: rem(155.3px);
+                    height: rem(155.3px);
                 }
 
                 .wap-details & {
@@ -391,8 +375,13 @@
                     }
 
                     @include for-normal-layout {
-                        width: rem(155px);
-                        height: rem(155px);
+                        width: rem(147.8px);
+                        height: rem(147.8px);
+                    }
+
+                    @include for-wide-layout {
+                        width: rem(155.3px);
+                        height: rem(155.3px);
                     }
                 }
             }
