@@ -1,30 +1,28 @@
 <template>
   <div class="tool-bar-nav__mobile">
-    <div class="screen" @click="toggleMobileMenu" v-if="isMobileMenu"></div>
+   
+    <div class="tool-bar-nav__mobile__wrapper">
+      
+      <div class="mobile-menu-btn" @click.stop="toggleMobileMenu" :class="{ open: isMobileMenu }">
+        <font-awesome-icon icon="fa-light fa-circle" class="btn-icon" />
 
-    <div class="add-section-mobile" @click="toggleMobileMenu">
-      <font-awesome-icon icon="fa-light fa-circle" class="plus-icon-mobile" />
-    </div>
+        <div class="mobile-icon edit" @click.stop="setTool('edit')">
+          <font-awesome-icon icon="fa-light fa-pen-to-square" />
+        </div>
+        <div class="mobile-icon pallete" @click.stop="setTool('theme')">
+          <font-awesome-icon icon="fa-light fa-palette" />
+        </div>
+        <div class="mobile-icon add" @click.stop="setTool('section')">
+          <font-awesome-icon icon="fa-light fa-plus" />
+        </div>
 
-    <div class="mobile-tool-filter" :class="{ open: isMobileMenu }">
-      <div class="mobile-icon edit" @click="setTool('edit')">
-        <font-awesome-icon icon="fa-light fa-pen-to-square" />
-      </div>
-      <div class="mobile-icon pallete" @click="setTool('theme')">
-        <font-awesome-icon icon="fa-light fa-palette" />
-      </div>
-      <div class="mobile-icon add" @click="setTool('section')">
-        <font-awesome-icon icon="fa-light fa-plus" />
       </div>
     </div>
   </div>
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
       <ul class="clean-list">
-        <li
-          @click="setTool('section')"
-          :class="{ active: activeTool === 'section' && isToolOpen }"
-        >
+        <li @click.stop="setTool('section')" :class="{ active: activeTool === 'section' && isToolOpen }">
           <a-tooltip placement="right">
             <template #title>
               <span>Add Section</span>
@@ -34,10 +32,7 @@
             </div>
           </a-tooltip>
         </li>
-        <li
-          @click="setTool('theme')"
-          :class="{ active: activeTool === 'theme' && isToolOpen }"
-        >
+        <li @click.stop="setTool('theme')" :class="{ active: activeTool === 'theme' && isToolOpen }">
           <a-tooltip placement="right">
             <template #title>
               <span>Themes</span>
@@ -47,19 +42,13 @@
             </div>
           </a-tooltip>
         </li>
-        <li
-          @click="setTool('edit')"
-          :class="{ active: activeTool === 'edit' && isToolOpen }"
-        >
+        <li @click.stop="setTool('edit')" :class="{ active: activeTool === 'edit' && isToolOpen }">
           <a-tooltip placement="right">
             <template #title>
               <span>Edit</span>
             </template>
             <div>
-              <font-awesome-icon
-                icon="fa-light fa-pen-to-square"
-                class="icon"
-              />
+              <font-awesome-icon icon="fa-light fa-pen-to-square" class="icon" />
             </div>
           </a-tooltip>
         </li>
@@ -137,7 +126,7 @@ export default {
   },
   methods: {
     setTool(type) {
-      ;(this.isMobileMenu = false), (this.activeTool = type)
+      this.toggleMobileMenu()
       this.$emit('setTool', type)
     },
     saveWap() {
@@ -145,6 +134,7 @@ export default {
     },
     toggleMobileMenu() {
       this.isMobileMenu = !this.isMobileMenu
+      console.log('mobile menu', this.isMobileMenu)
     },
     copyUrl() {
       console.log('Hi?')
@@ -158,4 +148,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+</style>
