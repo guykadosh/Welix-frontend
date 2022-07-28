@@ -158,12 +158,7 @@
   }
 
   .small & {
-    grid-template-columns: 1fr 520px 1fr;
-
-    >* {
-      grid-column: 2;
-    }
-
+    grid-template-columns: 1fr 640px 1fr;
   }
 
   .medium & {
@@ -171,8 +166,7 @@
   }
 
   .narrow & {
-    grid-template-columns: 1fr 960px 1fr;
-
+    grid-template-columns: 1fr 1000px 1fr;
   }
 
   .normal & {
@@ -180,16 +174,13 @@
   }
 
   .wide & {
-    grid-template-columns: 1fr 1470px 1fr;
+    grid-template-columns: 1fr 1320px 1fr;
   }
 
   .wap-details & {
+
     @include for-small-layout {
-      grid-template-columns: 1fr 520px 1fr;
-      
-      >* {
-        grid-column: 2;
-      }
+      grid-template-columns: 1fr 520px 1fr;  
     }
     
     @include for-medium-layout {
@@ -202,14 +193,12 @@
 
     @include for-normal-layout {
       grid-template-columns: 1fr 1260px 1fr;
-
     }
 
     @include for-wide-layout {
       grid-template-columns: 1fr 1320px 1fr;
     }
   }
-
 }
 
 .dashboard-layout {
