@@ -67,7 +67,6 @@
 
     &-view-port {
       display: none;
-      // border-right: 1px solid rgba(128, 128, 128, 0.26);
       padding: 0 em(10px);
       height: 100%;
 
@@ -89,7 +88,7 @@
 
         &.active {
           // background-color: rgba(20, 42, 243, 0.237);
-          background-color: #74c1fc79;
+          background-color: rgba($primary-color, 35%);
           color: $dark-color;
         }
       }
@@ -114,6 +113,14 @@
 
         .http {
           color: #4263eb;
+        }
+
+        .heroku-url{
+          display: none;
+
+          @include for-medium-layout {
+            display: inline;
+          }
         }
 
         .my-site {

@@ -1,7 +1,7 @@
 [
   {
     "name": "HANNA BAKES.",
-    "imgUrl": "https://i.ibb.co/kHCLLdn/v4951.png",
+    "imgUrl": "https://i.ibb.co/hMHxnf3/Screenshot-2022-07-28-151848.png",
     "type": "Cake shop",
     "style": {},
     "class": "cake",
@@ -220,17 +220,24 @@
               "style": {}
             },
             {
-              "id": "fdv1515",
-              "classes": ["cake-footer-picture"],
-              "type": "wap-gallery",
+              "id": "wpmff02225111",
+              "classes": ["wap-map"],
+              "type": "wap-map",
+              "style": { "width": "400px", "height": "500px" },
               "info": {
-                "imgs": {
-                  "type": "imgs",
-                  "urls": [
-                    [
-                      "https://i.ibb.co/cvzZr9F/courtney-cook-le7-D9-QFi-Pr8-unsplash.jpg"
-                    ]
-                  ]
+                "markers": [
+                  {
+                    "position": {
+                      "lat": 31.8102,
+                      "lng": 34.6566
+                    },
+                    "name": "Ashdod",
+                    "_id": "m101"
+                  }
+                ],
+                "center": {
+                  "lat": 31.8102,
+                  "lng": 34.6566
                 }
               }
             },

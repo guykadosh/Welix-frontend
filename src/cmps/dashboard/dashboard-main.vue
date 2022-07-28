@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-main">
+  <div v-if="waps.length" class="dashboard-main">
     <div class="dashboard-main-header">
       <h2 class="title">
         <span>{{ user.fullname }}'s</span> Backoffice
@@ -34,7 +34,7 @@
   </div>
 </template>
 <script>
-import { userService } from '../../services/user.service'
+// import { userService } from '../../services/user.service'
 import Chart from './chart.vue'
 import composeMail from './compose-mail.vue'
 

@@ -25,7 +25,7 @@
       .mobile-menu-btn {
         z-index: 80;
         border-radius: 50%;
-        background-color: #be123c;
+        background-color: $primary-color;
         padding: rem(10px);
         transition: transform 0.2s;
         font-size: rem(18px);
@@ -67,18 +67,21 @@
           }
 
           .mobile-icon.add {
+            box-shadow: 0px 0px 3px 0px #f3f3f3 inset;
             position: relative;
             bottom: 41px;
-            right: 115px;
+            right: 119px;
           }
 
           .mobile-icon.pallete {
+            box-shadow: 0px 0px 3px 0px #f3f3f3 inset;
             position: relative;
             bottom: 70px;
-            right: 14px;
+            right: 15px;
           }
 
           .mobile-icon.edit {
+            box-shadow: 0px 0px 3px 0px #f3f3f3 inset;
             position: relative;
             bottom: 42px;
             right: -87px;
@@ -114,11 +117,12 @@
           text-align: center;
 
           &:hover {
-            background-color: #74c1fc79;
+            background-color: rgba($primary-color, 35%);
+            color: $light-color;
           }
 
           &.active {
-            background-color: #74c1fc79;
+            background-color: rgba($primary-color, 80%);
           }
 
           .icon {
@@ -137,13 +141,11 @@
     width: 0;
     overflow-y: hidden;
     overflow-x: hidden;
-
     background-color: #fff;
 
     // mobile
     position: absolute;
     bottom: 0;
-    // bottom: rem(-250px);
     left: 0;
     z-index: 200;
     height: 0;
@@ -179,7 +181,7 @@
     }
 
     &__header {
-      border-top: #1971c2 5px solid;
+      border-top: $primary-color 5px solid;
       border-bottom: solid 1px #f1f3f5;
       padding: rem(6px) rem(16px);
       align-items: center;
@@ -198,7 +200,7 @@
     &__labels {
       width: 120px;
       background-color: #f7f8f8;
-      
+
       display: none;
 
       @include for-medium-layout {
@@ -207,7 +209,6 @@
     }
 
     &__label {
-      // margin-block-end: rem(10px);
       width: 200px;
 
       padding: rem(8px) em(10px);
@@ -215,9 +216,7 @@
       margin-block-end: em(8px);
 
       &.selected {
-        border-color: #228be6;
-        // border-bottom: 1px solid #228be638;
-        // border-top: 1px solid #228be638;
+        border-color: $primary-color;
       }
 
       &:first-child {
@@ -229,21 +228,15 @@
 
       &-text {
         display: block;
-        // padding: rem(5px) rem(8px);
         cursor: pointer;
         min-width: 100%;
 
         &:hover {
-          // border-radius: rem(20px);
-          // background-color: #74c1fc79;
-          color: #228be6;
+          color: $primary-color;
         }
 
         &.selected {
-          // border-radius: rem(20px);
-          // background-color: #74c1fc79;
-          color: #228be6;
-          // font-weight: 600;
+          color: $primary-color;
         }
       }
     }
