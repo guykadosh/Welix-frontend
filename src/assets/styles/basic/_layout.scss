@@ -115,8 +115,34 @@
     grid-column: 1 / -1;
   }
 
+  .medium & {
+    background-color: purple;
+
+    grid-template-columns: 1fr 820px 1fr;
+  }
+
+  .narrow & {
+    background-color: pink;
+
+    grid-template-columns: 1fr 950px 1fr;
+
+  }
+
+  .normal & {
+    background-color: rgb(190, 190, 88);
+
+    grid-template-columns: 1fr 1050px 1fr;
+  }
+
+  .wide & {
+    background-color: aquamarine;
+
+    grid-template-columns: 1fr 1100px 1fr;
+  }
+
   .wap-details & {
     @include for-small-layout {
+      background-color: peru;
       grid-template-columns: 1fr 580px 1fr;
 
       >* {
@@ -125,21 +151,23 @@
     }
 
     @include for-medium-layout {
+      background-color: purple;
       grid-template-columns: 1fr 820px 1fr;
     }
 
     @include for-narrow-layout {
-
+      background-color: pink;
       grid-template-columns: 1fr 950px 1fr;
     }
 
     @include for-normal-layout {
-      grid-template-columns: 1fr 1150px 1fr;
+      background-color: rgb(190, 190, 88);
+      grid-template-columns: 1fr 1050px 1fr;
     }
 
     @include for-wide-layout {
-
-      grid-template-columns: 1fr 1000px 1fr;
+      background-color: aquamarine;
+      grid-template-columns: 1fr 1100px 1fr;
     }
   }
 

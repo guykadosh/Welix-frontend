@@ -73,7 +73,7 @@ export default {
         cmps = wapService.applyDrag(cmps, dropRes)
         await this.$store.dispatch({ type: 'updateCmps', cmps })
       } catch (err) {
-        notification['error']
+        // notification['error']
       }
     },
     getChildPayload(idx) {

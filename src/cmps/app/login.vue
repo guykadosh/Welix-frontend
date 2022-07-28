@@ -1,16 +1,19 @@
 <template lang="">
   <a-tabs>
     <a-tab-pane key="1" tab="Login">
-      <form @submit.prevent="login" class="">
+      <form
+        @submit.prevent="login"
+        class="login-modal flex flex-column items-center"
+      >
         <h3 class="login-form-title">Login</h3>
-        <label for="" class="login-form-label">Username</label>
+        <!-- <label for="" class="login-form-label">Username</label> -->
         <input
           v-model="credentials.username"
           placeholder="Username"
           autofocus
           class="login-form-input"
         />
-        <label for="" class="login-form-label">Password</label>
+        <!-- <label for="" class="login-form-label">Password</label> -->
         <input
           v-model="credentials.password"
           type="password"
@@ -24,7 +27,10 @@
       </form>
     </a-tab-pane>
     <a-tab-pane key="2" tab="Signup">
-      <form @submit.prevent="signup" class="signup__form">
+      <form
+        @submit.prevent="signup"
+        class="signup-modal flex flex-column items-center"
+      >
         <h2>Sign up</h2>
         <input
           v-model="credentials.fullname"
@@ -69,7 +75,6 @@ export default {
   },
   methods: {
     login() {
-      console.log('Hi')
       this.$emit('login', this.credentials)
     },
     signup() {
@@ -78,4 +83,4 @@ export default {
   },
 }
 </script>
-<style lang=""></style>
+<style scoped></style>
