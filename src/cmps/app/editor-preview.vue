@@ -29,7 +29,7 @@
                     <img src="../../assets/img/pic6.png" class="img" :class="imgs[0].pos" />
                     <img src="../../assets/img/pic2.png" class="img" :class="imgs[1].pos" />
                     <img src="../../assets/img/pic3.png" class="img" :class="imgs[2].pos" />
-                    <img src="../../assets/img/pic7.png" class="img img4" :class="imgs[3].pos" />
+                    <img src="../../assets/img/pic8.png" class="img img4" :class="imgs[3].pos" />
                 </section>
             </div>
         </div>
