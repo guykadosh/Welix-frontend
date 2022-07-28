@@ -505,6 +505,8 @@
     // background-color: #e77070a8;
     background-image: url('https://images.unsplash.com/photo-1611293388250-580b08c4a145?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1138&q=80');
     background-size: cover;
+    // background-size: contain;
+    // background-size: 200%;
     padding: rem(36px);
 
     .wap-container__inner {
@@ -515,13 +517,15 @@
 
       .normal & {
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
+        justify-content: center;
       }
 
       .wap-details & {
         @include for-normal-layout {
           display: flex;
           flex-direction: row;
+          justify-content: space-evenly;
         }
       }
 
