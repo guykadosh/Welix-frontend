@@ -1,66 +1,87 @@
-.login,
-.signup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  height: rem(350px);
-  padding: rem(20px);
-  width: rem(550px);
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.login {
 
-  input,
-  button {
-    border-radius: rem(4px);
-    padding: 0.9rem 1rem;
-    margin: 16px 0px 8px;
-    vertical-align: top;
-    width: 100%;
-    background-color: $light-color4;
-    font-size: rem(15px);
-    outline-color: $secondary-color;
-  }
+  width: 100vw;
+  height: 100vh;
 
-  button {
-    background-color: $secondary-color;
-    margin-top: 1.5rem;
-    padding: 0.8rem 0.8rem;
-    border: none;
-    font-size: 17px;
-    color: $light-color1;
-    font-weight: 600;
-    cursor: pointer;
+  .login-wrapper {
 
-    &:hover {
-      background-color: $secondary-color-light;
+    &__inner {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .login__form {
+        text-align: center;
+
+        input,
+        button {
+          padding: 0.9rem 1rem;
+          margin: 16px 0px 8px;
+          vertical-align: top;
+          width: 100%;
+          background-color: $light-color4;
+          font-size: rem(15px);
+          outline-color: $secondary-color;
+        }
+
+        button {
+          font-family: Nunito-regular;
+          background-color: #be123c;
+          margin-top: 1.5rem;
+          padding: 0.8rem 0.8rem;
+          border: none;
+          font-size: 17px;
+          color: $light-color1;
+          font-weight: 600;
+          cursor: pointer;
+          border: 1px solid #be123c;
+
+          &:hover {
+            background-color: #fff;
+            color: #be123c;
+          }
+        }
+
+        input {
+          border: 1px solid $light-color5;
+        }
+
+        h2 {
+          font-family: Nunito-regular;
+          font-size: rem(40px);
+          letter-spacing: 0;
+          margin-bottom: rem(18px);
+        }
+
+      }
+
+      p {
+        font-family: Nunito-regular;
+        margin-top: rem(12px);
+        text-decoration: underline;
+        font-size: rem(15px);
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
     }
   }
-
-  input {
-    border: 1px solid $light-color5;
-  }
-
-  h2 {
-    text-align: center;
-    font-size: rem(40px);
-    letter-spacing: 0;
-    margin-bottom: rem(18px);
-  }
-
-  p {
-    margin-top: rem(12px);
-    text-decoration: underline;
-    font-size: rem(15px);
-    cursor: pointer;
-  }
 }
+
+
+
+
+
 
 .login-modal,
 .signup-modal {
   width: rem(300px);
   margin: 0 auto;
+
   input {
     background-color: $light-color3;
     border: #ccc 1px solid;
