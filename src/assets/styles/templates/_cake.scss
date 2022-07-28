@@ -122,7 +122,8 @@
       }
 
       .img1 {
-        height: 100%;
+        width: 100%;
+        // height: rem(400px);
 
         .small & {
           order: 1;
@@ -136,6 +137,8 @@
       }
 
       .img2 {
+        display: none;
+
         .small & {
           display: none;
         }
@@ -146,7 +149,6 @@
 
         .wap-details & {
           @include for-small-layout {
-            display: none;
           }
 
           @include for-medium-layout {
@@ -162,6 +164,8 @@
         justify-content: center;
         align-items: center;
         font-family: Oswald-light;
+
+        // font-family: Roboto-Regular, sans-serif;
         // background-color: #ffa8a8;
         background-image: linear-gradient(to right bottom, #ff8787bd, #ffc9c9ad),
           url('https://images.unsplash.com/photo-1583338917451-face2751d8d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
@@ -211,8 +215,9 @@
         }
 
         h1 {
-          margin-bottom: rem(35px);
-          font-size: rem(39px);
+          margin-bottom: rem(70px);
+          font-size: rem(52px);
+
           .small & {
             margin-bottom: rem(75px);
             font-size: rem(28px);
@@ -356,6 +361,7 @@
 
     img {
       height: 100%;
+
       width: 100%;
     }
   }
@@ -495,40 +501,62 @@
   }
 
   &-container {
-    background-image: linear-gradient(to right bottom, #ff8787, #ffc9c9);
+    // background-image: linear-gradient(to right bottom, #e77070, #995a5a);
+    // background-color: #e77070a8;
+    background-image: url('https://images.unsplash.com/photo-1611293388250-580b08c4a145?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1138&q=80');
+    background-size: cover;
     padding: rem(36px);
 
     .wap-container__inner {
       font-family: Oswald-light, sans-serif;
+
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      //   align-items: center;
+      //   flex-direction: column-reverse;
+
+      .normal & {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .wap-details & {
+        @include for-normal-layout {
+          display: flex;
+          flex-direction: row;
+        }
+      }
 
       .cake-list {
-        // padding: rem(64px) 0;
-        // text-align: center;
-        background-color: rgba($light-color, 20%);
+        background-color: rgba($light-color, 50%);
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        padding: rem(24px) rem(52px);
+        padding: rem(12px) rem(48px);
         font-size: rem(18px);
         border: 2px solid $dark-color3;
         border-radius: 3px;
+        margin-block-end: rem(36px);
+        display: none;
+
         h3 {
           font-size: rem(32px);
-          margin-block-end: rem(13px);
+          margin-block-end: rem(64px);
         }
 
-        li {
-          margin-block-end: rem(12px);
+        .medium & {
+          display: flex;
+        }
+
+        .wap-details & {
+          @include for-medium-layout {
+            display: flex;
+          }
         }
       }
 
       .cake-footer-picture {
+        display: none;
         margin-inline-end: rem(26px);
+
         img {
           height: 100%;
           //   width: rem(200px);
@@ -536,13 +564,28 @@
           border-radius: 3px;
         }
       }
+
       .cake-contact {
-        // padding: rem(20px);
-        // justify-items: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-inline-end: rem(36px);
+        margin-block-end: rem(36px);
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+
+        width: rem(320px);
+
+        .medium & {
+          width: 450px;
+        }
+
+        .wap-details & {
+          @include for-medium-layout {
+            width: 450px;
+          }
+        }
         .heading {
           font-family: Oswald-light;
           font-size: rem(45px);
@@ -566,19 +609,36 @@
               cursor: pointer;
               font-size: rem(20px);
               margin-bottom: rem(35px);
-              width: rem(550px);
+              //   width: rem(550px);
               background-color: unset;
               border: none;
               border-bottom: 1px solid $dark-color;
             }
+
+            input::placeholder,
+            textarea::placeholder {
+              color: $dark-color1;
+            }
           }
 
           .contact-submit {
-            width: rem(550px);
+            // width: rem(550px);
+            width: 420px;
+            width: rem(320px);
             height: rem(40px);
             background-color: $dark-color1;
             color: $light-color;
             font-size: rem(23px);
+
+            .medium & {
+              width: 450px;
+            }
+
+            .wap-details & {
+              @include for-medium-layout {
+                width: 450px;
+              }
+            }
           }
         }
       }
