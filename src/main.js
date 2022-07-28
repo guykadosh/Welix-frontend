@@ -78,7 +78,6 @@ app.use(Antd)
 
 app.directive('click-outside', clickOutsideDirective)
 app.use(VueLoading)
-
 app.use(VueGoogleMaps, {
   load: { key: 'AIzaSyB2LvYaoUdowiLafGevBgmTajpfYiEAj4o' },
 })

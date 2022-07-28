@@ -1,10 +1,10 @@
 <template>
+
   <section class="login main-layout">
     <app-header />
 
     <section class="login-wrapper main-layout">
       <div class="login-wrapper__inner">
-
         <form @submit.prevent="login" class="login__form">
           <h2>Log in</h2>
           <input v-model="credentials.username" placeholder="Username" autofocus />
@@ -33,6 +33,7 @@ export default {
     }
   },
   created() {
+
     const user = userService.getLoggedinUser()
     if (user) {
       this.$store.commit({ type: 'setUser', user })
