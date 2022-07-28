@@ -127,7 +127,7 @@ export default {
     }
   },
   created() {
-    this.debouceName = debounce(this.changeWapName, 800)
+    this.debouceName = debounce(this.changeWapName, 400)
   },
   mounted() {
     this.$refs.wapName.focus()

@@ -67,7 +67,7 @@
     </div>
     <div class="bottom">
       <ul>
-        <li @click="saveWap">
+        <!-- <li @click="saveWap">
           <a-tooltip placement="right">
             <template #title>
               <span>Save</span>
@@ -76,7 +76,7 @@
               <font-awesome-icon icon="fa-light fa-floppy-disk" class="icon" />
             </div>
           </a-tooltip>
-        </li>
+        </li> -->
         <li>
           <a-tooltip @click="copyUrl" placement="right">
             <template #title>
@@ -88,7 +88,7 @@
           </a-tooltip>
         </li>
         <li>
-          <a-tooltip placement="right">
+          <a-tooltip @click="saveWap" placement="right">
             <template #title>
               <span>Publish site</span>
             </template>

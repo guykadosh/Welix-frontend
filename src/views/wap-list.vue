@@ -1,11 +1,15 @@
 <template>
   <section class="wap-list main-layout">
     <app-header />
-
+    <Loading />
     <div class="wap-list__inner">
       <div class="headings">
-        <h2 class="template-heading">Pick one of our professionally designed website templates</h2>
-        <h3 class="template-subheading">Or express your inner creativity and start from blank</h3>
+        <h2 class="template-heading">
+          Pick one of our professionally designed website templates
+        </h2>
+        <h3 class="template-subheading">
+          Or express your inner creativity and start from blank
+        </h3>
       </div>
 
       <div class="wap-list-container">
@@ -25,6 +29,8 @@
 </template>
 
 <script>
+import Loading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/vue-loading.css'
 import appHeader from '../cmps/app/app-header.vue'
 import { wapService } from '../services/wap.service'
 
@@ -32,10 +38,14 @@ export default {
   name: 'waps',
   components: {
     appHeader,
+    Loading,
   },
   computed: {
     waps() {
       return this.$store.getters.getWaps
+    },
+    isLoading() {
+      return this.waps ? false : true
     },
   },
   methods: {

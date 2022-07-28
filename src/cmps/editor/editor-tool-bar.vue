@@ -18,7 +18,11 @@
     </section>
   </div>
   <div>
-    <a-modal wrapClassName="login-form" v-model:visible="visible">
+    <a-modal
+      wrapClassName="login-form"
+      v-model:visible="visible"
+      :style="{ maxWidth: '370px' }"
+    >
       <login @login="login" @signup="signup" />
       <template #footer></template>
     </a-modal>

@@ -14,13 +14,22 @@ export default {
     }
   },
   async created() {
-    history.replaceState({}, null, '/')
-    this.$store.dispatch({ type: 'loadWaps', filterBy: { isTemplate: true } })
-    this.$store.dispatch({ type: 'loadCmps' })
-    const user = userService.getLoggedinUser()
-    if (user) this.$store.commit({ type: 'setUser', user })
-    const wap = wapService.getFromSession()
-    if (wap) this.$store.commit({ type: 'setCurrWap', wap })
+    try {
+      let loader = this.$loading.show()
+      history.replaceState({}, null, '/')
+      await this.$store.dispatch({
+        type: 'loadWaps',
+        filterBy: { isTemplate: true },
+      })
+      await this.$store.dispatch({ type: 'loadCmps' })
+      loader.hide()
+      const user = userService.getLoggedinUser()
+      if (user) this.$store.commit({ type: 'setUser', user })
+      const wap = wapService.getFromSession()
+      if (wap) this.$store.commit({ type: 'setCurrWap', wap })
+    } catch (err) {
+      console.log(err)
+    }
   },
 }
 </script>

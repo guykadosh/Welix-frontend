@@ -1,6 +1,6 @@
 <template>
   <section class="img-upload">
-    <label v-if="!isLoading">
+    <label>
       <CloudUploadOutlined class="icon" />
       <!-- <p>Drag photos and videos here</p>
             <p>or click here to select from computer</p> -->
@@ -20,9 +20,7 @@ export default {
     CloudUploadOutlined,
   },
   data() {
-    return {
-      isLoading: false,
-    }
+    return {}
   },
   methods: {
     handleFile(ev) {
@@ -34,12 +32,20 @@ export default {
     },
     async onUploadFile(file) {
       //   this.isLoading = true
+      const loader = this.$loading.show()
       const res = await uploadImg(file)
       //   this.isLoading = false
+      loader.hide()
       this.$emit('uploaded', res.url)
     },
   },
 }
 </script>
 
-<style></style>
+<style scoped>
+.icon {
+  font-size: 28px;
+  margin-inline-start: 10px;
+  cursor: pointer;
+}
+</style>

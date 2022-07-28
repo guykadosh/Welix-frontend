@@ -8,7 +8,7 @@ export default {
   getters: {
     getCmps({ cmps, filterBy }) {
       if (!filterBy) return cmps
-
+      if (!cmps) return []
       const filteredCmps = cmps.filter(cmp => cmp.type === filterBy)
       return filteredCmps
     },

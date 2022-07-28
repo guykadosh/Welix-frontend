@@ -7,6 +7,8 @@ import 'ant-design-vue/dist/antd.css'
 import { clickOutsideDirective } from './directives'
 import VueGoogleMaps from '@fawmi/vue-google-maps'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import VueLoading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/vue-loading.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   // faPenToSquare,
@@ -75,6 +77,7 @@ app.use(store)
 app.use(Antd)
 
 app.directive('click-outside', clickOutsideDirective)
+app.use(VueLoading)
 
 app.use(VueGoogleMaps, {
   load: { key: 'AIzaSyB2LvYaoUdowiLafGevBgmTajpfYiEAj4o' },

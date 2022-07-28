@@ -42,7 +42,7 @@
           placeholder="Username *"
           required
         />
-        <input v-model="credentials.email" type="email" placeholder="Email *" />
+        <input v-model="credentials.email" type="email" placeholder="Email" />
         <input
           v-model="credentials.password"
           type="password"
@@ -83,4 +83,8 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.ant-modal {
+  width: auto;
+}
+</style>

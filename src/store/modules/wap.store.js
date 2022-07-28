@@ -165,7 +165,7 @@ export default {
     async removeWap({ commit }, payload) {
       try {
         await wapService.remove(payload.wapId)
-        commit(payload)
+        // commit(payload)
       } catch (err) {
         console.log(err)
       }

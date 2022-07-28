@@ -102,7 +102,6 @@
         position: fixed;
         bottom: 88px;
         right: 12px;
-
       }
     }
 
@@ -363,8 +362,8 @@
       }
 
       .extra-tools {
-        font-size: rem(28px);
-        justify-content: center;
+        font-size: rem(18px);
+        justify-content: flex-end;
         align-items: center;
         padding-block-end: rem(12px);
         margin-block-end: rem(8px);

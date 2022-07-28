@@ -59,6 +59,8 @@
 
 .login-modal,
 .signup-modal {
+  width: rem(300px);
+  margin: 0 auto;
   input {
     background-color: $light-color3;
     border: #ccc 1px solid;
@@ -73,7 +75,7 @@
 
   button {
     background: #be123c;
-    width: 125px;
+    width: rem(150px);
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;

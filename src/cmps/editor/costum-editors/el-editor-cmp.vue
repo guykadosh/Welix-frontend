@@ -20,6 +20,7 @@
       <color-picker @picked="setBgColor" />
     </div>
 
+    <p>Background image</p>
     <div class="flex justify-between items-center">
       <a-input
         v-model:value="url"
