@@ -336,9 +336,10 @@
       .medium & {
         width: 50%;
       }
-
-      @include for-medium-layout {
-        width: 50%;
+      .wap-details & {
+        @include for-medium-layout {
+          width: 50%;
+        }
       }
     }
 
@@ -372,7 +373,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: rem(28px);
+    font-size: rem(24px);
     font-family: Oswald-light;
 
     .medium & {
@@ -445,8 +446,8 @@
 
         .small & {
           margin-bottom: 0;
-          width: rem(130px);
-          height: rem(130px);
+          width: rem(150px);
+          height: rem(150px);
         }
 
         .medium & {
@@ -472,8 +473,8 @@
         .wap-details & {
           @include for-small-layout {
             margin-bottom: 0;
-            width: rem(130px);
-            height: rem(130px);
+            width: rem(150px);
+            height: rem(150px);
           }
 
           @include for-medium-layout {
@@ -518,7 +519,7 @@
 
       display: flex;
       //   flex-direction: column-reverse;
-
+      justify-content: space-evenly;
       .medium & {
         display: flex;
         justify-content: space-evenly;

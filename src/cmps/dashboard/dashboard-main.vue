@@ -32,6 +32,9 @@
       </div>
     </div>
   </div>
+  <div v-else class="dashboard-main-header">
+    <h2>Nothing to show here, go and build you first site!</h2>
+  </div>
 </template>
 <script>
 // import { userService } from '../../services/user.service'
