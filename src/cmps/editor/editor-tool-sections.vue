@@ -40,7 +40,7 @@
         group-name="1"
         behaviour="copy"
       >
-        <Draggable v-for="cmp in cmps" :key="cmp.id">
+        <Draggable v-for="cmp in cmps" :key="cmp.id" @click.stop>
           <div class="cmp-preview">
             <img v-if="cmp.thumbnail" :src="cmp.thumbnail" alt="" />
             <img v-else src="@/assets/img/omnifood-header.png" alt="" />
@@ -124,4 +124,14 @@ export default {
   },
 }
 </script>
-<style lang=""></style>
+
+<style scoped>
+img {
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+</style>
