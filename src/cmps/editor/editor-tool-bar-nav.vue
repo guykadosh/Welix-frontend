@@ -1,8 +1,8 @@
 <template>
   <div class="tool-bar-nav__mobile">
-   
+
     <div class="tool-bar-nav__mobile__wrapper">
-      
+
       <div class="mobile-menu-btn" @click.stop="toggleMobileMenu" :class="{ open: isMobileMenu }">
         <font-awesome-icon icon="fa-light fa-circle" class="btn-icon" />
 
@@ -134,7 +134,6 @@ export default {
     },
     toggleMobileMenu() {
       this.isMobileMenu = !this.isMobileMenu
-      console.log('mobile menu', this.isMobileMenu)
     },
     copyUrl() {
       console.log('Hi?')

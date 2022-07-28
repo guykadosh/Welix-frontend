@@ -70,7 +70,7 @@
         .top {
           margin-block-end: rem(28px);
           .site-name {
-            color: #be123c;
+            color: $primary-color;
             font-size: rem(32px);
           }
 
@@ -83,26 +83,26 @@
             cursor: pointer;
             border-radius: 9px;
             text-align: center;
-            border: 1px solid #be123c;
+            border: 1px solid $primary-color;
 
             &:first-child {
               background-color: #fff;
-              color: #be123c;
+              color: $primary-color;
 
               &:hover {
-                background-color: #be123c;
+                background-color: $primary-color;
                 color: $light-color;
               }
             }
 
             &:last-child {
               margin-inline-start: rem(10px);
-              background-color: #be123c;
+              background-color: $primary-color;
               color: $light-color;
 
               &:hover {
                 background-color: #fff;
-                color: #be123c;
+                color: $primary-color;
               }
             }
           }
