@@ -1,12 +1,13 @@
 <template>
   <section class="home-page">
+    <!-- Hello make a conflict -->
     <div class="bg-cover-hero"></div>
     <div class="top-wrapper full main-layout">
       <app-header />
       <hero />
     </div>
     <editor-preview />
-    <home-page-cards/>
+    <home-page-cards />
     <div class="bg-cover-cards"></div>
   </section>
 </template>
@@ -22,10 +23,9 @@ export default {
     appHeader,
     hero,
     editorPreview,
-    HomePageCards
-},
+    HomePageCards,
+  },
 }
 </script>
 
-<style>
-</style>
+<style></style>
