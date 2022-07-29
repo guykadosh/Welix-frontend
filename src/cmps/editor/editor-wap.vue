@@ -1,15 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <main v-if="wap" class="editor-wap-container" ref="container" :class="[responsiveClass, wrapper]"
-    :style="{ maxWidth: conMaxWidth + 'px' }">
-    <div class="wap-to-edit" :style="wap.style" :class="WapClass">
-      <Container :get-child-payload="getChildPayload" group-name="1" @drop="onDrop($event)" @touchmove.prevent>
-        <div v-if="!wap.cmps.length" class="drag-here">
-          <h2>+ Drag section here</h2>
-        </div>
-        <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
-          <component :is="cmp.type + '-edit'" :cmp="cmp" @changedTxt="changeTxt" @picked="setCmpToEdit" />
-=======
   <main
     v-if="wap"
     class="editor-wap-container"
@@ -37,7 +26,6 @@
             @changedTxt="changeTxt"
             @picked="setCmpToEdit"
           />
->>>>>>> 16a7a7c4a517a5823d7ade87ac8cc9d4f80a3843
         </Draggable>
       </Container>
     </div>
@@ -168,12 +156,8 @@ export default {
 }
 </script>
 
-<<<<<<< HEAD
-<style>
-=======
 <style scoped>
 .smooth-dnd-disable-touch-action * {
   touch-action: auto;
 }
->>>>>>> 16a7a7c4a517a5823d7ade87ac8cc9d4f80a3843
 </style>
