@@ -6,11 +6,12 @@
     :class="[responsiveClass, wrapper]"
     :style="{ maxWidth: conMaxWidth + 'px' }"
   >
-    <div class="wap-to-edit" :style="wap.style" :class="wapClass">
+    <div class="wap-to-edit" :style="wap.style" :class="WapClass">
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"
         @drop="onDrop($event)"
+        @touchmove.prevent
       >
         <div v-if="!wap.cmps.length" class="drag-here">
           <h2>+ Drag section here</h2>
@@ -18,7 +19,7 @@
         <Draggable
           v-for="cmp in wap.cmps"
           :key="cmp.id"
-          :style="{ touchAction: 'auto' }"
+          :style="{ touchActions: 'auto' }"
         >
           <component
             :is="cmp.type + '-edit'"

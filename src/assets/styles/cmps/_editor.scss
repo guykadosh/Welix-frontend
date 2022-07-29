@@ -95,7 +95,7 @@
     }
 
     &-site-domain {
-      width: 100%;
+      width: 75%;
       // border-right: 1px solid;
       padding-right: em(20px);
       padding: em(8px);
@@ -115,7 +115,7 @@
           color: #4263eb;
         }
 
-        .heroku-url{
+        .heroku-url {
           display: none;
 
           @include for-medium-layout {
@@ -127,13 +127,14 @@
           color: rgb(204, 0, 255);
           margin-inline-end: rem(20px);
         }
-
-        .preview-site {
-          // text-decoration: underline;
-          cursor: pointer;
-          color: #4263eb;
-        }
       }
+    }
+
+    .preview-site {
+      // text-decoration: underline;
+      cursor: pointer;
+      color: #4263eb;
+      font-size: rem(15px);
     }
 
     &-actions {
