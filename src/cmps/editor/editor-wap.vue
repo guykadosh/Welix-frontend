@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <main v-if="wap" class="editor-wap-container" ref="container" :class="[responsiveClass, wrapper]"
     :style="{ maxWidth: conMaxWidth + 'px' }">
     <div class="wap-to-edit" :style="wap.style" :class="WapClass">
@@ -8,6 +9,35 @@
         </div>
         <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
           <component :is="cmp.type + '-edit'" :cmp="cmp" @changedTxt="changeTxt" @picked="setCmpToEdit" />
+=======
+  <main
+    v-if="wap"
+    class="editor-wap-container"
+    ref="container"
+    :class="[responsiveClass, wrapper]"
+    :style="{ maxWidth: conMaxWidth + 'px' }"
+  >
+    <div class="wap-to-edit" :style="wap.style" :class="wapClass">
+      <Container
+        :get-child-payload="getChildPayload"
+        group-name="1"
+        @drop="onDrop($event)"
+      >
+        <div v-if="!wap.cmps.length" class="drag-here">
+          <h2>+ Drag section here</h2>
+        </div>
+        <Draggable
+          v-for="cmp in wap.cmps"
+          :key="cmp.id"
+          :style="{ touchAction: 'auto' }"
+        >
+          <component
+            :is="cmp.type + '-edit'"
+            :cmp="cmp"
+            @changedTxt="changeTxt"
+            @picked="setCmpToEdit"
+          />
+>>>>>>> 16a7a7c4a517a5823d7ade87ac8cc9d4f80a3843
         </Draggable>
       </Container>
     </div>
@@ -113,6 +143,9 @@ export default {
     wide() {
       return [...this.normal, 'wide']
     },
+    wapClass() {
+      return this.wap?.class || ''
+    },
   },
   unmounted() {
     this.unsubResize()
@@ -135,5 +168,12 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style>
+=======
+<style scoped>
+.smooth-dnd-disable-touch-action * {
+  touch-action: auto;
+}
+>>>>>>> 16a7a7c4a517a5823d7ade87ac8cc9d4f80a3843
 </style>

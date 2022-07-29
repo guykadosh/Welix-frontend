@@ -2,10 +2,56 @@
   width: rem(235px);
   cursor: pointer;
 }
+
+.edit-logo {
+  width: rem(130px);
+  cursor: pointer;
+  padding: rem(10px);
+}
+
 .main-header {
   .header__inner {
     z-index: 10;
     height: rem(100px);
+
+    .nav-wrapper {
+      display: none;
+
+      @include for-normal-layout {
+        display: block;
+      }
+    }
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100vh;
+      // width: 100%;
+      top: 5px;
+      right: 5px;
+      transform: translateX(105%);
+      background-color: rgba($light-color, 90%);
+      transition: transform 0.3s;
+      z-index: 200;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      .header-link.link-signup {
+        border: none;
+      }
+      @include for-normal-layout {
+        display: none;
+      }
+    }
+    .login-wrapper {
+      display: none;
+
+      @include for-normal-layout {
+        display: block;
+      }
+    }
 
     .logo-wrapper {
       .logo {

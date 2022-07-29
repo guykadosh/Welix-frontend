@@ -120,26 +120,28 @@ export default {
     },
   },
   beforeRouteLeave(to, from, next) {
-    if (!this.isSaved) {
-      Modal.confirm({
-        title: 'Are you sure you want to leave?',
-        icon: createVNode(ExclamationCircleOutlined),
-        content: createVNode(
-          'div',
-          { style: 'color:red;' },
-          'Unsaved changes will be discarded'
-        ),
-        onOk() {
-          next()
-        },
-        onCancel() {
-          next(false)
-        },
-        class: 'test',
-      })
-    } else {
-      next()
-    }
+    next()
+    // uncomment to warn user from deleting the wap
+    // if (!this.isSaved) {
+    //   Modal.confirm({
+    //     title: 'Are you sure you want to leave?',
+    //     icon: createVNode(ExclamationCircleOutlined),
+    //     content: createVNode(
+    //       'div',
+    //       { style: 'color:red;' },
+    //       'Unsaved changes will be discarded'
+    //     ),
+    //     onOk() {
+    //       next()
+    //     },
+    //     onCancel() {
+    //       next(false)
+    //     },
+    //     class: 'test',
+    //   })
+    // } else {
+    //   next()
+    // }
   },
   async unmounted() {
     wapService.saveToSession(this.wap)

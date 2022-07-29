@@ -1,9 +1,11 @@
 <template>
   <div class="tool-bar-nav__mobile">
-
     <div class="tool-bar-nav__mobile__wrapper">
-
-      <div class="mobile-menu-btn" @click.stop="toggleMobileMenu" :class="{ open: isMobileMenu }">
+      <div
+        class="mobile-menu-btn"
+        @click.stop="toggleMobileMenu"
+        :class="{ open: isMobileMenu }"
+      >
         <font-awesome-icon icon="fa-light fa-circle" class="btn-icon" />
 
         <div class="mobile-icon edit" @click.stop="setTool('edit')">
@@ -15,14 +17,16 @@
         <div class="mobile-icon add" @click.stop="setTool('section')">
           <font-awesome-icon icon="fa-light fa-plus" />
         </div>
-
       </div>
     </div>
   </div>
   <div class="tool-bar-nav flex flex-column justify-between">
     <div class="top">
       <ul class="clean-list">
-        <li @click.stop="setTool('section')" :class="{ active: activeTool === 'section' && isToolOpen }">
+        <li
+          @click.stop="setTool('section')"
+          :class="{ active: activeTool === 'section' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Add Section</span>
@@ -32,7 +36,10 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click.stop="setTool('theme')" :class="{ active: activeTool === 'theme' && isToolOpen }">
+        <li
+          @click.stop="setTool('theme')"
+          :class="{ active: activeTool === 'theme' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Themes</span>
@@ -42,13 +49,19 @@
             </div>
           </a-tooltip>
         </li>
-        <li @click.stop="setTool('edit')" :class="{ active: activeTool === 'edit' && isToolOpen }">
+        <li
+          @click.stop="setTool('edit')"
+          :class="{ active: activeTool === 'edit' && isToolOpen }"
+        >
           <a-tooltip placement="right">
             <template #title>
               <span>Edit</span>
             </template>
             <div>
-              <font-awesome-icon icon="fa-light fa-pen-to-square" class="icon" />
+              <font-awesome-icon
+                icon="fa-light fa-pen-to-square"
+                class="icon"
+              />
             </div>
           </a-tooltip>
         </li>
@@ -124,9 +137,12 @@ export default {
     BgColorsOutlined,
     SaveOutlined,
   },
+  computed: {},
   methods: {
     setTool(type) {
       this.toggleMobileMenu()
+      this.activeTool = type
+      console.log(this.activeTool)
       this.$emit('setTool', type)
     },
     saveWap() {
@@ -136,7 +152,6 @@ export default {
       this.isMobileMenu = !this.isMobileMenu
     },
     copyUrl() {
-      console.log('Hi?')
       navigator.clipboard.writeText(window.location.href)
       notification['success']({
         message: `Url copied! send it to work together`,
@@ -147,5 +162,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>
