@@ -6,7 +6,7 @@ import wapEditor from '../views/wap-editor.vue'
 import loginPage from '../views/login-page.vue'
 import signupPage from '../views/signup-page.vue'
 import dashboard from '../views/dashboard.vue'
-
+import thankYou from '../views/thank-you.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -44,6 +44,11 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: dashboard,
+    },
+    {
+      path: '/thankYou',
+      name: 'thankYou',
+      component: thankYou,
     },
   ],
 })

@@ -45,9 +45,13 @@
         display: none;
       }
     }
-    .login-wrapper {
+    .nav-wrapper {
       display: none;
-
+      .user-img{
+        height: 55px;
+        width: 55px;
+        margin-left: rem(25px);
+      }
       @include for-normal-layout {
         display: block;
       }
