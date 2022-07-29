@@ -1,0 +1,11 @@
+.notification {
+  // height: rem(100px);
+  padding: rem(20px) rem(8px);
+  font-size: rem(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-color3;
+  color: $light-color;
+  border-left: 6px solid #37b24d;
+}

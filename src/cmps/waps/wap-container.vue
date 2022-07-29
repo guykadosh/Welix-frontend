@@ -6,6 +6,7 @@
         :key="currCmp.id"
         :is="currCmp.type"
         :cmp="currCmp"
+        :wap="wap"
       >
       </component>
     </div>
@@ -24,9 +25,10 @@ export default {
   name: 'wap-container',
   props: {
     cmp: Object,
+    wap: Object,
   },
   created() {
-    console.log("cmps",this.cmp)
+    console.log('cmps', this.cmp)
   },
   components: {
     wapCard,
@@ -35,7 +37,7 @@ export default {
     wapText,
     wapGallery,
     wapMap,
-    wapContact
+    wapContact,
   },
   computed: {
     info() {
