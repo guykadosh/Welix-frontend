@@ -22,6 +22,7 @@
     "@fortawesome/pro-solid-svg-icons": "^6.1.1",
     "@fortawesome/pro-thin-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@kyvg/vue3-notification": "^2.3.6",
     "ant-design-vue": "^3.2.10",
     "axios": "^0.27.2",
     "chart.js": "^3.8.2",

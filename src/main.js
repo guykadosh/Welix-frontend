@@ -40,6 +40,7 @@ import {
   faPlus,
   faBars,
 } from '@fortawesome/pro-light-svg-icons'
+import Notifications from '@kyvg/vue3-notification'
 
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons'
 
@@ -80,7 +81,7 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router)
 app.use(store)
 app.use(Antd)
-
+app.use(Notifications)
 app.directive('click-outside', clickOutsideDirective)
 app.use(VueLoading)
 app.use(VueGoogleMaps, {

@@ -5,19 +5,7 @@
     <section class="editor-main flex">
       <editor-tool-bar v-if="wap" :cmps="cmps" @wapSaved="wapSaved" />
       <editor-wap :wap="wap" v-if="wap" />
-      <div
-        class="pointer-container flex flex-column"
-        :style="pointer.pos"
-        v-for="pointer in pointers"
-      >
-        <span
-          class="pointer"
-          :style="{ backgroundColor: pointer.color }"
-        ></span>
-        <span class="pointer-text" :style="{ color: pointer.color }">
-          {{ pointer.name }}
-        </span>
-      </div>
+      <pointer v-for="pointer in pointers" :pointer="pointer" />
     </section>
   </section>
 </template>
@@ -43,6 +31,7 @@ import editorHeader from '../cmps/editor/editor-header.vue'
 import editorNav from '../cmps/editor/editor-nav.vue'
 import editorToolBar from '../cmps/editor/editor-tool-bar.vue'
 import editorWap from '../cmps/editor/editor-wap.vue'
+import pointer from '../cmps/editor/pointer.vue'
 
 export default {
   name: 'wap-editor',
@@ -169,33 +158,9 @@ export default {
     editorToolBar,
     editorWap,
     ExclamationCircleOutlined,
+    pointer,
   },
 }
 </script>
 
-<style>
-.pointer-container {
-  position: absolute;
-}
-
-.pointer {
-  width: 25px;
-  height: 25px;
-  /* background-color: blue; */
-  clip-path: polygon(
-    100% 45%,
-    65% 58%,
-    100% 93%,
-    93% 100%,
-    57% 66%,
-    44% 100%,
-    0 0
-  );
-  z-index: 100;
-}
-
-.pointer-text {
-  font-weight: 500;
-  font-family: Roboto-medium;
-}
-</style>
+<style></style>

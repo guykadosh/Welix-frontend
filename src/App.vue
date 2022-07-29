@@ -1,5 +1,6 @@
 <template>
   <router-view />
+  <notifications position="top left" :width="500" classes="notification" />
 </template>
 
 <script>

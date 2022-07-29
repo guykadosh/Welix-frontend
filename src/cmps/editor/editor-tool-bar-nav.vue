@@ -153,8 +153,16 @@ export default {
     },
     copyUrl() {
       navigator.clipboard.writeText(window.location.href)
-      notification['success']({
-        message: `Url copied! send it to work together`,
+      // notification['success']({
+      //   message: `Url copied! send it to work together`,
+      //   class: 'notifiction',
+      //   style: { color: '#ffffff' },
+      //   placement: 'bottomRight',
+      //   duration: 0,
+      // })
+      this.$notify({
+        title: 'Url copied! send it to work together',
+        text: '',
       })
     },
   },

@@ -27,6 +27,22 @@
       <login @login="login" @signup="signup" />
       <template #footer></template>
     </a-modal>
+
+    <a-modal
+      wrapClassName="login-form"
+      v-model:visible="visibleName"
+      :style="{ maxWidth: '370px' }"
+    >
+      <form
+        class="choose-name flex flex-column justify-center items-center"
+        @submit.prevent="changeWapName"
+      >
+        <label for="">Choose site name</label>
+        <input v-model="siteName" type="text" />
+        <button>Submit</button>
+      </form>
+      <template #footer :style="{ display: 'none' }"></template>
+    </a-modal>
   </div>
 </template>
 
@@ -64,6 +80,8 @@ export default {
       isOpen: false,
       tool: null,
       visible: false,
+      visibleName: false,
+      siteName: '',
     }
   },
   methods: {
@@ -101,18 +119,16 @@ export default {
       this.isOpen = true
     },
     async saveWap() {
-      if (!this.wap.name) {
-        notification['error']({
-          message: `Please pick a name to your website first`,
-        })
-        this.$emit('nameFocus')
-        return
-      }
-
       if (!this.user) {
         this.visible = true
         return
       }
+
+      if (!this.wap.name) {
+        this.visibleName = true
+        return
+      }
+
       this.$emit('wapSaved')
       // eventBus.emit('wapSaved')
       const wapToSave = JSON.parse(JSON.stringify(this.wap))
@@ -130,6 +146,16 @@ export default {
         message: `Site saved successfully`,
       })
       this.$router.push('/dashboard')
+    },
+    async changeWapName() {
+      try {
+        const name = this.siteName
+        await this.$store.dispatch({ type: 'changeWapName', name })
+        this.saveWap()
+      } catch (err) {
+        console.log(err)
+        // TODO: msg to user
+      }
     },
     async login(credentials) {
       try {
