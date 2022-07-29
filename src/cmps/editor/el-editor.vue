@@ -100,6 +100,7 @@ export default {
         }
 
         const newCmp = JSON.parse(JSON.stringify(cmp))
+        console.log('newcmp', newCmp)
         this.$store.commit({ type: 'setCmpToEdit', cmp: newCmp })
         await this.$store.dispatch({ type: 'updateCmp', newCmp })
       } catch (err) {

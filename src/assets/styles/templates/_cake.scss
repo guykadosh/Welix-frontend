@@ -88,9 +88,9 @@
           //   width: 100%;
         }
 
-        .medium & {
-          //   object-fit: cover;
-        }
+        // .medium & {
+        //   //   object-fit: cover;
+        // }
 
         .narrow {
           object-fit: fill;
@@ -148,8 +148,7 @@
         }
 
         .wap-details & {
-          @include for-small-layout {
-          }
+          @include for-small-layout {}
 
           @include for-medium-layout {
             display: inline-block;
@@ -274,16 +273,14 @@
       margin-bottom: rem(25px);
       letter-spacing: rem(2px);
       font-size: rem(16px);
-      background-image: linear-gradient(
-        56deg,
-        #ffffff 46.67%,
-        #f7e9e4 46.67%,
-        #f7e9e4 50%,
-        #ffffff 50%,
-        #ffffff 96.67%,
-        #f7e9e4 96.67%,
-        #f7e9e4 100%
-      );
+      background-image: linear-gradient(56deg,
+          #ffffff 46.67%,
+          #f7e9e4 46.67%,
+          #f7e9e4 50%,
+          #ffffff 50%,
+          #ffffff 96.67%,
+          #f7e9e4 96.67%,
+          #f7e9e4 100%);
       background-size: 72.37px 107.3px;
       padding: rem(10px);
       text-align: center;
@@ -336,6 +333,7 @@
       .medium & {
         width: 50%;
       }
+
       .wap-details & {
         @include for-medium-layout {
           width: 50%;
@@ -368,23 +366,58 @@
   }
 
   &-txt-follow {
-    padding: rem(28px);
-    // text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: rem(24px);
-    font-family: Oswald-light;
 
-    .medium & {
-      padding: rem(55px);
-      font-size: rem(35px);
-    }
+    .__inner {
 
-    .wap-details & {
-      @include for-medium-layout {
+      padding: rem(28px);
+      // text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: rem(18px);
+      font-family: Oswald-light;
+
+      .small {
+        font-size: rem(24px);
+      }
+
+      .wap-details {
+
+        @include for-small-layout {
+          font-size: rem(24px);
+        }
+      }
+
+      .text1 {
+        margin-inline-end: em(10px);
+        padding-bottom: em(5px);
+      }
+
+      .medium & {
         padding: rem(55px);
         font-size: rem(35px);
+      }
+
+      .icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .instagram {
+          width: rem(30px);
+
+          .wap-details & {
+            cursor: pointer;
+          }
+
+        }
+      }
+
+      .wap-details & {
+        @include for-medium-layout {
+          padding: rem(55px);
+          font-size: rem(35px);
+        }
       }
     }
   }
@@ -412,11 +445,11 @@
         gap: 0;
       }
 
-      .normal & {
-      }
+      // .normal & {
+      // }
 
-      .wide & {
-      }
+      // .wide & {
+      // }
 
       .wap-details & {
         @include for-small-layout {
@@ -434,8 +467,7 @@
           gap: 0;
         }
 
-        @include for-normal-layout {
-        }
+        @include for-normal-layout {}
       }
 
       img {
@@ -510,9 +542,9 @@
     // background-size: 200%;
     padding: rem(36px);
 
-    .medium & {
-      //   background-size: contain;
-    }
+    // .medium & {
+    //   //   background-size: contain;
+    // }
 
     .wap-container__inner {
       font-family: Oswald-light, sans-serif;
@@ -520,6 +552,7 @@
       display: flex;
       //   flex-direction: column-reverse;
       justify-content: space-evenly;
+
       .medium & {
         display: flex;
         justify-content: space-evenly;
@@ -598,6 +631,7 @@
             width: 450px;
           }
         }
+
         .heading {
           font-family: Oswald-light;
           font-size: rem(45px);
