@@ -2,7 +2,6 @@
   <section class="main-hero main-layout full">
 
     <div class="hero__inner">
-
       <div class="text-box">
         <h1 class="hero-heading">Create a website you are proud of</h1>
         <h2 class="hero-subheading">
@@ -11,7 +10,10 @@
         <router-link class="hero-btn" to="/template">Get started</router-link>
         <a class="learn-more">Learn more</a>
       </div>
+      <div class="hero-img">
 
+      </div>
+      <!-- <img src="../../assets/img/hero1.svg" alt=""> -->
     </div>
   </section>
 </template>
