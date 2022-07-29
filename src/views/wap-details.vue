@@ -51,7 +51,7 @@ export default {
     console.log(wap)
     const wapName = wap.name.replaceAll(' ', '-')
 
-    history.replaceState({}, null, wapName)
+    // history.replaceState({}, null, wapName)
   },
   computed: {
     wapClass() {

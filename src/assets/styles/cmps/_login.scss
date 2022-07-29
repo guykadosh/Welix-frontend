@@ -1,10 +1,8 @@
 .login {
-
   width: 100vw;
   height: 100vh;
 
   .login-wrapper {
-
     &__inner {
       height: 500px;
       display: flex;
@@ -23,7 +21,7 @@
           width: 100%;
           background-color: $light-color4;
           font-size: rem(15px);
-          outline-color:  #be123c;
+          outline-color: #be123c;
         }
 
         button {
@@ -54,7 +52,6 @@
           letter-spacing: 0;
           margin-bottom: rem(18px);
         }
-
       }
 
       p {
@@ -71,11 +68,6 @@
     }
   }
 }
-
-
-
-
-
 
 .login-modal,
 .signup-modal {

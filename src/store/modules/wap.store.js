@@ -205,6 +205,7 @@ export default {
         const wapId = getters.getCurrWap._id
 
         const cmp = await wapService.removeCmp(wapId, payload.cmpId)
+        socketService.emit('cmp-removed', payload.cmpId)
         commit(payload)
         return cmp
       } catch (err) {

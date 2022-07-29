@@ -15,7 +15,11 @@
         <div v-if="!wap.cmps.length" class="drag-here">
           <h2>+ Drag section here</h2>
         </div>
-        <Draggable v-for="cmp in wap.cmps" :key="cmp.id">
+        <Draggable
+          v-for="cmp in wap.cmps"
+          :key="cmp.id"
+          :style="{ touchAction: 'auto' }"
+        >
           <component
             :is="cmp.type + '-edit'"
             :cmp="cmp"
@@ -152,4 +156,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.smooth-dnd-disable-touch-action * {
+  touch-action: auto;
+}
+</style>

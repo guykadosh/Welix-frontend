@@ -1,6 +1,6 @@
 <template>
   <header class="editor-header flex items-center justify-between">
-    <h1>Welix</h1>
+    <h1 @click="$router.push('/')">Welix</h1>
   </header>
 </template>
 
