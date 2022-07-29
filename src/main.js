@@ -38,6 +38,7 @@ import {
   faAirplay,
   faCircle,
   faPlus,
+  faBars
 } from '@fortawesome/pro-light-svg-icons'
 
 import '@/assets/styles/styles.scss'
@@ -68,7 +69,8 @@ library.add(
   faPlusLarge,
   faAirplay,
   faCircle,
-  faPlus
+  faPlus,
+  faBars
 )
 
 app.component('font-awesome-icon', FontAwesomeIcon)
