@@ -277,6 +277,38 @@
         "style": {}
     },
     {
+        "thumbnail": "https://i.ibb.co/Np9rm6N/406.png",
+        "type": "wap-hero",
+        "classes": [
+            "cake-hero",
+            "cake-layout"
+        ],
+        "info": {
+            "heading": {
+                "type": "txt",
+                "txt": "Designer Cakes Delivered to Your Doorstep",
+                "style": {}
+            },
+            "btns": [
+                {
+                    "type": "btn",
+                    "txt": "Order Here",
+                    "link": "#wc043",
+                    "style": {}
+                }
+            ],
+            "imgs": {
+                "type": "imgs",
+                "urls": [
+                    "https://res.cloudinary.com/duvwxwtot/image/upload/v1658933203/sprint%204/cake2_x0hwq4.jpg",
+                    "https://res.cloudinary.com/duvwxwtot/image/upload/v1658933203/sprint%204/cake1_awzpzx.jpg"
+                ],
+                "style": {}
+            }
+        },
+        "style": {}
+    },
+    {
         "thumbnail": "https://i.ibb.co/4gDxf1Q/232343.png",
         "type": "wap-hero",
         "classes": [
@@ -407,6 +439,22 @@
         "style": {}
     },
     {
+        "thumbnail": "https://i.ibb.co/tq9Nts0/NEW-3148.png",
+        "classes": [
+            "cake-txt-about",
+            "cake-layout"
+        ],
+        "type": "wap-text",
+        "info": {
+            "heading": {
+                "type": "txt",
+                "txt": "ALL CAKES ARE TAILORED TO YOUR TASTE AND STYLE",
+                "style": {}
+            }
+        },
+        "style": {}
+    },
+    {
         "thumbnail": "https://i.ibb.co/8j9nd1J/betta-container.jpg",
         "type": "wap-container",
         "classes": [
@@ -495,6 +543,26 @@
                     "https://i.ibb.co/SvF3V2g/gallery-10.jpg",
                     "https://i.ibb.co/gDFgz4V/gallery-11.jpg",
                     "https://i.ibb.co/JcqB8xv/gallery-12.jpg"
+                ],
+                "style": {}
+            }
+        },
+        "style": {}
+    },
+    {
+        "thumbnail": "https://i.ibb.co/SxWk8Rq/11111.png",
+        "classes": [
+            "cake-gallery-about",
+            "cake-layout"
+        ],
+        "type": "wap-gallery",
+        "info": {
+            "txt": "",
+            "imgs": {
+                "type": "imgs",
+                "urls": [
+                    "https://res.cloudinary.com/duvwxwtot/image/upload/v1658997561/sprint%204/baking-woman_o3ctnv.jpg",
+                    "https://res.cloudinary.com/duvwxwtot/image/upload/v1658933537/sprint%204/doughnats_wili0d.jpg"
                 ],
                 "style": {}
             }
@@ -1169,6 +1237,22 @@
         }
     },
     {
+        "thumbnail": "https://i.ibb.co/LCFTfVy/07-28-172619.png",
+        "classes": [
+            "cake-txt-follow",
+            "cake-layout"
+        ],
+        "type": "wap-text",
+        "info": {
+            "heading": {
+                "txt": "Follow me on Instagram",
+                "type": "txt",
+                "style": {}
+            }
+        },
+        "style": {}
+    },
+    {
         "classes": [
             "omnifood-reviews"
         ],
@@ -1567,6 +1651,31 @@
         "style": {}
     },
     {
+        "thumbnail": "https://i.ibb.co/d5T4wCh/2022-07-28-172638.png",
+        "classes": [
+            "cake-gallery-options",
+            "cake-layout"
+        ],
+        "type": "wap-gallery",
+        "info": {
+            "imgs": {
+                "type": "imgs",
+                "urls": [
+                    "https://i.ibb.co/GT1bmxw/01.jpg",
+                    "https://i.ibb.co/BBykc7N/02.jpg",
+                    "https://i.ibb.co/bJMW30p/2e2aa872-mv2.webp",
+                    "https://i.ibb.co/ZfHhXzx/05.jpg",
+                    "https://i.ibb.co/mhtFTkG/e1c78c-2.webp",
+                    "https://i.ibb.co/876Wqpg/cake-2.webp",
+                    "https://i.ibb.co/p4C3W2g/06.jpg",
+                    "https://i.ibb.co/7vTc6Rv/04.jpg"
+                ],
+                "style": {}
+            }
+        },
+        "style": {}
+    },
+    {
         "classes": [
             "betaa-footer",
             "full",
@@ -1651,6 +1760,88 @@
                 "type": "txt",
                 "style": {}
             }
+        }
+    },
+    {
+        "thumbnail": "https://i.ibb.co/cNnkgJH/2022-07-28-172658.png",
+        "classes": [
+            "full",
+            "cake-container",
+            "cake-layout"
+        ],
+        "type": "wap-container",
+        "info": {
+            "cmps": [
+                {
+                    "id": "wcd4654%%%j",
+                    "classes": [
+                        "cake-contact"
+                    ],
+                    "type": "wap-contact",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Contact me",
+                            "style": {}
+                        },
+                        "subHeading": {
+                            "type": "txt",
+                            "txt": "123-456-7890   |   INFO@MYSITE.COM",
+                            "style": {}
+                        },
+                        "form": {
+                            "type": "form",
+                            "inputs": [
+                                {
+                                    "type": "text",
+                                    "placeholder": "name"
+                                },
+                                {
+                                    "type": "email",
+                                    "placeholder": "email"
+                                }
+                            ],
+                            "textarea": {
+                                "placeholder": "Message"
+                            },
+                            "btn": {
+                                "type": "submit",
+                                "txt": "submit"
+                            },
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                },
+                {
+                    "id": "wc04dsvf145",
+                    "classes": [
+                        "cake-list"
+                    ],
+                    "type": "wap-list",
+                    "info": {
+                        "heading": {
+                            "txt": "Opening hours",
+                            "type": "txt",
+                            "style": {}
+                        },
+                        "list": {
+                            "txt": [
+                                "Mon. 8 a.m. - 9 p.m.",
+                                "Tues. 8 a.m. – 9 p.m.",
+                                "Wed. 8 a.m. – 9 p.m.",
+                                "Thurs. 8 a.m. – 9 p.m.",
+                                "Frid. 8 a.m. – 9 p.m.",
+                                "Sat. 8 a.m. – 6 p.m.",
+                                "Sun. 11 a.m. – 7 p.m."
+                            ],
+                            "type": "txt",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                }
+            ]
         }
     },
     {

@@ -1,6 +1,6 @@
 <template>
   <header class="editor-header flex items-center justify-between">
-    <h1>Welix</h1>
+    <img @click="$router.push('/')" class="edit-logo" src="../../assets/img/logo.png" alt="" >
   </header>
 </template>
 
