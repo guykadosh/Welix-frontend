@@ -85,10 +85,17 @@ export default {
         {
           title: 'Name',
           dataIndex: 'name',
+          sorter: {
+            compare: (a, b) => a.name.localeCompare(b.name),
+          },
+          // sortDirections: ['ascend', 'descend'],
         },
         {
           title: 'Email',
           dataIndex: 'email',
+          sorter: {
+            compare: (a, b) => a.email.localeCompare(b.email),
+          },
         },
         {
           title: 'Message',
@@ -97,6 +104,9 @@ export default {
         {
           title: 'At',
           dataIndex: 'at',
+          sorter: {
+            compare: (a, b) => a.at - b.at,
+          },
         },
       ],
       selectedRowKeys: [],
