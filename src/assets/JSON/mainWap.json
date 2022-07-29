@@ -5,6 +5,7 @@
     "type": "Cake shop",
     "style": {},
     "class": "cake",
+    "createdAt": 12312312432123,
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995bgfhghh527",
       "fullname": "Lukas Rudrof",

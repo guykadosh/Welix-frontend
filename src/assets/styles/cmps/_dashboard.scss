@@ -107,6 +107,42 @@
             }
           }
         }
+
+        .right {
+          width: 55%;
+          margin-inline-end: rem(20px);
+        }
+
+        .left {
+          width: 45%;
+          .box {
+            width: 32%;
+            height: rem(150px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $light-color3;
+            padding: rem(28px) rem(16px);
+            font-weight: 500;
+            border-radius: 9px;
+            margin-bottom: rem(16px);
+
+            .icon {
+              font-size: rem(24px);
+            }
+          }
+
+          .total-views {
+            background-color: #8ce99a;
+          }
+          .total-subs {
+            background-color: #ffe066;
+          }
+          .conversion {
+            background-color: #74c0fc;
+          }
+        }
       }
     }
   }
