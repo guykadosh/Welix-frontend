@@ -13,13 +13,19 @@
         @click.stop="setEditable(info.subHeading.type, 'subHeading')" @input="changeTxt('subHeading')" @mousedown.stop>
         {{ info.subHeading.txt }}
       </h2>
+      <div contenteditable="true" class="icon-wrapper" ref="subHeading">
+        <img :src="info.icon.src" alt=""   
+          :class="info.icon.classes" 
+          :style="info.icon.style" 
+          v-if="info.icon" 
+          :ref="`icon`"
+           @click.stop="setEditable(info.icon.type, 'icon')"
+      >
+      </div>
     </section>
   </section>
 </template>
 <script>
-import { isGloballyWhitelisted } from '@vue/shared'
-import { eventBus } from '../../services/event-bus.service'
-
 export default {
   name: 'wap-text-edit',
   props: {
@@ -46,6 +52,7 @@ export default {
       // this.$store.commit({ type: 'updateCmp', newCmp })
     },
     setEditable(type, key, idx = null) {
+      console.log(type, key)
       if (type === 'cmp') this.isSelected = true
       const el = { type, key, idx }
       const cmp = JSON.parse(JSON.stringify(this.cmp))

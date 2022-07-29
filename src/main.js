@@ -38,8 +38,10 @@ import {
   faAirplay,
   faCircle,
   faPlus,
-  faBars
+  faBars,
 } from '@fortawesome/pro-light-svg-icons'
+
+import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import '@/assets/styles/styles.scss'
 
@@ -70,7 +72,8 @@ library.add(
   faAirplay,
   faCircle,
   faPlus,
-  faBars
+  faBars,
+  faSquareInstagram
 )
 
 app.component('font-awesome-icon', FontAwesomeIcon)
