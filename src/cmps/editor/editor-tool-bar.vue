@@ -8,6 +8,7 @@
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>
+
         <p class="close" @click="isOpen = false">
           <font-awesome-icon icon="fa-light fa-xmark-large" />
         </p>
@@ -169,6 +170,22 @@ export default {
       // if(!this.user) signup / login form
       // if(!this.wap.name) to user user to enter a name then return
       this.$store.dispatch({ type: 'saveWap', isPublished: true })
+    },
+    async undo() {
+      try {
+        await this.$store.dispatch({ type: 'undo' })
+      } catch (err) {
+        console.log(err)
+        // notification['Somthing went wrong...']
+      }
+    },
+    async redo() {
+      try {
+        this.$store.dispatch({ type: 'redo' })
+      } catch (err) {
+        console.log(err)
+        // notification['Somthing went wrong...']
+      }
     },
   },
   computed: {

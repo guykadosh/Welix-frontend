@@ -181,9 +181,15 @@
       border-bottom: solid 1px #f1f3f5;
       padding: rem(6px) rem(16px);
       align-items: center;
-
+      .inner {
+        .undo {
+          margin-inline-end: rem(10px);
+          font-size: rem(16px);
+        }
+      }
       h2 {
         font-family: Roboto-Bold, sans-serif;
+        margin-inline-end: rem(180px);
       }
 
       .close {
@@ -286,8 +292,7 @@
         transform: translateY(rem(-3px));
       }
     }
-
-    .el-editor-inner {
+    .el-editor {
       // padding: rem(18px);
       padding: rem(18px) em(98px) rem(18px) rem(18px);
       // max-width: rem(300px);
@@ -302,40 +307,48 @@
         padding: rem(18px) em(30px) rem(18px) rem(4px);
       }
 
-      .extra-tools {
+      .undo {
         font-size: rem(18px);
-        justify-content: flex-end;
-        align-items: center;
-        padding-block-end: rem(12px);
-        margin-block-end: rem(8px);
-        border-bottom: 1px solid $light-color3;
-
-        .tool {
-          cursor: pointer;
-
-          &:first-child {
-            margin-inline-end: rem(12px);
-          }
-        }
+        margin-inline-end: rem(16px);
+        cursor: pointer;
       }
 
-      .box {
-        margin-block-end: rem(8px);
-        max-width: 280px;
+      &-inner {
+        .extra-tools {
+          font-size: rem(18px);
+          justify-content: flex-end;
+          align-items: center;
+          padding-block-end: rem(12px);
+          margin-block-end: rem(8px);
+          border-bottom: 1px solid $light-color3;
 
-        // &:nth-of-type(1),
-        // &:nth-of-type(2) {
-        //   display: flex;
-        //   align-items: center;
-        // }
+          .tool {
+            cursor: pointer;
 
-        .ant-slider-track {
-          background-color: #1971c2;
+            &:first-child {
+              margin-inline-end: rem(12px);
+            }
+          }
         }
 
-        .title {
-          margin-block-end: rem(5px);
-          min-width: 42%;
+        .box {
+          margin-block-end: rem(8px);
+          max-width: 280px;
+
+          // &:nth-of-type(1),
+          // &:nth-of-type(2) {
+          //   display: flex;
+          //   align-items: center;
+          // }
+
+          .ant-slider-track {
+            background-color: #1971c2;
+          }
+
+          .title {
+            margin-block-end: rem(5px);
+            min-width: 42%;
+          }
         }
       }
     }

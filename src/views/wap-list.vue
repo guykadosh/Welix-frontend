@@ -3,7 +3,6 @@
     <app-header />
     <Loading />
     <section class="wap-list__wrapper main-layout">
-
       <div class="wap-list__inner">
         <div class="headings">
           <h2 class="template-heading">
@@ -15,6 +14,17 @@
         </div>
 
         <div class="wap-list-container">
+          <div class="wap-preview">
+            <div class="wap-preview-img">
+              <div class="wap-preview-btns">
+                <a @click="wapToEdit('blank')">Edit</a>
+                <!-- <a @click="wapPreview()">View</a> -->
+              </div>
+              <img src="@/assets/img/blank.png" alt="" />
+            </div>
+            <p>Start New</p>
+          </div>
+
           <div class="wap-preview" v-for="wap in waps" :key="wap._id">
             <div class="wap-preview-img">
               <div class="wap-preview-btns">
@@ -53,6 +63,11 @@ export default {
   },
   methods: {
     async wapToEdit(wap) {
+      if (wap === 'blank') {
+        this.$router.push(`/wap/editor/`)
+        return
+      }
+
       const wapToEdit = JSON.parse(JSON.stringify(wap))
       delete wapToEdit._id
 

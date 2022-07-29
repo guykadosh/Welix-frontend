@@ -67,12 +67,13 @@
             >{{ siteName }}</span
           ></span
         >
-        <span class="preview-site" @click="previewSite">Preview site →</span>
+        <span>← Choose domain</span>
       </div>
     </div>
 
+    <span class="preview-site" @click="previewSite">Preview site →</span>
     <div class="editor-nav-actions flex items-center">
-      <a-tooltip @click="undo" placement="bottom">
+      <!-- <a-tooltip @click="undo" placement="bottom">
         <template #title>
           <span>Undo</span>
         </template>
@@ -90,7 +91,7 @@
         <div>
           <font-awesome-icon icon="fa-light fa-share" class="icon" />
         </div>
-      </a-tooltip>
+      </a-tooltip> -->
     </div>
   </nav>
 </template>
@@ -164,13 +165,14 @@ export default {
       }
     },
     previewSite() {
-      if (!this.wap.name) {
-        notification['error']({
-          message: `Please pick a name to your website first`,
-        })
-        this.focusName
-        return
-      }
+      // uncomment to make sure user pick site name first
+      // if (!this.wap.name) {
+      //   notification['error']({
+      //     message: `Please pick a name to your website first`,
+      //   })
+      //   this.focusName
+      //   return
+      // }
 
       const routeData = this.$router.resolve({
         name: 'wap-details',
