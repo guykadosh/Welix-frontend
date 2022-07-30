@@ -48,6 +48,13 @@ export default {
           color: '#635666',
         },
         {
+          title: 'Nostalgic',
+          desc: 'Cozy & comfortable',
+          mainBgc: '#F7D9D9',
+          cmpBgc: '#FFEFEF',
+          color: '#362706',
+        },
+        {
           title: 'Warm',
           desc: 'Modern & pleasant',
           mainBgc: ' rgb(198, 204, 202)',
