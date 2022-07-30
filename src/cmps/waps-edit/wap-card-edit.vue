@@ -1,5 +1,3 @@
-<!-- v-click-outside="unselect" -->
-<!-- @click.stop="setEditable('cmp')" -->
 <template>
   <section v-if="cmp" class="wap-card" :style="cmp.style" :class="cmp.classes">
     <img
