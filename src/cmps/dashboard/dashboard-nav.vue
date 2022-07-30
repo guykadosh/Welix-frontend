@@ -9,6 +9,7 @@
           @click="showWap(idx)"
           :key="wap._id"
         >
+          <font-awesome-icon icon="fa-light fa-sidebar" />
           {{ wap.name }}
         </li>
       </ul>

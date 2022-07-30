@@ -39,8 +39,15 @@ import {
   faCircle,
   faPlus,
   faBars,
+  faCalendarCirclePlus,
+  faSidebar,
+  faEye,
+  faUsers,
+  faMoneyBillTransfer,
 } from '@fortawesome/pro-light-svg-icons'
 import Notifications from '@kyvg/vue3-notification'
+
+// import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import '@/assets/styles/styles.scss'
 
@@ -72,6 +79,11 @@ library.add(
   faCircle,
   faPlus,
   faBars,
+  faCalendarCirclePlus,
+  faSidebar,
+  faEye,
+  faUsers,
+  faMoneyBillTransfer
 )
 
 app.component('font-awesome-icon', FontAwesomeIcon)

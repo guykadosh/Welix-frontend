@@ -1,5 +1,5 @@
 <template>
-  <LineChart :chartData="data" />
+  <LineChart :chartData="data" :chart-options="options" />
 </template>
 
 <script lang="ts">
@@ -13,7 +13,22 @@ export default {
   props: {
     data: Object,
   },
-
+  data() {
+    return {
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+          align: 'start',
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    }
+  },
   components: { LineChart },
 }
 </script>
