@@ -50,18 +50,18 @@
       // padding: rem(15px);
       background-color: $light-color;
       &-header {
-        // background-color: #131720;
+        background-color: #131720;
         width: 100%;
-        // border: 2px solid #131720;
+        border: 2px solid #131720;
         border-left: none;
         border-bottom: 1px solid $light-color4;
-        // border-bottom-right-radius: rem(50px);
+        border-bottom-right-radius: rem(50px);
         .title {
           font-size: rem(28px);
           font-family: Reboto-Bold, sans-serif;
           padding: rem(7px) rem(27px);
-          // padding-bottom: rem(7px);
-          // color: $light-color1;
+          padding-bottom: rem(7px);
+          color: $light-color1;
         }
       }
 
