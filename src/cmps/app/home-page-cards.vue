@@ -1,6 +1,6 @@
 <template>
     <section class="home-page-cards main-layout full">
-        <div class="cards__inner">
+        <!-- <div class="cards__inner">
             <div class="cards-heading">
                 <h2 class="cards-heading__heading">Build Your Unique Online Presence</h2>
                 <h3 class="cards-heading__subheading">To create your own website, follow these steps:</h3>
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <router-link class="hero-btn" to="/template">Get started</router-link>
-        </div>
+        </div> -->
     </section>
 </template>
 

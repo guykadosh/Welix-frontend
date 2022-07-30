@@ -22,7 +22,7 @@
         width: 100vw;
         height: 100vh;
         margin-bottom: 30px;
-        
+
         @include for-medium-layout {
             margin-bottom: 0;
         }
@@ -40,7 +40,7 @@
 
         display: none;
 
-        
+
 
         @include for-small-layout {
             display: block;
@@ -69,7 +69,7 @@
     }
 
     .main-hero {
-        
+
         .hero__inner {
             position: relative;
             display: flex;
@@ -92,7 +92,7 @@
             .hero-img {
                 width: 100%;
                 height: auto;
-                
+
                 @include for-small-layout {
                     width: 60%;
                 }
@@ -102,11 +102,12 @@
                 width: 100%;
                 font-family: Nunito-bold;
                 padding-right: 10vw;
-                
+
                 @include for-small-layout {
                     padding-right: 0;
                     width: 50%;
                 }
+
                 .hero-heading {
                     line-height: em(14px);
                     margin-block-end: em(5px);
@@ -187,53 +188,85 @@
 
     .editor-preview {
         width: 100vw;
-        height: 100vh;
-        background-color: $dark-color5;
+        height: 180vh;
+        background-color: $light-color5;
 
         &__inner {
             transform-style: preserve-3d;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
 
-            .list-wrapper {
+            
+            .cards-wrapper {
                 height: 100%;
-                // flex-basis: 35%;
-                // background-color: yellow;
 
-                li {
-                    text-align: right;
-                    font-family: Nunito-regular;
-                    text-transform: uppercase;
-                    color: rgba(128, 128, 128, 0.564);
-                    font-size: em(16px);
-                    letter-spacing: em(1.3px);
-                    margin-block-end: em(24px);
-                    cursor: pointer;
+                display: grid;
+                grid-template-columns: 1fr 3px 1fr;
+                grid-template-rows: repeat(4, 1fr);
 
-                    @include for-narrow-layout {}
+                .center-line {
+                    grid-column: 2;
+                    grid-row: 1 / -1;
+                    height: 100%;
+                    width: 3px;
+                    // background-color: blue;
+                    background-image: linear-gradient(#fff, $primary-color 5%, $primary-color 95%, #fff);
+                }
 
-                    @include for-normal-layout {
-                        font-size: em(18px);
+                .horiz-line {
+                    height: 3px;
+                    width: 30px;
+                    background-color: $primary-color;
+                }
+
+                .card {
+                    
+                    display: flex;
+                    align-items: center;
+
+                    .card-txt {
+                        display: flex;
+                        flex-direction: column;
+                        grid-column: 1;
                     }
 
-                    &.active {
-                        font-weight: 700;
-                        color: $light-color;
+                    &:nth-child(even) {
+                        flex-direction: row-reverse;
+                        grid-column: 1;
+                    }
+                    &:nth-child(odd) {
+                        grid-column: 3;
+                    }
+                    &:nth-of-type(1) {
+                        grid-row: 1;
+                    }
+                    &:nth-of-type(2) {
+                        grid-row: 2;
+                    }
+                    &:nth-of-type(3) {
+                        grid-row: 3;
+                    }
+                    &:nth-of-type(4){
+                        grid-row: 4;
+                    }
+                    img {
+                        width: 600px;
+                           box-shadow: -1px 1px 5px 0px rgb(0 0 0 / 8%);
+                    }
+
+                    .circle {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: #fff;
                     }
                 }
             }
+
         }
 
-        .imgs-wrapper {
-            // flex-basis: 65%;
-            // background-color: blue;
 
-
-            .img {
-                transition: transform 0.3s;
-                width: 100%;
-            }
-        }
     }
 
     &-cards {
