@@ -13,8 +13,6 @@
         class="logo-box"
         :style="info.logoImg.style"
         @click.stop="setEditable(info.logoImg.type, 'logoImg')"
-        ref="logoTxt"
-        @input="changeTxt('logoTxt')"
       >
         <img contenteditable="true" class="logo" :src="info.logoImg.url" />
       </div>
@@ -24,6 +22,8 @@
           :style="info.logoTxt.style"
           class="logo"
           contenteditable="true"
+          ref="logoTxt"
+          @input="changeTxt('logoTxt')"
           @click.stop="setEditable(info.logoTxt.type, 'logoTxt')"
         >
           {{ info.logoTxt.txt }}

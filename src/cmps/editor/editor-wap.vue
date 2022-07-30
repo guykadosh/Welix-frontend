@@ -24,7 +24,7 @@
           <component
             :is="cmp.type + '-edit'"
             :cmp="cmp"
-            @changedTxt="changeTxt"
+            @changedTxt="debounceChangeTxt"
             @picked="setCmpToEdit"
           />
         </Draggable>
@@ -37,8 +37,8 @@
 // Services
 import { wapService } from '../../services/wap.service'
 import { eventBus } from '../../services/event-bus.service'
+import { debounce } from 'lodash'
 // Libraries
-
 import { Container, Draggable } from 'vue3-smooth-dnd'
 // Cmps
 import wapHeaderEdit from '../waps-edit/wap-header-edit.vue'
@@ -67,6 +67,7 @@ export default {
   },
   created() {
     this.unsubResize = eventBus.on('resized', this.resize)
+    this.debounceChangeTxt = debounce(this.changeTxt, 500)
   },
   mounted() {
     new ResizeObserver(this.resized).observe(this.$refs.container)

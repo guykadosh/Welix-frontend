@@ -139,7 +139,6 @@ export default {
       wapToSave.isSaved = true
       wapToSave.leads = []
 
-      console.log(wapToSave)
       await this.$store.dispatch({ type: 'saveWap', wap: wapToSave })
 
       notification['success']({

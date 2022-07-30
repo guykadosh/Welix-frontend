@@ -25,6 +25,7 @@ export default {
       await this.$store.dispatch({ type: 'loadCmps' })
       loader.hide()
       const user = userService.getLoggedinUser()
+      console.log(user)
       if (user) this.$store.commit({ type: 'setUser', user })
       // const wap = wapService.getFromSession()
       // if (wap) this.$store.commit({ type: 'setCurrWap', wap })
