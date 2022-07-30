@@ -10,6 +10,15 @@
 @import 'basic/spacing';
 @import 'basic/layout';
 
+// Templates
+@import './templates/header';
+@import './templates/omnifood';
+@import './templates/betaa';
+@import './templates/making-diff';
+@import './templates/design';
+@import './templates/cake';
+@import './templates/yoga';
+
 // Components
 @import './cmps/home';
 @import './cmps/hero';
@@ -25,12 +34,4 @@
 @import './cmps/dashboard';
 @import './cmps/notifications';
 @import './cmps/thank-you';
-
-// Templates
-@import './templates/header';
-@import './templates/omnifood';
-@import './templates/betaa';
-@import './templates/making-diff';
-@import './templates/design';
-@import './templates/cake';
-@import './templates/yoga';
+@import './cmps/screen';

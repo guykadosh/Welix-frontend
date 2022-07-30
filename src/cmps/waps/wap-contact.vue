@@ -1,5 +1,6 @@
 <template>
   <section :class="cmp.classes" :style="cmp.style">
+    <div class="screen" v-if="isModalOpen" @click="closeModal"></div>
     <h2 class="heading">{{ cmp.info.heading.txt }}</h2>
     <h3 v-if="cmp.info.subHeading" class="sub-heading">
       {{ cmp.info.subHeading.txt }}
@@ -19,18 +20,21 @@
           v-model="contact.text"
         />
         <div class="btn-container">
-          <button class="contact-submit">
+          <button class="contact-submit" type="submit">
             {{ form.btn.txt }}
           </button>
         </div>
       </form>
     </section>
+    <div class="modal-thank-you" v-if="isModalOpen">
+      <ThankYou />
+    </div>
   </section>
 </template>
 
 <script>
 import { notification } from 'ant-design-vue'
-import { datePickerProps } from 'ant-design-vue/lib/date-picker/generatePicker/props'
+import ThankYou from '../../views/thank-you.vue'
 
 export default {
   name: '',
@@ -47,6 +51,7 @@ export default {
         ],
         text: '',
       },
+      isModalOpen: false,
     }
   },
   methods: {
@@ -65,13 +70,18 @@ export default {
 
         wap.usersData.contacts.push(contact)
         await this.$store.dispatch({ type: 'saveWap', wap })
-        this.$router.push('/thank-you')
+        // this.$router.push('/thank-you')
+        this.isModalOpen = true
         // notification['success']({
         //   message: `Thank you! we will reach to you soon`,
         // })
       } catch (err) {
         console.log(err)
       }
+    },
+    closeModal() {
+      console.log('clicked')
+      this.isModalOpen = false
     },
   },
   computed: {
@@ -80,7 +90,7 @@ export default {
     },
   },
   created() {},
-  components: {},
+  components: { ThankYou },
 }
 </script>
 
