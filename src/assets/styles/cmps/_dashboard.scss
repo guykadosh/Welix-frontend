@@ -2,7 +2,14 @@
   height: 100vh;
   grid-template-rows: 83px 1fr;
 
+
+
   .main-header {
+
+    .header__inner {
+      height: rem(84px);
+    }
+    height: 100px;
     margin: 0;
     border-bottom: 1px solid $light-color4;
     /* grid-template-columns: 5px 1fr 5px; */
