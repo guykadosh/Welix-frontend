@@ -10,29 +10,54 @@
 }
 
 .main-header {
+
   .header__inner {
     z-index: 10;
     height: rem(100px);
 
-    .nav-wrapper {
-      display: none;
-
-      @include for-normal-layout {
-        display: block;
+    .hamburger {
+      
+      @include for-small-layout {
+        color: $light-color;
+      }
+      @include for-medium-layout {
+        display: none;
       }
     }
+
     .mobile-nav {
       display: flex;
       flex-direction: column;
-      position: fixed;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
-      // width: 100%;
-      top: 5px;
-      right: 5px;
-      transform: translateX(105%);
-      background-color: rgba($light-color, 90%);
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      transform: translateX(100%);
+      background-color: $light-color;
       transition: transform 0.3s;
       z-index: 200;
+
+      .close-menu {
+        border: none;
+        background-color: transparent;
+        font-size: rem(24px);
+        position: absolute;
+        top: 0;
+        right: 10px;
+        cursor: pointer;
+      }
+      
+      .header-link {
+        color: $dark-color;
+        font-size: rem(24px);
+        
+        &:hover {
+          color: $primary-color;
+        }
+      }
 
       &.open {
         transform: translateX(0);
@@ -40,21 +65,27 @@
 
       .header-link.link-signup {
         border: none;
+        background-color: transparent;
       }
+
       @include for-normal-layout {
         display: none;
       }
     }
+
     .nav-wrapper {
       display: none;
-      .user-img{
+
+      @include for-medium-layout {
+        display: block;
+      }
+
+      .user-img {
         height: 55px;
         width: 55px;
         margin-left: rem(25px);
       }
-      @include for-normal-layout {
-        display: block;
-      }
+
     }
 
     .logo-wrapper {
@@ -65,20 +96,19 @@
       }
     }
 
-    // .main-header-logo {
-    //   font-size: em(36px);
-    //   font-family: Nunito-regular;
-    // }
-
     .header-link {
       text-decoration: none;
       font-family: Nunito-bold;
       text-transform: uppercase;
       color: $dark-color;
-      font-size: em(16px);
+      font-size: em(12px);
       letter-spacing: em(1.3px);
       padding: em(24px) em(38px);
       cursor: pointer;
+
+      @include for-narrow-layout {
+        font-size: em(16px);
+      }
 
       &.link-dashboard {
         padding-right: 0;
@@ -87,6 +117,7 @@
 
     .link-signup {
       border: 1px solid $dark-color;
+      border-radius: rem(24px);
 
       &:hover {
         background-color: $dark-color;

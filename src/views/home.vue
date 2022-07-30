@@ -7,8 +7,8 @@
       <hero />
     </div>
     <editor-preview />
-    <home-page-cards />
-    <div class="bg-cover-cards"></div>
+    <!-- <home-page-cards /> -->
+    <!-- <div class="bg-cover-cards"></div> -->
   </section>
 </template>
 

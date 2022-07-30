@@ -33,7 +33,7 @@
 
 .main-layout {
   display: grid;
-  grid-template-columns: 10px 1fr 10px;
+  grid-template-columns: 10px 1fr 20px;
 
   > * {
     grid-column: 2;
@@ -43,9 +43,9 @@
     grid-column: 1 / -1;
   }
 
-  @include for-small-layout {
-    grid-template-columns: 1fr 480px 1fr;
-  }
+  // @include for-small-layout {
+  //   grid-template-columns: 1fr 480px 1fr;
+  // }
 
   @include for-medium-layout {
     grid-template-columns: 1fr 680px 1fr;
@@ -60,7 +60,11 @@
   }
 
   @include for-wide-layout {
-    grid-template-columns: 1fr 1400px 1fr;
+    grid-template-columns: 1fr 1300px 1fr;
+  }
+
+  @include for-ultra-wide-layout {
+    grid-template-columns: 1fr 1550px 1fr;
   }
 }
 
