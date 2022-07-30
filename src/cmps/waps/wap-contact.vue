@@ -65,9 +65,10 @@ export default {
 
         wap.usersData.contacts.push(contact)
         await this.$store.dispatch({ type: 'saveWap', wap })
-        notification['success']({
-          message: `Thank you! we will reach to you soon`,
-        })
+        this.$router.push('/thank-you')
+        // notification['success']({
+        //   message: `Thank you! we will reach to you soon`,
+        // })
       } catch (err) {
         console.log(err)
       }
