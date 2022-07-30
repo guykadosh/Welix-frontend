@@ -38,6 +38,7 @@
 import { wapService } from '../../services/wap.service'
 import { eventBus } from '../../services/event-bus.service'
 // Libraries
+
 import { Container, Draggable } from 'vue3-smooth-dnd'
 // Cmps
 import wapHeaderEdit from '../waps-edit/wap-header-edit.vue'
@@ -86,12 +87,12 @@ export default {
     resized() {
       if (!this.$refs.container) return
       const { offsetWidth } = this.$refs.container
-      if (offsetWidth < 620) this.responsiveClass = ''
-      else if (offsetWidth >= 620) this.responsiveClass = this.small
-      else if (offsetWidth >= 860) this.responsiveClass = this.medium
-      else if (offsetWidth >= 1024) this.responsiveClass = this.narrow
-      else if (offsetWidth >= 1300) this.responsiveClass = this.normal
-      else this.responsiveClass = this.wide
+      if (offsetWidth < 620) this.responsiveClass = 'mobile'
+      if (offsetWidth >= 620) this.responsiveClass = this.small
+      if (offsetWidth >= 860) this.responsiveClass = this.medium
+      if (offsetWidth >= 1024) this.responsiveClass = this.narrow
+      if (offsetWidth >= 1300) this.responsiveClass = this.normal
+      if (offsetWidth >= 1500) this.responsiveClass = this.wide
     },
     resize(size) {
       this.conMaxWidth = size
