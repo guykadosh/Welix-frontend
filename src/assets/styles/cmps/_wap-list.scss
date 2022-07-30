@@ -30,6 +30,11 @@
 
       .wap-preview {
         overflow-y: hidden;
+        &:first-of-type {
+          img {
+            border: 1px solid rgba($dark-color, 20%);
+          }
+        }
 
         &-img {
           position: relative;
@@ -98,6 +103,8 @@
         box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.08);
          border-radius: rem(9px);
         // margin-block-end: rem(10px);
+
+     
       }
 
       p {

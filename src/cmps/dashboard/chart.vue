@@ -1,13 +1,9 @@
 <template>
-  <LineChart
-    :chartData="data"
-    :chart-options="{ legend: { display: false } }"
-    :plugins="[]"
-  />
+  <LineChart :chartData="data" :options="options" />
 </template>
 
 <script lang="ts">
-import { LineChart } from 'vue-chart-3'
+import { LineChart, BarChart } from 'vue-chart-3'
 import { Chart, registerables } from 'chart.js'
 
 Chart.register(...registerables)
@@ -20,22 +16,29 @@ export default {
   data() {
     return {
       options: {
-        responsive: true,
-        legend: {
-          display: false,
-          align: 'start',
-        },
-        plugins: [
-          {
-            beforeInit: chart => {
-              let legend = chart.config.options.legend
-              legend.display = false
-            },
+        scales: {
+          x: {
+            grid: { display: false }
+            
           },
-        ],
-      },
+          y: {
+            grid: { display: false },
+            ticks: {
+              callback: (value) => value.toString(),
+              stepSize: 1,
+            }
+          }
+        },
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+            position: 'bottom',
+          },
+        }
+      }
     }
   },
-  components: { LineChart },
+  components: { LineChart, BarChart },
 }
 </script>

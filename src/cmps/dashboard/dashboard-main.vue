@@ -27,24 +27,27 @@
           <a-table :columns="columns" :data-source="contacts" size="small" />
         </div>
         <div class="left">
-          <div class="flex justify-between">
-            <div class="box total-views">
-              <font-awesome-icon class="icon" icon="fa-light fa-eye" />
-              <p>Total views</p>
-              <p>{{ totalViews }}</p>
+          <div class="flex justify-between flex-column">
+            <div>
+              <h2>Summery</h2>
             </div>
-            <div class="box total-subs">
-              <font-awesome-icon class="icon" icon="fa-light fa-users" />
-              <p>Total Subscribers</p>
-              <p>{{ totalSubs }}</p>
-            </div>
-            <div class="box conversion">
-              <font-awesome-icon
-                class="icon"
-                icon="fa-light fa-money-bill-transfer"
-              />
-              <p>Conversion rate</p>
-              <p>{{ conversionRate }}%</p>
+            <div class="flex justify-between">
+
+              <div class="box total-views ">
+                <font-awesome-icon class="icon" icon="fa-light fa-eye" />
+                <p>Total views</p>
+                <p>{{ totalViews }}</p>
+              </div>
+              <div class="box total-subs">
+                <font-awesome-icon class="icon" icon="fa-light fa-users" />
+                <p>Total Subscribers</p>
+                <p>{{ totalSubs }}</p>
+              </div>
+              <div class="box conversion">
+                <font-awesome-icon class="icon" icon="fa-light fa-money-bill-transfer" />
+                <p>Conversion rate</p>
+                <p>{{ conversionRate }}%</p>
+              </div>
             </div>
           </div>
           <div class="graph">
@@ -112,7 +115,7 @@ export default {
       selectedRowKeys: [],
     }
   },
-  created() {},
+  created() { },
   methods: {
     editWap(wap) {
       this.$store.commit({ type: 'setCurrWap', wap })
@@ -174,9 +177,9 @@ export default {
             // drawActiveElementsOnTop: false,
             borderRadius: 6,
             data,
-            backgroundColor: ['#be123c'],
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
+            backgroundColor: ['#d3b0dc'],
+            fill: true,
+            borderColor: 'rgba(0, 0, 0, 0.1)',
             tension: 0.1,
             clip: false,
           },
