@@ -53,12 +53,13 @@ export default {
     async addContact() {
       try {
         console.log('Hi?')
+        console.log(this.wap)
         const wap = JSON.parse(JSON.stringify(this.wap))
         const contact = {
           key: this.contact.inputs[0].txt,
           name: this.contact.inputs[0].txt,
-          email: this.contact.inputs[2].txt,
-          msg: this.cotact.text,
+          email: this.contact.inputs[1].txt,
+          msg: this.contact.text,
           at: Date.now(),
         }
 

@@ -8,6 +8,10 @@
     <div class="dashboard-main__inner">
       <div class="top flex justify-between items-center">
         <h2 class="site-name">{{ siteName }}</h2>
+        <h3>
+          <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
+          Created at {{ createdAt }}
+        </h3>
         <div class="btns">
           <button class="dash-btn" @click="viewWap(this.waps[wapIdx]._id)">
             View Site
@@ -17,12 +21,38 @@
           </button>
         </div>
       </div>
-
-      <h2>Site Leads</h2>
-      <a-table :columns="columns" :data-source="contacts" size="small" />
-
-      <h2>Traffic</h2>
-      <Chart :data="weeklyData" />
+      <div class="flex">
+        <div class="right">
+          <h2>Site Leads</h2>
+          <a-table :columns="columns" :data-source="contacts" size="small" />
+        </div>
+        <div class="left">
+          <div class="flex justify-between">
+            <div class="box total-views">
+              <font-awesome-icon class="icon" icon="fa-light fa-eye" />
+              <p>Total views</p>
+              <p>{{ totalViews }}</p>
+            </div>
+            <div class="box total-subs">
+              <font-awesome-icon class="icon" icon="fa-light fa-users" />
+              <p>Total Subscribers</p>
+              <p>{{ totalSubs }}</p>
+            </div>
+            <div class="box conversion">
+              <font-awesome-icon
+                class="icon"
+                icon="fa-light fa-money-bill-transfer"
+              />
+              <p>Conversion rate</p>
+              <p>{{ conversionRate }}%</p>
+            </div>
+          </div>
+          <div class="graph">
+            <h2>Weekly traffic</h2>
+            <Chart :data="weeklyData" />
+          </div>
+        </div>
+      </div>
 
       <div class="flex">
         <!-- <compose-mail /> -->
@@ -38,6 +68,7 @@
 </template>
 <script>
 // import { userService } from '../../services/user.service'
+import { toHandlers } from 'vue'
 import Chart from './chart.vue'
 import composeMail from './compose-mail.vue'
 
@@ -54,10 +85,17 @@ export default {
         {
           title: 'Name',
           dataIndex: 'name',
+          sorter: {
+            compare: (a, b) => a.name.localeCompare(b.name),
+          },
+          // sortDirections: ['ascend', 'descend'],
         },
         {
           title: 'Email',
           dataIndex: 'email',
+          sorter: {
+            compare: (a, b) => a.email.localeCompare(b.email),
+          },
         },
         {
           title: 'Message',
@@ -66,6 +104,9 @@ export default {
         {
           title: 'At',
           dataIndex: 'at',
+          sorter: {
+            compare: (a, b) => a.at - b.at,
+          },
         },
       ],
       selectedRowKeys: [],
@@ -96,8 +137,32 @@ export default {
     },
     contacts() {
       console.log(this.waps[this.wapIdx])
-      const { contacts } = this.waps[this.wapIdx].usersData
+      let { contacts } = this.waps[this.wapIdx].usersData
+      contacts.forEach(contact => {
+        contact.at = new Date(contact.at).toLocaleDateString()
+      })
+      console.log(contacts)
       return contacts
+    },
+    createdAt() {
+      let createdAt
+      if (this.waps[this.wapIdx].createdAt) {
+        createdAt = this.waps[this.wapIdx].createdAt
+        createdAt = new Date(createdAt).toLocaleDateString()
+      } else {
+        createdAt = new Date().toLocaleDateString()
+      }
+      return createdAt
+    },
+    totalViews() {
+      return this.waps[this.wapIdx]?.totalViews || 0
+    },
+    totalSubs() {
+      return this.waps[this.wapIdx]?.usersData.contacts.length || 0
+    },
+    conversionRate() {
+      const totalViews = this.totalViews || 1
+      return ((this.totalSubs / totalViews) * 100).toFixed(2)
     },
     weeklyData() {
       const data = this.waps[this.wapIdx].weeklyViews || [0, 0, 0, 0, 0, 0, 0]
@@ -105,10 +170,15 @@ export default {
         labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
         datasets: [
           {
-            label: 'Weekly Views',
+            label: 'Weekly views',
+            // drawActiveElementsOnTop: false,
             borderRadius: 6,
             data,
             backgroundColor: ['#be123c'],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1,
+            clip: false,
           },
         ],
       }

@@ -5,23 +5,52 @@
     <div class="header__inner flex justify-between items-center">
       <section class="logo-wrapper">
         <!-- <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2> -->
-        <img class="logo" src="@/assets/img/logo.png" alt="" @click="$router.push('/')" />
+        <img
+          class="logo"
+          src="@/assets/img/logo.png"
+          alt=""
+          @click="$router.push('/')"
+        />
       </section>
 
       <section class="nav-wrapper">
-        <router-link class="header-link link-mid" to="/template">Templates</router-link>
-        <router-link class="header-link link-dashboard" v-if="isUser" to="/dashboard">backoffice</router-link>
-        <router-link class="header-link link-login" v-if="!isUser" to="/login">log in</router-link>
-        <router-link class="header-link link-signup" v-if="!isUser" to="/signup">sign up</router-link>
-        <img class="user-img" v-if="isUser" :src="user.img" alt="">
+        <router-link class="header-link link-mid" to="/template"
+          >Templates</router-link
+        >
+        <router-link
+          class="header-link link-dashboard"
+          v-if="isUser"
+          to="/dashboard"
+          >backoffice</router-link
+        >
+        <router-link class="header-link link-login" v-if="!isUser" to="/login"
+          >log in</router-link
+        >
+        <router-link class="header-link link-signup" v-if="!isUser" to="/signup"
+          >sign up</router-link
+        >
+        <img v-if="isUser" class="user-img" :src="user.img" alt="" />
       </section>
 
       <div class="mobile-nav">
-        <router-link class="header-link link-mid" to="/template">Templates</router-link>
-        <router-link class="header-link link-mid" to="/wap/editor/">Editor</router-link>
-        <router-link class="header-link link-dashboard" v-if="isUser" to="/dashboard">backoffice</router-link>
-        <router-link class="header-link link-login" v-if="!isUser" to="/login">log in</router-link>
-        <router-link class="header-link link-signup" v-if="!isUser" to="/signup">sign up</router-link>
+        <router-link class="header-link link-mid" to="/template"
+          >Templates</router-link
+        >
+        <router-link class="header-link link-mid" to="/wap/editor/"
+          >Editor</router-link
+        >
+        <router-link
+          class="header-link link-dashboard"
+          v-if="isUser"
+          to="/dashboard"
+          >backoffice</router-link
+        >
+        <router-link class="header-link link-login" v-if="!isUser" to="/login"
+          >log in</router-link
+        >
+        <router-link class="header-link link-signup" v-if="!isUser" to="/signup"
+          >sign up</router-link
+        >
       </div>
     </div>
   </header>
@@ -42,7 +71,7 @@ export default {
   },
   created() {
     this.user = this.$store.getters.getUser
-    console.log(this.user);
+    console.log(this.user)
   },
   computed: {
     isUser() {

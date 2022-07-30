@@ -6,7 +6,7 @@
     :class="[responsiveClass, wrapper]"
     :style="{ maxWidth: conMaxWidth + 'px' }"
   >
-    <div class="wap-to-edit" :style="wap.style" :class="WapClass">
+    <div class="wap-to-edit" :style="wap.style" :class="wapClass">
       <Container
         :get-child-payload="getChildPayload"
         group-name="1"

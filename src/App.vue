@@ -1,5 +1,6 @@
 <template>
   <router-view />
+  <notifications position="top left" :width="500" classes="notification" />
 </template>
 
 <script>
@@ -25,8 +26,8 @@ export default {
       loader.hide()
       const user = userService.getLoggedinUser()
       if (user) this.$store.commit({ type: 'setUser', user })
-      const wap = wapService.getFromSession()
-      if (wap) this.$store.commit({ type: 'setCurrWap', wap })
+      // const wap = wapService.getFromSession()
+      // if (wap) this.$store.commit({ type: 'setCurrWap', wap })
     } catch (err) {
       console.log(err)
     }

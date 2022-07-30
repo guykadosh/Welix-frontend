@@ -5,6 +5,7 @@
     "type": "Cake shop",
     "style": {},
     "class": "cake",
+    "createdAt": 12312312432123,
     "createdBy": {
       "_id": "5e26e0b718a0891d4c995bgfhghh527",
       "fullname": "Lukas Rudrof",
@@ -47,7 +48,9 @@
             "id": "wc05698222",
             "type": "wap-nav",
             "style": {},
-            "classes": ["cake-nav"],
+            "classes": [
+              "cake-nav"
+            ],
             "info": {
               "links": [
                 {
@@ -83,7 +86,10 @@
       {
         "id": "gf##$25",
         "type": "wap-hero",
-        "classes": ["cake-hero", "cake-layout"],
+        "classes": [
+          "cake-hero",
+          "cake-layout"
+        ],
         "info": {
           "heading": {
             "type": "txt",
@@ -111,7 +117,10 @@
       },
       {
         "id": "gb4444y42",
-        "classes": ["cake-txt-about", "cake-layout"],
+        "classes": [
+          "cake-txt-about",
+          "cake-layout"
+        ],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -124,7 +133,10 @@
       },
       {
         "id": "wc078hg545",
-        "classes": ["cake-gallery-about", "cake-layout"],
+        "classes": [
+          "cake-gallery-about",
+          "cake-layout"
+        ],
         "type": "wap-gallery",
         "info": {
           "txt": "",
@@ -141,7 +153,10 @@
       },
       {
         "id": "wcddd234f",
-        "classes": ["cake-txt-follow", "cake-layout"],
+        "classes": [
+          "cake-txt-follow",
+          "cake-layout"
+        ],
         "type": "wap-text",
         "info": {
           "heading": {
@@ -154,7 +169,10 @@
       },
       {
         "id": "wc0$$4868g5",
-        "classes": ["cake-gallery-options", "cake-layout"],
+        "classes": [
+          "cake-gallery-options",
+          "cake-layout"
+        ],
         "type": "wap-gallery",
         "info": {
           "imgs": {
@@ -175,14 +193,185 @@
         "style": {}
       },
       {
+        "id": "wccccccc5g",
+        "classes": [
+          "cake-layout",
+          "cake-price-list"
+        ],
+        "type": "wap-container",
+        "info": {
+          "cmps": [
+            {
+              "id": "wc34344348",
+              "classes": [
+                "cake-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Macaroons Chocolate Cake",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 70,
+                  "style": {}
+                },
+                "img": {
+                  "type": "img",
+                  "url":"https://i.ibb.co/KsdbwPF/1.webp",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wdddddd22",
+              "classes": [
+                "cake-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Crazy Golden Chocolate Cake",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 64,
+                  "style": {}
+                },
+                "img": {
+                  "type": "img",
+                  "url":"https://i.ibb.co/tcmZxqz/06.jpg",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wc08",
+              "classes": [
+                "cake-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Golden Wedding Cake",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 65,
+                  "style": {}
+                },
+                "img": {
+                  "type": "img",
+                  "url":"https://i.ibb.co/8Xrx3t2/4.webp",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wc08",
+              "classes": [
+                "cake-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Flowers Wedding Cake",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 61,
+                  "style": {}
+                },
+                "img": {
+                  "type": "img",
+                  "url":"https://i.ibb.co/Tq76cHP/2.webp",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wc08",
+              "classes": [
+                "cake-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Ice Cream Cone Cake",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 70,
+                  "style": {}
+                },
+                "img": {
+                  "type": "img",
+                  "url":"https://i.ibb.co/RDjMHkh/e1c78c-2.webp",
+                  "style": {}
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "wc08",
+              "classes": [
+                "cake-card"
+              ],
+              "type": "wap-card",
+              "info": {
+                "heading": {
+                  "type": "txt",
+                  "txt": "Macaroons Chocolate Cake",
+                  "style": {}
+                },
+                "price": {
+                  "type": "txt",
+                  "txt": 70,
+                  "style": {}
+                },
+                "img": {
+                  "type": "img",
+                  "url":"https://i.ibb.co/KsdbwPF/1.webp",
+                  "style": {}
+                }
+              },
+              "style": {}
+            }
+          ]
+        },
+        "style": {
+          "backgroundColor": "#fdf2e9"
+        }
+      },
+      {
         "id": "ffvfg1b51g55",
-        "classes": ["full", "cake-container", "cake-layout"],
+        "classes": [
+          "full",
+          "cake-container",
+          "cake-layout"
+        ],
         "type": "wap-container",
         "info": {
           "cmps": [
             {
               "id": "wcd4654%%%j",
-              "classes": ["cake-contact"],
+              "classes": [
+                "cake-contact"
+              ],
               "type": "wap-contact",
               "info": {
                 "heading": {
@@ -221,7 +410,9 @@
             },
             {
               "id": "wc04dsvf145",
-              "classes": ["cake-list"],
+              "classes": [
+                "cake-list"
+              ],
               "type": "wap-list",
               "info": {
                 "heading": {
