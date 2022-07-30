@@ -1,10 +1,12 @@
 <template>
     <div class="editor-preview main-layout full" @mouseenter="onPreview" @mouseleave="onPreview">
         <div class="editor-preview__inner">
+
             <div class="heading">
                 <h2 class="intro">Introducing Welix</h2>
                 <h3 class="subheading">{{imgs[currImg].title}}</h3>
             </div>
+
             <section class="list-wrapper" @wheel.prevent="scrollToPos">
                 <ul class="clean-list">
                     <li @click="setImgPos(0)" :class="{ active: this.currImg === 0 }">{{imgs[0].title}}</li>
@@ -14,6 +16,7 @@
                     <li @click="setImgPos(3)" :class="{ active: this.currImg === 3 }">{{imgs[3].title}}</li>
                 </ul>
             </section>
+            
             <section class="list-wrapper list2" @wheel.prevent="scrollToPos">
                 <ul class="clean-list">
                     <li @click="setImgPos(0)" :class="{ active: this.currImg === 0 }"><span></span></li>

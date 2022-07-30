@@ -1,7 +1,7 @@
 <template>
   <header class="main-header main-layout full">
-    <div class="screen full" @click="toggleMenu" v-if="isMenuOpen"></div>
-    <MenuOutlined class="hamburger" @click="toggleMenu" />
+    <!-- <div class="screen full" @click="toggleMenu" v-if="isMenuOpen"></div>
+    <MenuOutlined class="hamburger" @click="toggleMenu" /> -->
     <div class="header__inner flex justify-between items-center">
       <section class="logo-wrapper">
         <!-- <h2 class="main-header-logo" @click="$router.push('/')">Welix</h2> -->
