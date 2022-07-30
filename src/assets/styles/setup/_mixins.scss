@@ -36,7 +36,14 @@
 
 @mixin for-wide-layout {
   @media (min-width: $break-wide) {
-    //1920
+    //1500
+    @content;
+  }
+}
+
+@mixin for-ultra-wide-layout {
+  @media (min-width: 1800px) {
+    //800
     @content;
   }
 }
