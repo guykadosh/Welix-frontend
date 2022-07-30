@@ -6,8 +6,9 @@
       <app-header />
       <hero />
     </div>
-    <editor-preview />
     <!-- <home-page-cards /> -->
+    <editor-preview />
+    <app-footer/>
     <!-- <div class="bg-cover-cards"></div> -->
   </section>
 </template>
@@ -17,6 +18,7 @@ import appHeader from '../cmps/app/app-header.vue'
 import hero from '../cmps/app/hero.vue'
 import editorPreview from '../cmps/app/editor-preview.vue'
 import HomePageCards from '../cmps/app/home-page-cards.vue'
+import appFooter from '../cmps/app/app-footer.vue'
 export default {
   name: '',
   components: {
@@ -24,6 +26,7 @@ export default {
     hero,
     editorPreview,
     HomePageCards,
+    appFooter
   },
 }
 </script>
