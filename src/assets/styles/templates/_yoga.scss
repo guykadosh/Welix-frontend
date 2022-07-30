@@ -1,0 +1,58 @@
+.yoga {
+    &-header {
+        background-color: aqua;
+        padding: rem(30px);
+
+    }
+
+    &-nav {
+        li {
+            a {
+
+                color: $dark-color;
+            }
+        }
+
+    }
+
+    &-hero {
+        img {
+            width: 100%;
+        }
+    }
+
+    /*     &-card {
+        height: rem(350px);
+    }
+ */
+    &-container {
+        .wap-container__inner {
+            display: flex;
+            justify-content: space-around;
+        }
+
+    }
+
+    &-contact {
+        .form-container {
+            justify-content: center;
+            display: flex;
+            input , textarea{
+                display: flex;
+                margin-bottom: rem(15px);
+                width: rem(450px);
+                height: rem(35px);
+                font-size: rem(18px);
+                border: 1px solid $dark-color;
+                border-radius: rem(4px);
+                flex-direction: column;
+            }
+            textarea{
+                height: rem(150px);
+            }
+            
+        }
+
+        
+    }
+}

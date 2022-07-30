@@ -1,0 +1,252 @@
+[
+    {
+        "name": "YOGA",
+        "imgUrl": "https://i.ibb.co/hMHxnf3/Screenshot-2022-07-28-151848.png",
+        "type": "Yoga",
+        "style": {},
+        "class": "yoga",
+        "createdBy": {
+            "_id": "5dd0891d4c995bgfhghh527",
+            "fullname": "Lukas Rudrof",
+            "imgUrl": "img.jpg"
+        },
+        "usersData": {
+            "contacts": [
+                {
+                    "email": "user@user.com",
+                    "msg": "Please send me stuff",
+                    "at": 123
+                }
+            ],
+            "signups": [
+                {
+                    "email": "user@user.com",
+                    "at": 123
+                }
+            ]
+        },
+        "theme": "vivid",
+        "cmps": [
+            {
+                "id": "fhngh1",
+                "type": "wap-header",
+                "classes": [
+                    "yoga-header",
+                    "flex",
+                    "justify-between",
+                    "full",
+                    "yoga-layout"
+                ],
+                "info": {
+                    "logoTxt": {
+                        "type": "txt",
+                        "txt": "YOGA",
+                        "style": {}
+                    },
+                    "nav": {
+                        "id": "CCDFF2",
+                        "type": "wap-nav",
+                        "style": {},
+                        "classes": [
+                            "cake-nav"
+                        ],
+                        "info": {
+                            "links": [
+                                {
+                                    "type": "txt",
+                                    "txt": "Home",
+                                    "link": "#Home",
+                                    "style": {}
+                                },
+                                {
+                                    "type": "txt",
+                                    "txt": "About",
+                                    "link": "#About",
+                                    "style": {}
+                                },
+                                {
+                                    "type": "txt",
+                                    "txt": "Gallery",
+                                    "link": "#Gallery",
+                                    "style": {}
+                                },
+                                {
+                                    "type": "txt",
+                                    "txt": "Contact",
+                                    "link": "#Contact",
+                                    "style": {}
+                                }
+                            ]
+                        }
+                    }
+                },
+                "style": {}
+            },
+            {
+                "id": "gf##$25",
+                "type": "wap-hero",
+                "classes": [
+                    "cake-hero",
+                    "cake-layout"
+                ],
+                "info": {
+                    "heading": {
+                        "type": "txt",
+                        "txt": "ESCAPE & REJUVENATE",
+                        "style": {}
+                    },
+                    "subHeading": {
+                        "type": "txt",
+                        "txt": "With a Yoga Retreat",
+                        "style": {}
+                    },
+                    "btns": [
+                        {
+                            "type": "btn",
+                            "txt": "EXPLORE",
+                            "link": "#explore",
+                            "style": {}
+                        }
+                    ],
+                    "imgs": {
+                        "type": "imgs",
+                        "urls": [
+                            "https://i.ibb.co/Qd1FQQ2/82fcd3-f9996d378dd1441e8308f71819f498f3-mv2-d-5508-2954-s-4-2.webp"
+                        ],
+                        "style": {}
+                    }
+                },
+                "style": {}
+            },
+            {
+                "id": "wccfff222",
+                "classes": [
+                    "yoga-layout",
+                    "yoga-container"
+                ],
+                "type": "wap-container",
+                "info": {
+                    "cmps": [
+                        {
+                            "id": "wc31148",
+                            "classes": [
+                                "cake-card"
+                            ],
+                            "type": "wap-card",
+                            "info": {
+                                "heading": {
+                                    "type": "txt",
+                                    "txt": "Rejuvenation Weekend",
+                                    "style": {}
+                                },
+                                "subHeading": {
+                                    "type": "txt",
+                                    "txt": "Thu, Jul 12/01",
+                                    "style": {}
+                                },
+                                "img": {
+                                    "type": "img",
+                                    "url": "https://i.ibb.co/GkgHdSv/84770f-ae3202cf27b64d0c8219d1b318b66190-mv2-d-5157-3526-s-4-2.webp",
+                                    "style": {}
+                                }
+                            },
+                            "style": {}
+                        },
+                        {
+                            "id": "wcddd12148",
+                            "classes": [
+                                "cake-card"
+                            ],
+                            "type": "wap-card",
+                            "info": {
+                                "heading": {
+                                    "type": "txt",
+                                    "txt": "Body & soul Retreat",
+                                    "style": {}
+                                },
+                                "subHeading": {
+                                    "type": "txt",
+                                    "txt": "Thu, Jul 12/08",
+                                    "style": {}
+                                },
+                                "img": {
+                                    "type": "img",
+                                    "url": "https://i.ibb.co/W0nJ76P/84770f-4f19a39d47b540fb942ba6b844462f7f-mv2-d-5208-3472-s-4-2.webp",
+                                    "style": {}
+                                }
+                            },
+                            "style": {}
+                        }
+                    ]
+                },
+                "style": {
+                    "backgroundColor": "#fdf2e9"
+                }
+            },
+            {
+                "id": "wcd4654%%%j",
+                "classes": [
+                    "cake-contact"
+                ],
+                "type": "wap-contact",
+                "info": {
+                    "heading": {
+                        "type": "txt",
+                        "txt": "Contact me",
+                        "style": {}
+                    },
+                    "subHeading": {
+                        "type": "txt",
+                        "txt": "Please feel free to contact me by phone or email. Or alternatively fill in the form below, and I will get back to you as soon as I can.",
+                        "style": {}
+                    },
+                    "form": {
+                        "type": "form",
+                        "inputs": [
+                            {
+                                "type": "text",
+                                "placeholder": "name"
+                            },
+                            {
+                                "type": "email",
+                                "placeholder": "email"
+                            }
+                        ],
+                        "textarea": {
+                            "placeholder": "Message"
+                        },
+                        "btn": {
+                            "type": "submit",
+                            "txt": "submit"
+                        },
+                        "style": {}
+                    }
+                },
+                "style": {}
+            },
+            {
+                "id": "sc599ffd9",
+                "classes": [
+                    "omnifood-footer"
+                ],
+                "type": "wap-footer",
+                "info": {
+                    "row1": {
+                        "type": "txt",
+                        "texts": [
+                            "500 Terry Francois St., San Francisco, C94158 Tel: 123-456-7890, info@mysite.com",
+                            "info@mysite.com Tel: 123-456-7890info@mysite.com Tel: 123-456-7890"
+                        ],
+                        "style": {}
+                    },
+                    "copyright": {
+                        "type": "txt",
+                        "txt": "©2023 by YOGA with BRIAN.",
+                        "style": {}
+                    }
+                },
+                "style": {}
+            }
+        ]
+    }
+]

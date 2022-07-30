@@ -42,8 +42,6 @@ import {
 } from '@fortawesome/pro-light-svg-icons'
 import Notifications from '@kyvg/vue3-notification'
 
-import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons'
-
 import '@/assets/styles/styles.scss'
 
 const app = createApp(App)
@@ -74,7 +72,6 @@ library.add(
   faCircle,
   faPlus,
   faBars,
-  faSquareInstagram
 )
 
 app.component('font-awesome-icon', FontAwesomeIcon)
