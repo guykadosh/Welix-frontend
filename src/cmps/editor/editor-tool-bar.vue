@@ -139,11 +139,19 @@ export default {
       wapToSave.isSaved = true
       wapToSave.leads = []
 
-      await this.$store.dispatch({ type: 'saveWap', wap: wapToSave })
+      const wap = await this.$store.dispatch({
+        type: 'saveWap',
+        wap: wapToSave,
+      })
 
       notification['success']({
         message: `Site saved successfully`,
       })
+      let routeData = this.$router.resolve({
+        name: 'wap-details',
+        params: { wapId: wap._id },
+      })
+      window.open(routeData.href, '_blank')
       this.$router.push('/dashboard')
     },
     async changeWapName() {
