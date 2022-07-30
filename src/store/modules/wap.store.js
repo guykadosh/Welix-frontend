@@ -292,7 +292,7 @@ export default {
 
           if (cmp.type === 'wap-container') {
             cmp.info.cmps.forEach(cmp => {
-              cmp.style.backgroundColor = cmpBgc
+              // cmp.style.backgroundColor = cmpBgc
               cmp.style.color = color
 
               for (const key in cmp.info) {

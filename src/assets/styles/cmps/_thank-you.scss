@@ -1,19 +1,24 @@
 .thank-you-container {
-   text-align: center;
-    font-family:Roboto-Regular;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    img{
-        width: 200px;
-        margin-bottom: rem(35px);
-    }
-    h1{
-        font-size: rem(65px);
-        margin-bottom: rem(15px);
-    }
-    h2{
-        font-size: rem(45px);
-    }
+  background-color: #fff;
+  padding: rem(15px);
+  text-align: center;
+  font-family: Roboto-Regular;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 12px;
+  img.thank-you-img {
+    width: rem(75px);
+    margin-bottom: rem(35px);
+  }
+
+  h1 {
+    font-size: rem(36px);
+    margin-bottom: rem(15px);
+  }
+  h2 {
+    font-size: rem(24px);
+  }
 }
