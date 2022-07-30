@@ -277,6 +277,171 @@
         "style": {}
     },
     {
+        "thumbnail": "https://i.ibb.co/HFkLJtc/Screenshot-2022-07-30-132849.png",
+        "classes": [
+            "cake-layout",
+            "cake-price-list"
+        ],
+        "type": "wap-container",
+        "info": {
+            "cmps": [
+                {
+                    "id": "wc34344348",
+                    "classes": [
+                        "cake-card"
+                    ],
+                    "type": "wap-card",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Macaroons Chocolate Cake",
+                            "style": {}
+                        },
+                        "price": {
+                            "type": "txt",
+                            "txt": 70,
+                            "style": {}
+                        },
+                        "img": {
+                            "type": "img",
+                            "url": "https://i.ibb.co/KsdbwPF/1.webp",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                },
+                {
+                    "id": "wdddddd22",
+                    "classes": [
+                        "cake-card"
+                    ],
+                    "type": "wap-card",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Crazy Golden Chocolate Cake",
+                            "style": {}
+                        },
+                        "price": {
+                            "type": "txt",
+                            "txt": 64,
+                            "style": {}
+                        },
+                        "img": {
+                            "type": "img",
+                            "url": "https://i.ibb.co/tcmZxqz/06.jpg",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                },
+                {
+                    "id": "wc08",
+                    "classes": [
+                        "cake-card"
+                    ],
+                    "type": "wap-card",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Golden Wedding Cake",
+                            "style": {}
+                        },
+                        "price": {
+                            "type": "txt",
+                            "txt": 65,
+                            "style": {}
+                        },
+                        "img": {
+                            "type": "img",
+                            "url": "https://i.ibb.co/8Xrx3t2/4.webp",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                },
+                {
+                    "id": "wc08",
+                    "classes": [
+                        "cake-card"
+                    ],
+                    "type": "wap-card",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Flowers Wedding Cake",
+                            "style": {}
+                        },
+                        "price": {
+                            "type": "txt",
+                            "txt": 61,
+                            "style": {}
+                        },
+                        "img": {
+                            "type": "img",
+                            "url": "https://i.ibb.co/Tq76cHP/2.webp",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                },
+                {
+                    "id": "wc08",
+                    "classes": [
+                        "cake-card"
+                    ],
+                    "type": "wap-card",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Ice Cream Cone Cake",
+                            "style": {}
+                        },
+                        "price": {
+                            "type": "txt",
+                            "txt": 70,
+                            "style": {}
+                        },
+                        "img": {
+                            "type": "img",
+                            "url": "https://i.ibb.co/RDjMHkh/e1c78c-2.webp",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                },
+                {
+                    "id": "wc08",
+                    "classes": [
+                        "cake-card"
+                    ],
+                    "type": "wap-card",
+                    "info": {
+                        "heading": {
+                            "type": "txt",
+                            "txt": "Macaroons Chocolate Cake",
+                            "style": {}
+                        },
+                        "price": {
+                            "type": "txt",
+                            "txt": 70,
+                            "style": {}
+                        },
+                        "img": {
+                            "type": "img",
+                            "url": "https://i.ibb.co/KsdbwPF/1.webp",
+                            "style": {}
+                        }
+                    },
+                    "style": {}
+                }
+            ]
+        },
+        "style": {
+            "backgroundColor": "#fdf2e9"
+        }
+    },
+    {
         "thumbnail": "https://i.ibb.co/Np9rm6N/406.png",
         "type": "wap-hero",
         "classes": [
@@ -833,7 +998,8 @@
                     "style": {}
                 }
             ]
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/wNKn1P2/map.png",
@@ -856,7 +1022,8 @@
                 "lat": 31.8102,
                 "lng": 34.6566
             }
-        }
+        },
+        "style": {}
     },
     {
         "classes": [
@@ -895,7 +1062,8 @@
                 "txt": "copyright © 2022 by Omnifood, Inc. All rights reserved.",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/YNc5ZLV/making-diff-card.jpg",
@@ -995,7 +1163,8 @@
                     "style": {}
                 }
             ]
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/Jz6kfHF/103728.png",
@@ -1031,7 +1200,8 @@
                 },
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/6vVH968/making-diff-text.jpg",
@@ -1050,7 +1220,8 @@
                 "txt": "We are nominated to Agency of Year",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/NncXXzk/2022-07-28-104438.png",
@@ -1140,7 +1311,8 @@
                 "txt": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/Z1QpL79/betta-cards.jpg",
@@ -1397,7 +1569,8 @@
                 },
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "classes": [
@@ -1427,7 +1600,8 @@
                 "txt": "Head of marketing, Apple Inc.",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/5L0RYVL/2022-07-28-104523.png",
@@ -1488,7 +1662,8 @@
                     }
                 }
             ]
-        }
+        },
+        "style": {}
     },
     {
         "type": "wap-container",
@@ -1627,7 +1802,8 @@
                 "type": "txt",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/8XFY1LH/2022-07-28-104502.png",
@@ -1709,7 +1885,8 @@
                 "txt": "copyright © 2022 by BETAA, Inc. All rights reserved.",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/qgSWHzW/lidt.png",
@@ -1760,7 +1937,8 @@
                 "type": "txt",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/cNnkgJH/2022-07-28-172658.png",
@@ -1842,7 +2020,8 @@
                     "style": {}
                 }
             ]
-        }
+        },
+        "style": {}
     },
     {
         "classes": [
@@ -1862,7 +2041,8 @@
                 "txt": "Eating well without breaking the bank",
                 "style": {}
             }
-        }
+        },
+        "style": {}
     },
     {
         "thumbnail": "https://i.ibb.co/3dP5rwG/2022-07-28-104649.png",
@@ -1938,6 +2118,7 @@
                 }
             ]
         }
+
     },
     {
         "thumbnail": "https://i.ibb.co/q0ZVK0s/image.png",
