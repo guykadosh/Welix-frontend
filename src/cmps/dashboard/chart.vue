@@ -1,5 +1,9 @@
 <template>
-  <LineChart :chartData="data" :chart-options="options" />
+  <LineChart
+    :chartData="data"
+    :chart-options="{ legend: { display: false } }"
+    :plugins="[]"
+  />
 </template>
 
 <script lang="ts">
@@ -21,11 +25,14 @@ export default {
           display: false,
           align: 'start',
         },
-        plugins: {
-          legend: {
-            display: false,
+        plugins: [
+          {
+            beforeInit: chart => {
+              let legend = chart.config.options.legend
+              legend.display = false
+            },
           },
-        },
+        ],
       },
     }
   },
