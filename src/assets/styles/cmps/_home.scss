@@ -185,165 +185,58 @@
         }
     }
 
-
-    .editor-preview {
+    &-cards {
+        background-color: #14348E;
+        height: 50vh;
         width: 100vw;
-        height: 180vh;
-        background-color: $light-color5;
 
         &__inner {
-            transform-style: preserve-3d;
+            width: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 10%;
 
-            
-            .cards-wrapper {
-                height: 100%;
+            .heading {
+                width: 60%;
 
-                display: grid;
-                grid-template-columns: 1fr 3px 1fr;
-                grid-template-rows: repeat(4, 1fr);
-
-                .center-line {
-                    grid-column: 2;
-                    grid-row: 1 / -1;
-                    height: 100%;
-                    width: 3px;
-                    // background-color: blue;
-                    background-image: linear-gradient(#fff, $primary-color 5%, $primary-color 95%, #fff);
-                }
-
-                .horiz-line {
-                    height: 3px;
-                    width: 30px;
-                    background-color: $primary-color;
-                }
-
-                .card {
-                    
-                    display: flex;
-                    align-items: center;
-
-                    .card-txt {
-                        display: flex;
-                        flex-direction: column;
-                        grid-column: 1;
-                    }
-
-                    &:nth-child(even) {
-                        flex-direction: row-reverse;
-                        grid-column: 1;
-                    }
-                    &:nth-child(odd) {
-                        grid-column: 3;
-                    }
-                    &:nth-of-type(1) {
-                        grid-row: 1;
-                    }
-                    &:nth-of-type(2) {
-                        grid-row: 2;
-                    }
-                    &:nth-of-type(3) {
-                        grid-row: 3;
-                    }
-                    &:nth-of-type(4){
-                        grid-row: 4;
-                    }
-                    img {
-                        width: 600px;
-                           box-shadow: -1px 1px 5px 0px rgb(0 0 0 / 8%);
-                    }
-
-                    .circle {
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        background-color: #fff;
-                    }
-                }
-            }
-
-        }
-
-
-    }
-
-    &-cards {
-        background-image: url("https://static1.squarespace.com/static/ta/5ae0ba5445776e1de31f1a8d/406/assets/images/homepage/02_STILL_LIFE_298_v3.jpg?format=2500w");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        width: 100vw;
-
-
-        .cards__inner {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .cards-heading {
-                font-family: Nunito-bold;
-                text-align: center;
-
-                &__heading {
-                    font-size: rem(64px);
-                    line-height: em(14px);
-                    margin-block-end: em(12px);
-                }
-
-                &__subheading {
-                    line-height: em(14px);
-                    font-size: rem(24px);
-                    margin-block-end: em(24px);
-                }
-            }
-
-            .cards-wrapper {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin-block-end: em(52px);
-
-                .card {
+                h2 {
                     font-family: Nunito-bold;
-                    width: 300px;
-                    line-height: em(38px);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: start;
-                    align-items: flex-start;
-                    padding: 0 em(32px);
+                    font-size: em(72px);
+                    line-height: em(20px);
+                    color: $light-color;
+                    margin-top: -10px;
 
-                    &:nth-of-type(1) {
-                        margin-inline-end: em(32px);
-                    }
+                }
+            }
 
-                    &:nth-of-type(3) {
-                        margin-inline-start: em(32px);
-                    }
+            .body {
+                width: 40%;
 
-                    &:nth-of-type(2) {
-                        border-left: 1px solid rgba($dark-color5, 20%);
-                        border-right: 1px solid rgba($dark-color5, 20%);
-                        width: em(400px);
-                    }
+                p {
+                    font-family: Nunito-regular;
+                    color: $light-color;
+                    font-size: em(24px);
+                    text-align: left;
+                }
 
-                    .card-head {
-                        font-size: rem(36px);
-                        margin-block-end: rem(12px);
-                    }
-
-                    .card-body {
-                        font-size: rem(14px);
-                        line-height: em(22px);
-                        color: rgba($dark-color5, 80%);
-                    }
+                .link {
+                    font-size: em(42px);
+                    text-decoration: underline;
+                    font-family: Nunito-regular;
+                    color: $light-color;
                 }
             }
         }
     }
 
-
+    .editor-preview {
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        display: none;
+        .section-left {
+            background-color: yellow;
+        }
+    }
 }
