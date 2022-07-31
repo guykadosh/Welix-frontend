@@ -2,7 +2,7 @@
   <LineChart
     :chartData="data"
     :options="options"
-    :style="{ height: '325px' }"
+    :style="{ height: '350px' }"
   />
 </template>
 
