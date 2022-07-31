@@ -6,7 +6,7 @@
       <app-header />
       <hero />
     </div>
-    <!-- <home-page-cards /> -->
+    <home-page-cards />
     <editor-preview />
     <app-footer/>
     <!-- <div class="bg-cover-cards"></div> -->
