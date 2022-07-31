@@ -135,6 +135,11 @@
       cursor: pointer;
       color: #4263eb;
       font-size: rem(15px);
+      display: none;
+
+      @include for-medium-layout {
+        display: inline-block;
+      }
     }
 
     &-actions {
