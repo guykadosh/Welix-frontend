@@ -6,12 +6,8 @@
       </h2>
     </div>
     <div class="dashboard-main__inner">
-      <div class="top flex justify-between items-center">
+      <div class="top flex justify-between items-center ">
         <h2 class="site-name">{{ siteName }}</h2>
-        <h3>
-          <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
-          Created at {{ createdAt }}
-        </h3>
         <div class="btns">
           <button class="dash-btn" @click="viewWap(this.waps[wapIdx]._id)">
             View Site
@@ -21,15 +17,11 @@
           </button>
         </div>
       </div>
-      <div class="flex">
-        <div class="right">
-          <h2>Site Leads</h2>
-          <a-table :columns="columns" :data-source="contacts" size="small" />
-        </div>
+      <div class="dashboard-container flex ">
         <div class="left">
-          <div class="flex justify-between flex-column">
+          <div>
             <div>
-              <h2>Summery</h2>
+              <h2>Sammery</h2>
             </div>
             <div class="flex justify-between">
 
@@ -37,6 +29,16 @@
                 <font-awesome-icon class="icon" icon="fa-light fa-eye" />
                 <p>Total views</p>
                 <p>{{ totalViews }}</p>
+              </div>
+              <!--         <h3>
+          <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
+          Created at {{ createdAt }}
+        </h3>
+ -->
+              <div class="box created-date">
+                <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
+                <p>Created at:</p>
+                <p>{{ createdAt }}</p>
               </div>
               <div class="box total-subs">
                 <font-awesome-icon class="icon" icon="fa-light fa-users" />
@@ -56,6 +58,10 @@
           </div>
         </div>
       </div>
+          <div class="right">
+          <h2>Site Leads</h2>
+          <a-table :columns="columns" :data-source="contacts" size="small" />
+        </div>
 
       <div class="flex">
         <!-- <compose-mail /> -->
