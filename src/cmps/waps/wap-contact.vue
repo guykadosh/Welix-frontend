@@ -6,11 +6,19 @@
       {{ cmp.info.subHeading.txt }}
     </h3>
     <section class="form-container">
-
       <form @submit.prevent="addContact" class="contact-form">
-        <input class="contact-input" v-for="(input, idx) in form.inputs" :type="input.type"
-          :placeholder="input.placeholder" v-model="contact.inputs[idx].txt" />
-        <textarea class="contact-textarea" :placeholder="form.textarea.placeholder" v-model="contact.text" />
+        <input
+          class="contact-input"
+          v-for="(input, idx) in form.inputs"
+          :type="input.type"
+          :placeholder="input.placeholder"
+          v-model="contact.inputs[idx].txt"
+        />
+        <textarea
+          class="contact-textarea"
+          :placeholder="form.textarea.placeholder"
+          v-model="contact.text"
+        />
         <div class="btn-container">
           <button class="contact-submit" type="submit">
             {{ form.btn.txt }}
@@ -49,7 +57,6 @@ export default {
   methods: {
     async addContact() {
       try {
-        console.log('Hi?')
         console.log(this.wap)
         const wap = JSON.parse(JSON.stringify(this.wap))
         const contact = {
@@ -67,6 +74,13 @@ export default {
         // notification['success']({
         //   message: `Thank you! we will reach to you soon`,
         // })
+        this.contact = {
+          inputs: [
+            { type: 'name', txt: '' },
+            { type: 'email', txt: '' },
+          ],
+          text: '',
+        }
       } catch (err) {
         console.log(err)
       }
@@ -81,10 +95,9 @@ export default {
       return this.cmp.info.form
     },
   },
-  created() { },
+  created() {},
   components: { ThankYou },
 }
 </script>
 
-<style>
-</style>
+<style></style>

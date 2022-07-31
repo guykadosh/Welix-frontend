@@ -1,5 +1,4 @@
 <template>
-
   <section class="login main-layout">
     <app-header />
 
@@ -7,8 +6,17 @@
       <div class="login-wrapper__inner">
         <form @submit.prevent="login" class="login__form">
           <h2>Log in</h2>
-          <input v-model="credentials.username" placeholder="Username" autofocus />
-          <input v-model="credentials.password" type="password" placeholder="Password" show-password />
+          <input
+            v-model="credentials.username"
+            placeholder="Username"
+            autofocus
+          />
+          <input
+            v-model="credentials.password"
+            type="password"
+            placeholder="Password"
+            show-password
+          />
           <button class="login__btn">
             <span>Login</span>
           </button>
@@ -33,13 +41,13 @@ export default {
     }
   },
   created() {
-
     const user = userService.getLoggedinUser()
     if (user) {
       this.$store.commit({ type: 'setUser', user })
       this.$router.push('/template')
       notification['success']({
         message: `Welcome ${user.fullname}`,
+        placement: 'bottomRight',
       })
     }
   },
@@ -53,6 +61,7 @@ export default {
           this.$router.push('/template')
           notification['success']({
             message: `Welcome ${user.fullname}`,
+            placement: 'bottomRight',
           })
         }
       } catch (err) {

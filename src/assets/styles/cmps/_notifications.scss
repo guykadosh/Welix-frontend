@@ -1,12 +1,14 @@
 .notification {
   // height: rem(100px);
+  margin-inline-start: rem(26px);
   padding: rem(20px) rem(8px);
   font-size: rem(20px);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $dark-color1;
-  color: $light-color;
+  border: 2px solid $light-color2;
+  background-color: $light-color;
+  color: $primary-color;
   border-left: 6px solid #37b24d;
 }
 
@@ -17,8 +19,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $dark-color1;
-  color: $light-color;
+  border: 2px solid $light-color2;
+  background-color: $light-color;
+  color: $primary-color;
   border-left: 6px solid #37b24d;
 }
 
@@ -28,8 +31,9 @@
   font-size: rem(20px);
   display: flex;
   justify-content: center;
+  border: 2px solid $light-color2;
   align-items: center;
-  background-color: $dark-color1;
-  color: $light-color;
+  background-color: $light-color;
+  color: $primary-color;
   border-left: 6px solid #37b24d;
 }

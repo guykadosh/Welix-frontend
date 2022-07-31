@@ -1,14 +1,10 @@
 <template>
   <router-view />
   <notifications
-    position="top left"
+    position="bottom right"
     :width="500"
     classes="notification"
-    :style="{
-      backgroundColor: '#212529',
-      background: '#212529',
-      display: 'flex',
-    }"
+    :style="{}"
   />
 </template>
 

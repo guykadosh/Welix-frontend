@@ -139,6 +139,11 @@
       font-size: 1em;
       border-radius: 4px;
       outline: none;
+      font-size: rem(16px);
+
+      &::placeholder {
+        font-size: rem(16px);
+      }
     }
 
     button {

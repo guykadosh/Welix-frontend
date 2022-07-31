@@ -1,5 +1,9 @@
 <template>
-  <LineChart :chartData="data" :options="options" style="height: 275px" />
+  <LineChart
+    :chartData="data"
+    :options="options"
+    :style="{ height: '325px' }"
+  />
 </template>
 
 <script lang="ts">
@@ -22,16 +26,15 @@ export default {
         radius: 0,
         scales: {
           x: {
-            grid: { display: false }
-
+            grid: { display: false },
           },
           y: {
             grid: { display: false },
             ticks: {
-              callback: (value) => value.toString(),
+              callback: value => value.toString(),
               stepSize: 1,
-            }
-          }
+            },
+          },
         },
         responsive: true,
         plugins: {
@@ -39,8 +42,8 @@ export default {
             display: false,
             position: 'bottom',
           },
-        }
-      }
+        },
+      },
     }
   },
   components: { LineChart, BarChart },

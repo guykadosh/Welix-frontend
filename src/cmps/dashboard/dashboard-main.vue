@@ -18,6 +18,10 @@
         </div>
       </div>
       <div class="dashboard-container">
+        <div class="graph">
+          <h2>Weekly traffic</h2>
+          <Chart :data="weeklyData" />
+        </div>
         <div>
           <div>
             <h2>Summary</h2>
@@ -48,21 +52,19 @@
             </div>
           </div>
         </div>
-        <div class="graph">
-          <h2>Weekly traffic</h2>
-          <Chart :data="weeklyData" />
-        </div>
       </div>
       <div class="right">
         <h2>Site Leads</h2>
-        <a-table :columns="columns" :data-source="contacts" size="small" />
-      </div>
-
-      <div class="flex">
-        <!-- <compose-mail /> -->
-        <!-- <div> -->
-
-        <!-- </div> -->
+        <a-table
+          :columns="columns"
+          :data-source="contacts"
+          class="ant-table-striped"
+          :row-class-name="
+            (_record, index) => (index % 2 === 1 ? 'table-striped' : null)
+          "
+          size="middle"
+          bordered
+        />
       </div>
     </div>
   </div>
@@ -178,7 +180,7 @@ export default {
             // drawActiveElementsOnTop: false,
             borderRadius: 6,
             data,
-            backgroundColor: ['#d3b0dc'],
+            backgroundColor: ['#63e6be'],
             fill: true,
             borderColor: 'rgba(0, 0, 0, 0.1)',
             tension: 0.1,
@@ -191,3 +193,9 @@ export default {
   components: { Chart, composeMail },
 }
 </script>
+
+<style>
+.ant-table-striped :deep(.table-striped) td {
+  background-color: #fafafa;
+}
+</style>

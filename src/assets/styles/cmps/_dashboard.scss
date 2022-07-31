@@ -57,19 +57,19 @@
       background-color: $light-color;
 
       &-header {
-        //background-color: #131720;
+        background-color: #131720;
         width: 100%;
-        //border: 2px solid #131720;
+        border: 2px solid #131720;
         border-left: none;
-        //border-bottom: 1px solid $light-color4;
-        //border-bottom-right-radius: rem(50px);
-
+        border-bottom: 1px solid $light-color4;
+        border-bottom-right-radius: rem(50px);
+        // color: $light-color;
         .title {
           font-size: rem(23px);
           font-family: Reboto-Bold, sans-serif;
-          padding: rem(7px) rem(27px);
-          padding-bottom: rem(7px);
-          color: $dark-color;
+          padding: rem(10px) rem(27px);
+          // padding-bottom: rem(7px);
+          color: $light-color;
         }
       }
 
@@ -121,12 +121,12 @@
         }
 
         .dashboard-container {
-          /*  color: $light-color; */
+          margin-block-end: rem(18px);
           width: 100%;
-          // justify-content: center;
-          display: flex;
-          // justify-content: flex-start;
-
+          display: grid;
+          grid-template-columns: 60% 1fr;
+          // align-items: center;
+          // justify-items: center;
           // .right {
           //   font-size: rem(22px);
 
@@ -135,7 +135,12 @@
 
           // width: 45%;
           width: 100%;
-          flex-direction: row-reverse;
+          // flex-direction: row-reverse;
+
+          h2 {
+            margin-block-end: rem(12px);
+          }
+
           .summary {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -143,7 +148,12 @@
           }
           .graph {
             // width: 65%;
-            margin-inline-end: rem(12px);
+            margin-inline-end: rem(36px);
+            // margin-block-start: rem(20px);
+            // max-height: rem(225px);
+            h2 {
+              margin-block-end: rem(28px);
+            }
           }
           .box {
             font-size: rem(15px);
@@ -153,8 +163,8 @@
             justify-content: space-around;
             align-items: center;
             background-color: $light-color;
-            padding: rem(28px) rem(16px);
-            font-size: rem(18px);
+            padding: rem(36px) rem(16px);
+            font-size: rem(20px);
             font-weight: 500;
             border-radius: 9px;
             // margin-bottom: rem(16px);
