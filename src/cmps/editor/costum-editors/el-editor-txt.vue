@@ -55,6 +55,7 @@ export default {
       link: '',
       fonts: [
         { value: '', label: 'Pick font' },
+        { value: 'Great-Vibes', label: 'Great Vibes' },
         { value: 'Roboto-Regular', label: 'Roboto' },
         { value: 'Impact', label: 'Impact' },
         { value: 'Arial', label: 'Arial' },

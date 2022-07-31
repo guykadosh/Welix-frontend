@@ -57,7 +57,7 @@
   src: url('@/assets/fonts/Oswald/Oswald-ExtraLight.ttf');
 }
 
-// Nunito 
+// Nunito
 
 @font-face {
   font-family: Nunito-regular;
@@ -73,7 +73,6 @@
   font-family: Nunito-light;
   src: url(@/assets/fonts/Nunito_Sans/NunitoSans-Light.ttf);
 }
-
 
 // Noto
 
@@ -91,8 +90,13 @@
   font-family: NotoSans-light;
   src: url(@/assets/fonts/Noto_Sans/NotoSans-Light.ttf);
 }
+// Great Vibes
+@font-face {
+  font-family: Great-Vibes;
+  src: url(@/assets/fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
 
-// Clarkson 
+// Clarkson
 @font-face {
   font-family: clarkson;
   src: url(@/assets/fonts/clarkson/ClarksonScript-Regular.otf);
