@@ -1,7 +1,7 @@
 [
     {
         "name": "YOGA",
-        "imgUrl": "https://i.ibb.co/hMHxnf3/Screenshot-2022-07-28-151848.png",
+        "imgUrl":"https://i.ibb.co/1R5TKm0/Screenshot-2022-07-30-222654.png",
         "type": "Yoga",
         "style": {},
         "class": "yoga",
@@ -182,6 +182,33 @@
                 "style": {
                     "backgroundColor": "#fdf2e9"
                 }
+            },
+            {
+                "id": "mfgnih987",
+                "classes": [
+                    "parallax",
+                    "yoga-about",
+                    "yoga-layout"
+                ],
+                "type": "wap-review",
+                "info": {
+                    "text": {
+                        "type": "txt",
+                        "txt": "About Brian",
+                        "style": {}
+                    },
+                    "author": {
+                        "type": "txt",
+                        "txt": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.",
+                        "style": {}
+                    },
+                    "role": {
+                        "type": "txt",
+                        "txt": "READ MORE",
+                        "style": {}
+                    }
+                },
+                "style": {}
             },
             {
                 "id": "wcd4654%%%j",
