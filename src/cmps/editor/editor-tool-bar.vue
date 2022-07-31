@@ -29,17 +29,17 @@
     </a-modal>
 
     <a-modal
-      wrapClassName="login-form"
+      wrapClassName="choose-site-name"
       v-model:visible="visibleName"
       :style="{ maxWidth: '370px' }"
     >
       <form
-        class="choose-name flex flex-column justify-center items-center"
+        class="choose-name flex flex-column"
         @submit.prevent="changeWapName"
       >
-        <label for="">Choose site name</label>
-        <input v-model="siteName" type="text" />
-        <button>Submit</button>
+        <label for="">You're almost done!</label>
+        <input v-model="siteName" type="text" placeholder="Choose site name" />
+        <button>Publish</button>
       </form>
       <template #footer :style="{ display: 'none' }"></template>
     </a-modal>

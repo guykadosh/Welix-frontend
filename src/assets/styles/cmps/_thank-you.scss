@@ -1,7 +1,8 @@
-.thank-you-container {
-  background-color: #fff;
-  padding: rem(15px);
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
+.thank-you {
+  background-color: $light-color1;
+  height: rem(500px);
   font-family: Roboto-Regular;
   position: fixed;
   top: 50%;
@@ -9,16 +10,52 @@
   transform: translate(-50%, -50%);
   z-index: 100;
   border-radius: 12px;
-  img.thank-you-img {
-    width: rem(75px);
-    margin-bottom: rem(35px);
+
+  &-inner {
+    padding: rem(24px);
+
+    text-align: center;
+    .icon {
+      font-size: rem(52px);
+      margin-block-end: rem(16px);
+    }
+
+    h2 {
+      font-size: rem(64px);
+      margin-bottom: rem(15px);
+      font-family: Yesteryear, cursive;
+    }
+
+    h3 {
+      font-size: rem(18px);
+      color: $dark-color5;
+    }
   }
 
-  h1 {
-    font-size: rem(36px);
-    margin-bottom: rem(15px);
-  }
-  h2 {
-    font-size: rem(24px);
+  .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 30%;
+    vertical-align: middle;
+    overflow: hidden;
+    border-radius: 12px;
+
+    svg {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &:nth-child(1) {
+        fill-opacity: 0.9;
+      }
+      &:nth-child(2) {
+        fill-opacity: 0.5;
+      }
+      &:nth-child(3) {
+        fill-opacity: 0.5;
+      }
+    }
   }
 }

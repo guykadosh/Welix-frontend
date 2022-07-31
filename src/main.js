@@ -44,6 +44,7 @@ import {
   faEye,
   faUsers,
   faMoneyBillTransfer,
+  faBadgeCheck,
 } from '@fortawesome/pro-light-svg-icons'
 import Notifications from '@kyvg/vue3-notification'
 
@@ -83,7 +84,8 @@ library.add(
   faSidebar,
   faEye,
   faUsers,
-  faMoneyBillTransfer
+  faMoneyBillTransfer,
+  faBadgeCheck
 )
 
 app.component('font-awesome-icon', FontAwesomeIcon)

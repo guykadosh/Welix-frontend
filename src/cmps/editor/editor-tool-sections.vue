@@ -88,6 +88,12 @@ export default {
         },
         { id: 'label07', title: 'Text', type: 'wap-text', selected: false },
         { id: 'label06', title: 'About', type: 'wap-footer', selected: false },
+        {
+          id: 'label06',
+          title: 'Gallery',
+          type: 'wap-gallery',
+          selected: false,
+        },
         // { id: 'label08', title: 'Cards', type: 'wap-card', selected: false },
         // { id: 'label09', title: 'List', type: 'wap-list', selected: false },
         // { id: 'label10', title: 'Map', type: 'wap-map', selected: false },
