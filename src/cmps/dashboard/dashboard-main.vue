@@ -6,7 +6,7 @@
       </h2>
     </div>
     <div class="dashboard-main__inner">
-      <div class="top flex justify-between items-center ">
+      <div class="top flex justify-between">
         <h2 class="site-name">{{ siteName }}</h2>
         <div class="btns">
           <button class="dash-btn" @click="viewWap(this.waps[wapIdx]._id)">
@@ -17,51 +17,46 @@
           </button>
         </div>
       </div>
-      <div class="dashboard-container flex ">
-        <div class="left">
+      <div class="dashboard-container">
+        <div>
           <div>
-            <div>
-              <h2>Sammery</h2>
+            <h2>Summary</h2>
+          </div>
+          <div class="summary">
+            <div class="box total-views">
+              <font-awesome-icon class="icon" icon="fa-light fa-eye" />
+              <p>Total views</p>
+              <p>{{ totalViews }}</p>
             </div>
-            <div class="flex justify-between">
-
-              <div class="box total-views ">
-                <font-awesome-icon class="icon" icon="fa-light fa-eye" />
-                <p>Total views</p>
-                <p>{{ totalViews }}</p>
-              </div>
-              <!--         <h3>
-          <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
-          Created at {{ createdAt }}
-        </h3>
- -->
-              <div class="box created-date">
-                <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
-                <p>Created at:</p>
-                <p>{{ createdAt }}</p>
-              </div>
-              <div class="box total-subs">
-                <font-awesome-icon class="icon" icon="fa-light fa-users" />
-                <p>Total Subscribers</p>
-                <p>{{ totalSubs }}</p>
-              </div>
-              <div class="box conversion">
-                <font-awesome-icon class="icon" icon="fa-light fa-money-bill-transfer" />
-                <p>Conversion rate</p>
-                <p>{{ conversionRate }}%</p>
-              </div>
+            <div class="box created-date">
+              <font-awesome-icon icon="fa-light fa-calendar-circle-plus" />
+              <p>Created at</p>
+              <p>{{ createdAt }}</p>
+            </div>
+            <div class="box total-subs">
+              <font-awesome-icon class="icon" icon="fa-light fa-users" />
+              <p>Total Subscribers</p>
+              <p>{{ totalSubs }}</p>
+            </div>
+            <div class="box conversion">
+              <font-awesome-icon
+                class="icon"
+                icon="fa-light fa-money-bill-transfer"
+              />
+              <p>Conversion rate</p>
+              <p>{{ conversionRate }}%</p>
             </div>
           </div>
-          <div class="graph">
-            <h2>Weekly traffic</h2>
-            <Chart :data="weeklyData" />
-          </div>
+        </div>
+        <div class="graph">
+          <h2>Weekly traffic</h2>
+          <Chart :data="weeklyData" />
         </div>
       </div>
-          <div class="right">
-          <h2>Site Leads</h2>
-          <a-table :columns="columns" :data-source="contacts" size="small" />
-        </div>
+      <div class="right">
+        <h2>Site Leads</h2>
+        <a-table :columns="columns" :data-source="contacts" size="small" />
+      </div>
 
       <div class="flex">
         <!-- <compose-mail /> -->
@@ -121,7 +116,7 @@ export default {
       selectedRowKeys: [],
     }
   },
-  created() { },
+  created() {},
   methods: {
     editWap(wap) {
       this.$store.commit({ type: 'setCurrWap', wap })
