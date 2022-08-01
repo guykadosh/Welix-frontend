@@ -20,7 +20,7 @@
       <template #footer></template>
     </a-modal>
 
-    <a-modal wrapClassName="choose-site-name" v-model:visible="visibleName" :style="{ maxWidth: '460px' }">
+    <a-modal wrapClassName="choose-site-name" v-model:visible="visibleName" :style="{ maxWidth: '520px' }">
       <form class="choose-name flex flex-column" @submit.prevent="changeWapName">
         <label for="">You're almost done!</label>
         <input v-model="siteName" type="text" placeholder="Choose site name" />
