@@ -67,7 +67,7 @@
             >{{ siteName }}</span
           ></span
         >
-        <span>← Choose domain</span>
+        <span class="choose-domain">← Choose domain</span>
       </div>
     </div>
 

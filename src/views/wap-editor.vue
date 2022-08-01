@@ -42,18 +42,16 @@ export default {
     }
   },
   async created() {
-    document.addEventListener('mousemove', this.handleMouseMove)
-    socketService.on(SOCKET_EVENT_MOUSE_ACTIVITY, this.handleMouseSocket)
-    socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
-    socketService.on(SOCKET_EVENT_WAP_UPDATED, this.setCurrWap)
-    socketService.on(SOCKET_EVENT_CMP_REMOVED, this.removeCmp)
-
     try {
       const { wapId } = this.$route.params
-      socketService.emit(SOCKET_EMIT_SET_EDITOR, wapId)
+      socketService.emit(SOCKET_EMIT_SET_EDITOR, { wapId })
+      document.addEventListener('mousemove', this.handleMouseMove)
+      socketService.on(SOCKET_EVENT_MOUSE_ACTIVITY, this.handleMouseSocket)
+      socketService.on(SOCKET_EVENT_CMP_UPDATED, this.updateCmp)
+      socketService.on(SOCKET_EVENT_WAP_UPDATED, this.setCurrWap)
+      socketService.on(SOCKET_EVENT_CMP_REMOVED, this.removeCmp)
 
       if (wapId) {
-        console.log(wapId)
         await this.$store.dispatch({ type: 'loadWap', wapId })
       } else {
         if (!this.wap)
@@ -74,6 +72,7 @@ export default {
       this.$store.commit({ type: 'updateCmp', cmp })
     },
     setCurrWap(wap) {
+      console.log('Setting curr wap')
       this.$store.commit({ type: 'setCurrWap', wap })
     },
     removeCmp(cmpId) {

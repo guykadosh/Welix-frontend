@@ -13,10 +13,12 @@
 
       .template-heading {
         font-size: em(42px);
+        margin-bottom: rem(10px);
       }
 
       .template-subheading {
         margin-block-end: em(28px);
+        line-height: rem(18px);
       }
     }
 

@@ -139,7 +139,7 @@ export default {
         wap: wap,
       })
     },
-    async saveWap({ commit, getters, dispatch }, { wap }) {
+    async saveWap({ commit, getters, dispatch }, { wap, fromList }) {
       try {
         // const wap = JSON.parse(JSON.stringify(getters.getCurrWap))
         // wap.isPublished = isPublished
@@ -149,7 +149,7 @@ export default {
         console.log(savedWap)
         commit({ type: 'saveWap', wap: savedWap })
         commit({ type: 'setCurrWap', wap: savedWap })
-        socketService.emit('wap-updated', savedWap)
+        if (!fromList) socketService.emit('wap-updated', savedWap)
         const user = getters.getUser
         console.log(user)
         if (user) {
