@@ -45,6 +45,7 @@ function createSocketService() {
     },
     emit(eventName, data) {
       data = JSON.parse(JSON.stringify(data))
+      // console.log(data)
       socket.emit(eventName, data)
     },
     login(userId) {

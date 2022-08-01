@@ -78,6 +78,7 @@ export default {
       const savedWap = await this.$store.dispatch({
         type: 'saveWap',
         wap: wapToEdit,
+        fromList: true,
       })
 
       this.$store.commit({ type: 'setCurrWap', wap: savedWap })
