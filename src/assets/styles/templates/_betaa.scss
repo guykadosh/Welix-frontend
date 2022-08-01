@@ -527,7 +527,7 @@
         height: rem(45px);
         display: flex;
         justify-items: center;
-        width: rem(560px);
+        width: rem(360px);
         border-radius: em(5px);
         margin-bottom: rem(15px);
         outline-style: none;
@@ -536,6 +536,17 @@
         border: none;
         text-transform: capitalize;
         color: rgba(0, 0, 0, 0.567);
+
+        .medium & {
+          width: rem(560px);
+        }
+
+        .wap-details & {
+          @include for-medium-layout {
+            width: rem(560px);
+          }
+        }
+
       }
 
       .btn-container {
@@ -544,7 +555,7 @@
         justify-content: center;
 
         button {
-          padding: em(9px) em(70px);
+          padding: em(9px) em(120px);
           font-size: em(19px);
           border-radius: em(10px);
           color: #3ae2d3;
@@ -650,54 +661,59 @@
   }
 
   &-txt.betaa-trial {
-    padding-top: em(30px);
-    margin-bottom: em(50px);
+    .__inner {
+      display: contents;
+      ;
+      padding-top: em(30px);
+      margin-bottom: em(50px);
 
-    .text1 {
-      font-size: rem(24px);
-      margin-bottom: rem(30px);
-      line-height: rem(30px);
+      .text1 {
+        font-size: rem(24px);
+        margin-bottom: rem(30px);
+        line-height: rem(30px);
 
-      .medium & {
-        font-size: rem(44px);
-        line-height: rem(50px);
-        padding: 0 rem(50px);
-      }
-
-      .narrow & {
-        font-size: rem(64px);
-        line-height: rem(72px);
-      }
-
-      .wap-details & {
-        @include for-medium-layout {
+        .medium & {
           font-size: rem(44px);
           line-height: rem(50px);
           padding: 0 rem(50px);
         }
 
-        @include for-narrow-layout {
+        .narrow & {
           font-size: rem(64px);
           line-height: rem(72px);
         }
 
-        @include for-normal-layout {
-          padding: rem(10px) rem(70px);
+        .wap-details & {
+          @include for-medium-layout {
+            font-size: rem(44px);
+            line-height: rem(50px);
+            padding: 0 rem(50px);
+          }
+
+          @include for-narrow-layout {
+            font-size: rem(64px);
+            line-height: rem(72px);
+          }
+
+          @include for-normal-layout {
+            padding: rem(10px) rem(70px);
+          }
         }
       }
-    }
 
-    .text2 {
-      background-color: #5d21d1;
-      font-family: Nunito-light;
-      padding: em(10px) em(28px);
-      color: $light-color;
-      font-size: em(18px);
-      border-radius: em(10px);
+      .text2 {
+        background-color: #5d21d1;
+        width: 280px;
+        font-family: Nunito-light;
+        padding: em(14px) em(28px);
+        color: $light-color;
+        font-size: em(21px);
+        border-radius: em(10px);
 
-      .wap-details &:hover {
-        background-color: darken(#5d21d1, 5%);
-        cursor: pointer;
+        .wap-details &:hover {
+          background-color: darken(#5d21d1, 5%);
+          cursor: pointer;
+        }
       }
     }
   }
