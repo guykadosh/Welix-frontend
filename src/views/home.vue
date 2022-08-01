@@ -6,9 +6,9 @@
       <app-header />
       <hero />
     </div>
-    <home-page-cards />
-    <editor-preview />
-    <app-footer/>
+    <!-- <home-page-cards /> -->
+    <!-- <editor-preview /> -->
+    <!-- <app-footer/> -->
     <!-- <div class="bg-cover-cards"></div> -->
   </section>
 </template>
