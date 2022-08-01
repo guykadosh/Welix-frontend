@@ -23,19 +23,24 @@ import appHeader from '../cmps/app/app-header.vue'
 import dashboardMain from '../cmps/dashboard/dashboard-main.vue'
 import { notification } from 'ant-design-vue'
 import { wapService } from '../services/wap.service'
+import { faTurkishLiraSign } from '@fortawesome/pro-light-svg-icons'
 
 export default {
   name: 'dashboard',
   data() {
     return {
-      userWaps: null,
+      // userWaps: null,
       wapIdx: 0,
     }
   },
   async created() {
     try {
-      const waps = await wapService.query({ userId: this.user._id })
-      if (waps) this.userWaps = waps
+      await this.$store.dispatch({
+        type: 'loadUserWaps',
+        userId: this.user._id,
+      })
+      // const waps = await wapService.query({ userId: this.user._id })
+      // if (waps) this.userWaps = waps
     } catch (err) {
       console.log(err)
       // notification['error']
@@ -49,6 +54,9 @@ export default {
   computed: {
     user() {
       return this.$store.getters.getUser
+    },
+    userWaps() {
+      return JSON.parse(JSON.stringify(this.$store.getters.userWaps))
     },
   },
   components: {

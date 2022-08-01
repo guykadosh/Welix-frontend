@@ -31,7 +31,13 @@ export default {
       loader.hide()
       const user = userService.getLoggedinUser()
       console.log(user)
-      if (user) this.$store.commit({ type: 'setUser', user })
+      if (user) {
+        this.$store.commit({ type: 'setUser', user })
+        await this.$store.dispatch({
+          type: 'loadUserWaps',
+          userId: user._id,
+        })
+      }
       // const wap = wapService.getFromSession()
       // if (wap) this.$store.commit({ type: 'setCurrWap', wap })
     } catch (err) {

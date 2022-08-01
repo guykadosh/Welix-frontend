@@ -1,12 +1,17 @@
 import { userService } from '../../services/user.service.js'
+import { wapService } from '../../services/wap.service.js'
 
 export default {
   state: {
     user: null,
+    userWaps: null,
   },
   getters: {
     getUser(state) {
       return state.user
+    },
+    userWaps({ userWaps }) {
+      return userWaps
     },
   },
   mutations: {
@@ -22,6 +27,9 @@ export default {
       else state.user.waps.push(wap)
       console.log(state.user)
       userService.saveLocalUser(state.user)
+    },
+    setUserWaps(state, { waps }) {
+      state.userWaps = waps
     },
   },
   actions: {
@@ -50,6 +58,16 @@ export default {
         // commit({ type: 'setUser', user })
       } catch (err) {
         throw err
+      }
+    },
+    async loadUserWaps({ commit }, { userId }) {
+      try {
+        const waps = await wapService.query({ userId })
+        console.log(waps)
+        commit({ type: 'setUserWaps', waps })
+      } catch (err) {
+        console.log(err)
+        throw new Error('Could not get waps')
       }
     },
   },
