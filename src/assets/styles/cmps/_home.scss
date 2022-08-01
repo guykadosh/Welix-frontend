@@ -21,7 +21,8 @@
     .top-wrapper {
         width: 100vw;
         height: 100vh;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
+        
 
         @include for-medium-layout {
             margin-bottom: 0;
@@ -30,7 +31,7 @@
 
     .bg-cover-hero {
         position: absolute;
-        top: -43vh;
+        top: -44vh;
         right: -26vw;
         width: 80%;
         height: 120%;
@@ -130,7 +131,7 @@
                     }
 
                     @include for-wide-layout {
-                        font-size: rem(94px);
+                        font-size: rem(98px);
                         // background-color: yellow;
                     }
                 }
@@ -141,7 +142,7 @@
                     margin-block-end: em(52px);
 
                     @include for-narrow-layout {
-                        font-size: em(18px);
+                        font-size: em(24px);
                     }
                 }
 
