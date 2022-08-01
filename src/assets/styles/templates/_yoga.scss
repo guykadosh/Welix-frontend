@@ -1,200 +1,194 @@
 .yoga {
-    &-header {
-        padding: rem(30px);
+  &-header {
+    padding: rem(30px);
 
-        .logo {
-            font-size: rem(25px);
-            font-family: Nunito-regular;
-            font-weight: 100;
-        }
+    .logo {
+      font-size: rem(25px);
+      font-family: Nunito-regular;
+      font-weight: 100;
+    }
+  }
+
+  &-nav {
+    font-family: Nunito-regular;
+
+    li {
+      margin-right: rem(15px);
     }
 
-    &-nav {
+    li:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &-hero {
+    background-image: url('https://static.wixstatic.com/media/82fcd3_f9996d378dd1441e8308f71819f498f3~mv2_d_5508_2954_s_4_2.jpg/v1/fill/w_1743,h_827,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_f9996d378dd1441e8308f71819f498f3~mv2_d_5508_2954_s_4_2.jpg');
+    height: 90vh;
+    background-position: 50% 50%;
+    vertical-align: middle;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: em(15px);
+    margin-bottom: rem(45px);
+
+    .hero-inner {
+      display: flex;
+
+      .text-box {
         font-family: Nunito-regular;
-
-        li {
-            margin-right: rem(15px);
-        }
-
-        li:last-of-type {
-            margin-right: 0;
-
-        }
-    }
-
-    &-hero {
-        background-image: url("https://static.wixstatic.com/media/82fcd3_f9996d378dd1441e8308f71819f498f3~mv2_d_5508_2954_s_4_2.jpg/v1/fill/w_1743,h_827,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_f9996d378dd1441e8308f71819f498f3~mv2_d_5508_2954_s_4_2.jpg");
-        height: 90vh;
-        background-position: 50% 50%;
-        vertical-align: middle;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: em(15px);
-        margin-bottom: rem(45px);
-
-        .hero-inner {
-            display: flex;
-
-            .text-box {
-                font-family: Nunito-regular;
-                margin-right: rem(280px);
-
-                .heading {
-                    font-size: rem(85px);
-                    font-weight: 200;
-                    font-weight: 300;
-
-                    letter-spacing: 3px;
-                }
-
-                .sub-heading {
-                    font-size: rem(25px);
-                    margin-bottom: rem(25px);
-                    font-weight: 100;
-
-                }
-
-                .btn1 {
-                    text-align: end;
-                    font-size: rem(25px);
-                    font-weight: 500;
-                    text-decoration: underline;
-
-                }
-            }
-        }
-    }
-
-    &-container {
-        margin-bottom: rem(50px);
-
-        .wap-container__inner {
-            justify-items: center;
-
-            .yoga-card {
-                height: rem(550px);
-                width: 400px;
-                background-color: rgba(254, 254, 254, 0.978);
-                border: 2px solid rgba(220, 220, 220, 0.47);
-            }
-
-            .card {
-                &-heading {
-                    font-size: rem(28px);
-                    font-family: Nunito-regular;
-                    text-align: center;
-                    margin-bottom: rem(8px);
-                }
-
-                &-subheading {
-                    font-size: rem(20px);
-                    font-family: Nunito-regular;
-                    text-align: center;
-
-                }
-            }
-
-            img {
-                width: 100%;
-                height: 350px;
-                margin-bottom: rem(25px);
-            }
-
-            display: grid;
-            gap: rem(55px);
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-    }
-
-
-    .cake-card {
-        display: flex;
-        flex-direction: column;
-        border-radius: rem(18px);
-        padding: rem(25px);
-
-        .card-content {
-            margin-top: rem(35px);
-        }
-    }
-
-    &-contact {
-        .form-container {
-            justify-content: center;
-            display: flex;
-
-            input,
-            textarea {
-                display: flex;
-                margin-bottom: rem(15px);
-                width: rem(450px);
-                height: rem(35px);
-                font-size: rem(18px);
-                border: 1px solid $dark-color;
-                border-radius: rem(4px);
-                flex-direction: column;
-            }
-
-            textarea {
-                height: rem(150px);
-            }
-
-        }
-
-
-    }
-
-    .parallax {
-        background-image: url("https://images.unsplash.com/photo-1429277096327-11ee3b761c93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
-        min-height: 500px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        .wap-review-texts {
-            display: flex;
-            flex-direction: column;
-            color: white;
-        }
-    }
-
-    &-about {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin-bottom: rem(100px);
-    }
-    &-contact{
-        padding: rem(35px);
-        display: flex;
-        background-color: rgba(132, 192, 235, 0.607);
-        flex-direction: column;
-        font-family: Nunito-regular;
+        margin-right: rem(280px);
+        max-width: rem(600px);
+        margin: 0 auto;
         text-align: center;
-        .heading{
-            font-size: rem(65px);
-            font-weight: 300;
-        }
-        .sub-heading{
-            font-size: rem(23px);
-            margin-bottom: rem(25px);
+        .heading {
+          font-size: rem(92px);
+          font-weight: 200;
+          font-weight: 300;
 
+          letter-spacing: 3px;
         }
-        .form-container{
-           input , textarea{
-            background-color: unset;
-            padding: rem(19px);
-           } 
 
+        .sub-heading {
+          font-size: rem(32px);
+          margin-bottom: rem(25px);
+          font-weight: 100;
         }
-        .contact-submit{
-            width: rem(450px);
-            height: rem(35px);
-            background-color: $light-color;
+
+        .btn1 {
+          text-align: end;
+          font-size: rem(25px);
+          color: $dark-color1;
+          font-weight: 500;
+          //   text-decoration: underline;
+          border-bottom: 3px solid #ffd43b;
         }
+      }
     }
+  }
+
+  &-container {
+    margin-bottom: rem(50px);
+
+    .wap-container__inner {
+      justify-items: center;
+
+      .yoga-card {
+        height: rem(550px);
+        width: 400px;
+        background-color: rgba(254, 254, 254, 0.978);
+        border: 2px solid rgba(220, 220, 220, 0.47);
+      }
+
+      .card {
+        &-heading {
+          font-size: rem(28px);
+          font-family: Nunito-regular;
+          text-align: center;
+          margin-bottom: rem(8px);
+        }
+
+        &-subheading {
+          font-size: rem(20px);
+          font-family: Nunito-regular;
+          text-align: center;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 350px;
+        margin-bottom: rem(25px);
+      }
+
+      display: grid;
+      gap: rem(55px);
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .cake-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: rem(18px);
+    padding: rem(25px);
+
+    .card-content {
+      margin-top: rem(35px);
+    }
+  }
+
+  &-contact {
+    .form-container {
+      justify-content: center;
+      display: flex;
+
+      input,
+      textarea {
+        display: flex;
+        margin-bottom: rem(15px);
+        width: rem(450px);
+        height: rem(35px);
+        font-size: rem(18px);
+        border: 1px solid $dark-color;
+        border-radius: rem(4px);
+        flex-direction: column;
+      }
+
+      textarea {
+        height: rem(150px);
+      }
+    }
+  }
+
+  .parallax {
+    background-image: url('https://images.unsplash.com/photo-1429277096327-11ee3b761c93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .wap-review-texts {
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+  }
+
+  &-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: rem(100px);
+  }
+  &-contact {
+    padding: rem(35px);
+    display: flex;
+    background-color: rgba(132, 192, 235, 0.607);
+    flex-direction: column;
+    font-family: Nunito-regular;
+    text-align: center;
+    .heading {
+      font-size: rem(65px);
+      font-weight: 300;
+    }
+    .sub-heading {
+      font-size: rem(23px);
+      margin-bottom: rem(25px);
+    }
+    .form-container {
+      input,
+      textarea {
+        background-color: unset;
+        padding: rem(19px);
+      }
+    }
+    .contact-submit {
+      width: rem(450px);
+      height: rem(35px);
+      background-color: $light-color;
+    }
+  }
 }
