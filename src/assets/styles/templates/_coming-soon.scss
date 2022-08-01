@@ -1,0 +1,48 @@
+.coming-soon {
+    &-hero {
+        font-family: Nunito-regular;
+        background-image: url('https://cdn.discordapp.com/attachments/989109569018007568/1003662877326053428/husen-siraaj-lWxavMfS6SA-unsplash.jpg');
+        height: 100vh;
+        background-position: 40% 50%;
+        vertical-align: middle;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hero-inner {
+            color: $light-color;
+            padding: rem(250px);
+
+            .text-box {
+                font-family: Nunito-regular;
+
+                .heading {
+                    font-size: rem(55px);
+
+                }
+
+                .sub-heading {
+                    font-size: rem(25px);
+                    margin-bottom: rem(15px);
+                }
+            }
+        }
+
+        .btns {
+            .btn1 {
+                font-size: rem(20px);
+                background-color: $light-color;
+                padding: rem(5px);
+                border-radius: 8px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .wap-header__inner {
+        font-family: Nunito-regular;
+        padding: rem(15px);
+
+    }
+}

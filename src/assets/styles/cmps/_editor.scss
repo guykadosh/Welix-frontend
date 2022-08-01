@@ -129,6 +129,14 @@
           color: rgb(204, 0, 255);
           margin-inline-end: rem(20px);
         }
+
+        .choose-domain {
+          display: none;
+
+          @include for-medium-layout {
+            display: inl;
+          }
+        }
       }
     }
 

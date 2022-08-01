@@ -1,7 +1,7 @@
 [
     {
         "name": "Coming-soon",
-        "imgUrl": "https://i.ibb.co/1R5TKm0/Screenshot-2022-07-30-222654.png",
+        "imgUrl": "https://cdn.discordapp.com/attachments/989109569018007568/1003662877326053428/husen-siraaj-lWxavMfS6SA-unsplash.jpg?width=507&height=676",
         "type": "coming-soon",
         "style": {},
         "class": "coming-soon",
@@ -28,7 +28,7 @@
         "theme": "vivid",
         "cmps": [
             {
-                "id": "fhngh1",
+                "id": "f222gh1",
                 "type": "wap-header",
                 "classes": [
                     "coming-soon",
@@ -39,24 +39,18 @@
                 "info": {
                     "logoTxt": {
                         "type": "txt",
-                        "txt": "YOGA",
+                        "txt": "LOGO",
                         "style": {}
                     },
                     "nav": {
-                        "id": "CCDFF2",
+                        "id": "CCD3333FF2",
                         "type": "wap-nav",
                         "style": {},
                         "classes": [
-                            "cake-nav"
+                            "coming-soon-nav"
                         ],
                         "info": {
                             "links": [
-                                {
-                                    "type": "txt",
-                                    "txt": "Home",
-                                    "link": "#Home",
-                                    "style": {}
-                                },
                                 {
                                     "type": "txt",
                                     "txt": "About",
@@ -82,35 +76,34 @@
                 "style": {}
             },
             {
-                "id": "gf##$25",
+                "id": "gf##$33333325",
                 "type": "wap-hero",
                 "classes": [
-                    "cake-hero",
-                    "cake-layout"
+                    "coming-soon-hero"
                 ],
                 "info": {
                     "heading": {
                         "type": "txt",
-                        "txt": "ESCAPE & REJUVENATE",
+                        "txt": "COMING SOON",
                         "style": {}
                     },
                     "subHeading": {
                         "type": "txt",
-                        "txt": "With a Yoga Retreat",
+                        "txt": "We will be celebrating the launch of our new site very soon!",
                         "style": {}
                     },
                     "btns": [
                         {
                             "type": "btn",
-                            "txt": "EXPLORE",
-                            "link": "#explore",
+                            "txt": "Notify Me!",
+                            "link": "#notifyMe",
                             "style": {}
                         }
                     ],
                     "imgs": {
                         "type": "imgs",
                         "urls": [
-                            "https://i.ibb.co/Qd1FQQ2/82fcd3-f9996d378dd1441e8308f71819f498f3-mv2-d-5508-2954-s-4-2.webp"
+                            "https://cdn.discordapp.com/attachments/989109569018007568/1003662877326053428/husen-siraaj-lWxavMfS6SA-unsplash.jpg?width=507&height=676"
                         ],
                         "style": {}
                     }
