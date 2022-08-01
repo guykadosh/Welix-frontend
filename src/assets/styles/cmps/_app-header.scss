@@ -116,13 +116,7 @@
     }
 
     .link-signup {
-      border: 1px solid $dark-color;
-      border-radius: rem(24px);
-
-      &:hover {
-        background-color: $dark-color;
-        color: $light-color;
-      }
+      padding-right: 0;
     }
   }
 }
