@@ -34,22 +34,22 @@
 
       <div class="mobile-nav" :class="{ open: isMenuOpen }">
         <button class="close-menu" @click="toggleMenu">x</button>
-        <router-link class="header-link link-mid" to="/template"
+        <router-link @click="toggleMenu" class="header-link link-mid" to="/template"
           >Templates</router-link
         >
-        <router-link class="header-link link-mid" to="/wap/editor/"
+        <router-link @click="toggleMenu" class="header-link link-mid" to="/wap/editor/"
           >Editor</router-link
         >
-        <router-link
+        <router-link @click="toggleMenu"
           class="header-link link-dashboard"
           v-if="user"
           to="/dashboard"
           >backoffice</router-link
         >
-        <router-link class="header-link link-login" v-if="!user" to="/login"
+        <router-link  @click="toggleMenu" class="header-link link-login" v-if="!user" to="/login"
           >log in</router-link
         >
-        <router-link class="header-link link-signup" v-if="!user" to="/signup"
+        <router-link  @click="toggleMenu" class="header-link link-signup" v-if="!user" to="/signup"
           >sign up</router-link
         >
       </div>

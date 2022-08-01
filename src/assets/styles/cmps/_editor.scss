@@ -95,12 +95,14 @@
     }
 
     &-site-domain {
-      width: 75%;
+      width: 95%;
       // border-right: 1px solid;
       padding-right: em(20px);
       padding: em(8px);
       // border-right: 1px solid rgba(128, 128, 128, 0.26);
-
+      @include for-medium-layout {
+        width: 75%;
+      }
       div {
         .icon {
           margin-inline-end: em(5px);
