@@ -9,7 +9,7 @@
           A website should be the easy part of building a business.
         </h2>
         <router-link class="hero-btn" to="/template">Get started</router-link>
-        <a class="learn-more">Learn more</a>
+        <!-- <a class="learn-more">Learn more</a> -->
       </div>
       <div class="hero-img">
         <img src="https://res.cloudinary.com/duvwxwtot/image/upload/v1659104964/sprint%204/hero3_vjlfr7.svg"
