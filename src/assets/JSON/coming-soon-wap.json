@@ -28,7 +28,7 @@
         "theme": "vivid",
         "cmps": [
             {
-                "id": "fhngh1",
+                "id": "f222gh1",
                 "type": "wap-header",
                 "classes": [
                     "coming-soon",
@@ -43,7 +43,7 @@
                         "style": {}
                     },
                     "nav": {
-                        "id": "CCDFF2",
+                        "id": "CCD3333FF2",
                         "type": "wap-nav",
                         "style": {},
                         "classes": [
@@ -76,7 +76,7 @@
                 "style": {}
             },
             {
-                "id": "gf##$25",
+                "id": "gf##$33333325",
                 "type": "wap-hero",
                 "classes": [
                     "coming-soon-hero"
