@@ -8,6 +8,7 @@
           v-for="(wap, idx) in waps"
           @click="showWap(idx)"
           :key="wap._id"
+          :class="{active: idx === currWapIdx}"
         >
           <font-awesome-icon icon="fa-light fa-sidebar" />
           {{ wap.name }}
@@ -29,6 +30,7 @@ export default {
   data() {
     return {
       userWaps: null,
+      currWapIdx: 0,
     }
   },
   async created() {},
@@ -42,6 +44,7 @@ export default {
       }
     },
     showWap(idx) {
+      this.currWapIdx = idx
       this.$emit('picked', idx)
     },
   },

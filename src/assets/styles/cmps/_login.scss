@@ -1,6 +1,7 @@
 .login {
   width: 100vw;
   height: 100vh;
+
   .login-wrapper {
     &__inner {
       /* margin-bottom: rem(230px); */
@@ -71,15 +72,22 @@
 
 .login-modal,
 .signup-modal {
-  width: rem(300px);
+  height: rem(300px);
   margin: 0 auto;
+  justify-content: center;
+
+  .login-form-title {
+    font-size: rem(25px);
+  }
 
   input {
     background-color: $light-color3;
     border: #ccc 1px solid;
     border-bottom: #ccc 2px solid;
-    padding: 3px;
-    width: rem(200px);
+    padding: 7px;
+    outline-color: #be123c;
+
+    width: rem(300px);
     color: #aaaaaa;
     margin-top: 10px;
     font-size: 1em;
@@ -88,19 +96,17 @@
 
   button {
     background: $primary-color;
-    width: rem(150px);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width: rem(300px);
     color: white;
+    padding: rem(6px);
     border-radius: 4px;
     border: #be123d83 1px solid;
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
     float: left;
-    margin-left: 16px;
-    font-weight: 800;
-    font-size: 0.8em;
+    font-weight: 400;
+    font-size: 1.2em;
 
     &:hover {
       background-color: #840626;
@@ -109,20 +115,24 @@
 }
 
 .choose-site-name {
+  margin: 7em auto;
+
   .ant-modal-content {
     border-radius: 12px;
     background-color: light-color1;
-    padding: rem(36px) rem(18px);
+    padding: rem(34px) rem(18px);
+
+    .ant-modal-footer {
+      display: none;
+    }
   }
-  // border-radius: 16px;
+
   .choose-name {
-    // background-color: $light-color3;
-    // display: block;
     width: 100%;
+
     label {
       color: dark-color1;
       margin-bottom: rem(10px);
-      // text-align: center;
       font-size: rem(28px);
       font-weight: 500;
       font-family: Roboto-Medium, sans-serif;
@@ -131,42 +141,33 @@
     input {
       background-color: $light-color1;
       border: #ccc 1px solid;
-      border-bottom: $light-color3 2px solid;
-      padding: rem(5px) rem(12px);
-      // width: rem(200px);
-      color: dark-color1;
+      padding: rem(6px) rem(12px);
+      outline-color: #be123c;
+      margin-bottom: rem(7px);
+      color: $dark-color1;
       margin-top: 10px;
       font-size: 1em;
       border-radius: 4px;
-      outline: none;
       font-size: rem(16px);
 
       &::placeholder {
         font-size: rem(16px);
+        color: $dark-color;
       }
     }
 
     button {
-      // background: $primary-color-light;
-      background-image: linear-gradient(
-        to right bottom,
-        $primary-color-light,
-        $primary-color
-      );
-      // width: rem(150px);
-      // padding-top: 5px;
-      // padding-bottom: 5px;
+      background-image: linear-gradient(to right bottom,
+          $primary-color-light,
+          $primary-color );
       font-size: rem(18px);
-      padding: rem(12px) rem(24px);
+      padding: rem(5px) rem(24px);
       color: white;
       border-radius: 4px;
       border: #be123d38 1px solid;
       cursor: pointer;
       margin-top: 20px;
-      // margin-bottom: 20px;
-      // float: left;
-      // margin-left: 16px;
-      font-weight: 800;
+      font-weight: 400;
 
       &:hover {
         background-color: #840625da;

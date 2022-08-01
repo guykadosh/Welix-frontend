@@ -46,9 +46,16 @@
       }
 
       .site-name:hover {
+        // background-color: rgba($light-color1, 30%);
+        border-left: solid 3px $light-color2;
+      }
+
+      .site-name.active {
+        // border: 1px solid rgba($light-color1, 30%)
         background-color: rgba($light-color1, 30%);
         border-left: solid 3px $light-color2;
       }
+      
     }
 
     .dashboard-main {

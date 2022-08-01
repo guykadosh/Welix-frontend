@@ -1,10 +1,6 @@
 <template>
   <div class="tool-bar flex">
-    <editor-tool-bar-nav
-      @saved="saveWap"
-      @setTool="openTool"
-      :isToolOpen="isOpen"
-    />
+    <editor-tool-bar-nav @saved="saveWap" @setTool="openTool" :isToolOpen="isOpen" />
     <section class="tool-bar-actions" :class="isEditorOpen">
       <div class="tool-bar-actions__header flex justify-between">
         <h2>{{ title }}</h2>
@@ -19,29 +15,18 @@
     </section>
   </div>
   <div>
-    <a-modal
-      wrapClassName="login-form"
-      v-model:visible="visible"
-      :style="{ maxWidth: '370px' }"
-    >
+    <a-modal wrapClassName="login-form" v-model:visible="visible" :style="{ maxWidth: '370px' }">
       <login @login="login" @signup="signup" />
       <template #footer></template>
     </a-modal>
 
-    <a-modal
-      wrapClassName="choose-site-name"
-      v-model:visible="visibleName"
-      :style="{ maxWidth: '370px' }"
-    >
-      <form
-        class="choose-name flex flex-column"
-        @submit.prevent="changeWapName"
-      >
+    <a-modal wrapClassName="choose-site-name" v-model:visible="visibleName" :style="{ maxWidth: '460px' }">
+      <form class="choose-name flex flex-column" @submit.prevent="changeWapName">
         <label for="">You're almost done!</label>
         <input v-model="siteName" type="text" placeholder="Choose site name" />
         <button>Publish</button>
       </form>
-      <template #footer :style="{ display: 'none' }"></template>
+      <template #footer :style="{ display: 'none',borderTop:'none' }"></template>
     </a-modal>
   </div>
 </template>
@@ -254,4 +239,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+</style>

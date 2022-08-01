@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Coming-soon",
+        "imgUrl": "https://i.ibb.co/1R5TKm0/Screenshot-2022-07-30-222654.png",
+        "type": "coming-soon",
+        "style": {},
+        "class": "coming-soon",
+        "createdBy": {
+            "_id": "5dd0891d4c995bgfhghh527",
+            "fullname": "Lukas Rudrof",
+            "imgUrl": "img.jpg"
+        },
+        "usersData": {
+            "contacts": [
+                {
+                    "email": "user@user.com",
+                    "msg": "Please send me stuff",
+                    "at": 123
+                }
+            ],
+            "signups": [
+                {
+                    "email": "user@user.com",
+                    "at": 123
+                }
+            ]
+        },
+        "theme": "vivid",
+        "cmps": [
+            {
+                "id": "fhngh1",
+                "type": "wap-header",
+                "classes": [
+                    "coming-soon",
+                    "flex",
+                    "justify-between",
+                    "full"
+                ],
+                "info": {
+                    "logoTxt": {
+                        "type": "txt",
+                        "txt": "YOGA",
+                        "style": {}
+                    },
+                    "nav": {
+                        "id": "CCDFF2",
+                        "type": "wap-nav",
+                        "style": {},
+                        "classes": [
+                            "cake-nav"
+                        ],
+                        "info": {
+                            "links": [
+                                {
+                                    "type": "txt",
+                                    "txt": "Home",
+                                    "link": "#Home",
+                                    "style": {}
+                                },
+                                {
+                                    "type": "txt",
+                                    "txt": "About",
+                                    "link": "#About",
+                                    "style": {}
+                                },
+                                {
+                                    "type": "txt",
+                                    "txt": "Gallery",
+                                    "link": "#Gallery",
+                                    "style": {}
+                                },
+                                {
+                                    "type": "txt",
+                                    "txt": "Contact",
+                                    "link": "#Contact",
+                                    "style": {}
+                                }
+                            ]
+                        }
+                    }
+                },
+                "style": {}
+            },
+            {
+                "id": "gf##$25",
+                "type": "wap-hero",
+                "classes": [
+                    "cake-hero",
+                    "cake-layout"
+                ],
+                "info": {
+                    "heading": {
+                        "type": "txt",
+                        "txt": "ESCAPE & REJUVENATE",
+                        "style": {}
+                    },
+                    "subHeading": {
+                        "type": "txt",
+                        "txt": "With a Yoga Retreat",
+                        "style": {}
+                    },
+                    "btns": [
+                        {
+                            "type": "btn",
+                            "txt": "EXPLORE",
+                            "link": "#explore",
+                            "style": {}
+                        }
+                    ],
+                    "imgs": {
+                        "type": "imgs",
+                        "urls": [
+                            "https://i.ibb.co/Qd1FQQ2/82fcd3-f9996d378dd1441e8308f71819f498f3-mv2-d-5508-2954-s-4-2.webp"
+                        ],
+                        "style": {}
+                    }
+                },
+                "style": {}
+            }
+        ]
+    }
+]
