@@ -11,7 +11,7 @@
         :get-child-payload="getChildPayload"
         group-name="1"
         @drop="onDrop($event)"
-        @touchmove.prevent
+        :style="{ touchActions: 'auto' }"
       >
         <div v-if="!wap.cmps.length" class="drag-here">
           <h2>+ Drag section here</h2>
@@ -158,7 +158,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .smooth-dnd-disable-touch-action * {
   touch-action: auto;
 }
